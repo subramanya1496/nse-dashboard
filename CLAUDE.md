@@ -45,6 +45,53 @@ displayed as-is and clearly labelled "external · not this dashboard's" — the 
 never derives its own buy/hold/sell verdict from the flags or anything else. Keep that
 labelling; do not let this grow into a dashboard-generated verdict.
 
+## Dashboard layout (redesigned 2026-07-13 — Bloomberg-dense, still light glassmorphism)
+The home page (`dashboard/index.html` + `dashboard/js/home.js`) is a single dense
+multi-section research view. `dashboard/js/app.js` remains the shared utility layer
+(also used by `portfolio.html`); page assets are cache-busted with `?v=3`.
+Sections, top to bottom:
+1. **Sticky market strip** — NIFTY 50, SENSEX, BANK NIFTY, India VIX with sparklines
+   (from `data/output/market.json`), watchlist advance/decline, market open/closed
+   status (IST clock; NSE holidays are not checked and the tooltip says so), last run.
+2. **KPI cards** — 8/8-flag count, breakout candidates, silent-accumulation count,
+   strongest sector, portfolio unrealized P&L.
+3. **Sector strength heatmap** — colored cards (replaced the progress bars); click a
+   sector to filter the watchlist. Color = avg flag % (teal ≥62.5, amber mid, rose weak).
+4. **Today's opportunities** — top 5 by flag count with expandable explanation +
+   "risks to watch".
+5. **Market breadth** — above-EMA200 %, new 52-week highs/lows, breakout count,
+   A/D ratio; all computed client-side from the published per-stock JSON.
+6. **Screens** — six transparent boolean conditions (Trending · Silent accumulation
+   [vol ≥1.4× 20d avg + |chg| ≤0.8%] · Near buy zone [EMA50>EMA200 + price within ±2%
+   of EMA20/50] · Breakout [close > upper BB or ≥99.5% of 52w high] · High volume
+   movers [≥1.5× avg] · Recently weakening). Conditions, not scores — keep them that way.
+7. **Watchlist** — dense cards: price, change, 52w mini-range, EMA20/50/200 status
+   badges, RSI, MACD, ATR, volume vs 20d avg, 20-session support/resistance, sector
+   badge, fired-flag chips; expandable detail panel. Tabs (top flags / trending /
+   by sector / favorites) + filter chips (only buy zone, ROE ≥15%, debt/equity <1×,
+   strong sectors, dividend ≥1%, breakouts). Filters that need a missing fundamentals
+   field exclude those stocks and display how many were excluded.
+8. **Right rail** — institutional activity (promoter/FII/DII; explicit note while the
+   NSE source keeps blocking), upcoming events, news with sentiment badges, portfolio
+   analytics (allocation, sector mix, unrealized P&L, CAGR shown only after ≥3 months
+   held, estimated dividend income from yields), run status, manage buttons.
+
+**Empty-state rule (UI mirror of the logging discipline):** any section whose data
+isn't collected yet renders an explicit note saying why and when it fills in — never
+a placeholder number, never silently hidden.
+
+**The explanation panel is rule-based, NOT the Phase 3 AI layer:** the "Why this
+stock is here / risks to watch" prose is deterministic, generated in
+`app.js buildExplanation()` from the already-computed flags/indicators, and labelled
+"rule-based". When Phase 3 lands, the pipeline will add a `stock.ai_explanation`
+field which renders instead (labelled as Claude). Do not treat the current panel as
+Phase 3 being done, and never let either version emit a verdict or score.
+
+**News sentiment is keyword-based, NOT AI:** `src/fetch_market.py` tags headlines
+positive/negative/neutral with a transparent regex wordlist and stamps
+`sentiment_source: "keyword"` in `news.json`; the UI labels it "keyword sentiment ·
+not AI". Unmatched headlines stay neutral — never guessed.
+
 ## Data sources (all free — do not introduce paid data sources without asking)
 | Data | Source | Notes |
 |---|---|---|
@@ -52,7 +99,10 @@ labelling; do not let this grow into a dashboard-generated verdict.
 | Technical indicators | Computed locally from OHLCV | No external service. |
 | Fundamentals (PE, EPS, ROE, margins, market cap, statements) | `yfinance` (ticker format: `SYMBOL.NS`) | No API key needed. |
 | ROCE, multi-year growth | Computed from `yfinance` raw financial statements | Not pulled pre-built — this is intentional (builds real judgment instead of trusting an opaque number). |
-| Promoter/FII/DII shareholding, corporate filings, quarterly results | `nsepython` / `nselib` / `jugaad_data` | Public NSE data, no key needed. |
+| Promoter/FII/DII shareholding, corporate filings, quarterly results | `nsepython` / `nselib` / `jugaad_data` | Public NSE data, no key needed. Source has been blocking automated requests — every skip is logged and the UI says so explicitly. |
+| Index levels (NIFTY 50 `^NSEI`, SENSEX `^BSESN`, BANK NIFTY `^NSEBANK`, India VIX `^INDIAVIX`) | `yfinance` via `src/fetch_market.py` | Written to `data/output/market.json` each run. |
+| Debt/equity, dividend yield, price/book, event dates (earnings, ex-div, dividend pay) | `yfinance` `info` + `calendar` in `src/fetch_fundamentals.py` | Added 2026-07-13 (fundamentals cache version 2 — old caches refetch once). Bonus/split announcements are NOT in this feed; planned via the NSE corporate-actions source. |
+| News headlines | `yfinance` `.news` via `src/fetch_market.py` | Only for holdings + top-10 flag-count names (keeps request volume small). Written to `data/output/news.json` with keyword-based sentiment, labelled as such. |
 | AI explanations | Claude Haiku via Anthropic API | Explains flags already computed in code. Never invents a signal, score, or verdict — it explains, it doesn't decide. |
 | Explicitly NOT used | Screener.in (free tier disables export; paid tier not needed since the above covers the same fields) | Don't reintroduce this dependency. |
 
@@ -110,4 +160,6 @@ bot's history (v25 forensic analysis) — do not repeat it here.
 ## Reference
 The full build guide, cost breakdown, and visual mockup were already produced and
 approved: `stock-dashboard-guide.html`. Check it for the agreed-on look and feel
-before making independent visual design decisions.
+before making independent visual design decisions. The 2026-07-13 redesign (see
+"Dashboard layout" above) supersedes the mockup's *layout* — denser, multi-section —
+but keeps its visual language (light glass, teal/amber/rose semantics, same fonts).

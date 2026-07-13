@@ -21,6 +21,10 @@ _MIN_INTERVAL_SEC = 1.5
 _MAX_RETRIES = 3
 _CACHE_TTL_SEC = 7 * 24 * 3600
 _CACHE_DIR = config.CACHE_DIR / "fundamentals"
+# Bump when the view schema gains fields (debt/dividend/events added 2026-07): an
+# old-version cache is treated as stale so every symbol refetches once, but it still
+# serves as the fallback if that refetch fails.
+_CACHE_VERSION = 2
 
 _last_call_ts = 0.0
 
@@ -37,6 +41,11 @@ INFO_FIELDS = {
     "currentPrice": "current_price",
     "sector": "sector",
     "longName": "name",
+    # yfinance reports debtToEquity as a percentage (e.g. 41.2 = 0.41x) and
+    # dividendYield as a percentage for .NS tickers.
+    "debtToEquity": "debt_to_equity",
+    "dividendYield": "dividend_yield",
+    "priceToBook": "price_to_book",
 }
 
 # External analyst consensus. This is third-party opinion shown as-is and clearly
@@ -78,7 +87,11 @@ def _read_cache(symbol: str) -> dict | None:
 
 
 def _write_cache(symbol: str, view: dict) -> None:
-    payload = {"fetched_at": datetime.now(timezone.utc).isoformat(), "view": view}
+    payload = {
+        "fetched_at": datetime.now(timezone.utc).isoformat(),
+        "version": _CACHE_VERSION,
+        "view": view,
+    }
     try:
         _cache_path(symbol).write_text(json.dumps(payload, indent=2), encoding="utf-8")
     except OSError as exc:
@@ -117,7 +130,11 @@ def fetch_market_view(symbol: str) -> dict:
             age = time.time() - datetime.fromisoformat(cached["fetched_at"]).timestamp()
         except (KeyError, ValueError):
             age = None
-        if age is not None and age < _CACHE_TTL_SEC:
+        if (
+            age is not None
+            and age < _CACHE_TTL_SEC
+            and cached.get("version") == _CACHE_VERSION
+        ):
             return cached["view"]
 
     ticker = yf.Ticker(f"{symbol}.NS")
@@ -127,11 +144,12 @@ def fetch_market_view(symbol: str) -> dict:
         if cached:
             log_skip(logger, symbol, "fetch_fundamentals", "fetch failed; serving stale cached fundamentals")
             return cached["view"]
-        return {"fundamentals": None, "analyst": None}
+        return {"fundamentals": None, "analyst": None, "events": None}
 
     fundamentals = _build_fundamentals(symbol, ticker, info)
     analyst = _build_analyst(info)
-    view = {"fundamentals": fundamentals, "analyst": analyst}
+    events = _build_events(symbol, ticker)
+    view = {"fundamentals": fundamentals, "analyst": analyst, "events": events}
     _write_cache(symbol, view)
     return view
 
@@ -156,6 +174,42 @@ def _build_analyst(info: dict) -> dict | None:
     if not num:  # no coverage -> nothing to show, and no verdict to invent
         return None
     return {out_key: info.get(yf_key) for yf_key, out_key in ANALYST_FIELDS.items()}
+
+
+def _build_events(symbol: str, ticker: yf.Ticker) -> dict | None:
+    """Upcoming corporate events from yfinance's calendar: next earnings date and
+    dividend/ex-dividend dates. Bonus/split announcements are not in this feed —
+    the UI says so explicitly instead of pretending the section is complete."""
+    _throttle()
+    try:
+        calendar = ticker.calendar
+    except Exception as exc:
+        log_skip(logger, symbol, "fetch_events", f"calendar raised {exc!r}")
+        return None
+    if not calendar:
+        log_skip(logger, symbol, "fetch_events", "no calendar data available")
+        return None
+
+    def _iso(value):
+        if value is None:
+            return None
+        if hasattr(value, "isoformat"):
+            return value.isoformat()
+        return str(value)
+
+    earnings_dates = calendar.get("Earnings Date") or []
+    if not isinstance(earnings_dates, (list, tuple)):
+        earnings_dates = [earnings_dates]
+
+    events = {
+        "earnings_dates": [_iso(d) for d in earnings_dates if d is not None],
+        "ex_dividend_date": _iso(calendar.get("Ex-Dividend Date")),
+        "dividend_date": _iso(calendar.get("Dividend Date")),
+    }
+    if not events["earnings_dates"] and not events["ex_dividend_date"] and not events["dividend_date"]:
+        log_skip(logger, symbol, "fetch_events", "calendar present but empty")
+        return None
+    return events
 
 
 def fetch_fundamentals(symbol: str) -> dict | None:

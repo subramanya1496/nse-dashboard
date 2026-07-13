@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from src import config
 from src.angel_auth import AngelAuthError, login
 from src.fetch_fundamentals import fetch_market_view
+from src.fetch_market import write_market_output, write_news_output
 from src.fetch_ohlcv import fetch_daily_ohlcv
 from src.fetch_shareholding import fetch_shareholding
 from src.flags import FLAG_DEFINITIONS, evaluate_flags
@@ -73,6 +74,7 @@ def run() -> None:
         market_view = fetch_market_view(symbol)
         fundamentals = market_view["fundamentals"]
         analyst = market_view["analyst"]
+        events = market_view.get("events")  # stale caches from before the events field lack it
         shareholding = fetch_shareholding(symbol)
 
         stock_json = {
@@ -84,6 +86,7 @@ def run() -> None:
             "flags": flag_result,
             "fundamentals": fundamentals,
             "analyst": analyst,
+            "events": events,
             "shareholding": shareholding,
             "updated_at": datetime.now(timezone.utc).isoformat(),
         }
@@ -96,6 +99,7 @@ def run() -> None:
             "status": "ok",
             "fundamentals_available": fundamentals is not None,
             "analyst_available": analyst is not None,
+            "events_available": events is not None,
             "shareholding_available": shareholding is not None,
         }
         logger.info(
@@ -107,6 +111,17 @@ def run() -> None:
 
     _write_portfolio_output(holdings, stock_data_by_symbol, watch_by_symbol)
     _write_sector_strength(stock_data_by_symbol)
+    write_market_output()
+
+    # News only for the symbols that matter most today: every holding plus the top
+    # flag-count names — keeps yfinance request volume small.
+    top_by_flags = sorted(
+        stock_data_by_symbol.values(),
+        key=lambda s: s["flags"]["flag_count"],
+        reverse=True,
+    )[:10]
+    news_symbols = sorted({s["symbol"] for s in top_by_flags} | {h["symbol"] for h in holdings})
+    write_news_output(news_symbols)
 
     meta["summary"] = {
         "total": len(all_symbols),

@@ -6,63 +6,104 @@
 <title>Stock Intelligence — Watchlist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=2">
+<link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
 
-<nav>
-  <div class="brand"><span class="dot"></span> Stock Intelligence</div>
-  <ul>
-    <li><a href="index.html" class="active">Watchlist</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-  </ul>
-  <div class="nav-right">
-    <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline now on GitHub’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload data</span></button>
-  </div>
-</nav>
+<div class="sticky-top">
+  <nav>
+    <div class="brand"><span class="dot"></span> Stock Intelligence</div>
+    <ul>
+      <li><a href="index.html" class="active">Watchlist</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span><span class="label"> Run pipeline</span></a>
+      <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload</span></button>
+    </div>
+  </nav>
+  <div class="market-strip" id="market-strip"><div class="mi mi-note">Loading market overview…</div></div>
+</div>
 
-<header class="hero">
-  <div class="title-row">
-    <h1 class="display">Watchlist</h1>
-    <div class="sub" id="last-updated">Loading last run info…</div>
-  </div>
-  <div class="sub">Ranked by flag count — not a score. Each stock shows how many of the 8 bullish conditions fired.</div>
-  <div class="actions-row">
-    <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span> Run pipeline now on GitHub</a>
-  </div>
-</header>
+<main class="wide">
 
-<main>
-  <div class="layout-grid">
-    <div class="card">
+  <section class="kpi-row" id="kpi-row" aria-label="Key numbers today">
+    <div class="kpi-card"><div class="kpi-label">Loading…</div></div>
+  </section>
+
+  <section class="panel" aria-label="Sector strength heatmap">
+    <div class="panel-head">
+      <h2>Sector strength</h2>
+      <span class="panel-sub">avg % of the 8 bullish flags met per sector · click a sector to filter the watchlist</span>
+    </div>
+    <div class="heatmap-grid" id="sector-heatmap-grid"><div class="empty-note">Loading…</div></div>
+  </section>
+
+  <section class="grid-opp">
+    <div class="panel" aria-label="Today's opportunities">
+      <div class="panel-head">
+        <h2>Today's opportunities</h2>
+        <span class="panel-sub">top 5 by flag count — ranked by conditions met, never a score · click for risks</span>
+      </div>
+      <div id="opportunities-list"><div class="empty-note">Loading…</div></div>
+    </div>
+    <div class="panel" aria-label="Market breadth">
+      <div class="panel-head"><h2>Market breadth</h2><span class="panel-sub">across tracked watchlist</span></div>
+      <div id="breadth-widgets"><div class="empty-note">Loading…</div></div>
+    </div>
+  </section>
+
+  <section class="panel" aria-label="Screens">
+    <div class="panel-head">
+      <h2>Screens</h2>
+      <span class="panel-sub">simple transparent conditions on today's data · click a row to jump to the stock</span>
+    </div>
+    <div class="screens-grid" id="screens-grid"><div class="empty-note">Loading…</div></div>
+  </section>
+
+  <section class="grid-main">
+    <div class="panel" id="watchlist-card" aria-label="Watchlist">
       <div class="card-head-row">
-        <h2>Stocks</h2>
+        <h2>Watchlist</h2>
         <span class="stock-count" id="stock-count"></span>
       </div>
       <div class="search-row">
-        <input type="search" id="stock-search" class="search-input" placeholder="Search by symbol or company name…" autocomplete="off">
+        <input type="search" id="stock-search" class="search-input" placeholder="Search by symbol, company or sector…" autocomplete="off">
       </div>
       <div class="tab-bar" id="watchlist-tabs">
-        <button class="tab-btn active" data-tab="flags">Top Flags</button>
-        <button class="tab-btn" data-tab="trending">Trending Today</button>
-        <button class="tab-btn" data-tab="sector">By Sector</button>
+        <button class="tab-btn active" data-tab="flags">Top flags</button>
+        <button class="tab-btn" data-tab="trending">Trending</button>
+        <button class="tab-btn" data-tab="sector">By sector</button>
         <button class="tab-btn" data-tab="favorites">★ Favorites</button>
       </div>
+      <div class="filter-row">
+        <span class="filter-label">Filters</span>
+        <div class="filter-chips" id="filter-chips"></div>
+      </div>
+      <div class="filter-note fine" id="filter-note"></div>
       <div id="stock-list"><div class="empty-note">Loading…</div></div>
     </div>
 
-    <div>
+    <aside class="rail">
       <div class="side-card">
-        <h5>Sector strength</h5>
-        <div id="sector-strength" class="empty-note">Loading…</div>
+        <h5>Institutional activity</h5>
+        <div id="institutional-body" class="empty-note">Loading…</div>
+      </div>
+      <div class="side-card">
+        <h5>Upcoming events</h5>
+        <div id="events-body" class="empty-note">Loading…</div>
+      </div>
+      <div class="side-card">
+        <h5>Latest news <span class="ext-tag">keyword sentiment · not AI</span></h5>
+        <div id="news-body" class="empty-note">Loading…</div>
+      </div>
+      <div class="side-card">
+        <h5>Portfolio analytics</h5>
+        <div id="portfolio-analytics-body" class="empty-note">Loading…</div>
       </div>
       <div class="side-card">
         <h5>Run status</h5>
         <div id="run-status" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Your portfolio</h5>
-        <div id="portfolio-mini" class="empty-note">Loading…</div>
       </div>
       <div class="side-card">
         <h5>Manage</h5>
@@ -73,157 +114,15 @@
           <a class="btn btn-danger" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=remove-holding.yml" target="_blank" rel="noopener"><span class="icon">−</span> Remove holding</a>
         </div>
       </div>
-    </div>
-  </div>
+    </aside>
+  </section>
+
 </main>
 
-<footer>Built for personal use only · not a recommendation service · you make every decision</footer>
+<footer>Ranked by flag count, never a composite score · analyst consensus shown is external third-party opinion · built for personal use only · you make every decision</footer>
 
-<script src="js/app.js?v=2"></script>
-<script>
-let activeTab = "flags";
-let searchQuery = "";
-let controlsBound = false;
-
-async function render() {
-  const utils = window.dashboardUtils;
-  const [meta, flagDefinitions] = await Promise.all([
-    utils.loadMeta(),
-    utils.loadFlagDefinitions(),
-  ]);
-
-  document.getElementById("last-updated").textContent =
-    `Last run: ${utils.formatUpdatedAt(meta.run_at)} · ${meta.summary.ok}/${meta.summary.total} symbols ok`;
-
-  const statusEl = document.getElementById("run-status");
-  if (meta.summary.skipped > 0) {
-    const skippedSymbols = Object.entries(meta.symbols)
-      .filter(([, info]) => info.status !== "ok")
-      .map(([symbol, info]) => `${symbol} (${info.reason})`);
-    statusEl.innerHTML = `<div class="callout"><b>${meta.summary.skipped} skipped this run:</b><br>${skippedSymbols.join("<br>")}</div>`;
-  } else {
-    statusEl.textContent = `All ${meta.summary.total} tracked symbols updated successfully.`;
-  }
-
-  const stocks = await utils.loadAllStocks(meta);
-
-  const listEl = document.getElementById("stock-list");
-  const countEl = document.getElementById("stock-count");
-  const FLAT_LIMIT = 25;
-  let showAllFlat = false;
-
-  const favoriteOptions = {
-    onFavoriteToggle: () => {
-      if (activeTab === "favorites") renderTab(activeTab);
-    },
-  };
-
-  function renderTab(tab) {
-    activeTab = tab;
-    const base = tab === "favorites" ? utils.filterFavorites(stocks) : stocks;
-    const matched = utils.filterStocksByQuery(base, searchQuery);
-
-    if (tab === "favorites") {
-      countEl.textContent = searchQuery ? `${matched.length} of ${base.length} favorites` : `${base.length} favorites`;
-    } else {
-      countEl.textContent = searchQuery ? `${matched.length} of ${stocks.length}` : `${stocks.length} tracked`;
-    }
-
-    if (!matched.length) {
-      listEl.innerHTML =
-        tab === "favorites" && !searchQuery
-          ? `<div class="empty-note">No favorites yet — click the ☆ on any stock to add one.</div>`
-          : `<div class="empty-note">No stocks match "${searchQuery}".</div>`;
-      return;
-    }
-
-    if (tab === "sector") {
-      utils.renderSectorGroupsInto(listEl, matched, flagDefinitions, { forceExpand: !!searchQuery, ...favoriteOptions });
-      return;
-    }
-
-    const sorted =
-      tab === "trending"
-        ? [...matched].sort((a, b) => Math.abs(b.indicators.change_pct ?? 0) - Math.abs(a.indicators.change_pct ?? 0))
-        : [...matched].sort((a, b) => b.flags.flag_count - a.flags.flag_count);
-
-    const visible = showAllFlat ? sorted : sorted.slice(0, FLAT_LIMIT);
-    utils.renderStockListInto(listEl, visible, flagDefinitions, favoriteOptions);
-
-    if (sorted.length > FLAT_LIMIT) {
-      const row = document.createElement("div");
-      row.className = "show-more-row";
-      const btn = document.createElement("button");
-      btn.className = "btn btn-ghost btn-sm";
-      btn.textContent = showAllFlat ? "Show top 25 only" : `Show all ${sorted.length} stocks`;
-      btn.addEventListener("click", () => {
-        showAllFlat = !showAllFlat;
-        renderTab(activeTab);
-      });
-      row.appendChild(btn);
-      listEl.appendChild(row);
-    }
-  }
-  renderTab(activeTab);
-  if (!controlsBound) {
-    utils.initTabs(document.getElementById("watchlist-tabs"), (tab) => {
-      showAllFlat = false;
-      renderTab(tab);
-    });
-    const searchEl = document.getElementById("stock-search");
-    searchEl.value = searchQuery;
-    searchEl.addEventListener("input", () => {
-      searchQuery = searchEl.value.trim();
-      showAllFlat = false;
-      renderTab(activeTab);
-    });
-    controlsBound = true;
-  }
-
-  const sectors = await utils.loadSectors();
-  const sectorEl = document.getElementById("sector-strength");
-  if (!sectors.length) {
-    sectorEl.textContent = "No sector data yet.";
-  } else {
-    sectorEl.innerHTML = sectors
-      .map(
-        (s) => `
-      <div class="sector-bar-row">
-        <span class="name">${s.sector}</span>
-        <div class="sector-bar-track"><div class="sector-bar-fill ${utils.sectorBarClass(s.avg_flag_pct)}" style="width:${s.avg_flag_pct}%"></div></div>
-        <span class="pct">${s.avg_flag_pct}%</span>
-      </div>`
-      )
-      .join("");
-  }
-
-  const portfolio = await utils.loadPortfolio();
-  const miniEl = document.getElementById("portfolio-mini");
-  if (!portfolio.holdings.length) {
-    miniEl.textContent = "No holdings configured yet.";
-  } else {
-    miniEl.innerHTML = "";
-    portfolio.holdings.forEach((holding) => {
-      const div = document.createElement("div");
-      div.className = "holding-row";
-      const statusClass = holding.flags
-        ? utils.pillStatusClass(holding.flags.flag_count, holding.flags.flag_total)
-        : "watch";
-      const statusLabel = holding.flags ? `${holding.flags.flag_count}/${holding.flags.flag_total}` : "no data";
-      div.innerHTML = `<span>${holding.symbol}</span><span class="pill-status ${statusClass}">${statusLabel}</span>`;
-      miniEl.appendChild(div);
-    });
-  }
-}
-
-render().catch((err) => {
-  console.error(err);
-  document.getElementById("stock-list").innerHTML =
-    `<div class="empty-note">Failed to load data: ${err.message}. Run the pipeline first (python -m src.pipeline).</div>`;
-});
-
-window.dashboardUtils.initRefreshButton(document.getElementById("refresh-btn"), render);
-</script>
+<script src="js/app.js?v=3"></script>
+<script src="js/home.js?v=3"></script>
 
 </body>
 </html>
