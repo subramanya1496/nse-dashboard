@@ -29,6 +29,21 @@ INDICES = [
     {"key": "india_vix", "label": "INDIA VIX", "yahoo": "^INDIAVIX"},
 ]
 
+# Global markets for the morning brief: India opens after the US close and during the
+# Asian session, so an overnight read of these gives the day's likely tone. Kept short
+# to bound the throttled request count. FX/commodities go through the same daily fetch.
+GLOBAL_INDICES = [
+    {"key": "sp500", "label": "S&P 500", "yahoo": "^GSPC"},
+    {"key": "nasdaq", "label": "Nasdaq", "yahoo": "^IXIC"},
+    {"key": "dow", "label": "Dow Jones", "yahoo": "^DJI"},
+    {"key": "nikkei", "label": "Nikkei 225", "yahoo": "^N225"},
+    {"key": "hangseng", "label": "Hang Seng", "yahoo": "^HSI"},
+    {"key": "ftse", "label": "FTSE 100", "yahoo": "^FTSE"},
+    {"key": "usdinr", "label": "USD / INR", "yahoo": "INR=X"},
+    {"key": "brent", "label": "Brent Crude", "yahoo": "BZ=F"},
+    {"key": "gold", "label": "Gold", "yahoo": "GC=F"},
+]
+
 _HISTORY_DAYS = 30
 
 
@@ -77,19 +92,37 @@ def _fetch_index(entry: dict) -> dict | None:
     return None
 
 
-def write_market_output() -> None:
-    """Fetch all index quotes and write data/output/market.json."""
-    indices = []
-    for entry in INDICES:
+def _fetch_index_group(entries: list[dict]) -> list[dict]:
+    results = []
+    for entry in entries:
         result = _fetch_index(entry)
         if result is None:
             log_skip(logger, entry["key"], "write_market_output", "index unavailable this run; omitted (frontend shows explicit gap)")
             continue
-        indices.append(result)
+        results.append(result)
+    return results
 
-    payload = {"updated_at": datetime.now(timezone.utc).isoformat(), "indices": indices}
+
+def write_market_output() -> None:
+    """Fetch Indian + global index quotes and write data/output/market.json.
+
+    The dashboard's sticky strip reads `indices` (India); the morning Telegram brief
+    also reads `global_indices`. Both omit anything that failed to fetch (logged) rather
+    than substituting a placeholder.
+    """
+    indices = _fetch_index_group(INDICES)
+    global_indices = _fetch_index_group(GLOBAL_INDICES)
+
+    payload = {
+        "updated_at": datetime.now(timezone.utc).isoformat(),
+        "indices": indices,
+        "global_indices": global_indices,
+    }
     (config.OUTPUT_DIR / "market.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    logger.info("wrote market.json with %d/%d indices", len(indices), len(INDICES))
+    logger.info(
+        "wrote market.json with %d/%d India + %d/%d global indices",
+        len(indices), len(INDICES), len(global_indices), len(GLOBAL_INDICES),
+    )
 
 
 # --- News -----------------------------------------------------------------------
@@ -183,5 +216,17 @@ def write_news_output(symbols: list[str]) -> None:
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser(description="Refresh market.json (and optionally news.json).")
+    parser.add_argument(
+        "--indices-only",
+        action="store_true",
+        help="Only refresh index levels (used by the morning brief; skips the slower news fetch).",
+    )
+    parser.add_argument("--news", nargs="*", help="Symbols to fetch news for when not --indices-only.")
+    args = parser.parse_args()
+
     write_market_output()
-    write_news_output(["RELIANCE", "TCS"])
+    if not args.indices_only:
+        write_news_output(args.news or ["RELIANCE", "TCS"])

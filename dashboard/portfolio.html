@@ -6,7 +6,7 @@
 <title>Stock Intelligence — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=3">
+<link rel="stylesheet" href="css/style.css?v=4">
 </head>
 <body>
 
@@ -55,7 +55,7 @@
 
 <footer>Built for personal use only · not a recommendation service · you make every decision</footer>
 
-<script src="js/app.js?v=3"></script>
+<script src="js/app.js?v=4"></script>
 <script>
 async function render() {
   const utils = window.dashboardUtils;
@@ -91,7 +91,7 @@ async function render() {
       <td>${holding.symbol}<div class="empty-note">${holding.sector || ""}</div></td>
       <td>${holding.quantity}</td>
       <td class="price-cell">${utils.formatPrice(holding.buy_price)}</td>
-      <td>${holding.buy_date}</td>
+      <td>${holding.buy_date || "—"}</td>
       <td class="price-cell">${utils.formatPrice(holding.current_price)}</td>
       <td class="price-cell chg ${pnlClass}">${pnlText}</td>
       <td class="price-cell chg ${pnlClass}">${pnlPctText}</td>

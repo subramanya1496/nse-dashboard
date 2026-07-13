@@ -1,5 +1,6 @@
 import argparse
 import json
+from datetime import datetime, timezone, timedelta
 
 import requests
 
@@ -10,6 +11,7 @@ logger = get_logger(__name__)
 
 TELEGRAM_API = "https://api.telegram.org/bot{token}/sendMessage"
 TOP_N = 5
+IST = timezone(timedelta(hours=5, minutes=30))
 
 
 def _load_output():
@@ -28,59 +30,152 @@ def _load_output():
     return meta, sectors, portfolio, stocks
 
 
-def _format_stock_line(rank: int, stock: dict) -> str:
+def _load_market():
+    """market.json is optional (only exists once the extended pipeline / morning index
+    refresh has run). Return None rather than failing the brief."""
+    path = config.OUTPUT_DIR / "market.json"
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("could not read market.json: %r", exc)
+        return None
+
+
+def _now_ist_label() -> str:
+    return datetime.now(IST).strftime("%d %b %Y, %I:%M %p IST")
+
+
+def _fmt_change(pct) -> str:
+    if pct is None:
+        return "—"
+    arrow = "▲" if pct > 0 else "▼" if pct < 0 else "▬"
+    return f"{arrow} {abs(pct):.2f}%"
+
+
+def _price(value) -> str:
+    if value is None:
+        return "—"
+    return f"₹{value:,.2f}"
+
+
+def _index_line(ix: dict) -> str:
+    value = f"{ix['close']:,.2f}"
+    return f"{ix['label']}: {value} {_fmt_change(ix.get('change_pct'))}"
+
+
+def _index_map(market, key):
+    if not market:
+        return []
+    return market.get(key, []) or []
+
+
+def _format_stock_flag_line(rank: int, stock: dict) -> str:
     flags = stock["flags"]
     top_flag_labels = ", ".join(flags["flags_on"][:2]) or "no bullish flags"
     return f"{rank}. {stock['symbol']} ({stock['sector']}) — {flags['flag_count']}/{flags['flag_total']} · {top_flag_labels}"
 
 
-def build_evening_message(meta, sectors, portfolio, stocks) -> str:
-    lines = ["📊 *Stock Intelligence — Evening Wrap*", ""]
-    lines.append(f"{meta['summary']['ok']}/{meta['summary']['total']} symbols updated.")
-    if meta["summary"]["skipped"]:
-        lines.append(f"⚠️ {meta['summary']['skipped']} skipped this run (see dashboard for reasons).")
-    lines.append("")
+# --- Morning: global tone + India indices + watchlist leaders -----------------------
 
-    lines.append("*Top flag counts today:*")
-    for i, stock in enumerate(stocks[:TOP_N], start=1):
-        lines.append(_format_stock_line(i, stock))
-    lines.append("")
 
-    if sectors:
-        top_sectors = ", ".join(f"{s['sector']} {s['avg_flag_pct']}%" for s in sectors[:3])
-        lines.append(f"*Strongest sectors:* {top_sectors}")
+def build_morning_message(meta, sectors, portfolio, stocks, market) -> str:
+    lines = [f"🌅 *Good morning — Market brief*", f"_{_now_ist_label()}_", ""]
+
+    global_ix = _index_map(market, "global_indices")
+    if global_ix:
+        lines.append("🌍 *Global (overnight / Asia):*")
+        for ix in global_ix:
+            lines.append(f"• {_index_line(ix)}")
         lines.append("")
 
-    if portfolio["holdings"]:
-        lines.append("*Portfolio:*")
-        for h in portfolio["holdings"]:
-            if h["pnl_pct"] is None:
-                lines.append(f"{h['symbol']}: no data this cycle")
-            else:
-                arrow = "▲" if h["pnl_pct"] >= 0 else "▼"
-                lines.append(f"{h['symbol']}: {arrow} {abs(h['pnl_pct']):.2f}% (₹{h['pnl']:,.0f})")
+    india_ix = _index_map(market, "indices")
+    if india_ix:
+        lines.append("🇮🇳 *India (previous close):*")
+        for ix in india_ix:
+            lines.append(f"• {_index_line(ix)}")
         lines.append("")
 
-    lines.append(f"Full dashboard: {config.DASHBOARD_URL}")
-    lines.append("_Not a recommendation service — you make every decision._")
+    if not global_ix and not india_ix:
+        lines.append("_Index data unavailable this run (market.json not refreshed)._")
+        lines.append("")
+
+    if stocks:
+        based_on = meta["run_at"][:10]
+        lines.append(f"👀 *Watchlist leaders* (by flags, {based_on} close):")
+        for i, stock in enumerate(stocks[:TOP_N], start=1):
+            lines.append(_format_stock_flag_line(i, stock))
+        lines.append("")
+
+    lines.append(f"📈 Full dashboard: {config.DASHBOARD_URL}")
+    lines.append("_Ranked by flag count, not a score — you make every decision._")
     return "\n".join(lines)
 
 
-def build_morning_message(meta, sectors, portfolio, stocks) -> str:
-    lines = ["☀️ *Good morning — Stock Intelligence recap*", ""]
-    lines.append(f"Based on the {meta['run_at'][:10]} close.")
+# --- Evening: day's movers + India close + your portfolio ---------------------------
+
+
+def _top_movers(stocks, gainers=True, n=TOP_N):
+    ranked = [s for s in stocks if s["indicators"].get("change_pct") is not None]
+    ranked.sort(key=lambda s: s["indicators"]["change_pct"], reverse=gainers)
+    return ranked[:n]
+
+
+def build_evening_message(meta, sectors, portfolio, stocks, market) -> str:
+    based_on = meta["run_at"][:10]
+    lines = ["📊 *Evening wrap — market close*", f"_{_now_ist_label()} · data as of {based_on}_", ""]
+
+    lines.append(f"{meta['summary']['ok']}/{meta['summary']['total']} symbols updated.")
+    if meta["summary"]["skipped"]:
+        lines.append(f"⚠️ {meta['summary']['skipped']} skipped (see dashboard for reasons).")
     lines.append("")
 
-    lines.append("*Top flag counts:*")
-    for i, stock in enumerate(stocks[:3], start=1):
-        lines.append(_format_stock_line(i, stock))
-    lines.append("")
-
-    if sectors:
-        lines.append(f"*Strongest sector:* {sectors[0]['sector']} ({sectors[0]['avg_flag_pct']}%)")
+    india_ix = _index_map(market, "indices")
+    if india_ix:
+        lines.append("🇮🇳 *Indices:*")
+        for ix in india_ix:
+            lines.append(f"• {_index_line(ix)}")
         lines.append("")
 
-    lines.append(f"Full dashboard: {config.DASHBOARD_URL}")
+    gainers = _top_movers(stocks, gainers=True)
+    if gainers:
+        lines.append("🔼 *Top gainers (watchlist):*")
+        for i, s in enumerate(gainers, start=1):
+            lines.append(f"{i}. {s['symbol']} {_fmt_change(s['indicators']['change_pct'])} · {_price(s['indicators']['close'])}")
+        lines.append("")
+
+    losers = _top_movers(stocks, gainers=False)
+    if losers:
+        lines.append("🔽 *Top losers (watchlist):*")
+        for i, s in enumerate(losers, start=1):
+            lines.append(f"{i}. {s['symbol']} {_fmt_change(s['indicators']['change_pct'])} · {_price(s['indicators']['close'])}")
+        lines.append("")
+
+    if sectors:
+        top_sectors = ", ".join(f"{s['sector']} {s['avg_flag_pct']}%" for s in sectors[:3])
+        lines.append(f"🏆 *Strongest sectors:* {top_sectors}")
+        lines.append("")
+
+    holdings = portfolio.get("holdings", [])
+    if holdings:
+        lines.append("💼 *Your portfolio:*")
+        priced = [h for h in holdings if h.get("pnl") is not None]
+        for h in holdings:
+            if h.get("pnl_pct") is None:
+                lines.append(f"• {h['symbol']}: no data this cycle")
+            else:
+                lines.append(f"• {h['symbol']}: {_fmt_change(h['pnl_pct'])} (₹{h['pnl']:,.0f})")
+        if priced:
+            invested = sum(h["buy_price"] * h["quantity"] for h in priced)
+            total_pnl = sum(h["pnl"] for h in priced)
+            total_pct = (total_pnl / invested * 100) if invested else 0
+            sign = "+" if total_pnl >= 0 else "−"
+            lines.append(f"*Total unrealized: {sign}₹{abs(total_pnl):,.0f} ({total_pct:+.2f}%)*")
+        lines.append("")
+
+    lines.append(f"📈 Full dashboard: {config.DASHBOARD_URL}")
+    lines.append("_Not a recommendation service — you make every decision._")
     return "\n".join(lines)
 
 
@@ -114,10 +209,11 @@ def main() -> None:
     args = parser.parse_args()
 
     meta, sectors, portfolio, stocks = _load_output()
+    market = _load_market()
     if args.mode == "evening":
-        text = build_evening_message(meta, sectors, portfolio, stocks)
+        text = build_evening_message(meta, sectors, portfolio, stocks, market)
     else:
-        text = build_morning_message(meta, sectors, portfolio, stocks)
+        text = build_morning_message(meta, sectors, portfolio, stocks, market)
 
     # Best-effort: a Telegram delivery failure should never fail the workflow job
     # (data collection + Pages deploy matter more than the notification).

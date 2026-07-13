@@ -2,7 +2,9 @@ name: Morning briefing
 
 on:
   schedule:
-    - cron: "15 3 * * 1-5" # ~08:45 IST, weekdays (before market open)
+    # 03:30 UTC = 09:00 IST, weekdays. India opens 09:15 IST, so this lands just before
+    # the bell with an overnight read of global markets.
+    - cron: "30 3 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
@@ -18,8 +20,15 @@ jobs:
         with:
           python-version: "3.13"
 
+      # yfinance (+pandas) is needed for the live index refresh; requests/dotenv for the send.
       - name: Install dependencies
-        run: pip install requests python-dotenv
+        run: pip install requests python-dotenv yfinance pandas
+
+      # Refresh global + India index levels live, as of ~09:00 IST, so the morning brief
+      # reflects the overnight US/Asia session (not yesterday's data). No Angel/secrets
+      # needed — yfinance only. Watchlist leaders come from the last published pipeline run.
+      - name: Refresh index levels (global + India)
+        run: python -m src.fetch_market --indices-only
 
       - name: Send morning Telegram briefing
         env:

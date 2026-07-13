@@ -2,7 +2,13 @@ name: Daily data refresh
 
 on:
   schedule:
-    - cron: "15 10 * * 1-5" # ~15:45 IST, weekdays (shortly after NSE close)
+    # 10:15 UTC = 15:45 IST, weekdays — 15 min after the 15:30 NSE close, giving Angel
+    # time to finalize the day's daily candle (starting sooner risks a not-yet-final last
+    # candle being labelled as today). The evening brief is the last pipeline step, sent
+    # once all output is written, so on a normal warm run it lands ~16:00 IST. It is
+    # intentionally coupled to the pipeline so it never reads torn or stale data; on the
+    # occasional slow run it drifts later but always reflects that day's close.
+    - cron: "15 10 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
@@ -46,6 +52,9 @@ jobs:
           ANGEL_TOTP_SECRET: ${{ secrets.ANGEL_TOTP_SECRET }}
         run: python -m src.pipeline
 
+      # Coupled to the pipeline on purpose: runs only after every stock/market/portfolio
+      # file is fully written, so the evening wrap is always internally consistent and
+      # reflects the close that just finished processing (~16:00 IST on a warm run).
       - name: Send evening Telegram briefing
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

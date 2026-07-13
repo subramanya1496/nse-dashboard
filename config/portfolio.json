@@ -1,11 +1,16 @@
 {
-  "note": "Placeholder holding below - replace with your real positions. symbol must be a valid NSE trading symbol (doesn't need to be in watchlist.json, it'll be tracked automatically either way). No code change needed; the next pipeline run picks up edits here.",
+  "note": "Real holdings imported from broker export 2026-07-13. buy_price is the broker avg cost; buy_date is null where the export didn't include a purchase date (CAGR needs a date, so it stays hidden for those — no fabricated dates). symbol must be a valid NSE trading symbol; it does not need to be in watchlist.json, it is tracked automatically. Suspended/illiquid names (e.g. RCOM) may have no Angel token or candles — the pipeline logs that and the UI shows 'no data this cycle' rather than guessing. No code change needed; the next pipeline run picks up edits here.",
   "holdings": [
-    {
-      "symbol": "RELIANCE",
-      "quantity": 10,
-      "buy_price": 1250.0,
-      "buy_date": "2026-01-15"
-    }
+    { "symbol": "BAJAJHFL", "quantity": 85, "buy_price": 152.95, "buy_date": null },
+    { "symbol": "BEL", "quantity": 103, "buy_price": 173.35, "buy_date": null },
+    { "symbol": "JIOFIN", "quantity": 18, "buy_price": 290.79, "buy_date": null },
+    { "symbol": "JSWINFRA", "quantity": 6, "buy_price": 318.45, "buy_date": null },
+    { "symbol": "RCOM", "quantity": 150, "buy_price": 1.90, "buy_date": null },
+    { "symbol": "RTNPOWER", "quantity": 65, "buy_price": 4.95, "buy_date": null },
+    { "symbol": "SCTL", "quantity": 750, "buy_price": 0.74, "buy_date": null },
+    { "symbol": "SUZLON", "quantity": 117, "buy_price": 77.63, "buy_date": null },
+    { "symbol": "SYMBIOX", "quantity": 100, "buy_price": 11.63, "buy_date": null },
+    { "symbol": "UJJIVANSFB", "quantity": 40, "buy_price": 43.62, "buy_date": null },
+    { "symbol": "YESBANK", "quantity": 289, "buy_price": 19.05, "buy_date": null }
   ]
 }

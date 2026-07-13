@@ -79,38 +79,184 @@
 
   // ---------- KPI row ----------
 
+  function jumpToWatchlist(query) {
+    const search = document.getElementById("stock-search");
+    search.value = query;
+    search.dispatchEvent(new Event("input"));
+    document.getElementById("watchlist-card").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  // A clickable list of stocks used inside the KPI detail drawer. statFn adds a
+  // per-row metric (e.g. volume ratio); each row jumps to that stock in the watchlist.
+  function kpiStockRows(list, statFn) {
+    if (!list.length) return `<div class="empty-note sm">Nothing matches this right now.</div>`;
+    return list
+      .map((s) => {
+        const chg = U.formatChangePct(s.indicators.change_pct);
+        const stat = statFn ? statFn(s) : null;
+        return `<button class="kpi-stock-row" data-symbol="${s.symbol}" title="Show ${s.symbol} in the watchlist">
+          <span class="ss">${s.symbol}</span>
+          <span class="sector-badge">${s.sector || "—"}</span>
+          <span class="flag-count ${U.flagCountClass(s.flags.flag_count, s.flags.flag_total)}">${s.flags.flag_count}/${s.flags.flag_total}</span>
+          ${stat ? `<span class="kstat mono">${stat}</span>` : ""}
+          <span class="kprice mono">${U.formatPrice(s.indicators.close)} <span class="chg ${chg.cls}">${chg.text}</span></span>
+        </button>`;
+      })
+      .join("");
+  }
+
   function renderKpis(stocks, sectors, portfolio) {
     const el = document.getElementById("kpi-row");
-    const perfect = stocks.filter((s) => s.flags.flag_count === s.flags.flag_total);
-    const breakouts = stocks.filter(U.isBreakoutCandidate);
-    const accum = stocks.filter(U.isSilentAccumulation);
+    const byChangeDesc = (a, b) => (b.indicators.change_pct ?? 0) - (a.indicators.change_pct ?? 0);
+    const perfect = [...stocks].filter((s) => s.flags.flag_count === s.flags.flag_total).sort(byChangeDesc);
+    const breakouts = [...stocks].filter(U.isBreakoutCandidate).sort(byChangeDesc);
+    const accum = [...stocks].filter(U.isSilentAccumulation).sort((a, b) => (U.volumeRatio(b.indicators) ?? 0) - (U.volumeRatio(a.indicators) ?? 0));
     const topSector = sectors.length ? sectors[0] : null;
+    const sectorStocks = topSector
+      ? [...stocks].filter((s) => s.sector === topSector.sector).sort((a, b) => b.flags.flag_count - a.flags.flag_count)
+      : [];
 
-    let pnlHtml = `<div class="kpi-value">—</div><div class="kpi-sub">no holdings configured</div>`;
-    if (portfolio.holdings.length) {
-      const withPrice = portfolio.holdings.filter((h) => h.current_price != null);
-      const invested = withPrice.reduce((s, h) => s + h.buy_price * h.quantity, 0);
-      const pnl = withPrice.reduce((s, h) => s + (h.pnl ?? 0), 0);
-      const pct = invested ? (pnl / invested) * 100 : 0;
-      const cls = pnl > 0 ? "up" : pnl < 0 ? "down" : "flat";
-      pnlHtml = `<div class="kpi-value mono ${cls}">${pnl >= 0 ? "+" : "−"}₹${Math.abs(pnl).toLocaleString("en-IN", { maximumFractionDigits: 0 })}</div>
-        <div class="kpi-sub mono ${cls}">${pct >= 0 ? "+" : ""}${pct.toFixed(2)}% unrealized</div>`;
+    // Portfolio rollup (drives both the P&L card and its detail).
+    const holdings = portfolio.holdings || [];
+    const priced = holdings.filter((h) => h.current_price != null);
+    const invested = priced.reduce((s, h) => s + h.buy_price * h.quantity, 0);
+    const pnl = priced.reduce((s, h) => s + (h.pnl ?? 0), 0);
+    const pnlPct = invested ? (pnl / invested) * 100 : 0;
+    const pnlCls = pnl > 0 ? "up" : pnl < 0 ? "down" : "flat";
+
+    const cards = [
+      {
+        key: "perfect",
+        label: "All 8/8 flags",
+        valueHtml: `<div class="kpi-value mono">${perfect.length}</div>`,
+        sub: perfect.length ? "all 8 bullish conditions met" : "none today",
+        detail: () => ({
+          title: `Stocks with all 8/8 bullish flags (${perfect.length})`,
+          body: kpiStockRows(perfect),
+        }),
+      },
+      {
+        key: "breakouts",
+        label: "Breakout candidates",
+        valueHtml: `<div class="kpi-value mono">${breakouts.length}</div>`,
+        sub: "above upper band / at 52w high",
+        detail: () => ({
+          title: `Breakout candidates (${breakouts.length})`,
+          body: kpiStockRows(breakouts, (s) =>
+            s.indicators.high_52w != null && s.indicators.close >= 0.995 * s.indicators.high_52w ? "at 52w high" : "above BB"
+          ),
+        }),
+      },
+      {
+        key: "accum",
+        label: "Silent accumulation",
+        valueHtml: `<div class="kpi-value mono">${accum.length}</div>`,
+        sub: "volume ≥1.4× avg, price flat",
+        detail: () => ({
+          title: `Silent accumulation (${accum.length})`,
+          body: kpiStockRows(accum, (s) => `${(U.volumeRatio(s.indicators) ?? 0).toFixed(1)}× vol`),
+        }),
+      },
+      {
+        key: "sector",
+        label: "Strongest sector",
+        valueHtml: `<div class="kpi-value">${topSector ? topSector.sector : "—"}</div>`,
+        sub: topSector ? `${topSector.avg_flag_pct}% avg flags · ${topSector.stock_count} stocks` : "",
+        detail: () => ({
+          title: topSector ? `${topSector.sector} — strongest sector (${topSector.avg_flag_pct}% avg flags)` : "No sector data",
+          body: kpiStockRows(sectorStocks),
+        }),
+      },
+      {
+        key: "pnl",
+        label: "Portfolio P&L",
+        valueHtml: holdings.length
+          ? `<div class="kpi-value mono ${pnlCls}">${pnl >= 0 ? "+" : "−"}₹${Math.abs(pnl).toLocaleString("en-IN", { maximumFractionDigits: 0 })}</div>`
+          : `<div class="kpi-value">—</div>`,
+        sub: holdings.length
+          ? `<span class="${pnlCls}">${pnlPct >= 0 ? "+" : ""}${pnlPct.toFixed(2)}% unrealized</span>`
+          : "no holdings configured",
+        detail: () => ({
+          title: `Portfolio — unrealized P&L`,
+          body: holdings.length ? portfolioDetailRows(holdings, priced, invested, pnl, pnlPct, pnlCls) : `<div class="empty-note sm">No holdings configured yet — add one via the Manage card.</div>`,
+        }),
+      },
+    ];
+
+    el.innerHTML = cards
+      .map(
+        (c) => `<button class="kpi-card" data-kpi="${c.key}">
+          <div class="kpi-label">${c.label}</div>
+          ${c.valueHtml}
+          <div class="kpi-sub">${c.sub}</div>
+          <span class="kpi-expand">details ▾</span>
+        </button>`
+      )
+      .join("");
+
+    // One shared detail drawer beneath the KPI row.
+    let drawer = document.getElementById("kpi-detail");
+    if (!drawer) {
+      drawer = document.createElement("section");
+      drawer.id = "kpi-detail";
+      drawer.className = "kpi-detail panel";
+      drawer.hidden = true;
+      el.after(drawer);
+    }
+    let openKey = null;
+
+    function closeDrawer() {
+      drawer.hidden = true;
+      openKey = null;
+      el.querySelectorAll(".kpi-card").forEach((c) => c.classList.remove("active"));
     }
 
-    el.innerHTML = `
-      <div class="kpi-card"><div class="kpi-label">All 8/8 flags</div>
-        <div class="kpi-value mono">${perfect.length}</div>
-        <div class="kpi-sub">${perfect.length ? perfect.slice(0, 3).map((s) => s.symbol).join(", ") + (perfect.length > 3 ? "…" : "") : "none today"}</div></div>
-      <div class="kpi-card"><div class="kpi-label">Breakout candidates</div>
-        <div class="kpi-value mono">${breakouts.length}</div>
-        <div class="kpi-sub">above upper band / at 52w high</div></div>
-      <div class="kpi-card"><div class="kpi-label">Silent accumulation</div>
-        <div class="kpi-value mono">${accum.length}</div>
-        <div class="kpi-sub">volume ≥1.4× avg, price flat</div></div>
-      <div class="kpi-card"><div class="kpi-label">Strongest sector</div>
-        <div class="kpi-value">${topSector ? topSector.sector : "—"}</div>
-        <div class="kpi-sub mono">${topSector ? `${topSector.avg_flag_pct}% avg flags · ${topSector.stock_count} stocks` : ""}</div></div>
-      <div class="kpi-card"><div class="kpi-label">Portfolio P&L</div>${pnlHtml}</div>`;
+    el.querySelectorAll(".kpi-card").forEach((card) => {
+      card.addEventListener("click", () => {
+        const key = card.dataset.kpi;
+        if (openKey === key) {
+          closeDrawer();
+          return;
+        }
+        const cfg = cards.find((c) => c.key === key);
+        const { title, body } = cfg.detail();
+        drawer.innerHTML = `<div class="kpi-detail-head"><h3>${title}</h3><button class="kpi-detail-close" aria-label="Close">✕</button></div><div class="kpi-detail-body">${body}</div>`;
+        drawer.hidden = false;
+        openKey = key;
+        el.querySelectorAll(".kpi-card").forEach((c) => c.classList.toggle("active", c === card));
+
+        drawer.querySelector(".kpi-detail-close").addEventListener("click", closeDrawer);
+        drawer.querySelectorAll(".kpi-stock-row").forEach((row) => {
+          row.addEventListener("click", () => jumpToWatchlist(row.dataset.symbol));
+        });
+        const link = drawer.querySelector(".kpi-portfolio-link");
+        if (link) link.addEventListener("click", (e) => { e.stopPropagation(); });
+        drawer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      });
+    });
+  }
+
+  function portfolioDetailRows(holdings, priced, invested, pnl, pnlPct, pnlCls) {
+    const rows = holdings
+      .map((h) => {
+        if (h.current_price == null) {
+          return `<div class="kpi-holding-row"><span class="ss">${h.symbol}</span><span class="kh-note">no data this cycle (untracked / suspended symbol)</span></div>`;
+        }
+        const cls = (h.pnl ?? 0) > 0 ? "up" : (h.pnl ?? 0) < 0 ? "down" : "flat";
+        const value = h.current_price * h.quantity;
+        return `<button class="kpi-holding-row" data-symbol="${h.symbol}" title="Show ${h.symbol} in the watchlist">
+          <span class="ss">${h.symbol}</span>
+          <span class="kh-qty mono">${h.quantity} @ ${U.formatPrice(h.buy_price)}</span>
+          <span class="kh-val mono">${U.formatPrice(value)}</span>
+          <span class="mono ${cls}">${h.pnl_pct != null ? `${h.pnl_pct >= 0 ? "+" : ""}${h.pnl_pct.toFixed(1)}%` : "—"}</span>
+          <span class="mono ${cls}">${(h.pnl ?? 0) >= 0 ? "+" : "−"}₹${Math.abs(h.pnl ?? 0).toLocaleString("en-IN", { maximumFractionDigits: 0 })}</span>
+        </button>`;
+      })
+      .join("");
+    return `<div class="kpi-holding-head"><span></span><span>Qty @ cost</span><span>Value</span><span>P&L%</span><span>P&L</span></div>
+      ${rows}
+      <div class="kpi-portfolio-total">Invested ₹${invested.toLocaleString("en-IN", { maximumFractionDigits: 0 })} · <span class="${pnlCls}">${pnl >= 0 ? "+" : "−"}₹${Math.abs(pnl).toLocaleString("en-IN", { maximumFractionDigits: 0 })} (${pnlPct >= 0 ? "+" : ""}${pnlPct.toFixed(2)}%)</span></div>
+      <a class="btn btn-primary btn-sm kpi-portfolio-link" href="portfolio.html">Open full portfolio →</a>`;
   }
 
   // ---------- Sector heatmap ----------
@@ -408,13 +554,20 @@
 
     const rows = holdings.map((h) => {
       const alloc = (value(h) / current) * 100;
-      const days = (Date.now() - new Date(h.buy_date).getTime()) / (24 * 3600 * 1000);
+      // buy_date can be null (broker export lacked purchase dates) — don't fabricate a
+      // CAGR from the epoch; show "date n/a" instead. Guard invalid dates too.
+      const buyTime = h.buy_date ? new Date(h.buy_date).getTime() : NaN;
       let cagr = "—";
-      if (days >= 90 && h.buy_price > 0) {
-        const c = (Math.pow(h.current_price / h.buy_price, 365 / days) - 1) * 100;
-        cagr = `${c >= 0 ? "+" : ""}${c.toFixed(1)}%`;
-      } else if (days < 90) {
-        cagr = "held <3mo";
+      if (!isNaN(buyTime)) {
+        const days = (Date.now() - buyTime) / (24 * 3600 * 1000);
+        if (days >= 90 && h.buy_price > 0) {
+          const c = (Math.pow(h.current_price / h.buy_price, 365 / days) - 1) * 100;
+          cagr = `${c >= 0 ? "+" : ""}${c.toFixed(1)}%`;
+        } else if (days < 90) {
+          cagr = "held <3mo";
+        }
+      } else {
+        cagr = "date n/a";
       }
       const cls = (h.pnl ?? 0) > 0 ? "up" : (h.pnl ?? 0) < 0 ? "down" : "flat";
       return `<div class="pa-row">

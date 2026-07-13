@@ -54,7 +54,10 @@ Sections, top to bottom:
    (from `data/output/market.json`), watchlist advance/decline, market open/closed
    status (IST clock; NSE holidays are not checked and the tooltip says so), last run.
 2. **KPI cards** — 8/8-flag count, breakout candidates, silent-accumulation count,
-   strongest sector, portfolio unrealized P&L.
+   strongest sector, portfolio unrealized P&L. Each card is a **button**: clicking it
+   opens a shared detail drawer listing the underlying stocks (or holdings for P&L),
+   and each row jumps to that stock in the watchlist. No new number is invented — the
+   drawer just enumerates what the count already represents.
 3. **Sector strength heatmap** — colored cards (replaced the progress bars); click a
    sector to filter the watchlist. Color = avg flag % (teal ≥62.5, amber mid, rose weak).
 4. **Today's opportunities** — top 5 by flag count with expandable explanation +
@@ -100,11 +103,29 @@ not AI". Unmatched headlines stay neutral — never guessed.
 | Fundamentals (PE, EPS, ROE, margins, market cap, statements) | `yfinance` (ticker format: `SYMBOL.NS`) | No API key needed. |
 | ROCE, multi-year growth | Computed from `yfinance` raw financial statements | Not pulled pre-built — this is intentional (builds real judgment instead of trusting an opaque number). |
 | Promoter/FII/DII shareholding, corporate filings, quarterly results | `nsepython` / `nselib` / `jugaad_data` | Public NSE data, no key needed. Source has been blocking automated requests — every skip is logged and the UI says so explicitly. |
-| Index levels (NIFTY 50 `^NSEI`, SENSEX `^BSESN`, BANK NIFTY `^NSEBANK`, India VIX `^INDIAVIX`) | `yfinance` via `src/fetch_market.py` | Written to `data/output/market.json` each run. |
+| Index levels — India (NIFTY 50 `^NSEI`, SENSEX `^BSESN`, BANK NIFTY `^NSEBANK`, India VIX `^INDIAVIX`) + global (S&P 500, Nasdaq, Dow, Nikkei, Hang Seng, FTSE, USD/INR, Brent, Gold) | `yfinance` via `src/fetch_market.py` | Written to `data/output/market.json` (`indices` = India, `global_indices` = global). The morning brief refreshes indices live via `python -m src.fetch_market --indices-only` (no Angel/secrets needed). |
 | Debt/equity, dividend yield, price/book, event dates (earnings, ex-div, dividend pay) | `yfinance` `info` + `calendar` in `src/fetch_fundamentals.py` | Added 2026-07-13 (fundamentals cache version 2 — old caches refetch once). Bonus/split announcements are NOT in this feed; planned via the NSE corporate-actions source. |
 | News headlines | `yfinance` `.news` via `src/fetch_market.py` | Only for holdings + top-10 flag-count names (keeps request volume small). Written to `data/output/news.json` with keyword-based sentiment, labelled as such. |
 | AI explanations | Claude Haiku via Anthropic API | Explains flags already computed in code. Never invents a signal, score, or verdict — it explains, it doesn't decide. |
 | Explicitly NOT used | Screener.in (free tier disables export; paid tier not needed since the above covers the same fields) | Don't reintroduce this dependency. |
+
+## Telegram briefings (Phase 2) — timing & content
+Two **separate** scheduled workflows, both in `src/telegram_notify.py`. Cron is UTC;
+IST = UTC+5:30. Built with `parse_mode: Markdown`; every message stamps the IST send
+time and the data date so staleness is always visible (never silently implied).
+- **Morning — 09:00 IST** (`morning-briefing.yml`, cron `30 3 * * 1-5`): refreshes
+  global + India index levels **live** first, then sends: global overnight/Asia markets,
+  India previous close, and the top watchlist leaders by flag count (from the last
+  published pipeline run). yfinance only — no Angel login.
+- **Evening — ~16:00 IST** (`daily-run.yml`, pipeline cron `15 10 * * 1-5` = 15:45 IST):
+  the brief is the **last step of the pipeline**, sent only after every output file is
+  written, so it is always internally consistent and reflects that day's close. Content:
+  India indices, top gainers/losers across the watchlist, strongest sectors, and the
+  portfolio breakdown with total unrealized P&L. It is intentionally coupled to the
+  pipeline (not a fixed clock) so it never reads torn or stale files; on a slow run it
+  drifts a little later but always carries same-day data.
+
+Do not reuse the trading bot's Telegram token/channels — this is a separate bot.
 
 ## Hosting & delivery
 - **Default hosting: GitHub Actions (scheduled workflow) + GitHub Pages.** Fully free,
