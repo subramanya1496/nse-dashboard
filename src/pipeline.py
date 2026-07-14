@@ -6,7 +6,7 @@ from src.angel_auth import AngelAuthError, login
 from src.fetch_fundamentals import fetch_market_view
 from src.fetch_market import write_market_output, write_news_output
 from src.fetch_ohlcv import fetch_daily_ohlcv
-from src.fetch_shareholding import fetch_shareholding
+from src.fetch_shareholding import fetch_shareholding, reset_circuit as reset_shareholding_circuit
 from src.flags import FLAG_DEFINITIONS, evaluate_flags
 from src.indicators import compute_indicators, latest_indicator_snapshot, recent_price_history
 from src.instrument_master import build_nse_equity_token_map, get_token
@@ -32,6 +32,7 @@ def _write_flag_definitions() -> None:
 
 def run() -> None:
     _write_flag_definitions()
+    reset_shareholding_circuit()  # every run gives the (often blocked) NSE source a fresh chance
     watchlist = load_watchlist()
     portfolio = load_portfolio()
     holdings = portfolio.get("holdings", [])
@@ -121,7 +122,17 @@ def run() -> None:
         reverse=True,
     )[:10]
     news_symbols = sorted({s["symbol"] for s in top_by_flags} | {h["symbol"] for h in holdings})
-    write_news_output(news_symbols)
+    # Pass the company name where we know it: the news search keys off it, and a bare
+    # ticker like "BEL" or "SCTL" pulls in unrelated noise.
+    news_targets = {
+        symbol: (
+            (stock_data_by_symbol.get(symbol) or {}).get("name")
+            or watch_by_symbol.get(symbol, {}).get("name")
+            or symbol
+        )
+        for symbol in news_symbols
+    }
+    write_news_output(news_targets)
 
     meta["summary"] = {
         "total": len(all_symbols),

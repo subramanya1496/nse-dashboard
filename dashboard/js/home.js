@@ -13,6 +13,22 @@
 
   // ---------- Market strip ----------
 
+  // How old the published data is. The dashboard is not a live ticker — prices only move
+  // when the pipeline runs — so the age is always shown, and flagged once it is old enough
+  // to mean a scheduled run was missed or delayed (rather than quietly looking current).
+  function relativeAge(iso) {
+    const then = new Date(iso).getTime();
+    if (isNaN(then)) return { text: "age unknown", stale: true };
+    const mins = (Date.now() - then) / 60000;
+    if (mins < 1) return { text: "just now", stale: false };
+    if (mins < 60) return { text: `${Math.round(mins)}m ago`, stale: false };
+    const hrs = mins / 60;
+    if (hrs < 24) return { text: `${Math.round(hrs)}h ago`, stale: false };
+    const days = hrs / 24;
+    // Over a weekend/holiday a 1–3 day gap is expected; beyond that something is wrong.
+    return { text: `${Math.round(days)}d ago`, stale: days >= 3 };
+  }
+
   function marketStatusIST() {
     const ist = new Date(new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" }));
     const day = ist.getDay();
@@ -68,10 +84,13 @@
     </div>`);
 
     const status = marketStatusIST();
+    const age = relativeAge(meta.run_at);
     parts.push(`<div class="mi mi-status">
       <span class="status-dot ${status.cls}"></span><span class="mi-label">${status.label}</span>
       <span class="mi-sub" title="By NSE schedule — trading holidays are not checked">·</span>
-      <span class="mi-sub mono">data: ${U.formatUpdatedAt(meta.run_at)}</span>
+      <span class="mi-sub mono ${age.stale ? "stale" : ""}" title="When the pipeline last published data (IST). Prices only change when the pipeline runs — they are not live ticks.">
+        data: ${U.formatUpdatedAt(meta.run_at)} · ${age.text}${age.stale ? " ⚠" : ""}
+      </span>
     </div>`);
 
     el.innerHTML = parts.join("");
@@ -337,6 +356,79 @@
         wrap.classList.toggle("open", !detail.hidden);
       });
       el.appendChild(wrap);
+    });
+  }
+
+  // ---------- Keep an eye on ----------
+  // Transparent conditions only, exactly like the screens: a stock qualifies because a
+  // named boolean fired, and we show the levels its own price history has established.
+  // The dashboard still never says buy or sell — it shows where price has turned before
+  // and how far away those levels are, and the user decides. (CLAUDE.md hard rule.)
+
+  function keepAnEyeReasons(stock) {
+    const reasons = [];
+    if (U.isNearBuyZone(stock)) reasons.push("Uptrend (EMA50 &gt; EMA200), pulled back to its EMA20/50 zone");
+    if (U.isBreakoutCandidate(stock)) reasons.push("Pressing the upper Bollinger band / 52-week high");
+    if (U.isSilentAccumulation(stock)) reasons.push("Volume ≥1.4× average while price stayed flat");
+    return reasons;
+  }
+
+  function levelPill(label, value, fromClose, cls) {
+    const dist = fromClose === null ? "" : `<span class="lv-dist ${cls}">${fromClose >= 0 ? "+" : ""}${fromClose.toFixed(1)}%</span>`;
+    return `<div class="level-pill">
+      <span class="lv-k">${label}</span>
+      <span class="lv-v mono">${U.formatPrice(value)}</span>
+      ${dist}
+    </div>`;
+  }
+
+  function renderKeepAnEye(stocks, flagDefinitions) {
+    const el = document.getElementById("keep-an-eye-list");
+    const picks = stocks
+      .filter((s) => s.flags.flag_count >= 5 && (U.isNearBuyZone(s) || U.isBreakoutCandidate(s) || U.isSilentAccumulation(s)))
+      .sort((a, b) => b.flags.flag_count - a.flags.flag_count)
+      .slice(0, 6);
+
+    if (!picks.length) {
+      el.innerHTML = `<div class="empty-note">No stock currently meets any of the watch conditions (≥5/8 flags plus a pullback, breakout or accumulation pattern).</div>`;
+      return;
+    }
+
+    el.innerHTML = `<div class="watch-grid">${picks
+      .map((s) => {
+        const ind = s.indicators;
+        const sr = U.supportResistance(s);
+        const chg = U.formatChangePct(ind.change_pct);
+        const pct = (target) => (target && ind.close ? ((target - ind.close) / ind.close) * 100 : null);
+        const atrPct = ind.atr14 != null && ind.close ? (ind.atr14 / ind.close) * 100 : null;
+
+        const levels = [];
+        if (sr) levels.push(levelPill("Support", sr.support, pct(sr.support), "down"));
+        levels.push(levelPill("Now", ind.close, null, ""));
+        if (sr) levels.push(levelPill("Resistance", sr.resistance, pct(sr.resistance), "up"));
+        if (ind.high_52w != null) levels.push(levelPill("52w high", ind.high_52w, pct(ind.high_52w), "up"));
+
+        return `<div class="watch-card">
+          <div class="watch-head">
+            <button class="watch-sym" data-symbol="${s.symbol}" title="Show ${s.symbol} in the watchlist">${s.symbol}</button>
+            <span class="sector-badge">${s.sector || "—"}</span>
+            <span class="flag-count ${U.flagCountClass(s.flags.flag_count, s.flags.flag_total)}">${s.flags.flag_count}/${s.flags.flag_total}</span>
+            <span class="watch-price mono">${U.formatPrice(ind.close)} <span class="chg ${chg.cls}">${chg.text}</span></span>
+          </div>
+          <div class="watch-why">${keepAnEyeReasons(s).map((r) => `<div class="exp-highlight">▸ ${r}</div>`).join("")}</div>
+          <div class="level-row">${levels.join("")}</div>
+          <div class="watch-foot fine">
+            ${sr ? `Support/resistance = lowest/highest close of the last 20 sessions (${sr.basis}).` : ""}
+            ${atrPct !== null ? ` Typical daily swing (ATR) ${U.formatPrice(ind.atr14)} ≈ ${atrPct.toFixed(1)}%.` : ""}
+            These are observed price levels, not targets or advice.
+          </div>
+        </div>`;
+      })
+      .join("")}</div>
+      <div class="fine watch-note">Why these: each stock met ≥5 of the 8 bullish flags <b>and</b> one of the named patterns above. The dashboard does not rate them or say when to trade — it shows the conditions and the levels, you decide.</div>`;
+
+    el.querySelectorAll(".watch-sym").forEach((btn) => {
+      btn.addEventListener("click", () => jumpToWatchlist(btn.dataset.symbol));
     });
   }
 
@@ -701,12 +793,35 @@
         showAllFlat = false;
         renderTab(tab);
       });
+
+      // Two inputs drive one query: the always-visible one in the sticky header and the
+      // one inside the watchlist panel. Typing in either updates the other so they can
+      // never disagree about what is being filtered.
       const searchEl = document.getElementById("stock-search");
-      searchEl.value = searchQuery;
-      searchEl.addEventListener("input", () => {
-        searchQuery = searchEl.value.trim();
+      const globalEl = document.getElementById("global-search");
+      const countEl2 = document.getElementById("global-search-count");
+
+      const applySearch = (value, { fromHeader }) => {
+        searchQuery = value.trim();
         showAllFlat = false;
+        if (searchEl.value !== value) searchEl.value = value;
+        if (globalEl.value !== value) globalEl.value = value;
         renderTab(activeTab);
+        if (countEl2) {
+          const n = document.querySelectorAll("#stock-list .stock-block").length;
+          countEl2.textContent = searchQuery ? `${n} match${n === 1 ? "" : "es"} · Enter to jump` : "";
+        }
+        if (fromHeader && searchQuery) document.getElementById("watchlist-card").classList.add("search-target");
+      };
+
+      searchEl.value = searchQuery;
+      searchEl.addEventListener("input", () => applySearch(searchEl.value, { fromHeader: false }));
+      globalEl.addEventListener("input", () => applySearch(globalEl.value, { fromHeader: true }));
+      globalEl.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          document.getElementById("watchlist-card").scrollIntoView({ behavior: "smooth", block: "start" });
+        }
       });
       controlsBound = true;
     }
@@ -729,6 +844,7 @@
     renderKpis(stocks, sectors, portfolio);
     renderHeatmap(sectors);
     renderOpportunities(stocks, flagDefinitions);
+    renderKeepAnEye(stocks, flagDefinitions);
     renderBreadth(stocks);
     renderScreens(stocks);
     renderInstitutional(stocks);

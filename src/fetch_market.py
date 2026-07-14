@@ -9,8 +9,12 @@ index or empty news list must never fail silently or be replaced with a fake val
 import json
 import re
 import time
+import urllib.parse
+import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 
+import requests
 import yfinance as yf
 
 from src import config
@@ -152,53 +156,88 @@ def _classify_headline(title: str) -> str:
     return "neutral"
 
 
-def _parse_news_item(symbol: str, raw: dict) -> dict | None:
-    # yfinance >=0.2.5x nests everything under "content"; older versions were flat.
-    content = raw.get("content", raw)
-    title = content.get("title")
-    if not title:
+# Source: Google News RSS, India edition. yfinance's `.news` endpoint returns an empty
+# list from GitHub's runners (Yahoo blocks datacenter IPs) — a 2026-07-14 run published
+# news.json with 0 items for all 21 symbols. This RSS feed answers from CI, returns
+# same-day India-focused coverage, and needs no key. Titles carry a " - Publisher"
+# suffix which we strip into the publisher field.
+_GOOGLE_NEWS_RSS = "https://news.google.com/rss/search?q={query}&hl=en-IN&gl=IN&ceid=IN:en"
+_NEWS_TIMEOUT_SEC = 15
+_NEWS_HEADERS = {"User-Agent": "Mozilla/5.0 (compatible; nse-dashboard/1.0)"}
+
+
+def _rss_published_iso(text: str | None) -> str | None:
+    if not text:
         return None
-    provider = content.get("provider") or {}
-    url = (content.get("canonicalUrl") or {}).get("url") or content.get("link") or raw.get("link")
-    published = content.get("pubDate") or content.get("displayTime")
-    if published is None and raw.get("providerPublishTime"):
-        published = datetime.fromtimestamp(raw["providerPublishTime"], tz=timezone.utc).isoformat()
-    return {
-        "symbol": symbol,
-        "title": title,
-        "publisher": provider.get("displayName") or raw.get("publisher"),
-        "link": url,
-        "published_at": published,
-        "sentiment": _classify_headline(title),
-        "sentiment_source": "keyword",
-    }
+    try:
+        return parsedate_to_datetime(text).astimezone(timezone.utc).isoformat()
+    except (TypeError, ValueError):
+        return None
 
 
-def fetch_news_for_symbol(symbol: str, max_items: int = 3) -> list[dict]:
+def _split_title_publisher(raw_title: str, source_el) -> tuple[str, str | None]:
+    publisher = source_el.text.strip() if source_el is not None and source_el.text else None
+    title = raw_title.strip()
+    if publisher and title.endswith(f" - {publisher}"):
+        title = title[: -(len(publisher) + 3)].strip()
+    return title, publisher
+
+
+def fetch_news_for_symbol(symbol: str, name: str | None = None, max_items: int = 3) -> list[dict]:
+    """Recent headlines for one symbol. Returns [] (and logs) if the feed is unusable."""
+    query = urllib.parse.quote(f"{name or symbol} share")
+    url = _GOOGLE_NEWS_RSS.format(query=query)
+
     _throttle()
     try:
-        raw_items = yf.Ticker(f"{symbol}.NS").news or []
+        response = requests.get(url, timeout=_NEWS_TIMEOUT_SEC, headers=_NEWS_HEADERS)
     except Exception as exc:
-        log_skip(logger, symbol, "fetch_news", f"news raised {exc!r}")
+        log_skip(logger, symbol, "fetch_news", f"news RSS request raised {exc!r}")
         return []
+    if not response.ok:
+        log_skip(logger, symbol, "fetch_news", f"news RSS returned HTTP {response.status_code}")
+        return []
+
+    try:
+        root = ET.fromstring(response.content)
+    except ET.ParseError as exc:
+        log_skip(logger, symbol, "fetch_news", f"news RSS not parseable: {exc!r}")
+        return []
+
     items = []
-    for raw in raw_items[:max_items]:
-        parsed = _parse_news_item(symbol, raw)
-        if parsed is None:
+    for entry in root.findall(".//item")[:max_items]:
+        raw_title = entry.findtext("title")
+        if not raw_title:
             log_skip(logger, symbol, "fetch_news", "news item without title; skipped")
             continue
-        items.append(parsed)
+        title, publisher = _split_title_publisher(raw_title, entry.find("source"))
+        items.append(
+            {
+                "symbol": symbol,
+                "title": title,
+                "publisher": publisher,
+                "link": entry.findtext("link"),
+                "published_at": _rss_published_iso(entry.findtext("pubDate")),
+                "sentiment": _classify_headline(title),
+                "sentiment_source": "keyword",
+            }
+        )
     if not items:
         log_skip(logger, symbol, "fetch_news", "no usable news items this run")
     return items
 
 
-def write_news_output(symbols: list[str]) -> None:
-    """Fetch a small news feed for the given symbols and write data/output/news.json."""
+def write_news_output(symbols: list[str] | dict[str, str]) -> None:
+    """Fetch a small news feed and write data/output/news.json.
+
+    Accepts either a list of symbols or a {symbol: company_name} map — the company name
+    makes the search far more accurate than the bare ticker (e.g. "BEL" alone is noise).
+    """
+    name_by_symbol = symbols if isinstance(symbols, dict) else {s: s for s in symbols}
     all_items: list[dict] = []
     seen_titles: set[str] = set()
-    for symbol in symbols:
-        for item in fetch_news_for_symbol(symbol):
+    for symbol, name in name_by_symbol.items():
+        for item in fetch_news_for_symbol(symbol, name):
             key = item["title"].strip().lower()
             if key in seen_titles:
                 continue
@@ -208,11 +247,12 @@ def write_news_output(symbols: list[str]) -> None:
     all_items.sort(key=lambda i: i.get("published_at") or "", reverse=True)
     payload = {
         "updated_at": datetime.now(timezone.utc).isoformat(),
-        "symbols_covered": symbols,
+        "symbols_covered": list(name_by_symbol),
+        "source": "google_news_rss",
         "items": all_items,
     }
     (config.OUTPUT_DIR / "news.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
-    logger.info("wrote news.json with %d items across %d symbols", len(all_items), len(symbols))
+    logger.info("wrote news.json with %d items across %d symbols", len(all_items), len(name_by_symbol))
 
 
 if __name__ == "__main__":

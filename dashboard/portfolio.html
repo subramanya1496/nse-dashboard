@@ -6,127 +6,74 @@
 <title>Stock Intelligence — Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
-<nav>
-  <div class="brand"><span class="dot"></span> Stock Intelligence</div>
-  <ul>
-    <li><a href="index.html">Watchlist</a></li>
-    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-  </ul>
-  <div class="nav-right">
-    <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline now on GitHub’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload data</span></button>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="title-row">
-    <h1 class="display">Portfolio</h1>
-    <div class="sub" id="last-updated">Loading…</div>
-  </div>
-  <div class="sub">Your actual holdings, live-tracked. Tap a row for the full breakdown.</div>
-  <div class="actions-row">
-    <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=add-holding.yml" target="_blank" rel="noopener"><span class="icon">+</span> Add holding</a>
-    <a class="btn btn-danger btn-sm" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=remove-holding.yml" target="_blank" rel="noopener"><span class="icon">−</span> Remove holding</a>
-    <a class="btn btn-ghost btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span> Run pipeline now on GitHub</a>
-  </div>
-</header>
-
-<main>
-  <div class="card">
-    <h2>Holdings</h2>
-    <div style="overflow-x:auto;">
-      <table id="holdings-table">
-        <thead>
-          <tr>
-            <th>Symbol</th><th>Qty</th><th>Buy price</th><th>Buy date</th>
-            <th>Current price</th><th>P&amp;L</th><th>P&amp;L %</th><th>Flags</th>
-          </tr>
-        </thead>
-        <tbody id="holdings-body">
-          <tr><td colspan="8" class="empty-note">Loading…</td></tr>
-        </tbody>
-      </table>
+<div class="sticky-top">
+  <nav>
+    <div class="brand"><span class="dot"></span> Stock Intelligence</div>
+    <ul>
+      <li><a href="index.html">Watchlist</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span><span class="label"> Run pipeline</span></a>
+      <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload</span></button>
     </div>
+  </nav>
+</div>
+
+<main class="wide">
+
+  <div class="pf-title-row">
+    <div>
+      <h1 class="display">Portfolio</h1>
+      <div class="sub">Your holdings at the last published close · click any holding for its full breakdown</div>
+    </div>
+    <div class="sub mono" id="last-updated">Loading…</div>
   </div>
+
+  <section class="kpi-row" id="pf-kpis" aria-label="Portfolio summary">
+    <div class="kpi-card"><div class="kpi-label">Loading…</div></div>
+  </section>
+
+  <div id="pf-data-note"></div>
+
+  <section class="grid-main">
+    <div class="panel" aria-label="Holdings">
+      <div class="card-head-row">
+        <h2>Holdings</h2>
+        <span class="stock-count" id="pf-count"></span>
+      </div>
+      <div id="pf-holdings"><div class="empty-note">Loading…</div></div>
+    </div>
+
+    <aside class="rail">
+      <div class="side-card">
+        <h5>Allocation</h5>
+        <div id="pf-allocation" class="empty-note">Loading…</div>
+      </div>
+      <div class="side-card">
+        <h5>Sector mix</h5>
+        <div id="pf-sectors" class="empty-note">Loading…</div>
+      </div>
+      <div class="side-card">
+        <h5>Manage</h5>
+        <div class="manage-buttons">
+          <a class="btn btn-primary" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=add-holding.yml" target="_blank" rel="noopener"><span class="icon">+</span> Add holding</a>
+          <a class="btn btn-danger" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=remove-holding.yml" target="_blank" rel="noopener"><span class="icon">−</span> Remove holding</a>
+        </div>
+      </div>
+    </aside>
+  </section>
+
 </main>
 
-<footer>Built for personal use only · not a recommendation service · you make every decision</footer>
+<footer>Ranked by flag count, never a composite score · built for personal use only · not a recommendation service · you make every decision</footer>
 
-<script src="js/app.js?v=4"></script>
-<script>
-async function render() {
-  const utils = window.dashboardUtils;
-  const [meta, flagDefinitions, portfolio] = await Promise.all([
-    utils.loadMeta(),
-    utils.loadFlagDefinitions(),
-    utils.loadPortfolio(),
-  ]);
-
-  document.getElementById("last-updated").textContent = `Last run: ${utils.formatUpdatedAt(meta.run_at)}`;
-
-  const body = document.getElementById("holdings-body");
-  body.innerHTML = "";
-
-  if (!portfolio.holdings.length) {
-    body.innerHTML = `<tr><td colspan="8" class="empty-note">No holdings configured. Add entries to config/portfolio.json.</td></tr>`;
-    return;
-  }
-
-  portfolio.holdings.forEach((holding) => {
-    const pnlClass = holding.pnl > 0 ? "up" : holding.pnl < 0 ? "down" : "flat";
-    const pnlText = holding.pnl !== null ? `₹${holding.pnl.toLocaleString("en-IN", { maximumFractionDigits: 2 })}` : "—";
-    const pnlPctText = holding.pnl_pct !== null ? `${holding.pnl_pct.toFixed(2)}%` : "—";
-
-    const flagsHtml = holding.flags
-      ? `<span class="flag-count ${utils.flagCountClass(holding.flags.flag_count, holding.flags.flag_total)}">${holding.flags.flag_count}/${holding.flags.flag_total}</span>
-         <div class="flagrow">${holding.flags.flags_on.map((k) => `<span class="flag on">${utils.flagShortLabel(flagDefinitions, k)}</span>`).join("")}</div>`
-      : `<span class="empty-note">no data this cycle</span>`;
-
-    const row = document.createElement("tr");
-    if (holding.flags) row.style.cursor = "pointer";
-    row.innerHTML = `
-      <td>${holding.symbol}<div class="empty-note">${holding.sector || ""}</div></td>
-      <td>${holding.quantity}</td>
-      <td class="price-cell">${utils.formatPrice(holding.buy_price)}</td>
-      <td>${holding.buy_date || "—"}</td>
-      <td class="price-cell">${utils.formatPrice(holding.current_price)}</td>
-      <td class="price-cell chg ${pnlClass}">${pnlText}</td>
-      <td class="price-cell chg ${pnlClass}">${pnlPctText}</td>
-      <td>${flagsHtml}</td>
-    `;
-    body.appendChild(row);
-
-    if (holding.flags) {
-      row.addEventListener("click", async () => {
-        const existing = row.nextElementSibling;
-        if (existing && existing.classList.contains("detail-row")) {
-          existing.remove();
-          return;
-        }
-        const stock = await utils.loadStock(holding.symbol);
-        const detailRow = document.createElement("tr");
-        detailRow.className = "detail-row";
-        const cell = document.createElement("td");
-        cell.colSpan = 8;
-        cell.innerHTML = `<div class="detail-panel" style="border:none; border-radius:14px;">${utils.renderDetailPanelHtml(stock, flagDefinitions)}</div>`;
-        detailRow.appendChild(cell);
-        row.after(detailRow);
-      });
-    }
-  });
-}
-
-render().catch((err) => {
-  console.error(err);
-  document.getElementById("holdings-body").innerHTML =
-    `<tr><td colspan="8" class="empty-note">Failed to load data: ${err.message}. Run the pipeline first (python -m src.pipeline).</td></tr>`;
-});
-
-window.dashboardUtils.initRefreshButton(document.getElementById("refresh-btn"), render);
-</script>
+<script src="js/app.js?v=5"></script>
+<script src="js/portfolio.js?v=5"></script>
 
 </body>
 </html>

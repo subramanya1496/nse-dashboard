@@ -50,9 +50,15 @@ The home page (`dashboard/index.html` + `dashboard/js/home.js`) is a single dens
 multi-section research view. `dashboard/js/app.js` remains the shared utility layer
 (also used by `portfolio.html`); page assets are cache-busted with `?v=3`.
 Sections, top to bottom:
+0. **Sticky header** — nav + an always-visible **global search** (`#global-search`) that
+   filters the watchlist from anywhere on the page (Enter scrolls to it). It stays in sync
+   with the in-panel `#stock-search`; both drive one query. The panel search alone was
+   effectively invisible — it sits far below the fold.
 1. **Sticky market strip** — NIFTY 50, SENSEX, BANK NIFTY, India VIX with sparklines
    (from `data/output/market.json`), watchlist advance/decline, market open/closed
-   status (IST clock; NSE holidays are not checked and the tooltip says so), last run.
+   status (IST clock; NSE holidays are not checked and the tooltip says so), and the
+   data age ("2h ago", amber ⚠ past ~3 days). The dashboard is not a live ticker — prices
+   only move when the pipeline runs — so the age is always shown, never implied.
 2. **KPI cards** — 8/8-flag count, breakout candidates, silent-accumulation count,
    strongest sector, portfolio unrealized P&L. Each card is a **button**: clicking it
    opens a shared detail drawer listing the underlying stocks (or holdings for P&L),
@@ -64,6 +70,16 @@ Sections, top to bottom:
    "risks to watch".
 5. **Market breadth** — above-EMA200 %, new 52-week highs/lows, breakout count,
    A/D ratio; all computed client-side from the published per-stock JSON.
+5b. **Keep an eye on** (added 2026-07-14) — up to 6 stocks meeting ≥5/8 flags **and** a
+   named pattern (near buy zone / breakout / silent accumulation). Each card names the
+   conditions that fired and shows **observed levels**: 20-session support & resistance,
+   current price, 52-week high, and ATR as a typical daily swing.
+   **Rule boundary — read before changing this.** It was asked for as "stocks good to buy
+   and when to sell". It is deliberately *not* that: it shows the same transparent booleans
+   the screens use, plus levels measured from the stock's own price history, and says in
+   the UI that these are observed levels, not targets or advice. It must never emit an
+   entry/exit price, a target, a rating, or a verdict — that would be the composite-score
+   rule in a new costume. If asked to make it more prescriptive, flag this tension first.
 6. **Screens** — six transparent boolean conditions (Trending · Silent accumulation
    [vol ≥1.4× 20d avg + |chg| ≤0.8%] · Near buy zone [EMA50>EMA200 + price within ±2%
    of EMA20/50] · Breakout [close > upper BB or ≥99.5% of 52w high] · High volume
@@ -78,6 +94,13 @@ Sections, top to bottom:
    NSE source keeps blocking), upcoming events, news with sentiment badges, portfolio
    analytics (allocation, sector mix, unrealized P&L, CAGR shown only after ≥3 months
    held, estimated dividend income from yields), run status, manage buttons.
+
+**Portfolio page** (`portfolio.html` + `dashboard/js/portfolio.js`, redesigned 2026-07-14)
+mirrors the same language: summary KPIs (invested, current value, unrealized P&L, day
+change, best/worst), dense holding cards (qty/avg/LTP/day/invested/value/weight + flags,
+expandable into the shared detail panel), and an allocation + sector-mix rail. Holdings the
+pipeline could not price are shown as an explicit dashed card and **excluded from every
+total** (never zero-filled), with a callout naming them and why.
 
 **Empty-state rule (UI mirror of the logging discipline):** any section whose data
 isn't collected yet renders an explicit note saying why and when it fills in — never
@@ -98,14 +121,14 @@ not AI". Unmatched headlines stay neutral — never guessed.
 ## Data sources (all free — do not introduce paid data sources without asking)
 | Data | Source | Notes |
 |---|---|---|
-| Price/volume/OHLCV | Angel One SmartAPI | Reuse bot's existing account/auth. Use `getMarketData` bulk endpoint for equities; avoid `ltpData()` patterns known to be unreliable for options (not relevant here, but keep the lesson in mind). |
+| Price/volume/OHLCV | Angel One SmartAPI | Reuse bot's existing account/auth. Use `getMarketData` bulk endpoint for equities; avoid `ltpData()` patterns known to be unreliable for options (not relevant here, but keep the lesson in mind). **Throttle + retry (added 2026-07-14):** the client uses a 7s read timeout and a single `ReadTimeout` used to drop a symbol for the whole day — one run lost 137/184 symbols that way, emptying the dashboard and portfolio. `fetch_ohlcv` now keeps ≥0.4s between calls (Angel allows ~3/sec) and retries 3× with backoff before skipping. Exhausted retries still skip + log — never a fabricated candle. |
 | Technical indicators | Computed locally from OHLCV | No external service. |
 | Fundamentals (PE, EPS, ROE, margins, market cap, statements) | `yfinance` (ticker format: `SYMBOL.NS`) | No API key needed. |
 | ROCE, multi-year growth | Computed from `yfinance` raw financial statements | Not pulled pre-built — this is intentional (builds real judgment instead of trusting an opaque number). |
-| Promoter/FII/DII shareholding, corporate filings, quarterly results | `nsepython` / `nselib` / `jugaad_data` | Public NSE data, no key needed. Source has been blocking automated requests — every skip is logged and the UI says so explicitly. |
+| Promoter/FII/DII shareholding, corporate filings, quarterly results | `nsepython` / `nselib` / `jugaad_data` | Public NSE data, no key needed. Source has been blocking automated requests — every skip is logged and the UI says so explicitly. **Circuit breaker (added 2026-07-14):** each blocked call hangs ~22s before failing, which across ~180 symbols burned ~65 min — essentially the entire pipeline runtime — and pushed the evening brief hours late. After 3 consecutive failures `fetch_shareholding` stops trying for the rest of the run (`reset_circuit()` per run gives it a fresh chance). Every skip is still logged individually. |
 | Index levels — India (NIFTY 50 `^NSEI`, SENSEX `^BSESN`, BANK NIFTY `^NSEBANK`, India VIX `^INDIAVIX`) + global (S&P 500, Nasdaq, Dow, Nikkei, Hang Seng, FTSE, USD/INR, Brent, Gold) | `yfinance` via `src/fetch_market.py` | Written to `data/output/market.json` (`indices` = India, `global_indices` = global). The morning brief refreshes indices live via `python -m src.fetch_market --indices-only` (no Angel/secrets needed). |
 | Debt/equity, dividend yield, price/book, event dates (earnings, ex-div, dividend pay) | `yfinance` `info` + `calendar` in `src/fetch_fundamentals.py` | Added 2026-07-13 (fundamentals cache version 2 — old caches refetch once). Bonus/split announcements are NOT in this feed; planned via the NSE corporate-actions source. |
-| News headlines | `yfinance` `.news` via `src/fetch_market.py` | Only for holdings + top-10 flag-count names (keeps request volume small). Written to `data/output/news.json` with keyword-based sentiment, labelled as such. |
+| News headlines | **Google News RSS** (India edition) via `src/fetch_market.py` | Only for holdings + top-10 flag-count names (keeps request volume small). Written to `data/output/news.json` with keyword-based sentiment, labelled as such. **Do not go back to `yfinance` `.news`** — Yahoo blocks GitHub's runner IPs, so it silently returned an empty list for every symbol in CI (2026-07-14 published 0 items). The RSS feed answers from CI and is searched by *company name* (a bare ticker like "BEL" pulls in noise), so `write_news_output` takes a `{symbol: name}` map. |
 | AI explanations | Claude Haiku via Anthropic API | Explains flags already computed in code. Never invents a signal, score, or verdict — it explains, it doesn't decide. |
 | Explicitly NOT used | Screener.in (free tier disables export; paid tier not needed since the above covers the same fields) | Don't reintroduce this dependency. |
 
@@ -126,6 +149,21 @@ time and the data date so staleness is always visible (never silently implied).
   drifts a little later but always carries same-day data.
 
 Do not reuse the trading bot's Telegram token/channels — this is a separate bot.
+
+**Why briefings can still arrive late — and what is actually fixable.** Two separate
+causes, only one of which is ours:
+1. *Pipeline runtime (fixed 2026-07-14).* The shareholding circuit breaker + Angel
+   throttle/retry cut a ~66-minute run to a few minutes, so the evening brief now follows
+   the pipeline start closely instead of an hour later.
+2. *GitHub's scheduler (not fixable here).* Scheduled workflows on free runners are
+   best-effort and are queued under load — the 2026-07-14 evening run was triggered
+   **87 minutes** after its cron (`10:15 UTC` → started `11:42 UTC`). Nothing in this repo
+   controls that; scheduling earlier does not help because the delay is random, and the
+   close data does not exist before 15:30 IST anyway.
+   This is why every message stamps its IST send time and data date: when GitHub drifts,
+   the brief says so rather than implying it is punctual. If exact delivery times ever
+   become a hard requirement, the fix is an external trigger (e.g. a cron on the existing
+   Railway app) calling the workflow — do not contend for the bot's PythonAnywhere slot.
 
 ## Hosting & delivery
 - **Default hosting: GitHub Actions (scheduled workflow) + GitHub Pages.** Fully free,

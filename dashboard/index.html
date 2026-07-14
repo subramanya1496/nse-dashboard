@@ -6,7 +6,7 @@
 <title>Stock Intelligence — Watchlist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=4">
+<link rel="stylesheet" href="css/style.css?v=5">
 </head>
 <body>
 
@@ -17,6 +17,10 @@
       <li><a href="index.html" class="active">Watchlist</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
     </ul>
+    <div class="nav-search-wrap">
+      <input type="search" id="global-search" class="search-input nav-search" placeholder="Search any stock — symbol, company or sector…" autocomplete="off" aria-label="Search stocks">
+      <span class="nav-search-count" id="global-search-count"></span>
+    </div>
     <div class="nav-right">
       <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span><span class="label"> Run pipeline</span></a>
       <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload</span></button>
@@ -51,6 +55,14 @@
       <div class="panel-head"><h2>Market breadth</h2><span class="panel-sub">across tracked watchlist</span></div>
       <div id="breadth-widgets"><div class="empty-note">Loading…</div></div>
     </div>
+  </section>
+
+  <section class="panel" id="watch-card" aria-label="Keep an eye on">
+    <div class="panel-head">
+      <h2>Keep an eye on</h2>
+      <span class="panel-sub">setups worth watching, with the price levels that matter · levels are measured from price history — <b>not</b> buy/sell advice</span>
+    </div>
+    <div id="keep-an-eye-list"><div class="empty-note">Loading…</div></div>
   </section>
 
   <section class="panel" aria-label="Screens">
@@ -121,8 +133,8 @@
 
 <footer>Ranked by flag count, never a composite score · analyst consensus shown is external third-party opinion · built for personal use only · you make every decision</footer>
 
-<script src="js/app.js?v=4"></script>
-<script src="js/home.js?v=4"></script>
+<script src="js/app.js?v=5"></script>
+<script src="js/home.js?v=5"></script>
 
 </body>
 </html>
