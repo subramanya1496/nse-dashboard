@@ -428,30 +428,49 @@ Not a recommendation service — you make every decision.
 
 ---
 
-## Part 7: The Data Reliability Fixes (Why It Works Now)
+## Part 7: How the Pipeline Stays Fast and Reliable (Overhauled 2026-07-15)
 
-Three bugs were silently breaking the dashboard. All fixed:
+The pipeline used to take 70–90 minutes. Profiling showed almost all of it was retry
+backoff against sources that block GitHub's runner IPs. The current architecture:
 
-### Bug 1: Angel One Timeouts (Fixed)
-**Problem:** One network timeout dropped a stock for the whole day. The last run lost 137 of 184 symbols.
+### Parallel workers
+Symbols are processed 4 at a time (configurable via `PIPELINE_WORKERS`). Each external
+API keeps its own rate-limit throttle shared across workers, so concurrency overlaps
+*different* APIs instead of hammering any single one harder.
 
-**Fix:** Retry 3 times with exponential backoff (0.4s gap between attempts). If all 3 fail, log it and move on.
+### Circuit breakers
+When a source fails 3 symbols in a row (NSE shareholding blocking, Yahoo rate-limiting
+CI), the pipeline stops calling it for the rest of the run instead of paying ~22s of
+retry backoff per symbol to be told "no" 180 times. Every skip is still logged. The
+breaker resets fresh each run.
 
-**Result:** ~99% of symbols fetch successfully now instead of ~40%.
+### Cache tiers (matched to how fast data actually changes)
+| Data | Cache | Why |
+|---|---|---|
+| OHLCV candles | Per-symbol, rolling | Enables incremental fetch (below) |
+| Fundamentals | 7 days | PE/ROE move on quarterly results |
+| Shareholding | 30 days | Patterns are filed quarterly |
+| Instrument tokens | 24 hours | Rarely change |
 
-### Bug 2: NSE Shareholding Stall (Fixed)
-**Problem:** NSE was blocking the request, and each block hung for ~22s before failing. × 180 symbols = 65 min wasted. That's why briefings arrived hours late.
+### Incremental price fetch
+A daily run fetches only the last ~5 days of candles per symbol and merges them into
+the cached 450-day history — not a full re-download of everything every day.
 
-**Fix:** Circuit breaker — after 3 straight failures, stop asking NSE for the rest of the run. Try again fresh tomorrow.
+### Validation before publish
+After the pipeline, `validate_output.py` checks the output (≥60% of symbols priced,
+sane values, portfolio complete, fresh timestamps). If it fails, nothing is published —
+yesterday's good dashboard stays live and no misleading Telegram brief goes out.
 
-**Result:** Pipeline runtime dropped from ~70 min to ~3–5 min.
+### Run report
+Every run writes `data/output/run_report.json`: per-stage timings, API call counts,
+cache hits/misses, retries, and every failed symbol with its reason.
 
-### Bug 3: News Was Empty in CI (Fixed)
-**Problem:** Yahoo blocks GitHub's datacenter IPs. `yfinance.news` returned `[]` for all symbols in CI.
-
-**Fix:** Switched to Google News RSS (India edition), searched by company name.
-
-**Result:** Now fetching 10–15 fresh headlines per run from Indian publishers (Goodreturns, The Hindu, Economic Times).
+### One honest limitation
+Yahoo blocks GitHub's runner IPs for the quote endpoint entirely, so **fundamentals
+cannot be fetched from CI at all** — the breaker makes that cheap (seconds, not an
+hour), but PE/ROE/analyst data only appears when the cache has been populated by a
+run from a non-blocked network (e.g. a local run). News (Google RSS) and index levels
+(a different Yahoo endpoint) work fine from CI.
 
 ---
 

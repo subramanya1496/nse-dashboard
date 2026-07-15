@@ -50,7 +50,14 @@ jobs:
           ANGEL_CLIENT_ID: ${{ secrets.ANGEL_CLIENT_ID }}
           ANGEL_PIN: ${{ secrets.ANGEL_PIN }}
           ANGEL_TOTP_SECRET: ${{ secrets.ANGEL_TOTP_SECRET }}
+          PIPELINE_WORKERS: "4"
         run: python -m src.pipeline
+
+      # Gate: if the run lost most of its symbols (like the 2026-07-14 run that priced
+      # only 39/184), stop here — the previously published data stays live and no
+      # misleading Telegram brief goes out. validation_report.json has the details.
+      - name: Validate output before publishing
+        run: python -m src.validate_output
 
       # Coupled to the pipeline on purpose: runs only after every stock/market/portfolio
       # file is fully written, so the evening wrap is always internally consistent and

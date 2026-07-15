@@ -132,6 +132,43 @@ not AI". Unmatched headlines stay neutral — never guessed.
 | AI explanations | Claude Haiku via Anthropic API | Explains flags already computed in code. Never invents a signal, score, or verdict — it explains, it doesn't decide. |
 | Explicitly NOT used | Screener.in (free tier disables export; paid tier not needed since the above covers the same fields) | Don't reintroduce this dependency. |
 
+## Pipeline performance & reliability (overhauled 2026-07-15)
+The run used to take ~70–90 min; the profile showed almost all of it was retry backoff
+against sources that block GitHub's runner IPs (yfinance quote endpoint 429'd all 176
+symbols → ~22s each ≈ 65 min for zero data). The architecture now:
+- **Concurrency:** symbols are processed by a `ThreadPoolExecutor`
+  (`PIPELINE_WORKERS` env, default 4). Each external API has one **thread-safe
+  throttle** (`src/net_utils.Throttle`), so workers overlap *different* APIs instead of
+  bursting any single one. `SmartConnect` shares one `requests.Session`; that is safe
+  here (header-token auth, and the Angel throttle serialises those calls anyway).
+- **Circuit breakers** (`src/net_utils.CircuitBreaker`, one per source): after 3
+  consecutive failures the source is skipped for the rest of the run — every skip still
+  logged per symbol. Reset at the start of each run. Applies to yfinance fundamentals
+  and NSE shareholding. **yfinance `.info`/quote is effectively always blocked from CI IPs**,
+  so in CI fundamentals come from the disk cache or are honestly `None` — the breaker
+  makes that cheap, it does not make the data appear. (yfinance `.history` for indices
+  still works from CI; it is a different endpoint.)
+- **Cache tiers** in `data/cache/` (persisted between CI runs via `actions/cache`):
+  OHLCV candles per symbol (enables incremental fetch), fundamentals 7-day TTL,
+  shareholding 30-day TTL, scrip master 24h. Stale cache may be served as a logged
+  fallback on fetch failure — except candles, which are only served if cached earlier
+  the *same day* (stale prices dressed as fresh are worse than an honest gap).
+- **Incremental OHLCV:** a normal daily run fetches only the last ~5 days per symbol
+  and merges into the cached 450-day window (fresh rows win on overlaps). Never a
+  fabricated candle: exhausted retries without a same-day cache still skip + log.
+- **Validation gate** (`src/validate_output.py`, a workflow step between the pipeline
+  and the commit/Pages/Telegram steps): checks ok-ratio ≥60%, per-file soundness
+  (close>0, RSI range, flag counts), portfolio completeness, freshness. On failure the
+  workflow stops — the previous publish stays live and no misleading brief goes out.
+  Writes `validation_report.json` either way.
+- **Run report:** `data/output/run_report.json` — per-stage seconds, API-call/retry/
+  cache-hit counters (`src/run_stats.py`), failed symbols with reasons. The pipeline
+  also logs progress with ETA every 10 symbols.
+- **Do not "fix" a slow run by re-adding blind retries** — find which source is
+  blocking and let its breaker absorb it. That mistake has now been made twice
+  (shareholding 2026-07-14, fundamentals 2026-07-15); the profile, not the intuition,
+  says where the time goes.
+
 ## Telegram briefings (Phase 2) — timing & content
 Two **separate** scheduled workflows, both in `src/telegram_notify.py`. Cron is UTC;
 IST = UTC+5:30. Built with `parse_mode: Markdown`; every message stamps the IST send
