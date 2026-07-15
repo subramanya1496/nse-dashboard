@@ -25,5 +25,11 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID")
 
 DASHBOARD_URL = "https://subramanya1496.github.io/nse-dashboard/"
 
+# How many symbols are processed concurrently. Each external API keeps its own
+# thread-safe throttle, so more workers overlap *different* APIs (Angel candles for one
+# symbol while another waits on yfinance) rather than hammering any single one harder.
+# 4 is a sensible default for CI; override with the PIPELINE_WORKERS env var.
+PIPELINE_WORKERS = max(1, int(os.environ.get("PIPELINE_WORKERS", "4")))
+
 for _dir in (OUTPUT_DIR, STOCKS_OUTPUT_DIR, CACHE_DIR):
     _dir.mkdir(parents=True, exist_ok=True)

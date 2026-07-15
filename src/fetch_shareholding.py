@@ -1,13 +1,26 @@
+import json
+from datetime import datetime, timezone
+
 import nsepython
 
+from src import config, run_stats
 from src.logging_utils import get_logger, log_skip
+from src.net_utils import CircuitBreaker
 
 logger = get_logger(__name__)
 
 # NSE's public endpoints (wrapped by nsepython) are known to be flaky - they frequently
-# block non-browser/datacenter traffic with a non-JSON response. Per CLAUDE.md, this is
-# treated as best-effort: log the failure explicitly and skip this section for the
-# stock this cycle rather than fabricating a shareholding figure.
+# block non-browser/datacenter traffic with a non-JSON response after hanging ~22s.
+# Per CLAUDE.md, this is treated as best-effort: log the failure explicitly and skip
+# this section for the stock this cycle rather than fabricating a shareholding figure.
+#
+# Two layers keep this cheap:
+#   - 30-day disk cache (monthly tier): shareholding patterns are filed quarterly, so
+#     a rare successful fetch is worth keeping for a month. Also serves as the stale
+#     fallback (logged) when the source is blocking.
+#   - Circuit breaker: when NSE blocks, it blocks for the whole run; after 3 straight
+#     failures we stop paying ~22s per symbol to be told the same "no". Every skip is
+#     still logged individually. The pipeline resets the circuit each run.
 
 SHAREHOLDING_FIELDS = {
     "pPromoterChangePerc": "promoter_holding_change_pct",
@@ -15,54 +28,75 @@ SHAREHOLDING_FIELDS = {
     "pDIIChangePerc": "dii_holding_change_pct",
 }
 
-# Circuit breaker. When NSE blocks us it does so for the whole run, and each blocked call
-# burns ~22s hanging before it fails - across ~180 symbols that was ~65 minutes of the
-# pipeline's runtime spent learning the same "no" over and over, which pushed the evening
-# briefing hours late and widened the window for Angel timeouts mid-run.
-# After a few consecutive failures we stop trying for the rest of this run. Every skip is
-# still logged individually (CLAUDE.md: no silent skips) and the UI keeps saying the
-# section is unavailable - we just stop paying 22s to be told so.
-_MAX_CONSECUTIVE_FAILURES = 3
-_consecutive_failures = 0
-_circuit_open = False
+_CACHE_TTL_SEC = 30 * 24 * 3600
+_CACHE_DIR = config.CACHE_DIR / "shareholding"
+
+breaker = CircuitBreaker("nse-shareholding", logger, max_consecutive_failures=3)
 
 
 def reset_circuit() -> None:
     """Called at the start of a pipeline run so a fresh run always retries the source."""
-    global _consecutive_failures, _circuit_open
-    _consecutive_failures = 0
-    _circuit_open = False
+    breaker.reset()
 
 
-def _record_failure(symbol: str, reason: str) -> None:
-    global _consecutive_failures, _circuit_open
-    _consecutive_failures += 1
-    log_skip(logger, symbol, "fetch_shareholding", reason)
-    if not _circuit_open and _consecutive_failures >= _MAX_CONSECUTIVE_FAILURES:
-        _circuit_open = True
-        logger.warning(
-            "OPENING shareholding circuit: NSE source failed %d times consecutively; "
-            "skipping shareholding for the remaining symbols this run (saves ~22s/symbol). "
-            "It is retried from scratch on the next run.",
-            _consecutive_failures,
-        )
+def _cache_path(symbol: str):
+    _CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    return _CACHE_DIR / f"{symbol}.json"
+
+
+def _read_cache(symbol: str) -> dict | None:
+    path = _cache_path(symbol)
+    if not path.exists():
+        return None
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        log_skip(logger, symbol, "shareholding_cache", f"unreadable cache: {exc!r}")
+        return None
+
+
+def _cache_age_sec(cached: dict) -> float | None:
+    try:
+        fetched = datetime.fromisoformat(cached["fetched_at"])
+    except (KeyError, ValueError):
+        return None
+    return (datetime.now(timezone.utc) - fetched).total_seconds()
+
+
+def _write_cache(symbol: str, result: dict) -> None:
+    payload = {"fetched_at": datetime.now(timezone.utc).isoformat(), "result": result}
+    try:
+        _cache_path(symbol).write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    except OSError as exc:
+        log_skip(logger, symbol, "shareholding_cache", f"could not write cache: {exc!r}")
 
 
 def fetch_shareholding(symbol: str) -> dict | None:
-    global _consecutive_failures
-    if _circuit_open:
-        log_skip(logger, symbol, "fetch_shareholding", "skipped: NSE shareholding circuit open for this run")
+    cached = _read_cache(symbol)
+    if cached:
+        age = _cache_age_sec(cached)
+        if age is not None and age < _CACHE_TTL_SEC:
+            run_stats.bump("cache_hits_shareholding")
+            return cached["result"]
+    run_stats.bump("cache_misses_shareholding")
+
+    if breaker.is_open:
+        breaker.skip(symbol, "fetch_shareholding")
+        if cached:
+            run_stats.bump("stale_cache_served_shareholding")
+            return cached["result"]
         return None
 
+    run_stats.bump("api_calls_nse_shareholding")
     try:
         data = nsepython.nse_eq(symbol)
     except Exception as exc:
-        _record_failure(symbol, f"nsepython.nse_eq raised {exc!r}")
-        return None
+        breaker.record_failure(symbol, "fetch_shareholding", f"nsepython.nse_eq raised {exc!r}")
+        return _stale_or_none(symbol, cached)
 
     if not data:
-        _record_failure(symbol, "nsepython.nse_eq returned no data")
-        return None
+        breaker.record_failure(symbol, "fetch_shareholding", "nsepython.nse_eq returned no data")
+        return _stale_or_none(symbol, cached)
 
     security_info = data.get("securityWiseDP") or {}
     result = {}
@@ -75,13 +109,22 @@ def fetch_shareholding(symbol: str) -> dict | None:
     if all(v is None for v in result.values()):
         # A response with none of the fields means the source is fobbing us off (blocked
         # or a stub payload), so it counts toward the circuit just like a hard failure.
-        _record_failure(symbol, "no shareholding fields present in response")
-        return None
+        breaker.record_failure(symbol, "fetch_shareholding", "no shareholding fields present in response")
+        return _stale_or_none(symbol, cached)
 
-    # A genuine success means the source is answering again - forget earlier failures so
-    # one flaky patch mid-run doesn't trip the breaker.
-    _consecutive_failures = 0
+    # A genuine success means the source is answering - forget earlier failures so one
+    # flaky patch mid-run doesn't trip the breaker, and keep the result for a month.
+    breaker.record_success()
+    _write_cache(symbol, result)
     return result
+
+
+def _stale_or_none(symbol: str, cached: dict | None) -> dict | None:
+    if cached:
+        run_stats.bump("stale_cache_served_shareholding")
+        log_skip(logger, symbol, "fetch_shareholding", "fetch failed; serving stale cached shareholding")
+        return cached["result"]
+    return None
 
 
 if __name__ == "__main__":

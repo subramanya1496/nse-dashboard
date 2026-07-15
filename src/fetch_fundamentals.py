@@ -4,29 +4,34 @@ from datetime import datetime, timezone
 
 import yfinance as yf
 
-from src import config
+from src import config, run_stats
 from src.logging_utils import get_logger, log_skip
+from src.net_utils import CircuitBreaker, Throttle
 
 logger = get_logger(__name__)
 
-# yfinance rate-limits hard when hammered in a tight loop (this was exactly why every
-# symbol showed "fundamentals not available"). Three defences, all logged, no silent
-# fallbacks (CLAUDE.md logging discipline):
-#   1. throttle  - minimum gap between network hits so we never burst
-#   2. retry     - exponential backoff on transient/rate-limit failures
-#   3. disk cache- fundamentals change quarterly, so a ~7-day cache both slashes the
-#                  request volume and lets us fall back to the last good values if a
-#                  fetch fails this run instead of dropping the section entirely.
-_MIN_INTERVAL_SEC = 1.5
+# yfinance rate-limits hard when hammered in a tight loop, and from GitHub's runner IPs
+# its quote endpoint often 429s on the FIRST request and never recovers within a run —
+# on 2026-07-15 all 176 symbols failed and the ~22s of retry backoff each was the
+# pipeline's entire ~65-minute runtime. Four defences, all logged, no silent fallbacks
+# (CLAUDE.md logging discipline):
+#   1. throttle - minimum gap between network hits so we never burst
+#   2. retry    - exponential backoff on transient failures
+#   3. breaker  - after a few consecutive symbols fail outright, stop paying the
+#                 backoff tax for the rest of the run (each skip still logged)
+#   4. disk cache - fundamentals change quarterly, so a ~7-day cache both slashes the
+#                 request volume and lets us fall back to the last good values if a
+#                 fetch fails this run instead of dropping the section entirely.
 _MAX_RETRIES = 3
-_CACHE_TTL_SEC = 7 * 24 * 3600
+_CACHE_TTL_SEC = 7 * 24 * 3600  # weekly tier: PE/EPS/ROE/debt move on quarterly results
 _CACHE_DIR = config.CACHE_DIR / "fundamentals"
 # Bump when the view schema gains fields (debt/dividend/events added 2026-07): an
 # old-version cache is treated as stale so every symbol refetches once, but it still
 # serves as the fallback if that refetch fails.
 _CACHE_VERSION = 2
 
-_last_call_ts = 0.0
+_throttle_gate = Throttle(min_interval_sec=1.5)
+breaker = CircuitBreaker("yfinance-fundamentals", logger, max_consecutive_failures=3)
 
 INFO_FIELDS = {
     "trailingPE": "pe_trailing",
@@ -63,11 +68,7 @@ ANALYST_FIELDS = {
 
 
 def _throttle() -> None:
-    global _last_call_ts
-    elapsed = time.monotonic() - _last_call_ts
-    if elapsed < _MIN_INTERVAL_SEC:
-        time.sleep(_MIN_INTERVAL_SEC - elapsed)
-    _last_call_ts = time.monotonic()
+    _throttle_gate.wait()
 
 
 def _cache_path(symbol: str):
@@ -99,20 +100,29 @@ def _write_cache(symbol: str, view: dict) -> None:
 
 
 def _fetch_info(symbol: str, ticker: yf.Ticker) -> dict | None:
-    """ticker.info with throttle + retry/backoff. Returns None (and logs) if unusable."""
+    """ticker.info with throttle + retry/backoff. Returns None (and logs) if unusable.
+
+    Retries stop early once the breaker opens: if the source is refusing every symbol,
+    the 2nd and 3rd attempts of THIS symbol are just as doomed as the next symbol's.
+    """
     for attempt in range(1, _MAX_RETRIES + 1):
+        if breaker.is_open:
+            return None
         _throttle()
+        run_stats.bump("api_calls_yfinance_info")
         try:
             info = ticker.info
         except Exception as exc:
-            wait = _MIN_INTERVAL_SEC * (2 ** attempt)
+            wait = _throttle_gate.min_interval_sec * (2 ** attempt)
             log_skip(logger, symbol, "fetch_fundamentals", f"info raised {exc!r} (attempt {attempt}/{_MAX_RETRIES}, backoff {wait:.1f}s)")
+            run_stats.bump("retries_yfinance_info")
             time.sleep(wait)
             continue
         if info and info.get("currentPrice") is not None:
             return info
-        wait = _MIN_INTERVAL_SEC * (2 ** attempt)
+        wait = _throttle_gate.min_interval_sec * (2 ** attempt)
         log_skip(logger, symbol, "fetch_fundamentals", f"empty/unusable info (attempt {attempt}/{_MAX_RETRIES}, backoff {wait:.1f}s)")
+        run_stats.bump("retries_yfinance_info")
         time.sleep(wait)
     return None
 
@@ -135,17 +145,29 @@ def fetch_market_view(symbol: str) -> dict:
             and age < _CACHE_TTL_SEC
             and cached.get("version") == _CACHE_VERSION
         ):
+            run_stats.bump("cache_hits_fundamentals")
             return cached["view"]
+    run_stats.bump("cache_misses_fundamentals")
+
+    if breaker.is_open:
+        breaker.skip(symbol, "fetch_fundamentals")
+        if cached:
+            run_stats.bump("stale_cache_served_fundamentals")
+            return cached["view"]
+        return {"fundamentals": None, "analyst": None, "events": None}
 
     ticker = yf.Ticker(f"{symbol}.NS")
     info = _fetch_info(symbol, ticker)
 
     if info is None:
+        breaker.record_failure(symbol, "fetch_fundamentals", "info unusable after retries")
         if cached:
+            run_stats.bump("stale_cache_served_fundamentals")
             log_skip(logger, symbol, "fetch_fundamentals", "fetch failed; serving stale cached fundamentals")
             return cached["view"]
         return {"fundamentals": None, "analyst": None, "events": None}
 
+    breaker.record_success()
     fundamentals = _build_fundamentals(symbol, ticker, info)
     analyst = _build_analyst(info)
     events = _build_events(symbol, ticker)
@@ -181,6 +203,7 @@ def _build_events(symbol: str, ticker: yf.Ticker) -> dict | None:
     dividend/ex-dividend dates. Bonus/split announcements are not in this feed —
     the UI says so explicitly instead of pretending the section is complete."""
     _throttle()
+    run_stats.bump("api_calls_yfinance_calendar")
     try:
         calendar = ticker.calendar
     except Exception as exc:
@@ -229,6 +252,7 @@ def _first_available(row_names: list[str], statement) -> float | None:
 def _statements(symbol: str, ticker: yf.Ticker) -> tuple:
     """(income_stmt, balance_sheet) with throttle; returns (None, None) on failure."""
     _throttle()
+    run_stats.bump("api_calls_yfinance_statements")
     try:
         return ticker.income_stmt, ticker.balance_sheet
     except Exception as exc:
