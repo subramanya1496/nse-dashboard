@@ -355,6 +355,78 @@ function analystClass(rec) {
   return "watch";
 }
 
+// Inline SVG forecast cone: the actual recent price line flowing into three diverging
+// dotted projections (High/Median/Low) at a single forward point. yfinance's target
+// prices are analyst 12-month forward targets, NOT a multi-year series — so unlike a
+// year-by-year forecast chart, this deliberately does not invent intermediate years or
+// a calendar end date beyond "12-mo target". Showing a fabricated timeline would be the
+// composite-verdict problem in a new costume (CLAUDE.md). Still external/third-party,
+// still labelled as such, still never producing a dashboard verdict.
+function buildForecastChartSvg(history, a, close) {
+  const tail = history.slice(-40);
+  if (tail.length < 2) return "";
+  const closes = tail.map((h) => h.close);
+  const targets = [a.target_low, a.target_median ?? a.target_mean, a.target_high].filter((v) => v != null);
+  const allValues = closes.concat(targets);
+  const min = Math.min(...allValues);
+  const max = Math.max(...allValues);
+  const span = max - min || 1;
+
+  const W = 320, H = 110, pad = 4;
+  const histW = W * 0.62; // reserve the right ~38% for the forecast cone
+  const forecastX = W - pad;
+  const xAt = (i) => pad + (i / (tail.length - 1)) * (histW - pad);
+  const yAt = (v) => pad + (1 - (v - min) / span) * (H - 2 * pad);
+
+  const closePts = closes.map((v, i) => `${xAt(i).toFixed(1)},${yAt(v).toFixed(1)}`).join(" ");
+  const lastX = xAt(tail.length - 1);
+  const lastY = yAt(closes[closes.length - 1]);
+  const rising = closes[closes.length - 1] >= closes[0];
+  const stroke = rising ? "var(--teal)" : "var(--rose)";
+  const areaFill = rising ? "rgba(31,122,99,0.10)" : "rgba(168,64,58,0.10)";
+  const area = `${pad},${H - pad} ${closePts} ${lastX.toFixed(1)},${H - pad}`;
+
+  const median = a.target_median ?? a.target_mean;
+  const cones = [
+    { v: a.target_high, color: "var(--teal)", key: "high" },
+    { v: median, color: "var(--amber)", key: "median" },
+    { v: a.target_low, color: "var(--rose)", key: "low" },
+  ].filter((c) => c.v != null);
+
+  const coneLines = cones
+    .map(
+      (c) =>
+        `<line x1="${lastX.toFixed(1)}" y1="${lastY.toFixed(1)}" x2="${forecastX.toFixed(1)}" y2="${yAt(c.v).toFixed(1)}" stroke="${c.color}" stroke-width="1.4" stroke-dasharray="3 3" vector-effect="non-scaling-stroke"></line>` +
+        `<circle cx="${forecastX.toFixed(1)}" cy="${yAt(c.v).toFixed(1)}" r="2.2" fill="${c.color}"></circle>`
+    )
+    .join("");
+
+  return `<svg class="price-chart forecast" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Recent price with 12-month analyst target cone">
+    <polygon points="${area}" fill="${areaFill}"></polygon>
+    <line x1="${lastX.toFixed(1)}" y1="${pad}" x2="${lastX.toFixed(1)}" y2="${H - pad}" stroke="var(--ink-faint)" stroke-width="1" stroke-dasharray="2 2" opacity="0.4" vector-effect="non-scaling-stroke"></line>
+    <polyline points="${closePts}" fill="none" stroke="${stroke}" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" vector-effect="non-scaling-stroke"></polyline>
+    ${coneLines}
+  </svg>`;
+}
+
+function forecastLegendHtml(a, close) {
+  const rows = [
+    { label: "High", v: a.target_high, cls: "high" },
+    { label: "Median", v: a.target_median ?? a.target_mean, cls: "median" },
+    { label: "Low", v: a.target_low, cls: "low" },
+  ].filter((r) => r.v != null);
+  if (!rows.length) return "";
+  return `<div class="forecast-legend">
+    ${rows
+      .map((r) => {
+        const pct = (((r.v - close) / close) * 100).toFixed(1);
+        const pctCls = r.v >= close ? "up" : "down";
+        return `<div class="forecast-row"><i class="swatch ${r.cls}"></i><span>${r.label}</span><span class="mono">${formatPrice(r.v)}</span><span class="${pctCls}">${r.v >= close ? "+" : ""}${pct}%</span></div>`;
+      })
+      .join("")}
+  </div>`;
+}
+
 // External third-party analyst consensus, shown as-is and clearly labelled. The dashboard
 // never turns this (or the flags) into its own buy/hold/sell verdict — CLAUDE.md hard rule.
 function analystSectionHtml(stock) {
@@ -365,24 +437,17 @@ function analystSectionHtml(stock) {
   const label = ANALYST_LABELS[a.recommendation] || (a.recommendation || "—");
   const cls = analystClass(a.recommendation);
   const close = stock.indicators.close;
+  const history = stock.price_history;
 
-  let targetHtml = "";
-  if (a.target_low != null && a.target_high != null && a.target_mean != null) {
-    const span = a.target_high - a.target_low || 1;
-    const meanPos = Math.max(0, Math.min(100, ((a.target_mean - a.target_low) / span) * 100));
-    const nowPos = Math.max(0, Math.min(100, ((close - a.target_low) / span) * 100));
-    const upside = (((a.target_mean - close) / close) * 100).toFixed(1);
-    const upsideCls = a.target_mean >= close ? "up" : "down";
-    targetHtml = `
-      <div class="target-row">
-        <span class="range-end mono">${formatPrice(a.target_low)}</span>
-        <div class="range-track target">
-          <div class="range-tick now" style="left:${nowPos.toFixed(1)}%" title="Current price"></div>
-          <div class="range-marker mean" style="left:${meanPos.toFixed(1)}%" title="Mean target"></div>
-        </div>
-        <span class="range-end mono">${formatPrice(a.target_high)}</span>
+  let forecastHtml = "";
+  if (a.target_low != null && a.target_high != null && (a.target_median != null || a.target_mean != null)) {
+    const hasHistory = Array.isArray(history) && history.length >= 2;
+    forecastHtml = `
+      <div class="forecast-wrap">
+        ${hasHistory ? `<div class="chart-wrap">${buildForecastChartSvg(history, a, close)}</div>` : ""}
+        ${forecastLegendHtml(a, close)}
       </div>
-      <div class="range-sub">Mean target ${formatPrice(a.target_mean)} · <span class="${upsideCls}">${a.target_mean >= close ? "+" : ""}${upside}%</span> vs current · ● now ◆ target</div>`;
+      <div class="range-sub">Baseline ${formatPrice(close)} · 12-month forward targets, ${a.num_analysts != null ? `${a.num_analysts} analysts` : "analyst"} consensus</div>`;
   }
 
   return `<div class="detail-section">
@@ -391,7 +456,7 @@ function analystSectionHtml(stock) {
       <span class="pill-status ${cls}">${label}</span>
       <span class="analyst-meta mono">${a.num_analysts != null ? `${a.num_analysts} analysts` : ""}${a.recommendation_mean != null ? ` · mean ${a.recommendation_mean.toFixed(2)}/5` : ""}</span>
     </div>
-    ${targetHtml}
+    ${forecastHtml}
   </div>`;
 }
 

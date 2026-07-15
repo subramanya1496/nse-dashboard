@@ -264,6 +264,18 @@ tr td:first-child{font-weight:600;}
 .range-sub{font-size:11px; color:var(--ink-faint);}
 .range-sub .up{color:var(--teal); font-weight:600;} .range-sub .down{color:var(--rose); font-weight:600;}
 
+/* Detail panel: analyst forecast cone (history -> diverging 12-mo targets) */
+.price-chart.forecast{height:110px;}
+.forecast-wrap{display:flex; gap:10px; align-items:stretch; margin:4px 0 2px;}
+.forecast-wrap .chart-wrap{flex:1 1 auto; min-width:0;}
+.forecast-legend{flex:0 0 auto; display:flex; flex-direction:column; justify-content:center; gap:5px; min-width:118px;}
+.forecast-row{display:grid; grid-template-columns:10px auto 1fr auto; align-items:center; gap:5px; font-size:10.5px; color:var(--ink-soft);}
+.forecast-row .up{color:var(--teal); font-weight:600;} .forecast-row .down{color:var(--rose); font-weight:600;}
+.forecast-legend .swatch{width:8px; height:8px; border-radius:50%;}
+.forecast-legend .swatch.high{background:var(--teal);}
+.forecast-legend .swatch.median{background:var(--amber);}
+.forecast-legend .swatch.low{background:var(--rose);}
+
 /* Detail panel: external analyst view */
 .ext-tag{display:inline-block; margin-left:6px; font-size:9px; font-weight:600; text-transform:none;
   letter-spacing:0; color:var(--amber); background:var(--amber-soft); padding:2px 7px; border-radius:999px;
