@@ -6,7 +6,7 @@ from datetime import datetime, timezone
 from src import config, run_stats
 from src.angel_auth import AngelAuthError, login
 from src.fetch_fundamentals import breaker as fundamentals_breaker, fetch_market_view
-from src.fetch_market import write_market_output, write_news_output
+from src.fetch_market import index_breaker, write_market_output, write_news_output
 from src.fetch_ohlcv import fetch_daily_ohlcv
 from src.fetch_shareholding import fetch_shareholding, reset_circuit as reset_shareholding_circuit
 from src.flags import FLAG_DEFINITIONS, evaluate_flags
@@ -100,6 +100,7 @@ def run() -> None:
     # Every run gives the often-blocked external sources a fresh chance.
     reset_shareholding_circuit()
     fundamentals_breaker.reset()
+    index_breaker.reset()
 
     watchlist = load_watchlist()
     portfolio = load_portfolio()

@@ -17,14 +17,22 @@ from email.utils import parsedate_to_datetime
 import requests
 import yfinance as yf
 
-from src import config
+from src import config, run_stats
 from src.logging_utils import get_logger, log_skip
+from src.net_utils import CircuitBreaker, Throttle
 
 logger = get_logger(__name__)
 
-_MIN_INTERVAL_SEC = 1.5
 _MAX_RETRIES = 3
-_last_call_ts = 0.0
+_throttle_gate = Throttle(min_interval_sec=1.5)
+# Yahoo's chart endpoint usually answers from CI, but on 2026-07-15 it rate-limited a
+# whole run: 13 indices x full retry backoff burned ~5 minutes and produced nothing.
+# All indices share one endpoint, so once a few fail in a row the rest will too.
+index_breaker = CircuitBreaker("yfinance-index-history", logger, max_consecutive_failures=3)
+
+
+def _throttle() -> None:
+    _throttle_gate.wait()
 
 INDICES = [
     {"key": "nifty50", "label": "NIFTY 50", "yahoo": "^NSEI"},
@@ -51,29 +59,28 @@ GLOBAL_INDICES = [
 _HISTORY_DAYS = 30
 
 
-def _throttle() -> None:
-    global _last_call_ts
-    elapsed = time.monotonic() - _last_call_ts
-    if elapsed < _MIN_INTERVAL_SEC:
-        time.sleep(_MIN_INTERVAL_SEC - elapsed)
-    _last_call_ts = time.monotonic()
-
-
 def _fetch_index(entry: dict) -> dict | None:
     for attempt in range(1, _MAX_RETRIES + 1):
+        if index_breaker.is_open:
+            index_breaker.skip(entry["key"], "fetch_index")
+            return None
         _throttle()
+        run_stats.bump("api_calls_yfinance_history")
         try:
             hist = yf.Ticker(entry["yahoo"]).history(period="3mo", interval="1d")
         except Exception as exc:
-            wait = _MIN_INTERVAL_SEC * (2**attempt)
+            wait = _throttle_gate.min_interval_sec * (2**attempt)
             log_skip(logger, entry["key"], "fetch_index", f"history raised {exc!r} (attempt {attempt}/{_MAX_RETRIES}, backoff {wait:.1f}s)")
+            run_stats.bump("retries_yfinance_history")
             time.sleep(wait)
             continue
         if hist is None or hist.empty or "Close" not in hist:
-            wait = _MIN_INTERVAL_SEC * (2**attempt)
+            wait = _throttle_gate.min_interval_sec * (2**attempt)
             log_skip(logger, entry["key"], "fetch_index", f"empty history (attempt {attempt}/{_MAX_RETRIES}, backoff {wait:.1f}s)")
+            run_stats.bump("retries_yfinance_history")
             time.sleep(wait)
             continue
+        index_breaker.record_success()
         closes = hist["Close"].dropna()
         if len(closes) < 2:
             log_skip(logger, entry["key"], "fetch_index", "fewer than 2 closes; cannot compute change")
@@ -93,6 +100,9 @@ def _fetch_index(entry: dict) -> dict | None:
                 for idx, val in tail.items()
             ],
         }
+    # Exhausted retries: count it toward the shared breaker so a fully rate-limited run
+    # stops after ~3 indices instead of burning full backoff on all 13.
+    index_breaker.record_failure(entry["key"], "fetch_index", f"unusable after {_MAX_RETRIES} attempts")
     return None
 
 
@@ -107,25 +117,54 @@ def _fetch_index_group(entries: list[dict]) -> list[dict]:
     return results
 
 
+def _previous_market_output() -> dict:
+    path = config.OUTPUT_DIR / "market.json"
+    if not path.exists():
+        return {}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        logger.warning("could not read previous market.json: %r", exc)
+        return {}
+
+
 def write_market_output() -> None:
     """Fetch Indian + global index quotes and write data/output/market.json.
 
     The dashboard's sticky strip reads `indices` (India); the morning Telegram brief
-    also reads `global_indices`. Both omit anything that failed to fetch (logged) rather
-    than substituting a placeholder.
+    also reads `global_indices`. Individual failed indices are omitted (logged) rather
+    than given placeholder values.
+
+    If an ENTIRE group comes back empty (Yahoo rate-limited the whole run, as on
+    2026-07-15), the previous run's group is kept instead of clobbering good data with
+    nothing: each index entry carries its own `as_of` date, so the staleness stays
+    visible, and `<group>_stale_from` records when the kept data was fetched.
     """
     indices = _fetch_index_group(INDICES)
     global_indices = _fetch_index_group(GLOBAL_INDICES)
 
-    payload = {
-        "updated_at": datetime.now(timezone.utc).isoformat(),
-        "indices": indices,
-        "global_indices": global_indices,
-    }
+    previous = _previous_market_output()
+    payload: dict = {"updated_at": datetime.now(timezone.utc).isoformat()}
+    for group_key, fetched in (("indices", indices), ("global_indices", global_indices)):
+        kept = previous.get(group_key) or []
+        if not fetched and kept:
+            logger.warning(
+                "%s: fetch produced nothing this run; keeping the %d previously published "
+                "entries (fetched %s) instead of publishing an empty strip — per-entry "
+                "as_of dates show their true age",
+                group_key, len(kept), previous.get("updated_at"),
+            )
+            payload[group_key] = kept
+            payload[f"{group_key}_stale_from"] = previous.get(f"{group_key}_stale_from") or previous.get("updated_at")
+            run_stats.bump(f"stale_kept_{group_key}")
+        else:
+            payload[group_key] = fetched
+
     (config.OUTPUT_DIR / "market.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")
     logger.info(
-        "wrote market.json with %d/%d India + %d/%d global indices",
-        len(indices), len(INDICES), len(global_indices), len(GLOBAL_INDICES),
+        "wrote market.json with %d/%d India + %d/%d global indices%s",
+        len(payload["indices"]), len(INDICES), len(payload["global_indices"]), len(GLOBAL_INDICES),
+        " [stale groups kept]" if any(k.endswith("_stale_from") for k in payload) else "",
     )
 
 
