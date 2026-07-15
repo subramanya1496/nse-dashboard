@@ -1,0 +1,41 @@
+{
+  "validated_at": "2026-07-15T15:23:20.510104+00:00",
+  "result": "pass",
+  "checks": [
+    {
+      "check": "meta_readable",
+      "status": "pass",
+      "detail": "meta.json loads"
+    },
+    {
+      "check": "run_recent",
+      "status": "pass",
+      "detail": "run_at is 0.1h old (limit 6h)"
+    },
+    {
+      "check": "ok_ratio",
+      "status": "pass",
+      "detail": "176/184 symbols ok (96%; minimum 60%) \u2014 a lower ratio means the run lost most of its data and should not replace the last good publish"
+    },
+    {
+      "check": "stock_files_sound",
+      "status": "pass",
+      "detail": "176/176 ok-symbol files valid"
+    },
+    {
+      "check": "portfolio_complete",
+      "status": "pass",
+      "detail": "all 11 holdings present"
+    },
+    {
+      "check": "sectors_present",
+      "status": "pass",
+      "detail": "24 sectors"
+    },
+    {
+      "check": "market_indices",
+      "status": "warn",
+      "detail": "0 India indices published"
+    }
+  ]
+}
