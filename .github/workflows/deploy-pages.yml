@@ -1,0 +1,58 @@
+name: Deploy Pages (no pipeline)
+
+# Publishes the dashboard + the data already committed in the repo to GitHub Pages
+# WITHOUT running the data pipeline. Two uses:
+#   - UI/code changes go live immediately instead of waiting for the next daily run.
+#   - A local data heal (e.g. fundamentals fetched from an unblocked network and
+#     committed) can be deployed as-is — running the CI pipeline instead would
+#     overwrite it with Nones, since Yahoo blocks the runner IPs.
+# The daily pipeline workflow still does its own deploy after each data refresh.
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches: [main]
+    paths:
+      - "dashboard/**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Same group as the daily run so the two never deploy over each other mid-flight.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare Pages artifact
+        run: |
+          mkdir -p _site/dashboard _site/data
+          cp -r dashboard/. _site/dashboard/
+          cp -r data/output _site/data/output
+          cat > _site/index.html <<'HTML'
+          <!DOCTYPE html>
+          <meta http-equiv="refresh" content="0; url=dashboard/index.html">
+          <a href="dashboard/index.html">Open dashboard</a>
+          HTML
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: publish
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
