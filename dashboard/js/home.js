@@ -894,12 +894,13 @@
     function renderTab(tab) {
       activeTab = tab;
       const base = tab === "favorites" ? U.filterFavorites(stocks) : stocks;
-      const searched = U.filterStocksByQuery(base, searchQuery);
+      const { matches: searched, fuzzy } = U.filterStocksByQuery(base, searchQuery);
       const { matched, missingData } = applyFilters(searched);
 
-      noteEl.textContent = activeFilters.size && missingData
-        ? `${missingData} stock(s) excluded from an active filter because the required fundamentals field isn't collected for them yet.`
-        : "";
+      const notes = [];
+      if (fuzzy) notes.push(`No exact match for "${searchQuery}" — showing closest matches by letters in symbol/name/sector.`);
+      if (activeFilters.size && missingData) notes.push(`${missingData} stock(s) excluded from an active filter because the required fundamentals field isn't collected for them yet.`);
+      noteEl.textContent = notes.join(" ");
 
       const totalLabel = tab === "favorites" ? `${base.length} favorites` : `${stocks.length} tracked`;
       countEl.textContent = searchQuery || activeFilters.size ? `${matched.length} of ${totalLabel}` : totalLabel;

@@ -854,15 +854,47 @@ function createStockBlock(stock, rank, flagDefinitions, options = {}) {
   return block;
 }
 
-function filterStocksByQuery(stocks, query) {
-  if (!query) return stocks;
-  const q = query.toLowerCase();
-  return stocks.filter(
-    (stock) =>
-      stock.symbol.toLowerCase().includes(q) ||
-      (stock.name && stock.name.toLowerCase().includes(q)) ||
-      (stock.sector && stock.sector.toLowerCase().includes(q))
+// Strip everything but letters/digits so "Jio Financial Services" and a query typed
+// without spaces or punctuation compare on the same footing.
+function _searchNormalize(str) {
+  return (str || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+// True if every character of `query` appears in `text` in order (gaps allowed) — the
+// same "fuzzy finder" rule used by VS Code's Ctrl+P and similar command palettes.
+// Deliberately simple/explainable rather than a scored fuzzy-match black box.
+function _isSubsequence(query, text) {
+  let qi = 0;
+  for (let i = 0; i < text.length && qi < query.length; i++) {
+    if (text[i] === query[qi]) qi++;
+  }
+  return qi === query.length;
+}
+
+function _matchesQuery(stock, q) {
+  return (
+    stock.symbol.toLowerCase().includes(q) ||
+    (stock.name && stock.name.toLowerCase().includes(q)) ||
+    (stock.sector && stock.sector.toLowerCase().includes(q))
   );
+}
+
+// Exact substring match first (fast, precise, matches ticker codes exactly). Only when
+// that finds nothing does a query of 3+ characters fall back to fuzzy matching against
+// symbol+name+sector, so a name typed roughly ("jiofinance") still finds "Jio Financial
+// Services" without exact substrings ever behaving differently than before.
+function filterStocksByQuery(stocks, query) {
+  if (!query) return { matches: stocks, fuzzy: false };
+  const q = query.toLowerCase().trim();
+  const exact = stocks.filter((stock) => _matchesQuery(stock, q));
+  if (exact.length) return { matches: exact, fuzzy: false };
+
+  const qNorm = _searchNormalize(q);
+  if (qNorm.length < 3) return { matches: [], fuzzy: false };
+  const fuzzy = stocks.filter((stock) =>
+    _isSubsequence(qNorm, _searchNormalize(`${stock.symbol}${stock.name || ""}${stock.sector || ""}`))
+  );
+  return { matches: fuzzy, fuzzy: fuzzy.length > 0 };
 }
 
 function renderStockListInto(container, stocks, flagDefinitions, options = {}) {
