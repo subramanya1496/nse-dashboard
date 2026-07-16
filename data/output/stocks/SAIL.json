@@ -656,9 +656,86 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 5.15 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 35.6",
+        "below_ema200": "Close 163.63 vs EMA200 160.49",
+        "extended_above_ema20": "Close 163.63 vs EMA20 170.47 (-4.0%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 163.63 vs 52w low 118.10"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 20.028152,
+    "pe_forward": 10.617252,
+    "eps_trailing": 8.17,
+    "eps_forward": 15.41171,
+    "roe": 0.056560002,
+    "profit_margin": 0.030439999,
+    "gross_margin": 0.50292,
+    "operating_margin": 0.09189,
+    "market_cap": 675877879808,
+    "current_price": 163.63,
+    "sector": "Basic Materials",
+    "name": "Steel Authority of India Limited",
+    "debt_to_equity": 52.899,
+    "dividend_yield": 0.97,
+    "price_to_book": 1.1207458,
+    "roce": 0.07221474101176453,
+    "revenue_growth_yoy": 0.08130226799504212
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 3.41379,
+    "num_analysts": 29,
+    "target_low": 125.0,
+    "target_mean": 179.65517,
+    "target_median": 170.0,
+    "target_high": 240.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-23"
+    ],
+    "ex_dividend_date": "2025-09-09",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:48.862787+00:00"
+  "updated_at": "2026-07-16T14:29:31.978612+00:00"
 }

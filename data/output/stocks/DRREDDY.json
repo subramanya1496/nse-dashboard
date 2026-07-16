@@ -655,9 +655,87 @@
     "flag_count": 1,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "1/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 32.05 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 33.9",
+        "below_ema200": "Close 1,224.40 vs EMA200 1,271.71",
+        "extended_above_ema20": "Close 1,224.40 vs EMA20 1,288.45 (-5.0%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 1,224.40 vs 52w low 1,148.40"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 23.825647,
+    "pe_forward": 19.235062,
+    "eps_trailing": 51.39,
+    "eps_forward": 63.65459,
+    "roe": 0.11835,
+    "profit_margin": 0.12755999,
+    "gross_margin": 0.52768004,
+    "operating_margin": 0.015420001,
+    "market_cap": 1019570421760,
+    "current_price": 1224.4,
+    "sector": "Healthcare",
+    "name": "Dr. Reddy's Laboratories Limited",
+    "debt_to_equity": 20.328,
+    "dividend_yield": 0.65,
+    "price_to_book": 2.7039204,
+    "roce": 0.14219971829617756,
+    "revenue_growth_yoy": 0.03194126591610733
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.76923,
+    "num_analysts": 39,
+    "target_low": 1040.0,
+    "target_mean": 1333.1829,
+    "target_median": 1300.0,
+    "target_high": 1750.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-22"
+    ],
+    "ex_dividend_date": "2026-07-10",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:10.782452+00:00"
+  "updated_at": "2026-07-16T14:22:39.326463+00:00"
 }

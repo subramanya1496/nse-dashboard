@@ -659,9 +659,86 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 94.17 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 50.7",
+        "below_ema200": "Close 5,310.50 vs EMA200 5,600.95",
+        "extended_above_ema20": "Close 5,310.50 vs EMA20 5,303.86 (+0.1%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 5,310.50 vs 52w low 5,035.00"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 50.45606,
+    "pe_forward": 40.984924,
+    "eps_trailing": 105.25,
+    "eps_forward": 129.57204,
+    "roe": 0.53314,
+    "profit_margin": 0.13229,
+    "gross_margin": 0.41869998,
+    "operating_margin": 0.16267,
+    "market_cap": 1279130992640,
+    "current_price": 5310.5,
+    "sector": "Consumer Defensive",
+    "name": "Britannia Industries Limited",
+    "debt_to_equity": 26.875,
+    "dividend_yield": 1.7,
+    "price_to_book": 25.050829,
+    "roce": 0.6126748259620494,
+    "revenue_growth_yoy": 0.07545985120062594
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.9697,
+    "num_analysts": 33,
+    "target_low": 4800.0,
+    "target_mean": 6227.909,
+    "target_median": 6200.0,
+    "target_high": 7240.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-05"
+    ],
+    "ex_dividend_date": "2026-07-30",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:03.582797+00:00"
+  "updated_at": "2026-07-16T14:21:22.787952+00:00"
 }

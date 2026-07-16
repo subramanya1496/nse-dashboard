@@ -655,9 +655,87 @@
     "flag_count": 1,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "1/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 90.15 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 42.5",
+        "below_ema200": "Close 2,996.10 vs EMA200 3,241.13",
+        "extended_above_ema20": "Close 2,996.10 vs EMA20 3,069.44 (-2.4%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 2,996.10 vs 52w low 2,476.60"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 11.3523035,
+    "pe_forward": 8.917628,
+    "eps_trailing": 263.92,
+    "eps_forward": 335.975,
+    "roe": 0.30406,
+    "profit_margin": 0.55206,
+    "gross_margin": 1.0,
+    "operating_margin": 0.78154,
+    "market_cap": 1202839748608,
+    "current_price": 2996.1,
+    "sector": "Financial Services",
+    "name": "Muthoot Finance Limited",
+    "debt_to_equity": 379.707,
+    "dividend_yield": 0.99,
+    "price_to_book": 3.073954,
+    "roce": null,
+    "revenue_growth_yoy": 0.5766058155182566
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.5,
+    "num_analysts": 22,
+    "target_low": 2650.0,
+    "target_mean": 3681.3635,
+    "target_median": 3672.5,
+    "target_high": 4600.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-12"
+    ],
+    "ex_dividend_date": "2026-04-17",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:36.027245+00:00"
+  "updated_at": "2026-07-16T14:27:21.516756+00:00"
 }

@@ -653,9 +653,84 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 5.20 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 46.9",
+        "below_ema200": "Close 235.65 vs EMA200 258.20",
+        "extended_above_ema20": "Close 235.65 vs EMA20 237.95 (-1.0%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 235.65 vs 52w low 223.30"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 97.780075,
+    "pe_forward": 51.67763,
+    "eps_trailing": 2.41,
+    "eps_forward": 4.56,
+    "roe": 0.012130001,
+    "profit_margin": 0.57768,
+    "gross_margin": 1.0,
+    "operating_margin": 0.43075,
+    "market_cap": 1556030291968,
+    "current_price": 235.65,
+    "sector": "Financial Services",
+    "name": "Jio Financial Services Limited",
+    "debt_to_equity": 16.286,
+    "dividend_yield": 0.21,
+    "price_to_book": 1.1145216,
+    "roce": 0.016259182911722687,
+    "revenue_growth_yoy": 1.2166917606355716
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.0,
+    "num_analysts": 3,
+    "target_low": 273.0,
+    "target_mean": 295.33334,
+    "target_median": 298.0,
+    "target_high": 315.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2025-08-11",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:24.830150+00:00"
+  "updated_at": "2026-07-16T14:25:13.973616+00:00"
 }

@@ -653,9 +653,87 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 4.91 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 46.5",
+        "below_ema200": "Close 154.87 vs EMA200 159.85",
+        "extended_above_ema20": "Close 154.87 vs EMA20 157.50 (-1.7%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 154.87 vs 52w low 114.96"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 26.160471,
+    "pe_forward": 19.09726,
+    "eps_trailing": 5.92,
+    "eps_forward": 8.10954,
+    "roe": 0.21639,
+    "profit_margin": 0.06158,
+    "gross_margin": 0.39931,
+    "operating_margin": 0.17361,
+    "market_cap": 909683785728,
+    "current_price": 154.87,
+    "sector": "Industrials",
+    "name": "Ashok Leyland Limited",
+    "debt_to_equity": 344.737,
+    "dividend_yield": 2.24,
+    "price_to_book": 5.872739,
+    "roce": 0.14515600445562965,
+    "revenue_growth_yoy": 0.15999148562236873
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.97059,
+    "num_analysts": 32,
+    "target_low": 155.0,
+    "target_mean": 183.34375,
+    "target_median": 183.0,
+    "target_high": 250.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-20"
+    ],
+    "ex_dividend_date": "2026-06-03",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:55.641582+00:00"
+  "updated_at": "2026-07-16T14:19:57.253729+00:00"
 }

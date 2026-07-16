@@ -656,9 +656,85 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 1.94 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 40.9",
+        "below_ema200": "Close 84.08 vs EMA200 82.26",
+        "extended_above_ema20": "Close 84.08 vs EMA20 85.58 (-1.8%)",
+        "large_day_move": "Day change -1.0%",
+        "near_52w_low": "Close 84.08 vs 52w low 67.15"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 9.926801,
+    "pe_forward": 8.203976,
+    "eps_trailing": 8.47,
+    "eps_forward": 10.24869,
+    "roe": 0.23363,
+    "profit_margin": 0.23231001,
+    "gross_margin": 0.45644,
+    "operating_margin": 0.21968001,
+    "market_cap": 739215998976,
+    "current_price": 84.08,
+    "sector": "Basic Materials",
+    "name": "NMDC Limited",
+    "debt_to_equity": 18.802,
+    "dividend_yield": 4.12,
+    "price_to_book": 2.1662288,
+    "roce": 0.28360989680541643,
+    "revenue_growth_yoy": 0.34156839089883845
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 3.3,
+    "num_analysts": 21,
+    "target_low": 67.0,
+    "target_mean": 88.95238,
+    "target_median": 86.0,
+    "target_high": 112.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-12"
+    ],
+    "ex_dividend_date": "2026-02-13",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:38.833351+00:00"
+  "updated_at": "2026-07-16T14:27:43.922236+00:00"
 }

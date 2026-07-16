@@ -653,9 +653,87 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 9.63 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 36.7",
+        "below_ema200": "Close 331.80 vs EMA200 365.53",
+        "extended_above_ema20": "Close 331.80 vs EMA20 345.99 (-4.1%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 331.80 vs 52w low 294.30"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": null,
+    "pe_forward": 6.502274,
+    "eps_trailing": -4.43,
+    "eps_forward": 51.0283,
+    "roe": -0.01118,
+    "profit_margin": 0.24288,
+    "gross_margin": 0.4619,
+    "operating_margin": 0.06176,
+    "market_cap": 1221880971264,
+    "current_price": 331.8,
+    "sector": "Consumer Cyclical",
+    "name": "Tata Motors Passenger Vehicles Limited",
+    "debt_to_equity": 70.364,
+    "dividend_yield": 0.9,
+    "price_to_book": 1.0902424,
+    "roce": 0.005532655996544388,
+    "revenue_growth_yoy": -0.08281749503419664
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.84615,
+    "num_analysts": 26,
+    "target_low": 300.0,
+    "target_mean": 371.34616,
+    "target_median": 374.0,
+    "target_high": 490.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-06"
+    ],
+    "ex_dividend_date": "2026-06-19",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:57.221739+00:00"
+  "updated_at": "2026-07-16T14:30:58.994468+00:00"
 }

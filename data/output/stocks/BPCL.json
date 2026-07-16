@@ -659,9 +659,87 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 7.98 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 55.1",
+        "below_ema200": "Close 312.00 vs EMA200 321.31",
+        "extended_above_ema20": "Close 312.00 vs EMA20 307.32 (+1.5%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 312.00 vs 52w low 266.60"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 5.157025,
+    "pe_forward": 7.6442094,
+    "eps_trailing": 60.5,
+    "eps_forward": 40.81521,
+    "roe": 0.28469,
+    "profit_margin": 0.05677,
+    "gross_margin": 0.16704,
+    "operating_margin": 0.08165,
+    "market_cap": 1333046542336,
+    "current_price": 312.0,
+    "sector": "Energy",
+    "name": "Bharat Petroleum Corporation Limited",
+    "debt_to_equity": 54.332,
+    "dividend_yield": 6.46,
+    "price_to_book": 1.3312113,
+    "roce": 0.26364751489571964,
+    "revenue_growth_yoy": 0.033970306437481605
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.6129,
+    "num_analysts": 31,
+    "target_low": 236.0,
+    "target_mean": 338.19354,
+    "target_median": 340.0,
+    "target_high": 518.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-22"
+    ],
+    "ex_dividend_date": "2026-02-02",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:02.820709+00:00"
+  "updated_at": "2026-07-16T14:21:09.394320+00:00"
 }

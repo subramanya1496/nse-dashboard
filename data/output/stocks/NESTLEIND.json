@@ -656,9 +656,85 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 29.14 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 49.1",
+        "below_ema200": "Close 1,423.50 vs EMA200 1,324.68",
+        "extended_above_ema20": "Close 1,423.50 vs EMA20 1,430.60 (-0.5%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 1,423.50 vs 52w low 1,084.70"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 78.68988,
+    "pe_forward": 59.80927,
+    "eps_trailing": 18.09,
+    "eps_forward": 23.80066,
+    "roe": 0.76338995,
+    "profit_margin": 0.15139,
+    "gross_margin": 0.54565,
+    "operating_margin": 0.2296,
+    "market_cap": 2744955437056,
+    "current_price": 1423.5,
+    "sector": "Consumer Defensive",
+    "name": "Nestl\u00e9 India Limited",
+    "debt_to_equity": 8.621,
+    "dividend_yield": 0.84,
+    "price_to_book": 53.22888,
+    "roce": null,
+    "revenue_growth_yoy": 0.19583454688725652
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.41667,
+    "num_analysts": 36,
+    "target_low": 1265.0,
+    "target_mean": 1482.2778,
+    "target_median": 1470.0,
+    "target_high": 1675.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-22"
+    ],
+    "ex_dividend_date": "2026-07-10",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:37.634318+00:00"
+  "updated_at": "2026-07-16T14:27:39.420062+00:00"
 }

@@ -656,9 +656,87 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 1.46 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 35.2",
+        "below_ema200": "Close 51.97 vs EMA200 53.10",
+        "extended_above_ema20": "Close 51.97 vs EMA20 54.75 (-5.1%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 51.97 vs 52w low 38.19"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "neutral",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 22.69264,
+    "pe_forward": 22.55351,
+    "eps_trailing": 2.31,
+    "eps_forward": 2.32425,
+    "roe": 0.40636003,
+    "profit_margin": 0.18966,
+    "gross_margin": 0.35232,
+    "operating_margin": 0.16420999,
+    "market_cap": 720458285056,
+    "current_price": 52.42,
+    "sector": "Industrials",
+    "name": "Suzlon Energy Limited",
+    "debt_to_equity": 5.873,
+    "dividend_yield": null,
+    "price_to_book": 7.620293,
+    "roce": 0.26997598753036667,
+    "revenue_growth_yoy": 0.5370581643523553
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.38462,
+    "num_analysts": 13,
+    "target_low": 52.0,
+    "target_mean": 65.84615,
+    "target_median": 65.0,
+    "target_high": 75.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-12"
+    ],
+    "ex_dividend_date": "2008-07-17",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:52.436095+00:00"
+  "updated_at": "2026-07-16T14:29:50.145255+00:00"
 }

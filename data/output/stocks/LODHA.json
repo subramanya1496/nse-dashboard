@@ -661,9 +661,87 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": true,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 44.41 = 3.8% of price",
+        "rsi_extreme": "RSI(14) 71.1",
+        "below_ema200": "Close 1,178.10 vs EMA200 1,022.70",
+        "extended_above_ema20": "Close 1,178.10 vs EMA20 1,074.09 (+9.7%)",
+        "large_day_move": "Day change +1.4%",
+        "near_52w_low": "Close 1,178.10 vs 52w low 650.80"
+      },
+      "conditions_on": [
+        "atr_high",
+        "extended_above_ema20"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 34.356953,
+    "pe_forward": 24.86745,
+    "eps_trailing": 34.29,
+    "eps_forward": 47.37518,
+    "roe": 0.1571,
+    "profit_margin": 0.20557,
+    "gross_margin": 0.41255,
+    "operating_margin": 0.30381,
+    "market_cap": 1176821956608,
+    "current_price": 1178.1,
+    "sector": "Real Estate",
+    "name": "Lodha Developers Limited",
+    "debt_to_equity": 42.238,
+    "dividend_yield": 0.37,
+    "price_to_book": 5.053707,
+    "roce": 0.18238297658274014,
+    "revenue_growth_yoy": 0.19173963614018918
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.45,
+    "num_analysts": 20,
+    "target_low": 940.0,
+    "target_mean": 1212.15,
+    "target_median": 1230.0,
+    "target_high": 1480.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-04-24"
+    ],
+    "ex_dividend_date": "2026-08-06",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:30.387623+00:00"
+  "updated_at": "2026-07-16T14:26:12.480089+00:00"
 }

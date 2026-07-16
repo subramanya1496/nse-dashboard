@@ -660,9 +660,84 @@
     "flag_count": 6,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "6/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 25.05 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 65.6",
+        "below_ema200": "Close 1,418.20 vs EMA200 1,347.54",
+        "extended_above_ema20": "Close 1,418.20 vs EMA20 1,383.58 (+2.5%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 1,418.20 vs 52w low 1,187.60"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 18.964964,
+    "pe_forward": 15.548137,
+    "eps_trailing": 74.78,
+    "eps_forward": 91.2135,
+    "roe": 0.16359,
+    "profit_margin": 0.24929,
+    "gross_margin": 0.0,
+    "operating_margin": 0.33293998,
+    "market_cap": 10173007527936,
+    "current_price": 1418.2,
+    "sector": "Financial Services",
+    "name": "ICICI Bank Limited",
+    "debt_to_equity": null,
+    "dividend_yield": 0.85,
+    "price_to_book": 2.7973158,
+    "roce": null,
+    "revenue_growth_yoy": 0.08528191549990273
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.225,
+    "num_analysts": 40,
+    "target_low": 1550.0,
+    "target_mean": 1683.1,
+    "target_median": 1672.5,
+    "target_high": 1970.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-18"
+    ],
+    "ex_dividend_date": "2026-07-31",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:18.797724+00:00"
+  "updated_at": "2026-07-16T14:24:06.343440+00:00"
 }

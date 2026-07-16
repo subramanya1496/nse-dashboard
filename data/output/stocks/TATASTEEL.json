@@ -656,9 +656,86 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 3.94 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 35.9",
+        "below_ema200": "Close 185.49 vs EMA200 189.97",
+        "extended_above_ema20": "Close 185.49 vs EMA20 190.80 (-2.8%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 185.49 vs 52w low 152.51"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 21.443932,
+    "pe_forward": 9.86649,
+    "eps_trailing": 8.65,
+    "eps_forward": 18.8,
+    "roe": 0.11156999,
+    "profit_margin": 0.0465,
+    "gross_margin": 0.55947,
+    "operating_margin": 0.09698,
+    "market_cap": 2313403236352,
+    "current_price": 185.49,
+    "sector": "Basic Materials",
+    "name": "Tata Steel Limited",
+    "debt_to_equity": 89.017,
+    "dividend_yield": 2.16,
+    "price_to_book": 2.2664402,
+    "roce": 0.11322379211111946,
+    "revenue_growth_yoy": 0.06204158958422637
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.6,
+    "num_analysts": 36,
+    "target_low": 170.0,
+    "target_mean": 222.63889,
+    "target_median": 224.0,
+    "target_high": 275.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-29"
+    ],
+    "ex_dividend_date": "2026-06-12",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:54.395502+00:00"
+  "updated_at": "2026-07-16T14:30:25.986799+00:00"
 }

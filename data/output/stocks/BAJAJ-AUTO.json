@@ -661,9 +661,84 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 222.22 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 58.0",
+        "below_ema200": "Close 10,331.50 vs EMA200 9,572.21",
+        "extended_above_ema20": "Close 10,331.50 vs EMA20 10,119.66 (+2.1%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 10,331.50 vs 52w low 7,858.50"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "neutral",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 26.903547,
+    "pe_forward": 22.20992,
+    "eps_trailing": 384.02,
+    "eps_forward": 465.175,
+    "roe": 0.28046,
+    "profit_margin": 0.16886,
+    "gross_margin": 0.33151,
+    "operating_margin": 0.19327,
+    "market_cap": 2885296062464,
+    "current_price": 10331.5,
+    "sector": "Consumer Cyclical",
+    "name": "Bajaj Auto Limited",
+    "debt_to_equity": 56.352,
+    "dividend_yield": 1.45,
+    "price_to_book": 7.4362216,
+    "roce": 0.26119347677102966,
+    "revenue_growth_yoy": 0.22569856668618618
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.325,
+    "num_analysts": 38,
+    "target_low": 8550.0,
+    "target_mean": 10892.421,
+    "target_median": 11015.0,
+    "target_high": 13000.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-21"
+    ],
+    "ex_dividend_date": "2026-05-29",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:58.032092+00:00"
+  "updated_at": "2026-07-16T14:20:18.278474+00:00"
 }

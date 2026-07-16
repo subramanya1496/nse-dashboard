@@ -661,9 +661,87 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "reasons": [
+        "7/8 bullish flags",
+        "patterns: breakout"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 16.16 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 62.7",
+        "below_ema200": "Close 504.75 vs EMA200 439.24",
+        "extended_above_ema20": "Close 504.75 vs EMA20 480.18 (+5.1%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 504.75 vs 52w low 338.05"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 43.62576,
+    "pe_forward": 25.237034,
+    "eps_trailing": 11.57,
+    "eps_forward": 20.00037,
+    "roe": 0.07249,
+    "profit_margin": 0.05057,
+    "gross_margin": 0.35445,
+    "operating_margin": 0.09837,
+    "market_cap": 183086301184,
+    "current_price": 504.75,
+    "sector": "Basic Materials",
+    "name": "Aarti Industries Limited",
+    "debt_to_equity": 83.392,
+    "dividend_yield": 0.2,
+    "price_to_book": 3.0639005,
+    "roce": 0.08534075777750878,
+    "revenue_growth_yoy": 0.1399092034667767
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.18182,
+    "num_analysts": 22,
+    "target_low": 366.0,
+    "target_mean": 529.1818,
+    "target_median": 532.5,
+    "target_high": 622.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-30"
+    ],
+    "ex_dividend_date": "2025-08-18",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:53.484911+00:00"
+  "updated_at": "2026-07-16T14:19:20.267307+00:00"
 }

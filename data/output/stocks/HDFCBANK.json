@@ -660,9 +660,86 @@
     "flag_count": 6,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "6/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 15.10 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 54.4",
+        "below_ema200": "Close 808.30 vs EMA200 858.99",
+        "extended_above_ema20": "Close 808.30 vs EMA20 803.45 (+0.6%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 808.30 vs 52w low 726.65"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 18.185772,
+    "pe_forward": 12.955504,
+    "eps_trailing": 44.84,
+    "eps_forward": 62.94236,
+    "roe": 0.13818,
+    "profit_margin": 0.26834,
+    "gross_margin": 0.0,
+    "operating_margin": 0.40539002,
+    "market_cap": 12558914289664,
+    "current_price": 815.45,
+    "sector": "Financial Services",
+    "name": "HDFC Bank Limited",
+    "debt_to_equity": null,
+    "dividend_yield": 1.61,
+    "price_to_book": 2.1418517,
+    "roce": null,
+    "revenue_growth_yoy": 0.1935513922126162
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.15,
+    "num_analysts": 40,
+    "target_low": 890.0,
+    "target_mean": 1039.625,
+    "target_median": 1027.5,
+    "target_high": 1360.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-18"
+    ],
+    "ex_dividend_date": "2026-06-19",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:16.043988+00:00"
+  "updated_at": "2026-07-16T14:23:26.030639+00:00"
 }

@@ -1,0 +1,62 @@
+{
+  "attention_tiers": [
+    {
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)"
+    },
+    {
+      "tier": 4,
+      "label": "Watch closely",
+      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)"
+    },
+    {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern"
+    },
+    {
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags"
+    },
+    {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags"
+    }
+  ],
+  "risk_conditions": [
+    {
+      "key": "atr_high",
+      "label": "ATR \u22652.5% of price \u2014 large typical daily swings"
+    },
+    {
+      "key": "rsi_extreme",
+      "label": "RSI(14) \u226575 or \u226425 \u2014 momentum at an extreme"
+    },
+    {
+      "key": "below_ema200",
+      "label": "Price below EMA200 \u2014 long-term trend is down"
+    },
+    {
+      "key": "extended_above_ema20",
+      "label": "Price \u22658% above EMA20 \u2014 stretched, pullback-prone"
+    },
+    {
+      "key": "large_day_move",
+      "label": "Today's move \u22654% \u2014 gap-prone conditions"
+    },
+    {
+      "key": "near_52w_low",
+      "label": "Within 5% of the 52-week low"
+    }
+  ],
+  "risk_levels": "count of conditions: 0\u20131 low \u00b7 2\u20133 elevated \u00b7 \u22654 high",
+  "trend_rules": {
+    "daily": "bullish: close > EMA50 > EMA200 \u00b7 bearish: close < EMA50 < EMA200 \u00b7 else neutral",
+    "weekly": "bullish: weekly close above a rising 10-week EMA \u00b7 bearish: below a falling one \u00b7 else neutral \u00b7 null under 15 weeks of history",
+    "intraday": "not collected \u2014 the pipeline fetches daily candles only"
+  },
+  "note": "All labels are counts/thresholds of named conditions \u2014 never a weighted score."
+}

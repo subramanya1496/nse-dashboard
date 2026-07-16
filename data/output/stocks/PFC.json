@@ -655,9 +655,86 @@
     "flag_count": 1,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "1/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 9.53 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 35.6",
+        "below_ema200": "Close 401.35 vs EMA200 414.65",
+        "extended_above_ema20": "Close 401.35 vs EMA20 416.13 (-3.6%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 401.35 vs 52w low 329.90"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 5.1133904,
+    "pe_forward": 6.1651525,
+    "eps_trailing": 78.49,
+    "eps_forward": 65.09977,
+    "roe": 0.20466,
+    "profit_margin": 0.54304004,
+    "gross_margin": 0.99286,
+    "operating_margin": 0.93324995,
+    "market_cap": 1324495798272,
+    "current_price": 401.35,
+    "sector": "Financial Services",
+    "name": "Power Finance Corporation Limited",
+    "debt_to_equity": 586.017,
+    "dividend_yield": 3.89,
+    "price_to_book": 0.9968283,
+    "roce": null,
+    "revenue_growth_yoy": 0.03376622320878225
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.14286,
+    "num_analysts": 14,
+    "target_low": 450.0,
+    "target_mean": 508.92856,
+    "target_median": 510.0,
+    "target_high": 550.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-05"
+    ],
+    "ex_dividend_date": "2026-07-31",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:42.451097+00:00"
+  "updated_at": "2026-07-16T14:28:33.455810+00:00"
 }

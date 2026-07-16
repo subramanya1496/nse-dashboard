@@ -659,9 +659,87 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags",
+        "patterns: breakout"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 45.22 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 61.5",
+        "below_ema200": "Close 1,830.00 vs EMA200 1,922.08",
+        "extended_above_ema20": "Close 1,830.00 vs EMA20 1,757.23 (+4.1%)",
+        "large_day_move": "Day change +0.3%",
+        "near_52w_low": "Close 1,830.00 vs 52w low 1,605.00"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 30.123438,
+    "pe_forward": 24.167255,
+    "eps_trailing": 60.76,
+    "eps_forward": 75.73471,
+    "roe": 0.06501,
+    "profit_margin": 0.07694,
+    "gross_margin": 0.61875,
+    "operating_margin": 0.1265,
+    "market_cap": 343600037888,
+    "current_price": 1830.3,
+    "sector": "Basic Materials",
+    "name": "Dalmia Bharat Limited",
+    "debt_to_equity": 40.987,
+    "dividend_yield": 0.55,
+    "price_to_book": 1.9094605,
+    "roce": 0.06983139156234171,
+    "revenue_growth_yoy": 0.05894134477825465
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.85294,
+    "num_analysts": 34,
+    "target_low": 1800.0,
+    "target_mean": 2180.3823,
+    "target_median": 2166.5,
+    "target_high": 2522.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-22"
+    ],
+    "ex_dividend_date": "2026-06-23",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:08.613423+00:00"
+  "updated_at": "2026-07-16T14:22:16.799310+00:00"
 }

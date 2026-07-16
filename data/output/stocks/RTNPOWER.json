@@ -653,9 +653,73 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 0.24 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 39.9",
+        "below_ema200": "Close 8.84 vs EMA200 9.66",
+        "extended_above_ema20": "Close 8.84 vs EMA20 9.05 (-2.3%)",
+        "large_day_move": "Day change +0.0%",
+        "near_52w_low": "Close 8.84 vs 52w low 7.52"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 88.4,
+    "pe_forward": null,
+    "eps_trailing": 0.1,
+    "eps_forward": null,
+    "roe": 0.0113699995,
+    "profit_margin": 0.01753,
+    "gross_margin": 0.22623,
+    "operating_margin": 0.08394,
+    "market_cap": 47471734784,
+    "current_price": 8.84,
+    "sector": "Utilities",
+    "name": "RattanIndia Power Limited",
+    "debt_to_equity": 80.012,
+    "dividend_yield": null,
+    "price_to_book": 1.0206673,
+    "roce": 0.06300368186616545,
+    "revenue_growth_yoy": -0.089063684782708
+  },
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:47.995495+00:00"
+  "updated_at": "2026-07-16T14:29:29.057472+00:00"
 }

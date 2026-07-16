@@ -659,9 +659,86 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 41.65 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 52.6",
+        "below_ema200": "Close 1,838.60 vs EMA200 1,884.83",
+        "extended_above_ema20": "Close 1,838.60 vs EMA20 1,835.95 (+0.1%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 1,838.60 vs 52w low 1,597.00"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 30.121231,
+    "pe_forward": 19.862347,
+    "eps_trailing": 61.04,
+    "eps_forward": 92.56711,
+    "roe": 0.14602,
+    "profit_margin": 0.06534,
+    "gross_margin": 0.51241,
+    "operating_margin": 0.36187,
+    "market_cap": 2939431157760,
+    "current_price": 1838.6,
+    "sector": "Financial Services",
+    "name": "Bajaj Finserv Ltd.",
+    "debt_to_equity": 256.404,
+    "dividend_yield": 0.07,
+    "price_to_book": 3.7677155,
+    "roce": null,
+    "revenue_growth_yoy": 0.13625484428648632
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.93333,
+    "num_analysts": 15,
+    "target_low": 1600.0,
+    "target_mean": 2162.7334,
+    "target_median": 2190.0,
+    "target_high": 2430.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-31"
+    ],
+    "ex_dividend_date": "2026-06-30",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:58.393581+00:00"
+  "updated_at": "2026-07-16T14:20:31.768310+00:00"
 }

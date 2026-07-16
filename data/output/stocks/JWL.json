@@ -653,9 +653,85 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 8.03 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 39.7",
+        "below_ema200": "Close 254.90 vs EMA200 293.84",
+        "extended_above_ema20": "Close 254.90 vs EMA20 261.97 (-2.7%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 254.90 vs 52w low 235.65"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 63.40796,
+    "pe_forward": 25.94402,
+    "eps_trailing": 4.02,
+    "eps_forward": 9.825,
+    "roe": 0.05768,
+    "profit_margin": 0.05868,
+    "gross_margin": 0.28186,
+    "operating_margin": 0.08394,
+    "market_cap": 108936716288,
+    "current_price": 254.9,
+    "sector": "Industrials",
+    "name": "Jupiter Wagons Limited",
+    "debt_to_equity": 33.365,
+    "dividend_yield": 0.69,
+    "price_to_book": 3.6821957,
+    "roce": 0.09366124092044675,
+    "revenue_growth_yoy": -0.26432059611238623
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 3.0,
+    "num_analysts": 4,
+    "target_low": 210.0,
+    "target_mean": 275.5,
+    "target_median": 277.5,
+    "target_high": 337.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2025-05-30",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:26.828508+00:00"
+  "updated_at": "2026-07-16T14:25:34.860000+00:00"
 }

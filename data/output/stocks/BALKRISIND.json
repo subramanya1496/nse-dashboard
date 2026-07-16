@@ -653,9 +653,87 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 68.32 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 46.2",
+        "below_ema200": "Close 2,154.50 vs EMA200 2,295.00",
+        "extended_above_ema20": "Close 2,154.50 vs EMA20 2,190.37 (-1.6%)",
+        "large_day_move": "Day change +1.1%",
+        "near_52w_low": "Close 2,154.50 vs 52w low 1,970.00"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "neutral",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 33.333336,
+    "pe_forward": 21.702494,
+    "eps_trailing": 64.35,
+    "eps_forward": 98.83657,
+    "roe": null,
+    "profit_margin": 0.1233,
+    "gross_margin": 0.50171,
+    "operating_margin": 0.16359,
+    "market_cap": 414665375744,
+    "current_price": 2145.0,
+    "sector": "Consumer Cyclical",
+    "name": "Balkrishna Industries Limited",
+    "debt_to_equity": 35.269,
+    "dividend_yield": 0.75,
+    "price_to_book": 3.7850714,
+    "roce": 0.13808496104072304,
+    "revenue_growth_yoy": 0.03595262830638278
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 3.16667,
+    "num_analysts": 18,
+    "target_low": 1875.0,
+    "target_mean": 2312.7222,
+    "target_median": 2317.0,
+    "target_high": 2761.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-23"
+    ],
+    "ex_dividend_date": "2026-02-02",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:59.609109+00:00"
+  "updated_at": "2026-07-16T14:20:36.276688+00:00"
 }

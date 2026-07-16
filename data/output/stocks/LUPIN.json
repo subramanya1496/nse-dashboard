@@ -662,9 +662,84 @@
     "flag_count": 8,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "8/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 47.22 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 66.3",
+        "below_ema200": "Close 2,500.50 vs EMA200 2,233.56",
+        "extended_above_ema20": "Close 2,500.50 vs EMA20 2,433.81 (+2.7%)",
+        "large_day_move": "Day change +0.3%",
+        "near_52w_low": "Close 2,500.50 vs 52w low 1,836.80"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 21.47827,
+    "pe_forward": 24.443745,
+    "eps_trailing": 116.42,
+    "eps_forward": 102.29611,
+    "roe": 0.26907,
+    "profit_margin": 0.19073999,
+    "gross_margin": 0.71511,
+    "operating_margin": 0.24219999,
+    "market_cap": 1143315759104,
+    "current_price": 2500.5,
+    "sector": "Healthcare",
+    "name": "Lupin Limited",
+    "debt_to_equity": 29.388,
+    "dividend_yield": 0.72,
+    "price_to_book": 5.089693,
+    "roce": 0.28331516524919315,
+    "revenue_growth_yoy": 0.23861768889934307
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.48649,
+    "num_analysts": 37,
+    "target_low": 1800.0,
+    "target_mean": 2483.4055,
+    "target_median": 2540.0,
+    "target_high": 2900.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-05"
+    ],
+    "ex_dividend_date": "2026-07-17",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:31.630859+00:00"
+  "updated_at": "2026-07-16T14:26:28.978145+00:00"
 }

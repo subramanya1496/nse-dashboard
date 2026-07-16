@@ -653,9 +653,85 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 60.36 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 39.3",
+        "below_ema200": "Close 2,361.30 vs EMA200 2,544.91",
+        "extended_above_ema20": "Close 2,361.30 vs EMA20 2,444.85 (-3.4%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 2,361.30 vs 52w low 2,057.40"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 36.912617,
+    "pe_forward": 28.979393,
+    "eps_trailing": 63.97,
+    "eps_forward": 81.48204,
+    "roe": 0.2877,
+    "profit_margin": 0.19863,
+    "gross_margin": 0.35751,
+    "operating_margin": 0.13505,
+    "market_cap": 952501207040,
+    "current_price": 2361.3,
+    "sector": "Industrials",
+    "name": "Mazagon Dock Shipbuilders Limited",
+    "debt_to_equity": 4.481,
+    "dividend_yield": 0.81,
+    "price_to_book": 9.7643385,
+    "roce": 0.2851488766804974,
+    "revenue_growth_yoy": 0.13772275426264097
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.45455,
+    "num_analysts": 11,
+    "target_low": 1950.0,
+    "target_mean": 2751.182,
+    "target_median": 2770.0,
+    "target_high": 3380.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2026-02-13",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:34.032540+00:00"
+  "updated_at": "2026-07-16T14:26:49.984082+00:00"
 }

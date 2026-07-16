@@ -660,9 +660,86 @@
     "flag_count": 6,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "6/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 46.82 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 59.4",
+        "below_ema200": "Close 1,510.30 vs EMA200 1,476.24",
+        "extended_above_ema20": "Close 1,510.30 vs EMA20 1,455.16 (+3.8%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 1,510.30 vs 52w low 1,304.10"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 27.8756,
+    "pe_forward": 17.796564,
+    "eps_trailing": 54.18,
+    "eps_forward": 84.8647,
+    "roe": 0.16608,
+    "profit_margin": 0.084680006,
+    "gross_margin": 0.34599,
+    "operating_margin": 0.13947,
+    "market_cap": 1337857540096,
+    "current_price": 1510.3,
+    "sector": "Technology",
+    "name": "Tech Mahindra Limited",
+    "debt_to_equity": 7.269,
+    "dividend_yield": 3.4,
+    "price_to_book": 4.51634,
+    "roce": 0.1981681525813047,
+    "revenue_growth_yoy": 0.07222537805515557
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.4,
+    "num_analysts": 40,
+    "target_low": 1080.0,
+    "target_mean": 1528.225,
+    "target_median": 1555.0,
+    "target_high": 1921.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-16"
+    ],
+    "ex_dividend_date": "2026-07-03",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:55.661545+00:00"
+  "updated_at": "2026-07-16T14:30:40.984624+00:00"
 }

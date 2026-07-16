@@ -653,9 +653,86 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 8.18 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 41.7",
+        "below_ema200": "Close 377.15 vs EMA200 400.10",
+        "extended_above_ema20": "Close 377.15 vs EMA20 385.91 (-2.3%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 377.15 vs 52w low 345.50"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 19.47083,
+    "pe_forward": 15.649377,
+    "eps_trailing": 19.37,
+    "eps_forward": 24.1,
+    "roe": 0.11389,
+    "profit_margin": 0.28553,
+    "gross_margin": 0.0,
+    "operating_margin": 0.04151,
+    "market_cap": 3751309213696,
+    "current_price": 377.15,
+    "sector": "Financial Services",
+    "name": "Kotak Mahindra Bank Limited",
+    "debt_to_equity": null,
+    "dividend_yield": 0.17,
+    "price_to_book": 2.0699666,
+    "roce": null,
+    "revenue_growth_yoy": -0.00257852204120674
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.7027,
+    "num_analysts": 37,
+    "target_low": 380.0,
+    "target_mean": 464.14594,
+    "target_median": 470.0,
+    "target_high": 518.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-18"
+    ],
+    "ex_dividend_date": "2026-07-17",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:29.247712+00:00"
+  "updated_at": "2026-07-16T14:25:57.499968+00:00"
 }

@@ -659,9 +659,86 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 20.96 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 53.0",
+        "below_ema200": "Close 648.10 vs EMA200 642.30",
+        "extended_above_ema20": "Close 648.10 vs EMA20 645.93 (+0.3%)",
+        "large_day_move": "Day change -1.5%",
+        "near_52w_low": "Close 648.10 vs 52w low 489.40"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 36.34885,
+    "pe_forward": 25.049908,
+    "eps_trailing": 17.83,
+    "eps_forward": 25.87235,
+    "roe": 0.10031,
+    "profit_margin": 0.53876996,
+    "gross_margin": 0.40828,
+    "operating_margin": 0.20594999,
+    "market_cap": 1604249452544,
+    "current_price": 648.1,
+    "sector": "Real Estate",
+    "name": "DLF Limited",
+    "debt_to_equity": 0.673,
+    "dividend_yield": 1.22,
+    "price_to_book": 3.5278811,
+    "roce": 0.06322413366493365,
+    "revenue_growth_yoy": -0.013709359115259412
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.17391,
+    "num_analysts": 23,
+    "target_low": 676.0,
+    "target_mean": 816.1739,
+    "target_median": 800.0,
+    "target_high": 1000.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-04"
+    ],
+    "ex_dividend_date": "2026-07-27",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:10.428991+00:00"
+  "updated_at": "2026-07-16T14:22:36.316395+00:00"
 }

@@ -661,9 +661,87 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 21.83 = 3.9% of price",
+        "rsi_extreme": "RSI(14) 56.6",
+        "below_ema200": "Close 554.85 vs EMA200 590.90",
+        "extended_above_ema20": "Close 554.85 vs EMA20 535.52 (+3.6%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 554.85 vs 52w low 450.75"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 28.107903,
+    "pe_forward": 15.238647,
+    "eps_trailing": 19.74,
+    "eps_forward": 36.41071,
+    "roe": 0.10786,
+    "profit_margin": 0.11311,
+    "gross_margin": 0.50282,
+    "operating_margin": 0.19521,
+    "market_cap": 180971175936,
+    "current_price": 554.85,
+    "sector": "Real Estate",
+    "name": "Brigade Enterprises Limited",
+    "debt_to_equity": 84.316,
+    "dividend_yield": 0.33,
+    "price_to_book": 2.6534514,
+    "roce": 0.09894390125197952,
+    "revenue_growth_yoy": 0.12277970363859596
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.2,
+    "num_analysts": 15,
+    "target_low": 475.0,
+    "target_mean": 771.0333,
+    "target_median": 780.0,
+    "target_high": 940.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-05-06"
+    ],
+    "ex_dividend_date": "2025-08-13",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:03.186241+00:00"
+  "updated_at": "2026-07-16T14:21:19.889080+00:00"
 }

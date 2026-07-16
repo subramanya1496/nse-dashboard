@@ -653,9 +653,85 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 8.55 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 42.1",
+        "below_ema200": "Close 301.80 vs EMA200 325.64",
+        "extended_above_ema20": "Close 301.80 vs EMA20 308.96 (-2.3%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 301.80 vs 52w low 245.00"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 30.454086,
+    "pe_forward": 20.18729,
+    "eps_trailing": 9.91,
+    "eps_forward": 14.95,
+    "roe": 0.16254,
+    "profit_margin": 0.08096,
+    "gross_margin": 0.16332,
+    "operating_margin": 0.10985,
+    "market_cap": 96859201536,
+    "current_price": 301.8,
+    "sector": "Communication Services",
+    "name": "RailTel Corporation of India Limited",
+    "debt_to_equity": 2.817,
+    "dividend_yield": 1.27,
+    "price_to_book": 4.279576,
+    "roce": 0.1813738066624357,
+    "revenue_growth_yoy": 0.35187106538002483
+  },
+  "analyst": {
+    "recommendation": "none",
+    "recommendation_mean": null,
+    "num_analysts": 2,
+    "target_low": 225.0,
+    "target_mean": 262.5,
+    "target_median": 262.5,
+    "target_high": 300.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2026-03-13",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:46.016786+00:00"
+  "updated_at": "2026-07-16T14:29:10.994068+00:00"
 }

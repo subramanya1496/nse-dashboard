@@ -657,9 +657,84 @@
     "flag_count": 3,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
+      "reasons": [
+        "3/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 27.09 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 52.1",
+        "below_ema200": "Close 1,429.50 vs EMA200 1,405.83",
+        "extended_above_ema20": "Close 1,429.50 vs EMA20 1,430.65 (-0.1%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 1,429.50 vs 52w low 1,165.70"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 29.76265,
+    "pe_forward": 22.519468,
+    "eps_trailing": 48.03,
+    "eps_forward": 63.47841,
+    "roe": 0.11736,
+    "profit_margin": 0.13939999,
+    "gross_margin": 0.64747,
+    "operating_margin": 0.11262,
+    "market_cap": 1154814836736,
+    "current_price": 1429.5,
+    "sector": "Healthcare",
+    "name": "Cipla Limited",
+    "debt_to_equity": 1.778,
+    "dividend_yield": 0.9,
+    "price_to_book": 3.3536422,
+    "roce": 0.14857680105539678,
+    "revenue_growth_yoy": 0.02086136140929955
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.24324,
+    "num_analysts": 37,
+    "target_low": 1080.0,
+    "target_mean": 1477.5405,
+    "target_median": 1500.0,
+    "target_high": 1768.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-23"
+    ],
+    "ex_dividend_date": "2026-06-05",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:05.618376+00:00"
+  "updated_at": "2026-07-16T14:21:42.401099+00:00"
 }

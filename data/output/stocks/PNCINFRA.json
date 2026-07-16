@@ -661,9 +661,84 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 7.30 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 66.0",
+        "below_ema200": "Close 244.00 vs EMA200 233.25",
+        "extended_above_ema20": "Close 244.00 vs EMA20 235.31 (+3.7%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 244.00 vs 52w low 158.17"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 7.5274525,
+    "pe_forward": 11.584175,
+    "eps_trailing": 32.42,
+    "eps_forward": 21.06667,
+    "roe": 0.1299,
+    "profit_margin": 0.15495,
+    "gross_margin": 0.37305,
+    "operating_margin": 0.14959,
+    "market_cap": 62605815808,
+    "current_price": 244.04,
+    "sector": "Industrials",
+    "name": "PNC Infratech Limited",
+    "debt_to_equity": 75.883,
+    "dividend_yield": 0.24,
+    "price_to_book": 0.91974986,
+    "roce": 0.13545732411785236,
+    "revenue_growth_yoy": -0.2069208965991423
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.2,
+    "num_analysts": 15,
+    "target_low": 235.0,
+    "target_mean": 288.86667,
+    "target_median": 276.0,
+    "target_high": 378.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2025-09-22",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:44.808186+00:00"
+  "updated_at": "2026-07-16T14:28:54.619884+00:00"
 }

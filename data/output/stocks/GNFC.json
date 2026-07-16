@@ -656,9 +656,77 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 16.25 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 48.1",
+        "below_ema200": "Close 513.00 vs EMA200 492.12",
+        "extended_above_ema20": "Close 513.00 vs EMA20 516.50 (-0.7%)",
+        "large_day_move": "Day change +2.9%",
+        "near_52w_low": "Close 513.00 vs 52w low 365.00"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 9.328969,
+    "pe_forward": 8.183124,
+    "eps_trailing": 54.99,
+    "eps_forward": 62.69,
+    "roe": 0.091350004,
+    "profit_margin": 0.10395,
+    "gross_margin": 0.2838,
+    "operating_margin": 0.18252,
+    "market_cap": 75380572160,
+    "current_price": 513.0,
+    "sector": "Basic Materials",
+    "name": "Gujarat Narmada Valley Fertilizers & Chemicals Limited",
+    "debt_to_equity": 0.066,
+    "dividend_yield": 3.61,
+    "price_to_book": 0.82729125,
+    "roce": 0.10379918588873813,
+    "revenue_growth_yoy": -0.015078560567663457
+  },
   "analyst": null,
-  "events": null,
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2025-09-02",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:13.617088+00:00"
+  "updated_at": "2026-07-16T14:23:12.333073+00:00"
 }

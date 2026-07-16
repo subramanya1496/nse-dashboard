@@ -661,9 +661,85 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "reasons": [
+        "7/8 bullish flags",
+        "patterns: volume surge"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 248.90 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 60.8",
+        "below_ema200": "Close 8,016.50 vs EMA200 7,369.41",
+        "extended_above_ema20": "Close 8,016.50 vs EMA20 7,702.15 (+4.1%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 8,016.50 vs 52w low 5,400.50"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": true,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 159.56409,
+    "pe_forward": 41.015316,
+    "eps_trailing": 50.24,
+    "eps_forward": 195.45139,
+    "roe": 0.05583,
+    "profit_margin": 0.014579999,
+    "gross_margin": 0.18370001,
+    "operating_margin": 0.06243,
+    "market_cap": 282724073472,
+    "current_price": 8016.5,
+    "sector": "Consumer Cyclical",
+    "name": "Amber Enterprises India Limited",
+    "debt_to_equity": 46.566,
+    "dividend_yield": null,
+    "price_to_book": 6.453075,
+    "roce": 0.07697027081857954,
+    "revenue_growth_yoy": 0.2219449930275353
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.92,
+    "num_analysts": 25,
+    "target_low": 6879.0,
+    "target_mean": 8500.24,
+    "target_median": 8500.0,
+    "target_high": 9770.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2020-03-26",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:55.975125+00:00"
+  "updated_at": "2026-07-16T14:19:39.245372+00:00"
 }

@@ -657,9 +657,86 @@
     "flag_count": 3,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
+      "reasons": [
+        "3/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 73.93 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 50.6",
+        "below_ema200": "Close 3,117.80 vs EMA200 3,244.71",
+        "extended_above_ema20": "Close 3,117.80 vs EMA20 3,113.46 (+0.1%)",
+        "large_day_move": "Day change +1.1%",
+        "near_52w_low": "Close 3,117.80 vs 52w low 2,896.00"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "neutral",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 20.471437,
+    "pe_forward": 19.566143,
+    "eps_trailing": 152.3,
+    "eps_forward": 159.34668,
+    "roe": 0.18754,
+    "profit_margin": 0.08473,
+    "gross_margin": 0.38669,
+    "operating_margin": 0.17093,
+    "market_cap": 3743736659968,
+    "current_price": 3117.8,
+    "sector": "Consumer Cyclical",
+    "name": "Mahindra & Mahindra Limited",
+    "debt_to_equity": 125.278,
+    "dividend_yield": 1.07,
+    "price_to_book": 3.7427447,
+    "roce": 0.17137685718606813,
+    "revenue_growth_yoy": 0.2406285292594198
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.29412,
+    "num_analysts": 34,
+    "target_low": 3508.0,
+    "target_mean": 4119.0586,
+    "target_median": 4083.0,
+    "target_high": 4590.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-30"
+    ],
+    "ex_dividend_date": "2026-07-03",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:31.999235+00:00"
+  "updated_at": "2026-07-16T14:26:30.522132+00:00"
 }

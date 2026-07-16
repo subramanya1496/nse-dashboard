@@ -658,9 +658,86 @@
     "flag_count": 4,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
+      "reasons": [
+        "4/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 5.10 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 46.6",
+        "below_ema200": "Close 246.75 vs EMA200 259.74",
+        "extended_above_ema20": "Close 246.75 vs EMA20 246.42 (+0.1%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 246.75 vs 52w low 227.65"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 7.495444,
+    "pe_forward": 5.7238855,
+    "eps_trailing": 32.92,
+    "eps_forward": 43.10883,
+    "roe": 0.12703,
+    "profit_margin": 0.06255,
+    "gross_margin": 0.39247,
+    "operating_margin": 0.09212,
+    "market_cap": 3104183943168,
+    "current_price": 246.75,
+    "sector": "Energy",
+    "name": "Oil and Natural Gas Corporation Limited",
+    "debt_to_equity": 42.548,
+    "dividend_yield": 7.48,
+    "price_to_book": 0.83502537,
+    "roce": 0.12945369352919328,
+    "revenue_growth_yoy": -0.0015276951933431654
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.93333,
+    "num_analysts": 30,
+    "target_low": 230.0,
+    "target_mean": 307.16666,
+    "target_median": 300.0,
+    "target_high": 405.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-11"
+    ],
+    "ex_dividend_date": "2026-02-18",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:40.832380+00:00"
+  "updated_at": "2026-07-16T14:28:15.452501+00:00"
 }

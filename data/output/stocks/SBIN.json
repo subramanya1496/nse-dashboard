@@ -658,9 +658,85 @@
     "flag_count": 4,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "4/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 19.56 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 52.3",
+        "below_ema200": "Close 1,031.20 vs EMA200 999.62",
+        "extended_above_ema20": "Close 1,031.20 vs EMA20 1,027.65 (+0.3%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 1,031.20 vs 52w low 786.55"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 11.297433,
+    "pe_forward": 10.089083,
+    "eps_trailing": 91.18,
+    "eps_forward": 102.10046,
+    "roe": 0.15477,
+    "profit_margin": 0.22114,
+    "gross_margin": 0.0,
+    "operating_margin": 0.28959998,
+    "market_cap": 9508458856448,
+    "current_price": 1030.1,
+    "sector": "Financial Services",
+    "name": "State Bank of India",
+    "debt_to_equity": null,
+    "dividend_yield": 1.71,
+    "price_to_book": 1.595029,
+    "roce": null,
+    "revenue_growth_yoy": 0.09208470724271556
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.48718,
+    "num_analysts": 38,
+    "target_low": 980.0,
+    "target_mean": 1197.9736,
+    "target_median": 1200.0,
+    "target_high": 1301.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-06"
+    ],
+    "ex_dividend_date": "2026-05-15",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:49.214117+00:00"
+  "updated_at": "2026-07-16T14:29:27.717065+00:00"
 }

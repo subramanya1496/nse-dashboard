@@ -653,9 +653,84 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 1.42 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 38.4",
+        "below_ema200": "Close 70.05 vs EMA200 77.80",
+        "extended_above_ema20": "Close 70.05 vs EMA20 71.53 (-2.1%)",
+        "large_day_move": "Day change +0.0%",
+        "near_52w_low": "Close 70.05 vs 52w low 63.02"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 42.975464,
+    "pe_forward": 14.579536,
+    "eps_trailing": 1.63,
+    "eps_forward": 4.80468,
+    "roe": 0.04514,
+    "profit_margin": 0.14179,
+    "gross_margin": 0.93646,
+    "operating_margin": 0.27751,
+    "market_cap": 275282165760,
+    "current_price": 70.05,
+    "sector": "Utilities",
+    "name": "SJVN Limited",
+    "debt_to_equity": 226.528,
+    "dividend_yield": 2.08,
+    "price_to_book": 1.9347088,
+    "roce": 0.05842888917315483,
+    "revenue_growth_yoy": 0.47404793604187484
+  },
+  "analyst": {
+    "recommendation": "underperform",
+    "recommendation_mean": 4.0,
+    "num_analysts": 2,
+    "target_low": 68.0,
+    "target_mean": 70.0,
+    "target_median": 70.0,
+    "target_high": 72.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2026-02-20",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:50.837244+00:00"
+  "updated_at": "2026-07-16T14:29:49.979155+00:00"
 }

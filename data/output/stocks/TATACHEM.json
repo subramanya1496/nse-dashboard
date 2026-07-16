@@ -653,9 +653,87 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 19.28 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 40.4",
+        "below_ema200": "Close 694.80 vs EMA200 759.10",
+        "extended_above_ema20": "Close 694.80 vs EMA20 712.88 (-2.5%)",
+        "large_day_move": "Day change -0.5%",
+        "near_52w_low": "Close 694.80 vs 52w low 580.30"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": null,
+    "pe_forward": 20.587582,
+    "eps_trailing": -74.45,
+    "eps_forward": 33.7485,
+    "roe": -0.07678,
+    "profit_margin": -0.13001001,
+    "gross_margin": 0.62054,
+    "operating_margin": -0.0095999995,
+    "market_cap": 177004658688,
+    "current_price": 694.8,
+    "sector": "Basic Materials",
+    "name": "Tata Chemicals Limited",
+    "debt_to_equity": 36.081,
+    "dividend_yield": 1.58,
+    "price_to_book": 0.8346918,
+    "roce": -0.02957755203171457,
+    "revenue_growth_yoy": -0.025583756345177663
+  },
+  "analyst": {
+    "recommendation": "underperform",
+    "recommendation_mean": 4.0,
+    "num_analysts": 9,
+    "target_low": 566.0,
+    "target_mean": 712.8889,
+    "target_median": 725.0,
+    "target_high": 815.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-24"
+    ],
+    "ex_dividend_date": "2026-06-10",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:53.222866+00:00"
+  "updated_at": "2026-07-16T14:30:21.487433+00:00"
 }

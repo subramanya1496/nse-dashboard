@@ -657,9 +657,88 @@
     "flag_count": 3,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
+      "reasons": [
+        "3/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 41.75 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 48.2",
+        "below_ema200": "Close 1,420.70 vs EMA200 1,439.13",
+        "extended_above_ema20": "Close 1,420.70 vs EMA20 1,424.10 (-0.2%)",
+        "large_day_move": "Day change -1.4%",
+        "near_52w_low": "Close 1,420.70 vs 52w low 1,188.00"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 29.604082,
+    "pe_forward": 27.856861,
+    "eps_trailing": 47.99,
+    "eps_forward": 51.0,
+    "roe": 0.13022,
+    "profit_margin": 0.08342,
+    "gross_margin": 0.26371,
+    "operating_margin": 0.13719,
+    "market_cap": 715895734272,
+    "current_price": 1420.7,
+    "sector": "Utilities",
+    "name": "Torrent Power Limited",
+    "debt_to_equity": 70.885,
+    "dividend_yield": 1.39,
+    "price_to_book": 3.7529948,
+    "roce": 0.11865269041682133,
+    "revenue_growth_yoy": -0.008024343131078372
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.72727,
+    "num_analysts": 11,
+    "target_low": 1255.0,
+    "target_mean": 1476.6364,
+    "target_median": 1444.0,
+    "target_high": 1700.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-04"
+    ],
+    "ex_dividend_date": "2026-06-19",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:58.008644+00:00"
+  "updated_at": "2026-07-16T14:31:02.003675+00:00"
 }

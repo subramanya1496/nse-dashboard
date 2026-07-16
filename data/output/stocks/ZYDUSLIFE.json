@@ -661,9 +661,84 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 26.15 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 63.2",
+        "below_ema200": "Close 1,153.90 vs EMA200 984.75",
+        "extended_above_ema20": "Close 1,153.90 vs EMA20 1,125.96 (+2.5%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 1,153.90 vs 52w low 835.50"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 23.036535,
+    "pe_forward": 24.47112,
+    "eps_trailing": 50.09,
+    "eps_forward": 47.15354,
+    "roe": 0.18318,
+    "profit_margin": 0.18565,
+    "gross_margin": 0.72287005,
+    "operating_margin": 0.18972,
+    "market_cap": 1151019646976,
+    "current_price": 1153.9,
+    "sector": "Healthcare",
+    "name": "Zydus Lifesciences Limited",
+    "debt_to_equity": 42.304,
+    "dividend_yield": 0.09,
+    "price_to_book": 4.282682,
+    "roce": 0.1903844424399164,
+    "revenue_growth_yoy": 0.18365981801911951
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.51613,
+    "num_analysts": 31,
+    "target_low": 800.0,
+    "target_mean": 1093.7252,
+    "target_median": 1115.0,
+    "target_high": 1457.48
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-12"
+    ],
+    "ex_dividend_date": "2026-07-23",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:54:02.008598+00:00"
+  "updated_at": "2026-07-16T14:31:42.557204+00:00"
 }

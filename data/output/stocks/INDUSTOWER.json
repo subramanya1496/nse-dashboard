@@ -659,9 +659,87 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 10.22 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 51.8",
+        "below_ema200": "Close 405.65 vs EMA200 412.13",
+        "extended_above_ema20": "Close 405.65 vs EMA20 401.85 (+0.9%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 405.65 vs 52w low 312.55"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 14.968635,
+    "pe_forward": 13.035239,
+    "eps_trailing": 27.1,
+    "eps_forward": 31.11949,
+    "roe": 0.19806999,
+    "profit_margin": 0.21989,
+    "gross_margin": 0.55836,
+    "operating_margin": 0.32422,
+    "market_cap": 1069776044032,
+    "current_price": 405.65,
+    "sector": "Communication Services",
+    "name": "Indus Towers Limited",
+    "debt_to_equity": 53.289,
+    "dividend_yield": null,
+    "price_to_book": 2.698343,
+    "roce": 0.18440424244661235,
+    "revenue_growth_yoy": 0.07868790417889439
+  },
+  "analyst": {
+    "recommendation": "hold",
+    "recommendation_mean": 2.72,
+    "num_analysts": 25,
+    "target_low": 345.0,
+    "target_mean": 448.8,
+    "target_median": 434.0,
+    "target_high": 580.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-30"
+    ],
+    "ex_dividend_date": "2022-05-13",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:21.222257+00:00"
+  "updated_at": "2026-07-16T14:24:37.850241+00:00"
 }

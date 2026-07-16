@@ -659,9 +659,85 @@
     "flag_count": 5,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "5/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 39.31 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 52.5",
+        "below_ema200": "Close 1,826.40 vs EMA200 1,588.80",
+        "extended_above_ema20": "Close 1,826.40 vs EMA20 1,820.96 (+0.3%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 1,826.40 vs 52w low 1,290.50"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 31.397629,
+    "pe_forward": 23.657757,
+    "eps_trailing": 58.17,
+    "eps_forward": 77.2009,
+    "roe": 0.15592,
+    "profit_margin": 0.33060002,
+    "gross_margin": 0.64403,
+    "operating_margin": 0.41182,
+    "market_cap": 4207950954496,
+    "current_price": 1826.4,
+    "sector": "Industrials",
+    "name": "Adani Ports and Special Economic Zone Limited",
+    "debt_to_equity": 64.051,
+    "dividend_yield": 0.41,
+    "price_to_book": 4.3851666,
+    "roce": 0.10969888662878187,
+    "revenue_growth_yoy": 0.2710533405216613
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.24,
+    "num_analysts": 25,
+    "target_low": 1764.0,
+    "target_mean": 1969.52,
+    "target_median": 1960.0,
+    "target_high": 2178.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-29"
+    ],
+    "ex_dividend_date": "2026-06-12",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:54.603022+00:00"
+  "updated_at": "2026-07-16T14:19:23.138209+00:00"
 }

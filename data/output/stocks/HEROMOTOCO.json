@@ -656,9 +656,86 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 102.48 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 47.8",
+        "below_ema200": "Close 4,898.00 vs EMA200 5,133.43",
+        "extended_above_ema20": "Close 4,898.00 vs EMA20 4,911.30 (-0.3%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 4,898.00 vs 52w low 4,190.00"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 17.082869,
+    "pe_forward": 15.460003,
+    "eps_trailing": 286.72,
+    "eps_forward": 316.81754,
+    "roe": 0.28027,
+    "profit_margin": 0.12109999,
+    "gross_margin": 0.32718,
+    "operating_margin": 0.13216,
+    "market_cap": 980055228416,
+    "current_price": 4898.0,
+    "sector": "Consumer Cyclical",
+    "name": "Hero MotoCorp Limited",
+    "debt_to_equity": 3.57,
+    "dividend_yield": 3.79,
+    "price_to_book": 4.5348706,
+    "roce": 0.3190830235439901,
+    "revenue_growth_yoy": 0.15562574424353418
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.25,
+    "num_analysts": 34,
+    "target_low": 4200.0,
+    "target_mean": 5834.647,
+    "target_median": 5784.5,
+    "target_high": 7800.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-05"
+    ],
+    "ex_dividend_date": "2026-07-23",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:16.486113+00:00"
+  "updated_at": "2026-07-16T14:23:43.847240+00:00"
 }

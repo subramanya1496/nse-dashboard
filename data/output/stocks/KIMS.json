@@ -658,9 +658,87 @@
     "flag_count": 4,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "4/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 23.27 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 51.4",
+        "below_ema200": "Close 802.95 vs EMA200 717.51",
+        "extended_above_ema20": "Close 802.95 vs EMA20 805.16 (-0.3%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 802.95 vs 52w low 575.80"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 132.5,
+    "pe_forward": 47.006474,
+    "eps_trailing": 6.06,
+    "eps_forward": 17.08169,
+    "roe": 0.09724,
+    "profit_margin": 0.06182,
+    "gross_margin": 0.5924,
+    "operating_margin": 0.11502,
+    "market_cap": 321291583488,
+    "current_price": 802.95,
+    "sector": "Healthcare",
+    "name": "Krishna Institute of Medical Sciences Limited",
+    "debt_to_equity": 166.226,
+    "dividend_yield": null,
+    "price_to_book": 14.29627,
+    "roce": 0.08227246234547073,
+    "revenue_growth_yoy": 0.28652388797364087
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.4375,
+    "num_analysts": 16,
+    "target_low": 695.0,
+    "target_mean": 835.0,
+    "target_median": 855.0,
+    "target_high": 1000.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-06"
+    ],
+    "ex_dividend_date": null,
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:28.390332+00:00"
+  "updated_at": "2026-07-16T14:25:52.881163+00:00"
 }

@@ -657,9 +657,85 @@
     "flag_count": 3,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
+      "reasons": [
+        "3/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 32.27 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 49.4",
+        "below_ema200": "Close 1,559.60 vs EMA200 1,480.86",
+        "extended_above_ema20": "Close 1,559.60 vs EMA20 1,571.78 (-0.8%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 1,559.60 vs 52w low 1,259.00"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 64.98333,
+    "pe_forward": 51.313316,
+    "eps_trailing": 24.0,
+    "eps_forward": 30.39367,
+    "roe": 0.23523001,
+    "profit_margin": 0.16771999,
+    "gross_margin": 0.55035,
+    "operating_margin": 0.21117,
+    "market_cap": 1587345752064,
+    "current_price": 1559.6,
+    "sector": "Basic Materials",
+    "name": "Pidilite Industries Limited",
+    "debt_to_equity": 3.776,
+    "dividend_yield": 0.73,
+    "price_to_book": 14.657757,
+    "roce": 0.28481825732305155,
+    "revenue_growth_yoy": 0.1113974440836004
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.15,
+    "num_analysts": 20,
+    "target_low": 1250.0,
+    "target_mean": 1636.05,
+    "target_median": 1650.0,
+    "target_high": 1915.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-04"
+    ],
+    "ex_dividend_date": "2026-07-23",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:43.596970+00:00"
+  "updated_at": "2026-07-16T14:28:37.937517+00:00"
 }

@@ -661,9 +661,84 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 10.00 = 4.5% of price",
+        "rsi_extreme": "RSI(14) 65.3",
+        "below_ema200": "Close 224.38 vs EMA200 120.88",
+        "extended_above_ema20": "Close 224.38 vs EMA20 210.11 (+6.8%)",
+        "large_day_move": "Day change +0.6%",
+        "near_52w_low": "Close 224.38 vs 52w low 59.82"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 105.83963,
+    "pe_forward": 43.15,
+    "eps_trailing": 2.12,
+    "eps_forward": 5.2,
+    "roe": 0.07266,
+    "profit_margin": 0.062989995,
+    "gross_margin": 0.35305,
+    "operating_margin": 0.14757,
+    "market_cap": 343360569344,
+    "current_price": 224.38,
+    "sector": "Technology",
+    "name": "HFCL Limited",
+    "debt_to_equity": 38.321,
+    "dividend_yield": 0.04,
+    "price_to_book": 6.768015,
+    "roce": 0.12175342087227471,
+    "revenue_growth_yoy": 0.2176763799907492
+  },
+  "analyst": {
+    "recommendation": "none",
+    "recommendation_mean": null,
+    "num_analysts": 1,
+    "target_low": 150.0,
+    "target_mean": 150.0,
+    "target_median": 150.0,
+    "target_high": 150.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2025-09-09",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:16.779969+00:00"
+  "updated_at": "2026-07-16T14:23:46.840345+00:00"
 }

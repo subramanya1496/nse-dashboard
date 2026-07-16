@@ -656,9 +656,87 @@
     "flag_count": 2,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "2/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 27.58 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 35.5",
+        "below_ema200": "Close 1,028.00 vs EMA200 1,111.15",
+        "extended_above_ema20": "Close 1,028.00 vs EMA20 1,064.49 (-3.4%)",
+        "large_day_move": "Day change -1.4%",
+        "near_52w_low": "Close 1,028.00 vs 52w low 926.75"
+      },
+      "conditions_on": [
+        "atr_high",
+        "below_ema200"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 31.019917,
+    "pe_forward": 10.966816,
+    "eps_trailing": 33.14,
+    "eps_forward": 93.73733,
+    "roe": 0.067719996,
+    "profit_margin": 0.06327,
+    "gross_margin": 0.52532,
+    "operating_margin": 0.12809,
+    "market_cap": 1045977825280,
+    "current_price": 1028.0,
+    "sector": "Basic Materials",
+    "name": "Jindal Steel Limited",
+    "debt_to_equity": 43.613,
+    "dividend_yield": 0.19,
+    "price_to_book": 2.0545945,
+    "roce": 0.07448198332574461,
+    "revenue_growth_yoy": 0.0663530603052226
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.09375,
+    "num_analysts": 33,
+    "target_low": 595.0,
+    "target_mean": 1275.909,
+    "target_median": 1318.0,
+    "target_high": 1450.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-24"
+    ],
+    "ex_dividend_date": "2025-08-22",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:24.430963+00:00"
+  "updated_at": "2026-07-16T14:25:03.358739+00:00"
 }

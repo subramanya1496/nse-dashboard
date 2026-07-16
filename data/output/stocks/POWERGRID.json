@@ -653,9 +653,86 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 5.19 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 39.8",
+        "below_ema200": "Close 280.75 vs EMA200 291.08",
+        "extended_above_ema20": "Close 280.75 vs EMA20 285.32 (-1.6%)",
+        "large_day_move": "Day change +0.0%",
+        "near_52w_low": "Close 280.75 vs 52w low 250.00"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 14.2296,
+    "pe_forward": 14.072639,
+    "eps_trailing": 19.73,
+    "eps_forward": 19.95006,
+    "roe": 0.16492,
+    "profit_margin": 0.34083,
+    "gross_margin": 1.0,
+    "operating_margin": 0.4947,
+    "market_cap": 2611144556544,
+    "current_price": 280.75,
+    "sector": "Utilities",
+    "name": "Power Grid Corporation of India Limited",
+    "debt_to_equity": 150.993,
+    "dividend_yield": 4.36,
+    "price_to_book": 2.5973485,
+    "roce": 0.10695524252361413,
+    "revenue_growth_yoy": 0.02053947037407146
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.16,
+    "num_analysts": 25,
+    "target_low": 283.0,
+    "target_mean": 329.48,
+    "target_median": 324.0,
+    "target_high": 400.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-30"
+    ],
+    "ex_dividend_date": "2026-02-09",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:45.214164+00:00"
+  "updated_at": "2026-07-16T14:28:55.960060+00:00"
 }

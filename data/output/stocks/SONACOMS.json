@@ -662,9 +662,86 @@
     "flag_count": 8,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "8/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 17.42 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 73.5",
+        "below_ema200": "Close 683.40 vs EMA200 547.96",
+        "extended_above_ema20": "Close 683.40 vs EMA20 649.46 (+5.2%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 683.40 vs 52w low 402.30"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 66.28516,
+    "pe_forward": 43.048794,
+    "eps_trailing": 10.31,
+    "eps_forward": 15.87501,
+    "roe": 0.106850006,
+    "profit_margin": 0.14388,
+    "gross_margin": 0.50974,
+    "operating_margin": 0.17628,
+    "market_cap": 425551233024,
+    "current_price": 683.4,
+    "sector": "Consumer Cyclical",
+    "name": "Sona BLW Precision Forgings Limited",
+    "debt_to_equity": 7.213,
+    "dividend_yield": 0.54,
+    "price_to_book": 7.1030645,
+    "roce": 0.13174673701153647,
+    "revenue_growth_yoy": 0.26243735975353544
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.4,
+    "num_analysts": 15,
+    "target_low": 495.0,
+    "target_mean": 632.1333,
+    "target_median": 660.0,
+    "target_high": 720.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-04-30"
+    ],
+    "ex_dividend_date": "2026-06-25",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:51.234659+00:00"
+  "updated_at": "2026-07-16T14:30:03.511123+00:00"
 }

@@ -658,9 +658,87 @@
     "flag_count": 4,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "4/8 bullish flags",
+        "patterns: near buy zone"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": true,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 29.18 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 52.4",
+        "below_ema200": "Close 1,024.40 vs EMA200 922.54",
+        "extended_above_ema20": "Close 1,024.40 vs EMA20 1,023.27 (+0.1%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 1,024.40 vs 52w low 566.50"
+      },
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
+    },
+    "trend": {
+      "daily": "bullish",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 19.241173,
+    "pe_forward": 14.545179,
+    "eps_trailing": 53.24,
+    "eps_forward": 70.42883,
+    "roe": 0.16382,
+    "profit_margin": 0.48343,
+    "gross_margin": 0.96403,
+    "operating_margin": 0.70444,
+    "market_cap": 2410360602624,
+    "current_price": 1024.4,
+    "sector": "Financial Services",
+    "name": "Shriram Finance Limited",
+    "debt_to_equity": 276.215,
+    "dividend_yield": 1.33,
+    "price_to_book": 2.924025,
+    "roce": null,
+    "revenue_growth_yoy": 0.13858070537211095
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.40625,
+    "num_analysts": 32,
+    "target_low": 1050.0,
+    "target_mean": 1189.0938,
+    "target_median": 1200.0,
+    "target_high": 1260.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-24"
+    ],
+    "ex_dividend_date": "2026-07-03",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:50.403609+00:00"
+  "updated_at": "2026-07-16T14:29:48.499936+00:00"
 }

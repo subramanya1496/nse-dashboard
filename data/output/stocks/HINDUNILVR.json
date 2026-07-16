@@ -653,9 +653,87 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": true
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 40.08 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 38.7",
+        "below_ema200": "Close 2,098.40 vs EMA200 2,276.61",
+        "extended_above_ema20": "Close 2,098.40 vs EMA20 2,151.37 (-2.5%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 2,098.40 vs 52w low 2,022.50"
+      },
+      "conditions_on": [
+        "below_ema200",
+        "near_52w_low"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 46.41451,
+    "pe_forward": 38.94026,
+    "eps_trailing": 45.21,
+    "eps_forward": 53.88767,
+    "roe": 0.21603,
+    "profit_margin": 0.23329,
+    "gross_margin": 0.50583,
+    "operating_margin": 0.21136,
+    "market_cap": 4930382331904,
+    "current_price": 2098.4,
+    "sector": "Consumer Defensive",
+    "name": "Hindustan Unilever Limited",
+    "debt_to_equity": 3.016,
+    "dividend_yield": 2.09,
+    "price_to_book": 10.1158905,
+    "roce": 0.22151612852981947,
+    "revenue_growth_yoy": 0.052663728063658724
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 2.02632,
+    "num_analysts": 37,
+    "target_low": 1759.0,
+    "target_mean": 2563.0,
+    "target_median": 2550.0,
+    "target_high": 3090.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-28"
+    ],
+    "ex_dividend_date": "2026-06-23",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:18.426658+00:00"
+  "updated_at": "2026-07-16T14:24:04.846567+00:00"
 }

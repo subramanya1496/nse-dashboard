@@ -653,9 +653,84 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 22.70 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 49.8",
+        "below_ema200": "Close 933.00 vs EMA200 1,005.49",
+        "extended_above_ema20": "Close 933.00 vs EMA20 933.15 (-0.0%)",
+        "large_day_move": "Day change +0.3%",
+        "near_52w_low": "Close 933.00 vs 52w low 868.05"
+      },
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 15.716211,
+    "pe_forward": 13.43804,
+    "eps_trailing": 59.34,
+    "eps_forward": 69.4,
+    "roe": 0.19176,
+    "profit_margin": 0.09252,
+    "gross_margin": 0.13724,
+    "operating_margin": 0.09417,
+    "market_cap": 71652720640,
+    "current_price": 932.6,
+    "sector": "Industrials",
+    "name": "Transport Corporation of India Limited",
+    "debt_to_equity": 11.991,
+    "dividend_yield": 1.08,
+    "price_to_book": 2.7892258,
+    "roce": 0.18074864752796818,
+    "revenue_growth_yoy": 0.09471892633744884
+  },
+  "analyst": {
+    "recommendation": "strong_buy",
+    "recommendation_mean": 1.0,
+    "num_analysts": 6,
+    "target_low": 1108.0,
+    "target_mean": 1181.8334,
+    "target_median": 1182.5,
+    "target_high": 1270.0
+  },
+  "events": {
+    "earnings_dates": [],
+    "ex_dividend_date": "2026-07-17",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:54.836709+00:00"
+  "updated_at": "2026-07-16T14:30:39.490753+00:00"
 }

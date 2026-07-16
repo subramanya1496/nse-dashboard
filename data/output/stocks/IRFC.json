@@ -653,9 +653,87 @@
     "flag_count": 0,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
+      "reasons": [
+        "0/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": true,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": true
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 1.81 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 35.2",
+        "below_ema200": "Close 88.41 vs EMA200 107.22",
+        "extended_above_ema20": "Close 88.41 vs EMA20 91.27 (-3.1%)",
+        "large_day_move": "Day change -0.5%",
+        "near_52w_low": "Close 88.41 vs 52w low 86.93"
+      },
+      "conditions_on": [
+        "below_ema200",
+        "near_52w_low"
+      ],
+      "condition_count": 2,
+      "condition_total": 6,
+      "level": "elevated"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "bearish",
+      "weekly": "bearish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 16.494404,
+    "pe_forward": 12.110959,
+    "eps_trailing": 5.36,
+    "eps_forward": 7.3,
+    "roe": 0.12812,
+    "profit_margin": 0.97231,
+    "gross_margin": 1.0,
+    "operating_margin": 0.96275,
+    "market_cap": 1155386703872,
+    "current_price": 88.41,
+    "sector": "Financial Services",
+    "name": "Indian Railway Finance Corporation Limited",
+    "debt_to_equity": 773.347,
+    "dividend_yield": 3.26,
+    "price_to_book": 2.034144,
+    "roce": 0.013701982798338534,
+    "revenue_growth_yoy": 0.004372469575973593
+  },
+  "analyst": {
+    "recommendation": "none",
+    "recommendation_mean": null,
+    "num_analysts": 1,
+    "target_low": 60.0,
+    "target_mean": 60.0,
+    "target_median": 60.0,
+    "target_high": 60.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-07-20"
+    ],
+    "ex_dividend_date": "2026-03-13",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:53:23.581459+00:00"
+  "updated_at": "2026-07-16T14:24:58.852012+00:00"
 }

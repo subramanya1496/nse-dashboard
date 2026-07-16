@@ -661,9 +661,84 @@
     "flag_count": 7,
     "flag_total": 8
   },
-  "fundamentals": null,
-  "analyst": null,
-  "events": null,
+  "decision": {
+    "attention": {
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "reasons": [
+        "7/8 bullish flags"
+      ]
+    },
+    "risk": {
+      "conditions": {
+        "atr_high": false,
+        "rsi_extreme": false,
+        "below_ema200": false,
+        "extended_above_ema20": false,
+        "large_day_move": false,
+        "near_52w_low": false
+      },
+      "conditions_detail": {
+        "atr_high": "ATR 512.75 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 68.4",
+        "below_ema200": "Close 27,870.00 vs EMA200 27,615.79",
+        "extended_above_ema20": "Close 27,870.00 vs EMA20 26,711.77 (+4.3%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 27,870.00 vs 52w low 25,150.00"
+      },
+      "conditions_on": [],
+      "condition_count": 0,
+      "condition_total": 6,
+      "level": "low"
+    },
+    "patterns": {
+      "breakout": false,
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": false
+    },
+    "trend": {
+      "daily": "neutral",
+      "weekly": "bullish",
+      "intraday": null
+    }
+  },
+  "fundamentals": {
+    "pe_trailing": 38.19378,
+    "pe_forward": 30.83585,
+    "eps_trailing": 729.7,
+    "eps_forward": 903.8181,
+    "roe": 0.34460998,
+    "profit_margin": 0.22399001,
+    "gross_margin": 0.46705002,
+    "operating_margin": 0.27012,
+    "market_cap": 592218030080,
+    "current_price": 27870.0,
+    "sector": "Healthcare",
+    "name": "Abbott India Limited",
+    "debt_to_equity": 3.602,
+    "dividend_yield": 1.9,
+    "price_to_book": 12.4049425,
+    "roce": 0.4187282105162615,
+    "revenue_growth_yoy": 0.08111840103601882
+  },
+  "analyst": {
+    "recommendation": "buy",
+    "recommendation_mean": 1.875,
+    "num_analysts": 8,
+    "target_low": 27500.0,
+    "target_mean": 32652.375,
+    "target_median": 32200.0,
+    "target_high": 38100.0
+  },
+  "events": {
+    "earnings_dates": [
+      "2026-08-11"
+    ],
+    "ex_dividend_date": "2026-07-23",
+    "dividend_date": null
+  },
   "shareholding": null,
-  "updated_at": "2026-07-16T11:52:52.014231+00:00"
+  "updated_at": "2026-07-16T14:19:21.701004+00:00"
 }
