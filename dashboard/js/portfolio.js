@@ -203,11 +203,13 @@
   }
 
   async function render() {
-    const [meta, flagDefinitions, portfolio] = await Promise.all([
+    const [meta, flagDefinitions, portfolio, sectors] = await Promise.all([
       U.loadMeta(),
       U.loadFlagDefinitions(),
       U.loadPortfolio(),
+      U.loadSectors().catch(() => null),
     ]);
+    if (sectors) U.setSectorContext(sectors); // shared detail-panel checklist uses it
 
     document.getElementById("last-updated").textContent = `Last run: ${U.formatUpdatedAt(meta.run_at)}`;
 

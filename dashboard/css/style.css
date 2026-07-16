@@ -264,6 +264,65 @@ tr td:first-child{font-weight:600;}
 .range-sub{font-size:11px; color:var(--ink-faint);}
 .range-sub .up{color:var(--teal); font-weight:600;} .range-sub .down{color:var(--rose); font-weight:600;}
 
+/* Phase 2: decision-support components — counts of named conditions, never scores */
+.att-badge{font-size:10px; letter-spacing:1px; margin-left:6px; vertical-align:middle; cursor:help;}
+.att-badge.t5{color:var(--teal);} .att-badge.t4{color:var(--teal); opacity:.85;}
+.att-badge.t3{color:var(--amber);} .att-badge.t2{color:var(--ink-faint);} .att-badge.t1{color:var(--ink-faint); opacity:.6;}
+.att-label{font-weight:600; font-size:12px; color:var(--ink-soft);}
+.risk-chip{display:inline-block; font-size:9.5px; font-weight:600; padding:2px 7px; border-radius:999px; margin-left:6px; vertical-align:middle; cursor:help;}
+.risk-chip.low{color:var(--teal); background:var(--teal-soft);}
+.risk-chip.elevated{color:var(--amber); background:var(--amber-soft);}
+.risk-chip.high{color:var(--rose); background:var(--rose-soft);}
+.trend-chip{display:inline-block; font-size:9.5px; font-weight:600; padding:2px 6px; border-radius:6px; margin-left:4px; vertical-align:middle; cursor:help; font-family:'JetBrains Mono',monospace;}
+.trend-chip.bullish{color:var(--teal); background:var(--teal-soft);}
+.trend-chip.bearish{color:var(--rose); background:var(--rose-soft);}
+.trend-chip.neutral, .trend-chip.na{color:var(--ink-faint); background:rgba(0,0,0,0.04);}
+.decision-head{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:4px 0 6px;}
+.decision-head .att-badge{font-size:13px; margin-left:0;}
+.risk-conds{display:flex; flex-wrap:wrap; gap:6px; margin-top:6px;}
+.risk-cond{font-size:10.5px; color:var(--rose); background:var(--rose-soft); padding:3px 8px; border-radius:8px;}
+.fine.dim, .dim{opacity:.65;}
+.mark.na{color:var(--ink-faint);}
+.completeness{font-size:9.5px; font-weight:600; color:var(--ink-faint); background:rgba(0,0,0,0.05); padding:2px 7px; border-radius:999px; margin-left:6px; cursor:help; letter-spacing:0; text-transform:none;}
+
+/* What changed today */
+.changes-sub{margin-bottom:8px;}
+.changes-grid{display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:10px;}
+.change-card{background:rgba(255,255,255,0.55); border-radius:10px; padding:9px 11px;}
+.change-sym{font-family:'JetBrains Mono',monospace; font-weight:600; font-size:12.5px; color:var(--ink); background:none; border:none; cursor:pointer; padding:0 0 5px;}
+.change-sym:hover{color:var(--teal);}
+.change-event{display:flex; gap:6px; align-items:baseline; font-size:11px; color:var(--ink-soft); padding:2px 0;}
+.change-kind{flex-shrink:0; font-size:9px; font-weight:600; text-transform:uppercase; letter-spacing:.4px; padding:1px 6px; border-radius:6px; color:var(--ink-faint); background:rgba(0,0,0,0.05);}
+.change-kind.k-flags, .change-kind.k-high_52w{color:var(--teal); background:var(--teal-soft);}
+.change-kind.k-low_52w{color:var(--rose); background:var(--rose-soft);}
+.change-kind.k-volume, .change-kind.k-attention{color:var(--amber); background:var(--amber-soft);}
+
+/* Market overview movers */
+.movers-row{display:flex; align-items:baseline; gap:8px; padding:5px 0; border-top:1px dashed rgba(0,0,0,0.06);}
+.movers{display:flex; flex-wrap:wrap; gap:6px;}
+.mover{display:inline-flex; gap:5px; align-items:baseline; background:rgba(255,255,255,0.6); border:none; border-radius:8px; padding:3px 8px; font-size:11px; cursor:pointer;}
+.mover .ss{font-family:'JetBrains Mono',monospace; font-weight:600;}
+.mover:hover{background:var(--teal-soft);}
+
+/* Dashboard health */
+.health-row{display:flex; justify-content:space-between; gap:8px; font-size:11.5px; padding:3px 0;}
+.health-row .hk{color:var(--ink-faint);}
+.health-row .hv.up{color:var(--teal);} .health-row .hv.down{color:var(--rose);}
+
+/* Personal journal */
+.journal-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
+.journal-field{display:flex; flex-direction:column; gap:3px; font-size:10.5px; color:var(--ink-faint);}
+.journal-field textarea{font:inherit; font-size:11.5px; color:var(--ink); background:rgba(255,255,255,0.6); border:1px solid rgba(0,0,0,0.08); border-radius:8px; padding:6px 8px; resize:vertical;}
+.journal-field textarea:focus{outline:2px solid var(--teal-soft); border-color:var(--teal);}
+.journal-status{margin-top:5px;}
+
+/* Collapsible panels */
+.collapse-btn{margin-left:auto; flex-shrink:0; width:22px; height:22px; border:none; border-radius:6px; background:rgba(0,0,0,0.05); color:var(--ink-faint); font-size:14px; line-height:1; cursor:pointer;}
+.collapse-btn:hover{background:rgba(0,0,0,0.1);}
+.panel.collapsed > *:not(.panel-head):not(.card-head-row){display:none;}
+
+@media (max-width: 720px){ .journal-grid{grid-template-columns:1fr;} .changes-grid{grid-template-columns:1fr;} }
+
 /* Detail panel: analyst forecast cone (history -> diverging 12-mo targets) */
 .price-chart.forecast{height:110px;}
 .forecast-wrap{display:flex; gap:10px; align-items:stretch; margin:4px 0 2px;}

@@ -356,6 +356,24 @@ Rank 171: RCOM — 0/8 flags (no bullish signals)
 
 **Why?** Because the number of conditions met is transparent. You can see exactly why a stock is ranked where it is, and you can disagree with the weights if you want.
 
+### The Decision-Support Layer (added 2026-07-16)
+
+On top of the flags, the dashboard now answers "what deserves my attention first?" —
+still with counts of named conditions, never a weighted score:
+
+| Construct | How it works | Where |
+|---|---|---|
+| **Attention tier ★–★★★★★** | Threshold rules on flag count + named patterns (e.g. ★★★★★ = ≥7 flags AND breakout/volume surge). Tier 1 is "Quiet today" — a priority label, never "ignore" advice | Stars on every card; reasons in the panel |
+| **Risk conditions** | 6 named booleans (high ATR%, RSI extreme, below EMA200, stretched above EMA20, big day move, near 52w low). Level = the count: 0–1 low, 2–3 elevated, ≥4 high | Chip on cards; full list with numbers in the panel |
+| **Weekly / Daily trend** | Weekly: close vs a rising/falling 10-week EMA. Daily: EMA alignment. Intraday: honestly "not collected" | W/D chips on cards |
+| **Checklist X/7** | Trend, momentum, MACD, volume, sector strength, near-52w-high, low risk — anything unevaluable says so and shrinks the denominator | Detail panel |
+| **What changed today** | The pipeline diffs each run against the previously published one: flags gained/lost by name, RSI/MACD/EMA200 crossings, new 52w extremes, volume surges, support/resistance shifts | Its own section near the top |
+| **Data completeness** | "Data 4/5" = how many sources (indicators, fundamentals, analyst, events, shareholding) are present for this stock | Chip in the panel |
+| **Personal journal** | Reason / entry plan / exit plan / observations per stock — saved in your browser's localStorage only (there is no server) | Bottom of the detail panel |
+
+Extra UX: sections collapse (and remember it), filters persist between visits,
+press `/` anywhere to search, `Esc` to clear.
+
 ---
 
 ## Part 6: Telegram Briefings

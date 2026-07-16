@@ -132,6 +132,41 @@ not AI". Unmatched headlines stay neutral — never guessed.
 | AI explanations | Claude Haiku via Anthropic API | Explains flags already computed in code. Never invents a signal, score, or verdict — it explains, it doesn't decide. |
 | Explicitly NOT used | Screener.in (free tier disables export; paid tier not needed since the above covers the same fields) | Don't reintroduce this dependency. |
 
+## Decision-support layer (Phase 2 "decision intelligence", added 2026-07-16)
+Built from a spec that asked for weighted 0–100 scores ("Opportunity Score",
+"Confidence %", "Risk Meter", "Market Health Score"); after flagging the conflict with
+the no-composite-score rule, the **rule-compliant translation** was chosen explicitly:
+every construct below is a **count/threshold of named conditions** whose reasons are
+displayed — never a weighted number. Do not "upgrade" any of them into a score later.
+- **Attention tiers 1–5** (`src/decision.py`, first-match threshold rules on flag count
+  + named patterns): ★★★★★ Immediate attention (≥7 flags + breakout/volume) down to
+  ★ "Quiet today" (≤2 flags — deliberately NOT called "Ignore": that would be advice).
+  Shown as stars on cards + "why this tier" reasons in the panel.
+- **Risk conditions** — 6 named booleans (ATR ≥2.5% of price, RSI extreme, below
+  EMA200, ≥8% above EMA20, ≥4% day move, near 52w low); level = count (0–1 low,
+  2–3 elevated, ≥4 high). Beta/news risk deliberately excluded (not collected/CI-blocked).
+- **Trends**: daily (EMA alignment) + weekly (10-week EMA rule, null under 15 weeks);
+  intraday is always null and the UI says "not collected — daily pipeline".
+- **Checklist "X/7 passed"** (client-side in `app.js`, needs sectors.json): trend,
+  momentum, MACD, volume, sector ≥50%, near-52w-high, ≤1 risk condition. Unevaluable
+  checks show "not evaluated: data missing" and shrink the denominator.
+- **What changed today** (`src/changes.py` → `changes.json`): pipeline snapshots the
+  previously published stock JSONs before overwriting, then diffs (flag gains/losses by
+  name, tier moves, RSI 50/70/30 crossings, MACD/EMA200 crosses, new 52w extremes,
+  volume surges, 20-session S/R shifts >2%). Same-day rerun keeps the existing file
+  (diffing today against itself would erase every change); first run writes an explicit
+  empty state. `decision_definitions.json` publishes the exact rules for the UI.
+- **Data completeness** chip = present/total named sources — this is the honest stand-in
+  for the requested "confidence %".
+- **Market overview** = the breadth panel plus movers/sector poles/VIX — separate
+  observable facts, deliberately no "market health score".
+- **Personal journal** in the detail panel: 4 free-text fields per stock, localStorage
+  only ("saved in this browser only" is stated in the UI — GitHub Pages has no backend).
+- **UX**: collapsible sections + selected filters persist in localStorage; "/" focuses
+  search, Escape clears; watchlist stays batched at 25 + "show all".
+- **Historical setup success rates were explicitly deferred** (Phase 4 backtesting) —
+  do not bolt them onto this layer without a separate design pass.
+
 ## Pipeline performance & reliability (overhauled 2026-07-15)
 The run used to take ~70–90 min; the profile showed almost all of it was retry backoff
 against sources that block GitHub's runner IPs (yfinance quote endpoint 429'd all 176

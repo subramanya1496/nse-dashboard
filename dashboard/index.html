@@ -6,7 +6,7 @@
 <title>Stock Intelligence — Watchlist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=6">
+<link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
@@ -35,7 +35,29 @@
     <div class="kpi-card"><div class="kpi-label">Loading…</div></div>
   </section>
 
-  <section class="panel" aria-label="Sector strength heatmap">
+  <section class="grid-opp">
+    <div class="panel" data-collapse-id="opportunities" aria-label="Today's opportunities">
+      <div class="panel-head">
+        <h2>Today's opportunities</h2>
+        <span class="panel-sub">top 5 by flag count — ranked by conditions met, never a score · click for risks</span>
+      </div>
+      <div id="opportunities-list"><div class="empty-note">Loading…</div></div>
+    </div>
+    <div class="panel" data-collapse-id="overview" aria-label="Market overview">
+      <div class="panel-head"><h2>Market overview</h2><span class="panel-sub">breadth, movers &amp; sectors across the tracked watchlist</span></div>
+      <div id="breadth-widgets"><div class="empty-note">Loading…</div></div>
+    </div>
+  </section>
+
+  <section class="panel" data-collapse-id="changes" aria-label="What changed today">
+    <div class="panel-head">
+      <h2>What changed today</h2>
+      <span class="panel-sub">observed differences vs the previous run — crossings, new extremes, flag moves · click a symbol to jump to it</span>
+    </div>
+    <div id="changes-list"><div class="empty-note">Loading…</div></div>
+  </section>
+
+  <section class="panel" data-collapse-id="sectors" aria-label="Sector strength heatmap">
     <div class="panel-head">
       <h2>Sector strength</h2>
       <span class="panel-sub">avg % of the 8 bullish flags met per sector · click a sector to filter the watchlist</span>
@@ -43,21 +65,7 @@
     <div class="heatmap-grid" id="sector-heatmap-grid"><div class="empty-note">Loading…</div></div>
   </section>
 
-  <section class="grid-opp">
-    <div class="panel" aria-label="Today's opportunities">
-      <div class="panel-head">
-        <h2>Today's opportunities</h2>
-        <span class="panel-sub">top 5 by flag count — ranked by conditions met, never a score · click for risks</span>
-      </div>
-      <div id="opportunities-list"><div class="empty-note">Loading…</div></div>
-    </div>
-    <div class="panel" aria-label="Market breadth">
-      <div class="panel-head"><h2>Market breadth</h2><span class="panel-sub">across tracked watchlist</span></div>
-      <div id="breadth-widgets"><div class="empty-note">Loading…</div></div>
-    </div>
-  </section>
-
-  <section class="panel" id="watch-card" aria-label="Keep an eye on">
+  <section class="panel" id="watch-card" data-collapse-id="keepaneye" aria-label="Keep an eye on">
     <div class="panel-head">
       <h2>Keep an eye on</h2>
       <span class="panel-sub">setups worth watching, with the price levels that matter · levels are measured from price history — <b>not</b> buy/sell advice</span>
@@ -65,7 +73,7 @@
     <div id="keep-an-eye-list"><div class="empty-note">Loading…</div></div>
   </section>
 
-  <section class="panel" aria-label="Screens">
+  <section class="panel" data-collapse-id="screens" aria-label="Screens">
     <div class="panel-head">
       <h2>Screens</h2>
       <span class="panel-sub">simple transparent conditions on today's data · click a row to jump to the stock</span>
@@ -114,7 +122,7 @@
         <div id="portfolio-analytics-body" class="empty-note">Loading…</div>
       </div>
       <div class="side-card">
-        <h5>Run status</h5>
+        <h5>Dashboard health</h5>
         <div id="run-status" class="empty-note">Loading…</div>
       </div>
       <div class="side-card">
@@ -133,8 +141,8 @@
 
 <footer>Ranked by flag count, never a composite score · analyst consensus shown is external third-party opinion · built for personal use only · you make every decision</footer>
 
-<script src="js/app.js?v=6"></script>
-<script src="js/home.js?v=5"></script>
+<script src="js/app.js?v=7"></script>
+<script src="js/home.js?v=6"></script>
 
 </body>
 </html>

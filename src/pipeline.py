@@ -3,8 +3,9 @@ import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 
-from src import config, run_stats
+from src import config, decision, run_stats
 from src.angel_auth import AngelAuthError, login
+from src.changes import load_previous_stocks, write_changes
 from src.fetch_fundamentals import breaker as fundamentals_breaker, fetch_market_view
 from src.fetch_market import index_breaker, write_market_output, write_news_output
 from src.fetch_ohlcv import fetch_daily_ohlcv
@@ -32,6 +33,9 @@ def _write_flag_definitions() -> None:
     (config.OUTPUT_DIR / "flag_definitions.json").write_text(
         json.dumps(definitions, indent=2), encoding="utf-8"
     )
+    (config.OUTPUT_DIR / "decision_definitions.json").write_text(
+        json.dumps(decision.definitions(), indent=2), encoding="utf-8"
+    )
 
 
 def _process_symbol(conn, token_map: dict, symbol: str, watch_info: dict) -> tuple[dict, dict | None]:
@@ -55,6 +59,7 @@ def _process_symbol(conn, token_map: dict, symbol: str, watch_info: dict) -> tup
 
     snapshot = latest_indicator_snapshot(enriched)
     flag_result = evaluate_flags(snapshot)
+    decision_block = decision.build_decision(snapshot, flag_result, enriched)
 
     market_view = fetch_market_view(symbol)
     fundamentals = market_view["fundamentals"]
@@ -69,6 +74,7 @@ def _process_symbol(conn, token_map: dict, symbol: str, watch_info: dict) -> tup
         "indicators": snapshot,
         "price_history": recent_price_history(enriched),
         "flags": flag_result,
+        "decision": decision_block,
         "fundamentals": fundamentals,
         "analyst": analyst,
         "events": events,
@@ -108,6 +114,10 @@ def run() -> None:
 
     watch_by_symbol = {row["symbol"]: row for row in watchlist}
     all_symbols = sorted(set(watch_by_symbol) | {h["symbol"] for h in holdings})
+
+    # Snapshot the currently-published per-stock JSONs BEFORE workers overwrite them —
+    # they are yesterday's run and become the baseline for "what changed today".
+    previous_stocks = load_previous_stocks(all_symbols)
 
     with run_stats.stage("login_and_instruments"):
         try:
@@ -162,6 +172,7 @@ def run() -> None:
     with run_stats.stage("portfolio_and_sectors"):
         _write_portfolio_output(holdings, stock_data_by_symbol, watch_by_symbol)
         _write_sector_strength(stock_data_by_symbol)
+        write_changes(previous_stocks, stock_data_by_symbol)
 
     with run_stats.stage("market_indices"):
         write_market_output()

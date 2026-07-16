@@ -6,10 +6,68 @@
 
   let activeTab = "flags";
   let searchQuery = "";
-  let activeFilters = new Set();
   let controlsBound = false;
   let showAllFlat = false;
   const FLAT_LIMIT = 25;
+
+  // Selected filters survive reloads (UX: "remember selected filters").
+  const FILTERS_KEY = "nse-dashboard-filters";
+  let activeFilters = new Set();
+  try {
+    activeFilters = new Set(JSON.parse(localStorage.getItem(FILTERS_KEY) || "[]"));
+  } catch { /* corrupt storage -> start clean */ }
+  function persistFilters() {
+    localStorage.setItem(FILTERS_KEY, JSON.stringify([...activeFilters]));
+  }
+
+  // Collapsible panels, with the collapsed set remembered per browser.
+  const COLLAPSED_KEY = "nse-dashboard-collapsed";
+  function setupCollapsibles() {
+    let collapsed;
+    try {
+      collapsed = new Set(JSON.parse(localStorage.getItem(COLLAPSED_KEY) || "[]"));
+    } catch {
+      collapsed = new Set();
+    }
+    document.querySelectorAll("[data-collapse-id]").forEach((panel) => {
+      const id = panel.dataset.collapseId;
+      const head = panel.querySelector(".panel-head, .card-head-row");
+      if (!head || head.querySelector(".collapse-btn")) return;
+      const btn = document.createElement("button");
+      btn.className = "collapse-btn";
+      btn.setAttribute("aria-label", "Collapse section");
+      const apply = () => {
+        const isCollapsed = collapsed.has(id);
+        panel.classList.toggle("collapsed", isCollapsed);
+        btn.textContent = isCollapsed ? "+" : "–";
+        btn.title = isCollapsed ? "Expand section" : "Collapse section";
+      };
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (collapsed.has(id)) collapsed.delete(id);
+        else collapsed.add(id);
+        localStorage.setItem(COLLAPSED_KEY, JSON.stringify([...collapsed]));
+        apply();
+      });
+      head.appendChild(btn);
+      apply();
+    });
+  }
+
+  // Keyboard: "/" focuses search from anywhere; Escape clears it.
+  function setupKeyboardShortcuts() {
+    document.addEventListener("keydown", (e) => {
+      const typing = ["INPUT", "TEXTAREA"].includes(document.activeElement?.tagName);
+      if (e.key === "/" && !typing) {
+        e.preventDefault();
+        document.getElementById("global-search").focus();
+      } else if (e.key === "Escape" && typing && document.activeElement.type === "search") {
+        document.activeElement.value = "";
+        document.activeElement.dispatchEvent(new Event("input", { bubbles: true }));
+        document.activeElement.blur();
+      }
+    });
+  }
 
   // ---------- Market strip ----------
 
@@ -432,9 +490,12 @@
     });
   }
 
-  // ---------- Breadth ----------
+  // ---------- Market overview (breadth + movers + sector poles + VIX) ----------
+  // A collection of separately-observable facts — deliberately NOT collapsed into a
+  // single "market health score" (that would be the composite-score rule violated at
+  // market level instead of stock level).
 
-  function renderBreadth(stocks) {
+  function renderBreadth(stocks, sectors, market) {
     const el = document.getElementById("breadth-widgets");
     const total = stocks.length || 1;
     const above200 = stocks.filter((s) => s.indicators.ema200 != null && s.indicators.close > s.indicators.ema200).length;
@@ -445,13 +506,78 @@
     const dec = stocks.filter((s) => (s.indicators.change_pct ?? 0) < 0).length;
     const adRatio = dec ? (adv / dec).toFixed(2) : adv ? "∞" : "—";
 
+    const byChange = [...stocks].filter((s) => s.indicators.change_pct != null).sort((a, b) => b.indicators.change_pct - a.indicators.change_pct);
+    const mover = (s) => {
+      const chg = U.formatChangePct(s.indicators.change_pct);
+      return `<button class="mover" data-symbol="${s.symbol}"><span class="ss">${s.symbol}</span><span class="mono ${chg.cls}">${chg.text}</span></button>`;
+    };
+    const gainers = byChange.slice(0, 5).map(mover).join("");
+    const losers = byChange.slice(-5).reverse().map(mover).join("");
+
+    const strongest = sectors?.[0];
+    const weakest = sectors?.length ? sectors[sectors.length - 1] : null;
+    const vix = market?.indices?.find((i) => i.key === "india_vix");
+    const participating = sectors?.filter((s) => s.avg_flag_pct >= 50).length ?? 0;
+
     const bar = (n) => `<span class="breadth-bar"><span style="width:${((n / total) * 100).toFixed(0)}%"></span></span>`;
     el.innerHTML = `
       <div class="breadth-item"><span class="bk">Above EMA200</span><span class="bv mono">${above200}/${stocks.length}</span>${bar(above200)}</div>
+      <div class="breadth-item"><span class="bk">A/D ratio</span><span class="bv mono">${adRatio}</span><span class="bnames">${adv} adv · ${dec} dec (watchlist)</span></div>
       <div class="breadth-item"><span class="bk">New 52w highs</span><span class="bv mono up">${high52.length}</span><span class="bnames">${high52.slice(0, 4).map((s) => s.symbol).join(" · ")}</span></div>
       <div class="breadth-item"><span class="bk">New 52w lows</span><span class="bv mono down">${low52.length}</span><span class="bnames">${low52.slice(0, 4).map((s) => s.symbol).join(" · ")}</span></div>
       <div class="breadth-item"><span class="bk">Breakout setups</span><span class="bv mono">${breakouts}</span>${bar(breakouts)}</div>
-      <div class="breadth-item"><span class="bk">A/D ratio</span><span class="bv mono">${adRatio}</span><span class="bnames">${adv} adv · ${dec} dec (watchlist)</span></div>`;
+      <div class="breadth-item"><span class="bk">Sectors ≥50% flags</span><span class="bv mono">${participating}/${sectors?.length ?? 0}</span>${sectors?.length ? bar(participating / (sectors.length / total)) : ""}</div>
+      ${strongest ? `<div class="breadth-item"><span class="bk">Strongest sector</span><span class="bv mono up">${strongest.sector}</span><span class="bnames">${strongest.avg_flag_pct}% avg flags</span></div>` : ""}
+      ${weakest && weakest !== strongest ? `<div class="breadth-item"><span class="bk">Weakest sector</span><span class="bv mono down">${weakest.sector}</span><span class="bnames">${weakest.avg_flag_pct}% avg flags</span></div>` : ""}
+      ${vix ? `<div class="breadth-item"><span class="bk">India VIX</span><span class="bv mono">${vix.close}</span><span class="bnames">${vix.change_pct != null ? (vix.change_pct > 0 ? "+" : "") + vix.change_pct.toFixed(1) + "% vs prev" : ""}</span></div>` : ""}
+      <div class="movers-row"><span class="bk">Top gainers</span><div class="movers">${gainers || "—"}</div></div>
+      <div class="movers-row"><span class="bk">Top losers</span><div class="movers">${losers || "—"}</div></div>`;
+
+    el.querySelectorAll(".mover").forEach((btn) => btn.addEventListener("click", () => jumpToWatchlist(btn.dataset.symbol)));
+  }
+
+  // ---------- What changed today ----------
+
+  const CHANGE_KIND_LABELS = {
+    flags: "Flags", attention: "Attention", rsi: "RSI", macd: "MACD", ema200: "EMA200",
+    high_52w: "52w high", low_52w: "52w low", volume: "Volume", levels: "Levels",
+  };
+
+  function renderChanges(changes, stocksBySymbol) {
+    const el = document.getElementById("changes-list");
+    if (!changes) {
+      el.innerHTML = `<div class="empty-note">Change tracking starts with the next pipeline run — it compares each run against the previously published one, so the first comparison appears tomorrow.</div>`;
+      return;
+    }
+    if (changes.note && !Object.keys(changes.symbols || {}).length) {
+      el.innerHTML = `<div class="empty-note">${changes.note}</div>`;
+      return;
+    }
+    const entries = Object.entries(changes.symbols || {});
+    if (!entries.length) {
+      el.innerHTML = `<div class="empty-note">No tracked stock changed materially between ${changes.baseline_date} and ${changes.data_date} — no crossings, new extremes, or flag moves.</div>`;
+      return;
+    }
+    // Most-changed first; symbols still in today's universe get click-to-jump.
+    entries.sort((a, b) => b[1].length - a[1].length);
+    const shown = entries.slice(0, 24);
+    el.innerHTML = `
+      <div class="fine changes-sub">Comparing ${changes.baseline_date} → ${changes.data_date} · ${entries.length} stocks changed${changes.symbols_without_baseline ? ` · ${changes.symbols_without_baseline} had no baseline yet` : ""}</div>
+      <div class="changes-grid">${shown
+        .map(([symbol, events]) => {
+          const stock = stocksBySymbol[symbol];
+          const chg = stock ? U.formatChangePct(stock.indicators.change_pct) : null;
+          return `<div class="change-card">
+            <button class="change-sym" data-symbol="${symbol}">${symbol}${chg ? ` <span class="mono ${chg.cls}">${chg.text}</span>` : ""}</button>
+            <div class="change-events">${events
+              .map((e) => `<div class="change-event"><span class="change-kind k-${e.kind}">${CHANGE_KIND_LABELS[e.kind] || e.kind}</span><span>${e.text}</span></div>`)
+              .join("")}</div>
+          </div>`;
+        })
+        .join("")}</div>
+      ${entries.length > shown.length ? `<div class="fine dim">…and ${entries.length - shown.length} more stocks with smaller changes.</div>` : ""}`;
+
+    el.querySelectorAll(".change-sym").forEach((btn) => btn.addEventListener("click", () => jumpToWatchlist(btn.dataset.symbol)));
   }
 
   // ---------- Screens ----------
@@ -525,15 +651,32 @@
 
   // ---------- Filters ----------
 
-  function buildFilterDefs(sectors) {
+  function buildFilterDefs(sectors, portfolio, changes) {
     const strongSectors = new Set(sectors.filter((s) => s.avg_flag_pct >= 62.5).map((s) => s.sector));
+    const held = new Set((portfolio?.holdings || []).map((h) => h.symbol));
+    const improved = new Set(
+      Object.entries(changes?.symbols || {})
+        .filter(([, events]) => events.some((e) => e.kind === "flags" && e.text.includes("gained")))
+        .map(([symbol]) => symbol)
+    );
+    const nearSupport = (s) => {
+      const sr = U.supportResistance(s);
+      return sr ? s.indicators.close <= sr.support * 1.02 : false;
+    };
     return [
       { key: "buyzone", label: "Only buy zone", fn: (s) => U.isNearBuyZone(s), needsData: null },
+      { key: "lowrisk", label: "Low risk", fn: (s) => s.decision?.risk?.level === "low", needsData: (s) => s.decision != null },
+      { key: "breakout", label: "Breakouts", fn: (s) => U.isBreakoutCandidate(s), needsData: null },
+      { key: "nearsupport", label: "Near support", fn: nearSupport, needsData: null },
+      { key: "pullback", label: "Pullback", fn: (s) => s.indicators.ema50 > s.indicators.ema200 && s.indicators.close < s.indicators.ema20, needsData: null },
+      { key: "strongsector", label: "Strong sectors", fn: (s) => strongSectors.has(s.sector), needsData: null },
+      { key: "portfolio", label: "My portfolio", fn: (s) => held.has(s.symbol), needsData: null },
+      { key: "vol2x", label: "Volume ≥2×", fn: (s) => (U.volumeRatio(s.indicators) ?? 0) >= 2, needsData: null },
+      { key: "near52high", label: "Near 52w high", fn: (s) => s.indicators.high_52w != null && s.indicators.close >= 0.95 * s.indicators.high_52w, needsData: null },
+      { key: "improved", label: "Improved today", fn: (s) => improved.has(s.symbol), needsData: null },
       { key: "highroe", label: "High ROE ≥15%", fn: (s) => s.fundamentals?.roe != null && s.fundamentals.roe >= 0.15, needsData: (s) => s.fundamentals?.roe != null },
       { key: "lowdebt", label: "Low debt <1×", fn: (s) => { const d = U.debtToEquityRatio(s.fundamentals); return d !== null && d < 1; }, needsData: (s) => U.debtToEquityRatio(s.fundamentals) !== null },
-      { key: "strongsector", label: "Strong sectors", fn: (s) => strongSectors.has(s.sector), needsData: null },
       { key: "dividend", label: "Dividend ≥1%", fn: (s) => { const y = U.dividendYieldPct(s.fundamentals); return y !== null && y >= 1; }, needsData: (s) => U.dividendYieldPct(s.fundamentals) !== null },
-      { key: "breakout", label: "Breakouts", fn: (s) => U.isBreakoutCandidate(s), needsData: null },
     ];
   }
 
@@ -550,6 +693,7 @@
         const key = chip.dataset.key;
         if (activeFilters.has(key)) activeFilters.delete(key);
         else activeFilters.add(key);
+        persistFilters();
         chip.classList.toggle("active", activeFilters.has(key));
         onChange();
       });
@@ -697,16 +841,29 @@
       <div class="pa-block"><span class="k">Dividend income</span> ${divHtml}</div>`;
   }
 
-  function renderRunStatus(meta) {
+  function renderRunStatus(meta, runReport, validation, news, stocks) {
     const el = document.getElementById("run-status");
+    const rows = [];
+    const kv = (k, v, cls = "") => rows.push(`<div class="health-row"><span class="hk">${k}</span><span class="hv mono ${cls}">${v}</span></div>`);
+
+    kv("Last update", U.formatUpdatedAt(meta.run_at));
+    kv("Stocks updated", `${meta.summary.ok}/${meta.summary.total}`, meta.summary.skipped ? "down" : "up");
+    if (runReport?.runtime_seconds != null) kv("Pipeline duration", `${(runReport.runtime_seconds / 60).toFixed(1)} min`);
+    if (validation) kv("Output validation", validation.result === "pass" ? "passed" : "FAILED", validation.result === "pass" ? "up" : "down");
+
+    const pct = (n) => `${Math.round((n / (stocks.length || 1)) * 100)}%`;
+    kv("Fundamentals", pct(stocks.filter((s) => s.fundamentals).length) + " of stocks");
+    kv("Shareholding", pct(stocks.filter((s) => s.shareholding).length) + " of stocks");
+    kv("News items", news?.items?.length ?? 0);
+
+    let skippedHtml = "";
     if (meta.summary.skipped > 0) {
       const skippedSymbols = Object.entries(meta.symbols)
         .filter(([, info]) => info.status !== "ok")
         .map(([symbol, info]) => `${symbol} (${info.reason})`);
-      el.innerHTML = `<div class="callout compact"><b>${meta.summary.skipped} skipped this run:</b><br>${skippedSymbols.join("<br>")}</div>`;
-    } else {
-      el.textContent = `All ${meta.summary.total} tracked symbols updated successfully.`;
+      skippedHtml = `<div class="callout compact"><b>${meta.summary.skipped} skipped:</b><br>${skippedSymbols.join("<br>")}</div>`;
     }
+    el.innerHTML = rows.join("") + skippedHtml;
   }
 
   // ---------- Watchlist ----------
@@ -831,31 +988,39 @@
 
   async function render() {
     const [meta, flagDefinitions] = await Promise.all([U.loadMeta(), U.loadFlagDefinitions()]);
-    const [stocks, sectors, portfolio, market, news] = await Promise.all([
+    const [stocks, sectors, portfolio, market, news, changes, runReport, validation] = await Promise.all([
       U.loadAllStocks(meta),
       U.loadSectors(),
       U.loadPortfolio(),
       U.loadMarket(),
       U.loadNews(),
+      U.loadChanges(),
+      U.loadRunReport(),
+      U.loadValidationReport(),
     ]);
     const stocksBySymbol = Object.fromEntries(stocks.map((s) => [s.symbol, s]));
+    U.setSectorContext(sectors); // detail-panel checklist needs sector strength
 
     renderMarketStrip(market, stocks, meta);
     renderKpis(stocks, sectors, portfolio);
     renderHeatmap(sectors);
     renderOpportunities(stocks, flagDefinitions);
+    renderChanges(changes, stocksBySymbol);
     renderKeepAnEye(stocks, flagDefinitions);
-    renderBreadth(stocks);
+    renderBreadth(stocks, sectors, market);
     renderScreens(stocks);
     renderInstitutional(stocks);
     renderEvents(stocks);
     renderNews(news);
     renderPortfolioAnalytics(portfolio, stocksBySymbol);
-    renderRunStatus(meta);
+    renderRunStatus(meta, runReport, validation, news, stocks);
 
-    const filterDefs = buildFilterDefs(sectors);
+    const filterDefs = buildFilterDefs(sectors, portfolio, changes);
     setupWatchlist(stocks, flagDefinitions, filterDefs);
+    setupCollapsibles();
   }
+
+  setupKeyboardShortcuts();
 
   render().catch((err) => {
     console.error(err);

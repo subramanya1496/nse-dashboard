@@ -46,6 +46,31 @@ async function loadNews() {
   }
 }
 
+// Same explicit-absence contract for the Phase 2 decision-support files.
+async function loadChanges() {
+  try {
+    return await fetchJson(`${DATA_BASE}/changes.json`);
+  } catch {
+    return null;
+  }
+}
+
+async function loadRunReport() {
+  try {
+    return await fetchJson(`${DATA_BASE}/run_report.json`);
+  } catch {
+    return null;
+  }
+}
+
+async function loadValidationReport() {
+  try {
+    return await fetchJson(`${DATA_BASE}/validation_report.json`);
+  } catch {
+    return null;
+  }
+}
+
 async function loadAllStocks(meta) {
   const symbols = Object.entries(meta.symbols)
     .filter(([, info]) => info.status === "ok")
@@ -460,6 +485,156 @@ function analystSectionHtml(stock) {
   </div>`;
 }
 
+// ---------- Decision-support helpers (Phase 2) ----------
+// Everything below renders NAMED CONDITIONS and COUNTS from the pipeline's decision
+// block — never a weighted score. Older published JSONs lack stock.decision until the
+// next pipeline run; every renderer degrades to an explicit note, never a blank.
+
+let sectorContext = null; // set by the page (sectors.json) for the sector checklist item
+function setSectorContext(sectors) {
+  sectorContext = sectors;
+}
+
+function attentionStarsHtml(stock) {
+  const att = stock.decision?.attention;
+  if (!att) return "";
+  const stars = "★".repeat(att.tier) + "☆".repeat(5 - att.tier);
+  return `<span class="att-badge t${att.tier}" title="${att.label} — ${att.rule}. Attention priority from named conditions, not advice.">${stars}</span>`;
+}
+
+function riskChipHtml(stock, { compact = false } = {}) {
+  const risk = stock.decision?.risk;
+  if (!risk) return "";
+  const label = risk.level === "low" ? "Low risk" : risk.level === "elevated" ? "Elevated risk" : "High risk";
+  const names = risk.conditions_on.map((k) => k.replace(/_/g, " ")).join(", ") || "none";
+  return `<span class="risk-chip ${risk.level}" title="${risk.condition_count}/${risk.condition_total} risk conditions: ${names}">${compact ? label.replace(" risk", "") : label} ${risk.condition_count}/${risk.condition_total}</span>`;
+}
+
+function trendChipsHtml(stock) {
+  const trend = stock.decision?.trend;
+  if (!trend) return "";
+  const chip = (tf, value) => {
+    if (!value) return `<span class="trend-chip na" title="${tf}: not enough history">${tf} —</span>`;
+    const glyph = value === "bullish" ? "▲" : value === "bearish" ? "▼" : "◆";
+    return `<span class="trend-chip ${value}" title="${tf} trend: ${value}">${tf} ${glyph}</span>`;
+  };
+  return `${chip("W", trend.weekly)}${chip("D", trend.daily)}`;
+}
+
+function decisionContextSectionHtml(stock) {
+  const d = stock.decision;
+  if (!d) {
+    return `<div class="detail-section"><h6>Decision context</h6><span class="empty-note">Attention tier, risk conditions and trend labels appear after the next pipeline run.</span></div>`;
+  }
+  const att = d.attention;
+  const riskNames = d.risk.conditions_on.length
+    ? d.risk.conditions_on.map((k) => `<span class="risk-cond">${(d.risk.conditions_detail?.[k]) || k.replace(/_/g, " ")}</span>`).join("")
+    : `<span class="fine">No risk conditions present today.</span>`;
+  return `<div class="detail-section">
+    <h6>Decision context <span class="ext-tag">counts of named conditions · never a score</span></h6>
+    <div class="decision-head">
+      ${attentionStarsHtml(stock)}<span class="att-label">${att.label}</span>
+      ${riskChipHtml(stock)}${trendChipsHtml(stock)}
+    </div>
+    <div class="fine">Why this tier: ${att.reasons.join(" · ")} <span class="dim">(rule: ${att.rule})</span></div>
+    <div class="risk-conds">${riskNames}</div>
+    ${d.trend.weekly === null ? `<div class="fine dim">Weekly trend needs ≥15 weeks of history.</div>` : ""}
+    <div class="fine dim">Intraday: not collected — this is a daily pipeline.</div>
+  </div>`;
+}
+
+// 7-item trade checklist — presentation of the same booleans used elsewhere, "X/Y passed".
+function checklistSectionHtml(stock) {
+  const ind = stock.indicators;
+  const d = stock.decision;
+  const sectorPct = sectorContext?.find((s) => s.sector === stock.sector)?.avg_flag_pct;
+  const checks = [
+    ["Trend", ind.ema50 != null && ind.ema200 != null ? ind.ema50 > ind.ema200 : null, "EMA50 above EMA200"],
+    ["Momentum", ind.rsi14 != null ? ind.rsi14 > 50 : null, "RSI(14) above 50"],
+    ["MACD", ind.macd != null && ind.macd_signal != null ? ind.macd > ind.macd_signal : null, "MACD above signal"],
+    ["Volume", ind.avg_volume20 ? ind.volume >= 1.2 * ind.avg_volume20 : null, "Volume ≥1.2× 20d avg"],
+    ["Sector", sectorPct != null ? sectorPct >= 50 : null, "Sector avg flags ≥50%"],
+    ["Breakout zone", ind.high_52w != null ? ind.close >= 0.95 * ind.high_52w : null, "Within 5% of 52w high"],
+    ["Risk", d ? d.risk.condition_count <= 1 : null, "≤1 risk condition present"],
+  ];
+  const evaluated = checks.filter(([, v]) => v !== null);
+  const passed = evaluated.filter(([, v]) => v).length;
+  const rows = checks
+    .map(([label, value, hint]) => {
+      const mark = value === null ? `<span class="mark na">·</span>` : `<span class="mark ${value ? "pass" : "fail"}">${value ? "✓" : "✗"}</span>`;
+      return `<div class="check-row">${mark}<span class="label">${label} — ${hint}${value === null ? " (not evaluated: data missing)" : ""}</span></div>`;
+    })
+    .join("");
+  return `<div class="detail-section"><h6>Checklist · ${passed}/${evaluated.length} passed</h6>${rows}</div>`;
+}
+
+function dataCompletenessHtml(stock) {
+  const sources = [
+    ["Price/indicators", stock.indicators != null],
+    ["Fundamentals", stock.fundamentals != null],
+    ["Analyst view", stock.analyst != null],
+    ["Events", stock.events != null],
+    ["Shareholding", stock.shareholding != null],
+  ];
+  const present = sources.filter(([, on]) => on).length;
+  const missing = sources.filter(([, on]) => !on).map(([n]) => n);
+  return `<span class="completeness" title="${missing.length ? "Missing: " + missing.join(", ") : "All sources present"}">Data ${present}/${sources.length}</span>`;
+}
+
+// ---------- Personal journal (localStorage — this browser only) ----------
+
+const JOURNAL_KEY = "nse-dashboard-journal";
+const JOURNAL_FIELDS = [
+  ["reason", "Reason for watching"],
+  ["entry_plan", "Entry plan"],
+  ["exit_plan", "Exit plan"],
+  ["observations", "Observations"],
+];
+
+function getJournal(symbol) {
+  try {
+    return (JSON.parse(localStorage.getItem(JOURNAL_KEY) || "{}"))[symbol] || {};
+  } catch {
+    return {};
+  }
+}
+
+function saveJournalField(symbol, field, value) {
+  let all = {};
+  try {
+    all = JSON.parse(localStorage.getItem(JOURNAL_KEY) || "{}");
+  } catch { /* start fresh on corrupt storage */ }
+  all[symbol] = { ...(all[symbol] || {}), [field]: value, updated_at: new Date().toISOString() };
+  if (!value) delete all[symbol][field];
+  localStorage.setItem(JOURNAL_KEY, JSON.stringify(all));
+}
+
+function journalSectionHtml(stock) {
+  const entries = getJournal(stock.symbol);
+  const fields = JOURNAL_FIELDS.map(
+    ([key, label]) => `<label class="journal-field"><span>${label}</span>
+      <textarea data-journal-field="${key}" rows="2" placeholder="—">${entries[key] || ""}</textarea></label>`
+  ).join("");
+  return `<div class="detail-section"><h6>Personal journal <span class="ext-tag">saved in this browser only</span></h6>
+    <div class="journal-grid" data-journal-symbol="${stock.symbol}">${fields}</div>
+    <div class="fine dim journal-status">${entries.updated_at ? `Last saved ${new Date(entries.updated_at).toLocaleString("en-IN")}` : "Notes save automatically as you type."}</div>
+  </div>`;
+}
+
+function bindJournalHandlers(panel) {
+  const grid = panel.querySelector("[data-journal-symbol]");
+  if (!grid) return;
+  const symbol = grid.dataset.journalSymbol;
+  grid.querySelectorAll("textarea[data-journal-field]").forEach((area) => {
+    area.addEventListener("input", () => {
+      saveJournalField(symbol, area.dataset.journalField, area.value.trim());
+      const status = panel.querySelector(".journal-status");
+      if (status) status.textContent = `Saved ${new Date().toLocaleTimeString("en-IN")}`;
+    });
+    area.addEventListener("click", (e) => e.stopPropagation());
+  });
+}
+
 function renderDetailPanelHtml(stock, flagDefinitions) {
   const checkRows = flagDefinitions
     .map((def) => {
@@ -524,16 +699,21 @@ function renderDetailPanelHtml(stock, flagDefinitions) {
     shareholdingHtml = `<div class="detail-section"><h6>Shareholding change</h6><span class="empty-note">Not available this run (NSE source often blocks automated requests).</span></div>`;
   }
 
+  // Decision-oriented sections first, raw technical data below (visual-hierarchy rule:
+  // raw numbers never appear before the decision context they support).
   return `
+    ${decisionContextSectionHtml(stock)}
+    ${explanationSectionHtml(stock, flagDefinitions)}
+    ${checklistSectionHtml(stock)}
     ${priceChartSectionHtml(stock)}
     ${rangeSectionHtml(ind)}
-    ${explanationSectionHtml(stock, flagDefinitions)}
     <div class="detail-section"><h6>Why ${stock.flags.flag_count}/${stock.flags.flag_total}</h6>${checkRows}</div>
-    <div class="detail-section"><h6>Indicators (${ind.date})</h6>${indicatorsHtml}</div>
+    <div class="detail-section"><h6>Indicators (${ind.date}) ${dataCompletenessHtml(stock)}</h6>${indicatorsHtml}</div>
     ${fundamentalsHtml}
     ${eventsSectionHtml(stock)}
     ${analystSectionHtml(stock)}
     ${shareholdingHtml}
+    ${journalSectionHtml(stock)}
   `;
 }
 
@@ -549,6 +729,7 @@ function attachRowToggle(container, rowEl, stock, flagDefinitions) {
     panel.className = "detail-panel";
     panel.innerHTML = renderDetailPanelHtml(stock, flagDefinitions);
     container.appendChild(panel);
+    bindJournalHandlers(panel);
   });
 }
 
@@ -642,7 +823,7 @@ function createStockBlock(stock, rank, flagDefinitions, options = {}) {
         <div class="rank">${rank}</div>
         <div class="name-wrap">
           <div class="name">${stock.symbol}<span class="sector-badge">${stock.sector || "—"}</span></div>
-          <div class="flags-mini"><span class="flag-count ${flagCountClass(flag_count, flag_total)}">${flag_count}/${flag_total}</span></div>
+          <div class="flags-mini"><span class="flag-count ${flagCountClass(flag_count, flag_total)}">${flag_count}/${flag_total}</span>${attentionStarsHtml(stock)}${riskChipHtml(stock, { compact: true })}${trendChipsHtml(stock)}</div>
         </div>
       </div>
       <div class="mid">${emaStatusHtml(ind)}${mini52wBarHtml(ind)}</div>
@@ -781,6 +962,9 @@ window.dashboardUtils = {
   loadAllStocks,
   loadMarket,
   loadNews,
+  loadChanges,
+  loadRunReport,
+  loadValidationReport,
   volumeRatio,
   supportResistance,
   debtToEquityRatio,
@@ -811,4 +995,8 @@ window.dashboardUtils = {
   initTabs,
   initRefreshButton,
   formatUpdatedAt,
+  setSectorContext,
+  attentionStarsHtml,
+  riskChipHtml,
+  trendChipsHtml,
 };
