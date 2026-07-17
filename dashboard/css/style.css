@@ -22,13 +22,26 @@ html{scroll-behavior:smooth;}
 body{
   font-family:'Inter',sans-serif;
   color:var(--ink);
+  background:#f2f7fb;
+  min-height:100vh;
+  line-height:1.6;
+  padding-bottom:80px;
+}
+/* The gradient lives on a FIXED layer, not on <body>. With it on <body> the
+   backdrop scrolls with the page, so every glass panel's backdrop-filter must
+   re-sample a moving backdrop each frame; Chromium periodically drops that
+   repaint and leaves a blank white rectangle mid-page while scrolling. A fixed
+   backdrop is sampled once and stays stable, which removes the blank patches. */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
   background:
     radial-gradient(circle at 10% 0%, var(--bg-3) 0%, transparent 45%),
     radial-gradient(circle at 90% 10%, var(--bg-2) 0%, transparent 50%),
     linear-gradient(160deg, var(--bg-1), #f7fafc 60%, var(--bg-3));
-  min-height:100vh;
-  line-height:1.6;
-  padding-bottom:80px;
 }
 .mono{font-family:'JetBrains Mono',monospace;}
 h1,h2,h3,.display{font-family:'Sora',sans-serif; letter-spacing:-0.01em;}
