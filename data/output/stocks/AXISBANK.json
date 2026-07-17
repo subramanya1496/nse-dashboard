@@ -3,35 +3,30 @@
   "name": "Axis Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-07-16",
-    "close": 1307.6,
-    "prev_close": 1312.3,
-    "change_pct": -0.35814981330488804,
-    "ema20": 1327.4684116964556,
-    "ema50": 1318.5331788381925,
-    "ema200": 1278.1832814882343,
-    "rsi14": 43.70535497753788,
-    "macd": -2.351818364406654,
-    "macd_signal": 4.461686569872838,
-    "atr14": 27.497414528323983,
-    "adx14": 18.275699974929996,
-    "adx_pos": 18.01080329661071,
-    "adx_neg": 21.99315700548542,
-    "bb_high": 1391.8429914316753,
-    "bb_low": 1292.7570085683246,
-    "bb_mid": 1342.3,
-    "vwap20": 1346.493626695305,
+    "date": "2026-07-17",
+    "close": 1328.5,
+    "prev_close": 1307.6,
+    "change_pct": 1.5983481186907382,
+    "ema20": 1327.5666582015551,
+    "ema50": 1318.9240355350926,
+    "ema200": 1278.6933226539413,
+    "rsi14": 50.656054037693345,
+    "macd": -1.8346994806195198,
+    "macd_signal": 3.2024093597592933,
+    "atr14": 27.53331349042105,
+    "adx14": 17.115571376802343,
+    "adx_pos": 21.242466403746743,
+    "adx_neg": 20.395589970692907,
+    "bb_high": 1389.9057946972364,
+    "bb_low": 1291.5342053027632,
+    "bb_mid": 1340.7199999999998,
+    "vwap20": 1343.8521352335283,
     "high_52w": 1418.3,
     "low_52w": 1042.5,
-    "volume": 5001226.0,
-    "avg_volume20": 5885202.7
+    "volume": 11192836.0,
+    "avg_volume20": 6185515.85
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 1293.5,
-      "ema50": 1256.56
-    },
     {
       "date": "2026-01-21",
       "close": 1284.9,
@@ -626,44 +621,51 @@
       "date": "2026-07-16",
       "close": 1307.6,
       "ema50": 1318.53
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1328.5,
+      "ema50": 1318.92
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,307.60 vs EMA20 1,327.47",
-      "ema20_above_ema50": "EMA20 1,327.47 vs EMA50 1,318.53",
-      "ema50_above_ema200": "EMA50 1,318.53 vs EMA200 1,278.18",
-      "rsi_above_50": "RSI(14) 43.71 vs 50",
-      "macd_bullish": "MACD -2.35 vs signal 4.46",
-      "adx_trending_up": "ADX(14) 18.28 vs 20, +DI 18.01 vs -DI 21.99",
-      "price_above_vwap20": "Close 1,307.60 vs 20d VWAP 1,346.49",
-      "price_above_bb_mid": "Close 1,307.60 vs BB mid 1,342.30"
+      "price_above_ema20": "Close 1,328.50 vs EMA20 1,327.57",
+      "ema20_above_ema50": "EMA20 1,327.57 vs EMA50 1,318.92",
+      "ema50_above_ema200": "EMA50 1,318.92 vs EMA200 1,278.69",
+      "rsi_above_50": "RSI(14) 50.66 vs 50",
+      "macd_bullish": "MACD -1.83 vs signal 3.20",
+      "adx_trending_up": "ADX(14) 17.12 vs 20, +DI 21.24 vs -DI 20.40",
+      "price_above_vwap20": "Close 1,328.50 vs 20d VWAP 1,343.85",
+      "price_above_bb_mid": "Close 1,328.50 vs BB mid 1,340.72"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
-      "ema50_above_ema200"
+      "ema50_above_ema200",
+      "rsi_above_50"
     ],
-    "flag_count": 2,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: near buy zone"
+        "4/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -676,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 27.50 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 43.7",
-        "below_ema200": "Close 1,307.60 vs EMA200 1,278.18",
-        "extended_above_ema20": "Close 1,307.60 vs EMA20 1,327.47 (-1.5%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 1,307.60 vs 52w low 1,042.50"
+        "atr_high": "ATR 27.53 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 50.7",
+        "below_ema200": "Close 1,328.50 vs EMA200 1,278.69",
+        "extended_above_ema20": "Close 1,328.50 vs EMA20 1,327.57 (+0.1%)",
+        "large_day_move": "Day change +1.6%",
+        "near_52w_low": "Close 1,328.50 vs 52w low 1,042.50"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -690,51 +692,19 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "neutral",
+      "daily": "bullish",
+      "weekly": "bullish",
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 15.472725,
-    "pe_forward": 10.94628,
-    "eps_trailing": 84.51,
-    "eps_forward": 119.45611,
-    "roe": 0.13152,
-    "profit_margin": 0.35393003,
-    "gross_margin": 0.0,
-    "operating_margin": 0.39288,
-    "market_cap": 4067899998208,
-    "current_price": 1307.6,
-    "sector": "Financial Services",
-    "name": "Axis Bank Limited",
-    "debt_to_equity": null,
-    "dividend_yield": 0.08,
-    "price_to_book": 1.8900352,
-    "roce": null,
-    "revenue_growth_yoy": 0.04014464440245839
-  },
-  "analyst": {
-    "recommendation": "strong_buy",
-    "recommendation_mean": 1.25641,
-    "num_analysts": 40,
-    "target_low": 1430.0,
-    "target_mean": 1594.75,
-    "target_median": 1600.0,
-    "target_high": 1780.0
-  },
-  "events": {
-    "earnings_dates": [
-      "2026-07-18"
-    ],
-    "ex_dividend_date": "2026-07-10",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:20:16.759810+00:00"
+  "updated_at": "2026-07-17T10:41:23.132183+00:00"
 }

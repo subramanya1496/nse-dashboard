@@ -3,35 +3,30 @@
   "name": "Bharat Dynamics",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-07-16",
-    "close": 1262.8,
-    "prev_close": 1271.2,
-    "change_pct": -0.6607929515418574,
-    "ema20": 1320.7227333011256,
-    "ema50": 1317.1509834079916,
-    "ema200": 1381.6483171208743,
-    "rsi14": 39.84840395784255,
-    "macd": -3.3726245674874917,
-    "macd_signal": 11.300939427421495,
-    "atr14": 41.360172590535335,
-    "adx14": 19.764415392201403,
-    "adx_pos": 19.809876773131062,
-    "adx_neg": 29.697877404590255,
-    "bb_high": 1440.3908754217518,
-    "bb_low": 1261.419124578248,
-    "bb_mid": 1350.905,
-    "vwap20": 1362.4766812890327,
-    "high_52w": 1998.0,
+    "date": "2026-07-17",
+    "close": 1254.8,
+    "prev_close": 1262.8,
+    "change_pct": -0.6335128286347799,
+    "ema20": 1314.4443777486376,
+    "ema50": 1314.7058579020047,
+    "ema200": 1380.4939837602499,
+    "rsi14": 38.73937010881605,
+    "macd": -8.035142393953038,
+    "macd_signal": 7.43372306297353,
+    "atr14": 39.47730312092957,
+    "adx14": 19.77928785551574,
+    "adx_pos": 19.272229409425506,
+    "adx_neg": 28.89186605498637,
+    "bb_high": 1445.608195232125,
+    "bb_low": 1250.5018047678748,
+    "bb_mid": 1348.0549999999998,
+    "vwap20": 1363.0233989751825,
+    "high_52w": 1976.6,
     "low_52w": 1086.0,
-    "volume": 822807.0,
-    "avg_volume20": 1625044.8
+    "volume": 484790.0,
+    "avg_volume20": 1584568.4
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 1453.1,
-      "ema50": 1491.33
-    },
     {
       "date": "2026-01-21",
       "close": 1419.2,
@@ -270,7 +265,7 @@
     {
       "date": "2026-04-01",
       "close": 1203.9,
-      "ema50": 1303.96
+      "ema50": 1303.97
     },
     {
       "date": "2026-04-02",
@@ -626,12 +621,17 @@
       "date": "2026-07-16",
       "close": 1262.8,
       "ema50": 1317.15
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1254.8,
+      "ema50": 1314.71
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
-      "ema20_above_ema50": true,
+      "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
@@ -640,19 +640,17 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,262.80 vs EMA20 1,320.72",
-      "ema20_above_ema50": "EMA20 1,320.72 vs EMA50 1,317.15",
-      "ema50_above_ema200": "EMA50 1,317.15 vs EMA200 1,381.65",
-      "rsi_above_50": "RSI(14) 39.85 vs 50",
-      "macd_bullish": "MACD -3.37 vs signal 11.30",
-      "adx_trending_up": "ADX(14) 19.76 vs 20, +DI 19.81 vs -DI 29.70",
-      "price_above_vwap20": "Close 1,262.80 vs 20d VWAP 1,362.48",
-      "price_above_bb_mid": "Close 1,262.80 vs BB mid 1,350.90"
+      "price_above_ema20": "Close 1,254.80 vs EMA20 1,314.44",
+      "ema20_above_ema50": "EMA20 1,314.44 vs EMA50 1,314.71",
+      "ema50_above_ema200": "EMA50 1,314.71 vs EMA200 1,380.49",
+      "rsi_above_50": "RSI(14) 38.74 vs 50",
+      "macd_bullish": "MACD -8.04 vs signal 7.43",
+      "adx_trending_up": "ADX(14) 19.78 vs 20, +DI 19.27 vs -DI 28.89",
+      "price_above_vwap20": "Close 1,254.80 vs 20d VWAP 1,363.02",
+      "price_above_bb_mid": "Close 1,254.80 vs BB mid 1,348.05"
     },
-    "flags_on": [
-      "ema20_above_ema50"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 41.36 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 39.8",
-        "below_ema200": "Close 1,262.80 vs EMA200 1,381.65",
-        "extended_above_ema20": "Close 1,262.80 vs EMA20 1,320.72 (-4.4%)",
-        "large_day_move": "Day change -0.7%",
-        "near_52w_low": "Close 1,262.80 vs 52w low 1,086.00"
+        "atr_high": "ATR 39.48 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 38.7",
+        "below_ema200": "Close 1,254.80 vs EMA200 1,380.49",
+        "extended_above_ema20": "Close 1,254.80 vs EMA20 1,314.44 (-4.5%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 1,254.80 vs 52w low 1,086.00"
       },
       "conditions_on": [
         "atr_high",
@@ -701,41 +699,9 @@
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 110.38462,
-    "pe_forward": 40.612118,
-    "eps_trailing": 11.44,
-    "eps_forward": 31.09417,
-    "roe": 0.1019,
-    "profit_margin": 0.17214,
-    "gross_margin": 0.49935,
-    "operating_margin": 0.073709995,
-    "market_cap": 462895153152,
-    "current_price": 1262.8,
-    "sector": "Industrials",
-    "name": "Bharat Dynamics Limited",
-    "debt_to_equity": 0.007,
-    "dividend_yield": 0.41,
-    "price_to_book": 10.9066105,
-    "roce": 0.07216153007749494,
-    "revenue_growth_yoy": -0.27315479597212566
-  },
-  "analyst": {
-    "recommendation": "hold",
-    "recommendation_mean": 2.66667,
-    "num_analysts": 12,
-    "target_low": 1080.0,
-    "target_mean": 1311.0834,
-    "target_median": 1282.5,
-    "target_high": 1558.0
-  },
-  "events": {
-    "earnings_dates": [
-      "2026-08-11"
-    ],
-    "ex_dividend_date": "2026-02-09",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:20:51.377658+00:00"
+  "updated_at": "2026-07-17T10:41:25.933597+00:00"
 }

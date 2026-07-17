@@ -3,35 +3,30 @@
   "name": "Jio Financial Services",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-07-16",
-    "close": 235.65,
-    "prev_close": 236.59,
-    "change_pct": -0.39731180523268006,
-    "ema20": 237.94510301529567,
-    "ema50": 239.27097484321482,
-    "ema200": 258.1953808045545,
-    "rsi14": 46.897761277352515,
-    "macd": -0.4346015611656071,
-    "macd_signal": -0.14325691098829113,
-    "atr14": 5.195791685377304,
-    "adx14": 10.20007288628523,
-    "adx_pos": 24.089509932584164,
-    "adx_neg": 26.983652695744574,
-    "bb_high": 246.14035489749824,
-    "bb_low": 231.68864510250177,
-    "bb_mid": 238.9145,
-    "vwap20": 238.97444989694677,
+    "date": "2026-07-17",
+    "close": 242.98,
+    "prev_close": 235.65,
+    "change_pct": 3.1105453002333903,
+    "ema20": 238.424617013839,
+    "ema50": 239.41642989835586,
+    "ema200": 258.0739913403604,
+    "rsi14": 55.18491790831636,
+    "macd": 0.022772877405174086,
+    "macd_signal": -0.11005095335772302,
+    "atr14": 5.846092279312378,
+    "adx14": 11.019424444723711,
+    "adx_pos": 34.5912747606224,
+    "adx_neg": 22.269071997212517,
+    "bb_high": 245.93862789430386,
+    "bb_low": 231.77837210569612,
+    "bb_mid": 238.8585,
+    "vwap20": 240.48996708964012,
     "high_52w": 338.6,
     "low_52w": 223.3,
-    "volume": 9649365.0,
-    "avg_volume20": 13153746.45
+    "volume": 95978862.0,
+    "avg_volume20": 17479835.2
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 265.5,
-      "ema50": 295.87
-    },
     {
       "date": "2026-01-21",
       "close": 263.25,
@@ -240,7 +235,7 @@
     {
       "date": "2026-03-20",
       "close": 239.3,
-      "ema50": 258.02
+      "ema50": 258.03
     },
     {
       "date": "2026-03-23",
@@ -626,40 +621,52 @@
       "date": "2026-07-16",
       "close": 235.65,
       "ema50": 239.27
+    },
+    {
+      "date": "2026-07-17",
+      "close": 242.98,
+      "ema50": 239.42
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
-      "macd_bullish": false,
+      "rsi_above_50": true,
+      "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 235.65 vs EMA20 237.95",
-      "ema20_above_ema50": "EMA20 237.95 vs EMA50 239.27",
-      "ema50_above_ema200": "EMA50 239.27 vs EMA200 258.20",
-      "rsi_above_50": "RSI(14) 46.90 vs 50",
-      "macd_bullish": "MACD -0.43 vs signal -0.14",
-      "adx_trending_up": "ADX(14) 10.20 vs 20, +DI 24.09 vs -DI 26.98",
-      "price_above_vwap20": "Close 235.65 vs 20d VWAP 238.97",
-      "price_above_bb_mid": "Close 235.65 vs BB mid 238.91"
+      "price_above_ema20": "Close 242.98 vs EMA20 238.42",
+      "ema20_above_ema50": "EMA20 238.42 vs EMA50 239.42",
+      "ema50_above_ema200": "EMA50 239.42 vs EMA200 258.07",
+      "rsi_above_50": "RSI(14) 55.18 vs 50",
+      "macd_bullish": "MACD 0.02 vs signal -0.11",
+      "adx_trending_up": "ADX(14) 11.02 vs 20, +DI 34.59 vs -DI 22.27",
+      "price_above_vwap20": "Close 242.98 vs 20d VWAP 240.49",
+      "price_above_bb_mid": "Close 242.98 vs BB mid 238.86"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "price_above_ema20",
+      "rsi_above_50",
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
+    ],
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "0/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.20 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 46.9",
-        "below_ema200": "Close 235.65 vs EMA200 258.20",
-        "extended_above_ema20": "Close 235.65 vs EMA20 237.95 (-1.0%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 235.65 vs 52w low 223.30"
+        "atr_high": "ATR 5.85 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 55.2",
+        "below_ema200": "Close 242.98 vs EMA200 258.07",
+        "extended_above_ema20": "Close 242.98 vs EMA20 238.42 (+1.9%)",
+        "large_day_move": "Day change +3.1%",
+        "near_52w_low": "Close 242.98 vs 52w low 223.30"
       },
       "conditions_on": [
         "below_ema200"
@@ -688,49 +695,19 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "bullish",
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 97.780075,
-    "pe_forward": 51.67763,
-    "eps_trailing": 2.41,
-    "eps_forward": 4.56,
-    "roe": 0.012130001,
-    "profit_margin": 0.57768,
-    "gross_margin": 1.0,
-    "operating_margin": 0.43075,
-    "market_cap": 1556030291968,
-    "current_price": 235.65,
-    "sector": "Financial Services",
-    "name": "Jio Financial Services Limited",
-    "debt_to_equity": 16.286,
-    "dividend_yield": 0.21,
-    "price_to_book": 1.1145216,
-    "roce": 0.016259182911722687,
-    "revenue_growth_yoy": 1.2166917606355716
-  },
-  "analyst": {
-    "recommendation": "strong_buy",
-    "recommendation_mean": 1.0,
-    "num_analysts": 3,
-    "target_low": 273.0,
-    "target_mean": 295.33334,
-    "target_median": 298.0,
-    "target_high": 315.0
-  },
-  "events": {
-    "earnings_dates": [],
-    "ex_dividend_date": "2025-08-11",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:25:13.973616+00:00"
+  "updated_at": "2026-07-17T10:41:50.337265+00:00"
 }

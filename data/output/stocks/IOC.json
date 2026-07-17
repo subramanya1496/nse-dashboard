@@ -3,35 +3,30 @@
   "name": "Indian Oil Corporation",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-07-16",
-    "close": 141.8,
-    "prev_close": 140.24,
-    "change_pct": 1.1123787792355977,
-    "ema20": 140.49299700574534,
-    "ema50": 141.8897457688425,
-    "ema200": 148.69555993294827,
-    "rsi14": 52.34201841806946,
-    "macd": -0.4611320317348486,
-    "macd_signal": -0.37669036939272094,
-    "atr14": 3.3286909697348603,
-    "adx14": 12.652529405555342,
-    "adx_pos": 31.041883195356956,
-    "adx_neg": 21.87276621751574,
-    "bb_high": 146.4918136347584,
-    "bb_low": 136.16818636524158,
-    "bb_mid": 141.32999999999998,
-    "vwap20": 141.2357881339984,
+    "date": "2026-07-17",
+    "close": 141.69,
+    "prev_close": 141.8,
+    "change_pct": -0.07757404795487562,
+    "ema20": 140.6069972909125,
+    "ema50": 141.88191617217768,
+    "ema200": 148.66054887862862,
+    "rsi14": 52.1007755077383,
+    "macd": -0.30784630647656286,
+    "macd_signal": -0.36292155686512095,
+    "atr14": 3.2416416147856775,
+    "adx14": 12.986500553329389,
+    "adx_pos": 29.598646771467575,
+    "adx_neg": 20.85583136543845,
+    "bb_high": 145.7892987084136,
+    "bb_low": 136.42870129158635,
+    "bb_mid": 141.10899999999998,
+    "vwap20": 141.06660775865117,
     "high_52w": 188.96,
     "low_52w": 130.22,
-    "volume": 22023161.0,
-    "avg_volume20": 15415129.1
+    "volume": 11266555.0,
+    "avg_volume20": 15432441.45
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 158.43,
-      "ema50": 161.49
-    },
     {
       "date": "2026-01-21",
       "close": 158.82,
@@ -90,7 +85,7 @@
     {
       "date": "2026-02-05",
       "close": 175.77,
-      "ema50": 162.53
+      "ema50": 162.54
     },
     {
       "date": "2026-02-06",
@@ -180,7 +175,7 @@
     {
       "date": "2026-03-04",
       "close": 170.44,
-      "ema50": 170.66
+      "ema50": 170.67
     },
     {
       "date": "2026-03-05",
@@ -225,7 +220,7 @@
     {
       "date": "2026-03-17",
       "close": 146.68,
-      "ema50": 167.02
+      "ema50": 167.03
     },
     {
       "date": "2026-03-18",
@@ -626,6 +621,11 @@
       "date": "2026-07-16",
       "close": 141.8,
       "ema50": 141.89
+    },
+    {
+      "date": "2026-07-17",
+      "close": 141.69,
+      "ema50": 141.88
     }
   ],
   "flags": {
@@ -634,28 +634,29 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 141.80 vs EMA20 140.49",
-      "ema20_above_ema50": "EMA20 140.49 vs EMA50 141.89",
-      "ema50_above_ema200": "EMA50 141.89 vs EMA200 148.70",
-      "rsi_above_50": "RSI(14) 52.34 vs 50",
-      "macd_bullish": "MACD -0.46 vs signal -0.38",
-      "adx_trending_up": "ADX(14) 12.65 vs 20, +DI 31.04 vs -DI 21.87",
-      "price_above_vwap20": "Close 141.80 vs 20d VWAP 141.24",
-      "price_above_bb_mid": "Close 141.80 vs BB mid 141.33"
+      "price_above_ema20": "Close 141.69 vs EMA20 140.61",
+      "ema20_above_ema50": "EMA20 140.61 vs EMA50 141.88",
+      "ema50_above_ema200": "EMA50 141.88 vs EMA200 148.66",
+      "rsi_above_50": "RSI(14) 52.10 vs 50",
+      "macd_bullish": "MACD -0.31 vs signal -0.36",
+      "adx_trending_up": "ADX(14) 12.99 vs 20, +DI 29.60 vs -DI 20.86",
+      "price_above_vwap20": "Close 141.69 vs 20d VWAP 141.07",
+      "price_above_bb_mid": "Close 141.69 vs BB mid 141.11"
     },
     "flags_on": [
       "price_above_ema20",
       "rsi_above_50",
+      "macd_bullish",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 4,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
@@ -664,8 +665,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "4/8 bullish flags",
-        "patterns: volume surge"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.33 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 52.3",
-        "below_ema200": "Close 141.80 vs EMA200 148.70",
-        "extended_above_ema20": "Close 141.80 vs EMA20 140.49 (+0.9%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 141.80 vs 52w low 130.22"
+        "atr_high": "ATR 3.24 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 52.1",
+        "below_ema200": "Close 141.69 vs EMA200 148.66",
+        "extended_above_ema20": "Close 141.69 vs EMA20 140.61 (+0.8%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 141.69 vs 52w low 130.22"
       },
       "conditions_on": [
         "below_ema200"
@@ -694,7 +694,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,41 +704,9 @@
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 4.6385345,
-    "pe_forward": 7.975962,
-    "eps_trailing": 30.57,
-    "eps_forward": 17.77842,
-    "roe": 0.20969999,
-    "profit_margin": 0.05367,
-    "gross_margin": 0.19287,
-    "operating_margin": 0.09243,
-    "market_cap": 2002391662592,
-    "current_price": 141.8,
-    "sector": "Energy",
-    "name": "Indian Oil Corporation Limited",
-    "debt_to_equity": 58.446,
-    "dividend_yield": 5.88,
-    "price_to_book": 0.88946325,
-    "roce": 0.2070185173738933,
-    "revenue_growth_yoy": 0.034704416788469146
-  },
-  "analyst": {
-    "recommendation": "hold",
-    "recommendation_mean": 2.58065,
-    "num_analysts": 31,
-    "target_low": 110.0,
-    "target_mean": 158.03226,
-    "target_median": 153.0,
-    "target_high": 217.0
-  },
-  "events": {
-    "earnings_dates": [
-      "2026-08-13"
-    ],
-    "ex_dividend_date": "2026-08-13",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:24:40.857421+00:00"
+  "updated_at": "2026-07-17T10:41:47.531816+00:00"
 }

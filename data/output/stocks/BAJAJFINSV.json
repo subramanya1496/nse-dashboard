@@ -3,35 +3,30 @@
   "name": "Bajaj Finserv",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-07-16",
-    "close": 1838.6,
-    "prev_close": 1849.6,
-    "change_pct": -0.5947231833910035,
-    "ema20": 1835.9532934531774,
-    "ema50": 1806.9616037759884,
-    "ema200": 1884.8335603944356,
-    "rsi14": 52.562813722049725,
-    "macd": 30.370774952788224,
-    "macd_signal": 30.832793674004183,
-    "atr14": 41.64801235316785,
-    "adx14": 21.93708288494575,
-    "adx_pos": 21.02744485633376,
-    "adx_neg": 21.17518790790002,
-    "bb_high": 1938.9462830038951,
-    "bb_low": 1721.9737169961045,
-    "bb_mid": 1830.4599999999998,
-    "vwap20": 1831.980275060305,
+    "date": "2026-07-17",
+    "close": 1854.0,
+    "prev_close": 1838.6,
+    "change_pct": 0.837593821385842,
+    "ema20": 1837.6720274100176,
+    "ema50": 1808.806267031532,
+    "ema200": 1884.723682096711,
+    "rsi14": 54.87817188571187,
+    "macd": 28.030779851965463,
+    "macd_signal": 30.272390909280528,
+    "atr14": 42.223154328092384,
+    "adx14": 20.789464678635234,
+    "adx_pos": 21.81397334085175,
+    "adx_neg": 19.394839702594627,
+    "bb_high": 1940.0350374549582,
+    "bb_low": 1729.1149625450419,
+    "bb_mid": 1834.575,
+    "vwap20": 1835.0148844046983,
     "high_52w": 2195.0,
     "low_52w": 1597.0,
-    "volume": 1669077.0,
-    "avg_volume20": 1322577.85
+    "volume": 705632.0,
+    "avg_volume20": 1307291.45
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 1958.7,
-      "ema50": 2035.99
-    },
     {
       "date": "2026-01-21",
       "close": 1959.9,
@@ -110,7 +105,7 @@
     {
       "date": "2026-02-11",
       "close": 2027.0,
-      "ema50": 2010.8
+      "ema50": 2010.81
     },
     {
       "date": "2026-02-12",
@@ -180,7 +175,7 @@
     {
       "date": "2026-03-04",
       "close": 1889.3,
-      "ema50": 2013.68
+      "ema50": 2013.69
     },
     {
       "date": "2026-03-05",
@@ -285,7 +280,7 @@
     {
       "date": "2026-04-07",
       "close": 1684.4,
-      "ema50": 1851.9
+      "ema50": 1851.91
     },
     {
       "date": "2026-04-08",
@@ -626,6 +621,11 @@
       "date": "2026-07-16",
       "close": 1838.6,
       "ema50": 1806.96
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1854.0,
+      "ema50": 1808.81
     }
   ],
   "flags": {
@@ -635,28 +635,29 @@
       "ema50_above_ema200": false,
       "rsi_above_50": true,
       "macd_bullish": false,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,838.60 vs EMA20 1,835.95",
-      "ema20_above_ema50": "EMA20 1,835.95 vs EMA50 1,806.96",
-      "ema50_above_ema200": "EMA50 1,806.96 vs EMA200 1,884.83",
-      "rsi_above_50": "RSI(14) 52.56 vs 50",
-      "macd_bullish": "MACD 30.37 vs signal 30.83",
-      "adx_trending_up": "ADX(14) 21.94 vs 20, +DI 21.03 vs -DI 21.18",
-      "price_above_vwap20": "Close 1,838.60 vs 20d VWAP 1,831.98",
-      "price_above_bb_mid": "Close 1,838.60 vs BB mid 1,830.46"
+      "price_above_ema20": "Close 1,854.00 vs EMA20 1,837.67",
+      "ema20_above_ema50": "EMA20 1,837.67 vs EMA50 1,808.81",
+      "ema50_above_ema200": "EMA50 1,808.81 vs EMA200 1,884.72",
+      "rsi_above_50": "RSI(14) 54.88 vs 50",
+      "macd_bullish": "MACD 28.03 vs signal 30.27",
+      "adx_trending_up": "ADX(14) 20.79 vs 20, +DI 21.81 vs -DI 19.39",
+      "price_above_vwap20": "Close 1,854.00 vs 20d VWAP 1,835.01",
+      "price_above_bb_mid": "Close 1,854.00 vs BB mid 1,834.58"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "rsi_above_50",
+      "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 6,
     "flag_total": 8
   },
   "decision": {
@@ -665,7 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 41.65 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 52.6",
-        "below_ema200": "Close 1,838.60 vs EMA200 1,884.83",
-        "extended_above_ema20": "Close 1,838.60 vs EMA20 1,835.95 (+0.1%)",
-        "large_day_move": "Day change -0.6%",
-        "near_52w_low": "Close 1,838.60 vs 52w low 1,597.00"
+        "atr_high": "ATR 42.22 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 54.9",
+        "below_ema200": "Close 1,854.00 vs EMA200 1,884.72",
+        "extended_above_ema20": "Close 1,854.00 vs EMA20 1,837.67 (+0.9%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 1,854.00 vs 52w low 1,597.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -704,41 +705,9 @@
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 30.121231,
-    "pe_forward": 19.862347,
-    "eps_trailing": 61.04,
-    "eps_forward": 92.56711,
-    "roe": 0.14602,
-    "profit_margin": 0.06534,
-    "gross_margin": 0.51241,
-    "operating_margin": 0.36187,
-    "market_cap": 2939431157760,
-    "current_price": 1838.6,
-    "sector": "Financial Services",
-    "name": "Bajaj Finserv Ltd.",
-    "debt_to_equity": 256.404,
-    "dividend_yield": 0.07,
-    "price_to_book": 3.7677155,
-    "roce": null,
-    "revenue_growth_yoy": 0.13625484428648632
-  },
-  "analyst": {
-    "recommendation": "buy",
-    "recommendation_mean": 1.93333,
-    "num_analysts": 15,
-    "target_low": 1600.0,
-    "target_mean": 2162.7334,
-    "target_median": 2190.0,
-    "target_high": 2430.0
-  },
-  "events": {
-    "earnings_dates": [
-      "2026-07-31"
-    ],
-    "ex_dividend_date": "2026-06-30",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:20:31.768310+00:00"
+  "updated_at": "2026-07-17T10:41:23.917757+00:00"
 }

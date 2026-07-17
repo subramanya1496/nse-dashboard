@@ -3,35 +3,30 @@
   "name": "Paras Defence and Space Technologies",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-07-16",
-    "close": 1197.0,
-    "prev_close": 1216.9,
-    "change_pct": -1.635302818637529,
-    "ema20": 1219.0204893637126,
-    "ema50": 1088.394083625996,
-    "ema200": 838.6410056230055,
-    "rsi14": 50.729829504106696,
-    "macd": 43.18898734639083,
-    "macd_signal": 70.54349625349045,
-    "atr14": 67.71032663559899,
-    "adx14": 34.991487481595364,
-    "adx_pos": 24.84390590529167,
-    "adx_neg": 18.71513960182349,
-    "bb_high": 1403.2029543982126,
-    "bb_low": 1154.8520456017873,
-    "bb_mid": 1279.0275,
-    "vwap20": 1316.6383992785572,
+    "date": "2026-07-17",
+    "close": 1176.3,
+    "prev_close": 1197.0,
+    "change_pct": -1.7293233082706805,
+    "ema20": 1214.9518713290734,
+    "ema50": 1091.8413750914847,
+    "ema200": 842.0068918567765,
+    "rsi14": 48.842987447993394,
+    "macd": 35.15320148456135,
+    "macd_signal": 63.465437299694585,
+    "atr14": 65.45244616268575,
+    "adx14": 32.93152285354038,
+    "adx_pos": 23.86515278486505,
+    "adx_neg": 21.098967848977633,
+    "bb_high": 1403.3045112462587,
+    "bb_low": 1141.350488753741,
+    "bb_mid": 1272.3274999999999,
+    "vwap20": 1316.4828098599726,
     "high_52w": 1443.0,
     "low_52w": 580.5,
-    "volume": 625363.0,
-    "avg_volume20": 4472852.35
+    "volume": 708436.0,
+    "avg_volume20": 3643625.4
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 626.3,
-      "ema50": 682.66
-    },
     {
       "date": "2026-01-21",
       "close": 623.65,
@@ -415,7 +410,7 @@
     {
       "date": "2026-05-15",
       "close": 753.4,
-      "ema50": 743.74
+      "ema50": 743.75
     },
     {
       "date": "2026-05-18",
@@ -626,6 +621,11 @@
       "date": "2026-07-16",
       "close": 1197.0,
       "ema50": 1088.39
+    },
+    {
+      "date": "2026-07-17",
+      "close": 1176.3,
+      "ema50": 1091.84
     }
   ],
   "flags": {
@@ -633,39 +633,37 @@
       "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,197.00 vs EMA20 1,219.02",
-      "ema20_above_ema50": "EMA20 1,219.02 vs EMA50 1,088.39",
-      "ema50_above_ema200": "EMA50 1,088.39 vs EMA200 838.64",
-      "rsi_above_50": "RSI(14) 50.73 vs 50",
-      "macd_bullish": "MACD 43.19 vs signal 70.54",
-      "adx_trending_up": "ADX(14) 34.99 vs 20, +DI 24.84 vs -DI 18.72",
-      "price_above_vwap20": "Close 1,197.00 vs 20d VWAP 1,316.64",
-      "price_above_bb_mid": "Close 1,197.00 vs BB mid 1,279.03"
+      "price_above_ema20": "Close 1,176.30 vs EMA20 1,214.95",
+      "ema20_above_ema50": "EMA20 1,214.95 vs EMA50 1,091.84",
+      "ema50_above_ema200": "EMA50 1,091.84 vs EMA200 842.01",
+      "rsi_above_50": "RSI(14) 48.84 vs 50",
+      "macd_bullish": "MACD 35.15 vs signal 63.47",
+      "adx_trending_up": "ADX(14) 32.93 vs 20, +DI 23.87 vs -DI 21.10",
+      "price_above_vwap20": "Close 1,176.30 vs 20d VWAP 1,316.48",
+      "price_above_bb_mid": "Close 1,176.30 vs BB mid 1,272.33"
     },
     "flags_on": [
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50",
       "adx_trending_up"
     ],
-    "flag_count": 4,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "4/8 bullish flags",
-        "patterns: near buy zone"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 67.71 = 5.7% of price",
-        "rsi_extreme": "RSI(14) 50.7",
-        "below_ema200": "Close 1,197.00 vs EMA200 838.64",
-        "extended_above_ema20": "Close 1,197.00 vs EMA20 1,219.02 (-1.8%)",
-        "large_day_move": "Day change -1.6%",
-        "near_52w_low": "Close 1,197.00 vs 52w low 580.50"
+        "atr_high": "ATR 65.45 = 5.6% of price",
+        "rsi_extreme": "RSI(14) 48.8",
+        "below_ema200": "Close 1,176.30 vs EMA200 842.01",
+        "extended_above_ema20": "Close 1,176.30 vs EMA20 1,214.95 (-3.2%)",
+        "large_day_move": "Day change -1.7%",
+        "near_52w_low": "Close 1,176.30 vs 52w low 580.50"
       },
       "conditions_on": [
         "atr_high"
@@ -696,7 +694,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -704,39 +702,9 @@
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 109.31507,
-    "pe_forward": 72.10843,
-    "eps_trailing": 10.95,
-    "eps_forward": 16.6,
-    "roe": 0.13137999,
-    "profit_margin": 0.18486,
-    "gross_margin": 0.49933997,
-    "operating_margin": 0.22305,
-    "market_cap": 96463028224,
-    "current_price": 1197.0,
-    "sector": "Industrials",
-    "name": "Paras Defence and Space Technologies Limited",
-    "debt_to_equity": 3.731,
-    "dividend_yield": 0.04,
-    "price_to_book": 13.285239,
-    "roce": 0.162928531472257,
-    "revenue_growth_yoy": 0.3068886085668842
-  },
-  "analyst": {
-    "recommendation": "none",
-    "recommendation_mean": null,
-    "num_analysts": 1,
-    "target_low": 703.0,
-    "target_mean": 703.0,
-    "target_median": 703.0,
-    "target_high": 703.0
-  },
-  "events": {
-    "earnings_dates": [],
-    "ex_dividend_date": "2025-08-08",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:28:16.922973+00:00"
+  "updated_at": "2026-07-17T10:42:06.724744+00:00"
 }

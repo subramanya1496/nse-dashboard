@@ -3,35 +3,30 @@
   "name": null,
   "sector": null,
   "indicators": {
-    "date": "2026-07-16",
-    "close": 51.97,
-    "prev_close": 52.42,
-    "change_pct": -0.8584509729111081,
-    "ema20": 54.74521729077548,
-    "ema50": 54.32799994850224,
-    "ema200": 53.09562366945164,
-    "rsi14": 35.21494938538741,
-    "macd": -0.8837059076070446,
-    "macd_signal": -0.2402334752330983,
-    "atr14": 1.4642440120333475,
-    "adx14": 22.38885487887697,
-    "adx_pos": 16.35262001014382,
-    "adx_neg": 31.16718342131557,
-    "bb_high": 61.02728770793273,
-    "bb_low": 50.964712292067276,
-    "bb_mid": 55.996,
-    "vwap20": 56.8092092908961,
+    "date": "2026-07-17",
+    "close": 51.99,
+    "prev_close": 51.97,
+    "change_pct": 0.03848374061959424,
+    "ema20": 54.482815644034964,
+    "ema50": 54.236314255050985,
+    "ema200": 53.09024881885951,
+    "rsi14": 35.344553831898835,
+    "macd": -0.980922124687936,
+    "macd_signal": -0.388371205133097,
+    "atr14": 1.4325122968981496,
+    "adx14": 23.327054559652446,
+    "adx_pos": 15.52093069287437,
+    "adx_neg": 32.623639277376974,
+    "bb_high": 60.861255873207206,
+    "bb_low": 50.4857441267928,
+    "bb_mid": 55.673500000000004,
+    "vwap20": 56.287778031962546,
     "high_52w": 68.3,
     "low_52w": 38.19,
-    "volume": 45561488.0,
-    "avg_volume20": 66630414.7
+    "volume": 111362634.0,
+    "avg_volume20": 68084767.55
   },
   "price_history": [
-    {
-      "date": "2026-01-20",
-      "close": 46.34,
-      "ema50": 52.63
-    },
     {
       "date": "2026-01-21",
       "close": 45.53,
@@ -626,6 +621,11 @@
       "date": "2026-07-16",
       "close": 51.97,
       "ema50": 54.33
+    },
+    {
+      "date": "2026-07-17",
+      "close": 51.99,
+      "ema50": 54.24
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 51.97 vs EMA20 54.75",
-      "ema20_above_ema50": "EMA20 54.75 vs EMA50 54.33",
-      "ema50_above_ema200": "EMA50 54.33 vs EMA200 53.10",
-      "rsi_above_50": "RSI(14) 35.21 vs 50",
-      "macd_bullish": "MACD -0.88 vs signal -0.24",
-      "adx_trending_up": "ADX(14) 22.39 vs 20, +DI 16.35 vs -DI 31.17",
-      "price_above_vwap20": "Close 51.97 vs 20d VWAP 56.81",
-      "price_above_bb_mid": "Close 51.97 vs BB mid 56.00"
+      "price_above_ema20": "Close 51.99 vs EMA20 54.48",
+      "ema20_above_ema50": "EMA20 54.48 vs EMA50 54.24",
+      "ema50_above_ema200": "EMA50 54.24 vs EMA200 53.09",
+      "rsi_above_50": "RSI(14) 35.34 vs 50",
+      "macd_bullish": "MACD -0.98 vs signal -0.39",
+      "adx_trending_up": "ADX(14) 23.33 vs 20, +DI 15.52 vs -DI 32.62",
+      "price_above_vwap20": "Close 51.99 vs 20d VWAP 56.29",
+      "price_above_bb_mid": "Close 51.99 vs BB mid 55.67"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.46 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 35.2",
-        "below_ema200": "Close 51.97 vs EMA200 53.10",
-        "extended_above_ema20": "Close 51.97 vs EMA20 54.75 (-5.1%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 51.97 vs 52w low 38.19"
+        "atr_high": "ATR 1.43 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 35.3",
+        "below_ema200": "Close 51.99 vs EMA200 53.09",
+        "extended_above_ema20": "Close 51.99 vs EMA20 54.48 (-4.6%)",
+        "large_day_move": "Day change +0.0%",
+        "near_52w_low": "Close 51.99 vs 52w low 38.19"
       },
       "conditions_on": [
         "atr_high",
@@ -692,8 +693,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -702,41 +703,9 @@
       "intraday": null
     }
   },
-  "fundamentals": {
-    "pe_trailing": 22.69264,
-    "pe_forward": 22.55351,
-    "eps_trailing": 2.31,
-    "eps_forward": 2.32425,
-    "roe": 0.40636003,
-    "profit_margin": 0.18966,
-    "gross_margin": 0.35232,
-    "operating_margin": 0.16420999,
-    "market_cap": 720458285056,
-    "current_price": 52.42,
-    "sector": "Industrials",
-    "name": "Suzlon Energy Limited",
-    "debt_to_equity": 5.873,
-    "dividend_yield": null,
-    "price_to_book": 7.620293,
-    "roce": 0.26997598753036667,
-    "revenue_growth_yoy": 0.5370581643523553
-  },
-  "analyst": {
-    "recommendation": "strong_buy",
-    "recommendation_mean": 1.38462,
-    "num_analysts": 13,
-    "target_low": 52.0,
-    "target_mean": 65.84615,
-    "target_median": 65.0,
-    "target_high": 75.0
-  },
-  "events": {
-    "earnings_dates": [
-      "2026-08-12"
-    ],
-    "ex_dividend_date": "2008-07-17",
-    "dividend_date": null
-  },
+  "fundamentals": null,
+  "analyst": null,
+  "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-16T14:29:50.145255+00:00"
+  "updated_at": "2026-07-17T10:42:17.913504+00:00"
 }
