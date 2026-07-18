@@ -1486,11 +1486,13 @@
             <div class="panel">
               <div class="panel-head"><h2>About this terminal</h2></div>
               <div class="empty-note" style="color:var(--text-2)">
-                Personal research terminal for the Indian NSE market. Everything is ranked and explained by
-                <b>flag count</b> — named conditions that fired — never a composite or weighted score, and never
-                a buy/sell verdict. Analyst consensus shown in stock detail is external third-party opinion,
-                labelled as such. Data updates via the scheduled daily pipeline (GitHub Actions), not live ticks.
-                Personal use only.
+                Personal research terminal for the Indian NSE market. Most pages rank and explain by
+                <b>flag count</b> — named conditions that fired. The Recommendations page (since 2026-07-18)
+                additionally computes rule-based 0–100 scores, entry tiers, targets/stops and risk:reward —
+                every formula is fixed, documented and shown with its point breakdown; nothing is AI-derived
+                or a black box. Analyst consensus shown in stock detail is external third-party opinion,
+                labelled as such. Data updates via the scheduled daily pipeline (GitHub Actions), not live
+                ticks. Personal research only — not investment advice.
               </div>
             </div>
           </div>
