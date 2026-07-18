@@ -80,7 +80,7 @@
               color var(--dur-fast) var(--ease-out);
 }
 .btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-1); color: var(--text-1); }
-.btn:active { transform: translateY(0); box-shadow: none; }
+.btn:active { transform: translateY(0) scale(0.98); box-shadow: none; }
 .btn .icon { font-size: 13px; line-height: 1; }
 
 .btn-primary {
@@ -247,22 +247,49 @@
 
 .kpi-card { position: relative; display: block; width: 100%; text-align: left;
   background: var(--surface-1); background-image: var(--card-gradient);
-  border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s4);
+  border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--s3) var(--s4);
   font-family: var(--font-ui); color: inherit; box-shadow: var(--shadow-1);
+  overflow: hidden;
   transition: transform var(--dur-med) var(--ease-out), box-shadow var(--dur-med) var(--ease-out), border-color var(--dur-med) var(--ease-out); }
 button.kpi-card { cursor: pointer; }
 button.kpi-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); border-color: var(--border-strong); }
 button.kpi-card.active { border-color: var(--accent-border); box-shadow: var(--glow-accent); }
+.kpi-top { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); margin-bottom: var(--s1); }
 .kpi-label { font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-3); font-weight: 700; margin-bottom: var(--s1); }
-.kpi-value { font-size: var(--text-xl); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; }
-.kpi-value.mono { font-family: var(--font-mono); }
+.kpi-top .kpi-label { margin-bottom: 0; }
+.kpi-icon {
+  width: 24px; height: 24px; flex-shrink: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: var(--r-xs);
+  background: var(--neutral-soft); color: var(--text-3);
+}
+.kpi-icon svg { width: 13px; height: 13px; }
+.kpi-icon.up { background: var(--up-soft); color: var(--up); }
+.kpi-icon.down { background: var(--down-soft); color: var(--down); }
+.kpi-icon.warn { background: var(--warn-soft); color: var(--warn); }
+.kpi-icon.accent { background: var(--accent-soft); color: var(--accent); }
+.kpi-icon.special { background: var(--special-soft); color: var(--special); }
+.kpi-value { font-size: 24px; font-weight: 800; line-height: 1.15; letter-spacing: -0.03em; }
+.kpi-value.mono { font-family: var(--font-mono); letter-spacing: -0.01em; }
 .kpi-value.up { color: var(--up); }
 .kpi-value.down { color: var(--down); }
 .kpi-sub { font-size: var(--text-xs); color: var(--text-3); margin-top: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .kpi-sub.up { color: var(--up); }
 .kpi-sub.down { color: var(--down); }
-.kpi-expand { position: absolute; top: var(--s3); right: var(--s3); font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-3); opacity: 0; transition: opacity var(--dur-fast) var(--ease-out); }
+.kpi-delta {
+  display: inline-flex; align-items: center; gap: 3px;
+  margin-top: var(--s2);
+  font-family: var(--font-mono); font-size: 9.5px; font-weight: 700;
+  padding: 1px 7px; border-radius: var(--r-full);
+  background: var(--neutral-soft); color: var(--text-3);
+  cursor: help;
+}
+.kpi-delta.up { background: var(--up-soft); color: var(--up); }
+.kpi-delta.down { background: var(--down-soft); color: var(--down); }
+.kpi-expand { position: absolute; top: var(--s3); right: var(--s3); font-size: 9.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-3); opacity: 0; background: var(--surface-1); padding-left: var(--s1); transition: opacity var(--dur-fast) var(--ease-out); }
 button.kpi-card:hover .kpi-expand { opacity: 0.9; }
+button.kpi-card:hover .kpi-icon, button.kpi-card.active .kpi-icon { opacity: 0; }
+button.kpi-card .kpi-icon { transition: opacity var(--dur-fast) var(--ease-out); }
 button.kpi-card.active .kpi-expand { opacity: 1; color: var(--accent); }
 
 /* ---------------- Progress ring ---------------- */
@@ -355,6 +382,8 @@ th {
   padding: 0 var(--s2) var(--s2);
   font-weight: 700;
   border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 2;
+  background: var(--surface-1);
 }
 td { padding: var(--s2); border-top: 1px solid var(--line); vertical-align: top; }
 tr td:first-child { font-weight: 600; }

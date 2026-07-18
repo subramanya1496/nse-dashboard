@@ -1031,4 +1031,5 @@ window.dashboardUtils = {
   attentionStarsHtml,
   riskChipHtml,
   trendChipsHtml,
+  dataCompletenessHtml,
 };

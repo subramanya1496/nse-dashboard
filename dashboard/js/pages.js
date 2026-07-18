@@ -58,9 +58,31 @@
       <a class="btn btn-primary btn-sm kpi-portfolio-link" href="#/portfolio">Open full portfolio →</a>`;
   }
 
+  // Lucide-style inline icons for the KPI cards (stroke = currentColor)
+  const KPI_ICONS = {
+    flag: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>`,
+    breakout: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
+    volume: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>`,
+    sector: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>`,
+    wallet: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 14h.01"/><path d="M2 7l3.5-4h13L22 7"/></svg>`,
+  };
+
+  // "vs yesterday" chips — honest counts from changes.json (flag gains/losses vs the
+  // previous published run), never an invented trend. No changes file → no chip.
+  function kpiDeltaChip(members, data) {
+    const changes = data.changes;
+    if (!changes || !changes.symbols) return "";
+    const gained = members.filter((s) => (changes.symbols[s.symbol] || []).some((e) => e.kind === "flags" && e.text.includes("gained"))).length;
+    const lost = members.filter((s) => (changes.symbols[s.symbol] || []).some((e) => e.kind === "flags" && e.text.includes("lost"))).length;
+    const title = `Flag changes vs the previous run (${changes.baseline_date} → ${changes.data_date})`;
+    if (gained) return `<span class="kpi-delta up" title="${title}">▲ ${gained} gained flags today</span>`;
+    if (lost) return `<span class="kpi-delta down" title="${title}">▼ ${lost} lost flags today</span>`;
+    return `<span class="kpi-delta" title="${title}">— no flag changes today</span>`;
+  }
+
   // KPI metric-card row + shared detail drawer (Dashboard page)
   function renderKpis(rowEl, data) {
-    const { stocks, sectors, portfolio } = data;
+    const { stocks, sectors, portfolio, stocksBySymbol } = data;
     const byChangeDesc = (a, b) => (b.indicators.change_pct ?? 0) - (a.indicators.change_pct ?? 0);
     const perfect = [...stocks].filter((s) => s.flags.flag_count === s.flags.flag_total).sort(byChangeDesc);
     const breakouts = [...stocks].filter(U.isBreakoutCandidate).sort(byChangeDesc);
@@ -83,18 +105,32 @@
       size: 44, stroke: 4, cls, title: `${n} of ${stocks.length} tracked stocks`,
     });
 
+    // Portfolio day change vs previous close — the only honest "vs yesterday" money number
+    let dayChange = 0, dayBase = 0;
+    priced.forEach((h) => {
+      const ind = stocksBySymbol[h.symbol]?.indicators;
+      if (!ind || ind.prev_close == null || ind.close == null) return;
+      dayChange += (ind.close - ind.prev_close) * h.quantity;
+      dayBase += ind.prev_close * h.quantity;
+    });
+    const dayPct = dayBase ? (dayChange / dayBase) * 100 : null;
+    const pnlDelta = dayPct == null ? "" :
+      `<span class="kpi-delta ${dayChange > 0 ? "up" : dayChange < 0 ? "down" : ""}" title="Value change vs the previous close, across priced holdings">${dayChange >= 0 ? "▲" : "▼"} ${dayPct >= 0 ? "+" : ""}${dayPct.toFixed(2)}% today</span>`;
+
     const cards = [
       {
-        key: "perfect", label: "All 8/8 flags",
+        key: "perfect", label: "All 8/8 flags", icon: KPI_ICONS.flag, iconCls: "up",
         valueHtml: `<div class="kpi-value mono">${perfect.length}</div>`,
         sub: perfect.length ? "all 8 bullish conditions met" : "none today",
+        delta: kpiDeltaChip(perfect, data),
         ring: ring(perfect.length, "up"),
         detail: () => ({ title: `Stocks with all 8/8 bullish flags (${perfect.length})`, body: kpiStockRows(perfect) }),
       },
       {
-        key: "breakouts", label: "Breakout candidates",
+        key: "breakouts", label: "Breakout candidates", icon: KPI_ICONS.breakout, iconCls: "accent",
         valueHtml: `<div class="kpi-value mono">${breakouts.length}</div>`,
         sub: "above upper band / at 52w high",
+        delta: kpiDeltaChip(breakouts, data),
         ring: ring(breakouts.length, "accent"),
         detail: () => ({
           title: `Breakout candidates (${breakouts.length})`,
@@ -103,9 +139,10 @@
         }),
       },
       {
-        key: "accum", label: "Silent accumulation",
+        key: "accum", label: "Silent accumulation", icon: KPI_ICONS.volume, iconCls: "warn",
         valueHtml: `<div class="kpi-value mono">${accum.length}</div>`,
         sub: "volume ≥1.4× avg, price flat",
+        delta: kpiDeltaChip(accum, data),
         ring: ring(accum.length, "warn"),
         detail: () => ({
           title: `Silent accumulation (${accum.length})`,
@@ -113,7 +150,7 @@
         }),
       },
       {
-        key: "sector", label: "Strongest sector",
+        key: "sector", label: "Strongest sector", icon: KPI_ICONS.sector, iconCls: "special",
         valueHtml: `<div class="kpi-value">${topSector ? topSector.sector : "—"}</div>`,
         sub: topSector ? `${topSector.avg_flag_pct}% avg flags · ${topSector.stock_count} stocks` : "",
         detail: () => ({
@@ -122,13 +159,14 @@
         }),
       },
       {
-        key: "pnl", label: "Portfolio P&L",
+        key: "pnl", label: "Portfolio P&L", icon: KPI_ICONS.wallet, iconCls: pnl >= 0 ? "up" : "down",
         valueHtml: holdings.length
           ? `<div class="kpi-value mono ${pnlCls}">${pnl >= 0 ? "+" : "−"}₹${Math.abs(pnl).toLocaleString("en-IN", { maximumFractionDigits: 0 })}</div>`
           : `<div class="kpi-value">—</div>`,
         sub: holdings.length
           ? `<span class="${pnlCls}">${pnlPct >= 0 ? "+" : ""}${pnlPct.toFixed(2)}% unrealized</span>`
           : "no holdings configured",
+        delta: holdings.length ? pnlDelta : "",
         detail: () => ({
           title: `Portfolio — unrealized P&L`,
           body: holdings.length
@@ -141,9 +179,10 @@
     rowEl.innerHTML = cards
       .map(
         (c) => `<button class="kpi-card" data-kpi="${c.key}">
-          <div class="kpi-label">${c.label}</div>
+          <div class="kpi-top"><span class="kpi-label">${c.label}</span><span class="kpi-icon ${c.iconCls || ""}" aria-hidden="true">${c.icon || ""}</span></div>
           ${c.valueHtml}
           <div class="kpi-sub">${c.sub}</div>
+          ${c.delta || ""}
           ${c.ring ? `<span class="kpi-ring">${c.ring}</span>` : ""}
           <span class="kpi-expand">details ▾</span>
         </button>`
@@ -188,7 +227,10 @@
     });
   }
 
-  // Opportunities list (rule-based explanations, top N by flag count)
+  // Opportunities list (top N by flag count) — compact rows: badges + observed levels
+  // + a one-line summary; the full rule-based explanation lives behind the expand.
+  // Every badge is a count of named conditions with its reasons in the title — the
+  // requested "confidence" is shown honestly as the data-completeness count.
   function renderOpportunitiesInto(el, data, limit = 5) {
     const { stocks, flagDefinitions } = data;
     const top = [...stocks].sort((a, b) => b.flags.flag_count - a.flags.flag_count).slice(0, limit);
@@ -199,7 +241,22 @@
     el.innerHTML = "";
     top.forEach((stock, i) => {
       const exp = U.buildExplanation(stock, flagDefinitions);
-      const chg = U.formatChangePct(stock.indicators.change_pct);
+      const ind = stock.indicators;
+      const chg = U.formatChangePct(ind.change_pct);
+      const ratio = U.volumeRatio(ind);
+      const volBadge = ratio == null ? "" :
+        `<span class="vol-badge ${ratio >= 1.5 ? "hot" : ""}" title="Today's volume vs the 20-day average">${ratio.toFixed(1)}× vol</span>`;
+
+      const sr = U.supportResistance(stock);
+      const lvPct = (target) => (target && ind.close ? ((target - ind.close) / ind.close) * 100 : null);
+      const lv = (label, value, cls) => {
+        const d = lvPct(value);
+        return `<span class="lv" title="Observed from the last 20 sessions' closes — not a target">${label} <b class="mono">${U.formatPrice(value)}</b>${d == null ? "" : ` <span class="${cls}">${d >= 0 ? "+" : ""}${d.toFixed(1)}%</span>`}</span>`;
+      };
+      const levels = [];
+      if (sr) { levels.push(lv("S", sr.support, "down")); levels.push(lv("R", sr.resistance, "up")); }
+      if (ind.high_52w != null) levels.push(lv("52w", ind.high_52w, "up"));
+
       const wrap = document.createElement("div");
       wrap.className = "opp-block";
       wrap.innerHTML = `
@@ -209,20 +266,25 @@
             <div class="opp-head">
               <span class="name">${stock.symbol}</span>
               <span class="sector-badge">${stock.sector || "—"}</span>
-              <span class="flag-count ${U.flagCountClass(stock.flags.flag_count, stock.flags.flag_total)}">${stock.flags.flag_count}/${stock.flags.flag_total}</span>
-              <span class="opp-price mono">${U.formatPrice(stock.indicators.close)} <span class="chg ${chg.cls}">${chg.text}</span></span>
+              <span class="opp-price mono">${U.formatPrice(ind.close)} <span class="chg ${chg.cls}">${chg.text}</span></span>
             </div>
+            <div class="opp-badges">
+              <span class="flag-count ${U.flagCountClass(stock.flags.flag_count, stock.flags.flag_total)}">${stock.flags.flag_count}/${stock.flags.flag_total}</span>
+              ${U.attentionStarsHtml(stock)}${U.riskChipHtml(stock, { compact: true })}${U.trendChipsHtml(stock)}${volBadge}${U.dataCompletenessHtml(stock)}
+            </div>
+            ${levels.length ? `<div class="opp-levels">${levels.join("")}</div>` : ""}
             <div class="opp-summary">${exp.summary}</div>
-            ${exp.highlights.map((h) => `<div class="exp-highlight">▸ ${h}</div>`).join("")}
           </div>
           <span class="opp-toggle" aria-hidden="true">▾</span>
         </div>`;
       const detail = document.createElement("div");
       detail.className = "opp-detail";
       detail.hidden = true;
-      detail.innerHTML = `<div class="exp-risks"><span class="exp-risk-title">Risks to watch</span>
+      detail.innerHTML = `
+        ${exp.highlights.length ? `<div class="opp-highlights">${exp.highlights.map((h) => `<div class="exp-highlight">▸ ${h}</div>`).join("")}</div>` : ""}
+        <div class="exp-risks"><span class="exp-risk-title">Risks to watch</span>
           ${exp.risks.map((r) => `<div class="exp-risk">⚠ ${r}</div>`).join("")}</div>
-        <div class="exp-note">Rule-based explanation generated from the flags — not a recommendation. Claude AI wording arrives in Phase 3.</div>`;
+        <div class="exp-note">Rule-based explanation generated from the flags — not a recommendation. Levels are observed from price history, not targets. Claude AI wording arrives in Phase 3.</div>`;
       wrap.appendChild(detail);
       wrap.querySelector(".opp-row").addEventListener("click", () => {
         detail.hidden = !detail.hidden;
@@ -319,7 +381,17 @@
     const participating = sectors?.filter((s) => s.avg_flag_pct >= 50).length ?? 0;
 
     const bar = (n) => `<span class="breadth-bar"><span style="width:${((n / total) * 100).toFixed(0)}%"></span></span>`;
+    // Visual summary — each ring is the share of tracked stocks/sectors meeting a
+    // named condition (a fraction of counts made visual, never a "health score").
+    const bvRing = (n, of, label, cls, title) =>
+      `<div class="bv-item">${P.ringHtml(of ? n / of : 0, `${n}`, { size: 56, stroke: 5, cls, title })}<span class="bv-cap">${label}</span></div>`;
+    const visual = `<div class="breadth-visual">
+      ${bvRing(above200, stocks.length, "above EMA200", "up", `${above200} of ${stocks.length} tracked stocks close above their 200-day EMA`)}
+      ${bvRing(adv, stocks.length, "advancing", adv >= dec ? "up" : "down", `${adv} of ${stocks.length} tracked stocks up on the day`)}
+      ${bvRing(participating, sectors?.length ?? 0, "sectors ≥50% flags", "accent", `${participating} of ${sectors?.length ?? 0} sectors average at least half the bullish flags`)}
+    </div>`;
     el.innerHTML = `
+      ${visual}
       <div class="breadth-item"><span class="bk">Above EMA200</span><span class="bv mono">${above200}/${stocks.length}</span>${bar(above200)}</div>
       <div class="breadth-item"><span class="bk">A/D ratio</span><span class="bv mono">${adRatio}</span><span class="bnames">${adv} adv · ${dec} dec (watchlist)</span></div>
       <div class="breadth-item"><span class="bk">New 52w highs</span><span class="bv mono up">${high52.length}</span><span class="bnames">${high52.slice(0, 4).map((s) => s.symbol).join(" · ")}</span></div>
@@ -466,6 +538,7 @@
 
   // Institutional / news / analytics / health (right-rail bodies)
   function renderInstitutionalInto(el, stocks) {
+    el.classList.remove("empty-note"); // container may carry the "Loading…" empty state
     const withData = stocks.filter((s) => s.shareholding);
     if (!withData.length) {
       el.innerHTML = `<div class="empty-note">Promoter / FII / DII changes not available this run — the NSE shareholding source has been blocking automated requests (each skip is logged by the pipeline). This section fills in automatically when the source responds.</div>`;
@@ -535,6 +608,7 @@
   }
 
   function renderPortfolioAnalyticsInto(el, data) {
+    el.classList.remove("empty-note");
     const { portfolio, stocksBySymbol } = data;
     const holdings = portfolio.holdings.filter((h) => h.current_price != null);
     if (!portfolio.holdings.length) {
@@ -603,6 +677,7 @@
   }
 
   function renderRunStatusInto(el, data) {
+    el.classList.remove("empty-note");
     const { meta, runReport, validation, news, stocks } = data;
     const rows = [];
     const kv = (k, v, cls = "") => rows.push(`<div class="health-row"><span class="hk">${k}</span><span class="hv mono ${cls}">${v}</span></div>`);
@@ -1043,6 +1118,7 @@
           <aside>
             <div class="side-card"><h5>Allocation</h5><div id="pf-allocation" class="empty-note">Loading…</div></div>
             <div class="side-card"><h5>Sector mix</h5><div id="pf-sectors" class="empty-note">Loading…</div></div>
+            <div class="side-card"><h5>Risk conditions</h5><div id="pf-risk" class="empty-note sm">Loading…</div></div>
             <div class="side-card"><h5>Manage</h5>
               <div class="manage-buttons">
                 <a class="btn btn-primary" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=add-holding.yml" target="_blank" rel="noopener">+ Add holding</a>
@@ -1057,6 +1133,7 @@
         main.querySelector("#pf-kpis").innerHTML = "";
         main.querySelector("#pf-allocation").innerHTML = `<div class="empty-note sm">No holdings.</div>`;
         main.querySelector("#pf-sectors").innerHTML = `<div class="empty-note sm">No holdings.</div>`;
+        main.querySelector("#pf-risk").innerHTML = `<div class="empty-note sm">No holdings.</div>`;
         return;
       }
 
@@ -1105,6 +1182,7 @@
 
       // Allocation
       const allocEl = main.querySelector("#pf-allocation");
+      allocEl.classList.remove("empty-note");
       if (!s.priced.length) {
         allocEl.innerHTML = `<div class="empty-note">No priced holdings to allocate.</div>`;
       } else {
@@ -1123,8 +1201,25 @@
           .join("") + `<div class="fine">Weight = holding value ÷ total priced value at the last close.</div>`;
       }
 
+      // Risk conditions per holding — a count of named booleans from the pipeline's
+      // decision block (the same 6 conditions shown in stock detail), never a meter.
+      const riskEl = main.querySelector("#pf-risk");
+      riskEl.classList.remove("empty-note", "sm");
+      const withDecision = s.priced.filter((h) => stocksBySymbol[h.symbol]?.decision?.risk);
+      if (!withDecision.length) {
+        riskEl.innerHTML = `<div class="empty-note sm">Risk conditions appear after the next pipeline run publishes the decision block.</div>`;
+      } else {
+        const order = { high: 0, elevated: 1, low: 2 };
+        riskEl.innerHTML = [...withDecision]
+          .sort((a, b) => (order[stocksBySymbol[a.symbol].decision.risk.level] ?? 3) - (order[stocksBySymbol[b.symbol].decision.risk.level] ?? 3))
+          .map((h) => `<div class="pf-risk-row"><span class="ss">${h.symbol}</span>${U.riskChipHtml(stocksBySymbol[h.symbol], { compact: true })}</div>`)
+          .join("") +
+          `<div class="fine">Count of 6 named risk conditions per holding (hover a chip for which fired) — observed conditions, not a risk rating.</div>`;
+      }
+
       // Sector mix
       const secEl = main.querySelector("#pf-sectors");
+      secEl.classList.remove("empty-note");
       if (!s.priced.length) {
         secEl.innerHTML = `<div class="empty-note">No priced holdings.</div>`;
       } else {
