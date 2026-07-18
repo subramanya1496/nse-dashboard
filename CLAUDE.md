@@ -30,20 +30,31 @@ some API credentials (Angel One account) but are otherwise independent.
 4. **Phase 4 — Optional, later**: backtesting flag combinations, historical flag charts,
    custom flag weighting. Do not build this until explicitly asked.
 
-## Ranking philosophy — the one hard rule
-**Never build a composite/weighted score (no 0–100 number, no single "verdict").**
-Rank and explain everything by **flag count** (e.g. "6/8 bullish conditions met") and
-name which specific flags fired. This was a deliberate correction from an earlier
-ChatGPT-authored plan that used weighted composite scores — do not reintroduce that
-pattern even if it seems like a simplification. If asked to add scoring later, flag
-the tension with this rule before proceeding.
+## Ranking philosophy (hard ban REVOKED 2026-07-18 — read the history)
+**History:** from project start until 2026-07-18 the one hard rule was "never build a
+composite/weighted score, no 0–100 number, no verdict, no target/stop prices" — a
+deliberate correction from an earlier ChatGPT-authored plan. The 2026-07-16 decision
+layer and the first version of the Recommendations page were both built as
+"rule-compliant translations" (counts of named conditions) under that rule.
 
-**Exception, by explicit decision (2026-07-09):** the stock detail panel shows an
-*external* analyst-consensus block (yfinance `recommendationKey`/target prices, e.g.
-"Buy · 21 analysts"). This is **not** a rule violation: it is third-party opinion
-displayed as-is and clearly labelled "external · not this dashboard's" — the dashboard
-never derives its own buy/hold/sell verdict from the flags or anything else. Keep that
-labelling; do not let this grow into a dashboard-generated verdict.
+**Revocation (2026-07-18, explicit owner decision):** after the translated
+Recommendations page shipped and the tension was flagged again, the owner explicitly
+revoked the ban ("revoke CLAUDE.md hard bans and start adding"). Composite weighted
+scores, recommendation tiers including "Avoid", target/stop-loss levels, risk:reward
+ratios, holding styles and directive action labels are now **permitted where
+requested**, starting with the Recommendations page.
+
+**What still holds (not revoked):**
+- **Transparency**: every score must be a fixed, documented formula whose point
+  breakdown is displayed in the UI. No opaque numbers, no AI-derived scores.
+- **Honest missing data**: unevaluable inputs are shown as missing and excluded —
+  never guessed, never zero-filled into a score silently.
+- **Personal use only** (the SEBI boundary is about distribution, not scores) and
+  "not investment advice" labelling.
+- Other pages (Dashboard, Opportunities, Watchlist, Screener, Sectors) remain
+  flag-count based for now — convert them only when explicitly asked, and update
+  their "never a score" copy when you do.
+- The external analyst-consensus block stays labelled "external · third-party".
 
 ## Platform architecture (redesigned 2026-07-18 — "NSE Terminal" multi-page shell)
 The dashboard is now a single-page app (`dashboard/index.html`) with a **left
@@ -229,45 +240,46 @@ displayed — never a weighted number. Do not "upgrade" any of them into a score
 - **Historical setup success rates were explicitly deferred** (Phase 4 backtesting) —
   do not bolt them onto this layer without a separate design pass.
 
-## Recommendations page (added 2026-07-18, ⭐ nav entry after Opportunities)
-Built from a spec that asked for recommendation badges ("Excellent Entry…Avoid"),
-an Opportunity Score, Confidence, Risk and Entry Quality gauges, buy zones, targets,
-stop losses and holding-style advice. Per the standing rule (and exactly like the
-2026-07-16 decision layer), every construct was **translated to rule-compliant form**
-— counts of named conditions and observed levels, never a weighted number, verdict,
-or price instruction. Files: `dashboard/js/recommendations.js` (self-contained page
-module + engine, loaded **before** `pages.js` so it registers before `P.boot()`),
-Recommendations section appended to `css/widgets.css`, nav badge count (excellent+
-good tiers) in `platform.js` boot. All client-side from published JSON — no pipeline
-changes.
-- **Entry tiers** (the requested badges): first-match threshold rules on 7 named
-  entry checks + flag count + risk-condition count. "Avoid" was deliberately renamed
-  **"No setup today"** (describes the setup; never commands). Tier rule text is shown
-  on the badge tooltip and inside the card. Named disqualifiers: chase-risk extension
-  (RSI >70 or ≥8% above EMA20) and a failed range-geometry check cap the top tiers.
-- **7 entry checks** (the "Why recommended" checklist): strong trend (EMA50>EMA200 &
-  close>EMA200) · pullback-or-confirmed-breakout proximity · MACD bullish · RSI 40–65 ·
-  volume ≥1.2× · sector ≥50% avg flags · range geometry ≥1.5:1. Unevaluable checks
-  shrink the denominator ("X/evaluated"), and <5 evaluable checks caps the tier at Watch.
-- **Gauges** are rings of counts: flags X/8 (the "opportunity score"), entry checks
-  X/evaluated, risk conditions X/6 (pipeline decision block), data completeness X/5
-  (the "confidence"). Do not upgrade any into a 0–100 score.
-- **Entry map**: 20-session S/R, ±2% EMA20/50 zone, ±1 ATR whisker and last close on
-  one scale — observed measurements, explicitly labelled "not targets or stops"; no
-  stop-loss or target is ever emitted. "Risk:reward" is shown as **range geometry**:
-  measured distance to resistance vs distance to support (e.g. "0.8:1 observed, not a
-  projected reward"); not measurable at range extremes and says so.
-- **Signal timeframe** (the requested holding style): names which timeframe today's
-  signals live on (momentum/swing/positional/mixed) with the reason; explicitly *not*
-  a holding instruction, and intraday is never emitted (daily pipeline).
-- **Action + "What would change this"** (the requested wait conditions): factual
-  state descriptions with the exact observed numbers and the thresholds at which each
-  failed check would fire — never instructions.
+## Recommendations page (added 2026-07-18, ⭐ nav entry after Opportunities;
+## upgraded to scored v2 the same day after the hard-ban revocation above)
+v1 shipped as a rule-compliant translation (counts only); after the owner revoked the
+score ban it was upgraded to the originally-requested form. Files:
+`dashboard/js/recommendations.js` (self-contained page module + engine, loaded
+**before** `pages.js` so it registers before `P.boot()`), Recommendations sections in
+`css/widgets.css`, nav badge (Excellent+Good count) in `platform.js` boot. All
+client-side from published JSON — no pipeline changes.
+- **Four scores 0–100, all fixed documented formulas with per-part breakdown shown
+  in the card's "Score breakdown" section:**
+  - Opportunity = flags/8 ×50 + entry checks passed/evaluated ×30 + sector avg-flag%
+    ×10 + risk headroom (1 − riskConds/6) ×10. Missing sector/decision inputs score 0
+    and are labelled "missing → 0".
+  - Entry Quality = weighted entry checks (proximity 25 · trend 20 · MACD 15 · RSI 12 ·
+    volume 10 · geometry 10 · sector 8), normalised over the *evaluable* weights only.
+  - Risk Meter = riskConds/6 ×70 + min(ATR%/5, 1) ×30. Missing decision block → "n/a",
+    never guessed.
+  - Confidence = data sources present/5 ×60 + entry checks evaluable/7 ×40.
+- **Tiers** (score thresholds, rule text on the badge): Excellent Entry (Opp≥75, EQ≥70,
+  Risk≤35, not extended) · Good Entry (Opp≥60, EQ≥55, Risk≤55, not extended) · Watch ·
+  Wait · **Avoid** (Risk≥75 forces it, or Opp<30). "Extended" (RSI>70 or ≥8% above
+  EMA20) caps at Watch and drives the "Avoid chasing" action.
+- **Entry zone map**: ideal buy zone (±2% EMA20/50), 20-session S/R, **target and
+  stop loss** (range setup: T=resistance, SL=support−0.5×ATR; breakout: T=close+range
+  height, SL=resistance−0.5×ATR) and **risk:reward** computed from them. Basis text
+  always displayed.
+- **Holding style** auto-determined (Long Term / Positional / Swing / Unclear) from
+  weekly+daily trend, flags and risk. Intraday is never assigned — daily pipeline.
+- **Actions** are directive per the spec ("Can be considered today", "Watch for
+  pullback to ₹A–₹B", "Wait for breakout above ₹R", "Wait near support", "Avoid
+  chasing", "Avoid"), always with the numbers that produced them.
+- **Wait conditions**: exact thresholds at which each failed check flips.
 - **History**: per-day tier snapshots in localStorage (`nse-reco-history`, 30 days,
-  labelled "this browser only"); shows prev→today moves; explicit empty state on day 1.
-  Gap risk and (when events are missing) earnings risk are stated as "not evaluated".
-- Filters (tier/timeframe/risk/data/pullback/breakout/near-support) persist in
-  localStorage; summary tiles toggle tier filters.
+  "this browser only"); prev→today movement chips; explicit day-1 empty state. Old
+  v1 keys ("none") still render via a legacy label.
+- Filters (tiers incl. Avoid / Swing / Positional / Long Term / High confidence ≥70 /
+  Low risk ≤35 / R:R ≥1.5 / pullback / breakout / near support) persist per browser;
+  summary tiles toggle tier filters.
+- Every card carries "Personal research, not investment advice — you make every
+  decision." Keep that line.
 
 ## Pipeline performance & reliability (overhauled 2026-07-15)
 The run used to take ~70–90 min; the profile showed almost all of it was retry backoff

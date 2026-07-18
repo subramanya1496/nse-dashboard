@@ -1,31 +1,32 @@
 // =====================================================================================
-// RECOMMENDATIONS PAGE — "out of everything I track, which entries deserve attention
-// today, and why?" Completely rule-based, computed client-side from the published
-// per-stock JSON. HARD RULE (CLAUDE.md): no composite/weighted score, no buy/sell
-// verdict, no target/stop-loss prices. The spec's "Opportunity Score / Confidence /
-// Risk / Entry Quality" are therefore rendered as the established rule-compliant
-// translations — counts of NAMED conditions with their reasons displayed:
-//   Opportunity Score → bullish flag count (X/8)
-//   Entry Quality     → count of named entry conditions (X/7, unevaluable checks
-//                       shrink the denominator)
-//   Risk              → count of the 6 named risk conditions from the pipeline
-//   Confidence        → data-completeness count (present sources / 5)
-//   Buy zone / target / stop loss → OBSERVED levels only (20-session S/R, ±2%
-//                       EMA20/50 zone, ATR as typical daily swing), labelled as
-//                       measurements, never advice. Range geometry (distance to
-//                       resistance vs distance to support) replaces "risk:reward
-//                       target" — it is measured from history, not projected.
-//   "Avoid" tier      → "No setup today" (describes the setup, never commands).
-// Every tier/action/wait-condition names the exact rule that produced it.
+// RECOMMENDATIONS PAGE — "out of every stock I track, which ones deserve my attention
+// today?" Completely rule-based, computed client-side from the published per-stock
+// JSON. No AI, no black boxes: every score is a fixed, documented weighted formula
+// whose point-by-point breakdown is displayed on the card.
+//
+// NOTE (2026-07-18): the earlier "no composite score / no targets / no verdicts"
+// hard rule was explicitly revoked by the owner. This page now shows:
+//   Opportunity Score (0–100)  — weighted: flags 50 + entry checks 30 + sector 10
+//                                + risk headroom 10
+//   Entry Quality (0–100)      — weighted entry checks (weights shown per check)
+//   Risk Meter (0–100)         — risk conditions 70 + ATR volatility 30
+//   Confidence (0–100)         — data completeness 60 + check evaluability 40
+//   Entry tiers incl. "Avoid", ideal buy zone, target, stop loss, risk:reward,
+//   holding style, and directive actions ("Can be considered today", "Avoid
+//   chasing", …).
+// The transparency requirement stays: unevaluable inputs are shown as missing
+// (never guessed), and every number's formula is visible in the UI.
 // =====================================================================================
 (function () {
   const U = window.dashboardUtils;
   const P = window.Platform;
   const fp = U.formatPrice;
 
-  // ---------------- Entry conditions (7 named checks) ----------------
-  // value: true / false / null (null = not evaluable from today's data; the
-  // denominator shrinks — never a guessed pass or fail).
+  // ---------------- Entry conditions (7 named checks, weighted) ----------------
+  // value: true / false / null (null = not evaluable from today's data — excluded
+  // from both numerator and denominator, never guessed).
+
+  const CHECK_WEIGHTS = { proximity: 25, trend: 20, macd: 15, rsi: 12, volume: 10, geometry: 10, sector: 8 };
 
   function rangeGeometry(stock) {
     const ind = stock.indicators;
@@ -49,12 +50,34 @@
     return { lo: Math.min(...emas) * 0.98, hi: Math.max(...emas) * 1.02 };
   }
 
+  // Target / stop-loss / risk:reward from the 20-session range and ATR.
+  // Range setup: target = resistance, stop = support − 0.5×ATR.
+  // Breakout (close at/above resistance): target = close + range height (measured
+  // move), stop = resistance − 0.5×ATR (failed-retest invalidation).
+  function tradeLevels(stock, geo) {
+    const ind = stock.indicators;
+    if (!geo?.sr || ind.close == null) return null;
+    const atrPad = ind.atr14 != null ? 0.5 * ind.atr14 : 0;
+    let target, stop, basis;
+    if (geo.atTop) {
+      target = ind.close + (geo.sr.resistance - geo.sr.support);
+      stop = geo.sr.resistance - atrPad;
+      basis = "breakout: target = close + 20-session range height; stop = resistance − 0.5×ATR";
+    } else {
+      target = geo.sr.resistance;
+      stop = geo.sr.support - atrPad;
+      basis = "range: target = 20-session resistance; stop = support − 0.5×ATR";
+    }
+    const rr = target > ind.close && ind.close > stop ? (target - ind.close) / (ind.close - stop) : null;
+    return { target, stop, rr, basis };
+  }
+
   function buildEntryChecks(stock, sectorPct) {
     const ind = stock.indicators;
     const ratio = U.volumeRatio(ind);
     const geo = rangeGeometry(stock);
     const checks = [];
-    const add = (key, label, value, detail) => checks.push({ key, label, value, detail });
+    const add = (key, label, value, detail) => checks.push({ key, label, value, detail, weight: CHECK_WEIGHTS[key] });
 
     const trendOk = ind.ema50 != null && ind.ema200 != null && ind.close != null
       ? ind.ema50 > ind.ema200 && ind.close > ind.ema200
@@ -66,9 +89,9 @@
     const isPullback = U.isNearBuyZone(stock);
     const isConfirmedBreakout = U.isBreakoutCandidate(stock) && ratio != null && ratio >= 1.5;
     add("proximity", "Healthy pullback / confirmed breakout", isPullback || isConfirmedBreakout,
-      isPullback ? "uptrend, price within ±2% of its EMA20/50 zone"
+      isPullback ? "uptrend, price within ±2% of its EMA20/50 buy zone"
         : isConfirmedBreakout ? `pressing upper band / 52w high with ${ratio.toFixed(1)}× volume`
-        : "price is neither in the EMA20/50 pullback zone nor in a volume-confirmed breakout");
+        : "price is neither in the EMA20/50 buy zone nor in a volume-confirmed breakout");
 
     const macdOk = ind.macd != null && ind.macd_signal != null ? ind.macd > ind.macd_signal : null;
     add("macd", "MACD bullish", macdOk,
@@ -89,17 +112,17 @@
     let geoVal = null, geoDetail = "20-session range not measurable (short history)";
     if (geo) {
       if (geo.atTop) {
-        geoDetail = "price is at/above its 20-session high — no measured upside left inside the range";
-        geoVal = null; // not measurable, not a fail: breakout entries are judged by the proximity check
+        geoDetail = "price is at/above its 20-session high — breakout geometry applies (see target/stop)";
+        geoVal = null;
       } else if (geo.ratio != null) {
         geoVal = geo.ratio >= 1.5;
-        geoDetail = `+${geo.upPct.toFixed(1)}% to resistance vs −${geo.downPct.toFixed(1)}% to support (${geo.ratio.toFixed(1)}:1 observed)`;
+        geoDetail = `+${geo.upPct.toFixed(1)}% to resistance vs −${geo.downPct.toFixed(1)}% to support (${geo.ratio.toFixed(1)}:1)`;
       } else if (geo.atBottom) {
-        geoDetail = "price is at/below its 20-session low — measured downside distance is zero";
+        geoDetail = "price is at/below its 20-session low — downside distance is zero";
         geoVal = false;
       }
     }
-    add("geometry", "Favourable range geometry (≥1.5:1)", geoVal, geoDetail);
+    add("geometry", "Good risk:reward geometry (≥1.5:1)", geoVal, geoDetail);
 
     const evaluated = checks.filter((c) => c.value !== null);
     return {
@@ -107,96 +130,151 @@
       passed: evaluated.filter((c) => c.value).length,
       evaluated: evaluated.length,
       geo,
+      levels: tradeLevels(stock, geo),
     };
   }
 
-  // ---------------- Entry tier (first-match threshold rules, like attention tiers) ----
+  // ---------------- The four scores (fixed weighted formulas, breakdown shown) -------
+
+  function opportunityScore(stock, entry, sectorPct) {
+    const risk = stock.decision?.risk;
+    const parts = [];
+    const flagPts = (stock.flags.flag_count / stock.flags.flag_total) * 50;
+    parts.push({ label: `Bullish flags ${stock.flags.flag_count}/${stock.flags.flag_total}`, pts: flagPts, max: 50 });
+    const entryPts = entry.evaluated ? (entry.passed / entry.evaluated) * 30 : 0;
+    parts.push({ label: `Entry checks ${entry.passed}/${entry.evaluated}`, pts: entryPts, max: 30 });
+    const sectorPts = sectorPct != null ? (sectorPct / 100) * 10 : 0;
+    parts.push({ label: sectorPct != null ? `Sector strength ${sectorPct}%` : "Sector strength (missing → 0)", pts: sectorPts, max: 10 });
+    const riskPts = risk ? (1 - risk.condition_count / risk.condition_total) * 10 : 0;
+    parts.push({ label: risk ? `Risk headroom (${risk.condition_count}/${risk.condition_total} conditions)` : "Risk headroom (missing → 0)", pts: riskPts, max: 10 });
+    return { value: Math.round(parts.reduce((s, p) => s + p.pts, 0)), parts };
+  }
+
+  function entryQualityScore(entry) {
+    const evaluated = entry.checks.filter((c) => c.value !== null);
+    const denom = evaluated.reduce((s, c) => s + c.weight, 0);
+    if (!denom) return { value: 0, parts: [{ label: "no checks evaluable", pts: 0, max: 100 }] };
+    const num = evaluated.filter((c) => c.value).reduce((s, c) => s + c.weight, 0);
+    return {
+      value: Math.round((num / denom) * 100),
+      parts: entry.checks.map((c) => ({
+        label: `${c.label} (w${c.weight})`,
+        pts: c.value ? c.weight : 0,
+        max: c.weight,
+        na: c.value === null,
+      })),
+    };
+  }
+
+  function riskScore(stock) {
+    const risk = stock.decision?.risk;
+    const ind = stock.indicators;
+    if (!risk) return null; // decision block missing — shown as n/a, never guessed
+    const parts = [];
+    const condPts = (risk.condition_count / risk.condition_total) * 70;
+    parts.push({ label: `Risk conditions ${risk.condition_count}/${risk.condition_total} (${risk.conditions_on.map((k) => k.replace(/_/g, " ")).join(", ") || "none"})`, pts: condPts, max: 70 });
+    const atrPct = ind.atr14 != null && ind.close ? (ind.atr14 / ind.close) * 100 : null;
+    const volPts = atrPct != null ? Math.min(1, atrPct / 5) * 30 : 0;
+    parts.push({ label: atrPct != null ? `Volatility — ATR ${atrPct.toFixed(1)}% of price (5% = max)` : "Volatility (ATR missing → 0)", pts: volPts, max: 30 });
+    return { value: Math.round(condPts + volPts), parts };
+  }
+
+  function confidenceScore(stock, entry) {
+    const sources = [stock.indicators, stock.fundamentals, stock.analyst, stock.events, stock.shareholding];
+    const present = sources.filter(Boolean).length;
+    const parts = [
+      { label: `Data sources present ${present}/5`, pts: (present / 5) * 60, max: 60 },
+      { label: `Entry checks evaluable ${entry.evaluated}/7`, pts: (entry.evaluated / 7) * 40, max: 40 },
+    ];
+    return { value: Math.round(parts.reduce((s, p) => s + p.pts, 0)), parts };
+  }
+
+  // ---------------- Recommendation tier (score thresholds; "Avoid" included) ---------
 
   const TIERS = {
-    excellent: { label: "Excellent entry conditions", cls: "t-excellent", order: 0 },
-    good: { label: "Good entry conditions", cls: "t-good", order: 1 },
-    watch: { label: "Watch — setup forming", cls: "t-watch", order: 2 },
-    wait: { label: "Wait — not aligned", cls: "t-wait", order: 3 },
-    none: { label: "No setup today", cls: "t-none", order: 4 },
+    excellent: { label: "Excellent Entry", cls: "t-excellent", order: 0 },
+    good: { label: "Good Entry", cls: "t-good", order: 1 },
+    watch: { label: "Watch", cls: "t-watch", order: 2 },
+    wait: { label: "Wait", cls: "t-wait", order: 3 },
+    avoid: { label: "Avoid", cls: "t-none", order: 4 },
+    none: { label: "No setup today", cls: "t-none", order: 4 }, // legacy history key
   };
 
-  function classifyTier(stock, entry) {
-    const ind = stock.indicators;
-    const F = stock.flags.flag_count;
-    const R = stock.decision?.risk?.condition_count ?? null;
-    const E = entry.passed;
-    const enough = entry.evaluated >= 5; // too few evaluable checks → never above "watch"
-
-    // Named disqualifiers for the top tiers (still shown transparently, never hidden):
-    // a chase-risk extension or a failed range-geometry check caps the tier at Watch/Good.
+  function isExtended(ind) {
     const extPct = ind.ema20 != null && ind.close != null ? ((ind.close - ind.ema20) / ind.ema20) * 100 : null;
-    const extended = (ind.rsi14 != null && ind.rsi14 > 70) || (extPct != null && extPct >= 8);
-    const geoFail = entry.checks.find((c) => c.key === "geometry")?.value === false;
+    return (ind.rsi14 != null && ind.rsi14 > 70) || (extPct != null && extPct >= 8);
+  }
 
-    if (enough && E >= 6 && F >= 6 && R !== null && R <= 1 && !extended && !geoFail)
-      return { key: "excellent", rule: "≥6/7 entry checks + ≥6/8 flags + ≤1 risk condition, no chase-risk extension, geometry check not failed" };
-    if (enough && E >= 5 && F >= 5 && R !== null && R <= 2 && !extended)
-      return { key: "good", rule: "≥5/7 entry checks + ≥5/8 flags + ≤2 risk conditions, no chase-risk extension" };
-    if (F >= 5 || E >= 4)
+  function classifyTier(stock, scores, entry) {
+    const { opp, eq, risk } = scores;
+    const extended = isExtended(stock.indicators);
+    const rr = entry.levels?.rr;
+    if (risk != null && risk.value >= 75)
+      return { key: "avoid", rule: `Risk meter ${risk.value} ≥75 forces Avoid` };
+    if (opp.value >= 75 && eq.value >= 70 && (risk == null || risk.value <= 35) && !extended && (rr == null || rr >= 1))
+      return { key: "excellent", rule: "Opportunity ≥75 + Entry quality ≥70 + Risk ≤35, not extended, R:R ≥1 when computable" };
+    if (opp.value >= 60 && eq.value >= 55 && (risk == null || risk.value <= 55) && !extended)
+      return { key: "good", rule: "Opportunity ≥60 + Entry quality ≥55 + Risk ≤55, not extended" };
+    if (opp.value >= 45 || eq.value >= 50)
       return {
         key: "watch",
-        rule: extended && (F >= 5 || E >= 4)
-          ? "chase-risk extension (RSI >70 or price ≥8% above EMA20) caps the tier at Watch"
-          : enough ? "≥5/8 flags or ≥4/7 entry checks" : `only ${entry.evaluated}/7 entry checks evaluable — capped at Watch`,
+        rule: extended ? "extended (RSI >70 or ≥8% above EMA20) caps the tier at Watch" : "Opportunity ≥45 or Entry quality ≥50",
       };
-    if (F >= 3) return { key: "wait", rule: "3–4/8 flags — base conditions present, entry not aligned" };
-    return { key: "none", rule: "≤2/8 flags" };
+    if (opp.value >= 30) return { key: "wait", rule: "Opportunity 30–44 — base strength present, entry not there" };
+    return { key: "avoid", rule: "Opportunity <30" };
   }
 
-  // ---------------- Signal timeframe (which timeframe today's conditions live on) ----
-  // NOT a holding instruction — it names the scale of the observed signals. Intraday is
-  // never emitted: this is a daily pipeline and the UI says so.
+  // ---------------- Holding style (auto-determined from the setup) ----------------
+  // Intraday is never assigned — the pipeline only has daily data, and the UI says so.
 
-  function signalTimeframe(stock) {
-    const pat = stock.decision?.patterns || {};
+  function holdingStyle(stock) {
     const trend = stock.decision?.trend || {};
+    const pat = stock.decision?.patterns || {};
     const ind = stock.indicators;
-    if (pat.breakout || pat.volume_surge)
-      return { key: "momentum", label: "Short-term momentum", why: "breakout / volume-surge conditions resolve over days" };
-    if (pat.near_buy_zone)
-      return { key: "swing", label: "Swing pullback", why: "EMA20/50 pullback signals resolve over days–weeks" };
-    if (trend.weekly === "bullish" && ind.ema200 != null && ind.close > ind.ema200)
-      return { key: "positional", label: "Positional structure", why: "weekly trend + EMA200 alignment are week–month scale signals" };
-    return { key: "mixed", label: "Mixed timeframe", why: "today's signals don't cluster on one timeframe" };
+    const risk = stock.decision?.risk;
+    if (trend.weekly === "bullish" && ind.ema200 != null && ind.close > ind.ema200 && stock.flags.flag_count >= 6 && risk && risk.level === "low")
+      return { key: "longterm", label: "Long Term", why: "weekly + daily structure aligned, ≥6/8 flags, low risk — durable trend" };
+    if (trend.weekly === "bullish" && trend.daily === "bullish")
+      return { key: "positional", label: "Positional", why: "weekly and daily trends aligned — weeks-to-months structure" };
+    if (pat.breakout || pat.volume_surge || pat.near_buy_zone || trend.daily === "bullish")
+      return { key: "swing", label: "Swing", why: "breakout / volume / pullback signals — days-to-weeks setups" };
+    return { key: "unclear", label: "Unclear", why: "today's signals don't support a defined holding style" };
   }
 
-  // ---------------- Action line (a statement of today's state, never an instruction) --
+  // ---------------- Action ----------------
 
-  function buildAction(stock, entry, tier) {
+  function buildAction(stock, entry, tier, scores) {
     const ind = stock.indicators;
     const ratio = U.volumeRatio(ind);
     const geo = entry.geo;
     const zone = pullbackZone(ind);
     const extPct = ind.ema20 != null && ind.close != null ? ((ind.close - ind.ema20) / ind.ema20) * 100 : null;
 
-    if (tier.key === "excellent") return `Entry conditions are aligned at today's close — ${entry.passed}/${entry.evaluated} checks met.`;
-    if ((extPct != null && extPct >= 8) || (ind.rsi14 != null && ind.rsi14 > 70)) {
+    if (tier.key === "avoid")
+      return scores.risk != null && scores.risk.value >= 75
+        ? `Avoid — risk meter ${scores.risk.value}/100 (${stock.decision.risk.condition_count}/6 risk conditions + volatility).`
+        : `No setup today — opportunity score ${scores.opp.value}/100.`;
+    if (isExtended(ind)) {
       const bits = [];
-      if (extPct != null && extPct >= 8) bits.push(`price ${extPct.toFixed(1)}% above EMA20`);
+      if (extPct != null && extPct >= 8) bits.push(`${extPct.toFixed(1)}% above EMA20`);
       if (ind.rsi14 != null && ind.rsi14 > 70) bits.push(`RSI ${ind.rsi14.toFixed(0)}`);
-      return `Extended: ${bits.join(", ")} — chase-risk conditions are present.`;
+      return `Avoid chasing — ${bits.join(", ")}.${zone ? ` Watch for a pullback to ${fp(zone.lo)}–${fp(zone.hi)}.` : ""}`;
     }
+    if (tier.key === "excellent") return `Can be considered today — ${entry.passed}/${entry.evaluated} entry checks aligned at ${fp(ind.close)}.`;
+    if (tier.key === "good" && U.isNearBuyZone(stock) && zone)
+      return `Can be considered near the buy zone — price is inside ${fp(zone.lo)}–${fp(zone.hi)}.`;
     if (U.isBreakoutCandidate(stock) && (ratio == null || ratio < 1.5) && geo?.sr)
-      return `Breakout unconfirmed — the breakout check fires on a close above ${fp(geo.sr.resistance)} with volume ≥1.5× average (today ${ratio != null ? ratio.toFixed(1) : "—"}×).`;
+      return `Wait for breakout — needs a close above ${fp(geo.sr.resistance)} with volume ≥1.5× average (today ${ratio != null ? ratio.toFixed(1) : "—"}×).`;
     if (zone && ind.close > zone.hi && ind.ema50 != null && ind.ema200 != null && ind.ema50 > ind.ema200)
-      return `Above the pullback zone — the pullback check fires between ${fp(zone.lo)} and ${fp(zone.hi)} (±2% of EMA20/50).`;
-    if (geo?.sr && ind.close <= geo.sr.support * 1.02 && ind.rsi14 != null && ind.rsi14 < 45)
-      return `Near 20-session support ${fp(geo.sr.support)} with RSI ${ind.rsi14.toFixed(0)} — no stabilization condition met yet.`;
-    if (U.isNearBuyZone(stock) && zone)
-      return `In the observed EMA20/50 pullback zone (${fp(zone.lo)}–${fp(zone.hi)}) with the uptrend intact — ${entry.passed}/${entry.evaluated} entry checks met.`;
+      return `Watch for pullback to ${fp(zone.lo)}–${fp(zone.hi)} (±2% of EMA20/50).`;
+    if (geo?.sr && ind.close <= geo.sr.support * 1.02)
+      return `Wait near support ${fp(geo.sr.support)} — no stabilization signal yet${ind.rsi14 != null ? ` (RSI ${ind.rsi14.toFixed(0)})` : ""}.`;
     if (tier.key === "good" || tier.key === "watch")
-      return `Setup forming — ${entry.passed}/${entry.evaluated} entry checks met; see what would change this below.`;
-    return `No setup today — ${stock.flags.flag_count}/8 bullish flags.`;
+      return `Setup forming — ${entry.passed}/${entry.evaluated} entry checks met; see wait conditions below.`;
+    return `Wait — opportunity ${scores.opp.value}/100, entry quality ${scores.eq.value}/100.`;
   }
 
-  // ---------------- "What would change this" (rule-compliant wait conditions) ---------
-  // Each line states the exact observed number and the threshold at which the failed
-  // check would fire — facts about the rules, not instructions to act.
+  // ---------------- Wait conditions ----------------
 
   function buildWaits(stock, entry) {
     const ind = stock.indicators;
@@ -208,37 +286,37 @@
       if (c.value !== false) return;
       switch (c.key) {
         case "trend":
-          if (ind.ema200 != null) waits.push(`Trend check fires when close and EMA50 hold above EMA200 (${fp(ind.ema200)}); close is ${fp(ind.close)}.`);
+          if (ind.ema200 != null) waits.push(`Wait until close and EMA50 hold above EMA200 (${fp(ind.ema200)}); close is ${fp(ind.close)}.`);
           break;
         case "proximity": {
-          if (zone && ind.close > zone.hi) waits.push(`Pullback check fires if price returns to ${fp(zone.lo)}–${fp(zone.hi)} (±2% of EMA20/50).`);
-          if (geo?.sr && ind.close < geo.sr.resistance) waits.push(`Breakout check fires on a close above ${fp(geo.sr.resistance)} (20-session high) with volume ≥1.5× average.`);
+          if (zone && ind.close > zone.hi) waits.push(`Wait until price returns to the buy zone ${fp(zone.lo)}–${fp(zone.hi)} (±2% of EMA20/50).`);
+          if (geo?.sr && ind.close < geo.sr.resistance) waits.push(`Or: wait for a breakout close above ${fp(geo.sr.resistance)} with volume ≥1.5× average.`);
           break;
         }
         case "macd":
-          waits.push(`MACD ${ind.macd.toFixed(2)} is below its signal ${ind.macd_signal.toFixed(2)} — the check needs a cross above.`);
+          waits.push(`Wait for MACD (${ind.macd.toFixed(2)}) to cross above its signal (${ind.macd_signal.toFixed(2)}).`);
           break;
         case "rsi":
           waits.push(ind.rsi14 > 65
-            ? `RSI ${ind.rsi14.toFixed(1)} is above the healthy band — the check fires back inside 40–65.`
-            : `RSI ${ind.rsi14.toFixed(1)} is below the healthy band — the check fires back inside 40–65.`);
+            ? `Wait for RSI ${ind.rsi14.toFixed(1)} to cool back into 40–65.`
+            : `Wait for RSI ${ind.rsi14.toFixed(1)} to recover into 40–65.`);
           break;
         case "volume":
-          waits.push(`Volume is ${ratio.toFixed(1)}× the 20-day average — confirmation needs ≥1.2×.`);
+          waits.push(`Wait for volume ≥1.2× the 20-day average (today ${ratio.toFixed(1)}×).`);
           break;
         case "sector":
-          waits.push(`${stock.sector || "The sector"} averages under 50% of the flags — the check fires when the sector strengthens.`);
+          waits.push(`Sector is weak — the check passes when ${stock.sector || "the sector"} averages ≥50% of the flags.`);
           break;
         case "geometry":
-          if (geo?.ratio != null) waits.push(`Observed range geometry is ${geo.ratio.toFixed(1)}:1 (needs ≥1.5:1) — it improves as price nears support ${fp(geo.sr.support)} or resistance rises.`);
-          else if (geo?.atBottom) waits.push(`Price sits at its 20-session low — the geometry check needs the range to re-form above support.`);
+          if (geo?.ratio != null) waits.push(`Risk:reward geometry is ${geo.ratio.toFixed(1)}:1 (needs ≥1.5:1) — improves near support ${fp(geo.sr.support)}.`);
+          else if (geo?.atBottom) waits.push(`Price sits at its 20-session low — wait for the range to re-form above support.`);
           break;
       }
     });
     return waits.slice(0, 4);
   }
 
-  // ---------------- Warnings (named risk conditions + observed context) ----------------
+  // ---------------- Warnings ----------------
 
   function buildWarnings(stock, entry, data) {
     const ind = stock.indicators;
@@ -248,15 +326,15 @@
     const warnings = [];
     if (risk) risk.conditions_on.forEach((k) => warnings.push(risk.conditions_detail?.[k] || k.replace(/_/g, " ")));
     if (geo?.sr && !geo.atTop && ind.close >= geo.sr.resistance * 0.98)
-      warnings.push(`Within 2% of 20-session resistance ${fp(geo.sr.resistance)}`);
-    if (ratio != null && ratio < 0.6) warnings.push(`Volume only ${ratio.toFixed(1)}× the 20-day average — thin participation`);
-    if (geo?.ratio != null && geo.ratio < 1) warnings.push(`Observed downside to support (−${geo.downPct.toFixed(1)}%) exceeds upside to resistance (+${geo.upPct.toFixed(1)}%)`);
+      warnings.push(`Near resistance — within 2% of ${fp(geo.sr.resistance)}`);
+    if (ratio != null && ratio < 0.6) warnings.push(`Low volume — only ${ratio.toFixed(1)}× the 20-day average`);
+    if (entry.levels?.rr != null && entry.levels.rr < 1) warnings.push(`Poor risk:reward — ${entry.levels.rr.toFixed(1)}:1 to target vs stop`);
     const sectorPct = sectorPctFor(stock, data);
     if (sectorPct != null && sectorPct < 37.5) warnings.push(`Weak sector — ${stock.sector} averages ${sectorPct}% of the flags`);
     const ev = stock.events;
     if (ev && Array.isArray(ev.earnings_dates)) {
       const soon = ev.earnings_dates.map((d) => new Date(d)).find((d) => !isNaN(d) && d >= new Date() && d - new Date() < 14 * 24 * 3600 * 1000);
-      if (soon) warnings.push(`Earnings within 2 weeks (${U.formatEventDate(soon.toISOString())})`);
+      if (soon) warnings.push(`Upcoming earnings within 2 weeks (${U.formatEventDate(soon.toISOString())})`);
     }
     return warnings;
   }
@@ -294,12 +372,19 @@
   function evaluate(stock, data) {
     const sectorPct = sectorPctFor(stock, data);
     const entry = buildEntryChecks(stock, sectorPct);
-    const tier = classifyTier(stock, entry);
+    const scores = {
+      opp: opportunityScore(stock, entry, sectorPct),
+      eq: entryQualityScore(entry),
+      risk: riskScore(stock),
+      conf: confidenceScore(stock, entry),
+    };
+    const tier = classifyTier(stock, scores, entry);
     return {
       entry,
+      scores,
       tier,
-      timeframe: signalTimeframe(stock),
-      action: buildAction(stock, entry, tier),
+      style: holdingStyle(stock),
+      action: buildAction(stock, entry, tier, scores),
       waits: buildWaits(stock, entry),
       warnings: buildWarnings(stock, entry, data),
     };
@@ -307,41 +392,44 @@
 
   // ---------------- Rendering ----------------
 
-  function ringBlock(fraction, label, caption, cls, title) {
+  function gaugeBlock(score, caption, cls, title, invert = false) {
+    if (score == null) return `<div class="reco-gauge" title="${title}"><span class="empty-note sm">n/a</span><span class="reco-gauge-cap">${caption}</span></div>`;
     return `<div class="reco-gauge" title="${title}">
-      ${P.ringHtml(fraction, label, { size: 48, stroke: 4.5, cls })}
+      ${P.ringHtml(score.value / 100, `${score.value}`, { size: 48, stroke: 4.5, cls })}
       <span class="reco-gauge-cap">${caption}</span>
     </div>`;
   }
 
-  function gaugesHtml(stock, evalr) {
-    const f = stock.flags;
-    const risk = stock.decision?.risk;
-    const sources = [stock.indicators, stock.fundamentals, stock.analyst, stock.events, stock.shareholding];
-    const present = sources.filter((s) => s != null).length;
-    const entryCls = evalr.entry.evaluated && evalr.entry.passed / evalr.entry.evaluated >= 0.7 ? "up" : evalr.entry.passed / (evalr.entry.evaluated || 1) >= 0.4 ? "warn" : "down";
+  function scoreCls(v, invert = false) {
+    const x = invert ? 100 - v : v;
+    return x >= 65 ? "up" : x >= 40 ? "warn" : "down";
+  }
+
+  function gaugesHtml(evalr) {
+    const { opp, eq, risk, conf } = evalr.scores;
     return `<div class="reco-gauges">
-      ${ringBlock(f.flag_count / f.flag_total, `${f.flag_count}/${f.flag_total}`, "Setup flags",
-        U.flagCountClass(f.flag_count, f.flag_total) === "strong" ? "up" : U.flagCountClass(f.flag_count, f.flag_total) === "mid" ? "warn" : "down",
-        `${f.flag_count} of ${f.flag_total} named bullish flags fired — the honest form of an 'opportunity score'`)}
-      ${ringBlock(evalr.entry.evaluated ? evalr.entry.passed / evalr.entry.evaluated : 0, `${evalr.entry.passed}/${evalr.entry.evaluated}`, "Entry checks", entryCls,
-        `${evalr.entry.passed} of ${evalr.entry.evaluated} evaluable entry conditions met (unevaluable checks shrink the denominator)`)}
-      ${risk
-        ? ringBlock(risk.condition_count / risk.condition_total, `${risk.condition_count}/${risk.condition_total}`, "Risk conds", risk.level === "low" ? "up" : risk.level === "elevated" ? "warn" : "down",
-          `${risk.condition_count} of ${risk.condition_total} named risk conditions present: ${risk.conditions_on.map((k) => k.replace(/_/g, " ")).join(", ") || "none"}`)
-        : `<div class="reco-gauge"><span class="empty-note sm">risk n/a</span></div>`}
-      ${ringBlock(present / sources.length, `${present}/${sources.length}`, "Data", "accent",
-        `${present} of ${sources.length} data sources present this run — the honest stand-in for a 'confidence %'`)}
+      ${gaugeBlock(opp, "Opportunity", scoreCls(opp.value), "Opportunity Score 0–100: flags ×50 + entry checks ×30 + sector ×10 + risk headroom ×10 — breakdown in the card")}
+      ${gaugeBlock(eq, "Entry quality", scoreCls(eq.value), "Entry Quality 0–100: weighted entry checks (weights shown in the checklist)")}
+      ${gaugeBlock(risk, "Risk", risk ? scoreCls(risk.value, true) : "", "Risk Meter 0–100: risk conditions ×70 + ATR volatility ×30 — higher = riskier")}
+      ${gaugeBlock(conf, "Confidence", "accent", "Confidence 0–100: data sources present ×60 + entry checks evaluable ×40")}
     </div>`;
   }
 
-  // Entry map — observed levels on one horizontal price scale. Support, resistance,
-  // the ±2% EMA20/50 zone and an ATR whisker are all measurements from the stock's own
-  // history; nothing here is a target, stop or instruction.
+  function scoreBreakdownHtml(evalr) {
+    const row = (name, score) => score == null
+      ? `<div class="score-part"><span class="sp-name">${name}</span><span class="sp-pts mono">n/a — decision block missing</span></div>`
+      : `<div class="score-part head"><span class="sp-name">${name}</span><span class="sp-pts mono">${score.value}/100</span></div>` +
+        score.parts.map((p) => `<div class="score-part sub${p.na ? " na" : ""}"><span class="sp-name">${p.label}${p.na ? " (not evaluated)" : ""}</span><span class="sp-pts mono">${p.na ? "—" : `${p.pts.toFixed(0)}/${p.max}`}</span></div>`).join("");
+    return row("Opportunity Score", evalr.scores.opp) + row("Entry Quality", evalr.scores.eq) + row("Risk Meter", evalr.scores.risk) + row("Confidence", evalr.scores.conf);
+  }
+
+  // Entry map — buy zone, support, resistance, target, stop loss and last close on one
+  // horizontal price scale, with the risk:reward ratio underneath.
   function entryMapHtml(stock, evalr) {
     const ind = stock.indicators;
     const geo = evalr.entry.geo;
     const zone = pullbackZone(ind);
+    const lv = evalr.entry.levels;
     if (!geo?.sr || ind.close == null) {
       return `<div class="empty-note sm">Entry map needs ≥10 sessions of price history — not available for this stock yet.</div>`;
     }
@@ -349,7 +437,7 @@
     const atr = ind.atr14;
     const values = [sr.support, sr.resistance, ind.close];
     if (zone) values.push(zone.lo, zone.hi);
-    if (atr != null) values.push(ind.close - atr, ind.close + atr);
+    if (lv) values.push(lv.target, lv.stop);
     const lo = Math.min(...values);
     const hi = Math.max(...values);
     const span = hi - lo || 1;
@@ -357,33 +445,32 @@
     const x = (v) => (((v - (lo - pad)) / (span + 2 * pad)) * 100).toFixed(2);
 
     const zoneHtml = zone
-      ? `<span class="em-zone" style="left:${x(zone.lo)}%;width:${(x(zone.hi) - x(zone.lo)).toFixed(2)}%" title="±2% of EMA20/50 — the observed pullback zone, not a buy order"></span>`
-      : "";
-    const atrHtml = atr != null
-      ? `<span class="em-atr" style="left:${x(ind.close - atr)}%;width:${(x(ind.close + atr) - x(ind.close - atr)).toFixed(2)}%" title="±1 ATR(14) = typical daily swing ${fp(atr)}"></span>`
+      ? `<span class="em-zone" style="left:${x(zone.lo)}%;width:${(x(zone.hi) - x(zone.lo)).toFixed(2)}%" title="Ideal buy zone: ±2% of EMA20/50 (${fp(zone.lo)}–${fp(zone.hi)})"></span>`
       : "";
 
-    const geoLine = geo.atTop
-      ? `Price is at/above its 20-session high — range geometry not measurable inside the range.`
-      : geo.ratio != null
-        ? `Range geometry: <b class="up">+${geo.upPct.toFixed(1)}%</b> to resistance vs <b class="down">−${geo.downPct.toFixed(1)}%</b> to support — <b>${geo.ratio.toFixed(1)}:1</b> observed, not a projected reward.`
-        : `Price is at/below its 20-session low.`;
+    const rrLine = lv?.rr != null
+      ? `Risk:reward <b>${lv.rr.toFixed(1)}:1</b> — target ${fp(lv.target)} (<b class="up">+${(((lv.target - ind.close) / ind.close) * 100).toFixed(1)}%</b>) vs stop ${fp(lv.stop)} (<b class="down">−${(((ind.close - lv.stop) / ind.close) * 100).toFixed(1)}%</b>).`
+      : `Risk:reward not computable at the current price (outside the target/stop bracket).`;
 
     return `<div class="entry-map">
       <div class="em-track">
-        ${zoneHtml}${atrHtml}
-        <span class="em-tick support" style="left:${x(sr.support)}%" title="20-session support (lowest close) ${fp(sr.support)}"></span>
-        <span class="em-tick resistance" style="left:${x(sr.resistance)}%" title="20-session resistance (highest close) ${fp(sr.resistance)}"></span>
+        ${zoneHtml}
+        ${lv ? `<span class="em-tick stop" style="left:${x(lv.stop)}%" title="Stop loss ${fp(lv.stop)}"></span>` : ""}
+        <span class="em-tick support" style="left:${x(sr.support)}%" title="20-session support ${fp(sr.support)}"></span>
+        <span class="em-tick resistance" style="left:${x(sr.resistance)}%" title="20-session resistance ${fp(sr.resistance)}"></span>
+        ${lv ? `<span class="em-tick target" style="left:${x(lv.target)}%" title="Target ${fp(lv.target)}"></span>` : ""}
         <span class="em-price" style="left:${x(ind.close)}%" title="Last close ${fp(ind.close)}"></span>
       </div>
       <div class="em-labels mono">
+        ${lv ? `<span class="em-l down">SL ${fp(lv.stop)}</span>` : ""}
         <span class="em-l down">S ${fp(sr.support)}</span>
-        ${zone ? `<span class="em-l zone">zone ${fp(zone.lo)}–${fp(zone.hi)}</span>` : ""}
+        ${zone ? `<span class="em-l zone">buy ${fp(zone.lo)}–${fp(zone.hi)}</span>` : ""}
         <span class="em-l now">now ${fp(ind.close)}</span>
         <span class="em-l up">R ${fp(sr.resistance)}</span>
+        ${lv ? `<span class="em-l target">T ${fp(lv.target)}</span>` : ""}
       </div>
-      <div class="fine">${geoLine}</div>
-      <div class="fine dim">Support/resistance = lowest/highest close of the last 20 sessions (${sr.basis}); shaded band = ±2% of EMA20/50; hatched span = ±1 ATR (${atr != null ? `${fp(atr)} ≈ ${((atr / ind.close) * 100).toFixed(1)}%/day` : "n/a"}). Observed levels — deliberately no target or stop-loss price.</div>
+      <div class="fine">${rrLine}</div>
+      <div class="fine dim">${lv ? lv.basis : ""}. S/R = lowest/highest close of the last 20 sessions (${sr.basis}); buy zone = ±2% of EMA20/50${atr != null ? `; ATR ${fp(atr)} ≈ ${((atr / ind.close) * 100).toFixed(1)}%/day` : ""}.</div>
     </div>`;
   }
 
@@ -391,7 +478,7 @@
     return evalr.entry.checks
       .map((c) => {
         const mark = c.value === null ? `<span class="mark na">·</span>` : `<span class="mark ${c.value ? "pass" : "fail"}">${c.value ? "✓" : "✗"}</span>`;
-        return `<div class="check-row">${mark}<span class="label">${c.label} — ${c.detail}${c.value === null ? " (not evaluated)" : ""}</span></div>`;
+        return `<div class="check-row">${mark}<span class="label">${c.label} <span class="dim">(w${c.weight})</span> — ${c.detail}${c.value === null ? " (not evaluated)" : ""}</span></div>`;
       })
       .join("");
   }
@@ -412,7 +499,7 @@
   function historyChip(prev, tierKey) {
     if (!prev || prev.tier === tierKey) return "";
     const improved = (TIERS[prev.tier]?.order ?? 9) > TIERS[tierKey].order;
-    return `<span class="reco-move ${improved ? "up" : "down"}" title="Entry tier moved since ${prev.date} (stored in this browser)">${improved ? "▲" : "▼"} was: ${TIERS[prev.tier]?.label || prev.tier}</span>`;
+    return `<span class="reco-move ${improved ? "up" : "down"}" title="Recommendation moved since ${prev.date} (stored in this browser)">${improved ? "▲" : "▼"} was: ${TIERS[prev.tier]?.label || prev.tier}</span>`;
   }
 
   function cardHtml(stock, evalr, prev, dataDate, rank) {
@@ -435,28 +522,29 @@
           </div>
         </div>
         <div class="reco-tier-row">
-          <span class="reco-tier ${tier.cls}" title="Rule: ${evalr.tier.rule} — a threshold on named conditions, not a verdict">${tier.label}</span>
-          <span class="reco-tf" title="${evalr.timeframe.why}. Names the timeframe of the observed signals — not a holding instruction. Intraday is never shown: this is a daily pipeline.">${evalr.timeframe.label}</span>
+          <span class="reco-tier ${tier.cls}" title="Rule: ${evalr.tier.rule}">${tier.label}</span>
+          <span class="reco-tf" title="${evalr.style.why}. Auto-determined from the setup. Intraday is never assigned — daily pipeline.">${evalr.style.label}</span>
           ${historyChip(prev, evalr.tier.key)}
         </div>
-        ${gaugesHtml(stock, evalr)}
+        ${gaugesHtml(evalr)}
         <div class="reco-action">${evalr.action}</div>
         <div class="reco-badges">
           ${U.attentionStarsHtml(stock)}${U.riskChipHtml(stock, { compact: true })}${U.trendChipsHtml(stock)}${U.dataCompletenessHtml(stock)}
         </div>
-        <button class="reco-expand" aria-expanded="false">Why · levels · what would change this <span class="reco-caret">▾</span></button>
+        <button class="reco-expand" aria-expanded="false">Why · entry zone · scores · history <span class="reco-caret">▾</span></button>
         <div class="reco-detail" hidden>
-          <div class="detail-section"><h6>Entry map <span class="ext-tag">observed levels · not targets or stops</span></h6>${entryMapHtml(stock, evalr)}</div>
-          <div class="detail-section"><h6>Why this tier · ${evalr.entry.passed}/${evalr.entry.evaluated} entry checks</h6>${checklistHtml(evalr)}
+          <div class="detail-section"><h6>Entry zone</h6>${entryMapHtml(stock, evalr)}</div>
+          <div class="detail-section"><h6>Why recommended · ${evalr.entry.passed}/${evalr.entry.evaluated} entry checks</h6>${checklistHtml(evalr)}
             <div class="fine dim">Tier rule: ${evalr.tier.rule}.</div></div>
-          <div class="detail-section"><h6>Warnings</h6>
+          <div class="detail-section"><h6>Score breakdown</h6><div class="score-parts">${scoreBreakdownHtml(evalr)}</div></div>
+          <div class="detail-section"><h6>Risks</h6>
             ${evalr.warnings.length ? evalr.warnings.map((w) => `<div class="exp-risk">⚠ ${w}</div>`).join("") : `<div class="fine">No named risk conditions present today — normal market risk still applies.</div>`}
             ${stock.events == null ? `<div class="fine dim">Earnings-date risk not evaluated — the events feed was not collected this run. Gap risk is not evaluated — the pipeline stores daily closes only.</div>` : `<div class="fine dim">Gap risk is not evaluated — the pipeline stores daily closes only.</div>`}
           </div>
-          ${evalr.waits.length ? `<div class="detail-section"><h6>What would change this</h6>${evalr.waits.map((w) => `<div class="reco-wait">◦ ${w}</div>`).join("")}</div>` : ""}
+          ${evalr.waits.length ? `<div class="detail-section"><h6>Wait conditions</h6>${evalr.waits.map((w) => `<div class="reco-wait">◦ ${w}</div>`).join("")}</div>` : ""}
           <div class="detail-section"><h6>Recommendation history <span class="ext-tag">this browser only</span></h6>${historyHtml(prev, evalr.tier.key, dataDate)}</div>
           <div class="reco-foot">
-            <span class="fine dim">Every element above is a named rule on published data — nothing is weighted, predicted, or advised.</span>
+            <span class="fine dim">Rule-based — every score's formula and inputs are shown above; missing data is shown as missing, never guessed. Personal research, not investment advice.</span>
             <button class="btn btn-ghost btn-sm" data-jump="${stock.symbol}">Full analysis →</button>
           </div>
         </div>
@@ -469,16 +557,17 @@
 
   function filterDefs() {
     return [
-      { key: "excellent", group: "tier", label: "Excellent entry", fn: (r) => r.evalr.tier.key === "excellent" },
-      { key: "good", group: "tier", label: "Good entry", fn: (r) => r.evalr.tier.key === "good" },
+      { key: "excellent", group: "tier", label: "Excellent Entry", fn: (r) => r.evalr.tier.key === "excellent" },
+      { key: "good", group: "tier", label: "Good Entry", fn: (r) => r.evalr.tier.key === "good" },
       { key: "watch", group: "tier", label: "Watch", fn: (r) => r.evalr.tier.key === "watch" },
       { key: "wait", group: "tier", label: "Wait", fn: (r) => r.evalr.tier.key === "wait" },
-      { key: "none", group: "tier", label: "No setup", fn: (r) => r.evalr.tier.key === "none" },
-      { key: "swing", group: "tf", label: "Swing", fn: (r) => r.evalr.timeframe.key === "swing" },
-      { key: "momentum", group: "tf", label: "Momentum", fn: (r) => r.evalr.timeframe.key === "momentum" },
-      { key: "positional", group: "tf", label: "Positional", fn: (r) => r.evalr.timeframe.key === "positional" },
-      { key: "lowrisk", group: "cond", label: "≤1 risk condition", fn: (r) => (r.stock.decision?.risk?.condition_count ?? 9) <= 1 },
-      { key: "fulldata", group: "cond", label: "Data ≥4/5", fn: (r) => [r.stock.indicators, r.stock.fundamentals, r.stock.analyst, r.stock.events, r.stock.shareholding].filter(Boolean).length >= 4 },
+      { key: "avoid", group: "tier", label: "Avoid", fn: (r) => r.evalr.tier.key === "avoid" },
+      { key: "swing", group: "tf", label: "Swing", fn: (r) => r.evalr.style.key === "swing" },
+      { key: "positional", group: "tf", label: "Positional", fn: (r) => r.evalr.style.key === "positional" },
+      { key: "longterm", group: "tf", label: "Long Term", fn: (r) => r.evalr.style.key === "longterm" },
+      { key: "highconf", group: "cond", label: "High confidence ≥70", fn: (r) => r.evalr.scores.conf.value >= 70 },
+      { key: "lowrisk", group: "cond", label: "Low risk ≤35", fn: (r) => r.evalr.scores.risk != null && r.evalr.scores.risk.value <= 35 },
+      { key: "goodrr", group: "cond", label: "R:R ≥1.5", fn: (r) => r.evalr.entry.levels?.rr != null && r.evalr.entry.levels.rr >= 1.5 },
       { key: "pullback", group: "cond", label: "Pullback", fn: (r) => U.isNearBuyZone(r.stock) },
       { key: "breakout", group: "cond", label: "Breakout", fn: (r) => U.isBreakoutCandidate(r.stock) },
       { key: "nearsupport", group: "cond", label: "Near support", fn: (r) => r.evalr.entry.geo?.sr != null && r.stock.indicators.close <= r.evalr.entry.geo.sr.support * 1.02 },
@@ -493,16 +582,16 @@
     render(main, data) {
       const dataDate = (data.changes?.data_date) || (data.meta.run_at || "").slice(0, 10) || "today";
 
-      // Evaluate every tracked stock once
       const rows = data.stocks.map((stock) => ({ stock, evalr: evaluate(stock, data) }));
       const history = snapshotHistory(dataDate, Object.fromEntries(rows.map((r) => [r.stock.symbol, r.evalr.tier.key])));
       rows.forEach((r) => { r.prev = previousTier(history, dataDate, r.stock.symbol); });
       rows.sort((a, b) =>
         TIERS[a.evalr.tier.key].order - TIERS[b.evalr.tier.key].order ||
-        b.evalr.entry.passed - a.evalr.entry.passed ||
-        b.stock.flags.flag_count - a.stock.flags.flag_count);
+        b.evalr.scores.opp.value - a.evalr.scores.opp.value ||
+        b.evalr.scores.eq.value - a.evalr.scores.eq.value);
 
-      const counts = Object.fromEntries(Object.keys(TIERS).map((k) => [k, rows.filter((r) => r.evalr.tier.key === k).length]));
+      const tierKeys = ["excellent", "good", "watch", "wait", "avoid"];
+      const counts = Object.fromEntries(tierKeys.map((k) => [k, rows.filter((r) => r.evalr.tier.key === k).length]));
       const defs = filterDefs();
       let active = new Set();
       try { active = new Set(JSON.parse(localStorage.getItem(RECO_FILTERS_KEY) || "[]")); } catch { /* fresh */ }
@@ -510,12 +599,12 @@
 
       main.innerHTML = `
         <div class="page-head"><div><h2>Recommendations</h2>
-          <div class="sub">Which entries deserve attention today — evaluated by <b>named, transparent rules</b> on the published data.
-          Tiers are thresholds on condition counts; gauges are counts, never weighted scores; levels are measured from price history, never targets.
-          The dashboard does not say buy or sell — you decide.</div></div>
+          <div class="sub">Which stocks deserve attention today — rule-based scores computed from the published data.
+          Every score is a fixed weighted formula whose point breakdown is shown on the card; missing data is shown as missing, never guessed.
+          Personal research, not investment advice — you make every decision.</div></div>
           <div class="sub mono">data ${dataDate}</div>
         </div>
-        <section class="kpi-row reco-summary" id="reco-summary" aria-label="Entry tier counts"></section>
+        <section class="kpi-row reco-summary" id="reco-summary" aria-label="Recommendation tier counts"></section>
         <section class="panel" aria-label="Recommendation filters and cards">
           <div class="filter-row"><span class="filter-label">Filters</span><div class="filter-chips" id="reco-chips"></div>
             <span class="stock-count" id="reco-count" style="margin-left:auto"></span></div>
@@ -523,12 +612,11 @@
           <div class="show-more-row" id="reco-more"></div>
         </section>`;
 
-      // Summary tiles (click = toggle that tier's filter — same counts as the chips)
-      const tierIcons = { excellent: "◆", good: "●", watch: "◐", wait: "◔", none: "○" };
+      const tierIcons = { excellent: "◆", good: "●", watch: "◐", wait: "◔", avoid: "○" };
       const summaryEl = main.querySelector("#reco-summary");
-      summaryEl.innerHTML = Object.entries(TIERS)
-        .map(([key, t]) => `<button class="kpi-card reco-tile ${t.cls} ${active.has(key) ? "active" : ""}" data-tier="${key}">
-            <div class="kpi-top"><span class="kpi-label">${t.label}</span><span class="reco-tile-glyph" aria-hidden="true">${tierIcons[key]}</span></div>
+      summaryEl.innerHTML = tierKeys
+        .map((key) => `<button class="kpi-card reco-tile ${TIERS[key].cls} ${active.has(key) ? "active" : ""}" data-tier="${key}">
+            <div class="kpi-top"><span class="kpi-label">${TIERS[key].label}</span><span class="reco-tile-glyph" aria-hidden="true">${tierIcons[key]}</span></div>
             <div class="kpi-value mono">${counts[key]}</div>
             <div class="kpi-sub">of ${rows.length} tracked</div>
           </button>`)
@@ -541,10 +629,10 @@
       let showAll = false;
 
       function applyFilters() {
-        const tierKeys = [...active].filter((k) => defs.find((d) => d.key === k)?.group === "tier");
+        const tierSel = [...active].filter((k) => defs.find((d) => d.key === k)?.group === "tier");
         const others = [...active].filter((k) => defs.find((d) => d.key === k)?.group !== "tier");
         let out = rows;
-        if (tierKeys.length) out = out.filter((r) => tierKeys.some((k) => defs.find((d) => d.key === k).fn(r)));
+        if (tierSel.length) out = out.filter((r) => tierSel.some((k) => defs.find((d) => d.key === k).fn(r)));
         others.forEach((k) => { const d = defs.find((x) => x.key === k); if (d) out = out.filter(d.fn); });
         return out;
       }
@@ -619,6 +707,6 @@
     },
   });
 
-  // Exposed so the shell can show an honest nav badge (count of excellent+good tiers).
+  // Exposed so the shell can show the nav badge (count of Excellent + Good entries).
   window.RecoEngine = { evaluate, TIERS };
 })();
