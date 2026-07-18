@@ -2,78 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stock Intelligence — Portfolio</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<title>NSE Terminal — Portfolio</title>
+<!-- The portfolio is now a page inside the single-page terminal shell.
+     This stub only preserves old bookmarks/links. -->
+<meta http-equiv="refresh" content="0; url=index.html#/portfolio">
+<script>location.replace("index.html#/portfolio");</script>
 </head>
 <body>
-
-<div class="sticky-top">
-  <nav>
-    <a class="brand" href="index.html"><span class="dot"></span> Stock Intelligence</a>
-    <ul>
-      <li><a href="index.html">Watchlist</a></li>
-      <li><a href="portfolio.html" class="active">Portfolio</a></li>
-    </ul>
-    <div class="nav-right">
-      <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span><span class="label"> Run pipeline</span></a>
-      <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload</span></button>
-    </div>
-  </nav>
-</div>
-
-<main class="wide">
-
-  <div class="pf-title-row">
-    <div>
-      <h1 class="display">Portfolio</h1>
-      <div class="sub">Your holdings at the last published close · click any holding for its full breakdown</div>
-    </div>
-    <div class="sub mono" id="last-updated">Loading…</div>
-  </div>
-
-  <section class="kpi-row" id="pf-kpis" aria-label="Portfolio summary">
-    <div class="kpi-card"><div class="kpi-label">Loading…</div></div>
-  </section>
-
-  <div id="pf-data-note"></div>
-
-  <section class="grid-main">
-    <div class="panel" aria-label="Holdings">
-      <div class="card-head-row">
-        <h2>Holdings</h2>
-        <span class="stock-count" id="pf-count"></span>
-      </div>
-      <div id="pf-holdings"><div class="empty-note">Loading…</div></div>
-    </div>
-
-    <aside class="rail">
-      <div class="side-card">
-        <h5>Allocation</h5>
-        <div id="pf-allocation" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Sector mix</h5>
-        <div id="pf-sectors" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Manage</h5>
-        <div class="manage-buttons">
-          <a class="btn btn-primary" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=add-holding.yml" target="_blank" rel="noopener"><span class="icon">+</span> Add holding</a>
-          <a class="btn btn-danger" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=remove-holding.yml" target="_blank" rel="noopener"><span class="icon">−</span> Remove holding</a>
-        </div>
-      </div>
-    </aside>
-  </section>
-
-</main>
-
-<footer>Ranked by flag count, never a composite score · built for personal use only · not a recommendation service · you make every decision</footer>
-
-<script src="js/app.js?v=8"></script>
-<script src="js/portfolio.js?v=4"></script>
-
+<p>Portfolio moved into the terminal — <a href="index.html#/portfolio">open it here</a>.</p>
 </body>
 </html>

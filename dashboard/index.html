@@ -1,148 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stock Intelligence — Watchlist</title>
+<meta name="color-scheme" content="dark light">
+<title>NSE Terminal — Stock Intelligence</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=9">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css?v=10">
+<link rel="stylesheet" href="css/base.css?v=10">
+<link rel="stylesheet" href="css/components.css?v=10">
+<link rel="stylesheet" href="css/layout.css?v=10">
+<link rel="stylesheet" href="css/widgets.css?v=10">
+<script>
+// Apply the saved theme before first paint to avoid a flash of the wrong theme.
+try {
+  var t = localStorage.getItem("nse-terminal-theme");
+  if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+} catch (e) { /* storage unavailable — keep dark default */ }
+</script>
 </head>
 <body>
+<a class="skip-link" href="#page">Skip to content</a>
 
-<div class="sticky-top">
-  <nav>
-    <a class="brand" href="index.html"><span class="dot"></span> Stock Intelligence</a>
-    <ul>
-      <li><a href="index.html" class="active">Watchlist</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
+<div class="app" id="app">
+  <div class="nav-backdrop" id="nav-backdrop" aria-hidden="true"></div>
+
+  <nav class="nav-rail" id="nav-rail" aria-label="Primary navigation">
+    <a class="brand" href="#/">
+      <span class="brand-logo" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">NSE Terminal</span>
+        <span class="brand-sub">Stock Intelligence</span>
+      </span>
+    </a>
+
+    <div class="nav-section-label">Overview</div>
+    <ul class="nav-list">
+      <li><a class="nav-item" href="#/" data-route="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+        <span class="label">Dashboard</span></a></li>
+      <li><a class="nav-item" href="#/market" data-route="market">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l4-4 3 3 5-6"/></svg>
+        <span class="label">Market</span></a></li>
+      <li><a class="nav-item" href="#/opportunities" data-route="opportunities">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="0.5"/></svg>
+        <span class="label">Opportunities</span><span class="nav-badge" id="nav-badge-opp"></span></a></li>
     </ul>
-    <div class="nav-search-wrap">
-      <input type="search" id="global-search" class="search-input nav-search" placeholder="Search any stock — symbol, company or sector…" autocomplete="off" aria-label="Search stocks">
-      <span class="nav-search-count" id="global-search-count"></span>
-    </div>
-    <div class="nav-right">
-      <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener"><span class="icon">▶</span><span class="label"> Run pipeline</span></a>
-      <button class="btn btn-ghost btn-sm" id="refresh-btn" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline’ for a fresh fetch."><span class="icon">↻</span><span class="label">Reload</span></button>
+
+    <div class="nav-section-label">Research</div>
+    <ul class="nav-list">
+      <li><a class="nav-item" href="#/watchlist" data-route="watchlist">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6.5 10-6.5S22 12 22 12s-3.5 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="2.8"/></svg>
+        <span class="label">Watchlist</span><span class="nav-badge" id="nav-badge-watchlist"></span></a></li>
+      <li><a class="nav-item" href="#/portfolio" data-route="portfolio">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+        <span class="label">Portfolio</span></a></li>
+      <li><a class="nav-item" href="#/sectors" data-route="sectors">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 1 0 9 9h-9V3z"/><path d="M15 3.5A9 9 0 0 1 20.5 9H15V3.5z"/></svg>
+        <span class="label">Sectors</span></a></li>
+      <li><a class="nav-item" href="#/screener" data-route="screener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M7 12h10"/><path d="M10 19h4"/></svg>
+        <span class="label">Screener</span></a></li>
+    </ul>
+
+    <div class="nav-section-label">Intelligence</div>
+    <ul class="nav-list">
+      <li><a class="nav-item" href="#/intelligence" data-route="intelligence">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20h16a1 1 0 0 0 1-1V8l-6 4-3-6-3 6-6-4v11a1 1 0 0 0 1 1z"/></svg>
+        <span class="label">Market Intelligence</span></a></li>
+      <li><a class="nav-item" href="#/calendar" data-route="calendar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 11h18"/></svg>
+        <span class="label">Calendar</span></a></li>
+      <li><a class="nav-item" href="#/journal" data-route="journal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        <span class="label">Journal</span></a></li>
+    </ul>
+
+    <div class="nav-foot">
+      <a class="nav-item" href="#/settings" data-route="settings">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h.01a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h.01a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v.01a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        <span class="label">Settings</span></a>
+      <div class="fine">Ranked by flag count, never a composite score. Personal use only.</div>
     </div>
   </nav>
-  <div class="market-strip" id="market-strip"><div class="mi mi-note">Loading market overview…</div></div>
+
+  <div class="main-col">
+    <header class="topbar">
+      <button class="btn-icon nav-toggle" id="nav-toggle" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-rail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <div class="topbar-title">
+        <span class="crumb" id="topbar-crumb">Overview</span>
+        <h1 id="topbar-title">Dashboard</h1>
+      </div>
+
+      <div class="topbar-search">
+        <input type="search" id="global-search" class="search-input" placeholder="Search stocks — symbol, company or sector…" autocomplete="off" aria-label="Search stocks">
+        <span class="nav-search-count" id="global-search-count"></span>
+        <span class="kbd-hint" aria-hidden="true"><span class="kbd">/</span></span>
+      </div>
+
+      <div class="topbar-right">
+        <span class="market-status" id="market-status" title="By NSE schedule — trading holidays are not checked. Prices only change when the pipeline runs; they are not live ticks.">
+          <span class="status-dot closed"></span><span class="label-text">…</span>
+        </span>
+        <span class="data-age" id="data-age"></span>
+        <button class="btn-icon" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="btn-icon" id="refresh-btn" aria-label="Reload published data" title="Reloads the latest published data. New prices come from the daily pipeline — use ‘Run pipeline’ for a fresh fetch.">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/></svg>
+        </button>
+        <a class="btn btn-primary btn-sm" href="https://github.com/subramanya1496/nse-dashboard/actions/workflows/daily-run.yml" target="_blank" rel="noopener">▶ <span class="label-text">Run pipeline</span></a>
+      </div>
+    </header>
+
+    <div class="ticker-strip" id="market-strip" aria-label="Market ticker">
+      <div class="mi mi-note">Loading market data…</div>
+    </div>
+
+    <main class="page" id="page" tabindex="-1">
+      <!-- Page content is rendered by js/pages.js -->
+    </main>
+
+    <footer class="app-footer">
+      Ranked by flag count, never a composite score · analyst consensus shown is external third-party opinion · built for personal use only · you make every decision
+    </footer>
+  </div>
 </div>
 
-<main class="wide">
-
-  <section class="kpi-row" id="kpi-row" aria-label="Key numbers today">
-    <div class="kpi-card"><div class="kpi-label">Loading…</div></div>
-  </section>
-
-  <section class="grid-opp">
-    <div class="panel" data-collapse-id="opportunities" aria-label="Today's opportunities">
-      <div class="panel-head">
-        <h2>Today's opportunities</h2>
-        <span class="panel-sub">top 5 by flag count — ranked by conditions met, never a score · click for risks</span>
-      </div>
-      <div id="opportunities-list"><div class="empty-note">Loading…</div></div>
-    </div>
-    <div class="panel" data-collapse-id="overview" aria-label="Market overview">
-      <div class="panel-head"><h2>Market overview</h2><span class="panel-sub">breadth, movers &amp; sectors across the tracked watchlist</span></div>
-      <div id="breadth-widgets"><div class="empty-note">Loading…</div></div>
-    </div>
-  </section>
-
-  <section class="panel" data-collapse-id="changes" aria-label="What changed today">
-    <div class="panel-head">
-      <h2>What changed today</h2>
-      <span class="panel-sub">observed differences vs the previous run — crossings, new extremes, flag moves · click a symbol to jump to it</span>
-    </div>
-    <div id="changes-list"><div class="empty-note">Loading…</div></div>
-  </section>
-
-  <section class="panel" data-collapse-id="sectors" aria-label="Sector strength heatmap">
-    <div class="panel-head">
-      <h2>Sector strength</h2>
-      <span class="panel-sub">avg % of the 8 bullish flags met per sector · click a sector to filter the watchlist</span>
-    </div>
-    <div class="heatmap-grid" id="sector-heatmap-grid"><div class="empty-note">Loading…</div></div>
-  </section>
-
-  <section class="panel" id="watch-card" data-collapse-id="keepaneye" aria-label="Keep an eye on">
-    <div class="panel-head">
-      <h2>Keep an eye on</h2>
-      <span class="panel-sub">setups worth watching, with the price levels that matter · levels are measured from price history — <b>not</b> buy/sell advice</span>
-    </div>
-    <div id="keep-an-eye-list"><div class="empty-note">Loading…</div></div>
-  </section>
-
-  <section class="panel" data-collapse-id="screens" aria-label="Screens">
-    <div class="panel-head">
-      <h2>Screens</h2>
-      <span class="panel-sub">simple transparent conditions on today's data · click a row to jump to the stock</span>
-    </div>
-    <div class="screens-grid" id="screens-grid"><div class="empty-note">Loading…</div></div>
-  </section>
-
-  <section class="grid-main">
-    <div class="panel" id="watchlist-card" aria-label="Watchlist">
-      <div class="card-head-row">
-        <h2>Watchlist</h2>
-        <span class="stock-count" id="stock-count"></span>
-      </div>
-      <div class="search-row">
-        <input type="search" id="stock-search" class="search-input" placeholder="Search by symbol, company or sector…" autocomplete="off">
-      </div>
-      <div class="tab-bar" id="watchlist-tabs">
-        <button class="tab-btn active" data-tab="flags">Top flags</button>
-        <button class="tab-btn" data-tab="trending">Trending</button>
-        <button class="tab-btn" data-tab="sector">By sector</button>
-        <button class="tab-btn" data-tab="favorites">★ Favorites</button>
-      </div>
-      <div class="filter-row">
-        <span class="filter-label">Filters</span>
-        <div class="filter-chips" id="filter-chips"></div>
-      </div>
-      <div class="filter-note fine" id="filter-note"></div>
-      <div id="stock-list"><div class="empty-note">Loading…</div></div>
-    </div>
-
-    <aside class="rail">
-      <div class="side-card">
-        <h5>Institutional activity</h5>
-        <div id="institutional-body" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Upcoming events</h5>
-        <div id="events-body" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Latest news <span class="ext-tag">keyword sentiment · not AI</span></h5>
-        <div id="news-body" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Portfolio analytics</h5>
-        <div id="portfolio-analytics-body" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Dashboard health</h5>
-        <div id="run-status" class="empty-note">Loading…</div>
-      </div>
-      <div class="side-card">
-        <h5>Manage</h5>
-        <div class="manage-buttons">
-          <a class="btn btn-primary" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=add-stock.yml" target="_blank" rel="noopener"><span class="icon">+</span> Add stock to watchlist</a>
-          <a class="btn btn-danger" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=remove-stock.yml" target="_blank" rel="noopener"><span class="icon">−</span> Remove stock</a>
-          <a class="btn btn-primary" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=add-holding.yml" target="_blank" rel="noopener"><span class="icon">+</span> Add holding</a>
-          <a class="btn btn-danger" href="https://github.com/subramanya1496/nse-dashboard/issues/new?template=remove-holding.yml" target="_blank" rel="noopener"><span class="icon">−</span> Remove holding</a>
-        </div>
-      </div>
-    </aside>
-  </section>
-
-</main>
-
-<footer>Ranked by flag count, never a composite score · analyst consensus shown is external third-party opinion · built for personal use only · you make every decision</footer>
-
-<script src="js/app.js?v=8"></script>
-<script src="js/home.js?v=6"></script>
-
+<script src="js/app.js?v=10"></script>
+<script src="js/platform.js?v=10"></script>
+<script src="js/pages.js?v=10"></script>
 </body>
 </html>

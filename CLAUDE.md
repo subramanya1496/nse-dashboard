@@ -45,10 +45,48 @@ displayed as-is and clearly labelled "external · not this dashboard's" — the 
 never derives its own buy/hold/sell verdict from the flags or anything else. Keep that
 labelling; do not let this grow into a dashboard-generated verdict.
 
-## Dashboard layout (redesigned 2026-07-13 — Bloomberg-dense, still light glassmorphism)
-The home page (`dashboard/index.html` + `dashboard/js/home.js`) is a single dense
-multi-section research view. `dashboard/js/app.js` remains the shared utility layer
-(also used by `portfolio.html`); page assets are cache-busted with `?v=3`.
+## Platform architecture (redesigned 2026-07-18 — "NSE Terminal" multi-page shell)
+The dashboard is now a single-page app (`dashboard/index.html`) with a **left
+navigation rail** and a hash router, styled as a dark-navy desktop trading terminal.
+Explicitly requested redesign ("premium trading platform", left nav, dark-first);
+it supersedes the 2026-07-13 single-scroll layout below (kept for widget-level
+reference — the widgets themselves were re-housed, not redesigned).
+- **Files:** `css/tokens.css` (design tokens: 8px spacing scale, radii, type,
+  semantic colors, dark+light themes), `css/base.css` (reset/a11y/utilities),
+  `css/components.css` (buttons/cards/pills/badges/tabs/inputs/tables/metric
+  cards/progress rings/drawer/dialog/skeleton variants), `css/layout.css` (app
+  shell: nav rail, topbar, ticker strip, responsive), `css/widgets.css` (the
+  existing data widgets re-skinned). `js/app.js` is unchanged as the shared
+  widget/data layer; `js/platform.js` is the shell runtime (theme, router, data
+  store loaded once, topbar status, ticker, global search, keyboard, mobile nav
+  drawer); `js/pages.js` registers the pages. `home.js`/`portfolio.js`/`style.css`
+  were retired; `portfolio.html` is a redirect stub to `index.html#/portfolio`.
+- **Pages (one responsibility each):** Dashboard (KPI metric cards + top-3
+  opportunities + what changed + portfolio/health rail) · Market (India + global
+  indices, breadth, movers) · Opportunities (top 5 setups + Keep an eye on) ·
+  Watchlist (search/tabs/filters/dense rows + detail panels) · Portfolio ·
+  Sectors (heatmap + grouped stocks) · Screener (the six screens) · Market
+  Intelligence (news + sentiment counts + institutional) · Calendar (60-day
+  events) · Journal (all localStorage notes, editable) · Settings (theme, manage
+  links, pipeline health, about).
+- **Shell:** sticky topbar (crumb/title, global search with `/` shortcut, market
+  status, data age, theme toggle, reload, run pipeline) + an always-visible ticker
+  strip (indices, ADV/DEC, data age — the age also lives here because the topbar
+  copy hides on mobile and staleness must always be visible). Search behavior:
+  on the watchlist it filters live; on any other page typing jumps to the
+  watchlist with the query applied.
+- **Motion:** CSS transitions/keyframes only (page-enter, hover lift, expand,
+  skeleton shimmer), honoring `prefers-reduced-motion`. Framer Motion was asked
+  for but is a React library — this site is deliberately buildless vanilla JS on
+  GitHub Pages, so the same motion language is implemented natively. Do not add
+  a build step just for an animation library.
+- All hard rules unchanged: flag counts not scores, explicit empty states,
+  rule-based (not AI) explanations, external analyst labelling.
+
+## Dashboard layout (2026-07-13, superseded by the 2026-07-18 shell above —
+widget behavior below still accurate, now distributed across the pages)
+The home page was a single dense multi-section research view; `dashboard/js/app.js`
+remains the shared utility layer.
 Sections, top to bottom:
 0. **Sticky header** — nav + an always-visible **global search** (`#global-search`) that
    filters the watchlist from anywhere on the page (Enter scrolls to it). It stays in sync
@@ -278,15 +316,22 @@ fallback RSI/ADX value on a fetch failure — log it and skip that stock's ranki
 for that cycle instead). This was the single most costly bug class in the trading
 bot's history (v25 forensic analysis) — do not repeat it here.
 
-## Visual style
-- **Light background only. No dark mode, ever, anywhere.**
-- Glassmorphism: translucent white cards, backdrop blur, soft shadows, cool
-  light-blue/mint gradient background.
-- Color meaning is functional, not decorative: teal = bullish/positive flag,
-  amber = caution/neutral, rose = bearish/weak — reserved for flag/status
-  indicators only.
-- Fonts used in the approved guide/mockup: Sora (headings), Inter (body),
-  JetBrains Mono (tickers, prices, numeric data).
+## Visual style (changed 2026-07-18 by explicit request — dark-first terminal)
+- **Dark mode first**: deep navy (`#0B1220` background, `#111827` cards), never
+  pure black. This was an explicit 2026-07-18 instruction that supersedes the
+  earlier "light background only, no dark mode ever" rule. The original light
+  glass palette is retained as a secondary theme (toggle in topbar/Settings,
+  persisted per browser) — do not delete it, and do not flip the default back
+  without being asked.
+- Color meaning is functional, not decorative: emerald = bullish/positive,
+  rose = bearish/weak, amber = caution/neutral, cyan = interactive/info,
+  purple = AI/special — encoded as semantic tokens in `css/tokens.css`
+  (legacy aliases `--teal/--rose/--amber/--ink-faint` kept for app.js SVGs).
+- Fonts: Inter (all UI text and headings), JetBrains Mono (tickers, prices,
+  numeric data). Sora was dropped in the 2026-07-18 redesign.
+- Spacing on an 8px scale; radii 12–16px; soft layered shadows; restrained
+  radial-gradient background. Accessibility: visible focus rings, skip link,
+  `aria-current` nav, `prefers-reduced-motion` + `prefers-contrast` honored.
 
 ## Reference
 The full build guide, cost breakdown, and visual mockup were already produced and
