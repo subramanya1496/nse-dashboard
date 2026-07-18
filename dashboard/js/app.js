@@ -319,7 +319,7 @@ function buildPriceChartSvg(history) {
     .join(" ");
   const rising = closes[closes.length - 1] >= closes[0];
   const stroke = rising ? "var(--teal)" : "var(--rose)";
-  const areaFill = rising ? "rgba(31,122,99,0.10)" : "rgba(168,64,58,0.10)";
+  const areaFill = rising ? "var(--up-soft)" : "var(--down-soft)"; // theme-aware (dark/light)
   const area = `${pad},${H - pad} ${closePts} ${(W - pad).toFixed(1)},${H - pad}`;
   return `<svg class="price-chart" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="Recent price line chart">
     <polygon points="${area}" fill="${areaFill}"></polygon>
@@ -408,7 +408,7 @@ function buildForecastChartSvg(history, a, close) {
   const lastY = yAt(closes[closes.length - 1]);
   const rising = closes[closes.length - 1] >= closes[0];
   const stroke = rising ? "var(--teal)" : "var(--rose)";
-  const areaFill = rising ? "rgba(31,122,99,0.10)" : "rgba(168,64,58,0.10)";
+  const areaFill = rising ? "var(--up-soft)" : "var(--down-soft)"; // theme-aware (dark/light)
   const area = `${pad},${H - pad} ${closePts} ${lastX.toFixed(1)},${H - pad}`;
 
   const median = a.target_median ?? a.target_mean;
