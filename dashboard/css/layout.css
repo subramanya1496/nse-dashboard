@@ -117,7 +117,7 @@
   position: sticky; top: 0; z-index: 70;
   display: flex; align-items: center; gap: var(--s3);
   height: var(--topbar-h);
-  padding: 0 var(--s5);
+  padding: 0 var(--s4);
   background: var(--surface-glass);
   backdrop-filter: blur(14px) saturate(150%);
   -webkit-backdrop-filter: blur(14px) saturate(150%);
@@ -126,15 +126,16 @@
 
 .nav-toggle { display: none; }
 
-.topbar-title { min-width: 0; margin-right: var(--s2); }
-.topbar-title h1 { font-size: var(--text-lg); font-weight: 700; letter-spacing: -0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.topbar-title .crumb { font-size: 10px; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: -3px; }
+.topbar-title { min-width: 0; margin-right: var(--s2); display: flex; align-items: baseline; gap: var(--s2); }
+.topbar-title h1 { font-size: var(--text-md); font-weight: 700; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.topbar-title .crumb { font-size: 9.5px; color: var(--text-3); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; }
+.topbar-title .crumb::after { content: "/"; margin-left: var(--s2); opacity: 0.5; }
 
 .topbar-search {
-  flex: 1; min-width: 0; max-width: 460px;
+  flex: 1; min-width: 0; max-width: 420px;
   position: relative; display: flex; align-items: center;
 }
-.topbar-search .search-input { padding-right: 92px; height: 34px; }
+.topbar-search .search-input { padding-right: 92px; height: 30px; font-size: var(--text-sm); }
 .topbar-search .kbd-hint {
   position: absolute; right: var(--s2);
   display: inline-flex; gap: 3px; align-items: center;
@@ -172,12 +173,14 @@
 
 /* ---------------- Ticker strip (always-visible market tape) ---------------- */
 
+/* Sticky under the topbar so the tape (and the data age it carries) never scrolls away */
 .ticker-strip {
+  position: sticky; top: var(--topbar-h); z-index: 65;
   display: flex; align-items: stretch;
   overflow-x: auto;
   background: var(--bg-deep);
   border-bottom: 1px solid var(--border);
-  padding: var(--s1) var(--s4);
+  padding: 2px var(--s4);
   font-size: var(--text-xs);
   min-height: var(--ticker-h);
 }
@@ -214,8 +217,8 @@
 @keyframes pageEnter { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
 .page-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s3); flex-wrap: wrap; }
-.page-head h2 { font-size: var(--text-2xl); font-weight: 800; letter-spacing: -0.03em; }
-.page-head .sub { font-size: var(--text-sm); color: var(--text-3); margin-top: 2px; }
+.page-head h2 { font-size: var(--text-xl); font-weight: 800; letter-spacing: -0.03em; }
+.page-head .sub { font-size: var(--text-sm); color: var(--text-3); margin-top: 2px; max-width: 72ch; }
 .page-head .actions { display: flex; gap: var(--s2); align-items: center; flex-wrap: wrap; }
 
 /* Common page grids */

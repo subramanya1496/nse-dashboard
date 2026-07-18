@@ -82,6 +82,30 @@ reference — the widgets themselves were re-housed, not redesigned).
   a build step just for an animation library.
 - All hard rules unchanged: flag counts not scores, explicit empty states,
   rule-based (not AI) explanations, external analyst labelling.
+- **Polish pass (2026-07-18, same day, explicit "premium SaaS polish" request —
+  architecture/nav/theme frozen, visuals only):**
+  - Topbar compacted (48px, crumb inline with title), ticker strip is sticky under
+    it so the tape + data age never scroll away.
+  - KPI metric cards: Lucide-style icon chip, 24px number, mini progress ring
+    (share of tracked stocks — a fraction of counts, not a score) and a
+    **"vs yesterday" delta chip** sourced honestly from `changes.json` flag
+    gains/losses (portfolio card: day change vs prev close). No changes file →
+    no chip; never an invented trend.
+  - Opportunity cards compacted: badge row (flag count, attention stars, risk-
+    condition count, W/D trend, volume ×, data completeness) + observed S/R/52w
+    levels inline + one-line clamped summary; highlights/risks moved behind the
+    expand. The requested "Confidence badge" **is** the data-completeness count
+    and the "Risk badge" **is** the risk-condition count — same rule-compliant
+    translation as the decision layer; do not upgrade either into a rating.
+  - Market overview: three breadth rings (above EMA200 / advancing / sectors
+    ≥50% flags) above the fact list — still deliberately no market health score.
+  - Portfolio: "Risk conditions" side card (per-holding count of the 6 named
+    decision-block booleans, sorted high→low; explicit note when the block is
+    missing).
+  - Empty states are boxed/dashed (`.empty-note`); renderers that fill a
+    "Loading…" container must `classList.remove("empty-note")` or the box
+    outlines real content.
+  - Sticky `th`, button press feedback, hover-swap of KPI icon → "details ▾".
 
 ## Dashboard layout (2026-07-13, superseded by the 2026-07-18 shell above —
 widget behavior below still accurate, now distributed across the pages)

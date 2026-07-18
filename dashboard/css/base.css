@@ -105,7 +105,16 @@ a { color: var(--accent); }
 .fine { font-size: var(--text-xs); color: var(--text-3); margin-top: var(--s2); line-height: 1.45; }
 .fine.dim, .dim { opacity: 0.65; }
 
-.empty-note { color: var(--text-3); font-size: var(--text-md); padding: var(--s2) 0; line-height: 1.5; }
-.empty-note.sm { font-size: var(--text-sm); padding: var(--s1) 0; }
+/* Empty states — deliberate, boxed, honest about why data is absent */
+.empty-note {
+  color: var(--text-3); font-size: var(--text-sm); line-height: 1.55;
+  padding: var(--s3) var(--s4);
+  border: 1px dashed var(--border);
+  border-radius: var(--r-sm);
+  background: var(--neutral-soft);
+}
+.empty-note::before { content: "◌ "; color: var(--text-3); opacity: 0.7; }
+.empty-note.sm { font-size: var(--text-xs); padding: var(--s2) var(--s3); border: none; background: none; }
+.empty-note.sm::before { content: ""; }
 
 .ss { font-family: var(--font-ui); font-weight: 700; }
