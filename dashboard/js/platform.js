@@ -366,6 +366,11 @@
       if (oppBadge && oppCount) oppBadge.textContent = oppCount;
       const wlBadge = document.getElementById("nav-badge-watchlist");
       if (wlBadge) wlBadge.textContent = d.stocks.length;
+      const recoBadge = document.getElementById("nav-badge-reco");
+      if (recoBadge && window.RecoEngine) {
+        const n = d.stocks.filter((s) => ["excellent", "good"].includes(window.RecoEngine.evaluate(s, d).tier.key)).length;
+        if (n) recoBadge.textContent = n;
+      }
     }
   }
 

@@ -229,6 +229,46 @@ displayed — never a weighted number. Do not "upgrade" any of them into a score
 - **Historical setup success rates were explicitly deferred** (Phase 4 backtesting) —
   do not bolt them onto this layer without a separate design pass.
 
+## Recommendations page (added 2026-07-18, ⭐ nav entry after Opportunities)
+Built from a spec that asked for recommendation badges ("Excellent Entry…Avoid"),
+an Opportunity Score, Confidence, Risk and Entry Quality gauges, buy zones, targets,
+stop losses and holding-style advice. Per the standing rule (and exactly like the
+2026-07-16 decision layer), every construct was **translated to rule-compliant form**
+— counts of named conditions and observed levels, never a weighted number, verdict,
+or price instruction. Files: `dashboard/js/recommendations.js` (self-contained page
+module + engine, loaded **before** `pages.js` so it registers before `P.boot()`),
+Recommendations section appended to `css/widgets.css`, nav badge count (excellent+
+good tiers) in `platform.js` boot. All client-side from published JSON — no pipeline
+changes.
+- **Entry tiers** (the requested badges): first-match threshold rules on 7 named
+  entry checks + flag count + risk-condition count. "Avoid" was deliberately renamed
+  **"No setup today"** (describes the setup; never commands). Tier rule text is shown
+  on the badge tooltip and inside the card. Named disqualifiers: chase-risk extension
+  (RSI >70 or ≥8% above EMA20) and a failed range-geometry check cap the top tiers.
+- **7 entry checks** (the "Why recommended" checklist): strong trend (EMA50>EMA200 &
+  close>EMA200) · pullback-or-confirmed-breakout proximity · MACD bullish · RSI 40–65 ·
+  volume ≥1.2× · sector ≥50% avg flags · range geometry ≥1.5:1. Unevaluable checks
+  shrink the denominator ("X/evaluated"), and <5 evaluable checks caps the tier at Watch.
+- **Gauges** are rings of counts: flags X/8 (the "opportunity score"), entry checks
+  X/evaluated, risk conditions X/6 (pipeline decision block), data completeness X/5
+  (the "confidence"). Do not upgrade any into a 0–100 score.
+- **Entry map**: 20-session S/R, ±2% EMA20/50 zone, ±1 ATR whisker and last close on
+  one scale — observed measurements, explicitly labelled "not targets or stops"; no
+  stop-loss or target is ever emitted. "Risk:reward" is shown as **range geometry**:
+  measured distance to resistance vs distance to support (e.g. "0.8:1 observed, not a
+  projected reward"); not measurable at range extremes and says so.
+- **Signal timeframe** (the requested holding style): names which timeframe today's
+  signals live on (momentum/swing/positional/mixed) with the reason; explicitly *not*
+  a holding instruction, and intraday is never emitted (daily pipeline).
+- **Action + "What would change this"** (the requested wait conditions): factual
+  state descriptions with the exact observed numbers and the thresholds at which each
+  failed check would fire — never instructions.
+- **History**: per-day tier snapshots in localStorage (`nse-reco-history`, 30 days,
+  labelled "this browser only"); shows prev→today moves; explicit empty state on day 1.
+  Gap risk and (when events are missing) earnings risk are stated as "not evaluated".
+- Filters (tier/timeframe/risk/data/pullback/breakout/near-support) persist in
+  localStorage; summary tiles toggle tier filters.
+
 ## Pipeline performance & reliability (overhauled 2026-07-15)
 The run used to take ~70–90 min; the profile showed almost all of it was retry backoff
 against sources that block GitHub's runner IPs (yfinance quote endpoint 429'd all 176
