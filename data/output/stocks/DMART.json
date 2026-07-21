@@ -3,35 +3,30 @@
   "name": "Avenue Supermarts (DMart)",
   "sector": "Retail",
   "indicators": {
-    "date": "2026-07-20",
-    "close": 3975.5,
-    "prev_close": 3951.9,
-    "change_pct": 0.5971811027606951,
-    "ema20": 4069.7664063133407,
-    "ema50": 4138.231796375664,
-    "ema200": 4137.061787564836,
-    "rsi14": 39.98228205595342,
-    "macd": -71.302411305222,
-    "macd_signal": -52.43457189574076,
-    "atr14": 96.43216846007762,
-    "adx14": 25.78553437767587,
-    "adx_pos": 14.89589546539531,
-    "adx_neg": 25.506334873318494,
-    "bb_high": 4469.606947011292,
-    "bb_low": 3795.8030529887083,
-    "bb_mid": 4132.705,
-    "vwap20": 4110.694138084965,
+    "date": "2026-07-21",
+    "close": 3975.6,
+    "prev_close": 3975.5,
+    "change_pct": 0.0025154068670584593,
+    "ema20": 4060.7981771406417,
+    "ema50": 4131.854078870736,
+    "ema200": 4135.455202613942,
+    "rsi14": 39.99218038982145,
+    "macd": -69.74962210931199,
+    "macd_signal": -55.89758193845501,
+    "atr14": 93.38701357007209,
+    "adx14": 25.62445251239313,
+    "adx_pos": 15.139582471130847,
+    "adx_neg": 24.45675423668999,
+    "bb_high": 4445.630946963185,
+    "bb_low": 3784.2790530368143,
+    "bb_mid": 4114.955,
+    "vwap20": 4102.913260697941,
     "high_52w": 4949.5,
     "low_52w": 3529.0,
-    "volume": 273447.0,
-    "avg_volume20": 685260.7
+    "volume": 314696.0,
+    "avg_volume20": 686006.25
   },
   "price_history": [
-    {
-      "date": "2026-01-22",
-      "close": 3724.1,
-      "ema50": 3877.79
-    },
     {
       "date": "2026-01-23",
       "close": 3665.6,
@@ -626,13 +621,18 @@
       "date": "2026-07-20",
       "close": 3975.5,
       "ema50": 4138.23
+    },
+    {
+      "date": "2026-07-21",
+      "close": 3975.6,
+      "ema50": 4131.85
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
       "ema20_above_ema50": false,
-      "ema50_above_ema200": true,
+      "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": false,
@@ -640,19 +640,17 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,975.50 vs EMA20 4,069.77",
-      "ema20_above_ema50": "EMA20 4,069.77 vs EMA50 4,138.23",
-      "ema50_above_ema200": "EMA50 4,138.23 vs EMA200 4,137.06",
-      "rsi_above_50": "RSI(14) 39.98 vs 50",
-      "macd_bullish": "MACD -71.30 vs signal -52.43",
-      "adx_trending_up": "ADX(14) 25.79 vs 20, +DI 14.90 vs -DI 25.51",
-      "price_above_vwap20": "Close 3,975.50 vs 20d VWAP 4,110.69",
-      "price_above_bb_mid": "Close 3,975.50 vs BB mid 4,132.70"
+      "price_above_ema20": "Close 3,975.60 vs EMA20 4,060.80",
+      "ema20_above_ema50": "EMA20 4,060.80 vs EMA50 4,131.85",
+      "ema50_above_ema200": "EMA50 4,131.85 vs EMA200 4,135.46",
+      "rsi_above_50": "RSI(14) 39.99 vs 50",
+      "macd_bullish": "MACD -69.75 vs signal -55.90",
+      "adx_trending_up": "ADX(14) 25.62 vs 20, +DI 15.14 vs -DI 24.46",
+      "price_above_vwap20": "Close 3,975.60 vs 20d VWAP 4,102.91",
+      "price_above_bb_mid": "Close 3,975.60 vs BB mid 4,114.95"
     },
-    "flags_on": [
-      "ema50_above_ema200"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 96.43 = 2.4% of price",
+        "atr_high": "ATR 93.39 = 2.3% of price",
         "rsi_extreme": "RSI(14) 40.0",
-        "below_ema200": "Close 3,975.50 vs EMA200 4,137.06",
-        "extended_above_ema20": "Close 3,975.50 vs EMA20 4,069.77 (-2.3%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 3,975.50 vs 52w low 3,529.00"
+        "below_ema200": "Close 3,975.60 vs EMA200 4,135.46",
+        "extended_above_ema20": "Close 3,975.60 vs EMA20 4,060.80 (-2.1%)",
+        "large_day_move": "Day change +0.0%",
+        "near_52w_low": "Close 3,975.60 vs 52w low 3,529.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -695,7 +693,7 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
+      "daily": "bearish",
       "weekly": "bearish",
       "intraday": null
     }
@@ -704,5 +702,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-20T15:17:37.392229+00:00"
+  "updated_at": "2026-07-21T11:59:29.196493+00:00"
 }

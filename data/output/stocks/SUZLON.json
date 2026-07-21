@@ -3,35 +3,30 @@
   "name": "Suzlon Energy",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-07-20",
-    "close": 53.09,
-    "prev_close": 51.99,
-    "change_pct": 2.115791498365073,
-    "ema20": 54.350166535079126,
-    "ema50": 54.19134940942975,
-    "ema200": 52.9807557640534,
-    "rsi14": 42.19414008346445,
-    "macd": -0.9581607889246939,
-    "macd_signal": -0.5023291217130205,
-    "atr14": 1.4501899899576656,
-    "adx14": 23.226891767022202,
-    "adx_pos": 19.16207116507726,
-    "adx_neg": 29.9241055988469,
-    "bb_high": 60.40656566891766,
-    "bb_low": 50.32943433108236,
-    "bb_mid": 55.36800000000001,
-    "vwap20": 55.811503121827045,
+    "date": "2026-07-21",
+    "close": 53.17,
+    "prev_close": 53.09,
+    "change_pct": 0.15068751177245862,
+    "ema20": 54.237769722214445,
+    "ema50": 54.1512964914129,
+    "ema200": 52.98263879127675,
+    "rsi14": 42.66983053767603,
+    "macd": -0.9230268560218704,
+    "macd_signal": -0.5864686685747904,
+    "atr14": 1.3930335621035466,
+    "adx14": 22.94063753073818,
+    "adx_pos": 19.600203042718416,
+    "adx_neg": 28.926761735782648,
+    "bb_high": 59.84310372116662,
+    "bb_low": 50.27889627883338,
+    "bb_mid": 55.061,
+    "vwap20": 55.54143302140698,
     "high_52w": 68.3,
     "low_52w": 38.19,
-    "volume": 51555144.0,
-    "avg_volume20": 63666638.4
+    "volume": 31019284.0,
+    "avg_volume20": 61682755.1
   },
   "price_history": [
-    {
-      "date": "2026-01-22",
-      "close": 46.99,
-      "ema50": 52.14
-    },
     {
       "date": "2026-01-23",
       "close": 45.7,
@@ -626,6 +621,11 @@
       "date": "2026-07-20",
       "close": 53.09,
       "ema50": 54.19
+    },
+    {
+      "date": "2026-07-21",
+      "close": 53.17,
+      "ema50": 54.15
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 53.09 vs EMA20 54.35",
-      "ema20_above_ema50": "EMA20 54.35 vs EMA50 54.19",
-      "ema50_above_ema200": "EMA50 54.19 vs EMA200 52.98",
-      "rsi_above_50": "RSI(14) 42.19 vs 50",
-      "macd_bullish": "MACD -0.96 vs signal -0.50",
-      "adx_trending_up": "ADX(14) 23.23 vs 20, +DI 19.16 vs -DI 29.92",
-      "price_above_vwap20": "Close 53.09 vs 20d VWAP 55.81",
-      "price_above_bb_mid": "Close 53.09 vs BB mid 55.37"
+      "price_above_ema20": "Close 53.17 vs EMA20 54.24",
+      "ema20_above_ema50": "EMA20 54.24 vs EMA50 54.15",
+      "ema50_above_ema200": "EMA50 54.15 vs EMA200 52.98",
+      "rsi_above_50": "RSI(14) 42.67 vs 50",
+      "macd_bullish": "MACD -0.92 vs signal -0.59",
+      "adx_trending_up": "ADX(14) 22.94 vs 20, +DI 19.60 vs -DI 28.93",
+      "price_above_vwap20": "Close 53.17 vs 20d VWAP 55.54",
+      "price_above_bb_mid": "Close 53.17 vs BB mid 55.06"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.45 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 42.2",
-        "below_ema200": "Close 53.09 vs EMA200 52.98",
-        "extended_above_ema20": "Close 53.09 vs EMA20 54.35 (-2.3%)",
-        "large_day_move": "Day change +2.1%",
-        "near_52w_low": "Close 53.09 vs 52w low 38.19"
+        "atr_high": "ATR 1.39 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 42.7",
+        "below_ema200": "Close 53.17 vs EMA200 52.98",
+        "extended_above_ema20": "Close 53.17 vs EMA20 54.24 (-2.0%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 53.17 vs 52w low 38.19"
       },
       "conditions_on": [
         "atr_high"
@@ -693,7 +694,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-20T15:18:39.963583+00:00"
+  "updated_at": "2026-07-21T12:00:32.019286+00:00"
 }

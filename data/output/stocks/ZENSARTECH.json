@@ -3,35 +3,30 @@
   "name": "Zensar Technologies",
   "sector": "IT",
   "indicators": {
-    "date": "2026-07-20",
-    "close": 526.35,
-    "prev_close": 518.15,
-    "change_pct": 1.582553314677226,
-    "ema20": 492.81971020680805,
-    "ema50": 493.93550543116675,
-    "ema200": 591.141353299045,
-    "rsi14": 58.560538564338835,
-    "macd": 14.198712618939169,
-    "macd_signal": 6.38263543897637,
-    "atr14": 26.22968395735671,
-    "adx14": 29.987146067787513,
-    "adx_pos": 36.253164451530985,
-    "adx_neg": 15.956670328696426,
-    "bb_high": 555.6351592527965,
-    "bb_low": 401.35984074720363,
-    "bb_mid": 478.49750000000006,
-    "vwap20": 499.31559809725036,
+    "date": "2026-07-21",
+    "close": 513.9,
+    "prev_close": 526.35,
+    "change_pct": -2.3653462524935964,
+    "ema20": 494.8273568537787,
+    "ema50": 494.71842678680724,
+    "ema200": 590.3727826194526,
+    "rsi14": 55.38357157461391,
+    "macd": 13.962661302201923,
+    "macd_signal": 7.898640611621481,
+    "atr14": 25.791849388974082,
+    "adx14": 30.282947054848954,
+    "adx_pos": 34.235116605471546,
+    "adx_neg": 16.813172711424244,
+    "bb_high": 559.1416272180795,
+    "bb_low": 404.22837278192065,
+    "bb_mid": 481.68500000000006,
+    "vwap20": 499.6241539431031,
     "high_52w": 868.95,
     "low_52w": 423.0,
-    "volume": 3048065.0,
-    "avg_volume20": 11704019.7
+    "volume": 1809260.0,
+    "avg_volume20": 11753943.05
   },
   "price_history": [
-    {
-      "date": "2026-01-22",
-      "close": 722.3,
-      "ema50": 726.69
-    },
     {
       "date": "2026-01-23",
       "close": 704.75,
@@ -626,12 +621,17 @@
       "date": "2026-07-20",
       "close": 526.35,
       "ema50": 493.94
+    },
+    {
+      "date": "2026-07-21",
+      "close": 513.9,
+      "ema50": 494.72
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": true,
-      "ema20_above_ema50": false,
+      "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
       "macd_bullish": true,
@@ -640,24 +640,25 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 526.35 vs EMA20 492.82",
-      "ema20_above_ema50": "EMA20 492.82 vs EMA50 493.94",
-      "ema50_above_ema200": "EMA50 493.94 vs EMA200 591.14",
-      "rsi_above_50": "RSI(14) 58.56 vs 50",
-      "macd_bullish": "MACD 14.20 vs signal 6.38",
-      "adx_trending_up": "ADX(14) 29.99 vs 20, +DI 36.25 vs -DI 15.96",
-      "price_above_vwap20": "Close 526.35 vs 20d VWAP 499.32",
-      "price_above_bb_mid": "Close 526.35 vs BB mid 478.50"
+      "price_above_ema20": "Close 513.90 vs EMA20 494.83",
+      "ema20_above_ema50": "EMA20 494.83 vs EMA50 494.72",
+      "ema50_above_ema200": "EMA50 494.72 vs EMA200 590.37",
+      "rsi_above_50": "RSI(14) 55.38 vs 50",
+      "macd_bullish": "MACD 13.96 vs signal 7.90",
+      "adx_trending_up": "ADX(14) 30.28 vs 20, +DI 34.24 vs -DI 16.81",
+      "price_above_vwap20": "Close 513.90 vs 20d VWAP 499.62",
+      "price_above_bb_mid": "Close 513.90 vs BB mid 481.69"
     },
     "flags_on": [
       "price_above_ema20",
+      "ema20_above_ema50",
       "rsi_above_50",
       "macd_bullish",
       "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 6,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
@@ -666,7 +667,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -679,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 26.23 = 5.0% of price",
-        "rsi_extreme": "RSI(14) 58.6",
-        "below_ema200": "Close 526.35 vs EMA200 591.14",
-        "extended_above_ema20": "Close 526.35 vs EMA20 492.82 (+6.8%)",
-        "large_day_move": "Day change +1.6%",
-        "near_52w_low": "Close 526.35 vs 52w low 423.00"
+        "atr_high": "ATR 25.79 = 5.0% of price",
+        "rsi_extreme": "RSI(14) 55.4",
+        "below_ema200": "Close 513.90 vs EMA200 590.37",
+        "extended_above_ema20": "Close 513.90 vs EMA20 494.83 (+3.9%)",
+        "large_day_move": "Day change -2.4%",
+        "near_52w_low": "Close 513.90 vs 52w low 423.00"
       },
       "conditions_on": [
         "atr_high",
@@ -710,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-20T15:18:55.826632+00:00"
+  "updated_at": "2026-07-21T12:00:47.634781+00:00"
 }

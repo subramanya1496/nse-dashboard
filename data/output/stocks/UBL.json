@@ -3,35 +3,30 @@
   "name": "United Breweries",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-07-20",
-    "close": 1349.0,
-    "prev_close": 1339.7,
-    "change_pct": 0.6941852653579125,
-    "ema20": 1344.0147871559607,
-    "ema50": 1366.5873108671424,
-    "ema200": 1549.1646705726328,
-    "rsi14": 50.98478855968003,
-    "macd": -1.436723072118184,
-    "macd_signal": -3.334846700224818,
-    "atr14": 28.44626189261797,
-    "adx14": 13.052117795558502,
-    "adx_pos": 19.793966343434818,
-    "adx_neg": 15.846908042662456,
-    "bb_high": 1368.3018926739162,
-    "bb_low": 1317.578107326084,
-    "bb_mid": 1342.94,
-    "vwap20": 1346.5809467488525,
+    "date": "2026-07-21",
+    "close": 1404.4,
+    "prev_close": 1350.9,
+    "change_pct": 3.9603227477977643,
+    "ema20": 1349.9294786286355,
+    "ema50": 1368.1417492721987,
+    "ema200": 1547.7429434478045,
+    "rsi14": 64.75701526187123,
+    "macd": 3.58027774261177,
+    "macd_signal": -1.9275710994068134,
+    "atr14": 31.342957471716684,
+    "adx14": 14.872692872028153,
+    "adx_pos": 30.104362515233163,
+    "adx_neg": 13.355036677966789,
+    "bb_high": 1383.1151407922837,
+    "bb_low": 1309.4248592077163,
+    "bb_mid": 1346.27,
+    "vwap20": 1356.840781281795,
     "high_52w": 2110.0,
     "low_52w": 1276.0,
-    "volume": 83589.0,
-    "avg_volume20": 96513.1
+    "volume": 535651.0,
+    "avg_volume20": 119499.35
   },
   "price_history": [
-    {
-      "date": "2026-01-22",
-      "close": 1443.6,
-      "ema50": 1620.41
-    },
     {
       "date": "2026-01-23",
       "close": 1441.5,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-07-20",
-      "close": 1349.0,
-      "ema50": 1366.59
+      "close": 1350.9,
+      "ema50": 1366.66
+    },
+    {
+      "date": "2026-07-21",
+      "close": 1404.4,
+      "ema50": 1368.14
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,349.00 vs EMA20 1,344.01",
-      "ema20_above_ema50": "EMA20 1,344.01 vs EMA50 1,366.59",
-      "ema50_above_ema200": "EMA50 1,366.59 vs EMA200 1,549.16",
-      "rsi_above_50": "RSI(14) 50.98 vs 50",
-      "macd_bullish": "MACD -1.44 vs signal -3.33",
-      "adx_trending_up": "ADX(14) 13.05 vs 20, +DI 19.79 vs -DI 15.85",
-      "price_above_vwap20": "Close 1,349.00 vs 20d VWAP 1,346.58",
-      "price_above_bb_mid": "Close 1,349.00 vs BB mid 1,342.94"
+      "price_above_ema20": "Close 1,404.40 vs EMA20 1,349.93",
+      "ema20_above_ema50": "EMA20 1,349.93 vs EMA50 1,368.14",
+      "ema50_above_ema200": "EMA50 1,368.14 vs EMA200 1,547.74",
+      "rsi_above_50": "RSI(14) 64.76 vs 50",
+      "macd_bullish": "MACD 3.58 vs signal -1.93",
+      "adx_trending_up": "ADX(14) 14.87 vs 20, +DI 30.10 vs -DI 13.36",
+      "price_above_vwap20": "Close 1,404.40 vs 20d VWAP 1,356.84",
+      "price_above_bb_mid": "Close 1,404.40 vs BB mid 1,346.27"
     },
     "flags_on": [
       "price_above_ema20",
@@ -665,7 +665,8 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 28.45 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 51.0",
-        "below_ema200": "Close 1,349.00 vs EMA200 1,549.16",
-        "extended_above_ema20": "Close 1,349.00 vs EMA20 1,344.01 (+0.4%)",
-        "large_day_move": "Day change +0.7%",
-        "near_52w_low": "Close 1,349.00 vs 52w low 1,276.00"
+        "atr_high": "ATR 31.34 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 64.8",
+        "below_ema200": "Close 1,404.40 vs EMA200 1,547.74",
+        "extended_above_ema20": "Close 1,404.40 vs EMA20 1,349.93 (+4.0%)",
+        "large_day_move": "Day change +4.0%",
+        "near_52w_low": "Close 1,404.40 vs 52w low 1,276.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -693,14 +694,14 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
-      "volume_surge": false,
+      "breakout": true,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -708,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-20T15:18:50.220811+00:00"
+  "updated_at": "2026-07-21T12:00:42.032916+00:00"
 }

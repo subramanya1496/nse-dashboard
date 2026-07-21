@@ -3,35 +3,30 @@
   "name": "Garden Reach Shipbuilders & Engineers",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-07-20",
-    "close": 2561.7,
-    "prev_close": 2581.2,
-    "change_pct": -0.7554625755462576,
-    "ema20": 2657.284108508647,
-    "ema50": 2670.4043508861214,
-    "ema200": 2567.4450214930534,
-    "rsi14": 38.17361617978711,
-    "macd": -34.153354424277495,
-    "macd_signal": -17.66692855039524,
-    "atr14": 68.23697537706487,
-    "adx14": 12.18133769210104,
-    "adx_pos": 19.326853249194826,
-    "adx_neg": 24.919466928680663,
-    "bb_high": 2852.9257381023954,
-    "bb_low": 2528.4442618976054,
-    "bb_mid": 2690.6850000000004,
-    "vwap20": 2752.921960395511,
+    "date": "2026-07-21",
+    "close": 2619.7,
+    "prev_close": 2561.7,
+    "change_pct": 2.2641214818284734,
+    "ema20": 2653.7046696030616,
+    "ema50": 2668.4159449690183,
+    "ema200": 2567.9649715279484,
+    "rsi14": 45.23869140311813,
+    "macd": -32.665689736316835,
+    "macd_signal": -20.666680787579562,
+    "atr14": 69.36290570727452,
+    "adx14": 11.64278854263585,
+    "adx_pos": 20.744391828173278,
+    "adx_neg": 22.76389400325555,
+    "bb_high": 2823.4684557675378,
+    "bb_low": 2533.811544232462,
+    "bb_mid": 2678.64,
+    "vwap20": 2710.6592105924647,
     "high_52w": 3339.0,
     "low_52w": 1963.7,
-    "volume": 280972.0,
-    "avg_volume20": 592669.35
+    "volume": 312416.0,
+    "avg_volume20": 470428.75
   },
   "price_history": [
-    {
-      "date": "2026-01-22",
-      "close": 2301.8,
-      "ema50": 2475.9
-    },
     {
       "date": "2026-01-23",
       "close": 2234.8,
@@ -626,6 +621,11 @@
       "date": "2026-07-20",
       "close": 2561.7,
       "ema50": 2670.4
+    },
+    {
+      "date": "2026-07-21",
+      "close": 2619.7,
+      "ema50": 2668.42
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,561.70 vs EMA20 2,657.28",
-      "ema20_above_ema50": "EMA20 2,657.28 vs EMA50 2,670.40",
-      "ema50_above_ema200": "EMA50 2,670.40 vs EMA200 2,567.45",
-      "rsi_above_50": "RSI(14) 38.17 vs 50",
-      "macd_bullish": "MACD -34.15 vs signal -17.67",
-      "adx_trending_up": "ADX(14) 12.18 vs 20, +DI 19.33 vs -DI 24.92",
-      "price_above_vwap20": "Close 2,561.70 vs 20d VWAP 2,752.92",
-      "price_above_bb_mid": "Close 2,561.70 vs BB mid 2,690.69"
+      "price_above_ema20": "Close 2,619.70 vs EMA20 2,653.70",
+      "ema20_above_ema50": "EMA20 2,653.70 vs EMA50 2,668.42",
+      "ema50_above_ema200": "EMA50 2,668.42 vs EMA200 2,567.96",
+      "rsi_above_50": "RSI(14) 45.24 vs 50",
+      "macd_bullish": "MACD -32.67 vs signal -20.67",
+      "adx_trending_up": "ADX(14) 11.64 vs 20, +DI 20.74 vs -DI 22.76",
+      "price_above_vwap20": "Close 2,619.70 vs 20d VWAP 2,710.66",
+      "price_above_bb_mid": "Close 2,619.70 vs BB mid 2,678.64"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,39 +661,39 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 68.24 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 38.2",
-        "below_ema200": "Close 2,561.70 vs EMA200 2,567.45",
-        "extended_above_ema20": "Close 2,561.70 vs EMA20 2,657.28 (-3.6%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 2,561.70 vs 52w low 1,963.70"
+        "atr_high": "ATR 69.36 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 45.2",
+        "below_ema200": "Close 2,619.70 vs EMA200 2,567.96",
+        "extended_above_ema20": "Close 2,619.70 vs EMA20 2,653.70 (-1.3%)",
+        "large_day_move": "Day change +2.3%",
+        "near_52w_low": "Close 2,619.70 vs 52w low 1,963.70"
       },
       "conditions_on": [
-        "atr_high",
-        "below_ema200"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -705,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-20T15:17:44.746656+00:00"
+  "updated_at": "2026-07-21T11:59:36.794630+00:00"
 }

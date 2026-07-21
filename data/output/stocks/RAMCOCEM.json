@@ -3,35 +3,30 @@
   "name": "The Ramco Cements",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-07-20",
-    "close": 933.05,
-    "prev_close": 919.8,
-    "change_pct": 1.4405305501195913,
-    "ema20": 923.3176214071183,
-    "ema50": 923.3529668586815,
-    "ema200": 980.4654729737807,
-    "rsi14": 54.57058900715184,
-    "macd": 7.557138457501878,
-    "macd_signal": 8.142550478470914,
-    "atr14": 23.85715072177719,
-    "adx14": 19.927503945067695,
-    "adx_pos": 19.962254789703824,
-    "adx_neg": 16.63427573496693,
-    "bb_high": 961.0151831328807,
-    "bb_low": 890.1648168671196,
-    "bb_mid": 925.5900000000001,
-    "vwap20": 926.4849687257578,
+    "date": "2026-07-21",
+    "close": 923.55,
+    "prev_close": 925.8,
+    "change_pct": -0.24303305249513937,
+    "ema20": 922.7150361483905,
+    "ema50": 923.0875294809092,
+    "ema200": 979.827728360146,
+    "rsi14": 51.365725934880864,
+    "macd": 6.175211839198255,
+    "macd_signal": 7.6565471380807715,
+    "atr14": 23.981639955935968,
+    "adx14": 19.46934140984081,
+    "adx_pos": 20.16766870965446,
+    "adx_neg": 15.36593206041233,
+    "bb_high": 957.5461420412688,
+    "bb_low": 896.6288579587311,
+    "bb_mid": 927.0875,
+    "vwap20": 927.3517292730962,
     "high_52w": 1214.5,
     "low_52w": 838.3,
-    "volume": 60093.0,
-    "avg_volume20": 232118.6
+    "volume": 122655.0,
+    "avg_volume20": 232597.25
   },
   "price_history": [
-    {
-      "date": "2026-01-22",
-      "close": 1082.6,
-      "ema50": 1053.54
-    },
     {
       "date": "2026-01-23",
       "close": 1055.0,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-07-20",
-      "close": 933.05,
-      "ema50": 923.35
+      "close": 925.8,
+      "ema50": 923.07
+    },
+    {
+      "date": "2026-07-21",
+      "close": 923.55,
+      "ema50": 923.09
     }
   ],
   "flags": {
@@ -636,35 +636,33 @@
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 933.05 vs EMA20 923.32",
-      "ema20_above_ema50": "EMA20 923.32 vs EMA50 923.35",
-      "ema50_above_ema200": "EMA50 923.35 vs EMA200 980.47",
-      "rsi_above_50": "RSI(14) 54.57 vs 50",
-      "macd_bullish": "MACD 7.56 vs signal 8.14",
-      "adx_trending_up": "ADX(14) 19.93 vs 20, +DI 19.96 vs -DI 16.63",
-      "price_above_vwap20": "Close 933.05 vs 20d VWAP 926.48",
-      "price_above_bb_mid": "Close 933.05 vs BB mid 925.59"
+      "price_above_ema20": "Close 923.55 vs EMA20 922.72",
+      "ema20_above_ema50": "EMA20 922.72 vs EMA50 923.09",
+      "ema50_above_ema200": "EMA50 923.09 vs EMA200 979.83",
+      "rsi_above_50": "RSI(14) 51.37 vs 50",
+      "macd_bullish": "MACD 6.18 vs signal 7.66",
+      "adx_trending_up": "ADX(14) 19.47 vs 20, +DI 20.17 vs -DI 15.37",
+      "price_above_vwap20": "Close 923.55 vs 20d VWAP 927.35",
+      "price_above_bb_mid": "Close 923.55 vs BB mid 927.09"
     },
     "flags_on": [
       "price_above_ema20",
-      "rsi_above_50",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "rsi_above_50"
     ],
-    "flag_count": 4,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "4/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -677,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 23.86 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 54.6",
-        "below_ema200": "Close 933.05 vs EMA200 980.47",
-        "extended_above_ema20": "Close 933.05 vs EMA20 923.32 (+1.1%)",
-        "large_day_move": "Day change +1.4%",
-        "near_52w_low": "Close 933.05 vs 52w low 838.30"
+        "atr_high": "ATR 23.98 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 51.4",
+        "below_ema200": "Close 923.55 vs EMA200 979.83",
+        "extended_above_ema20": "Close 923.55 vs EMA20 922.72 (+0.1%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 923.55 vs 52w low 838.30"
       },
       "conditions_on": [
         "atr_high",
@@ -700,7 +698,7 @@
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "bullish",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -708,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-20T15:18:31.192211+00:00"
+  "updated_at": "2026-07-21T12:00:23.204671+00:00"
 }
