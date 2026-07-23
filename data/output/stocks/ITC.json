@@ -3,35 +3,30 @@
   "name": "ITC Ltd",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-07-22",
-    "close": 280.8,
-    "prev_close": 281.0,
-    "change_pct": -0.07117437722419524,
-    "ema20": 283.33113175480753,
-    "ema50": 289.42128819681136,
-    "ema200": 328.5636460818079,
-    "rsi14": 42.27888782583816,
-    "macd": -2.823601901861423,
-    "macd_signal": -2.9054124088151476,
-    "atr14": 4.215664886280754,
-    "adx14": 24.68154111121306,
-    "adx_pos": 14.488057820757163,
-    "adx_neg": 22.30217853237609,
-    "bb_high": 294.26513923637737,
-    "bb_low": 274.33486076362266,
-    "bb_mid": 284.3,
-    "vwap20": 284.46725965171663,
+    "date": "2026-07-23",
+    "close": 281.3,
+    "prev_close": 280.8,
+    "change_pct": 0.17806267806267806,
+    "ema20": 283.137690635302,
+    "ema50": 289.1028053416752,
+    "ema200": 328.08398374625193,
+    "rsi14": 43.391375118014764,
+    "macd": -2.6468792337730633,
+    "macd_signal": -2.853705773791725,
+    "atr14": 4.225260251633461,
+    "adx14": 23.725935515268898,
+    "adx_pos": 16.465568276413794,
+    "adx_neg": 20.662136247167897,
+    "bb_high": 293.4893086996366,
+    "bb_low": 274.20569130036336,
+    "bb_mid": 283.84749999999997,
+    "vwap20": 284.11426053380745,
     "high_52w": 427.0,
     "low_52w": 275.0,
-    "volume": 12995017.0,
-    "avg_volume20": 12916750.6
+    "volume": 21143589.0,
+    "avg_volume20": 13662998.3
   },
   "price_history": [
-    {
-      "date": "2026-01-27",
-      "close": 318.65,
-      "ema50": 369.86
-    },
     {
       "date": "2026-01-28",
       "close": 321.15,
@@ -135,7 +130,7 @@
     {
       "date": "2026-02-24",
       "close": 323.5,
-      "ema50": 342.08
+      "ema50": 342.07
     },
     {
       "date": "2026-02-25",
@@ -626,6 +621,11 @@
       "date": "2026-07-22",
       "close": 280.8,
       "ema50": 289.42
+    },
+    {
+      "date": "2026-07-23",
+      "close": 281.3,
+      "ema50": 289.1
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 280.80 vs EMA20 283.33",
-      "ema20_above_ema50": "EMA20 283.33 vs EMA50 289.42",
-      "ema50_above_ema200": "EMA50 289.42 vs EMA200 328.56",
-      "rsi_above_50": "RSI(14) 42.28 vs 50",
-      "macd_bullish": "MACD -2.82 vs signal -2.91",
-      "adx_trending_up": "ADX(14) 24.68 vs 20, +DI 14.49 vs -DI 22.30",
-      "price_above_vwap20": "Close 280.80 vs 20d VWAP 284.47",
-      "price_above_bb_mid": "Close 280.80 vs BB mid 284.30"
+      "price_above_ema20": "Close 281.30 vs EMA20 283.14",
+      "ema20_above_ema50": "EMA20 283.14 vs EMA50 289.10",
+      "ema50_above_ema200": "EMA50 289.10 vs EMA200 328.08",
+      "rsi_above_50": "RSI(14) 43.39 vs 50",
+      "macd_bullish": "MACD -2.65 vs signal -2.85",
+      "adx_trending_up": "ADX(14) 23.73 vs 20, +DI 16.47 vs -DI 20.66",
+      "price_above_vwap20": "Close 281.30 vs 20d VWAP 284.11",
+      "price_above_bb_mid": "Close 281.30 vs BB mid 283.85"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.22 = 1.5% of price",
-        "rsi_extreme": "RSI(14) 42.3",
-        "below_ema200": "Close 280.80 vs EMA200 328.56",
-        "extended_above_ema20": "Close 280.80 vs EMA20 283.33 (-0.9%)",
-        "large_day_move": "Day change -0.1%",
-        "near_52w_low": "Close 280.80 vs 52w low 275.00"
+        "atr_high": "ATR 4.23 = 1.5% of price",
+        "rsi_extreme": "RSI(14) 43.4",
+        "below_ema200": "Close 281.30 vs EMA200 328.08",
+        "extended_above_ema20": "Close 281.30 vs EMA20 283.14 (-0.6%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 281.30 vs 52w low 275.00"
       },
       "conditions_on": [
         "below_ema200",
@@ -691,8 +692,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-22T12:03:23.201819+00:00"
+  "updated_at": "2026-07-23T12:02:24.931976+00:00"
 }

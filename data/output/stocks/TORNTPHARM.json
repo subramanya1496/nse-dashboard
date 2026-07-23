@@ -3,35 +3,30 @@
   "name": "Torrent Pharmaceuticals",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-07-22",
-    "close": 5033.4,
-    "prev_close": 5040.7,
-    "change_pct": -0.14482115579185792,
-    "ema20": 4840.710247293474,
-    "ema50": 4641.669702763021,
-    "ema200": 4193.247314430739,
-    "rsi14": 66.10217851744495,
-    "macd": 130.7084515779179,
-    "macd_signal": 123.72169206610599,
-    "atr14": 137.2981336726518,
-    "adx14": 33.08777018148281,
-    "adx_pos": 23.659945016374056,
-    "adx_neg": 14.154381772184285,
-    "bb_high": 5163.1299786002955,
-    "bb_low": 4485.550021399705,
-    "bb_mid": 4824.34,
-    "vwap20": 4858.032203284908,
+    "date": "2026-07-23",
+    "close": 5065.2,
+    "prev_close": 5033.4,
+    "change_pct": 0.6317797115270033,
+    "ema20": 4862.090223741714,
+    "ema50": 4658.278730649489,
+    "ema200": 4201.890640006098,
+    "rsi14": 67.42796205062845,
+    "macd": 132.5843478565048,
+    "macd_signal": 125.49422322423835,
+    "atr14": 137.71969555425747,
+    "adx14": 32.08162297263966,
+    "adx_pos": 21.902698628397562,
+    "adx_neg": 14.90803086473157,
+    "bb_high": 5172.948355269179,
+    "bb_low": 4531.811644730819,
+    "bb_mid": 4852.379999999999,
+    "vwap20": 4867.382438338501,
     "high_52w": 5085.8,
-    "low_52w": 3376.4,
-    "volume": 290320.0,
-    "avg_volume20": 868271.05
+    "low_52w": 3421.3,
+    "volume": 423979.0,
+    "avg_volume20": 876293.7
   },
   "price_history": [
-    {
-      "date": "2026-01-27",
-      "close": 3997.4,
-      "ema50": 3855.04
-    },
     {
       "date": "2026-01-28",
       "close": 3958.7,
@@ -40,7 +35,7 @@
     {
       "date": "2026-01-29",
       "close": 3930.1,
-      "ema50": 3861.89
+      "ema50": 3861.88
     },
     {
       "date": "2026-01-30",
@@ -626,6 +621,11 @@
       "date": "2026-07-22",
       "close": 5033.4,
       "ema50": 4641.67
+    },
+    {
+      "date": "2026-07-23",
+      "close": 5065.2,
+      "ema50": 4658.28
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 5,033.40 vs EMA20 4,840.71",
-      "ema20_above_ema50": "EMA20 4,840.71 vs EMA50 4,641.67",
-      "ema50_above_ema200": "EMA50 4,641.67 vs EMA200 4,193.25",
-      "rsi_above_50": "RSI(14) 66.10 vs 50",
-      "macd_bullish": "MACD 130.71 vs signal 123.72",
-      "adx_trending_up": "ADX(14) 33.09 vs 20, +DI 23.66 vs -DI 14.15",
-      "price_above_vwap20": "Close 5,033.40 vs 20d VWAP 4,858.03",
-      "price_above_bb_mid": "Close 5,033.40 vs BB mid 4,824.34"
+      "price_above_ema20": "Close 5,065.20 vs EMA20 4,862.09",
+      "ema20_above_ema50": "EMA20 4,862.09 vs EMA50 4,658.28",
+      "ema50_above_ema200": "EMA50 4,658.28 vs EMA200 4,201.89",
+      "rsi_above_50": "RSI(14) 67.43 vs 50",
+      "macd_bullish": "MACD 132.58 vs signal 125.49",
+      "adx_trending_up": "ADX(14) 32.08 vs 20, +DI 21.90 vs -DI 14.91",
+      "price_above_vwap20": "Close 5,065.20 vs 20d VWAP 4,867.38",
+      "price_above_bb_mid": "Close 5,065.20 vs BB mid 4,852.38"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: breakout"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 137.30 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 66.1",
-        "below_ema200": "Close 5,033.40 vs EMA200 4,193.25",
-        "extended_above_ema20": "Close 5,033.40 vs EMA20 4,840.71 (+4.0%)",
-        "large_day_move": "Day change -0.1%",
-        "near_52w_low": "Close 5,033.40 vs 52w low 3,376.40"
+        "atr_high": "ATR 137.72 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 67.4",
+        "below_ema200": "Close 5,065.20 vs EMA200 4,201.89",
+        "extended_above_ema20": "Close 5,065.20 vs EMA20 4,862.09 (+4.2%)",
+        "large_day_move": "Day change +0.6%",
+        "near_52w_low": "Close 5,065.20 vs 52w low 3,421.30"
       },
       "conditions_on": [
         "atr_high"
@@ -696,7 +697,7 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
+      "breakout": true,
       "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-22T12:04:12.023733+00:00"
+  "updated_at": "2026-07-23T12:03:13.750120+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Wipro",
   "sector": "IT",
   "indicators": {
-    "date": "2026-07-22",
-    "close": 174.44,
-    "prev_close": 174.97,
-    "change_pct": -0.302909070126308,
-    "ema20": 176.7056666487139,
-    "ema50": 183.5104024716847,
-    "ema200": 210.47346812586161,
-    "rsi14": 42.33279651588063,
-    "macd": -2.326362420853826,
-    "macd_signal": -3.1432428975584976,
-    "atr14": 3.7322938710454543,
-    "adx14": 22.028411491382908,
-    "adx_pos": 21.74735940457938,
-    "adx_neg": 30.184804124932725,
-    "bb_high": 178.8654429181676,
-    "bb_low": 170.49155708183238,
-    "bb_mid": 174.67849999999999,
-    "vwap20": 174.37592668541436,
+    "date": "2026-07-23",
+    "close": 174.82,
+    "prev_close": 174.44,
+    "change_pct": 0.21783994496674813,
+    "ema20": 176.5260793488364,
+    "ema50": 183.16960285728842,
+    "ema200": 210.12339589894546,
+    "rsi14": 43.21829256076251,
+    "macd": -2.218407199181968,
+    "macd_signal": -2.958275757890703,
+    "atr14": 3.6264157374612087,
+    "adx14": 21.42233617873901,
+    "adx_pos": 21.96537162765269,
+    "adx_neg": 28.847084021660162,
+    "bb_high": 178.88184195927664,
+    "bb_low": 170.50915804072332,
+    "bb_mid": 174.69549999999998,
+    "vwap20": 174.46615476576767,
     "high_52w": 273.1,
     "low_52w": 169.0,
-    "volume": 5057035.0,
-    "avg_volume20": 20764221.1
+    "volume": 9055905.0,
+    "avg_volume20": 18385629.95
   },
   "price_history": [
-    {
-      "date": "2026-01-27",
-      "close": 234.8,
-      "ema50": 254.67
-    },
     {
       "date": "2026-01-28",
       "close": 237.35,
@@ -626,6 +621,11 @@
       "date": "2026-07-22",
       "close": 174.44,
       "ema50": 183.51
+    },
+    {
+      "date": "2026-07-23",
+      "close": 174.82,
+      "ema50": 183.17
     }
   ],
   "flags": {
@@ -637,32 +637,33 @@
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": true,
-      "price_above_bb_mid": false
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 174.44 vs EMA20 176.71",
-      "ema20_above_ema50": "EMA20 176.71 vs EMA50 183.51",
-      "ema50_above_ema200": "EMA50 183.51 vs EMA200 210.47",
-      "rsi_above_50": "RSI(14) 42.33 vs 50",
-      "macd_bullish": "MACD -2.33 vs signal -3.14",
-      "adx_trending_up": "ADX(14) 22.03 vs 20, +DI 21.75 vs -DI 30.18",
-      "price_above_vwap20": "Close 174.44 vs 20d VWAP 174.38",
-      "price_above_bb_mid": "Close 174.44 vs BB mid 174.68"
+      "price_above_ema20": "Close 174.82 vs EMA20 176.53",
+      "ema20_above_ema50": "EMA20 176.53 vs EMA50 183.17",
+      "ema50_above_ema200": "EMA50 183.17 vs EMA200 210.12",
+      "rsi_above_50": "RSI(14) 43.22 vs 50",
+      "macd_bullish": "MACD -2.22 vs signal -2.96",
+      "adx_trending_up": "ADX(14) 21.42 vs 20, +DI 21.97 vs -DI 28.85",
+      "price_above_vwap20": "Close 174.82 vs 20d VWAP 174.47",
+      "price_above_bb_mid": "Close 174.82 vs BB mid 174.70"
     },
     "flags_on": [
       "macd_bullish",
-      "price_above_vwap20"
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.73 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 42.3",
-        "below_ema200": "Close 174.44 vs EMA200 210.47",
-        "extended_above_ema20": "Close 174.44 vs EMA20 176.71 (-1.3%)",
-        "large_day_move": "Day change -0.3%",
-        "near_52w_low": "Close 174.44 vs 52w low 169.00"
+        "atr_high": "ATR 3.63 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 43.2",
+        "below_ema200": "Close 174.82 vs EMA200 210.12",
+        "extended_above_ema20": "Close 174.82 vs EMA20 176.53 (-1.0%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 174.82 vs 52w low 169.00"
       },
       "conditions_on": [
         "below_ema200",
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-22T12:04:18.429990+00:00"
+  "updated_at": "2026-07-23T12:03:20.136903+00:00"
 }
