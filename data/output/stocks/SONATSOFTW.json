@@ -3,35 +3,30 @@
   "name": "Sonata Software",
   "sector": "IT",
   "indicators": {
-    "date": "2026-07-24",
-    "close": 288.1,
-    "prev_close": 287.4,
-    "change_pct": 0.2435629784272949,
-    "ema20": 292.0490519981248,
-    "ema50": 283.4283045451141,
-    "ema200": 304.1384491025946,
-    "rsi14": 49.19220306906084,
-    "macd": 5.066423956560868,
-    "macd_signal": 6.231053449837678,
-    "atr14": 13.20941580192593,
-    "adx14": 30.704137910670948,
-    "adx_pos": 28.89239977827672,
-    "adx_neg": 21.974504065982117,
-    "bb_high": 319.84198608228945,
-    "bb_low": 257.67301391771053,
-    "bb_mid": 288.7575,
-    "vwap20": 294.44041158728936,
+    "date": "2026-07-27",
+    "close": 293.35,
+    "prev_close": 288.1,
+    "change_pct": 1.822283929191253,
+    "ema20": 292.1729518078273,
+    "ema50": 283.8173986031709,
+    "ema200": 304.10846407463856,
+    "rsi14": 52.13328063734351,
+    "macd": 4.567464636780244,
+    "macd_signal": 5.898335687102075,
+    "atr14": 13.137314672221907,
+    "adx14": 30.017937916302735,
+    "adx_pos": 31.488672493557907,
+    "adx_neg": 20.516884214227073,
+    "bb_high": 320.1675916931667,
+    "bb_low": 259.16240830683324,
+    "bb_mid": 289.66499999999996,
+    "vwap20": 294.60745214116116,
     "high_52w": 442.8,
     "low_52w": 207.15,
-    "volume": 829035.0,
-    "avg_volume20": 4220300.8
+    "volume": 1008207.0,
+    "avg_volume20": 4228087.85
   },
   "price_history": [
-    {
-      "date": "2026-01-29",
-      "close": 316.35,
-      "ema50": 346.12
-    },
     {
       "date": "2026-01-30",
       "close": 317.3,
@@ -165,7 +160,7 @@
     {
       "date": "2026-03-09",
       "close": 247.0,
-      "ema50": 302.53
+      "ema50": 302.54
     },
     {
       "date": "2026-03-10",
@@ -260,7 +255,7 @@
     {
       "date": "2026-04-08",
       "close": 245.94,
-      "ema50": 265.01
+      "ema50": 265.02
     },
     {
       "date": "2026-04-09",
@@ -626,43 +621,51 @@
       "date": "2026-07-24",
       "close": 288.1,
       "ema50": 283.43
+    },
+    {
+      "date": "2026-07-27",
+      "close": 293.35,
+      "ema50": 283.82
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
       "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 288.10 vs EMA20 292.05",
-      "ema20_above_ema50": "EMA20 292.05 vs EMA50 283.43",
-      "ema50_above_ema200": "EMA50 283.43 vs EMA200 304.14",
-      "rsi_above_50": "RSI(14) 49.19 vs 50",
-      "macd_bullish": "MACD 5.07 vs signal 6.23",
-      "adx_trending_up": "ADX(14) 30.70 vs 20, +DI 28.89 vs -DI 21.97",
-      "price_above_vwap20": "Close 288.10 vs 20d VWAP 294.44",
-      "price_above_bb_mid": "Close 288.10 vs BB mid 288.76"
+      "price_above_ema20": "Close 293.35 vs EMA20 292.17",
+      "ema20_above_ema50": "EMA20 292.17 vs EMA50 283.82",
+      "ema50_above_ema200": "EMA50 283.82 vs EMA200 304.11",
+      "rsi_above_50": "RSI(14) 52.13 vs 50",
+      "macd_bullish": "MACD 4.57 vs signal 5.90",
+      "adx_trending_up": "ADX(14) 30.02 vs 20, +DI 31.49 vs -DI 20.52",
+      "price_above_vwap20": "Close 293.35 vs 20d VWAP 294.61",
+      "price_above_bb_mid": "Close 293.35 vs BB mid 289.66"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
-      "adx_trending_up"
+      "rsi_above_50",
+      "adx_trending_up",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.21 = 4.6% of price",
-        "rsi_extreme": "RSI(14) 49.2",
-        "below_ema200": "Close 288.10 vs EMA200 304.14",
-        "extended_above_ema20": "Close 288.10 vs EMA20 292.05 (-1.4%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 288.10 vs 52w low 207.15"
+        "atr_high": "ATR 13.14 = 4.5% of price",
+        "rsi_extreme": "RSI(14) 52.1",
+        "below_ema200": "Close 293.35 vs EMA200 304.11",
+        "extended_above_ema20": "Close 293.35 vs EMA20 292.17 (+0.4%)",
+        "large_day_move": "Day change +1.8%",
+        "near_52w_low": "Close 293.35 vs 52w low 207.15"
       },
       "conditions_on": [
         "atr_high",
@@ -706,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-24T11:56:14.957086+00:00"
+  "updated_at": "2026-07-27T13:22:47.583246+00:00"
 }

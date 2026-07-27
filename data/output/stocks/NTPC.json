@@ -3,35 +3,30 @@
   "name": "NTPC Ltd",
   "sector": "Power",
   "indicators": {
-    "date": "2026-07-24",
-    "close": 347.2,
-    "prev_close": 348.6,
-    "change_pct": -0.401606425702821,
-    "ema20": 350.58313596022134,
-    "ema50": 359.80219652938916,
-    "ema200": 360.08799656624666,
-    "rsi14": 42.26451445278712,
-    "macd": -4.297137954288814,
-    "macd_signal": -5.2286647285619425,
-    "atr14": 6.256136717972302,
-    "adx14": 25.923768156536806,
-    "adx_pos": 15.258280395485047,
-    "adx_neg": 22.14232142175128,
-    "bb_high": 360.7743575948757,
-    "bb_low": 339.5656424051242,
-    "bb_mid": 350.16999999999996,
-    "vwap20": 350.52132180523665,
+    "date": "2026-07-27",
+    "close": 350.8,
+    "prev_close": 347.2,
+    "change_pct": 1.036866359447011,
+    "ema20": 350.6037896782955,
+    "ema50": 359.4491699383101,
+    "ema200": 360.0026116649025,
+    "rsi14": 47.32027616141471,
+    "macd": -3.7836684027049614,
+    "macd_signal": -4.939665463401835,
+    "atr14": 6.223555523768463,
+    "adx14": 24.627542823883605,
+    "adx_pos": 17.685716574259363,
+    "adx_neg": 20.668365350825372,
+    "bb_high": 360.16257768676564,
+    "bb_low": 339.6474223132344,
+    "bb_mid": 349.90500000000003,
+    "vwap20": 349.27673561790675,
     "high_52w": 414.4,
     "low_52w": 315.55,
-    "volume": 6300466.0,
-    "avg_volume20": 11216240.05
+    "volume": 12350753.0,
+    "avg_volume20": 9339012.6
   },
   "price_history": [
-    {
-      "date": "2026-01-29",
-      "close": 358.15,
-      "ema50": 336.26
-    },
     {
       "date": "2026-01-30",
       "close": 356.0,
@@ -85,7 +80,7 @@
     {
       "date": "2026-02-12",
       "close": 368.25,
-      "ema50": 345.44
+      "ema50": 345.45
     },
     {
       "date": "2026-02-13",
@@ -626,42 +621,50 @@
       "date": "2026-07-24",
       "close": 347.2,
       "ema50": 359.8
+    },
+    {
+      "date": "2026-07-27",
+      "close": 350.8,
+      "ema50": 359.45
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 347.20 vs EMA20 350.58",
-      "ema20_above_ema50": "EMA20 350.58 vs EMA50 359.80",
-      "ema50_above_ema200": "EMA50 359.80 vs EMA200 360.09",
-      "rsi_above_50": "RSI(14) 42.26 vs 50",
-      "macd_bullish": "MACD -4.30 vs signal -5.23",
-      "adx_trending_up": "ADX(14) 25.92 vs 20, +DI 15.26 vs -DI 22.14",
-      "price_above_vwap20": "Close 347.20 vs 20d VWAP 350.52",
-      "price_above_bb_mid": "Close 347.20 vs BB mid 350.17"
+      "price_above_ema20": "Close 350.80 vs EMA20 350.60",
+      "ema20_above_ema50": "EMA20 350.60 vs EMA50 359.45",
+      "ema50_above_ema200": "EMA50 359.45 vs EMA200 360.00",
+      "rsi_above_50": "RSI(14) 47.32 vs 50",
+      "macd_bullish": "MACD -3.78 vs signal -4.94",
+      "adx_trending_up": "ADX(14) 24.63 vs 20, +DI 17.69 vs -DI 20.67",
+      "price_above_vwap20": "Close 350.80 vs 20d VWAP 349.28",
+      "price_above_bb_mid": "Close 350.80 vs BB mid 349.91"
     },
     "flags_on": [
-      "macd_bullish"
+      "price_above_ema20",
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "4/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.26 = 1.8% of price",
-        "rsi_extreme": "RSI(14) 42.3",
-        "below_ema200": "Close 347.20 vs EMA200 360.09",
-        "extended_above_ema20": "Close 347.20 vs EMA20 350.58 (-1.0%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 347.20 vs 52w low 315.55"
+        "atr_high": "ATR 6.22 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 47.3",
+        "below_ema200": "Close 350.80 vs EMA200 360.00",
+        "extended_above_ema20": "Close 350.80 vs EMA20 350.60 (+0.1%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 350.80 vs 52w low 315.55"
       },
       "conditions_on": [
         "below_ema200"
@@ -704,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-24T11:55:56.952982+00:00"
+  "updated_at": "2026-07-27T13:22:29.630801+00:00"
 }
