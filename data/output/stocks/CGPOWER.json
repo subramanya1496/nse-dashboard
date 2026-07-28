@@ -3,35 +3,30 @@
   "name": "CG Power and Industrial Solutions",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 877.3,
-    "prev_close": 867.7,
-    "change_pct": 1.106373170450606,
-    "ema20": 907.9834898460977,
-    "ema50": 894.2394491850108,
-    "ema200": 787.9825281207183,
-    "rsi14": 41.10302932210954,
-    "macd": -8.22486717987772,
-    "macd_signal": -1.7117265087389095,
-    "atr14": 27.950395970815627,
-    "adx14": 18.071564521986883,
-    "adx_pos": 16.256514263253784,
-    "adx_neg": 31.723469293274935,
-    "bb_high": 965.6179150248612,
-    "bb_low": 863.997084975139,
-    "bb_mid": 914.8075000000001,
-    "vwap20": 910.21599425317,
+    "date": "2026-07-28",
+    "close": 844.1,
+    "prev_close": 877.3,
+    "change_pct": -3.784338310726084,
+    "ema20": 901.8993479559931,
+    "ema50": 892.2731962757947,
+    "ema200": 788.5409109254873,
+    "rsi14": 34.65135953200193,
+    "macd": -12.14616991754201,
+    "macd_signal": -3.79861519049953,
+    "atr14": 29.32179625861451,
+    "adx14": 19.941103943386015,
+    "adx_pos": 14.3893156374931,
+    "adx_neg": 37.22702615704393,
+    "bb_high": 965.8493788166602,
+    "bb_low": 852.9606211833398,
+    "bb_mid": 909.405,
+    "vwap20": 904.4332293897631,
     "high_52w": 980.9,
     "low_52w": 525.5,
-    "volume": 4921275.0,
-    "avg_volume20": 5150294.45
+    "volume": 7593398.0,
+    "avg_volume20": 5364994.35
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 584.05,
-      "ema50": 632.78
-    },
     {
       "date": "2026-02-01",
       "close": 596.9,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 877.3,
       "ema50": 894.24
+    },
+    {
+      "date": "2026-07-28",
+      "close": 844.1,
+      "ema50": 892.27
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 877.30 vs EMA20 907.98",
-      "ema20_above_ema50": "EMA20 907.98 vs EMA50 894.24",
-      "ema50_above_ema200": "EMA50 894.24 vs EMA200 787.98",
-      "rsi_above_50": "RSI(14) 41.10 vs 50",
-      "macd_bullish": "MACD -8.22 vs signal -1.71",
-      "adx_trending_up": "ADX(14) 18.07 vs 20, +DI 16.26 vs -DI 31.72",
-      "price_above_vwap20": "Close 877.30 vs 20d VWAP 910.22",
-      "price_above_bb_mid": "Close 877.30 vs BB mid 914.81"
+      "price_above_ema20": "Close 844.10 vs EMA20 901.90",
+      "ema20_above_ema50": "EMA20 901.90 vs EMA50 892.27",
+      "ema50_above_ema200": "EMA50 892.27 vs EMA200 788.54",
+      "rsi_above_50": "RSI(14) 34.65 vs 50",
+      "macd_bullish": "MACD -12.15 vs signal -3.80",
+      "adx_trending_up": "ADX(14) 19.94 vs 20, +DI 14.39 vs -DI 37.23",
+      "price_above_vwap20": "Close 844.10 vs 20d VWAP 904.43",
+      "price_above_bb_mid": "Close 844.10 vs BB mid 909.40"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -663,7 +663,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "2/8 bullish flags",
-        "patterns: near buy zone"
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -676,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 27.95 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 41.1",
-        "below_ema200": "Close 877.30 vs EMA200 787.98",
-        "extended_above_ema20": "Close 877.30 vs EMA20 907.98 (-3.4%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 877.30 vs 52w low 525.50"
+        "atr_high": "ATR 29.32 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 34.7",
+        "below_ema200": "Close 844.10 vs EMA200 788.54",
+        "extended_above_ema20": "Close 844.10 vs EMA20 901.90 (-6.4%)",
+        "large_day_move": "Day change -3.8%",
+        "near_52w_low": "Close 844.10 vs 52w low 525.50"
       },
       "conditions_on": [
         "atr_high"
@@ -692,13 +692,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "neutral",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -706,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:21:38.764818+00:00"
+  "updated_at": "2026-07-28T12:10:48.301556+00:00"
 }

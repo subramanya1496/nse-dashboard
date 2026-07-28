@@ -3,35 +3,30 @@
   "name": "Torrent Power",
   "sector": "Power",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 1440.0,
-    "prev_close": 1434.1,
-    "change_pct": 0.41140785161425925,
-    "ema20": 1427.0992975329082,
-    "ema50": 1443.2935199175085,
-    "ema200": 1432.3992834263377,
-    "rsi14": 52.55967859945057,
-    "macd": -0.3565530148250673,
-    "macd_signal": -4.8111126088928975,
-    "atr14": 36.766299660362975,
-    "adx14": 11.734199968336897,
-    "adx_pos": 15.827818368086714,
-    "adx_neg": 17.965285307041256,
-    "bb_high": 1468.8387673197374,
-    "bb_low": 1365.0012326802628,
-    "bb_mid": 1416.92,
-    "vwap20": 1415.0141271372975,
+    "date": "2026-07-28",
+    "close": 1431.8,
+    "prev_close": 1440.0,
+    "change_pct": -0.5694444444444476,
+    "ema20": 1427.546983482155,
+    "ema50": 1442.8427936462338,
+    "ema200": 1432.3933204071702,
+    "rsi14": 50.52765868599814,
+    "macd": -0.08305116654605627,
+    "macd_signal": -3.8655003204235294,
+    "atr14": 35.382992541765624,
+    "adx14": 11.347839772446713,
+    "adx_pos": 15.271853038386126,
+    "adx_neg": 17.334239667230722,
+    "bb_high": 1470.0734037225475,
+    "bb_low": 1365.4565962774523,
+    "bb_mid": 1417.7649999999999,
+    "vwap20": 1415.8795684746642,
     "high_52w": 1824.1,
     "low_52w": 1188.0,
-    "volume": 342490.0,
-    "avg_volume20": 356952.95
+    "volume": 291670.0,
+    "avg_volume20": 351367.55
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 1387.6,
-      "ema50": 1320.67
-    },
     {
       "date": "2026-02-01",
       "close": 1297.5,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 1440.0,
       "ema50": 1443.29
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1431.8,
+      "ema50": 1442.84
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,440.00 vs EMA20 1,427.10",
-      "ema20_above_ema50": "EMA20 1,427.10 vs EMA50 1,443.29",
-      "ema50_above_ema200": "EMA50 1,443.29 vs EMA200 1,432.40",
-      "rsi_above_50": "RSI(14) 52.56 vs 50",
-      "macd_bullish": "MACD -0.36 vs signal -4.81",
-      "adx_trending_up": "ADX(14) 11.73 vs 20, +DI 15.83 vs -DI 17.97",
-      "price_above_vwap20": "Close 1,440.00 vs 20d VWAP 1,415.01",
-      "price_above_bb_mid": "Close 1,440.00 vs BB mid 1,416.92"
+      "price_above_ema20": "Close 1,431.80 vs EMA20 1,427.55",
+      "ema20_above_ema50": "EMA20 1,427.55 vs EMA50 1,442.84",
+      "ema50_above_ema200": "EMA50 1,442.84 vs EMA200 1,432.39",
+      "rsi_above_50": "RSI(14) 50.53 vs 50",
+      "macd_bullish": "MACD -0.08 vs signal -3.87",
+      "adx_trending_up": "ADX(14) 11.35 vs 20, +DI 15.27 vs -DI 17.33",
+      "price_above_vwap20": "Close 1,431.80 vs 20d VWAP 1,415.88",
+      "price_above_bb_mid": "Close 1,431.80 vs BB mid 1,417.76"
     },
     "flags_on": [
       "price_above_ema20",
@@ -672,23 +672,23 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 36.77 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 52.6",
-        "below_ema200": "Close 1,440.00 vs EMA200 1,432.40",
-        "extended_above_ema20": "Close 1,440.00 vs EMA20 1,427.10 (+0.9%)",
-        "large_day_move": "Day change +0.4%",
-        "near_52w_low": "Close 1,440.00 vs 52w low 1,188.00"
+        "atr_high": "ATR 35.38 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 50.5",
+        "below_ema200": "Close 1,431.80 vs EMA200 1,432.39",
+        "extended_above_ema20": "Close 1,431.80 vs EMA20 1,427.55 (+0.3%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 1,431.80 vs 52w low 1,188.00"
       },
       "conditions_on": [
-        "atr_high"
+        "below_ema200"
       ],
       "condition_count": 1,
       "condition_total": 6,
@@ -702,7 +702,7 @@
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "neutral",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -710,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:22:58.035810+00:00"
+  "updated_at": "2026-07-28T12:12:08.044709+00:00"
 }

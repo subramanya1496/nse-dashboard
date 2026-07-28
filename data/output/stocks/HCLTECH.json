@@ -3,35 +3,30 @@
   "name": "HCL Technologies",
   "sector": "IT",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 1295.9,
-    "prev_close": 1271.0,
-    "change_pct": 1.959087332808819,
-    "ema20": 1200.7418988234829,
-    "ema50": 1194.329917064957,
-    "ema200": 1352.189764571566,
-    "rsi14": 69.89970779641943,
-    "macd": 32.3659715139122,
-    "macd_signal": 18.31475633148836,
-    "atr14": 35.149463392480676,
-    "adx14": 24.962328749064163,
-    "adx_pos": 38.12502658072759,
-    "adx_neg": 13.823965202549807,
-    "bb_high": 1308.644441528653,
-    "bb_low": 1045.605558471347,
-    "bb_mid": 1177.125,
-    "vwap20": 1174.3440149892474,
+    "date": "2026-07-28",
+    "close": 1318.6,
+    "prev_close": 1295.9,
+    "change_pct": 1.7516783702446037,
+    "ema20": 1211.966479887913,
+    "ema50": 1199.2032536506451,
+    "ema200": 1351.8555380584162,
+    "rsi14": 72.2824486079912,
+    "macd": 37.50434555266111,
+    "macd_signal": 22.15267417572291,
+    "atr14": 35.93164457873205,
+    "adx14": 27.05707897868819,
+    "adx_pos": 42.38397894059416,
+    "adx_neg": 12.55710577840657,
+    "bb_high": 1325.3790356990717,
+    "bb_low": 1053.5509643009286,
+    "bb_mid": 1189.4650000000001,
+    "vwap20": 1186.038878353357,
     "high_52w": 1780.1,
     "low_52w": 1030.0,
-    "volume": 3847049.0,
-    "avg_volume20": 4669796.4
+    "volume": 5187064.0,
+    "avg_volume20": 4739437.95
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 1695.6,
-      "ema50": 1650.68
-    },
     {
       "date": "2026-02-01",
       "close": 1666.2,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 1295.9,
       "ema50": 1194.33
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1318.6,
+      "ema50": 1199.2
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,295.90 vs EMA20 1,200.74",
-      "ema20_above_ema50": "EMA20 1,200.74 vs EMA50 1,194.33",
-      "ema50_above_ema200": "EMA50 1,194.33 vs EMA200 1,352.19",
-      "rsi_above_50": "RSI(14) 69.90 vs 50",
-      "macd_bullish": "MACD 32.37 vs signal 18.31",
-      "adx_trending_up": "ADX(14) 24.96 vs 20, +DI 38.13 vs -DI 13.82",
-      "price_above_vwap20": "Close 1,295.90 vs 20d VWAP 1,174.34",
-      "price_above_bb_mid": "Close 1,295.90 vs BB mid 1,177.12"
+      "price_above_ema20": "Close 1,318.60 vs EMA20 1,211.97",
+      "ema20_above_ema50": "EMA20 1,211.97 vs EMA50 1,199.20",
+      "ema50_above_ema200": "EMA50 1,199.20 vs EMA200 1,351.86",
+      "rsi_above_50": "RSI(14) 72.28 vs 50",
+      "macd_bullish": "MACD 37.50 vs signal 22.15",
+      "adx_trending_up": "ADX(14) 27.06 vs 20, +DI 42.38 vs -DI 12.56",
+      "price_above_vwap20": "Close 1,318.60 vs 20d VWAP 1,186.04",
+      "price_above_bb_mid": "Close 1,318.60 vs BB mid 1,189.47"
     },
     "flags_on": [
       "price_above_ema20",
@@ -675,23 +675,24 @@
         "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
-        "extended_above_ema20": false,
+        "extended_above_ema20": true,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 35.15 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 69.9",
-        "below_ema200": "Close 1,295.90 vs EMA200 1,352.19",
-        "extended_above_ema20": "Close 1,295.90 vs EMA20 1,200.74 (+7.9%)",
-        "large_day_move": "Day change +2.0%",
-        "near_52w_low": "Close 1,295.90 vs 52w low 1,030.00"
+        "atr_high": "ATR 35.93 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 72.3",
+        "below_ema200": "Close 1,318.60 vs EMA200 1,351.86",
+        "extended_above_ema20": "Close 1,318.60 vs EMA20 1,211.97 (+8.8%)",
+        "large_day_move": "Day change +1.8%",
+        "near_52w_low": "Close 1,318.60 vs 52w low 1,030.00"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "extended_above_ema20"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:21:55.562039+00:00"
+  "updated_at": "2026-07-28T12:11:05.128147+00:00"
 }

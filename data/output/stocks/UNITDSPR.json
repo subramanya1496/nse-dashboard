@@ -3,35 +3,30 @@
   "name": "United Spirits",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 1482.0,
-    "prev_close": 1467.2,
-    "change_pct": 1.0087241003271508,
-    "ema20": 1396.720053896035,
-    "ema50": 1358.682568121735,
-    "ema200": 1359.2935068442252,
-    "rsi14": 71.62424301561887,
-    "macd": 29.21589990472421,
-    "macd_signal": 23.31220341843802,
-    "atr14": 34.203801533601805,
-    "adx14": 20.628363152640937,
-    "adx_pos": 33.86494046547715,
-    "adx_neg": 11.303570194875121,
-    "bb_high": 1465.1458890484637,
-    "bb_low": 1330.8441109515365,
-    "bb_mid": 1397.9950000000001,
-    "vwap20": 1410.942653119285,
-    "high_52w": 1503.5,
+    "date": "2026-07-28",
+    "close": 1508.8,
+    "prev_close": 1482.0,
+    "change_pct": 1.8083670715249633,
+    "ema20": 1407.3943344773652,
+    "ema50": 1364.5695262346082,
+    "ema200": 1360.7811336417951,
+    "rsi14": 74.62719564754069,
+    "macd": 34.54011593305722,
+    "macd_signal": 25.557785921361862,
+    "atr14": 34.367815709773105,
+    "adx14": 22.866238486196615,
+    "adx_pos": 33.04176514702012,
+    "adx_neg": 10.446081242360563,
+    "bb_high": 1485.0404011048222,
+    "bb_low": 1326.7895988951777,
+    "bb_mid": 1405.915,
+    "vwap20": 1417.8508872808018,
+    "high_52w": 1511.9,
     "low_52w": 1210.8,
-    "volume": 1154306.0,
-    "avg_volume20": 991394.55
+    "volume": 882152.0,
+    "avg_volume20": 988303.25
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 1362.6,
-      "ema50": 1374.81
-    },
     {
       "date": "2026-02-01",
       "close": 1335.0,
@@ -626,13 +621,18 @@
       "date": "2026-07-27",
       "close": 1482.0,
       "ema50": 1358.68
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1508.8,
+      "ema50": 1364.57
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": true,
       "ema20_above_ema50": true,
-      "ema50_above_ema200": false,
+      "ema50_above_ema200": true,
       "rsi_above_50": true,
       "macd_bullish": true,
       "adx_trending_up": true,
@@ -640,25 +640,26 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,482.00 vs EMA20 1,396.72",
-      "ema20_above_ema50": "EMA20 1,396.72 vs EMA50 1,358.68",
-      "ema50_above_ema200": "EMA50 1,358.68 vs EMA200 1,359.29",
-      "rsi_above_50": "RSI(14) 71.62 vs 50",
-      "macd_bullish": "MACD 29.22 vs signal 23.31",
-      "adx_trending_up": "ADX(14) 20.63 vs 20, +DI 33.86 vs -DI 11.30",
-      "price_above_vwap20": "Close 1,482.00 vs 20d VWAP 1,410.94",
-      "price_above_bb_mid": "Close 1,482.00 vs BB mid 1,398.00"
+      "price_above_ema20": "Close 1,508.80 vs EMA20 1,407.39",
+      "ema20_above_ema50": "EMA20 1,407.39 vs EMA50 1,364.57",
+      "ema50_above_ema200": "EMA50 1,364.57 vs EMA200 1,360.78",
+      "rsi_above_50": "RSI(14) 74.63 vs 50",
+      "macd_bullish": "MACD 34.54 vs signal 25.56",
+      "adx_trending_up": "ADX(14) 22.87 vs 20, +DI 33.04 vs -DI 10.45",
+      "price_above_vwap20": "Close 1,508.80 vs 20d VWAP 1,417.85",
+      "price_above_bb_mid": "Close 1,508.80 vs BB mid 1,405.91"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
+      "ema50_above_ema200",
       "rsi_above_50",
       "macd_bullish",
       "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 7,
+    "flag_count": 8,
     "flag_total": 8
   },
   "decision": {
@@ -667,7 +668,7 @@
       "label": "Immediate attention",
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "7/8 bullish flags",
+        "8/8 bullish flags",
         "patterns: breakout"
       ]
     },
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 34.20 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 71.6",
-        "below_ema200": "Close 1,482.00 vs EMA200 1,359.29",
-        "extended_above_ema20": "Close 1,482.00 vs EMA20 1,396.72 (+6.1%)",
-        "large_day_move": "Day change +1.0%",
-        "near_52w_low": "Close 1,482.00 vs 52w low 1,210.80"
+        "atr_high": "ATR 34.37 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 74.6",
+        "below_ema200": "Close 1,508.80 vs EMA200 1,360.78",
+        "extended_above_ema20": "Close 1,508.80 vs EMA20 1,407.39 (+7.2%)",
+        "large_day_move": "Day change +1.8%",
+        "near_52w_low": "Close 1,508.80 vs 52w low 1,210.80"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -700,7 +701,7 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
+      "daily": "bullish",
       "weekly": "bullish",
       "intraday": null
     }
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:23:00.792299+00:00"
+  "updated_at": "2026-07-28T12:12:10.853961+00:00"
 }

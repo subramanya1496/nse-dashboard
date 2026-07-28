@@ -3,35 +3,30 @@
   "name": "Global Health Ltd",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 1407.2,
-    "prev_close": 1371.0,
-    "change_pct": 2.640408460977392,
-    "ema20": 1337.752351985364,
-    "ema50": 1284.9980692413073,
-    "ema200": 1216.78136366543,
-    "rsi14": 70.25609803894176,
-    "macd": 27.480461284989133,
-    "macd_signal": 24.770378944957546,
-    "atr14": 34.43300595052507,
-    "adx14": 28.048792251401185,
-    "adx_pos": 27.083746307032623,
-    "adx_neg": 10.132614337866931,
-    "bb_high": 1387.917674883315,
-    "bb_low": 1294.4623251166852,
-    "bb_mid": 1341.19,
-    "vwap20": 1351.843794144142,
+    "date": "2026-07-28",
+    "close": 1401.3,
+    "prev_close": 1407.2,
+    "change_pct": -0.41927231381467384,
+    "ema20": 1343.8045089391387,
+    "ema50": 1289.5589292710602,
+    "ema200": 1218.6173699971175,
+    "rsi14": 68.28429368475526,
+    "macd": 29.234851402416325,
+    "macd_signal": 25.663273436449305,
+    "atr14": 34.43779123977328,
+    "adx14": 29.44908107499621,
+    "adx_pos": 26.53536775031781,
+    "adx_neg": 9.4075487671053,
+    "bb_high": 1397.3290135615543,
+    "bb_low": 1293.8009864384458,
+    "bb_mid": 1345.565,
+    "vwap20": 1355.5900347471556,
     "high_52w": 1456.5,
     "low_52w": 956.0,
-    "volume": 320048.0,
-    "avg_volume20": 188065.25
+    "volume": 171258.0,
+    "avg_volume20": 188696.5
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 1053.8,
-      "ema50": 1161.89
-    },
     {
       "date": "2026-02-01",
       "close": 1120.1,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 1407.2,
       "ema50": 1285.0
+    },
+    {
+      "date": "2026-07-28",
+      "close": 1401.3,
+      "ema50": 1289.56
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,407.20 vs EMA20 1,337.75",
-      "ema20_above_ema50": "EMA20 1,337.75 vs EMA50 1,285.00",
-      "ema50_above_ema200": "EMA50 1,285.00 vs EMA200 1,216.78",
-      "rsi_above_50": "RSI(14) 70.26 vs 50",
-      "macd_bullish": "MACD 27.48 vs signal 24.77",
-      "adx_trending_up": "ADX(14) 28.05 vs 20, +DI 27.08 vs -DI 10.13",
-      "price_above_vwap20": "Close 1,407.20 vs 20d VWAP 1,351.84",
-      "price_above_bb_mid": "Close 1,407.20 vs BB mid 1,341.19"
+      "price_above_ema20": "Close 1,401.30 vs EMA20 1,343.80",
+      "ema20_above_ema50": "EMA20 1,343.80 vs EMA50 1,289.56",
+      "ema50_above_ema200": "EMA50 1,289.56 vs EMA200 1,218.62",
+      "rsi_above_50": "RSI(14) 68.28 vs 50",
+      "macd_bullish": "MACD 29.23 vs signal 25.66",
+      "adx_trending_up": "ADX(14) 29.45 vs 20, +DI 26.54 vs -DI 9.41",
+      "price_above_vwap20": "Close 1,401.30 vs 20d VWAP 1,355.59",
+      "price_above_bb_mid": "Close 1,401.30 vs BB mid 1,345.57"
     },
     "flags_on": [
       "price_above_ema20",
@@ -669,7 +669,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "8/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: breakout"
       ]
     },
     "risk": {
@@ -682,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 34.43 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 70.3",
-        "below_ema200": "Close 1,407.20 vs EMA200 1,216.78",
-        "extended_above_ema20": "Close 1,407.20 vs EMA20 1,337.75 (+5.2%)",
-        "large_day_move": "Day change +2.6%",
-        "near_52w_low": "Close 1,407.20 vs 52w low 956.00"
+        "atr_high": "ATR 34.44 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 68.3",
+        "below_ema200": "Close 1,401.30 vs EMA200 1,218.62",
+        "extended_above_ema20": "Close 1,401.30 vs EMA20 1,343.80 (+4.3%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 1,401.30 vs 52w low 956.00"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -696,7 +696,7 @@
     },
     "patterns": {
       "breakout": true,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -710,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:22:22.828130+00:00"
+  "updated_at": "2026-07-28T12:11:32.347237+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Eternal Ltd (Zomato)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 295.85,
-    "prev_close": 280.0,
-    "change_pct": 5.660714285714294,
-    "ema20": 282.31023442506967,
-    "ema50": 270.54148898042376,
-    "ema200": 268.0521229212669,
-    "rsi14": 64.06410494552111,
-    "macd": 6.80868245752464,
-    "macd_signal": 7.777648644680383,
-    "atr14": 9.789618294229626,
-    "adx14": 33.880202813423054,
-    "adx_pos": 32.19567608960383,
-    "adx_neg": 17.242471944892074,
-    "bb_high": 298.31907422863793,
-    "bb_low": 272.41592577136197,
-    "bb_mid": 285.36749999999995,
-    "vwap20": 285.09375730114493,
+    "date": "2026-07-28",
+    "close": 308.35,
+    "prev_close": 295.85,
+    "change_pct": 4.225114078080107,
+    "ema20": 284.79021209887253,
+    "ema50": 272.0241756870738,
+    "ema200": 268.4530968225478,
+    "rsi14": 70.21467669882564,
+    "macd": 8.07838026398366,
+    "macd_signal": 7.837794968541039,
+    "atr14": 10.218931273213226,
+    "adx14": 34.47381780977147,
+    "adx_pos": 37.72678508599717,
+    "adx_neg": 15.338225730228661,
+    "bb_high": 300.515860310948,
+    "bb_low": 274.594139689052,
+    "bb_mid": 287.555,
+    "vwap20": 287.6210379610466,
     "high_52w": 368.45,
     "low_52w": 212.6,
-    "volume": 48012383.0,
-    "avg_volume20": 39203939.65
+    "volume": 70410211.0,
+    "avg_volume20": 41077402.8
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 273.6,
-      "ema50": 287.2
-    },
     {
       "date": "2026-02-01",
       "close": 269.55,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 295.85,
       "ema50": 270.54
+    },
+    {
+      "date": "2026-07-28",
+      "close": 308.35,
+      "ema50": 272.02
     }
   ],
   "flags": {
@@ -634,40 +634,42 @@
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 295.85 vs EMA20 282.31",
-      "ema20_above_ema50": "EMA20 282.31 vs EMA50 270.54",
-      "ema50_above_ema200": "EMA50 270.54 vs EMA200 268.05",
-      "rsi_above_50": "RSI(14) 64.06 vs 50",
-      "macd_bullish": "MACD 6.81 vs signal 7.78",
-      "adx_trending_up": "ADX(14) 33.88 vs 20, +DI 32.20 vs -DI 17.24",
-      "price_above_vwap20": "Close 295.85 vs 20d VWAP 285.09",
-      "price_above_bb_mid": "Close 295.85 vs BB mid 285.37"
+      "price_above_ema20": "Close 308.35 vs EMA20 284.79",
+      "ema20_above_ema50": "EMA20 284.79 vs EMA50 272.02",
+      "ema50_above_ema200": "EMA50 272.02 vs EMA200 268.45",
+      "rsi_above_50": "RSI(14) 70.21 vs 50",
+      "macd_bullish": "MACD 8.08 vs signal 7.84",
+      "adx_trending_up": "ADX(14) 34.47 vs 20, +DI 37.73 vs -DI 15.34",
+      "price_above_vwap20": "Close 308.35 vs 20d VWAP 287.62",
+      "price_above_bb_mid": "Close 308.35 vs BB mid 287.56"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50",
+      "macd_bullish",
       "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 7,
+    "flag_count": 8,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "7/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -675,29 +677,30 @@
         "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": false,
-        "extended_above_ema20": false,
+        "extended_above_ema20": true,
         "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.79 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 64.1",
-        "below_ema200": "Close 295.85 vs EMA200 268.05",
-        "extended_above_ema20": "Close 295.85 vs EMA20 282.31 (+4.8%)",
-        "large_day_move": "Day change +5.7%",
-        "near_52w_low": "Close 295.85 vs 52w low 212.60"
+        "atr_high": "ATR 10.22 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 70.2",
+        "below_ema200": "Close 308.35 vs EMA200 268.45",
+        "extended_above_ema20": "Close 308.35 vs EMA20 284.79 (+8.3%)",
+        "large_day_move": "Day change +4.2%",
+        "near_52w_low": "Close 308.35 vs 52w low 212.60"
       },
       "conditions_on": [
         "atr_high",
+        "extended_above_ema20",
         "large_day_move"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
-      "breakout": false,
-      "volume_surge": false,
+      "breakout": true,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +714,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:21:48.359901+00:00"
+  "updated_at": "2026-07-28T12:10:57.958598+00:00"
 }

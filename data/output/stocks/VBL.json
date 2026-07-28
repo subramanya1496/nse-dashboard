@@ -3,35 +3,30 @@
   "name": "Varun Beverages",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 464.5,
-    "prev_close": 457.2,
-    "change_pct": 1.596675415573056,
-    "ema20": 476.4193410798908,
-    "ema50": 489.0113550953102,
-    "ema200": 483.0771393190162,
-    "rsi14": 37.56708591556696,
-    "macd": -13.494640720642678,
-    "macd_signal": -12.947428454185891,
-    "atr14": 11.351470102668085,
-    "adx14": 29.19074922341056,
-    "adx_pos": 14.732544871218888,
-    "adx_neg": 28.534536434243226,
-    "bb_high": 517.027884787439,
-    "bb_low": 439.6471152125609,
-    "bb_mid": 478.3375,
-    "vwap20": 479.6034042739829,
+    "date": "2026-07-28",
+    "close": 430.0,
+    "prev_close": 464.5,
+    "change_pct": -7.427341227125941,
+    "ema20": 471.9984514532345,
+    "ema50": 486.69718430725885,
+    "ema200": 482.5490085795235,
+    "rsi14": 25.243831966195984,
+    "macd": -15.518266088316977,
+    "macd_signal": -13.46159598101211,
+    "atr14": 13.89779366676322,
+    "adx14": 30.974066858963713,
+    "adx_pos": 11.173760004549132,
+    "adx_neg": 37.57439263497733,
+    "bb_high": 516.0945361448893,
+    "bb_low": 432.82546385511057,
+    "bb_mid": 474.4599999999999,
+    "vwap20": 466.9672556529456,
     "high_52w": 555.8,
     "low_52w": 381.0,
-    "volume": 5407996.0,
-    "avg_volume20": 5517196.45
+    "volume": 47975773.0,
+    "avg_volume20": 7729863.15
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 471.25,
-      "ema50": 480.3
-    },
     {
       "date": "2026-02-01",
       "close": 469.1,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 464.5,
       "ema50": 489.01
+    },
+    {
+      "date": "2026-07-28",
+      "close": 430.0,
+      "ema50": 486.7
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 464.50 vs EMA20 476.42",
-      "ema20_above_ema50": "EMA20 476.42 vs EMA50 489.01",
-      "ema50_above_ema200": "EMA50 489.01 vs EMA200 483.08",
-      "rsi_above_50": "RSI(14) 37.57 vs 50",
-      "macd_bullish": "MACD -13.49 vs signal -12.95",
-      "adx_trending_up": "ADX(14) 29.19 vs 20, +DI 14.73 vs -DI 28.53",
-      "price_above_vwap20": "Close 464.50 vs 20d VWAP 479.60",
-      "price_above_bb_mid": "Close 464.50 vs BB mid 478.34"
+      "price_above_ema20": "Close 430.00 vs EMA20 472.00",
+      "ema20_above_ema50": "EMA20 472.00 vs EMA50 486.70",
+      "ema50_above_ema200": "EMA50 486.70 vs EMA200 482.55",
+      "rsi_above_50": "RSI(14) 25.24 vs 50",
+      "macd_bullish": "MACD -15.52 vs signal -13.46",
+      "adx_trending_up": "ADX(14) 30.97 vs 20, +DI 11.17 vs -DI 37.57",
+      "price_above_vwap20": "Close 430.00 vs 20d VWAP 466.97",
+      "price_above_bb_mid": "Close 430.00 vs BB mid 474.46"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,36 +661,39 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 11.35 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 37.6",
-        "below_ema200": "Close 464.50 vs EMA200 483.08",
-        "extended_above_ema20": "Close 464.50 vs EMA20 476.42 (-2.5%)",
-        "large_day_move": "Day change +1.6%",
-        "near_52w_low": "Close 464.50 vs 52w low 381.00"
+        "atr_high": "ATR 13.90 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 25.2",
+        "below_ema200": "Close 430.00 vs EMA200 482.55",
+        "extended_above_ema20": "Close 430.00 vs EMA20 472.00 (-8.9%)",
+        "large_day_move": "Day change -7.4%",
+        "near_52w_low": "Close 430.00 vs 52w low 381.00"
       },
       "conditions_on": [
-        "below_ema200"
+        "atr_high",
+        "below_ema200",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:23:02.039833+00:00"
+  "updated_at": "2026-07-28T12:12:11.992086+00:00"
 }

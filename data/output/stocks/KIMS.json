@@ -3,35 +3,30 @@
   "name": "Krishna Institute of Medical Sciences",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 800.45,
-    "prev_close": 797.85,
-    "change_pct": 0.32587579118882276,
-    "ema20": 798.7710872881607,
-    "ema50": 780.7390175565056,
-    "ema200": 721.2435411959038,
-    "rsi14": 51.80697385677789,
-    "macd": 0.8392879753591842,
-    "macd_signal": 4.478555715902386,
-    "atr14": 20.37728498963107,
-    "adx14": 17.92582850499566,
-    "adx_pos": 18.689208071634518,
-    "adx_neg": 17.47446132296058,
-    "bb_high": 842.3522804652587,
-    "bb_low": 773.9977195347412,
-    "bb_mid": 808.175,
-    "vwap20": 809.4956561114784,
+    "date": "2026-07-28",
+    "close": 798.35,
+    "prev_close": 800.45,
+    "change_pct": -0.26235242675995035,
+    "ema20": 798.7309837369073,
+    "ema50": 781.4296443189955,
+    "ema200": 722.0107696417158,
+    "rsi14": 50.83363928667763,
+    "macd": 0.8222964085348394,
+    "macd_signal": 3.747303854428877,
+    "atr14": 20.15390749037171,
+    "adx14": 17.00570218546948,
+    "adx_pos": 18.149118409442842,
+    "adx_neg": 16.406130890666226,
+    "bb_high": 841.6625856413062,
+    "bb_low": 773.0624143586937,
+    "bb_mid": 807.3625,
+    "vwap20": 807.8349797248726,
     "high_52w": 858.0,
     "low_52w": 575.8,
-    "volume": 392176.0,
-    "avg_volume20": 527426.25
+    "volume": 371919.0,
+    "avg_volume20": 483737.2
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 603.75,
-      "ema50": 639.64
-    },
     {
       "date": "2026-02-01",
       "close": 593.55,
@@ -626,11 +621,16 @@
       "date": "2026-07-27",
       "close": 800.45,
       "ema50": 780.74
+    },
+    {
+      "date": "2026-07-28",
+      "close": 798.35,
+      "ema50": 781.43
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
@@ -640,31 +640,30 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 800.45 vs EMA20 798.77",
-      "ema20_above_ema50": "EMA20 798.77 vs EMA50 780.74",
-      "ema50_above_ema200": "EMA50 780.74 vs EMA200 721.24",
-      "rsi_above_50": "RSI(14) 51.81 vs 50",
-      "macd_bullish": "MACD 0.84 vs signal 4.48",
-      "adx_trending_up": "ADX(14) 17.93 vs 20, +DI 18.69 vs -DI 17.47",
-      "price_above_vwap20": "Close 800.45 vs 20d VWAP 809.50",
-      "price_above_bb_mid": "Close 800.45 vs BB mid 808.17"
+      "price_above_ema20": "Close 798.35 vs EMA20 798.73",
+      "ema20_above_ema50": "EMA20 798.73 vs EMA50 781.43",
+      "ema50_above_ema200": "EMA50 781.43 vs EMA200 722.01",
+      "rsi_above_50": "RSI(14) 50.83 vs 50",
+      "macd_bullish": "MACD 0.82 vs signal 3.75",
+      "adx_trending_up": "ADX(14) 17.01 vs 20, +DI 18.15 vs -DI 16.41",
+      "price_above_vwap20": "Close 798.35 vs 20d VWAP 807.83",
+      "price_above_bb_mid": "Close 798.35 vs BB mid 807.36"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50"
     ],
-    "flag_count": 4,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "4/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -678,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 20.38 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 51.8",
-        "below_ema200": "Close 800.45 vs EMA200 721.24",
-        "extended_above_ema20": "Close 800.45 vs EMA20 798.77 (+0.2%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 800.45 vs 52w low 575.80"
+        "atr_high": "ATR 20.15 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 50.8",
+        "below_ema200": "Close 798.35 vs EMA200 722.01",
+        "extended_above_ema20": "Close 798.35 vs EMA20 798.73 (-0.0%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 798.35 vs 52w low 575.80"
       },
       "conditions_on": [
         "atr_high"
@@ -708,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:22:13.988862+00:00"
+  "updated_at": "2026-07-28T12:11:23.654571+00:00"
 }

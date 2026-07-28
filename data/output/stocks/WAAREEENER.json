@@ -3,35 +3,30 @@
   "name": "Waaree Energies",
   "sector": "Power",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 2741.4,
-    "prev_close": 2702.0,
-    "change_pct": 1.4581791265729123,
-    "ema20": 2824.2709810032998,
-    "ema50": 2929.0490099870567,
-    "ema200": 3008.8837374594505,
-    "rsi14": 36.60155198897014,
-    "macd": -73.06189086454287,
-    "macd_signal": -66.42320345982023,
-    "atr14": 69.97489127731524,
-    "adx14": 31.74522016099591,
-    "adx_pos": 11.914303390407792,
-    "adx_neg": 25.866582560543822,
-    "bb_high": 2965.0757847431887,
-    "bb_low": 2683.454215256811,
-    "bb_mid": 2824.265,
-    "vwap20": 2823.1988131008247,
+    "date": "2026-07-28",
+    "close": 2694.3,
+    "prev_close": 2741.4,
+    "change_pct": -1.7181002407528967,
+    "ema20": 2811.892792336319,
+    "ema50": 2919.8431664581526,
+    "ema200": 3005.7535510170683,
+    "rsi14": 33.00228192049738,
+    "macd": -74.46330360569209,
+    "macd_signal": -68.03122348899461,
+    "atr14": 71.85525618607845,
+    "adx14": 32.4716455005467,
+    "adx_pos": 10.773769054529032,
+    "adx_neg": 26.32290477967323,
+    "bb_high": 2951.4674356171927,
+    "bb_low": 2671.7925643828075,
+    "bb_mid": 2811.63,
+    "vwap20": 2805.3899179699024,
     "high_52w": 3865.0,
     "low_52w": 2403.0,
-    "volume": 710887.0,
-    "avg_volume20": 677224.05
+    "volume": 1036716.0,
+    "avg_volume20": 664042.85
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 2787.5,
-      "ema50": 2863.4
-    },
     {
       "date": "2026-02-01",
       "close": 2647.4,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 2741.4,
       "ema50": 2929.05
+    },
+    {
+      "date": "2026-07-28",
+      "close": 2694.3,
+      "ema50": 2919.84
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,741.40 vs EMA20 2,824.27",
-      "ema20_above_ema50": "EMA20 2,824.27 vs EMA50 2,929.05",
-      "ema50_above_ema200": "EMA50 2,929.05 vs EMA200 3,008.88",
-      "rsi_above_50": "RSI(14) 36.60 vs 50",
-      "macd_bullish": "MACD -73.06 vs signal -66.42",
-      "adx_trending_up": "ADX(14) 31.75 vs 20, +DI 11.91 vs -DI 25.87",
-      "price_above_vwap20": "Close 2,741.40 vs 20d VWAP 2,823.20",
-      "price_above_bb_mid": "Close 2,741.40 vs BB mid 2,824.26"
+      "price_above_ema20": "Close 2,694.30 vs EMA20 2,811.89",
+      "ema20_above_ema50": "EMA20 2,811.89 vs EMA50 2,919.84",
+      "ema50_above_ema200": "EMA50 2,919.84 vs EMA200 3,005.75",
+      "rsi_above_50": "RSI(14) 33.00 vs 50",
+      "macd_bullish": "MACD -74.46 vs signal -68.03",
+      "adx_trending_up": "ADX(14) 32.47 vs 20, +DI 10.77 vs -DI 26.32",
+      "price_above_vwap20": "Close 2,694.30 vs 20d VWAP 2,805.39",
+      "price_above_bb_mid": "Close 2,694.30 vs BB mid 2,811.63"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 69.97 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 36.6",
-        "below_ema200": "Close 2,741.40 vs EMA200 3,008.88",
-        "extended_above_ema20": "Close 2,741.40 vs EMA20 2,824.27 (-2.9%)",
-        "large_day_move": "Day change +1.5%",
-        "near_52w_low": "Close 2,741.40 vs 52w low 2,403.00"
+        "atr_high": "ATR 71.86 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 33.0",
+        "below_ema200": "Close 2,694.30 vs EMA200 3,005.75",
+        "extended_above_ema20": "Close 2,694.30 vs EMA20 2,811.89 (-4.2%)",
+        "large_day_move": "Day change -1.7%",
+        "near_52w_low": "Close 2,694.30 vs 52w low 2,403.00"
       },
       "conditions_on": [
         "atr_high",
@@ -689,7 +690,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:23:03.702599+00:00"
+  "updated_at": "2026-07-28T12:12:13.575198+00:00"
 }

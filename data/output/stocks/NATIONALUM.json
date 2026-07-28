@@ -3,35 +3,30 @@
   "name": "National Aluminium Company",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 339.35,
-    "prev_close": 343.9,
-    "change_pct": -1.323059028787425,
-    "ema20": 350.170482702484,
-    "ema50": 365.187533473049,
-    "ema200": 338.3218049876152,
-    "rsi14": 40.104442412902266,
-    "macd": -7.396493840460266,
-    "macd_signal": -8.185804682956942,
-    "atr14": 10.851234353311497,
-    "adx14": 19.8843933434126,
-    "adx_pos": 18.43630389905578,
-    "adx_neg": 26.296623433123322,
-    "bb_high": 363.27313416647274,
-    "bb_low": 330.24686583352724,
-    "bb_mid": 346.76,
-    "vwap20": 347.9502092287659,
+    "date": "2026-07-28",
+    "close": 334.55,
+    "prev_close": 339.35,
+    "change_pct": -1.4144688374834273,
+    "ema20": 348.6828176831998,
+    "ema50": 363.9860615721451,
+    "ema200": 338.2842745897285,
+    "rsi14": 37.70234623016276,
+    "macd": -7.7836424756304154,
+    "macd_signal": -8.105372241491636,
+    "atr14": 10.590431899503532,
+    "adx14": 20.17935953895493,
+    "adx_pos": 17.54101201583491,
+    "adx_neg": 28.628002189226226,
+    "bb_high": 363.59528145342256,
+    "bb_low": 329.41971854657754,
+    "bb_mid": 346.50750000000005,
+    "vwap20": 348.45185683840333,
     "high_52w": 445.15,
     "low_52w": 179.93,
-    "volume": 3868006.0,
-    "avg_volume20": 7356616.7
+    "volume": 3721274.0,
+    "avg_volume20": 6933408.05
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 385.45,
-      "ema50": 321.05
-    },
     {
       "date": "2026-02-01",
       "close": 354.2,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 339.35,
       "ema50": 365.19
+    },
+    {
+      "date": "2026-07-28",
+      "close": 334.55,
+      "ema50": 363.99
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 339.35 vs EMA20 350.17",
-      "ema20_above_ema50": "EMA20 350.17 vs EMA50 365.19",
-      "ema50_above_ema200": "EMA50 365.19 vs EMA200 338.32",
-      "rsi_above_50": "RSI(14) 40.10 vs 50",
-      "macd_bullish": "MACD -7.40 vs signal -8.19",
-      "adx_trending_up": "ADX(14) 19.88 vs 20, +DI 18.44 vs -DI 26.30",
-      "price_above_vwap20": "Close 339.35 vs 20d VWAP 347.95",
-      "price_above_bb_mid": "Close 339.35 vs BB mid 346.76"
+      "price_above_ema20": "Close 334.55 vs EMA20 348.68",
+      "ema20_above_ema50": "EMA20 348.68 vs EMA50 363.99",
+      "ema50_above_ema200": "EMA50 363.99 vs EMA200 338.28",
+      "rsi_above_50": "RSI(14) 37.70 vs 50",
+      "macd_bullish": "MACD -7.78 vs signal -8.11",
+      "adx_trending_up": "ADX(14) 20.18 vs 20, +DI 17.54 vs -DI 28.63",
+      "price_above_vwap20": "Close 334.55 vs 20d VWAP 348.45",
+      "price_above_bb_mid": "Close 334.55 vs BB mid 346.51"
     },
     "flags_on": [
       "ema50_above_ema200",
@@ -669,25 +669,26 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 10.85 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 40.1",
-        "below_ema200": "Close 339.35 vs EMA200 338.32",
-        "extended_above_ema20": "Close 339.35 vs EMA20 350.17 (-3.1%)",
-        "large_day_move": "Day change -1.3%",
-        "near_52w_low": "Close 339.35 vs 52w low 179.93"
+        "atr_high": "ATR 10.59 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 37.7",
+        "below_ema200": "Close 334.55 vs EMA200 338.28",
+        "extended_above_ema20": "Close 334.55 vs EMA20 348.68 (-4.1%)",
+        "large_day_move": "Day change -1.4%",
+        "near_52w_low": "Close 334.55 vs 52w low 179.93"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:22:26.025878+00:00"
+  "updated_at": "2026-07-28T12:11:35.654487+00:00"
 }

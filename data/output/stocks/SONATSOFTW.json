@@ -3,35 +3,30 @@
   "name": "Sonata Software",
   "sector": "IT",
   "indicators": {
-    "date": "2026-07-27",
-    "close": 293.35,
-    "prev_close": 288.1,
-    "change_pct": 1.822283929191253,
-    "ema20": 292.1729518078273,
-    "ema50": 283.8173986031709,
-    "ema200": 304.10846407463856,
-    "rsi14": 52.13328063734351,
-    "macd": 4.567464636780244,
-    "macd_signal": 5.898335687102075,
-    "atr14": 13.137314672221907,
-    "adx14": 30.017937916302735,
-    "adx_pos": 31.488672493557907,
-    "adx_neg": 20.516884214227073,
-    "bb_high": 320.1675916931667,
-    "bb_low": 259.16240830683324,
-    "bb_mid": 289.66499999999996,
-    "vwap20": 294.60745214116116,
+    "date": "2026-07-28",
+    "close": 297.65,
+    "prev_close": 293.35,
+    "change_pct": 1.4658258053519528,
+    "ema20": 292.69457544517707,
+    "ema50": 284.3598535599093,
+    "ema200": 304.04420075051286,
+    "rsi14": 54.45856800752665,
+    "macd": 4.4675111568435,
+    "macd_signal": 5.61217078105036,
+    "atr14": 13.173935052777482,
+    "adx14": 29.7760773406552,
+    "adx_pos": 32.790917199289815,
+    "adx_neg": 18.99843418172135,
+    "bb_high": 320.09989415912986,
+    "bb_low": 262.2301058408702,
+    "bb_mid": 291.165,
+    "vwap20": 295.0062801356006,
     "high_52w": 442.8,
     "low_52w": 207.15,
-    "volume": 1008207.0,
-    "avg_volume20": 4228087.85
+    "volume": 2644423.0,
+    "avg_volume20": 4315766.95
   },
   "price_history": [
-    {
-      "date": "2026-01-30",
-      "close": 317.3,
-      "ema50": 344.99
-    },
     {
       "date": "2026-02-01",
       "close": 313.25,
@@ -626,6 +621,11 @@
       "date": "2026-07-27",
       "close": 293.35,
       "ema50": 283.82
+    },
+    {
+      "date": "2026-07-28",
+      "close": 297.65,
+      "ema50": 284.36
     }
   ],
   "flags": {
@@ -636,27 +636,28 @@
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
-      "price_above_vwap20": false,
+      "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 293.35 vs EMA20 292.17",
-      "ema20_above_ema50": "EMA20 292.17 vs EMA50 283.82",
-      "ema50_above_ema200": "EMA50 283.82 vs EMA200 304.11",
-      "rsi_above_50": "RSI(14) 52.13 vs 50",
-      "macd_bullish": "MACD 4.57 vs signal 5.90",
-      "adx_trending_up": "ADX(14) 30.02 vs 20, +DI 31.49 vs -DI 20.52",
-      "price_above_vwap20": "Close 293.35 vs 20d VWAP 294.61",
-      "price_above_bb_mid": "Close 293.35 vs BB mid 289.66"
+      "price_above_ema20": "Close 297.65 vs EMA20 292.69",
+      "ema20_above_ema50": "EMA20 292.69 vs EMA50 284.36",
+      "ema50_above_ema200": "EMA50 284.36 vs EMA200 304.04",
+      "rsi_above_50": "RSI(14) 54.46 vs 50",
+      "macd_bullish": "MACD 4.47 vs signal 5.61",
+      "adx_trending_up": "ADX(14) 29.78 vs 20, +DI 32.79 vs -DI 19.00",
+      "price_above_vwap20": "Close 297.65 vs 20d VWAP 295.01",
+      "price_above_bb_mid": "Close 297.65 vs BB mid 291.17"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "rsi_above_50",
       "adx_trending_up",
+      "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 6,
     "flag_total": 8
   },
   "decision": {
@@ -665,7 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.14 = 4.5% of price",
-        "rsi_extreme": "RSI(14) 52.1",
-        "below_ema200": "Close 293.35 vs EMA200 304.11",
-        "extended_above_ema20": "Close 293.35 vs EMA20 292.17 (+0.4%)",
-        "large_day_move": "Day change +1.8%",
-        "near_52w_low": "Close 293.35 vs 52w low 207.15"
+        "atr_high": "ATR 13.17 = 4.4% of price",
+        "rsi_extreme": "RSI(14) 54.5",
+        "below_ema200": "Close 297.65 vs EMA200 304.04",
+        "extended_above_ema20": "Close 297.65 vs EMA20 292.69 (+1.7%)",
+        "large_day_move": "Day change +1.5%",
+        "near_52w_low": "Close 297.65 vs 52w low 207.15"
       },
       "conditions_on": [
         "atr_high",
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-27T13:22:47.583246+00:00"
+  "updated_at": "2026-07-28T12:11:57.256988+00:00"
 }
