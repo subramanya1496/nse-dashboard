@@ -3,35 +3,30 @@
   "name": "Steel Authority of India",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-07-28",
-    "close": 165.85,
-    "prev_close": 162.62,
-    "change_pct": 1.9862255565121076,
-    "ema20": 166.3030080719708,
-    "ema50": 172.01823383354503,
-    "ema200": 160.58446099603267,
-    "rsi14": 45.17954780787137,
-    "macd": -3.8910397157746672,
-    "macd_signal": -4.577322465285847,
-    "atr14": 4.884220233865098,
-    "adx14": 28.214434949300784,
-    "adx_pos": 16.310789591347135,
-    "adx_neg": 27.9742139731296,
-    "bb_high": 170.43515412331922,
-    "bb_low": 159.69684587668073,
-    "bb_mid": 165.06599999999997,
-    "vwap20": 165.68824161413576,
+    "date": "2026-07-29",
+    "close": 170.96,
+    "prev_close": 165.85,
+    "change_pct": 3.0810973771480334,
+    "ema20": 166.7465311127353,
+    "ema50": 171.9767195392916,
+    "ema200": 160.53822789556688,
+    "rsi14": 54.322640050148216,
+    "macd": -3.059556042223619,
+    "macd_signal": -4.273769180449122,
+    "atr14": 5.253204502920899,
+    "adx14": 26.43144912809902,
+    "adx_pos": 25.77544199376024,
+    "adx_neg": 24.151501701237958,
+    "bb_high": 171.00137743362652,
+    "bb_low": 159.3996225663735,
+    "bb_mid": 165.2005,
+    "vwap20": 166.29344695063224,
     "high_52w": 209.7,
     "low_52w": 118.1,
-    "volume": 22209978.0,
-    "avg_volume20": 12776652.7
+    "volume": 45760047.0,
+    "avg_volume20": 14129997.65
   },
   "price_history": [
-    {
-      "date": "2026-02-01",
-      "close": 148.63,
-      "ema50": 143.03
-    },
     {
       "date": "2026-02-02",
       "close": 148.67,
@@ -95,7 +90,7 @@
     {
       "date": "2026-02-18",
       "close": 159.21,
-      "ema50": 149.29
+      "ema50": 149.28
     },
     {
       "date": "2026-02-19",
@@ -180,7 +175,7 @@
     {
       "date": "2026-03-16",
       "close": 144.69,
-      "ema50": 152.46
+      "ema50": 152.45
     },
     {
       "date": "2026-03-17",
@@ -425,7 +420,7 @@
     {
       "date": "2026-06-01",
       "close": 203.69,
-      "ema50": 181.43
+      "ema50": 181.42
     },
     {
       "date": "2026-06-02",
@@ -626,45 +621,53 @@
       "date": "2026-07-28",
       "close": 165.85,
       "ema50": 172.02
+    },
+    {
+      "date": "2026-07-29",
+      "close": 170.96,
+      "ema50": 171.98
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": true,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 165.85 vs EMA20 166.30",
-      "ema20_above_ema50": "EMA20 166.30 vs EMA50 172.02",
-      "ema50_above_ema200": "EMA50 172.02 vs EMA200 160.58",
-      "rsi_above_50": "RSI(14) 45.18 vs 50",
-      "macd_bullish": "MACD -3.89 vs signal -4.58",
-      "adx_trending_up": "ADX(14) 28.21 vs 20, +DI 16.31 vs -DI 27.97",
-      "price_above_vwap20": "Close 165.85 vs 20d VWAP 165.69",
-      "price_above_bb_mid": "Close 165.85 vs BB mid 165.07"
+      "price_above_ema20": "Close 170.96 vs EMA20 166.75",
+      "ema20_above_ema50": "EMA20 166.75 vs EMA50 171.98",
+      "ema50_above_ema200": "EMA50 171.98 vs EMA200 160.54",
+      "rsi_above_50": "RSI(14) 54.32 vs 50",
+      "macd_bullish": "MACD -3.06 vs signal -4.27",
+      "adx_trending_up": "ADX(14) 26.43 vs 20, +DI 25.78 vs -DI 24.15",
+      "price_above_vwap20": "Close 170.96 vs 20d VWAP 166.29",
+      "price_above_bb_mid": "Close 170.96 vs BB mid 165.20"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema50_above_ema200",
+      "rsi_above_50",
       "macd_bullish",
+      "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 4,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "4/8 bullish flags",
+        "7/8 bullish flags",
         "patterns: volume surge, near buy zone"
       ]
     },
@@ -678,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.88 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 45.2",
-        "below_ema200": "Close 165.85 vs EMA200 160.58",
-        "extended_above_ema20": "Close 165.85 vs EMA20 166.30 (-0.3%)",
-        "large_day_move": "Day change +2.0%",
-        "near_52w_low": "Close 165.85 vs 52w low 118.10"
+        "atr_high": "ATR 5.25 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 54.3",
+        "below_ema200": "Close 170.96 vs EMA200 160.54",
+        "extended_above_ema20": "Close 170.96 vs EMA20 166.75 (+2.5%)",
+        "large_day_move": "Day change +3.1%",
+        "near_52w_low": "Close 170.96 vs 52w low 118.10"
       },
       "conditions_on": [
         "atr_high"
@@ -708,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-28T12:11:52.717217+00:00"
+  "updated_at": "2026-07-29T12:19:05.695914+00:00"
 }
