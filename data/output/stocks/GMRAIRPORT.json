@@ -3,35 +3,30 @@
   "name": "GMR Airports",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-07-30",
-    "close": 103.91,
-    "prev_close": 107.1,
-    "change_pct": -2.978524743230624,
-    "ema20": 108.92650192845247,
-    "ema50": 106.68096898712653,
-    "ema200": 99.55629961049272,
-    "rsi14": 36.054547037191675,
-    "macd": -0.34098392383464216,
-    "macd_signal": 0.7691461099107995,
-    "atr14": 2.5521389181150016,
-    "adx14": 20.104320507224173,
-    "adx_pos": 15.81311315254702,
-    "adx_neg": 32.20089256308778,
-    "bb_high": 116.32977756510967,
-    "bb_low": 104.99522243489032,
-    "bb_mid": 110.6625,
-    "vwap20": 111.18377701358685,
+    "date": "2026-07-31",
+    "close": 105.26,
+    "prev_close": 103.91,
+    "change_pct": 1.2992012318352504,
+    "ema20": 108.57731126859977,
+    "ema50": 106.62523451370834,
+    "ema200": 99.51092892025598,
+    "rsi14": 40.73415533254835,
+    "macd": -0.5659318883123632,
+    "macd_signal": 0.5021305104193887,
+    "atr14": 2.5234147096740664,
+    "adx14": 21.10624390216665,
+    "adx_pos": 14.850749588037528,
+    "adx_neg": 30.241192062008693,
+    "bb_high": 116.32479954547675,
+    "bb_low": 104.24620045452325,
+    "bb_mid": 110.2855,
+    "vwap20": 110.8027401225247,
     "high_52w": 115.64,
     "low_52w": 84.11,
-    "volume": 9216229.0,
-    "avg_volume20": 16970104.65
+    "volume": 13437582.0,
+    "avg_volume20": 15970984.0
   },
   "price_history": [
-    {
-      "date": "2026-02-03",
-      "close": 95.22,
-      "ema50": 98.14
-    },
     {
       "date": "2026-02-04",
       "close": 98.08,
@@ -50,7 +45,7 @@
     {
       "date": "2026-02-09",
       "close": 97.98,
-      "ema50": 98.09
+      "ema50": 98.08
     },
     {
       "date": "2026-02-10",
@@ -60,7 +55,7 @@
     {
       "date": "2026-02-11",
       "close": 96.81,
-      "ema50": 98.03
+      "ema50": 98.02
     },
     {
       "date": "2026-02-12",
@@ -80,7 +75,7 @@
     {
       "date": "2026-02-17",
       "close": 99.8,
-      "ema50": 97.99
+      "ema50": 97.98
     },
     {
       "date": "2026-02-18",
@@ -100,7 +95,7 @@
     {
       "date": "2026-02-23",
       "close": 100.84,
-      "ema50": 98.29
+      "ema50": 98.28
     },
     {
       "date": "2026-02-24",
@@ -626,6 +621,11 @@
       "date": "2026-07-30",
       "close": 103.91,
       "ema50": 106.68
+    },
+    {
+      "date": "2026-07-31",
+      "close": 105.26,
+      "ema50": 106.63
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 103.91 vs EMA20 108.93",
-      "ema20_above_ema50": "EMA20 108.93 vs EMA50 106.68",
-      "ema50_above_ema200": "EMA50 106.68 vs EMA200 99.56",
-      "rsi_above_50": "RSI(14) 36.05 vs 50",
-      "macd_bullish": "MACD -0.34 vs signal 0.77",
-      "adx_trending_up": "ADX(14) 20.10 vs 20, +DI 15.81 vs -DI 32.20",
-      "price_above_vwap20": "Close 103.91 vs 20d VWAP 111.18",
-      "price_above_bb_mid": "Close 103.91 vs BB mid 110.66"
+      "price_above_ema20": "Close 105.26 vs EMA20 108.58",
+      "ema20_above_ema50": "EMA20 108.58 vs EMA50 106.63",
+      "ema50_above_ema200": "EMA50 106.63 vs EMA200 99.51",
+      "rsi_above_50": "RSI(14) 40.73 vs 50",
+      "macd_bullish": "MACD -0.57 vs signal 0.50",
+      "adx_trending_up": "ADX(14) 21.11 vs 20, +DI 14.85 vs -DI 30.24",
+      "price_above_vwap20": "Close 105.26 vs 20d VWAP 110.80",
+      "price_above_bb_mid": "Close 105.26 vs BB mid 110.29"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.55 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 36.1",
-        "below_ema200": "Close 103.91 vs EMA200 99.56",
-        "extended_above_ema20": "Close 103.91 vs EMA20 108.93 (-4.6%)",
-        "large_day_move": "Day change -3.0%",
-        "near_52w_low": "Close 103.91 vs 52w low 84.11"
+        "atr_high": "ATR 2.52 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 40.7",
+        "below_ema200": "Close 105.26 vs EMA200 99.51",
+        "extended_above_ema20": "Close 105.26 vs EMA20 108.58 (-3.1%)",
+        "large_day_move": "Day change +1.3%",
+        "near_52w_low": "Close 105.26 vs 52w low 84.11"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -691,7 +692,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-07-30T12:03:40.003986+00:00"
+  "updated_at": "2026-07-31T12:15:14.922900+00:00"
 }
