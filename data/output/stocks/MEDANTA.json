@@ -3,35 +3,30 @@
   "name": "Global Health Ltd",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 1450.0,
-    "prev_close": 1405.6,
-    "change_pct": 3.158793397837229,
-    "ema20": 1371.187268727833,
-    "ema50": 1309.800186811207,
-    "ema200": 1227.667836568513,
-    "rsi14": 70.49942565279622,
-    "macd": 36.37061997661408,
-    "macd_signal": 30.84515126068517,
-    "atr14": 40.90613430706797,
-    "adx14": 31.22101227440236,
-    "adx_pos": 30.063333725793267,
-    "adx_neg": 15.649250584969494,
-    "bb_high": 1445.4209756735368,
-    "bb_low": 1278.6890243264634,
-    "bb_mid": 1362.055,
-    "vwap20": 1374.8307933434646,
+    "date": "2026-08-04",
+    "close": 1435.1,
+    "prev_close": 1444.9,
+    "change_pct": -0.6782476295937561,
+    "ema20": 1376.8347397333455,
+    "ema50": 1314.5217481127283,
+    "ema200": 1229.681596864037,
+    "rsi14": 67.0012266630395,
+    "macd": 36.692654823768635,
+    "macd_signal": 31.949557956207848,
+    "atr14": 40.48426757084883,
+    "adx14": 31.243224285814428,
+    "adx_pos": 28.206851224699385,
+    "adx_neg": 14.682872067829091,
+    "bb_high": 1453.6301014021928,
+    "bb_low": 1281.0498985978074,
+    "bb_mid": 1367.3400000000001,
+    "vwap20": 1377.887786658799,
     "high_52w": 1475.8,
     "low_52w": 956.0,
-    "volume": 382840.0,
-    "avg_volume20": 223172.15
+    "volume": 197187.0,
+    "avg_volume20": 229465.6
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 1107.7,
-      "ema50": 1154.39
-    },
     {
       "date": "2026-02-06",
       "close": 1142.7,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-03",
-      "close": 1450.0,
-      "ema50": 1309.8
+      "close": 1444.9,
+      "ema50": 1309.6
+    },
+    {
+      "date": "2026-08-04",
+      "close": 1435.1,
+      "ema50": 1314.52
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,450.00 vs EMA20 1,371.19",
-      "ema20_above_ema50": "EMA20 1,371.19 vs EMA50 1,309.80",
-      "ema50_above_ema200": "EMA50 1,309.80 vs EMA200 1,227.67",
-      "rsi_above_50": "RSI(14) 70.50 vs 50",
-      "macd_bullish": "MACD 36.37 vs signal 30.85",
-      "adx_trending_up": "ADX(14) 31.22 vs 20, +DI 30.06 vs -DI 15.65",
-      "price_above_vwap20": "Close 1,450.00 vs 20d VWAP 1,374.83",
-      "price_above_bb_mid": "Close 1,450.00 vs BB mid 1,362.06"
+      "price_above_ema20": "Close 1,435.10 vs EMA20 1,376.83",
+      "ema20_above_ema50": "EMA20 1,376.83 vs EMA50 1,314.52",
+      "ema50_above_ema200": "EMA50 1,314.52 vs EMA200 1,229.68",
+      "rsi_above_50": "RSI(14) 67.00 vs 50",
+      "macd_bullish": "MACD 36.69 vs signal 31.95",
+      "adx_trending_up": "ADX(14) 31.24 vs 20, +DI 28.21 vs -DI 14.68",
+      "price_above_vwap20": "Close 1,435.10 vs 20d VWAP 1,377.89",
+      "price_above_bb_mid": "Close 1,435.10 vs BB mid 1,367.34"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,12 +664,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "8/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "8/8 bullish flags"
       ]
     },
     "risk": {
@@ -682,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 40.91 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 70.5",
-        "below_ema200": "Close 1,450.00 vs EMA200 1,227.67",
-        "extended_above_ema20": "Close 1,450.00 vs EMA20 1,371.19 (+5.7%)",
-        "large_day_move": "Day change +3.2%",
-        "near_52w_low": "Close 1,450.00 vs 52w low 956.00"
+        "atr_high": "ATR 40.48 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 67.0",
+        "below_ema200": "Close 1,435.10 vs EMA200 1,229.68",
+        "extended_above_ema20": "Close 1,435.10 vs EMA20 1,376.83 (+4.2%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 1,435.10 vs 52w low 956.00"
       },
       "conditions_on": [
         "atr_high"
@@ -697,8 +696,8 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": true,
-      "volume_surge": true,
+      "breakout": false,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -712,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:12.062859+00:00"
+  "updated_at": "2026-08-04T12:17:48.133416+00:00"
 }

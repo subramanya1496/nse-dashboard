@@ -3,35 +3,30 @@
   "name": "Siemens Ltd",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 3905.0,
-    "prev_close": 3760.0,
-    "change_pct": 3.856382978723404,
-    "ema20": 3672.342800291894,
-    "ema50": 3629.5432440731374,
-    "ema200": 3413.2663245791355,
-    "rsi14": 70.49854597283658,
-    "macd": 44.068742071608995,
-    "macd_signal": 19.56054240230875,
-    "atr14": 107.54844107966187,
-    "adx14": 23.126862877637013,
-    "adx_pos": 30.814425758717206,
-    "adx_neg": 13.747469387250973,
-    "bb_high": 3850.7215066485132,
-    "bb_low": 3402.838493351487,
-    "bb_mid": 3626.78,
-    "vwap20": 3642.8208929962743,
-    "high_52w": 3937.3,
+    "date": "2026-08-04",
+    "close": 4000.5,
+    "prev_close": 3900.0,
+    "change_pct": 2.576923076923077,
+    "ema20": 3703.1650279284936,
+    "ema50": 3643.9021787538527,
+    "ema200": 3419.0601895210725,
+    "rsi14": 74.55852629609808,
+    "macd": 64.12205512134187,
+    "macd_signal": 28.409027282297696,
+    "atr14": 112.28069528825746,
+    "adx14": 25.150125042861,
+    "adx_pos": 38.145830307906884,
+    "adx_neg": 12.22748402927568,
+    "bb_high": 3919.2998408848407,
+    "bb_low": 3384.31015911516,
+    "bb_mid": 3651.8050000000003,
+    "vwap20": 3699.1373387774597,
+    "high_52w": 4073.8,
     "low_52w": 2826.0,
-    "volume": 602785.0,
-    "avg_volume20": 356869.35
+    "volume": 1105270.0,
+    "avg_volume20": 393512.75
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 3300.0,
-      "ema50": 3086.89
-    },
     {
       "date": "2026-02-06",
       "close": 3176.2,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-03",
-      "close": 3905.0,
-      "ema50": 3629.54
+      "close": 3900.0,
+      "ema50": 3629.35
+    },
+    {
+      "date": "2026-08-04",
+      "close": 4000.5,
+      "ema50": 3643.9
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,905.00 vs EMA20 3,672.34",
-      "ema20_above_ema50": "EMA20 3,672.34 vs EMA50 3,629.54",
-      "ema50_above_ema200": "EMA50 3,629.54 vs EMA200 3,413.27",
-      "rsi_above_50": "RSI(14) 70.50 vs 50",
-      "macd_bullish": "MACD 44.07 vs signal 19.56",
-      "adx_trending_up": "ADX(14) 23.13 vs 20, +DI 30.81 vs -DI 13.75",
-      "price_above_vwap20": "Close 3,905.00 vs 20d VWAP 3,642.82",
-      "price_above_bb_mid": "Close 3,905.00 vs BB mid 3,626.78"
+      "price_above_ema20": "Close 4,000.50 vs EMA20 3,703.17",
+      "ema20_above_ema50": "EMA20 3,703.17 vs EMA50 3,643.90",
+      "ema50_above_ema200": "EMA50 3,643.90 vs EMA200 3,419.06",
+      "rsi_above_50": "RSI(14) 74.56 vs 50",
+      "macd_bullish": "MACD 64.12 vs signal 28.41",
+      "adx_trending_up": "ADX(14) 25.15 vs 20, +DI 38.15 vs -DI 12.23",
+      "price_above_vwap20": "Close 4,000.50 vs 20d VWAP 3,699.14",
+      "price_above_bb_mid": "Close 4,000.50 vs BB mid 3,651.81"
     },
     "flags_on": [
       "price_above_ema20",
@@ -677,24 +677,25 @@
         "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": false,
-        "extended_above_ema20": false,
+        "extended_above_ema20": true,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 107.55 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 70.5",
-        "below_ema200": "Close 3,905.00 vs EMA200 3,413.27",
-        "extended_above_ema20": "Close 3,905.00 vs EMA20 3,672.34 (+6.3%)",
-        "large_day_move": "Day change +3.9%",
-        "near_52w_low": "Close 3,905.00 vs 52w low 2,826.00"
+        "atr_high": "ATR 112.28 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 74.6",
+        "below_ema200": "Close 4,000.50 vs EMA200 3,419.06",
+        "extended_above_ema20": "Close 4,000.50 vs EMA20 3,703.17 (+8.0%)",
+        "large_day_move": "Day change +2.6%",
+        "near_52w_low": "Close 4,000.50 vs 52w low 2,826.00"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "extended_above_ema20"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": true,
@@ -712,5 +713,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:35.668846+00:00"
+  "updated_at": "2026-08-04T12:18:11.736791+00:00"
 }

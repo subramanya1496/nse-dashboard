@@ -3,35 +3,30 @@
   "name": "Adani Power",
   "sector": "Power",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 211.3,
-    "prev_close": 211.31,
-    "change_pct": -0.0047323837016662275,
-    "ema20": 215.24195283347996,
-    "ema50": 215.969778502574,
-    "ema200": 183.0393693497675,
-    "rsi14": 42.62516809742603,
-    "macd": -3.3036026309530655,
-    "macd_signal": -2.838272809856105,
-    "atr14": 5.885233064847996,
-    "adx14": 14.07152091694764,
-    "adx_pos": 17.752261101199373,
-    "adx_neg": 21.692081674713968,
-    "bb_high": 224.0104704826366,
-    "bb_low": 206.73252951736333,
-    "bb_mid": 215.37149999999997,
-    "vwap20": 217.01981390321072,
+    "date": "2026-08-04",
+    "close": 209.95,
+    "prev_close": 213.65,
+    "change_pct": -1.7318043529136518,
+    "ema20": 214.94045165659526,
+    "ema50": 215.82225162550264,
+    "ema200": 183.33028723599293,
+    "rsi14": 41.8330696720739,
+    "macd": -3.1632726007282486,
+    "macd_signal": -2.873278466036232,
+    "atr14": 5.797002131644568,
+    "adx14": 14.207454277255213,
+    "adx_pos": 16.735134215788342,
+    "adx_neg": 23.098372838176083,
+    "bb_high": 223.80070176135132,
+    "bb_low": 206.36529823864868,
+    "bb_mid": 215.083,
+    "vwap20": 216.8071362156796,
     "high_52w": 254.2,
     "low_52w": 110.45,
-    "volume": 13648472.0,
-    "avg_volume20": 26716743.4
+    "volume": 11142887.0,
+    "avg_volume20": 25815797.0
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 153.45,
-      "ema50": 142.76
-    },
     {
       "date": "2026-02-06",
       "close": 152.74,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-03",
-      "close": 211.3,
-      "ema50": 215.97
+      "close": 213.65,
+      "ema50": 216.06
+    },
+    {
+      "date": "2026-08-04",
+      "close": 209.95,
+      "ema50": 215.82
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 211.30 vs EMA20 215.24",
-      "ema20_above_ema50": "EMA20 215.24 vs EMA50 215.97",
-      "ema50_above_ema200": "EMA50 215.97 vs EMA200 183.04",
-      "rsi_above_50": "RSI(14) 42.63 vs 50",
-      "macd_bullish": "MACD -3.30 vs signal -2.84",
-      "adx_trending_up": "ADX(14) 14.07 vs 20, +DI 17.75 vs -DI 21.69",
-      "price_above_vwap20": "Close 211.30 vs 20d VWAP 217.02",
-      "price_above_bb_mid": "Close 211.30 vs BB mid 215.37"
+      "price_above_ema20": "Close 209.95 vs EMA20 214.94",
+      "ema20_above_ema50": "EMA20 214.94 vs EMA50 215.82",
+      "ema50_above_ema200": "EMA50 215.82 vs EMA200 183.33",
+      "rsi_above_50": "RSI(14) 41.83 vs 50",
+      "macd_bullish": "MACD -3.16 vs signal -2.87",
+      "adx_trending_up": "ADX(14) 14.21 vs 20, +DI 16.74 vs -DI 23.10",
+      "price_above_vwap20": "Close 209.95 vs 20d VWAP 216.81",
+      "price_above_bb_mid": "Close 209.95 vs BB mid 215.08"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: near buy zone"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.89 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 42.6",
-        "below_ema200": "Close 211.30 vs EMA200 183.04",
-        "extended_above_ema20": "Close 211.30 vs EMA20 215.24 (-1.8%)",
-        "large_day_move": "Day change -0.0%",
-        "near_52w_low": "Close 211.30 vs 52w low 110.45"
+        "atr_high": "ATR 5.80 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 41.8",
+        "below_ema200": "Close 209.95 vs EMA200 183.33",
+        "extended_above_ema20": "Close 209.95 vs EMA20 214.94 (-2.3%)",
+        "large_day_move": "Day change -1.7%",
+        "near_52w_low": "Close 209.95 vs 52w low 110.45"
       },
       "conditions_on": [
         "atr_high"
@@ -693,7 +692,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:19:11.594517+00:00"
+  "updated_at": "2026-08-04T12:16:47.867534+00:00"
 }

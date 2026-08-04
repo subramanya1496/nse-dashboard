@@ -3,35 +3,30 @@
   "name": "Suzlon Energy",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 48.75,
-    "prev_close": 48.01,
-    "change_pct": 1.541345553009794,
-    "ema20": 51.46488699123633,
-    "ema50": 52.85115717649537,
-    "ema200": 52.69652298404333,
-    "rsi14": 34.38458301835233,
-    "macd": -1.8421108217161617,
-    "macd_signal": -1.3900939331379982,
-    "atr14": 1.6061528405167333,
-    "adx14": 31.21897239691587,
-    "adx_pos": 16.848361126359556,
-    "adx_neg": 36.94058122381097,
-    "bb_high": 56.22608546527216,
-    "bb_low": 47.16091453472785,
-    "bb_mid": 51.69350000000001,
-    "vwap20": 50.744926989873655,
+    "date": "2026-08-04",
+    "close": 48.0,
+    "prev_close": 48.1,
+    "change_pct": -0.20790020790021085,
+    "ema20": 51.078888683680944,
+    "ema50": 52.63642513804764,
+    "ema200": 52.64338810521396,
+    "rsi14": 30.244419529809235,
+    "macd": -1.92379455129916,
+    "macd_signal": -1.5051303530665268,
+    "atr14": 1.5807133519083953,
+    "adx14": 31.72775990472127,
+    "adx_pos": 15.896690821372669,
+    "adx_neg": 35.66738903336788,
+    "bb_high": 56.05208110333533,
+    "bb_low": 46.63191889666468,
+    "bb_mid": 51.342000000000006,
+    "vwap20": 50.47557359675177,
     "high_52w": 66.81,
     "low_52w": 38.19,
-    "volume": 51975508.0,
-    "avg_volume20": 71924382.45
+    "volume": 60709870.0,
+    "avg_volume20": 72277813.85
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 47.85,
-      "ema50": 50.62
-    },
     {
       "date": "2026-02-06",
       "close": 48.04,
@@ -624,15 +619,20 @@
     },
     {
       "date": "2026-08-03",
-      "close": 48.75,
-      "ema50": 52.85
+      "close": 48.1,
+      "ema50": 52.83
+    },
+    {
+      "date": "2026-08-04",
+      "close": 48.0,
+      "ema50": 52.64
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
       "ema20_above_ema50": false,
-      "ema50_above_ema200": true,
+      "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": false,
@@ -640,19 +640,17 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 48.75 vs EMA20 51.46",
-      "ema20_above_ema50": "EMA20 51.46 vs EMA50 52.85",
-      "ema50_above_ema200": "EMA50 52.85 vs EMA200 52.70",
-      "rsi_above_50": "RSI(14) 34.38 vs 50",
-      "macd_bullish": "MACD -1.84 vs signal -1.39",
-      "adx_trending_up": "ADX(14) 31.22 vs 20, +DI 16.85 vs -DI 36.94",
-      "price_above_vwap20": "Close 48.75 vs 20d VWAP 50.74",
-      "price_above_bb_mid": "Close 48.75 vs BB mid 51.69"
+      "price_above_ema20": "Close 48.00 vs EMA20 51.08",
+      "ema20_above_ema50": "EMA20 51.08 vs EMA50 52.64",
+      "ema50_above_ema200": "EMA50 52.64 vs EMA200 52.64",
+      "rsi_above_50": "RSI(14) 30.24 vs 50",
+      "macd_bullish": "MACD -1.92 vs signal -1.51",
+      "adx_trending_up": "ADX(14) 31.73 vs 20, +DI 15.90 vs -DI 35.67",
+      "price_above_vwap20": "Close 48.00 vs 20d VWAP 50.48",
+      "price_above_bb_mid": "Close 48.00 vs BB mid 51.34"
     },
-    "flags_on": [
-      "ema50_above_ema200"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.61 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 34.4",
-        "below_ema200": "Close 48.75 vs EMA200 52.70",
-        "extended_above_ema20": "Close 48.75 vs EMA20 51.46 (-5.3%)",
-        "large_day_move": "Day change +1.5%",
-        "near_52w_low": "Close 48.75 vs 52w low 38.19"
+        "atr_high": "ATR 1.58 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 30.2",
+        "below_ema200": "Close 48.00 vs EMA200 52.64",
+        "extended_above_ema20": "Close 48.00 vs EMA20 51.08 (-6.0%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 48.00 vs 52w low 38.19"
       },
       "conditions_on": [
         "atr_high",
@@ -696,7 +694,7 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
+      "daily": "bearish",
       "weekly": "bearish",
       "intraday": null
     }
@@ -705,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:38.868964+00:00"
+  "updated_at": "2026-08-04T12:18:14.956751+00:00"
 }

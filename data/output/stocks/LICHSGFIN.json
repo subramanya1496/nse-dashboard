@@ -3,35 +3,30 @@
   "name": "LIC Housing Finance",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 516.5,
-    "prev_close": 523.1,
-    "change_pct": -1.2617090422481403,
-    "ema20": 541.5700073697757,
-    "ema50": 544.2388165502238,
-    "ema200": 547.082065844773,
-    "rsi14": 35.956976838831096,
-    "macd": -4.54410800877929,
-    "macd_signal": -1.9186916940162813,
-    "atr14": 12.5396629157222,
-    "adx14": 13.231046505773364,
-    "adx_pos": 16.29008818411299,
-    "adx_neg": 29.24968588977131,
-    "bb_high": 562.6302584888894,
-    "bb_low": 522.8797415111106,
-    "bb_mid": 542.755,
-    "vwap20": 541.7453372453618,
-    "high_52w": 618.35,
+    "date": "2026-08-04",
+    "close": 513.0,
+    "prev_close": 519.0,
+    "change_pct": -1.1560693641618496,
+    "ema20": 539.0644737880737,
+    "ema50": 543.1079594613645,
+    "ema200": 546.7675689147565,
+    "rsi14": 34.610165343404205,
+    "macd": -6.075137828250263,
+    "macd_signal": -2.7180720889542553,
+    "atr14": 12.333258421742041,
+    "adx14": 14.68602132243093,
+    "adx_pos": 15.37966170266396,
+    "adx_neg": 30.94510466923188,
+    "bb_high": 564.5709942448938,
+    "bb_low": 518.1340057551064,
+    "bb_mid": 541.3525000000001,
+    "vwap20": 540.3328870468239,
+    "high_52w": 612.45,
     "low_52w": 458.9,
-    "volume": 2151316.0,
-    "avg_volume20": 1311331.6
+    "volume": 1300207.0,
+    "avg_volume20": 1344095.45
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 515.5,
-      "ema50": 530.83
-    },
     {
       "date": "2026-02-06",
       "close": 518.1,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-03",
-      "close": 516.5,
-      "ema50": 544.24
+      "close": 519.0,
+      "ema50": 544.34
+    },
+    {
+      "date": "2026-08-04",
+      "close": 513.0,
+      "ema50": 543.11
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 516.50 vs EMA20 541.57",
-      "ema20_above_ema50": "EMA20 541.57 vs EMA50 544.24",
-      "ema50_above_ema200": "EMA50 544.24 vs EMA200 547.08",
-      "rsi_above_50": "RSI(14) 35.96 vs 50",
-      "macd_bullish": "MACD -4.54 vs signal -1.92",
-      "adx_trending_up": "ADX(14) 13.23 vs 20, +DI 16.29 vs -DI 29.25",
-      "price_above_vwap20": "Close 516.50 vs 20d VWAP 541.75",
-      "price_above_bb_mid": "Close 516.50 vs BB mid 542.75"
+      "price_above_ema20": "Close 513.00 vs EMA20 539.06",
+      "ema20_above_ema50": "EMA20 539.06 vs EMA50 543.11",
+      "ema50_above_ema200": "EMA50 543.11 vs EMA200 546.77",
+      "rsi_above_50": "RSI(14) 34.61 vs 50",
+      "macd_bullish": "MACD -6.08 vs signal -2.72",
+      "adx_trending_up": "ADX(14) 14.69 vs 20, +DI 15.38 vs -DI 30.95",
+      "price_above_vwap20": "Close 513.00 vs 20d VWAP 540.33",
+      "price_above_bb_mid": "Close 513.00 vs BB mid 541.35"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.54 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 36.0",
-        "below_ema200": "Close 516.50 vs EMA200 547.08",
-        "extended_above_ema20": "Close 516.50 vs EMA20 541.57 (-4.6%)",
-        "large_day_move": "Day change -1.3%",
-        "near_52w_low": "Close 516.50 vs 52w low 458.90"
+        "atr_high": "ATR 12.33 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 34.6",
+        "below_ema200": "Close 513.00 vs EMA200 546.77",
+        "extended_above_ema20": "Close 513.00 vs EMA20 539.06 (-4.8%)",
+        "large_day_move": "Day change -1.2%",
+        "near_52w_low": "Close 513.00 vs 52w low 458.90"
       },
       "conditions_on": [
         "below_ema200"
@@ -689,7 +688,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +702,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:06.047188+00:00"
+  "updated_at": "2026-08-04T12:17:42.254234+00:00"
 }

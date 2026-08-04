@@ -3,35 +3,30 @@
   "name": "Godrej Consumer Products",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 1075.7,
-    "prev_close": 1070.4,
-    "change_pct": 0.4951420029895323,
-    "ema20": 1065.2423860816248,
-    "ema50": 1057.4899181703217,
-    "ema200": 1106.6607674745837,
-    "rsi14": 55.60773639131976,
-    "macd": 6.66435825089161,
-    "macd_signal": 7.179775981427038,
-    "atr14": 24.141832255861026,
-    "adx14": 12.149762594640658,
-    "adx_pos": 25.02080450523013,
-    "adx_neg": 17.41756183560389,
-    "bb_high": 1092.7069900694355,
-    "bb_low": 1047.4930099305643,
-    "bb_mid": 1070.1,
-    "vwap20": 1070.796966932311,
+    "date": "2026-08-04",
+    "close": 1063.5,
+    "prev_close": 1085.9,
+    "change_pct": -2.0628050465052112,
+    "ema20": 1065.9553561146672,
+    "ema50": 1058.1099213793289,
+    "ema200": 1106.3317897630227,
+    "rsi14": 50.27478969201146,
+    "macd": 6.3585211891888775,
+    "macd_signal": 7.145713057167438,
+    "atr14": 24.43884423758525,
+    "adx14": 11.786499300343113,
+    "adx_pos": 22.951239814867236,
+    "adx_neg": 19.922599049915764,
+    "bb_high": 1089.1991091049533,
+    "bb_low": 1048.6508908950466,
+    "bb_mid": 1068.925,
+    "vwap20": 1068.8633627238155,
     "high_52w": 1309.0,
     "low_52w": 967.05,
-    "volume": 589937.0,
-    "avg_volume20": 492745.35
+    "volume": 615406.0,
+    "avg_volume20": 488661.6
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 1170.2,
-      "ema50": 1188.3
-    },
     {
       "date": "2026-02-06",
       "close": 1181.8,
@@ -624,48 +619,50 @@
     },
     {
       "date": "2026-08-03",
-      "close": 1075.7,
-      "ema50": 1057.49
+      "close": 1085.9,
+      "ema50": 1057.89
+    },
+    {
+      "date": "2026-08-04",
+      "close": 1063.5,
+      "ema50": 1058.11
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,075.70 vs EMA20 1,065.24",
-      "ema20_above_ema50": "EMA20 1,065.24 vs EMA50 1,057.49",
-      "ema50_above_ema200": "EMA50 1,057.49 vs EMA200 1,106.66",
-      "rsi_above_50": "RSI(14) 55.61 vs 50",
-      "macd_bullish": "MACD 6.66 vs signal 7.18",
-      "adx_trending_up": "ADX(14) 12.15 vs 20, +DI 25.02 vs -DI 17.42",
-      "price_above_vwap20": "Close 1,075.70 vs 20d VWAP 1,070.80",
-      "price_above_bb_mid": "Close 1,075.70 vs BB mid 1,070.10"
+      "price_above_ema20": "Close 1,063.50 vs EMA20 1,065.96",
+      "ema20_above_ema50": "EMA20 1,065.96 vs EMA50 1,058.11",
+      "ema50_above_ema200": "EMA50 1,058.11 vs EMA200 1,106.33",
+      "rsi_above_50": "RSI(14) 50.27 vs 50",
+      "macd_bullish": "MACD 6.36 vs signal 7.15",
+      "adx_trending_up": "ADX(14) 11.79 vs 20, +DI 22.95 vs -DI 19.92",
+      "price_above_vwap20": "Close 1,063.50 vs 20d VWAP 1,068.86",
+      "price_above_bb_mid": "Close 1,063.50 vs BB mid 1,068.92"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema20_above_ema50",
-      "rsi_above_50",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "rsi_above_50"
     ],
-    "flag_count": 5,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "5/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 24.14 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 55.6",
-        "below_ema200": "Close 1,075.70 vs EMA200 1,106.66",
-        "extended_above_ema20": "Close 1,075.70 vs EMA20 1,065.24 (+1.0%)",
-        "large_day_move": "Day change +0.5%",
-        "near_52w_low": "Close 1,075.70 vs 52w low 967.05"
+        "atr_high": "ATR 24.44 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 50.3",
+        "below_ema200": "Close 1,063.50 vs EMA200 1,106.33",
+        "extended_above_ema20": "Close 1,063.50 vs EMA20 1,065.96 (-0.2%)",
+        "large_day_move": "Day change -2.1%",
+        "near_52w_low": "Close 1,063.50 vs 52w low 967.05"
       },
       "conditions_on": [
         "below_ema200"
@@ -708,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:19:41.632094+00:00"
+  "updated_at": "2026-08-04T12:17:17.747903+00:00"
 }

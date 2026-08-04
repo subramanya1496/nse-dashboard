@@ -3,35 +3,30 @@
   "name": "PNC Infratech",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 247.58,
-    "prev_close": 246.12,
-    "change_pct": 0.5932065659028148,
-    "ema20": 239.47668893128036,
-    "ema50": 230.83334566160582,
-    "ema200": 233.18728021203142,
-    "rsi14": 61.14932656636678,
-    "macd": 3.8035442865016478,
-    "macd_signal": 4.279266714771141,
-    "atr14": 8.180536440848472,
-    "adx14": 31.821544776248263,
-    "adx_pos": 28.24450782698753,
-    "adx_neg": 13.546257620836474,
-    "bb_high": 250.20473718296918,
-    "bb_low": 233.23026281703088,
-    "bb_mid": 241.71750000000003,
-    "vwap20": 242.87482904882876,
+    "date": "2026-08-04",
+    "close": 251.06,
+    "prev_close": 247.58,
+    "change_pct": 1.4056062686808262,
+    "ema20": 240.57986141401557,
+    "ema50": 231.62654779252324,
+    "ema200": 233.3651182198719,
+    "rsi14": 63.88312112733856,
+    "macd": 4.288622508502584,
+    "macd_signal": 4.28113787351743,
+    "atr14": 8.029783837930724,
+    "adx14": 32.109252922471356,
+    "adx_pos": 27.137520524448032,
+    "adx_neg": 12.814821957433505,
+    "bb_high": 251.631345814647,
+    "bb_low": 232.96565418535303,
+    "bb_mid": 242.29850000000002,
+    "vwap20": 243.26955687827564,
     "high_52w": 325.0,
     "low_52w": 158.17,
-    "volume": 562424.0,
-    "avg_volume20": 487944.4
+    "volume": 381163.0,
+    "avg_volume20": 486631.9
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 232.52,
-      "ema50": 241.37
-    },
     {
       "date": "2026-02-06",
       "close": 228.92,
@@ -626,6 +621,11 @@
       "date": "2026-08-03",
       "close": 247.58,
       "ema50": 230.83
+    },
+    {
+      "date": "2026-08-04",
+      "close": 251.06,
+      "ema50": 231.63
     }
   ],
   "flags": {
@@ -634,30 +634,31 @@
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 247.58 vs EMA20 239.48",
-      "ema20_above_ema50": "EMA20 239.48 vs EMA50 230.83",
-      "ema50_above_ema200": "EMA50 230.83 vs EMA200 233.19",
-      "rsi_above_50": "RSI(14) 61.15 vs 50",
-      "macd_bullish": "MACD 3.80 vs signal 4.28",
-      "adx_trending_up": "ADX(14) 31.82 vs 20, +DI 28.24 vs -DI 13.55",
-      "price_above_vwap20": "Close 247.58 vs 20d VWAP 242.87",
-      "price_above_bb_mid": "Close 247.58 vs BB mid 241.72"
+      "price_above_ema20": "Close 251.06 vs EMA20 240.58",
+      "ema20_above_ema50": "EMA20 240.58 vs EMA50 231.63",
+      "ema50_above_ema200": "EMA50 231.63 vs EMA200 233.37",
+      "rsi_above_50": "RSI(14) 63.88 vs 50",
+      "macd_bullish": "MACD 4.29 vs signal 4.28",
+      "adx_trending_up": "ADX(14) 32.11 vs 20, +DI 27.14 vs -DI 12.81",
+      "price_above_vwap20": "Close 251.06 vs 20d VWAP 243.27",
+      "price_above_bb_mid": "Close 251.06 vs BB mid 242.30"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "rsi_above_50",
+      "macd_bullish",
       "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 6,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
@@ -666,7 +667,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -679,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 8.18 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 61.1",
-        "below_ema200": "Close 247.58 vs EMA200 233.19",
-        "extended_above_ema20": "Close 247.58 vs EMA20 239.48 (+3.4%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 247.58 vs 52w low 158.17"
+        "atr_high": "ATR 8.03 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 63.9",
+        "below_ema200": "Close 251.06 vs EMA200 233.37",
+        "extended_above_ema20": "Close 251.06 vs EMA20 240.58 (+4.4%)",
+        "large_day_move": "Day change +1.4%",
+        "near_52w_low": "Close 251.06 vs 52w low 158.17"
       },
       "conditions_on": [
         "atr_high"
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:26.427632+00:00"
+  "updated_at": "2026-08-04T12:18:02.662573+00:00"
 }

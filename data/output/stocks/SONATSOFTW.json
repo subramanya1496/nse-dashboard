@@ -3,35 +3,30 @@
   "name": "Sonata Software",
   "sector": "IT",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 345.85,
-    "prev_close": 322.45,
-    "change_pct": 7.256939060319441,
-    "ema20": 303.33051283462544,
-    "ema50": 290.2455440070457,
-    "ema200": 303.6816776491641,
-    "rsi14": 70.12982942154302,
-    "macd": 10.424461837917477,
-    "macd_signal": 7.015255668968386,
-    "atr14": 16.111154439378943,
-    "adx14": 32.2606700574184,
-    "adx_pos": 37.888925763134594,
-    "adx_neg": 13.916790932014836,
-    "bb_high": 335.0741421097506,
-    "bb_low": 267.4308578902493,
-    "bb_mid": 301.25249999999994,
-    "vwap20": 309.0102630476887,
-    "high_52w": 429.9,
+    "date": "2026-08-04",
+    "close": 350.3,
+    "prev_close": 345.85,
+    "change_pct": 1.2866849790371515,
+    "ema20": 307.80379732656587,
+    "ema50": 292.60062071265173,
+    "ema200": 304.14554155315255,
+    "rsi14": 71.23258199697692,
+    "macd": 12.860532987360898,
+    "macd_signal": 8.18431113264689,
+    "atr14": 15.992500550851878,
+    "adx14": 33.47531130066813,
+    "adx_pos": 38.30208827027858,
+    "adx_neg": 13.018612669694651,
+    "bb_high": 343.2989516274217,
+    "bb_low": 266.2460483725783,
+    "bb_mid": 304.7725,
+    "vwap20": 310.82165195327804,
+    "high_52w": 421.5,
     "low_52w": 207.15,
-    "volume": 6562997.0,
-    "avg_volume20": 3833290.35
+    "volume": 2413398.0,
+    "avg_volume20": 3879363.55
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 309.15,
-      "ema50": 339.56
-    },
     {
       "date": "2026-02-06",
       "close": 305.9,
@@ -626,6 +621,11 @@
       "date": "2026-08-03",
       "close": 345.85,
       "ema50": 290.25
+    },
+    {
+      "date": "2026-08-04",
+      "close": 350.3,
+      "ema50": 292.6
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 345.85 vs EMA20 303.33",
-      "ema20_above_ema50": "EMA20 303.33 vs EMA50 290.25",
-      "ema50_above_ema200": "EMA50 290.25 vs EMA200 303.68",
-      "rsi_above_50": "RSI(14) 70.13 vs 50",
-      "macd_bullish": "MACD 10.42 vs signal 7.02",
-      "adx_trending_up": "ADX(14) 32.26 vs 20, +DI 37.89 vs -DI 13.92",
-      "price_above_vwap20": "Close 345.85 vs 20d VWAP 309.01",
-      "price_above_bb_mid": "Close 345.85 vs BB mid 301.25"
+      "price_above_ema20": "Close 350.30 vs EMA20 307.80",
+      "ema20_above_ema50": "EMA20 307.80 vs EMA50 292.60",
+      "ema50_above_ema200": "EMA50 292.60 vs EMA200 304.15",
+      "rsi_above_50": "RSI(14) 71.23 vs 50",
+      "macd_bullish": "MACD 12.86 vs signal 8.18",
+      "adx_trending_up": "ADX(14) 33.48 vs 20, +DI 38.30 vs -DI 13.02",
+      "price_above_vwap20": "Close 350.30 vs 20d VWAP 310.82",
+      "price_above_bb_mid": "Close 350.30 vs BB mid 304.77"
     },
     "flags_on": [
       "price_above_ema20",
@@ -668,7 +668,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "7/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: breakout"
       ]
     },
     "risk": {
@@ -677,29 +677,28 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": true,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 16.11 = 4.7% of price",
-        "rsi_extreme": "RSI(14) 70.1",
-        "below_ema200": "Close 345.85 vs EMA200 303.68",
-        "extended_above_ema20": "Close 345.85 vs EMA20 303.33 (+14.0%)",
-        "large_day_move": "Day change +7.3%",
-        "near_52w_low": "Close 345.85 vs 52w low 207.15"
+        "atr_high": "ATR 15.99 = 4.6% of price",
+        "rsi_extreme": "RSI(14) 71.2",
+        "below_ema200": "Close 350.30 vs EMA200 304.15",
+        "extended_above_ema20": "Close 350.30 vs EMA20 307.80 (+13.8%)",
+        "large_day_move": "Day change +1.3%",
+        "near_52w_low": "Close 350.30 vs 52w low 207.15"
       },
       "conditions_on": [
         "atr_high",
-        "extended_above_ema20",
-        "large_day_move"
+        "extended_above_ema20"
       ],
-      "condition_count": 3,
+      "condition_count": 2,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": true,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -713,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:37.217002+00:00"
+  "updated_at": "2026-08-04T12:18:13.333841+00:00"
 }

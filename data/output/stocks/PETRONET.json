@@ -3,35 +3,30 @@
   "name": "Petronet LNG",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-08-03",
-    "close": 282.3,
-    "prev_close": 280.75,
-    "change_pct": 0.552092609082818,
-    "ema20": 277.5519060950674,
-    "ema50": 277.17532619985565,
-    "ema200": 280.85940380650493,
-    "rsi14": 56.44699316075799,
-    "macd": 0.4132500962954282,
-    "macd_signal": -0.2879994879076084,
-    "atr14": 6.006096062345448,
-    "adx14": 8.815921609969578,
-    "adx_pos": 22.528652424501907,
-    "adx_neg": 15.237941072934943,
-    "bb_high": 283.0014448462016,
-    "bb_low": 270.56355515379835,
-    "bb_mid": 276.78249999999997,
-    "vwap20": 276.1575375925942,
+    "date": "2026-08-04",
+    "close": 279.85,
+    "prev_close": 284.85,
+    "change_pct": -1.75530981218185,
+    "ema20": 277.99050007240794,
+    "ema50": 277.37629379986134,
+    "ema200": 280.8744806528648,
+    "rsi14": 52.46662506332535,
+    "macd": 0.6971690853243899,
+    "macd_signal": -0.05841876471420995,
+    "atr14": 6.138823894626897,
+    "adx14": 9.300761581840437,
+    "adx_pos": 21.007383969375052,
+    "adx_neg": 15.705276724497383,
+    "bb_high": 283.6915084207436,
+    "bb_low": 270.1534915792564,
+    "bb_mid": 276.9225,
+    "vwap20": 276.0479600624868,
     "high_52w": 326.4,
     "low_52w": 235.35,
-    "volume": 1436556.0,
-    "avg_volume20": 2025077.5
+    "volume": 1371791.0,
+    "avg_volume20": 1891097.55
   },
   "price_history": [
-    {
-      "date": "2026-02-05",
-      "close": 298.85,
-      "ema50": 283.26
-    },
     {
       "date": "2026-02-06",
       "close": 295.85,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-03",
-      "close": 282.3,
-      "ema50": 277.18
+      "close": 284.85,
+      "ema50": 277.28
+    },
+    {
+      "date": "2026-08-04",
+      "close": 279.85,
+      "ema50": 277.38
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 282.30 vs EMA20 277.55",
-      "ema20_above_ema50": "EMA20 277.55 vs EMA50 277.18",
-      "ema50_above_ema200": "EMA50 277.18 vs EMA200 280.86",
-      "rsi_above_50": "RSI(14) 56.45 vs 50",
-      "macd_bullish": "MACD 0.41 vs signal -0.29",
-      "adx_trending_up": "ADX(14) 8.82 vs 20, +DI 22.53 vs -DI 15.24",
-      "price_above_vwap20": "Close 282.30 vs 20d VWAP 276.16",
-      "price_above_bb_mid": "Close 282.30 vs BB mid 276.78"
+      "price_above_ema20": "Close 279.85 vs EMA20 277.99",
+      "ema20_above_ema50": "EMA20 277.99 vs EMA50 277.38",
+      "ema50_above_ema200": "EMA50 277.38 vs EMA200 280.87",
+      "rsi_above_50": "RSI(14) 52.47 vs 50",
+      "macd_bullish": "MACD 0.70 vs signal -0.06",
+      "adx_trending_up": "ADX(14) 9.30 vs 20, +DI 21.01 vs -DI 15.71",
+      "price_above_vwap20": "Close 279.85 vs 20d VWAP 276.05",
+      "price_above_bb_mid": "Close 279.85 vs BB mid 276.92"
     },
     "flags_on": [
       "price_above_ema20",
@@ -673,21 +673,23 @@
       "conditions": {
         "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.01 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 56.4",
-        "below_ema200": "Close 282.30 vs EMA200 280.86",
-        "extended_above_ema20": "Close 282.30 vs EMA20 277.55 (+1.7%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 282.30 vs 52w low 235.35"
+        "atr_high": "ATR 6.14 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 52.5",
+        "below_ema200": "Close 279.85 vs EMA200 280.87",
+        "extended_above_ema20": "Close 279.85 vs EMA20 277.99 (+0.7%)",
+        "large_day_move": "Day change -1.8%",
+        "near_52w_low": "Close 279.85 vs 52w low 235.35"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -707,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-03T13:20:23.613356+00:00"
+  "updated_at": "2026-08-04T12:17:59.732033+00:00"
 }
