@@ -3,35 +3,30 @@
   "name": "PNC Infratech",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-08-04",
-    "close": 251.06,
-    "prev_close": 247.58,
-    "change_pct": 1.4056062686808262,
-    "ema20": 240.57986141401557,
-    "ema50": 231.62654779252324,
-    "ema200": 233.3651182198719,
-    "rsi14": 63.88312112733856,
-    "macd": 4.288622508502584,
-    "macd_signal": 4.28113787351743,
-    "atr14": 8.029783837930724,
-    "adx14": 32.109252922471356,
-    "adx_pos": 27.137520524448032,
-    "adx_neg": 12.814821957433505,
-    "bb_high": 251.631345814647,
-    "bb_low": 232.96565418535303,
-    "bb_mid": 242.29850000000002,
-    "vwap20": 243.26955687827564,
+    "date": "2026-08-05",
+    "close": 254.55,
+    "prev_close": 251.06,
+    "change_pct": 1.390105950768744,
+    "ema20": 241.91035080315697,
+    "ema50": 232.52551296135127,
+    "ema200": 233.63858001923856,
+    "rsi14": 66.4340433630761,
+    "macd": 4.898200915882228,
+    "macd_signal": 4.404550481896339,
+    "atr14": 8.17122784948597,
+    "adx14": 33.18452300597419,
+    "adx_pos": 32.56906495423437,
+    "adx_neg": 11.69349749230278,
+    "bb_high": 253.65501138735306,
+    "bb_low": 232.57898861264698,
+    "bb_mid": 243.11700000000002,
+    "vwap20": 244.88902576859272,
     "high_52w": 325.0,
     "low_52w": 158.17,
-    "volume": 381163.0,
-    "avg_volume20": 486631.9
+    "volume": 994765.0,
+    "avg_volume20": 501837.65
   },
   "price_history": [
-    {
-      "date": "2026-02-06",
-      "close": 228.92,
-      "ema50": 240.88
-    },
     {
       "date": "2026-02-09",
       "close": 234.32,
@@ -626,6 +621,11 @@
       "date": "2026-08-04",
       "close": 251.06,
       "ema50": 231.63
+    },
+    {
+      "date": "2026-08-05",
+      "close": 254.55,
+      "ema50": 232.53
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 251.06 vs EMA20 240.58",
-      "ema20_above_ema50": "EMA20 240.58 vs EMA50 231.63",
-      "ema50_above_ema200": "EMA50 231.63 vs EMA200 233.37",
-      "rsi_above_50": "RSI(14) 63.88 vs 50",
-      "macd_bullish": "MACD 4.29 vs signal 4.28",
-      "adx_trending_up": "ADX(14) 32.11 vs 20, +DI 27.14 vs -DI 12.81",
-      "price_above_vwap20": "Close 251.06 vs 20d VWAP 243.27",
-      "price_above_bb_mid": "Close 251.06 vs BB mid 242.30"
+      "price_above_ema20": "Close 254.55 vs EMA20 241.91",
+      "ema20_above_ema50": "EMA20 241.91 vs EMA50 232.53",
+      "ema50_above_ema200": "EMA50 232.53 vs EMA200 233.64",
+      "rsi_above_50": "RSI(14) 66.43 vs 50",
+      "macd_bullish": "MACD 4.90 vs signal 4.40",
+      "adx_trending_up": "ADX(14) 33.18 vs 20, +DI 32.57 vs -DI 11.69",
+      "price_above_vwap20": "Close 254.55 vs 20d VWAP 244.89",
+      "price_above_bb_mid": "Close 254.55 vs BB mid 243.12"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,11 +663,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "7/8 bullish flags"
+        "7/8 bullish flags",
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -680,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 8.03 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 63.9",
-        "below_ema200": "Close 251.06 vs EMA200 233.37",
-        "extended_above_ema20": "Close 251.06 vs EMA20 240.58 (+4.4%)",
+        "atr_high": "ATR 8.17 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 66.4",
+        "below_ema200": "Close 254.55 vs EMA200 233.64",
+        "extended_above_ema20": "Close 254.55 vs EMA20 241.91 (+5.2%)",
         "large_day_move": "Day change +1.4%",
-        "near_52w_low": "Close 251.06 vs 52w low 158.17"
+        "near_52w_low": "Close 254.55 vs 52w low 158.17"
       },
       "conditions_on": [
         "atr_high"
@@ -695,8 +696,8 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
-      "volume_surge": false,
+      "breakout": true,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -710,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-04T12:18:02.662573+00:00"
+  "updated_at": "2026-08-05T12:15:30.849150+00:00"
 }
