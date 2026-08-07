@@ -3,35 +3,30 @@
   "name": "Aarti Industries",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-08-06",
-    "close": 501.2,
-    "prev_close": 485.95,
-    "change_pct": 3.138182940631752,
-    "ema20": 485.81791657152223,
-    "ema50": 478.4747708047296,
-    "ema200": 447.3555713033466,
-    "rsi14": 58.673695253088496,
-    "macd": 3.0585373345033986,
-    "macd_signal": 2.948468768918631,
-    "atr14": 15.666119352732352,
-    "adx14": 15.209610926275772,
-    "adx_pos": 32.45649132413397,
-    "adx_neg": 16.288777359769927,
-    "bb_high": 505.23939530739267,
-    "bb_low": 471.86560469260723,
-    "bb_mid": 488.55249999999995,
-    "vwap20": 494.51031920896486,
+    "date": "2026-08-07",
+    "close": 502.1,
+    "prev_close": 501.2,
+    "change_pct": 0.17956903431764448,
+    "ema20": 487.3685911837582,
+    "ema50": 479.40125038101473,
+    "ema200": 447.9002919868954,
+    "rsi14": 59.050298720102674,
+    "macd": 3.9955610463651396,
+    "macd_signal": 3.157887224407933,
+    "atr14": 15.507825113356644,
+    "adx14": 16.618731091629048,
+    "adx_pos": 31.689414026126567,
+    "adx_neg": 15.279682854817855,
+    "bb_high": 507.0011317130391,
+    "bb_low": 471.90386828696086,
+    "bb_mid": 489.4525,
+    "vwap20": 495.3550419374933,
     "high_52w": 523.1,
     "low_52w": 338.05,
-    "volume": 2569945.0,
-    "avg_volume20": 1414925.8
+    "volume": 1422279.0,
+    "avg_volume20": 1431227.25
   },
   "price_history": [
-    {
-      "date": "2026-02-10",
-      "close": 467.8,
-      "ema50": 385.45
-    },
     {
       "date": "2026-02-11",
       "close": 467.15,
@@ -626,6 +621,11 @@
       "date": "2026-08-06",
       "close": 501.2,
       "ema50": 478.47
+    },
+    {
+      "date": "2026-08-07",
+      "close": 502.1,
+      "ema50": 479.4
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 501.20 vs EMA20 485.82",
-      "ema20_above_ema50": "EMA20 485.82 vs EMA50 478.47",
-      "ema50_above_ema200": "EMA50 478.47 vs EMA200 447.36",
-      "rsi_above_50": "RSI(14) 58.67 vs 50",
-      "macd_bullish": "MACD 3.06 vs signal 2.95",
-      "adx_trending_up": "ADX(14) 15.21 vs 20, +DI 32.46 vs -DI 16.29",
-      "price_above_vwap20": "Close 501.20 vs 20d VWAP 494.51",
-      "price_above_bb_mid": "Close 501.20 vs BB mid 488.55"
+      "price_above_ema20": "Close 502.10 vs EMA20 487.37",
+      "ema20_above_ema50": "EMA20 487.37 vs EMA50 479.40",
+      "ema50_above_ema200": "EMA50 479.40 vs EMA200 447.90",
+      "rsi_above_50": "RSI(14) 59.05 vs 50",
+      "macd_bullish": "MACD 4.00 vs signal 3.16",
+      "adx_trending_up": "ADX(14) 16.62 vs 20, +DI 31.69 vs -DI 15.28",
+      "price_above_vwap20": "Close 502.10 vs 20d VWAP 495.36",
+      "price_above_bb_mid": "Close 502.10 vs BB mid 489.45"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,12 +663,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: volume surge"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -681,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 15.67 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 58.7",
-        "below_ema200": "Close 501.20 vs EMA200 447.36",
-        "extended_above_ema20": "Close 501.20 vs EMA20 485.82 (+3.2%)",
-        "large_day_move": "Day change +3.1%",
-        "near_52w_low": "Close 501.20 vs 52w low 338.05"
+        "atr_high": "ATR 15.51 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 59.1",
+        "below_ema200": "Close 502.10 vs EMA200 447.90",
+        "extended_above_ema20": "Close 502.10 vs EMA20 487.37 (+3.0%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 502.10 vs 52w low 338.05"
       },
       "conditions_on": [
         "atr_high"
@@ -697,7 +696,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-06T12:16:20.035889+00:00"
+  "updated_at": "2026-08-07T11:05:42.040825+00:00"
 }
