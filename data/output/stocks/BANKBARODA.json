@@ -3,35 +3,30 @@
   "name": "Bank of Baroda",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-08-10",
-    "close": 246.85,
-    "prev_close": 250.7,
-    "change_pct": -1.5357000398883105,
-    "ema20": 248.23696375207484,
-    "ema50": 255.49960448179348,
-    "ema200": 266.9431574548266,
-    "rsi14": 46.24100545599311,
-    "macd": -2.7925603840074587,
-    "macd_signal": -4.218283254751666,
-    "atr14": 5.487237230832436,
-    "adx14": 17.853110173679177,
-    "adx_pos": 17.59532177578424,
-    "adx_neg": 20.501312735143948,
-    "bb_high": 253.14050188596374,
-    "bb_low": 239.35449811403626,
-    "bb_mid": 246.2475,
-    "vwap20": 246.63466010679153,
+    "date": "2026-08-11",
+    "close": 245.7,
+    "prev_close": 247.81,
+    "change_pct": -0.8514587789031974,
+    "ema20": 248.07806924507452,
+    "ema50": 255.15147697039674,
+    "ema200": 266.74123994543726,
+    "rsi14": 44.933520721883255,
+    "macd": -2.62599298811125,
+    "macd_signal": -3.887572209970591,
+    "atr14": 5.396006000058692,
+    "adx14": 17.692799012680755,
+    "adx_pos": 16.61475121680252,
+    "adx_neg": 22.760781171932432,
+    "bb_high": 253.17612047761065,
+    "bb_low": 239.32487952238938,
+    "bb_mid": 246.25050000000002,
+    "vwap20": 246.51103050259596,
     "high_52w": 325.5,
     "low_52w": 230.81,
-    "volume": 6789311.0,
-    "avg_volume20": 8836794.2
+    "volume": 13485725.0,
+    "avg_volume20": 9064837.75
   },
   "price_history": [
-    {
-      "date": "2026-02-12",
-      "close": 289.85,
-      "ema50": 292.04
-    },
     {
       "date": "2026-02-13",
       "close": 287.45,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-10",
-      "close": 246.85,
-      "ema50": 255.5
+      "close": 247.81,
+      "ema50": 255.54
+    },
+    {
+      "date": "2026-08-11",
+      "close": 245.7,
+      "ema50": 255.15
     }
   ],
   "flags": {
@@ -636,34 +636,33 @@
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 246.85 vs EMA20 248.24",
-      "ema20_above_ema50": "EMA20 248.24 vs EMA50 255.50",
-      "ema50_above_ema200": "EMA50 255.50 vs EMA200 266.94",
-      "rsi_above_50": "RSI(14) 46.24 vs 50",
-      "macd_bullish": "MACD -2.79 vs signal -4.22",
-      "adx_trending_up": "ADX(14) 17.85 vs 20, +DI 17.60 vs -DI 20.50",
-      "price_above_vwap20": "Close 246.85 vs 20d VWAP 246.63",
-      "price_above_bb_mid": "Close 246.85 vs BB mid 246.25"
+      "price_above_ema20": "Close 245.70 vs EMA20 248.08",
+      "ema20_above_ema50": "EMA20 248.08 vs EMA50 255.15",
+      "ema50_above_ema200": "EMA50 255.15 vs EMA200 266.74",
+      "rsi_above_50": "RSI(14) 44.93 vs 50",
+      "macd_bullish": "MACD -2.63 vs signal -3.89",
+      "adx_trending_up": "ADX(14) 17.69 vs 20, +DI 16.61 vs -DI 22.76",
+      "price_above_vwap20": "Close 245.70 vs 20d VWAP 246.51",
+      "price_above_bb_mid": "Close 245.70 vs BB mid 246.25"
     },
     "flags_on": [
-      "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "macd_bullish"
     ],
-    "flag_count": 3,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -676,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.49 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 46.2",
-        "below_ema200": "Close 246.85 vs EMA200 266.94",
-        "extended_above_ema20": "Close 246.85 vs EMA20 248.24 (-0.6%)",
-        "large_day_move": "Day change -1.5%",
-        "near_52w_low": "Close 246.85 vs 52w low 230.81"
+        "atr_high": "ATR 5.40 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 44.9",
+        "below_ema200": "Close 245.70 vs EMA200 266.74",
+        "extended_above_ema20": "Close 245.70 vs EMA20 248.08 (-1.0%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 245.70 vs 52w low 230.81"
       },
       "conditions_on": [
         "below_ema200"
@@ -692,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-10T11:20:09.609691+00:00"
+  "updated_at": "2026-08-11T11:03:34.291330+00:00"
 }

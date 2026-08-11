@@ -3,35 +3,30 @@
   "name": "Asian Paints",
   "sector": "Consumer Durables",
   "indicators": {
-    "date": "2026-08-10",
-    "close": 2748.5,
-    "prev_close": 2735.0,
-    "change_pct": 0.4936014625228519,
-    "ema20": 2729.2108555187056,
-    "ema50": 2685.735835176102,
-    "ema200": 2574.66871403259,
-    "rsi14": 55.107942099094586,
-    "macd": 20.8625183751019,
-    "macd_signal": 19.177700426992914,
-    "atr14": 57.79437559176061,
-    "adx14": 15.523778449630788,
-    "adx_pos": 24.300224073096494,
-    "adx_neg": 22.345718064940144,
-    "bb_high": 2808.101270433464,
-    "bb_low": 2625.8787295665365,
-    "bb_mid": 2716.9900000000002,
-    "vwap20": 2728.563455607394,
+    "date": "2026-08-11",
+    "close": 2721.9,
+    "prev_close": 2750.0,
+    "change_pct": -1.0218181818181784,
+    "ema20": 2728.6438352652235,
+    "ema50": 2687.210554442552,
+    "ema200": 2576.1484788146226,
+    "rsi14": 50.34611813739572,
+    "macd": 17.817361402933784,
+    "macd_signal": 18.9247779213264,
+    "atr14": 55.809063049491996,
+    "adx14": 14.714229129371928,
+    "adx_pos": 23.367187288688466,
+    "adx_neg": 21.487726926015497,
+    "bb_high": 2805.387206882998,
+    "bb_low": 2636.8327931170015,
+    "bb_mid": 2721.1099999999997,
+    "vwap20": 2733.5842748678474,
     "high_52w": 2985.7,
     "low_52w": 2115.0,
-    "volume": 934333.0,
-    "avg_volume20": 1022462.7
+    "volume": 923097.0,
+    "avg_volume20": 1022018.65
   },
   "price_history": [
-    {
-      "date": "2026-02-12",
-      "close": 2410.5,
-      "ema50": 2614.73
-    },
     {
       "date": "2026-02-13",
       "close": 2366.4,
@@ -624,50 +619,52 @@
     },
     {
       "date": "2026-08-10",
-      "close": 2748.5,
-      "ema50": 2685.74
+      "close": 2750.0,
+      "ema50": 2685.79
+    },
+    {
+      "date": "2026-08-11",
+      "close": 2721.9,
+      "ema50": 2687.21
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
+      "price_above_vwap20": false,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,748.50 vs EMA20 2,729.21",
-      "ema20_above_ema50": "EMA20 2,729.21 vs EMA50 2,685.74",
-      "ema50_above_ema200": "EMA50 2,685.74 vs EMA200 2,574.67",
-      "rsi_above_50": "RSI(14) 55.11 vs 50",
-      "macd_bullish": "MACD 20.86 vs signal 19.18",
-      "adx_trending_up": "ADX(14) 15.52 vs 20, +DI 24.30 vs -DI 22.35",
-      "price_above_vwap20": "Close 2,748.50 vs 20d VWAP 2,728.56",
-      "price_above_bb_mid": "Close 2,748.50 vs BB mid 2,716.99"
+      "price_above_ema20": "Close 2,721.90 vs EMA20 2,728.64",
+      "ema20_above_ema50": "EMA20 2,728.64 vs EMA50 2,687.21",
+      "ema50_above_ema200": "EMA50 2,687.21 vs EMA200 2,576.15",
+      "rsi_above_50": "RSI(14) 50.35 vs 50",
+      "macd_bullish": "MACD 17.82 vs signal 18.92",
+      "adx_trending_up": "ADX(14) 14.71 vs 20, +DI 23.37 vs -DI 21.49",
+      "price_above_vwap20": "Close 2,721.90 vs 20d VWAP 2,733.58",
+      "price_above_bb_mid": "Close 2,721.90 vs BB mid 2,721.11"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50",
-      "macd_bullish",
-      "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 7,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 4,
-      "label": "Watch closely",
-      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
+        "4/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -681,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 57.79 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 55.1",
-        "below_ema200": "Close 2,748.50 vs EMA200 2,574.67",
-        "extended_above_ema20": "Close 2,748.50 vs EMA20 2,729.21 (+0.7%)",
-        "large_day_move": "Day change +0.5%",
-        "near_52w_low": "Close 2,748.50 vs 52w low 2,115.00"
+        "atr_high": "ATR 55.81 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 50.3",
+        "below_ema200": "Close 2,721.90 vs EMA200 2,576.15",
+        "extended_above_ema20": "Close 2,721.90 vs EMA20 2,728.64 (-0.2%)",
+        "large_day_move": "Day change -1.0%",
+        "near_52w_low": "Close 2,721.90 vs 52w low 2,115.00"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -709,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-10T11:20:04.281983+00:00"
+  "updated_at": "2026-08-11T11:03:30.297443+00:00"
 }
