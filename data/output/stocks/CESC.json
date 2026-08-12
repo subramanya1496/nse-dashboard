@@ -3,35 +3,30 @@
   "name": "CESC Ltd",
   "sector": "Power",
   "indicators": {
-    "date": "2026-08-11",
-    "close": 161.01,
-    "prev_close": 164.58,
-    "change_pct": -2.169157856361661,
-    "ema20": 164.31840348433218,
-    "ema50": 166.80989471089563,
-    "ema200": 167.48732800501938,
-    "rsi14": 39.501583438705566,
-    "macd": -1.1648846734668439,
-    "macd_signal": -1.2696398816716312,
-    "atr14": 3.4937530771250755,
-    "adx14": 12.413037143851748,
-    "adx_pos": 16.954299657923855,
-    "adx_neg": 20.957881664505756,
-    "bb_high": 166.74005351260334,
-    "bb_low": 161.53094648739668,
-    "bb_mid": 164.1355,
-    "vwap20": 164.13694820451244,
+    "date": "2026-08-12",
+    "close": 162.43,
+    "prev_close": 161.01,
+    "change_pct": 0.8819327992050282,
+    "ema20": 164.13855553344345,
+    "ema50": 166.6381409490603,
+    "ema200": 167.50524368518063,
+    "rsi14": 43.71964223095406,
+    "macd": -1.181815470893099,
+    "macd_signal": -1.2520749996182607,
+    "atr14": 3.418485000129239,
+    "adx14": 12.280687840308742,
+    "adx_pos": 16.08991317379157,
+    "adx_neg": 19.889379279827217,
+    "bb_high": 166.77855516897736,
+    "bb_low": 161.38144483102266,
+    "bb_mid": 164.08,
+    "vwap20": 164.25265159077142,
     "high_52w": 204.5,
     "low_52w": 138.12,
-    "volume": 1652565.0,
-    "avg_volume20": 973061.6
+    "volume": 720532.0,
+    "avg_volume20": 914762.7
   },
   "price_history": [
-    {
-      "date": "2026-02-13",
-      "close": 150.33,
-      "ema50": 157.94
-    },
     {
       "date": "2026-02-16",
       "close": 154.47,
@@ -295,7 +290,7 @@
     {
       "date": "2026-05-07",
       "close": 186.61,
-      "ema50": 168.67
+      "ema50": 168.68
     },
     {
       "date": "2026-05-08",
@@ -626,6 +621,11 @@
       "date": "2026-08-11",
       "close": 161.01,
       "ema50": 166.81
+    },
+    {
+      "date": "2026-08-12",
+      "close": 162.43,
+      "ema50": 166.64
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 161.01 vs EMA20 164.32",
-      "ema20_above_ema50": "EMA20 164.32 vs EMA50 166.81",
-      "ema50_above_ema200": "EMA50 166.81 vs EMA200 167.49",
-      "rsi_above_50": "RSI(14) 39.50 vs 50",
-      "macd_bullish": "MACD -1.16 vs signal -1.27",
-      "adx_trending_up": "ADX(14) 12.41 vs 20, +DI 16.95 vs -DI 20.96",
-      "price_above_vwap20": "Close 161.01 vs 20d VWAP 164.14",
-      "price_above_bb_mid": "Close 161.01 vs BB mid 164.14"
+      "price_above_ema20": "Close 162.43 vs EMA20 164.14",
+      "ema20_above_ema50": "EMA20 164.14 vs EMA50 166.64",
+      "ema50_above_ema200": "EMA50 166.64 vs EMA200 167.51",
+      "rsi_above_50": "RSI(14) 43.72 vs 50",
+      "macd_bullish": "MACD -1.18 vs signal -1.25",
+      "adx_trending_up": "ADX(14) 12.28 vs 20, +DI 16.09 vs -DI 19.89",
+      "price_above_vwap20": "Close 162.43 vs 20d VWAP 164.25",
+      "price_above_bb_mid": "Close 162.43 vs BB mid 164.08"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.49 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 39.5",
-        "below_ema200": "Close 161.01 vs EMA200 167.49",
-        "extended_above_ema20": "Close 161.01 vs EMA20 164.32 (-2.0%)",
-        "large_day_move": "Day change -2.2%",
-        "near_52w_low": "Close 161.01 vs 52w low 138.12"
+        "atr_high": "ATR 3.42 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 43.7",
+        "below_ema200": "Close 162.43 vs EMA200 167.51",
+        "extended_above_ema20": "Close 162.43 vs EMA20 164.14 (-1.0%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 162.43 vs 52w low 138.12"
       },
       "conditions_on": [
         "below_ema200"
@@ -691,7 +690,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-11T11:03:44.299447+00:00"
+  "updated_at": "2026-08-12T11:10:07.958604+00:00"
 }
