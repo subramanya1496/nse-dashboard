@@ -3,35 +3,30 @@
   "name": "Housing & Urban Development Corporation",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-08-13",
-    "close": 193.91,
-    "prev_close": 192.73,
-    "change_pct": 0.6122554869506599,
-    "ema20": 199.26236890795624,
-    "ema50": 202.00250707626586,
-    "ema200": 206.44225114847276,
-    "rsi14": 39.92714738164312,
-    "macd": -2.2997235353185204,
-    "macd_signal": -2.004978122787043,
-    "atr14": 4.90729643283496,
-    "adx14": 14.095946369916605,
-    "adx_pos": 15.792943331033992,
-    "adx_neg": 27.775672516323123,
-    "bb_high": 205.26378758672539,
-    "bb_low": 191.80321241327462,
-    "bb_mid": 198.5335,
-    "vwap20": 198.74976394130587,
+    "date": "2026-08-14",
+    "close": 189.99,
+    "prev_close": 193.91,
+    "change_pct": -2.021556392140677,
+    "ema20": 198.3792861548175,
+    "ema50": 201.53142011514012,
+    "ema200": 206.1959196152462,
+    "rsi14": 35.52572782455269,
+    "macd": -2.7566344719499796,
+    "macd_signal": -2.1553093924956723,
+    "atr14": 4.898918116233152,
+    "adx14": 15.586736421099785,
+    "adx_pos": 14.689956381587873,
+    "adx_neg": 30.486978567463556,
+    "bb_high": 205.2590688196199,
+    "bb_low": 190.51393118038013,
+    "bb_mid": 197.8865,
+    "vwap20": 197.94278720274085,
     "high_52w": 246.85,
     "low_52w": 159.0,
-    "volume": 886718.0,
-    "avg_volume20": 2114798.9
+    "volume": 3880141.0,
+    "avg_volume20": 2224948.3
   },
   "price_history": [
-    {
-      "date": "2026-02-17",
-      "close": 193.58,
-      "ema50": 207.46
-    },
     {
       "date": "2026-02-18",
       "close": 197.03,
@@ -40,7 +35,7 @@
     {
       "date": "2026-02-19",
       "close": 194.87,
-      "ema50": 206.58
+      "ema50": 206.57
     },
     {
       "date": "2026-02-20",
@@ -55,7 +50,7 @@
     {
       "date": "2026-02-24",
       "close": 190.08,
-      "ema50": 205.06
+      "ema50": 205.05
     },
     {
       "date": "2026-02-25",
@@ -110,7 +105,7 @@
     {
       "date": "2026-03-12",
       "close": 176.66,
-      "ema50": 196.2
+      "ema50": 196.19
     },
     {
       "date": "2026-03-13",
@@ -135,7 +130,7 @@
     {
       "date": "2026-03-19",
       "close": 171.3,
-      "ema50": 192.09
+      "ema50": 192.08
     },
     {
       "date": "2026-03-20",
@@ -155,7 +150,7 @@
     {
       "date": "2026-03-25",
       "close": 177.09,
-      "ema50": 188.98
+      "ema50": 188.97
     },
     {
       "date": "2026-03-27",
@@ -626,6 +621,11 @@
       "date": "2026-08-13",
       "close": 193.91,
       "ema50": 202.0
+    },
+    {
+      "date": "2026-08-14",
+      "close": 189.99,
+      "ema50": 201.53
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 193.91 vs EMA20 199.26",
-      "ema20_above_ema50": "EMA20 199.26 vs EMA50 202.00",
-      "ema50_above_ema200": "EMA50 202.00 vs EMA200 206.44",
-      "rsi_above_50": "RSI(14) 39.93 vs 50",
-      "macd_bullish": "MACD -2.30 vs signal -2.00",
-      "adx_trending_up": "ADX(14) 14.10 vs 20, +DI 15.79 vs -DI 27.78",
-      "price_above_vwap20": "Close 193.91 vs 20d VWAP 198.75",
-      "price_above_bb_mid": "Close 193.91 vs BB mid 198.53"
+      "price_above_ema20": "Close 189.99 vs EMA20 198.38",
+      "ema20_above_ema50": "EMA20 198.38 vs EMA50 201.53",
+      "ema50_above_ema200": "EMA50 201.53 vs EMA200 206.20",
+      "rsi_above_50": "RSI(14) 35.53 vs 50",
+      "macd_bullish": "MACD -2.76 vs signal -2.16",
+      "adx_trending_up": "ADX(14) 15.59 vs 20, +DI 14.69 vs -DI 30.49",
+      "price_above_vwap20": "Close 189.99 vs 20d VWAP 197.94",
+      "price_above_bb_mid": "Close 189.99 vs BB mid 197.89"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.91 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 39.9",
-        "below_ema200": "Close 193.91 vs EMA200 206.44",
-        "extended_above_ema20": "Close 193.91 vs EMA20 199.26 (-2.7%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 193.91 vs 52w low 159.00"
+        "atr_high": "ATR 4.90 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 35.5",
+        "below_ema200": "Close 189.99 vs EMA200 206.20",
+        "extended_above_ema20": "Close 189.99 vs EMA20 198.38 (-4.2%)",
+        "large_day_move": "Day change -2.0%",
+        "near_52w_low": "Close 189.99 vs 52w low 159.00"
       },
       "conditions_on": [
         "atr_high",
@@ -689,7 +690,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-13T11:10:54.156789+00:00"
+  "updated_at": "2026-08-14T11:08:28.302071+00:00"
 }
