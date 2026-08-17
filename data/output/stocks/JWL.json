@@ -3,35 +3,30 @@
   "name": "Jupiter Wagons",
   "sector": "Railways",
   "indicators": {
-    "date": "2026-08-14",
-    "close": 256.5,
-    "prev_close": 257.6,
-    "change_pct": -0.42701863354038144,
-    "ema20": 258.00118020608886,
-    "ema50": 262.20595653997935,
-    "ema200": 287.5001300861978,
-    "rsi14": 47.24797477972449,
-    "macd": -0.3473013611435931,
-    "macd_signal": -1.0046607758436108,
-    "atr14": 6.984502230020939,
-    "adx14": 20.379061237014355,
-    "adx_pos": 24.540958373443207,
-    "adx_neg": 18.510366119244782,
-    "bb_high": 267.79479289613533,
-    "bb_low": 243.26020710386467,
-    "bb_mid": 255.5275,
-    "vwap20": 258.65933915097287,
+    "date": "2026-08-17",
+    "close": 252.65,
+    "prev_close": 256.5,
+    "change_pct": -1.5009746588693935,
+    "ema20": 257.49154399598524,
+    "ema50": 261.83121928198705,
+    "ema200": 287.2087283474078,
+    "rsi14": 42.948582240614854,
+    "macd": -0.7604544843190411,
+    "macd_signal": -0.9558195176424722,
+    "atr14": 7.164180642309623,
+    "adx14": 19.233767597410097,
+    "adx_pos": 22.21650648932669,
+    "adx_neg": 24.234792267660527,
+    "bb_high": 267.7876741077124,
+    "bb_low": 243.3773258922877,
+    "bb_mid": 255.58250000000004,
+    "vwap20": 258.56203009884445,
     "high_52w": 372.85,
     "low_52w": 235.65,
-    "volume": 502956.0,
-    "avg_volume20": 1321899.25
+    "volume": 865865.0,
+    "avg_volume20": 1338338.2
   },
   "price_history": [
-    {
-      "date": "2026-02-18",
-      "close": 290.6,
-      "ema50": 306.39
-    },
     {
       "date": "2026-02-19",
       "close": 289.75,
@@ -120,7 +115,7 @@
     {
       "date": "2026-03-17",
       "close": 264.45,
-      "ema50": 289.53
+      "ema50": 289.54
     },
     {
       "date": "2026-03-18",
@@ -200,7 +195,7 @@
     {
       "date": "2026-04-13",
       "close": 261.88,
-      "ema50": 276.0
+      "ema50": 276.01
     },
     {
       "date": "2026-04-15",
@@ -626,6 +621,11 @@
       "date": "2026-08-14",
       "close": 256.5,
       "ema50": 262.21
+    },
+    {
+      "date": "2026-08-17",
+      "close": 252.65,
+      "ema50": 261.83
     }
   ],
   "flags": {
@@ -635,35 +635,33 @@
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": true,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
-      "price_above_bb_mid": true
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 256.50 vs EMA20 258.00",
-      "ema20_above_ema50": "EMA20 258.00 vs EMA50 262.21",
-      "ema50_above_ema200": "EMA50 262.21 vs EMA200 287.50",
-      "rsi_above_50": "RSI(14) 47.25 vs 50",
-      "macd_bullish": "MACD -0.35 vs signal -1.00",
-      "adx_trending_up": "ADX(14) 20.38 vs 20, +DI 24.54 vs -DI 18.51",
-      "price_above_vwap20": "Close 256.50 vs 20d VWAP 258.66",
-      "price_above_bb_mid": "Close 256.50 vs BB mid 255.53"
+      "price_above_ema20": "Close 252.65 vs EMA20 257.49",
+      "ema20_above_ema50": "EMA20 257.49 vs EMA50 261.83",
+      "ema50_above_ema200": "EMA50 261.83 vs EMA200 287.21",
+      "rsi_above_50": "RSI(14) 42.95 vs 50",
+      "macd_bullish": "MACD -0.76 vs signal -0.96",
+      "adx_trending_up": "ADX(14) 19.23 vs 20, +DI 22.22 vs -DI 24.23",
+      "price_above_vwap20": "Close 252.65 vs 20d VWAP 258.56",
+      "price_above_bb_mid": "Close 252.65 vs BB mid 255.58"
     },
     "flags_on": [
-      "macd_bullish",
-      "adx_trending_up",
-      "price_above_bb_mid"
+      "macd_bullish"
     ],
-    "flag_count": 3,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.98 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 47.2",
-        "below_ema200": "Close 256.50 vs EMA200 287.50",
-        "extended_above_ema20": "Close 256.50 vs EMA20 258.00 (-0.6%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 256.50 vs 52w low 235.65"
+        "atr_high": "ATR 7.16 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 42.9",
+        "below_ema200": "Close 252.65 vs EMA200 287.21",
+        "extended_above_ema20": "Close 252.65 vs EMA20 257.49 (-1.9%)",
+        "large_day_move": "Day change -1.5%",
+        "near_52w_low": "Close 252.65 vs 52w low 235.65"
       },
       "conditions_on": [
         "atr_high",
@@ -707,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-14T11:08:41.628491+00:00"
+  "updated_at": "2026-08-17T10:47:46.561885+00:00"
 }
