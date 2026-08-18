@@ -3,35 +3,30 @@
   "name": "Jindal Steel & Power",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 1117.5,
-    "prev_close": 1091.5,
-    "change_pct": 2.3820430600091616,
-    "ema20": 1093.0346556037055,
-    "ema50": 1100.3395596475484,
-    "ema200": 1107.519732713187,
-    "rsi14": 57.11048342453065,
-    "macd": 9.131326319344907,
-    "macd_signal": 6.400096232234658,
-    "atr14": 24.46043031245144,
-    "adx14": 22.100411348063993,
-    "adx_pos": 23.386304496260177,
-    "adx_neg": 16.27341042879854,
-    "bb_high": 1144.7057290150606,
-    "bb_low": 1031.2642709849392,
-    "bb_mid": 1087.985,
-    "vwap20": 1084.5150563336636,
+    "date": "2026-08-18",
+    "close": 1101.5,
+    "prev_close": 1116.1,
+    "change_pct": -1.3081265119612857,
+    "ema20": 1093.720243958908,
+    "ema50": 1100.3323181696362,
+    "ema200": 1107.4460431374166,
+    "rsi14": 52.640706437457595,
+    "macd": 8.467381037804898,
+    "macd_signal": 6.795684247479765,
+    "atr14": 24.120399575847767,
+    "adx14": 21.848983480058223,
+    "adx_pos": 22.318120940556557,
+    "adx_neg": 15.324047497469811,
+    "bb_high": 1143.9736612007473,
+    "bb_low": 1037.536338799253,
+    "bb_mid": 1090.755,
+    "vwap20": 1086.7045832557237,
     "high_52w": 1306.2,
     "low_52w": 943.3,
-    "volume": 628274.0,
-    "avg_volume20": 909652.95
+    "volume": 549054.0,
+    "avg_volume20": 905978.25
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 1211.1,
-      "ema50": 1111.04
-    },
     {
       "date": "2026-02-20",
       "close": 1217.1,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-17",
-      "close": 1117.5,
-      "ema50": 1100.34
+      "close": 1116.1,
+      "ema50": 1100.28
+    },
+    {
+      "date": "2026-08-18",
+      "close": 1101.5,
+      "ema50": 1100.33
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,117.50 vs EMA20 1,093.03",
-      "ema20_above_ema50": "EMA20 1,093.03 vs EMA50 1,100.34",
-      "ema50_above_ema200": "EMA50 1,100.34 vs EMA200 1,107.52",
-      "rsi_above_50": "RSI(14) 57.11 vs 50",
-      "macd_bullish": "MACD 9.13 vs signal 6.40",
-      "adx_trending_up": "ADX(14) 22.10 vs 20, +DI 23.39 vs -DI 16.27",
-      "price_above_vwap20": "Close 1,117.50 vs 20d VWAP 1,084.52",
-      "price_above_bb_mid": "Close 1,117.50 vs BB mid 1,087.98"
+      "price_above_ema20": "Close 1,101.50 vs EMA20 1,093.72",
+      "ema20_above_ema50": "EMA20 1,093.72 vs EMA50 1,100.33",
+      "ema50_above_ema200": "EMA50 1,100.33 vs EMA200 1,107.45",
+      "rsi_above_50": "RSI(14) 52.64 vs 50",
+      "macd_bullish": "MACD 8.47 vs signal 6.80",
+      "adx_trending_up": "ADX(14) 21.85 vs 20, +DI 22.32 vs -DI 15.32",
+      "price_above_vwap20": "Close 1,101.50 vs 20d VWAP 1,086.70",
+      "price_above_bb_mid": "Close 1,101.50 vs BB mid 1,090.76"
     },
     "flags_on": [
       "price_above_ema20",
@@ -673,21 +673,23 @@
       "conditions": {
         "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 24.46 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 57.1",
-        "below_ema200": "Close 1,117.50 vs EMA200 1,107.52",
-        "extended_above_ema20": "Close 1,117.50 vs EMA20 1,093.03 (+2.2%)",
-        "large_day_move": "Day change +2.4%",
-        "near_52w_low": "Close 1,117.50 vs 52w low 943.30"
+        "atr_high": "ATR 24.12 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 52.6",
+        "below_ema200": "Close 1,101.50 vs EMA200 1,107.45",
+        "extended_above_ema20": "Close 1,101.50 vs EMA20 1,093.72 (+0.7%)",
+        "large_day_move": "Day change -1.3%",
+        "near_52w_low": "Close 1,101.50 vs 52w low 943.30"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -707,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:47:43.795394+00:00"
+  "updated_at": "2026-08-18T10:45:16.463088+00:00"
 }

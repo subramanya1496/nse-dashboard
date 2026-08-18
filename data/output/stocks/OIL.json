@@ -3,35 +3,30 @@
   "name": "Oil India Ltd",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 474.3,
-    "prev_close": 468.5,
-    "change_pct": 1.2379935965848476,
-    "ema20": 456.3510520765781,
-    "ema50": 451.3555292565852,
-    "ema200": 450.410184923288,
-    "rsi14": 62.31276142924347,
-    "macd": 8.277037952112948,
-    "macd_signal": 5.756357725138637,
-    "atr14": 12.708200979955768,
-    "adx14": 31.42219743260534,
-    "adx_pos": 30.640879747678856,
-    "adx_neg": 11.992453213258425,
-    "bb_high": 478.1695696770407,
-    "bb_low": 432.39043032295933,
-    "bb_mid": 455.28000000000003,
-    "vwap20": 456.65422529963706,
+    "date": "2026-08-18",
+    "close": 479.05,
+    "prev_close": 474.65,
+    "change_pct": 0.9269988412514557,
+    "ema20": 458.54301537087224,
+    "ema50": 452.45477416847615,
+    "ema200": 450.6986061420905,
+    "rsi14": 64.30236462042839,
+    "macd": 9.044076879101567,
+    "macd_signal": 6.418368792398458,
+    "atr14": 12.696900909958927,
+    "adx14": 32.698161517148655,
+    "adx_pos": 32.809333304596436,
+    "adx_neg": 11.145760167612924,
+    "bb_high": 481.63734276679617,
+    "bb_low": 432.34765723320385,
+    "bb_mid": 456.9925,
+    "vwap20": 458.6643907129399,
     "high_52w": 531.0,
     "low_52w": 384.6,
-    "volume": 2637829.0,
-    "avg_volume20": 3356579.9
+    "volume": 4921845.0,
+    "avg_volume20": 3507486.0
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 476.7,
-      "ema50": 453.81
-    },
     {
       "date": "2026-02-20",
       "close": 475.55,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-17",
-      "close": 474.3,
-      "ema50": 451.36
+      "close": 474.65,
+      "ema50": 451.37
+    },
+    {
+      "date": "2026-08-18",
+      "close": 479.05,
+      "ema50": 452.45
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 474.30 vs EMA20 456.35",
-      "ema20_above_ema50": "EMA20 456.35 vs EMA50 451.36",
-      "ema50_above_ema200": "EMA50 451.36 vs EMA200 450.41",
-      "rsi_above_50": "RSI(14) 62.31 vs 50",
-      "macd_bullish": "MACD 8.28 vs signal 5.76",
-      "adx_trending_up": "ADX(14) 31.42 vs 20, +DI 30.64 vs -DI 11.99",
-      "price_above_vwap20": "Close 474.30 vs 20d VWAP 456.65",
-      "price_above_bb_mid": "Close 474.30 vs BB mid 455.28"
+      "price_above_ema20": "Close 479.05 vs EMA20 458.54",
+      "ema20_above_ema50": "EMA20 458.54 vs EMA50 452.45",
+      "ema50_above_ema200": "EMA50 452.45 vs EMA200 450.70",
+      "rsi_above_50": "RSI(14) 64.30 vs 50",
+      "macd_bullish": "MACD 9.04 vs signal 6.42",
+      "adx_trending_up": "ADX(14) 32.70 vs 20, +DI 32.81 vs -DI 11.15",
+      "price_above_vwap20": "Close 479.05 vs 20d VWAP 458.66",
+      "price_above_bb_mid": "Close 479.05 vs BB mid 456.99"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.71 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 62.3",
-        "below_ema200": "Close 474.30 vs EMA200 450.41",
-        "extended_above_ema20": "Close 474.30 vs EMA20 456.35 (+3.9%)",
-        "large_day_move": "Day change +1.2%",
-        "near_52w_low": "Close 474.30 vs 52w low 384.60"
+        "atr_high": "ATR 12.70 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 64.3",
+        "below_ema200": "Close 479.05 vs EMA200 450.70",
+        "extended_above_ema20": "Close 479.05 vs EMA20 458.54 (+4.5%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 479.05 vs 52w low 384.60"
       },
       "conditions_on": [
         "atr_high"
@@ -697,7 +698,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:48:08.179227+00:00"
+  "updated_at": "2026-08-18T10:45:42.524316+00:00"
 }

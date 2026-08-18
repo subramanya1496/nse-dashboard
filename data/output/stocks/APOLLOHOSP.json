@@ -3,35 +3,30 @@
   "name": "Apollo Hospitals Enterprise",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 8875.0,
-    "prev_close": 8920.5,
-    "change_pct": -0.510061095230088,
-    "ema20": 8837.41091523415,
-    "ema50": 8688.248768850783,
-    "ema200": 8033.353630339236,
-    "rsi14": 52.46449248359155,
-    "macd": 14.261436784965554,
-    "macd_signal": 40.423531303722214,
-    "atr14": 177.0846804325562,
-    "adx14": 20.94806640087963,
-    "adx_pos": 15.537433430413452,
-    "adx_neg": 20.262828777113036,
-    "bb_high": 9102.808556959677,
-    "bb_low": 8648.491443040322,
-    "bb_mid": 8875.65,
-    "vwap20": 8827.993981114441,
+    "date": "2026-08-18",
+    "close": 8815.0,
+    "prev_close": 8825.5,
+    "change_pct": -0.11897342926746361,
+    "ema20": 8831.011236232258,
+    "ema50": 8691.354353463325,
+    "ema200": 8040.643569712113,
+    "rsi14": 50.04291625967485,
+    "macd": 8.519745964174945,
+    "macd_signal": 33.41097936401777,
+    "atr14": 174.4026114220675,
+    "adx14": 20.67472157251542,
+    "adx_pos": 14.649493387471967,
+    "adx_neg": 20.702129093439932,
+    "bb_high": 9095.77374958571,
+    "bb_low": 8639.42625041429,
+    "bb_mid": 8867.6,
+    "vwap20": 8825.147274395056,
     "high_52w": 9050.0,
     "low_52w": 6696.5,
-    "volume": 351847.0,
-    "avg_volume20": 372159.15
+    "volume": 466927.0,
+    "avg_volume20": 385814.35
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 7592.5,
-      "ema50": 7249.88
-    },
     {
       "date": "2026-02-20",
       "close": 7615.5,
@@ -624,48 +619,51 @@
     },
     {
       "date": "2026-08-17",
-      "close": 8875.0,
-      "ema50": 8688.25
+      "close": 8825.5,
+      "ema50": 8686.31
+    },
+    {
+      "date": "2026-08-18",
+      "close": 8815.0,
+      "ema50": 8691.35
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
+      "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 8,875.00 vs EMA20 8,837.41",
-      "ema20_above_ema50": "EMA20 8,837.41 vs EMA50 8,688.25",
-      "ema50_above_ema200": "EMA50 8,688.25 vs EMA200 8,033.35",
-      "rsi_above_50": "RSI(14) 52.46 vs 50",
-      "macd_bullish": "MACD 14.26 vs signal 40.42",
-      "adx_trending_up": "ADX(14) 20.95 vs 20, +DI 15.54 vs -DI 20.26",
-      "price_above_vwap20": "Close 8,875.00 vs 20d VWAP 8,827.99",
-      "price_above_bb_mid": "Close 8,875.00 vs BB mid 8,875.65"
+      "price_above_ema20": "Close 8,815.00 vs EMA20 8,831.01",
+      "ema20_above_ema50": "EMA20 8,831.01 vs EMA50 8,691.35",
+      "ema50_above_ema200": "EMA50 8,691.35 vs EMA200 8,040.64",
+      "rsi_above_50": "RSI(14) 50.04 vs 50",
+      "macd_bullish": "MACD 8.52 vs signal 33.41",
+      "adx_trending_up": "ADX(14) 20.67 vs 20, +DI 14.65 vs -DI 20.70",
+      "price_above_vwap20": "Close 8,815.00 vs 20d VWAP 8,825.15",
+      "price_above_bb_mid": "Close 8,815.00 vs BB mid 8,867.60"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50",
-      "price_above_vwap20"
+      "rsi_above_50"
     ],
-    "flag_count": 5,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "5/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -679,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 177.08 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 52.5",
-        "below_ema200": "Close 8,875.00 vs EMA200 8,033.35",
-        "extended_above_ema20": "Close 8,875.00 vs EMA20 8,837.41 (+0.4%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 8,875.00 vs 52w low 6,696.50"
+        "atr_high": "ATR 174.40 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 50.0",
+        "below_ema200": "Close 8,815.00 vs EMA200 8,040.64",
+        "extended_above_ema20": "Close 8,815.00 vs EMA20 8,831.01 (-0.2%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 8,815.00 vs 52w low 6,696.50"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -707,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:46:52.973298+00:00"
+  "updated_at": "2026-08-18T10:44:27.615570+00:00"
 }

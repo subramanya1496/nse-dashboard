@@ -3,35 +3,30 @@
   "name": "Grasim Industries",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 3250.0,
-    "prev_close": 3248.7,
-    "change_pct": 0.040016006402566626,
-    "ema20": 3221.7062558238376,
-    "ema50": 3152.0503628912147,
-    "ema200": 2953.2723157868536,
-    "rsi14": 54.52077061143251,
-    "macd": 41.19457852489268,
-    "macd_signal": 36.79500497978251,
-    "atr14": 78.54201669903374,
-    "adx14": 24.617235018607833,
-    "adx_pos": 24.328234025161883,
-    "adx_neg": 14.443987268501774,
-    "bb_high": 3376.4343540453096,
-    "bb_low": 3026.255645954691,
-    "bb_mid": 3201.3450000000003,
-    "vwap20": 3251.41949784989,
+    "date": "2026-08-18",
+    "close": 3279.0,
+    "prev_close": 3250.5,
+    "change_pct": 0.8767881864328565,
+    "ema20": 3227.2058867884607,
+    "ema50": 3157.0476189408478,
+    "ema200": 2956.518312892215,
+    "rsi14": 56.967016379161265,
+    "macd": 40.685443481962466,
+    "macd_signal": 37.57947444660033,
+    "atr14": 76.30330122053131,
+    "adx14": 25.001854483076468,
+    "adx_pos": 25.640391589205734,
+    "adx_neg": 13.805785898660131,
+    "bb_high": 3384.3184389504095,
+    "bb_low": 3028.3415610495904,
+    "bb_mid": 3206.33,
+    "vwap20": 3257.057882637859,
     "high_52w": 3411.1,
     "low_52w": 2502.5,
-    "volume": 1313218.0,
-    "avg_volume20": 752628.2
+    "volume": 1470952.0,
+    "avg_volume20": 793774.15
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 2864.3,
-      "ema50": 2836.36
-    },
     {
       "date": "2026-02-20",
       "close": 2832.8,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-17",
-      "close": 3250.0,
-      "ema50": 3152.05
+      "close": 3250.5,
+      "ema50": 3152.07
+    },
+    {
+      "date": "2026-08-18",
+      "close": 3279.0,
+      "ema50": 3157.05
     }
   ],
   "flags": {
@@ -636,18 +636,18 @@
       "rsi_above_50": true,
       "macd_bullish": true,
       "adx_trending_up": true,
-      "price_above_vwap20": false,
+      "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,250.00 vs EMA20 3,221.71",
-      "ema20_above_ema50": "EMA20 3,221.71 vs EMA50 3,152.05",
-      "ema50_above_ema200": "EMA50 3,152.05 vs EMA200 2,953.27",
-      "rsi_above_50": "RSI(14) 54.52 vs 50",
-      "macd_bullish": "MACD 41.19 vs signal 36.80",
-      "adx_trending_up": "ADX(14) 24.62 vs 20, +DI 24.33 vs -DI 14.44",
-      "price_above_vwap20": "Close 3,250.00 vs 20d VWAP 3,251.42",
-      "price_above_bb_mid": "Close 3,250.00 vs BB mid 3,201.35"
+      "price_above_ema20": "Close 3,279.00 vs EMA20 3,227.21",
+      "ema20_above_ema50": "EMA20 3,227.21 vs EMA50 3,157.05",
+      "ema50_above_ema200": "EMA50 3,157.05 vs EMA200 2,956.52",
+      "rsi_above_50": "RSI(14) 56.97 vs 50",
+      "macd_bullish": "MACD 40.69 vs signal 37.58",
+      "adx_trending_up": "ADX(14) 25.00 vs 20, +DI 25.64 vs -DI 13.81",
+      "price_above_vwap20": "Close 3,279.00 vs 20d VWAP 3,257.06",
+      "price_above_bb_mid": "Close 3,279.00 vs BB mid 3,206.33"
     },
     "flags_on": [
       "price_above_ema20",
@@ -656,9 +656,10 @@
       "rsi_above_50",
       "macd_bullish",
       "adx_trending_up",
+      "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 7,
+    "flag_count": 8,
     "flag_total": 8
   },
   "decision": {
@@ -667,8 +668,8 @@
       "label": "Immediate attention",
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: volume surge, silent accumulation, near buy zone"
+        "8/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 78.54 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 54.5",
-        "below_ema200": "Close 3,250.00 vs EMA200 2,953.27",
-        "extended_above_ema20": "Close 3,250.00 vs EMA20 3,221.71 (+0.9%)",
-        "large_day_move": "Day change +0.0%",
-        "near_52w_low": "Close 3,250.00 vs 52w low 2,502.50"
+        "atr_high": "ATR 76.30 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 57.0",
+        "below_ema200": "Close 3,279.00 vs EMA200 2,956.52",
+        "extended_above_ema20": "Close 3,279.00 vs EMA20 3,227.21 (+1.6%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 3,279.00 vs 52w low 2,502.50"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -696,7 +697,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": true,
+      "silent_accumulation": false,
       "near_buy_zone": true
     },
     "trend": {
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:47:25.755542+00:00"
+  "updated_at": "2026-08-18T10:45:01.262734+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "PI Industries",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 2485.2,
-    "prev_close": 2490.1,
-    "change_pct": -0.1967792458134248,
-    "ema20": 2655.298211223933,
-    "ema50": 2713.9770037153044,
-    "ema200": 3018.466111248268,
-    "rsi14": 30.372931999310694,
-    "macd": -44.34076768768273,
-    "macd_signal": -10.645881063461221,
-    "atr14": 65.84323865456422,
-    "adx14": 24.304370232166093,
-    "adx_pos": 12.6139131067414,
-    "adx_neg": 36.4793699019641,
-    "bb_high": 2919.1153492118883,
-    "bb_low": 2478.694650788112,
-    "bb_mid": 2698.905,
-    "vwap20": 2638.9508779395665,
-    "high_52w": 4027.8,
+    "date": "2026-08-18",
+    "close": 2500.0,
+    "prev_close": 2472.0,
+    "change_pct": 1.132686084142395,
+    "ema20": 2639.370490427096,
+    "ema50": 2705.088401493482,
+    "ema200": 3013.1772080844403,
+    "rsi14": 33.45845399571304,
+    "macd": -51.74531920517575,
+    "macd_signal": -19.03424732428278,
+    "atr14": 67.31157875066678,
+    "adx14": 24.816058139420676,
+    "adx_pos": 17.272587193701682,
+    "adx_neg": 33.134777042089155,
+    "bb_high": 2928.173162280655,
+    "bb_low": 2450.1368377193444,
+    "bb_mid": 2689.1549999999997,
+    "vwap20": 2624.7497953589495,
+    "high_52w": 3917.8,
     "low_52w": 2457.0,
-    "volume": 125398.0,
-    "avg_volume20": 295145.6
+    "volume": 617052.0,
+    "avg_volume20": 320048.2
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 3016.4,
-      "ema50": 3223.21
-    },
     {
       "date": "2026-02-20",
       "close": 3048.0,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-17",
-      "close": 2485.2,
-      "ema50": 2713.98
+      "close": 2472.0,
+      "ema50": 2713.46
+    },
+    {
+      "date": "2026-08-18",
+      "close": 2500.0,
+      "ema50": 2705.09
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,485.20 vs EMA20 2,655.30",
-      "ema20_above_ema50": "EMA20 2,655.30 vs EMA50 2,713.98",
-      "ema50_above_ema200": "EMA50 2,713.98 vs EMA200 3,018.47",
-      "rsi_above_50": "RSI(14) 30.37 vs 50",
-      "macd_bullish": "MACD -44.34 vs signal -10.65",
-      "adx_trending_up": "ADX(14) 24.30 vs 20, +DI 12.61 vs -DI 36.48",
-      "price_above_vwap20": "Close 2,485.20 vs 20d VWAP 2,638.95",
-      "price_above_bb_mid": "Close 2,485.20 vs BB mid 2,698.91"
+      "price_above_ema20": "Close 2,500.00 vs EMA20 2,639.37",
+      "ema20_above_ema50": "EMA20 2,639.37 vs EMA50 2,705.09",
+      "ema50_above_ema200": "EMA50 2,705.09 vs EMA200 3,013.18",
+      "rsi_above_50": "RSI(14) 33.46 vs 50",
+      "macd_bullish": "MACD -51.75 vs signal -19.03",
+      "adx_trending_up": "ADX(14) 24.82 vs 20, +DI 17.27 vs -DI 33.13",
+      "price_above_vwap20": "Close 2,500.00 vs 20d VWAP 2,624.75",
+      "price_above_bb_mid": "Close 2,500.00 vs BB mid 2,689.15"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 65.84 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 30.4",
-        "below_ema200": "Close 2,485.20 vs EMA200 3,018.47",
-        "extended_above_ema20": "Close 2,485.20 vs EMA20 2,655.30 (-6.4%)",
-        "large_day_move": "Day change -0.2%",
-        "near_52w_low": "Close 2,485.20 vs 52w low 2,457.00"
+        "atr_high": "ATR 67.31 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 33.5",
+        "below_ema200": "Close 2,500.00 vs EMA200 3,013.18",
+        "extended_above_ema20": "Close 2,500.00 vs EMA20 2,639.37 (-5.3%)",
+        "large_day_move": "Day change +1.1%",
+        "near_52w_low": "Close 2,500.00 vs 52w low 2,457.00"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:48:13.009240+00:00"
+  "updated_at": "2026-08-18T10:45:48.109594+00:00"
 }

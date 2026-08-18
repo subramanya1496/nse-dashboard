@@ -3,35 +3,30 @@
   "name": "Lupin Ltd",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 2260.0,
-    "prev_close": 2235.0,
-    "change_pct": 1.1185682326621924,
-    "ema20": 2344.6724489271382,
-    "ema50": 2362.712912411801,
-    "ema200": 2256.2309848830146,
-    "rsi14": 35.036292379009055,
-    "macd": -41.55426022863048,
-    "macd_signal": -22.862156637441934,
-    "atr14": 52.38289100078493,
-    "adx14": 26.731260736116003,
-    "adx_pos": 11.389016335575299,
-    "adx_neg": 32.51815182606614,
-    "bb_high": 2510.3685026956646,
-    "bb_low": 2221.8514973043348,
-    "bb_mid": 2366.1099999999997,
-    "vwap20": 2365.9172005325645,
+    "date": "2026-08-18",
+    "close": 2220.5,
+    "prev_close": 2259.0,
+    "change_pct": -1.7042939353696325,
+    "ema20": 2332.7603336098146,
+    "ema50": 2357.0982576382507,
+    "ema200": 2255.8656014538183,
+    "rsi14": 31.150283051105475,
+    "macd": -46.033930852485355,
+    "macd_signal": -27.509275013214182,
+    "atr14": 51.39125592930029,
+    "adx14": 28.259191511203763,
+    "adx_pos": 10.779578127528232,
+    "adx_neg": 30.77807141929946,
+    "bb_high": 2492.056939436551,
+    "bb_low": 2210.6330605634494,
+    "bb_mid": 2351.3450000000003,
+    "vwap20": 2357.483435828001,
     "high_52w": 2529.5,
     "low_52w": 1875.0,
-    "volume": 715028.0,
-    "avg_volume20": 1192493.6
+    "volume": 669195.0,
+    "avg_volume20": 1187606.5
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 2228.7,
-      "ema50": 2152.36
-    },
     {
       "date": "2026-02-20",
       "close": 2219.4,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-17",
-      "close": 2260.0,
-      "ema50": 2362.71
+      "close": 2259.0,
+      "ema50": 2362.67
+    },
+    {
+      "date": "2026-08-18",
+      "close": 2220.5,
+      "ema50": 2357.1
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,260.00 vs EMA20 2,344.67",
-      "ema20_above_ema50": "EMA20 2,344.67 vs EMA50 2,362.71",
-      "ema50_above_ema200": "EMA50 2,362.71 vs EMA200 2,256.23",
-      "rsi_above_50": "RSI(14) 35.04 vs 50",
-      "macd_bullish": "MACD -41.55 vs signal -22.86",
-      "adx_trending_up": "ADX(14) 26.73 vs 20, +DI 11.39 vs -DI 32.52",
-      "price_above_vwap20": "Close 2,260.00 vs 20d VWAP 2,365.92",
-      "price_above_bb_mid": "Close 2,260.00 vs BB mid 2,366.11"
+      "price_above_ema20": "Close 2,220.50 vs EMA20 2,332.76",
+      "ema20_above_ema50": "EMA20 2,332.76 vs EMA50 2,357.10",
+      "ema50_above_ema200": "EMA50 2,357.10 vs EMA200 2,255.87",
+      "rsi_above_50": "RSI(14) 31.15 vs 50",
+      "macd_bullish": "MACD -46.03 vs signal -27.51",
+      "adx_trending_up": "ADX(14) 28.26 vs 20, +DI 10.78 vs -DI 30.78",
+      "price_above_vwap20": "Close 2,220.50 vs 20d VWAP 2,357.48",
+      "price_above_bb_mid": "Close 2,220.50 vs BB mid 2,351.35"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -668,21 +668,23 @@
       "conditions": {
         "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 52.38 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 35.0",
-        "below_ema200": "Close 2,260.00 vs EMA200 2,256.23",
-        "extended_above_ema20": "Close 2,260.00 vs EMA20 2,344.67 (-3.6%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 2,260.00 vs 52w low 1,875.00"
+        "atr_high": "ATR 51.39 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 31.2",
+        "below_ema200": "Close 2,220.50 vs EMA200 2,255.87",
+        "extended_above_ema20": "Close 2,220.50 vs EMA20 2,332.76 (-4.8%)",
+        "large_day_move": "Day change -1.7%",
+        "near_52w_low": "Close 2,220.50 vs 52w low 1,875.00"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "below_ema200"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -702,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:47:55.113364+00:00"
+  "updated_at": "2026-08-18T10:45:28.091041+00:00"
 }

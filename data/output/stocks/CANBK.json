@@ -3,35 +3,30 @@
   "name": "Canara Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 131.1,
-    "prev_close": 131.25,
-    "change_pct": -0.11428571428571861,
-    "ema20": 129.17167673059674,
-    "ema50": 129.38763432935303,
-    "ema200": 132.10910222806842,
-    "rsi14": 56.41891045048827,
-    "macd": 1.0425582094657102,
-    "macd_signal": 0.507640796859664,
-    "atr14": 2.9506449410117717,
-    "adx14": 13.370240050829112,
-    "adx_pos": 24.99243423840056,
-    "adx_neg": 21.492445228372475,
-    "bb_high": 133.67648399034954,
-    "bb_low": 122.66751600965046,
-    "bb_mid": 128.172,
-    "vwap20": 127.97439156206055,
+    "date": "2026-08-18",
+    "close": 129.1,
+    "prev_close": 131.1,
+    "change_pct": -1.5255530129672008,
+    "ema20": 129.16485037530182,
+    "ema50": 129.37635455173137,
+    "ema200": 132.07916091236626,
+    "rsi14": 50.49768936414163,
+    "macd": 0.8957743217584095,
+    "macd_signal": 0.5852675018394131,
+    "atr14": 2.8827417309395025,
+    "adx14": 12.953030505156336,
+    "adx_pos": 23.753909222448623,
+    "adx_neg": 20.427365660075907,
+    "bb_high": 133.7611357515051,
+    "bb_low": 122.74086424849493,
+    "bb_mid": 128.251,
+    "vwap20": 127.96274357243966,
     "high_52w": 162.89,
     "low_52w": 103.55,
-    "volume": 10998274.0,
-    "avg_volume20": 20546556.5
+    "volume": 6443730.0,
+    "avg_volume20": 19645365.25
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 149.42,
-      "ema50": 147.87
-    },
     {
       "date": "2026-02-20",
       "close": 154.15,
@@ -626,11 +621,16 @@
       "date": "2026-08-17",
       "close": 131.1,
       "ema50": 129.39
+    },
+    {
+      "date": "2026-08-18",
+      "close": 129.1,
+      "ema50": 129.38
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
@@ -640,32 +640,31 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 131.10 vs EMA20 129.17",
-      "ema20_above_ema50": "EMA20 129.17 vs EMA50 129.39",
-      "ema50_above_ema200": "EMA50 129.39 vs EMA200 132.11",
-      "rsi_above_50": "RSI(14) 56.42 vs 50",
-      "macd_bullish": "MACD 1.04 vs signal 0.51",
-      "adx_trending_up": "ADX(14) 13.37 vs 20, +DI 24.99 vs -DI 21.49",
-      "price_above_vwap20": "Close 131.10 vs 20d VWAP 127.97",
-      "price_above_bb_mid": "Close 131.10 vs BB mid 128.17"
+      "price_above_ema20": "Close 129.10 vs EMA20 129.16",
+      "ema20_above_ema50": "EMA20 129.16 vs EMA50 129.38",
+      "ema50_above_ema200": "EMA50 129.38 vs EMA200 132.08",
+      "rsi_above_50": "RSI(14) 50.50 vs 50",
+      "macd_bullish": "MACD 0.90 vs signal 0.59",
+      "adx_trending_up": "ADX(14) 12.95 vs 20, +DI 23.75 vs -DI 20.43",
+      "price_above_vwap20": "Close 129.10 vs 20d VWAP 127.96",
+      "price_above_bb_mid": "Close 129.10 vs BB mid 128.25"
     },
     "flags_on": [
-      "price_above_ema20",
       "rsi_above_50",
       "macd_bullish",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "5/8 bullish flags"
+        "4/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.95 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 56.4",
-        "below_ema200": "Close 131.10 vs EMA200 132.11",
-        "extended_above_ema20": "Close 131.10 vs EMA20 129.17 (+1.5%)",
-        "large_day_move": "Day change -0.1%",
-        "near_52w_low": "Close 131.10 vs 52w low 103.55"
+        "atr_high": "ATR 2.88 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 50.5",
+        "below_ema200": "Close 129.10 vs EMA200 132.08",
+        "extended_above_ema20": "Close 129.10 vs EMA20 129.16 (-0.1%)",
+        "large_day_move": "Day change -1.5%",
+        "near_52w_low": "Close 129.10 vs 52w low 103.55"
       },
       "conditions_on": [
         "below_ema200"
@@ -699,8 +698,8 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "bullish",
+      "daily": "bearish",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -708,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:47:08.180030+00:00"
+  "updated_at": "2026-08-18T10:44:41.235223+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "The Ramco Cements",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-08-17",
-    "close": 921.0,
-    "prev_close": 907.2,
-    "change_pct": 1.521164021164016,
-    "ema20": 923.8688599036327,
-    "ema50": 923.5120738329041,
-    "ema200": 970.7865180343721,
-    "rsi14": 49.262393604349626,
-    "macd": 0.2758395222808758,
-    "macd_signal": 2.685418604416366,
-    "atr14": 26.419664705138334,
-    "adx14": 14.204371374585731,
-    "adx_pos": 21.227686949303166,
-    "adx_neg": 15.656993376704106,
-    "bb_high": 950.0928163417467,
-    "bb_low": 896.4321836582534,
-    "bb_mid": 923.2625,
-    "vwap20": 932.6421948096704,
+    "date": "2026-08-18",
+    "close": 914.25,
+    "prev_close": 922.6,
+    "change_pct": -0.9050509429872126,
+    "ema20": 923.0906464887743,
+    "ema50": 923.2091397571808,
+    "ema200": 970.2397276022092,
+    "rsi14": 47.089407636589094,
+    "macd": -0.38598131209562325,
+    "macd_signal": 2.0915602735355967,
+    "atr14": 26.468260083342738,
+    "adx14": 13.785948365038328,
+    "adx_pos": 19.675233680701155,
+    "adx_neg": 16.64387750115359,
+    "bb_high": 950.1681312998732,
+    "bb_low": 896.1618687001268,
+    "bb_mid": 923.165,
+    "vwap20": 931.9080927859447,
     "high_52w": 1214.5,
     "low_52w": 838.3,
-    "volume": 242347.0,
-    "avg_volume20": 243448.9
+    "volume": 232980.0,
+    "avg_volume20": 248965.15
   },
   "price_history": [
-    {
-      "date": "2026-02-19",
-      "close": 1127.2,
-      "ema50": 1099.42
-    },
     {
       "date": "2026-02-20",
       "close": 1113.7,
@@ -624,14 +619,19 @@
     },
     {
       "date": "2026-08-17",
-      "close": 921.0,
-      "ema50": 923.51
+      "close": 922.6,
+      "ema50": 923.57
+    },
+    {
+      "date": "2026-08-18",
+      "close": 914.25,
+      "ema50": 923.21
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
-      "ema20_above_ema50": true,
+      "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
@@ -640,19 +640,17 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 921.00 vs EMA20 923.87",
-      "ema20_above_ema50": "EMA20 923.87 vs EMA50 923.51",
-      "ema50_above_ema200": "EMA50 923.51 vs EMA200 970.79",
-      "rsi_above_50": "RSI(14) 49.26 vs 50",
-      "macd_bullish": "MACD 0.28 vs signal 2.69",
-      "adx_trending_up": "ADX(14) 14.20 vs 20, +DI 21.23 vs -DI 15.66",
-      "price_above_vwap20": "Close 921.00 vs 20d VWAP 932.64",
-      "price_above_bb_mid": "Close 921.00 vs BB mid 923.26"
+      "price_above_ema20": "Close 914.25 vs EMA20 923.09",
+      "ema20_above_ema50": "EMA20 923.09 vs EMA50 923.21",
+      "ema50_above_ema200": "EMA50 923.21 vs EMA200 970.24",
+      "rsi_above_50": "RSI(14) 47.09 vs 50",
+      "macd_bullish": "MACD -0.39 vs signal 2.09",
+      "adx_trending_up": "ADX(14) 13.79 vs 20, +DI 19.68 vs -DI 16.64",
+      "price_above_vwap20": "Close 914.25 vs 20d VWAP 931.91",
+      "price_above_bb_mid": "Close 914.25 vs BB mid 923.16"
     },
-    "flags_on": [
-      "ema20_above_ema50"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 26.42 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 49.3",
-        "below_ema200": "Close 921.00 vs EMA200 970.79",
-        "extended_above_ema20": "Close 921.00 vs EMA20 923.87 (-0.3%)",
-        "large_day_move": "Day change +1.5%",
-        "near_52w_low": "Close 921.00 vs 52w low 838.30"
+        "atr_high": "ATR 26.47 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 47.1",
+        "below_ema200": "Close 914.25 vs EMA200 970.24",
+        "extended_above_ema20": "Close 914.25 vs EMA20 923.09 (-1.0%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 914.25 vs 52w low 838.30"
       },
       "conditions_on": [
         "atr_high",
@@ -705,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-17T10:48:18.710522+00:00"
+  "updated_at": "2026-08-18T10:45:53.310435+00:00"
 }
