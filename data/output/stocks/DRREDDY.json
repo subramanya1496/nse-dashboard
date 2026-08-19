@@ -3,35 +3,30 @@
   "name": "Dr Reddy's Laboratories",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-08-18",
-    "close": 1183.0,
-    "prev_close": 1192.0,
-    "change_pct": -0.7550335570469799,
-    "ema20": 1192.2845470159236,
-    "ema50": 1224.0740764457025,
-    "ema200": 1254.81854112959,
-    "rsi14": 44.359313278311426,
-    "macd": -12.24978455287578,
-    "macd_signal": -19.808912761415655,
-    "atr14": 25.066620455605097,
-    "adx14": 30.592791184480557,
-    "adx_pos": 15.604849136528525,
-    "adx_neg": 24.619298736114988,
-    "bb_high": 1214.644304232682,
-    "bb_low": 1129.235695767318,
-    "bb_mid": 1171.94,
-    "vwap20": 1167.8847827067727,
+    "date": "2026-08-19",
+    "close": 1170.0,
+    "prev_close": 1178.8,
+    "change_pct": -0.7465218866644007,
+    "ema20": 1189.8003044429784,
+    "ema50": 1221.7952882631037,
+    "ema200": 1254.039966257394,
+    "rsi14": 41.01179882758559,
+    "macd": -12.963360572942065,
+    "macd_signal": -18.493409161487982,
+    "atr14": 24.647576137456184,
+    "adx14": 30.330891573960038,
+    "adx_pos": 14.73657163054551,
+    "adx_neg": 25.59682013702893,
+    "bb_high": 1213.3141589613977,
+    "bb_low": 1128.8658410386022,
+    "bb_mid": 1171.09,
+    "vwap20": 1167.0827709642929,
     "high_52w": 1414.9,
     "low_52w": 1101.0,
-    "volume": 752680.0,
-    "avg_volume20": 2222445.4
+    "volume": 1150424.0,
+    "avg_volume20": 2156210.15
   },
   "price_history": [
-    {
-      "date": "2026-02-20",
-      "close": 1280.4,
-      "ema50": 1245.84
-    },
     {
       "date": "2026-02-23",
       "close": 1307.4,
@@ -145,7 +140,7 @@
     {
       "date": "2026-03-27",
       "close": 1281.7,
-      "ema50": 1273.88
+      "ema50": 1273.89
     },
     {
       "date": "2026-03-30",
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-18",
-      "close": 1183.0,
-      "ema50": 1224.07
+      "close": 1178.8,
+      "ema50": 1223.91
+    },
+    {
+      "date": "2026-08-19",
+      "close": 1170.0,
+      "ema50": 1221.8
     }
   ],
   "flags": {
@@ -637,33 +637,32 @@
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,183.00 vs EMA20 1,192.28",
-      "ema20_above_ema50": "EMA20 1,192.28 vs EMA50 1,224.07",
-      "ema50_above_ema200": "EMA50 1,224.07 vs EMA200 1,254.82",
-      "rsi_above_50": "RSI(14) 44.36 vs 50",
-      "macd_bullish": "MACD -12.25 vs signal -19.81",
-      "adx_trending_up": "ADX(14) 30.59 vs 20, +DI 15.60 vs -DI 24.62",
-      "price_above_vwap20": "Close 1,183.00 vs 20d VWAP 1,167.88",
-      "price_above_bb_mid": "Close 1,183.00 vs BB mid 1,171.94"
+      "price_above_ema20": "Close 1,170.00 vs EMA20 1,189.80",
+      "ema20_above_ema50": "EMA20 1,189.80 vs EMA50 1,221.80",
+      "ema50_above_ema200": "EMA50 1,221.80 vs EMA200 1,254.04",
+      "rsi_above_50": "RSI(14) 41.01 vs 50",
+      "macd_bullish": "MACD -12.96 vs signal -18.49",
+      "adx_trending_up": "ADX(14) 30.33 vs 20, +DI 14.74 vs -DI 25.60",
+      "price_above_vwap20": "Close 1,170.00 vs 20d VWAP 1,167.08",
+      "price_above_bb_mid": "Close 1,170.00 vs BB mid 1,171.09"
     },
     "flags_on": [
       "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "price_above_vwap20"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 25.07 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 44.4",
-        "below_ema200": "Close 1,183.00 vs EMA200 1,254.82",
-        "extended_above_ema20": "Close 1,183.00 vs EMA20 1,192.28 (-0.8%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 1,183.00 vs 52w low 1,101.00"
+        "atr_high": "ATR 24.65 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 41.0",
+        "below_ema200": "Close 1,170.00 vs EMA200 1,254.04",
+        "extended_above_ema20": "Close 1,170.00 vs EMA20 1,189.80 (-1.7%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 1,170.00 vs 52w low 1,101.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-18T10:44:52.034260+00:00"
+  "updated_at": "2026-08-19T10:44:53.056447+00:00"
 }

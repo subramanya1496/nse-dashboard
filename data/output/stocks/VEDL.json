@@ -3,35 +3,30 @@
   "name": "Vedanta Ltd",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-08-18",
-    "close": 265.0,
-    "prev_close": 269.7,
-    "change_pct": -1.7426770485724836,
-    "ema20": 271.07038521413466,
-    "ema50": 276.9854916213292,
-    "ema200": 258.66864463349344,
-    "rsi14": 42.98648244769212,
-    "macd": -1.3930429628861702,
-    "macd_signal": -1.7414951881434615,
-    "atr14": 7.204303621035504,
-    "adx14": 16.81873548469465,
-    "adx_pos": 18.70765387422652,
-    "adx_neg": 22.75129743377707,
-    "bb_high": 281.64644636175643,
-    "bb_low": 257.01855363824365,
-    "bb_mid": 269.33250000000004,
-    "vwap20": 271.585286039438,
+    "date": "2026-08-19",
+    "close": 262.6,
+    "prev_close": 264.0,
+    "change_pct": -0.5303030303030216,
+    "ema20": 270.1775140599541,
+    "ema50": 276.38368109762627,
+    "ema200": 258.7401535262281,
+    "rsi14": 41.1398601298932,
+    "macd": -1.99561648405097,
+    "macd_signal": -1.8050829801519201,
+    "atr14": 6.932312546114672,
+    "adx14": 16.739796645437586,
+    "adx_pos": 18.052963973802168,
+    "adx_neg": 24.733419965556827,
+    "bb_high": 281.65611946174465,
+    "bb_low": 256.9388805382554,
+    "bb_mid": 269.2975,
+    "vwap20": 271.50242645401954,
     "high_52w": 360.0,
     "low_52w": 157.17,
-    "volume": 9466305.0,
-    "avg_volume20": 10947054.85
+    "volume": 8301777.0,
+    "avg_volume20": 11028786.5
   },
   "price_history": [
-    {
-      "date": "2026-02-20",
-      "close": 255.39,
-      "ema50": 240.17
-    },
     {
       "date": "2026-02-23",
       "close": 254.94,
@@ -60,12 +55,12 @@
     {
       "date": "2026-03-02",
       "close": 270.7,
-      "ema50": 246.0
+      "ema50": 246.01
     },
     {
       "date": "2026-03-04",
       "close": 262.33,
-      "ema50": 246.64
+      "ema50": 246.65
     },
     {
       "date": "2026-03-05",
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-18",
-      "close": 265.0,
-      "ema50": 276.99
+      "close": 264.0,
+      "ema50": 276.95
+    },
+    {
+      "date": "2026-08-19",
+      "close": 262.6,
+      "ema50": 276.38
     }
   ],
   "flags": {
@@ -634,26 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 265.00 vs EMA20 271.07",
-      "ema20_above_ema50": "EMA20 271.07 vs EMA50 276.99",
-      "ema50_above_ema200": "EMA50 276.99 vs EMA200 258.67",
-      "rsi_above_50": "RSI(14) 42.99 vs 50",
-      "macd_bullish": "MACD -1.39 vs signal -1.74",
-      "adx_trending_up": "ADX(14) 16.82 vs 20, +DI 18.71 vs -DI 22.75",
-      "price_above_vwap20": "Close 265.00 vs 20d VWAP 271.59",
-      "price_above_bb_mid": "Close 265.00 vs BB mid 269.33"
+      "price_above_ema20": "Close 262.60 vs EMA20 270.18",
+      "ema20_above_ema50": "EMA20 270.18 vs EMA50 276.38",
+      "ema50_above_ema200": "EMA50 276.38 vs EMA200 258.74",
+      "rsi_above_50": "RSI(14) 41.14 vs 50",
+      "macd_bullish": "MACD -2.00 vs signal -1.81",
+      "adx_trending_up": "ADX(14) 16.74 vs 20, +DI 18.05 vs -DI 24.73",
+      "price_above_vwap20": "Close 262.60 vs 20d VWAP 271.50",
+      "price_above_bb_mid": "Close 262.60 vs BB mid 269.30"
     },
     "flags_on": [
-      "ema50_above_ema200",
-      "macd_bullish"
+      "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -662,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.20 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 43.0",
-        "below_ema200": "Close 265.00 vs EMA200 258.67",
-        "extended_above_ema20": "Close 265.00 vs EMA20 271.07 (-2.2%)",
-        "large_day_move": "Day change -1.7%",
-        "near_52w_low": "Close 265.00 vs 52w low 157.17"
+        "atr_high": "ATR 6.93 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 41.1",
+        "below_ema200": "Close 262.60 vs EMA200 258.74",
+        "extended_above_ema20": "Close 262.60 vs EMA20 270.18 (-2.8%)",
+        "large_day_move": "Day change -0.5%",
+        "near_52w_low": "Close 262.60 vs 52w low 157.17"
       },
       "conditions_on": [
         "atr_high"
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-18T10:46:19.811764+00:00"
+  "updated_at": "2026-08-19T10:46:17.054053+00:00"
 }
