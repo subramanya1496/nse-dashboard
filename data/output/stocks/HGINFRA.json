@@ -3,35 +3,30 @@
   "name": "HG Infra Engineering",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-08-19",
-    "close": 518.55,
-    "prev_close": 507.7,
-    "change_pct": 2.1370888319873873,
-    "ema20": 536.7184823239679,
-    "ema50": 551.2146065732559,
-    "ema200": 653.02165496416,
-    "rsi14": 37.5975996037164,
-    "macd": -9.797399241906191,
-    "macd_signal": -7.11762662249651,
-    "atr14": 16.66859073324577,
-    "adx14": 13.332743418555905,
-    "adx_pos": 35.13328304935225,
-    "adx_neg": 20.811221519656332,
-    "bb_high": 562.8402078052561,
-    "bb_low": 511.4697921947439,
-    "bb_mid": 537.155,
-    "vwap20": 532.6949046257681,
+    "date": "2026-08-20",
+    "close": 513.7,
+    "prev_close": 518.55,
+    "change_pct": -0.9353003567640362,
+    "ema20": 534.5262459121614,
+    "ema50": 549.7434334773152,
+    "ema200": 651.5146779252968,
+    "rsi14": 35.67631500569571,
+    "macd": -10.414873010320207,
+    "macd_signal": -7.777075899880183,
+    "atr14": 16.120834252490294,
+    "adx14": 14.209010282426153,
+    "adx_pos": 33.732258660792276,
+    "adx_neg": 19.981323874007035,
+    "bb_high": 563.2641188085516,
+    "bb_low": 508.2258811914486,
+    "bb_mid": 535.7450000000001,
+    "vwap20": 532.2129399428725,
     "high_52w": 1049.95,
     "low_52w": 429.5,
-    "volume": 4792216.0,
-    "avg_volume20": 302304.75
+    "volume": 150916.0,
+    "avg_volume20": 308192.95
   },
   "price_history": [
-    {
-      "date": "2026-02-23",
-      "close": 582.35,
-      "ema50": 695.76
-    },
     {
       "date": "2026-02-24",
       "close": 569.0,
@@ -200,7 +195,7 @@
     {
       "date": "2026-04-17",
       "close": 621.05,
-      "ema50": 564.66
+      "ema50": 564.65
     },
     {
       "date": "2026-04-20",
@@ -626,6 +621,11 @@
       "date": "2026-08-19",
       "close": 518.55,
       "ema50": 551.21
+    },
+    {
+      "date": "2026-08-20",
+      "close": 513.7,
+      "ema50": 549.74
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 518.55 vs EMA20 536.72",
-      "ema20_above_ema50": "EMA20 536.72 vs EMA50 551.21",
-      "ema50_above_ema200": "EMA50 551.21 vs EMA200 653.02",
-      "rsi_above_50": "RSI(14) 37.60 vs 50",
-      "macd_bullish": "MACD -9.80 vs signal -7.12",
-      "adx_trending_up": "ADX(14) 13.33 vs 20, +DI 35.13 vs -DI 20.81",
-      "price_above_vwap20": "Close 518.55 vs 20d VWAP 532.69",
-      "price_above_bb_mid": "Close 518.55 vs BB mid 537.15"
+      "price_above_ema20": "Close 513.70 vs EMA20 534.53",
+      "ema20_above_ema50": "EMA20 534.53 vs EMA50 549.74",
+      "ema50_above_ema200": "EMA50 549.74 vs EMA200 651.51",
+      "rsi_above_50": "RSI(14) 35.68 vs 50",
+      "macd_bullish": "MACD -10.41 vs signal -7.78",
+      "adx_trending_up": "ADX(14) 14.21 vs 20, +DI 33.73 vs -DI 19.98",
+      "price_above_vwap20": "Close 513.70 vs 20d VWAP 532.21",
+      "price_above_bb_mid": "Close 513.70 vs BB mid 535.75"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 16.67 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 37.6",
-        "below_ema200": "Close 518.55 vs EMA200 653.02",
-        "extended_above_ema20": "Close 518.55 vs EMA20 536.72 (-3.4%)",
-        "large_day_move": "Day change +2.1%",
-        "near_52w_low": "Close 518.55 vs 52w low 429.50"
+        "atr_high": "ATR 16.12 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 35.7",
+        "below_ema200": "Close 513.70 vs EMA200 651.51",
+        "extended_above_ema20": "Close 513.70 vs EMA20 534.53 (-3.9%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 513.70 vs 52w low 429.50"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +689,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-19T10:45:05.881314+00:00"
+  "updated_at": "2026-08-20T10:46:13.848217+00:00"
 }
