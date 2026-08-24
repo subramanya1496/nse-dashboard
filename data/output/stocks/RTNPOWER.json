@@ -3,35 +3,30 @@
   "name": null,
   "sector": null,
   "indicators": {
-    "date": "2026-08-21",
-    "close": 7.89,
-    "prev_close": 7.77,
-    "change_pct": 1.5444015444015458,
-    "ema20": 8.380517535247327,
-    "ema50": 8.697392524300353,
-    "ema200": 9.383476663948544,
-    "rsi14": 27.92279808899032,
-    "macd": -0.24237234247907402,
-    "macd_signal": -0.1722477482228859,
-    "atr14": 0.2147631367606017,
-    "adx14": 16.60613294116091,
-    "adx_pos": 17.039012074776906,
-    "adx_neg": 33.82290348375108,
-    "bb_high": 9.069902288841437,
-    "bb_low": 7.829097711158561,
-    "bb_mid": 8.449499999999999,
-    "vwap20": 8.414743196325755,
+    "date": "2026-08-24",
+    "close": 7.86,
+    "prev_close": 7.89,
+    "change_pct": -0.3802281368821212,
+    "ema20": 8.330944436652368,
+    "ema50": 8.66455613176309,
+    "ema200": 9.393449789008084,
+    "rsi14": 27.310046053829453,
+    "macd": -0.25353648238078996,
+    "macd_signal": -0.1885054950928574,
+    "atr14": 0.2201371984450551,
+    "adx14": 16.86942552823858,
+    "adx_pos": 20.302783995769616,
+    "adx_neg": 30.640264242366648,
+    "bb_high": 9.075797713593914,
+    "bb_low": 7.746202286406086,
+    "bb_mid": 8.411,
+    "vwap20": 8.36435652962802,
     "high_52w": 12.9,
     "low_52w": 7.52,
-    "volume": 18032204.0,
-    "avg_volume20": 12957043.65
+    "volume": 18769954.0,
+    "avg_volume20": 13122140.3
   },
   "price_history": [
-    {
-      "date": "2026-02-25",
-      "close": 8.36,
-      "ema50": 9.03
-    },
     {
       "date": "2026-02-26",
       "close": 8.29,
@@ -85,7 +80,7 @@
     {
       "date": "2026-03-13",
       "close": 8.14,
-      "ema50": 8.69
+      "ema50": 8.7
     },
     {
       "date": "2026-03-16",
@@ -115,7 +110,7 @@
     {
       "date": "2026-03-23",
       "close": 7.92,
-      "ema50": 8.58
+      "ema50": 8.59
     },
     {
       "date": "2026-03-24",
@@ -626,6 +621,11 @@
       "date": "2026-08-21",
       "close": 7.89,
       "ema50": 8.7
+    },
+    {
+      "date": "2026-08-24",
+      "close": 7.86,
+      "ema50": 8.66
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 7.89 vs EMA20 8.38",
-      "ema20_above_ema50": "EMA20 8.38 vs EMA50 8.70",
-      "ema50_above_ema200": "EMA50 8.70 vs EMA200 9.38",
-      "rsi_above_50": "RSI(14) 27.92 vs 50",
-      "macd_bullish": "MACD -0.24 vs signal -0.17",
-      "adx_trending_up": "ADX(14) 16.61 vs 20, +DI 17.04 vs -DI 33.82",
-      "price_above_vwap20": "Close 7.89 vs 20d VWAP 8.41",
-      "price_above_bb_mid": "Close 7.89 vs BB mid 8.45"
+      "price_above_ema20": "Close 7.86 vs EMA20 8.33",
+      "ema20_above_ema50": "EMA20 8.33 vs EMA50 8.66",
+      "ema50_above_ema200": "EMA50 8.66 vs EMA200 9.39",
+      "rsi_above_50": "RSI(14) 27.31 vs 50",
+      "macd_bullish": "MACD -0.25 vs signal -0.19",
+      "adx_trending_up": "ADX(14) 16.87 vs 20, +DI 20.30 vs -DI 30.64",
+      "price_above_vwap20": "Close 7.86 vs 20d VWAP 8.36",
+      "price_above_bb_mid": "Close 7.86 vs BB mid 8.41"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.21 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 27.9",
-        "below_ema200": "Close 7.89 vs EMA200 9.38",
-        "extended_above_ema20": "Close 7.89 vs EMA20 8.38 (-5.9%)",
-        "large_day_move": "Day change +1.5%",
-        "near_52w_low": "Close 7.89 vs 52w low 7.52"
+        "atr_high": "ATR 0.22 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 27.3",
+        "below_ema200": "Close 7.86 vs EMA200 9.39",
+        "extended_above_ema20": "Close 7.86 vs EMA20 8.33 (-5.7%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 7.86 vs 52w low 7.52"
       },
       "conditions_on": [
         "atr_high",
@@ -690,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-21T10:46:20.118047+00:00"
+  "updated_at": "2026-08-24T10:52:18.290027+00:00"
 }
