@@ -3,35 +3,30 @@
   "name": "Senco Gold Ltd",
   "sector": "Jewellery",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 371.75,
-    "prev_close": 345.4,
-    "change_pct": 7.628836132020853,
-    "ema20": 362.92513083611834,
-    "ema50": 361.25417972949066,
-    "ema200": 344.51266901716207,
-    "rsi14": 52.84170855233979,
-    "macd": -7.0995552827120605,
-    "macd_signal": -3.3609614002437134,
-    "atr14": 17.679079154902357,
-    "adx14": 26.93223297578812,
-    "adx_pos": 27.634118236230876,
-    "adx_neg": 25.62862928360106,
-    "bb_high": 433.3155768872953,
-    "bb_low": 316.5244231127046,
-    "bb_mid": 374.91999999999996,
-    "vwap20": 375.2865340361235,
+    "date": "2026-08-25",
+    "close": 368.65,
+    "prev_close": 371.75,
+    "change_pct": -0.8338937457969126,
+    "ema20": 363.47035647077377,
+    "ema50": 361.5442118969616,
+    "ema200": 344.7528414647525,
+    "rsi14": 51.6027410560808,
+    "macd": -5.662909952250345,
+    "macd_signal": -3.82135111064504,
+    "atr14": 17.09128778669505,
+    "adx14": 25.277450268053265,
+    "adx_pos": 26.542741738313,
+    "adx_neg": 24.616457176828355,
+    "bb_high": 427.2875076889777,
+    "bb_low": 317.5524923110223,
+    "bb_mid": 372.42,
+    "vwap20": 371.57073593184833,
     "high_52w": 430.0,
     "low_52w": 276.0,
-    "volume": 4898448.0,
-    "avg_volume20": 1878275.25
+    "volume": 1124170.0,
+    "avg_volume20": 1780401.5
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 316.05,
-      "ema50": 328.12
-    },
     {
       "date": "2026-02-27",
       "close": 317.25,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 371.75,
       "ema50": 361.25
+    },
+    {
+      "date": "2026-08-25",
+      "close": 368.65,
+      "ema50": 361.54
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 371.75 vs EMA20 362.93",
-      "ema20_above_ema50": "EMA20 362.93 vs EMA50 361.25",
-      "ema50_above_ema200": "EMA50 361.25 vs EMA200 344.51",
-      "rsi_above_50": "RSI(14) 52.84 vs 50",
-      "macd_bullish": "MACD -7.10 vs signal -3.36",
-      "adx_trending_up": "ADX(14) 26.93 vs 20, +DI 27.63 vs -DI 25.63",
-      "price_above_vwap20": "Close 371.75 vs 20d VWAP 375.29",
-      "price_above_bb_mid": "Close 371.75 vs BB mid 374.92"
+      "price_above_ema20": "Close 368.65 vs EMA20 363.47",
+      "ema20_above_ema50": "EMA20 363.47 vs EMA50 361.54",
+      "ema50_above_ema200": "EMA50 361.54 vs EMA200 344.75",
+      "rsi_above_50": "RSI(14) 51.60 vs 50",
+      "macd_bullish": "MACD -5.66 vs signal -3.82",
+      "adx_trending_up": "ADX(14) 25.28 vs 20, +DI 26.54 vs -DI 24.62",
+      "price_above_vwap20": "Close 368.65 vs 20d VWAP 371.57",
+      "price_above_bb_mid": "Close 368.65 vs BB mid 372.42"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,7 +666,7 @@
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
         "5/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -675,30 +675,29 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 17.68 = 4.8% of price",
-        "rsi_extreme": "RSI(14) 52.8",
-        "below_ema200": "Close 371.75 vs EMA200 344.51",
-        "extended_above_ema20": "Close 371.75 vs EMA20 362.93 (+2.4%)",
-        "large_day_move": "Day change +7.6%",
-        "near_52w_low": "Close 371.75 vs 52w low 276.00"
+        "atr_high": "ATR 17.09 = 4.6% of price",
+        "rsi_extreme": "RSI(14) 51.6",
+        "below_ema200": "Close 368.65 vs EMA200 344.75",
+        "extended_above_ema20": "Close 368.65 vs EMA20 363.47 (+1.4%)",
+        "large_day_move": "Day change -0.8%",
+        "near_52w_low": "Close 368.65 vs 52w low 276.00"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -710,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:52:21.504525+00:00"
+  "updated_at": "2026-08-25T10:49:13.317965+00:00"
 }

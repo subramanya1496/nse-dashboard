@@ -3,35 +3,30 @@
   "name": "Brigade Enterprises",
   "sector": "Realty",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 654.1,
-    "prev_close": 639.3,
-    "change_pct": 2.315032066322551,
-    "ema20": 594.7649205393734,
-    "ema50": 568.6233615641137,
-    "ema200": 593.2753026118148,
-    "rsi14": 74.24134661807305,
-    "macd": 20.657264246283262,
-    "macd_signal": 15.776240752602881,
-    "atr14": 21.372358470076385,
-    "adx14": 27.95629534083174,
-    "adx_pos": 39.491053522731235,
-    "adx_neg": 13.069281781300498,
-    "bb_high": 639.6970982660988,
-    "bb_low": 543.722901733901,
-    "bb_mid": 591.7099999999999,
-    "vwap20": 601.7314977056576,
+    "date": "2026-08-25",
+    "close": 660.9,
+    "prev_close": 654.1,
+    "change_pct": 1.0395963919889855,
+    "ema20": 601.0634995356236,
+    "ema50": 572.2420532674818,
+    "ema200": 593.9481851728914,
+    "rsi14": 75.43279550623424,
+    "macd": 23.355614795970382,
+    "macd_signal": 17.292115561276383,
+    "atr14": 21.824332865070932,
+    "adx14": 29.719203590553185,
+    "adx_pos": 38.30004286488997,
+    "adx_neg": 11.884434222134994,
+    "bb_high": 651.1530131965894,
+    "bb_low": 542.3369868034108,
+    "bb_mid": 596.7450000000001,
+    "vwap20": 607.968325411249,
     "high_52w": 802.01,
     "low_52w": 450.75,
-    "volume": 1256244.0,
-    "avg_volume20": 579930.15
+    "volume": 804919.0,
+    "avg_volume20": 589943.65
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 537.11,
-      "ema50": 599.58
-    },
     {
       "date": "2026-02-27",
       "close": 520.54,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 654.1,
       "ema50": 568.62
+    },
+    {
+      "date": "2026-08-25",
+      "close": 660.9,
+      "ema50": 572.24
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 654.10 vs EMA20 594.76",
-      "ema20_above_ema50": "EMA20 594.76 vs EMA50 568.62",
-      "ema50_above_ema200": "EMA50 568.62 vs EMA200 593.28",
-      "rsi_above_50": "RSI(14) 74.24 vs 50",
-      "macd_bullish": "MACD 20.66 vs signal 15.78",
-      "adx_trending_up": "ADX(14) 27.96 vs 20, +DI 39.49 vs -DI 13.07",
-      "price_above_vwap20": "Close 654.10 vs 20d VWAP 601.73",
-      "price_above_bb_mid": "Close 654.10 vs BB mid 591.71"
+      "price_above_ema20": "Close 660.90 vs EMA20 601.06",
+      "ema20_above_ema50": "EMA20 601.06 vs EMA50 572.24",
+      "ema50_above_ema200": "EMA50 572.24 vs EMA200 593.95",
+      "rsi_above_50": "RSI(14) 75.43 vs 50",
+      "macd_bullish": "MACD 23.36 vs signal 17.29",
+      "adx_trending_up": "ADX(14) 29.72 vs 20, +DI 38.30 vs -DI 11.88",
+      "price_above_vwap20": "Close 660.90 vs 20d VWAP 607.97",
+      "price_above_bb_mid": "Close 660.90 vs BB mid 596.75"
     },
     "flags_on": [
       "price_above_ema20",
@@ -668,37 +668,38 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "7/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: breakout"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": true,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 21.37 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 74.2",
-        "below_ema200": "Close 654.10 vs EMA200 593.28",
-        "extended_above_ema20": "Close 654.10 vs EMA20 594.76 (+10.0%)",
-        "large_day_move": "Day change +2.3%",
-        "near_52w_low": "Close 654.10 vs 52w low 450.75"
+        "atr_high": "ATR 21.82 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 75.4",
+        "below_ema200": "Close 660.90 vs EMA200 593.95",
+        "extended_above_ema20": "Close 660.90 vs EMA20 601.06 (+10.0%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 660.90 vs 52w low 450.75"
       },
       "conditions_on": [
         "atr_high",
+        "rsi_extreme",
         "extended_above_ema20"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": true,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -712,5 +713,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:09.081212+00:00"
+  "updated_at": "2026-08-25T10:47:54.850373+00:00"
 }

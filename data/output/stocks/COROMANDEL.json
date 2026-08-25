@@ -3,35 +3,30 @@
   "name": "Coromandel International",
   "sector": "Agri & Fertilizers",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 1926.6,
-    "prev_close": 1996.1,
-    "change_pct": -3.481789489504534,
-    "ema20": 2041.9469395997367,
-    "ema50": 2027.3054524067622,
-    "ema200": 2085.05884405274,
-    "rsi14": 31.575813145464082,
-    "macd": -8.508011081950826,
-    "macd_signal": 9.791665089248005,
-    "atr14": 49.84937697030371,
-    "adx14": 15.086351150126351,
-    "adx_pos": 14.049004761051995,
-    "adx_neg": 30.629873250136136,
-    "bb_high": 2151.3779856059564,
-    "bb_low": 1971.512014394044,
-    "bb_mid": 2061.445,
-    "vwap20": 2053.996591999633,
+    "date": "2026-08-25",
+    "close": 1913.6,
+    "prev_close": 1926.6,
+    "change_pct": -0.6747638326585695,
+    "ema20": 2029.723421542619,
+    "ema50": 2022.8464150574775,
+    "ema200": 2083.3527859029614,
+    "rsi14": 30.304652188813648,
+    "macd": -17.38004750170603,
+    "macd_signal": 4.357322571057198,
+    "atr14": 48.83156432956774,
+    "adx14": 16.99942987219935,
+    "adx_pos": 13.317416236359156,
+    "adx_neg": 32.501579052739814,
+    "bb_high": 2165.7457798262694,
+    "bb_low": 1945.8242201737312,
+    "bb_mid": 2055.7850000000003,
+    "vwap20": 2029.7866692655145,
     "high_52w": 2500.0,
     "low_52w": 1706.5,
-    "volume": 309282.0,
-    "avg_volume20": 108995.0
+    "volume": 470177.0,
+    "avg_volume20": 126594.55
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 2330.6,
-      "ema50": 2289.08
-    },
     {
       "date": "2026-02-27",
       "close": 2220.0,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 1926.6,
       "ema50": 2027.31
+    },
+    {
+      "date": "2026-08-25",
+      "close": 1913.6,
+      "ema50": 2022.85
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,926.60 vs EMA20 2,041.95",
-      "ema20_above_ema50": "EMA20 2,041.95 vs EMA50 2,027.31",
-      "ema50_above_ema200": "EMA50 2,027.31 vs EMA200 2,085.06",
-      "rsi_above_50": "RSI(14) 31.58 vs 50",
-      "macd_bullish": "MACD -8.51 vs signal 9.79",
-      "adx_trending_up": "ADX(14) 15.09 vs 20, +DI 14.05 vs -DI 30.63",
-      "price_above_vwap20": "Close 1,926.60 vs 20d VWAP 2,054.00",
-      "price_above_bb_mid": "Close 1,926.60 vs BB mid 2,061.45"
+      "price_above_ema20": "Close 1,913.60 vs EMA20 2,029.72",
+      "ema20_above_ema50": "EMA20 2,029.72 vs EMA50 2,022.85",
+      "ema50_above_ema200": "EMA50 2,022.85 vs EMA200 2,083.35",
+      "rsi_above_50": "RSI(14) 30.30 vs 50",
+      "macd_bullish": "MACD -17.38 vs signal 4.36",
+      "adx_trending_up": "ADX(14) 17.00 vs 20, +DI 13.32 vs -DI 32.50",
+      "price_above_vwap20": "Close 1,913.60 vs 20d VWAP 2,029.79",
+      "price_above_bb_mid": "Close 1,913.60 vs BB mid 2,055.79"
     },
     "flags_on": [
       "ema20_above_ema50"
@@ -662,7 +662,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "1/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -675,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 49.85 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 31.6",
-        "below_ema200": "Close 1,926.60 vs EMA200 2,085.06",
-        "extended_above_ema20": "Close 1,926.60 vs EMA20 2,041.95 (-5.6%)",
-        "large_day_move": "Day change -3.5%",
-        "near_52w_low": "Close 1,926.60 vs 52w low 1,706.50"
+        "atr_high": "ATR 48.83 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 30.3",
+        "below_ema200": "Close 1,913.60 vs EMA200 2,083.35",
+        "extended_above_ema20": "Close 1,913.60 vs EMA20 2,029.72 (-5.7%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 1,913.60 vs 52w low 1,706.50"
       },
       "conditions_on": [
         "atr_high",
@@ -693,7 +693,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": false,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:14.730696+00:00"
+  "updated_at": "2026-08-25T10:48:00.088750+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Ashoka Buildcon",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 113.22,
-    "prev_close": 114.22,
-    "change_pct": -0.8755034144633165,
-    "ema20": 116.49345269384808,
-    "ema50": 121.29737928087171,
-    "ema200": 141.1438481569973,
-    "rsi14": 34.61771352527872,
-    "macd": -3.3116461020570114,
-    "macd_signal": -3.2721991270754467,
-    "atr14": 2.683814323809757,
-    "adx14": 30.0286620090616,
-    "adx_pos": 18.430365667678004,
-    "adx_neg": 23.997523204532044,
-    "bb_high": 125.34729822029993,
-    "bb_low": 108.66470177970007,
-    "bb_mid": 117.006,
-    "vwap20": 117.21400333340966,
+    "date": "2026-08-25",
+    "close": 114.01,
+    "prev_close": 113.22,
+    "change_pct": 0.6977565801095268,
+    "ema20": 116.25693338967207,
+    "ema50": 121.01159970122968,
+    "ema200": 140.8738596181217,
+    "rsi14": 37.78778673801316,
+    "macd": -3.1040441591250243,
+    "macd_signal": -3.238568133485362,
+    "atr14": 2.6328275863947743,
+    "adx14": 28.821004566071704,
+    "adx_pos": 17.44533506645338,
+    "adx_neg": 22.71494991562995,
+    "bb_high": 124.57370164361332,
+    "bb_low": 108.56629835638664,
+    "bb_mid": 116.56999999999998,
+    "vwap20": 116.95666281772361,
     "high_52w": 214.5,
     "low_52w": 101.0,
-    "volume": 737876.0,
-    "avg_volume20": 659254.9
+    "volume": 507744.0,
+    "avg_volume20": 670443.8
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 138.71,
-      "ema50": 155.72
-    },
     {
       "date": "2026-02-27",
       "close": 130.02,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 113.22,
       "ema50": 121.3
+    },
+    {
+      "date": "2026-08-25",
+      "close": 114.01,
+      "ema50": 121.01
     }
   ],
   "flags": {
@@ -634,23 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 113.22 vs EMA20 116.49",
-      "ema20_above_ema50": "EMA20 116.49 vs EMA50 121.30",
-      "ema50_above_ema200": "EMA50 121.30 vs EMA200 141.14",
-      "rsi_above_50": "RSI(14) 34.62 vs 50",
-      "macd_bullish": "MACD -3.31 vs signal -3.27",
-      "adx_trending_up": "ADX(14) 30.03 vs 20, +DI 18.43 vs -DI 24.00",
-      "price_above_vwap20": "Close 113.22 vs 20d VWAP 117.21",
-      "price_above_bb_mid": "Close 113.22 vs BB mid 117.01"
+      "price_above_ema20": "Close 114.01 vs EMA20 116.26",
+      "ema20_above_ema50": "EMA20 116.26 vs EMA50 121.01",
+      "ema50_above_ema200": "EMA50 121.01 vs EMA200 140.87",
+      "rsi_above_50": "RSI(14) 37.79 vs 50",
+      "macd_bullish": "MACD -3.10 vs signal -3.24",
+      "adx_trending_up": "ADX(14) 28.82 vs 20, +DI 17.45 vs -DI 22.71",
+      "price_above_vwap20": "Close 114.01 vs 20d VWAP 116.96",
+      "price_above_bb_mid": "Close 114.01 vs BB mid 116.57"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "macd_bullish"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.68 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 34.6",
-        "below_ema200": "Close 113.22 vs EMA200 141.14",
-        "extended_above_ema20": "Close 113.22 vs EMA20 116.49 (-2.8%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 113.22 vs 52w low 101.00"
+        "atr_high": "ATR 2.63 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 37.8",
+        "below_ema200": "Close 114.01 vs EMA200 140.87",
+        "extended_above_ema20": "Close 114.01 vs EMA20 116.26 (-1.9%)",
+        "large_day_move": "Day change +0.7%",
+        "near_52w_low": "Close 114.01 vs 52w low 101.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -702,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:50:55.471309+00:00"
+  "updated_at": "2026-08-25T10:47:40.049222+00:00"
 }

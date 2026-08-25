@@ -3,35 +3,30 @@
   "name": "Persistent Systems",
   "sector": "IT",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 5694.0,
-    "prev_close": 5667.5,
-    "change_pct": 0.46757829730921924,
-    "ema20": 5489.514823280633,
-    "ema50": 5295.819464436128,
-    "ema200": 5319.820432041012,
-    "rsi14": 65.41859861145593,
-    "macd": 125.55587904570712,
-    "macd_signal": 126.58995498913688,
-    "atr14": 148.71341672410202,
-    "adx14": 19.84727405698957,
-    "adx_pos": 23.19590810000286,
-    "adx_neg": 13.55191325844378,
-    "bb_high": 5680.168883986467,
-    "bb_low": 5384.721116013534,
-    "bb_mid": 5532.445000000001,
-    "vwap20": 5518.769652918909,
+    "date": "2026-08-25",
+    "close": 5655.0,
+    "prev_close": 5694.0,
+    "change_pct": -0.684931506849315,
+    "ema20": 5505.275316301525,
+    "ema50": 5309.904975634712,
+    "ema200": 5323.155552120207,
+    "rsi14": 62.57973827482336,
+    "macd": 123.62563861295348,
+    "macd_signal": 125.99709171390022,
+    "atr14": 146.91245838666617,
+    "adx14": 19.43791666919921,
+    "adx_pos": 21.803098744677936,
+    "adx_neg": 16.40897850724491,
+    "bb_high": 5692.596179608441,
+    "bb_low": 5394.953820391558,
+    "bb_mid": 5543.775,
+    "vwap20": 5531.2528846266305,
     "high_52w": 6599.0,
     "low_52w": 4244.5,
-    "volume": 368840.0,
-    "avg_volume20": 591527.95
+    "volume": 358275.0,
+    "avg_volume20": 557169.45
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 4781.5,
-      "ema50": 5786.02
-    },
     {
       "date": "2026-02-27",
       "close": 4733.0,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 5694.0,
       "ema50": 5295.82
+    },
+    {
+      "date": "2026-08-25",
+      "close": 5655.0,
+      "ema50": 5309.9
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 5,694.00 vs EMA20 5,489.51",
-      "ema20_above_ema50": "EMA20 5,489.51 vs EMA50 5,295.82",
-      "ema50_above_ema200": "EMA50 5,295.82 vs EMA200 5,319.82",
-      "rsi_above_50": "RSI(14) 65.42 vs 50",
-      "macd_bullish": "MACD 125.56 vs signal 126.59",
-      "adx_trending_up": "ADX(14) 19.85 vs 20, +DI 23.20 vs -DI 13.55",
-      "price_above_vwap20": "Close 5,694.00 vs 20d VWAP 5,518.77",
-      "price_above_bb_mid": "Close 5,694.00 vs BB mid 5,532.45"
+      "price_above_ema20": "Close 5,655.00 vs EMA20 5,505.28",
+      "ema20_above_ema50": "EMA20 5,505.28 vs EMA50 5,309.90",
+      "ema50_above_ema200": "EMA50 5,309.90 vs EMA200 5,323.16",
+      "rsi_above_50": "RSI(14) 62.58 vs 50",
+      "macd_bullish": "MACD 123.63 vs signal 126.00",
+      "adx_trending_up": "ADX(14) 19.44 vs 20, +DI 21.80 vs -DI 16.41",
+      "price_above_vwap20": "Close 5,655.00 vs 20d VWAP 5,531.25",
+      "price_above_bb_mid": "Close 5,655.00 vs BB mid 5,543.77"
     },
     "flags_on": [
       "price_above_ema20",
@@ -665,8 +665,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags",
-        "patterns: breakout"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -679,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 148.71 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 65.4",
-        "below_ema200": "Close 5,694.00 vs EMA200 5,319.82",
-        "extended_above_ema20": "Close 5,694.00 vs EMA20 5,489.51 (+3.7%)",
-        "large_day_move": "Day change +0.5%",
-        "near_52w_low": "Close 5,694.00 vs 52w low 4,244.50"
+        "atr_high": "ATR 146.91 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 62.6",
+        "below_ema200": "Close 5,655.00 vs EMA200 5,323.16",
+        "extended_above_ema20": "Close 5,655.00 vs EMA20 5,505.28 (+2.7%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 5,655.00 vs 52w low 4,244.50"
       },
       "conditions_on": [
         "atr_high"
@@ -694,7 +693,7 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": true,
+      "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -709,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:52:09.951176+00:00"
+  "updated_at": "2026-08-25T10:49:00.612962+00:00"
 }

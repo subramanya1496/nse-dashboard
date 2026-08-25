@@ -3,35 +3,30 @@
   "name": "HDFC Asset Management Company",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 2618.0,
-    "prev_close": 2610.0,
-    "change_pct": 0.30651340996168586,
-    "ema20": 2567.0677396873275,
-    "ema50": 2592.862457877431,
-    "ema200": 2617.574329404205,
-    "rsi14": 55.89343301766389,
-    "macd": -6.4291032302649,
-    "macd_signal": -21.490725211705364,
-    "atr14": 52.64084939257741,
-    "adx14": 13.626512314483575,
-    "adx_pos": 24.736081396145877,
-    "adx_neg": 15.94814736513219,
-    "bb_high": 2634.7951797561204,
-    "bb_low": 2469.014820243879,
-    "bb_mid": 2551.9049999999997,
-    "vwap20": 2546.071249506536,
+    "date": "2026-08-25",
+    "close": 2698.0,
+    "prev_close": 2618.0,
+    "change_pct": 3.055767761650115,
+    "ema20": 2579.537478764725,
+    "ema50": 2596.985498744983,
+    "ema200": 2618.3745848330186,
+    "rsi14": 63.62924653573048,
+    "macd": 4.5593884466834425,
+    "macd_signal": -16.280702480027603,
+    "atr14": 55.39507443596472,
+    "adx14": 15.308282051473912,
+    "adx_pos": 30.72432574028085,
+    "adx_neg": 14.072695628570411,
+    "bb_high": 2664.050442535553,
+    "bb_low": 2456.439557464447,
+    "bb_mid": 2560.245,
+    "vwap20": 2556.0005534888905,
     "high_52w": 2967.25,
     "low_52w": 2205.6,
-    "volume": 657607.0,
-    "avg_volume20": 708131.15
+    "volume": 1157541.0,
+    "avg_volume20": 738804.35
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 2753.8,
-      "ema50": 2681.77
-    },
     {
       "date": "2026-02-27",
       "close": 2698.6,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 2618.0,
       "ema50": 2592.86
+    },
+    {
+      "date": "2026-08-25",
+      "close": 2698.0,
+      "ema50": 2596.99
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,618.00 vs EMA20 2,567.07",
-      "ema20_above_ema50": "EMA20 2,567.07 vs EMA50 2,592.86",
-      "ema50_above_ema200": "EMA50 2,592.86 vs EMA200 2,617.57",
-      "rsi_above_50": "RSI(14) 55.89 vs 50",
-      "macd_bullish": "MACD -6.43 vs signal -21.49",
-      "adx_trending_up": "ADX(14) 13.63 vs 20, +DI 24.74 vs -DI 15.95",
-      "price_above_vwap20": "Close 2,618.00 vs 20d VWAP 2,546.07",
-      "price_above_bb_mid": "Close 2,618.00 vs BB mid 2,551.90"
+      "price_above_ema20": "Close 2,698.00 vs EMA20 2,579.54",
+      "ema20_above_ema50": "EMA20 2,579.54 vs EMA50 2,596.99",
+      "ema50_above_ema200": "EMA50 2,596.99 vs EMA200 2,618.37",
+      "rsi_above_50": "RSI(14) 63.63 vs 50",
+      "macd_bullish": "MACD 4.56 vs signal -16.28",
+      "adx_trending_up": "ADX(14) 15.31 vs 20, +DI 30.72 vs -DI 14.07",
+      "price_above_vwap20": "Close 2,698.00 vs 20d VWAP 2,556.00",
+      "price_above_bb_mid": "Close 2,698.00 vs BB mid 2,560.24"
     },
     "flags_on": [
       "price_above_ema20",
@@ -665,7 +665,8 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 52.64 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 55.9",
-        "below_ema200": "Close 2,618.00 vs EMA200 2,617.57",
-        "extended_above_ema20": "Close 2,618.00 vs EMA20 2,567.07 (+2.0%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 2,618.00 vs 52w low 2,205.60"
+        "atr_high": "ATR 55.40 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 63.6",
+        "below_ema200": "Close 2,698.00 vs EMA200 2,618.37",
+        "extended_above_ema20": "Close 2,698.00 vs EMA20 2,579.54 (+4.6%)",
+        "large_day_move": "Day change +3.1%",
+        "near_52w_low": "Close 2,698.00 vs 52w low 2,205.60"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -691,8 +692,8 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
-      "volume_surge": false,
+      "breakout": true,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:29.086643+00:00"
+  "updated_at": "2026-08-25T10:48:14.850496+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Cyient Ltd",
   "sector": "IT",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 909.05,
-    "prev_close": 892.65,
-    "change_pct": 1.8372262364868626,
-    "ema20": 871.851908689978,
-    "ema50": 869.5240326917904,
-    "ema200": 964.1894992980883,
-    "rsi14": 62.17628643341875,
-    "macd": 10.245352761304389,
-    "macd_signal": 4.345575050223854,
-    "atr14": 26.37256474025198,
-    "adx14": 24.1566030114851,
-    "adx_pos": 29.46823027218761,
-    "adx_neg": 10.719656200325902,
-    "bb_high": 905.3456048031796,
-    "bb_low": 827.1893951968202,
-    "bb_mid": 866.2674999999999,
-    "vwap20": 873.4816105132888,
+    "date": "2026-08-25",
+    "close": 979.05,
+    "prev_close": 909.05,
+    "change_pct": 7.7003465155932025,
+    "ema20": 882.061250719504,
+    "ema50": 873.8191686646613,
+    "ema200": 964.3373649767144,
+    "rsi14": 73.45901575049436,
+    "macd": 17.43015635219797,
+    "macd_signal": 6.962491310618677,
+    "atr14": 30.942381544519698,
+    "adx14": 26.83851637715392,
+    "adx_pos": 35.82231084173903,
+    "adx_neg": 8.483885599475993,
+    "bb_high": 934.2487731700561,
+    "bb_low": 812.391226829944,
+    "bb_mid": 873.32,
+    "vwap20": 898.2204426926829,
     "high_52w": 1284.7,
     "low_52w": 750.3,
-    "volume": 1531330.0,
-    "avg_volume20": 637972.9
+    "volume": 4712618.0,
+    "avg_volume20": 834899.35
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 921.9,
-      "ema50": 1078.59
-    },
     {
       "date": "2026-02-27",
       "close": 914.7,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 909.05,
       "ema50": 869.52
+    },
+    {
+      "date": "2026-08-25",
+      "close": 979.05,
+      "ema50": 873.82
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 909.05 vs EMA20 871.85",
-      "ema20_above_ema50": "EMA20 871.85 vs EMA50 869.52",
-      "ema50_above_ema200": "EMA50 869.52 vs EMA200 964.19",
-      "rsi_above_50": "RSI(14) 62.18 vs 50",
-      "macd_bullish": "MACD 10.25 vs signal 4.35",
-      "adx_trending_up": "ADX(14) 24.16 vs 20, +DI 29.47 vs -DI 10.72",
-      "price_above_vwap20": "Close 909.05 vs 20d VWAP 873.48",
-      "price_above_bb_mid": "Close 909.05 vs BB mid 866.27"
+      "price_above_ema20": "Close 979.05 vs EMA20 882.06",
+      "ema20_above_ema50": "EMA20 882.06 vs EMA50 873.82",
+      "ema50_above_ema200": "EMA50 873.82 vs EMA200 964.34",
+      "rsi_above_50": "RSI(14) 73.46 vs 50",
+      "macd_bullish": "MACD 17.43 vs signal 6.96",
+      "adx_trending_up": "ADX(14) 26.84 vs 20, +DI 35.82 vs -DI 8.48",
+      "price_above_vwap20": "Close 979.05 vs 20d VWAP 898.22",
+      "price_above_bb_mid": "Close 979.05 vs BB mid 873.32"
     },
     "flags_on": [
       "price_above_ema20",
@@ -675,24 +675,25 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": true,
-        "extended_above_ema20": false,
-        "large_day_move": false,
+        "below_ema200": false,
+        "extended_above_ema20": true,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 26.37 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 62.2",
-        "below_ema200": "Close 909.05 vs EMA200 964.19",
-        "extended_above_ema20": "Close 909.05 vs EMA20 871.85 (+4.3%)",
-        "large_day_move": "Day change +1.8%",
-        "near_52w_low": "Close 909.05 vs 52w low 750.30"
+        "atr_high": "ATR 30.94 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 73.5",
+        "below_ema200": "Close 979.05 vs EMA200 964.34",
+        "extended_above_ema20": "Close 979.05 vs EMA20 882.06 (+11.0%)",
+        "large_day_move": "Day change +7.7%",
+        "near_52w_low": "Close 979.05 vs 52w low 750.30"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "extended_above_ema20",
+        "large_day_move"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -712,5 +713,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:15.509597+00:00"
+  "updated_at": "2026-08-25T10:48:01.248118+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "MRF Ltd",
   "sector": "Auto Ancillary",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 134365.0,
-    "prev_close": 132665.0,
-    "change_pct": 1.2814231334564505,
-    "ema20": 133035.66838497773,
-    "ema50": 132188.8575102122,
-    "ema200": 136075.0253437212,
-    "rsi14": 55.52896373369495,
-    "macd": 409.318119694537,
-    "macd_signal": 396.59562990054906,
-    "atr14": 1987.8705156674673,
-    "adx14": 11.850349880069055,
-    "adx_pos": 27.041913034176897,
-    "adx_neg": 19.756139052618586,
-    "bb_high": 135525.23819810778,
-    "bb_low": 131013.26180189224,
-    "bb_mid": 133269.25,
-    "vwap20": 133075.4770970819,
+    "date": "2026-08-25",
+    "close": 132455.0,
+    "prev_close": 134365.0,
+    "change_pct": -1.4215011349681836,
+    "ema20": 132980.36663402748,
+    "ema50": 132199.29447059604,
+    "ema200": 136039.00519104736,
+    "rsi14": 48.91026909037356,
+    "macd": 315.7068441341398,
+    "macd_signal": 380.4178727472672,
+    "atr14": 2059.094050262648,
+    "adx14": 11.334238955415918,
+    "adx_pos": 24.24178733262602,
+    "adx_neg": 22.098636816926216,
+    "bb_high": 135518.4294383671,
+    "bb_low": 130951.57056163289,
+    "bb_mid": 133235.0,
+    "vwap20": 133050.8679680698,
     "high_52w": 163600.0,
     "low_52w": 122000.0,
-    "volume": 5313.0,
-    "avg_volume20": 4280.75
+    "volume": 6400.0,
+    "avg_volume20": 4326.1
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 143520.0,
-      "ema50": 145917.09
-    },
     {
       "date": "2026-02-27",
       "close": 140985.0,
@@ -626,47 +621,48 @@
       "date": "2026-08-24",
       "close": 134365.0,
       "ema50": 132188.86
+    },
+    {
+      "date": "2026-08-25",
+      "close": 132455.0,
+      "ema50": 132199.29
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
-      "rsi_above_50": true,
-      "macd_bullish": true,
+      "rsi_above_50": false,
+      "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 134,365.00 vs EMA20 133,035.67",
-      "ema20_above_ema50": "EMA20 133,035.67 vs EMA50 132,188.86",
-      "ema50_above_ema200": "EMA50 132,188.86 vs EMA200 136,075.03",
-      "rsi_above_50": "RSI(14) 55.53 vs 50",
-      "macd_bullish": "MACD 409.32 vs signal 396.60",
-      "adx_trending_up": "ADX(14) 11.85 vs 20, +DI 27.04 vs -DI 19.76",
-      "price_above_vwap20": "Close 134,365.00 vs 20d VWAP 133,075.48",
-      "price_above_bb_mid": "Close 134,365.00 vs BB mid 133,269.25"
+      "price_above_ema20": "Close 132,455.00 vs EMA20 132,980.37",
+      "ema20_above_ema50": "EMA20 132,980.37 vs EMA50 132,199.29",
+      "ema50_above_ema200": "EMA50 132,199.29 vs EMA200 136,039.01",
+      "rsi_above_50": "RSI(14) 48.91 vs 50",
+      "macd_bullish": "MACD 315.71 vs signal 380.42",
+      "adx_trending_up": "ADX(14) 11.33 vs 20, +DI 24.24 vs -DI 22.10",
+      "price_above_vwap20": "Close 132,455.00 vs 20d VWAP 133,050.87",
+      "price_above_bb_mid": "Close 132,455.00 vs BB mid 133,235.00"
     },
     "flags_on": [
-      "price_above_ema20",
-      "ema20_above_ema50",
-      "rsi_above_50",
-      "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "ema20_above_ema50"
     ],
-    "flag_count": 6,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "6/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -679,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1987.87 = 1.5% of price",
-        "rsi_extreme": "RSI(14) 55.5",
-        "below_ema200": "Close 134,365.00 vs EMA200 136,075.03",
-        "extended_above_ema20": "Close 134,365.00 vs EMA20 133,035.67 (+1.0%)",
-        "large_day_move": "Day change +1.3%",
-        "near_52w_low": "Close 134,365.00 vs 52w low 122,000.00"
+        "atr_high": "ATR 2059.09 = 1.6% of price",
+        "rsi_extreme": "RSI(14) 48.9",
+        "below_ema200": "Close 132,455.00 vs EMA200 136,039.01",
+        "extended_above_ema20": "Close 132,455.00 vs EMA20 132,980.37 (-0.4%)",
+        "large_day_move": "Day change -1.4%",
+        "near_52w_low": "Close 132,455.00 vs 52w low 122,000.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -695,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -709,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:59.494030+00:00"
+  "updated_at": "2026-08-25T10:48:51.282813+00:00"
 }

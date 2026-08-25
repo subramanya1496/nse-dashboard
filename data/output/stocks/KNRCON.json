@@ -3,35 +3,30 @@
   "name": "KNR Constructions",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 127.15,
-    "prev_close": 127.0,
-    "change_pct": 0.11811023622047691,
-    "ema20": 129.9181841893314,
-    "ema50": 129.29437893622983,
-    "ema200": 142.03833722270932,
-    "rsi14": 45.38906335233308,
-    "macd": 0.24617697613322775,
-    "macd_signal": 1.1284411439936541,
-    "atr14": 5.273225033890645,
-    "adx14": 18.492605157185956,
-    "adx_pos": 22.049514503790746,
-    "adx_neg": 20.518651167622046,
-    "bb_high": 143.4015537059911,
-    "bb_low": 117.14744629400887,
-    "bb_mid": 130.2745,
-    "vwap20": 133.038391739603,
+    "date": "2026-08-25",
+    "close": 123.79,
+    "prev_close": 127.15,
+    "change_pct": -2.6425481714510415,
+    "ema20": 129.33454759987129,
+    "ema50": 129.07852093873063,
+    "ema200": 141.85676172795598,
+    "rsi14": 40.45318946641127,
+    "macd": -0.26476396476650166,
+    "macd_signal": 0.849800122241623,
+    "atr14": 5.242994674327028,
+    "adx14": 17.735485871908466,
+    "adx_pos": 20.592602512716134,
+    "adx_neg": 24.121888279549932,
+    "bb_high": 143.13595456596585,
+    "bb_low": 117.75304543403416,
+    "bb_mid": 130.4445,
+    "vwap20": 132.74228029137925,
     "high_52w": 220.0,
     "low_52w": 108.65,
-    "volume": 3720186.0,
-    "avg_volume20": 1654628.3
+    "volume": 1858731.0,
+    "avg_volume20": 1727601.95
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 134.47,
-      "ema50": 148.11
-    },
     {
       "date": "2026-02-27",
       "close": 132.73,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 127.15,
       "ema50": 129.29
+    },
+    {
+      "date": "2026-08-25",
+      "close": 123.79,
+      "ema50": 129.08
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 127.15 vs EMA20 129.92",
-      "ema20_above_ema50": "EMA20 129.92 vs EMA50 129.29",
-      "ema50_above_ema200": "EMA50 129.29 vs EMA200 142.04",
-      "rsi_above_50": "RSI(14) 45.39 vs 50",
-      "macd_bullish": "MACD 0.25 vs signal 1.13",
-      "adx_trending_up": "ADX(14) 18.49 vs 20, +DI 22.05 vs -DI 20.52",
-      "price_above_vwap20": "Close 127.15 vs 20d VWAP 133.04",
-      "price_above_bb_mid": "Close 127.15 vs BB mid 130.27"
+      "price_above_ema20": "Close 123.79 vs EMA20 129.33",
+      "ema20_above_ema50": "EMA20 129.33 vs EMA50 129.08",
+      "ema50_above_ema200": "EMA50 129.08 vs EMA200 141.86",
+      "rsi_above_50": "RSI(14) 40.45 vs 50",
+      "macd_bullish": "MACD -0.26 vs signal 0.85",
+      "adx_trending_up": "ADX(14) 17.74 vs 20, +DI 20.59 vs -DI 24.12",
+      "price_above_vwap20": "Close 123.79 vs 20d VWAP 132.74",
+      "price_above_bb_mid": "Close 123.79 vs BB mid 130.44"
     },
     "flags_on": [
       "ema20_above_ema50"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.27 = 4.1% of price",
-        "rsi_extreme": "RSI(14) 45.4",
-        "below_ema200": "Close 127.15 vs EMA200 142.04",
-        "extended_above_ema20": "Close 127.15 vs EMA20 129.92 (-2.1%)",
-        "large_day_move": "Day change +0.1%",
-        "near_52w_low": "Close 127.15 vs 52w low 108.65"
+        "atr_high": "ATR 5.24 = 4.2% of price",
+        "rsi_extreme": "RSI(14) 40.5",
+        "below_ema200": "Close 123.79 vs EMA200 141.86",
+        "extended_above_ema20": "Close 123.79 vs EMA20 129.33 (-4.3%)",
+        "large_day_move": "Day change -2.6%",
+        "near_52w_low": "Close 123.79 vs 52w low 108.65"
       },
       "conditions_on": [
         "atr_high",
@@ -692,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:48.298433+00:00"
+  "updated_at": "2026-08-25T10:48:34.855631+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Dabur India",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 398.45,
-    "prev_close": 400.5,
-    "change_pct": -0.511860174781526,
-    "ema20": 410.389484803355,
-    "ema50": 421.6819678383157,
-    "ema200": 455.01384778759933,
-    "rsi14": 31.899493005657305,
-    "macd": -7.548028246135004,
-    "macd_signal": -6.69367232437128,
-    "atr14": 6.5982344175599525,
-    "adx14": 37.06774220842784,
-    "adx_pos": 8.132408040270933,
-    "adx_neg": 31.122170133544007,
-    "bb_high": 431.37301093280973,
-    "bb_low": 392.52198906719013,
-    "bb_mid": 411.94749999999993,
-    "vwap20": 415.83647562761934,
+    "date": "2026-08-25",
+    "close": 395.05,
+    "prev_close": 398.45,
+    "change_pct": -0.8533065629313533,
+    "ema20": 408.9285814887498,
+    "ema50": 420.6375769426955,
+    "ema200": 454.41719258573266,
+    "rsi14": 29.513801744059407,
+    "macd": -7.838318887228581,
+    "macd_signal": -6.9226016369427406,
+    "atr14": 6.576931959162814,
+    "adx14": 38.88198823722689,
+    "adx_pos": 7.575980873187789,
+    "adx_neg": 32.79392582574455,
+    "bb_high": 430.31203618585363,
+    "bb_low": 390.6279638141463,
+    "bb_mid": 410.46999999999997,
+    "vwap20": 412.8048066312758,
     "high_52w": 577.0,
-    "low_52w": 395.65,
-    "volume": 827894.0,
-    "avg_volume20": 2114857.35
+    "low_52w": 392.15,
+    "volume": 3323557.0,
+    "avg_volume20": 2058092.65
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 524.45,
-      "ema50": 511.79
-    },
     {
       "date": "2026-02-27",
       "close": 518.5,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 398.45,
       "ema50": 421.68
+    },
+    {
+      "date": "2026-08-25",
+      "close": 395.05,
+      "ema50": 420.64
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 398.45 vs EMA20 410.39",
-      "ema20_above_ema50": "EMA20 410.39 vs EMA50 421.68",
-      "ema50_above_ema200": "EMA50 421.68 vs EMA200 455.01",
-      "rsi_above_50": "RSI(14) 31.90 vs 50",
-      "macd_bullish": "MACD -7.55 vs signal -6.69",
-      "adx_trending_up": "ADX(14) 37.07 vs 20, +DI 8.13 vs -DI 31.12",
-      "price_above_vwap20": "Close 398.45 vs 20d VWAP 415.84",
-      "price_above_bb_mid": "Close 398.45 vs BB mid 411.95"
+      "price_above_ema20": "Close 395.05 vs EMA20 408.93",
+      "ema20_above_ema50": "EMA20 408.93 vs EMA50 420.64",
+      "ema50_above_ema200": "EMA50 420.64 vs EMA200 454.42",
+      "rsi_above_50": "RSI(14) 29.51 vs 50",
+      "macd_bullish": "MACD -7.84 vs signal -6.92",
+      "adx_trending_up": "ADX(14) 38.88 vs 20, +DI 7.58 vs -DI 32.79",
+      "price_above_vwap20": "Close 395.05 vs 20d VWAP 412.80",
+      "price_above_bb_mid": "Close 395.05 vs BB mid 410.47"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.60 = 1.7% of price",
-        "rsi_extreme": "RSI(14) 31.9",
-        "below_ema200": "Close 398.45 vs EMA200 455.01",
-        "extended_above_ema20": "Close 398.45 vs EMA20 410.39 (-2.9%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 398.45 vs 52w low 395.65"
+        "atr_high": "ATR 6.58 = 1.7% of price",
+        "rsi_extreme": "RSI(14) 29.5",
+        "below_ema200": "Close 395.05 vs EMA200 454.42",
+        "extended_above_ema20": "Close 395.05 vs EMA20 408.93 (-3.4%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 395.05 vs 52w low 392.15"
       },
       "conditions_on": [
         "below_ema200",
@@ -689,7 +690,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:15.870290+00:00"
+  "updated_at": "2026-08-25T10:48:01.662595+00:00"
 }

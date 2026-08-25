@@ -3,35 +3,30 @@
   "name": "The Ramco Cements",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 909.0,
-    "prev_close": 899.05,
-    "change_pct": 1.1067237639730878,
-    "ema20": 916.6612587353586,
-    "ema50": 920.2736875455385,
-    "ema200": 967.8423224333364,
-    "rsi14": 46.78333995324445,
-    "macd": -4.294292611752553,
-    "macd_signal": -1.3161389343953953,
-    "atr14": 25.157774787541154,
-    "adx14": 11.444644398547593,
-    "adx_pos": 18.65495634639899,
-    "adx_neg": 15.744478089747766,
-    "bb_high": 951.7117696302317,
-    "bb_low": 890.2282303697683,
-    "bb_mid": 920.97,
-    "vwap20": 927.9395092131019,
+    "date": "2026-08-25",
+    "close": 908.0,
+    "prev_close": 903.9,
+    "change_pct": 0.45358999889368545,
+    "ema20": 915.3969211687258,
+    "ema50": 919.6002096025762,
+    "ema200": 967.1966351083148,
+    "rsi14": 46.53213968715863,
+    "macd": -4.714342761733519,
+    "macd_signal": -2.0608737169570177,
+    "atr14": 26.007219445573924,
+    "adx14": 11.95742084036301,
+    "adx_pos": 20.61549401518315,
+    "adx_neg": 14.142360003028745,
+    "bb_high": 951.9455211122487,
+    "bb_low": 889.4344788877512,
+    "bb_mid": 920.6899999999999,
+    "vwap20": 927.1453092525312,
     "high_52w": 1214.5,
     "low_52w": 838.3,
-    "volume": 386326.0,
-    "avg_volume20": 290291.3
+    "volume": 629363.0,
+    "avg_volume20": 313304.9
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 1140.2,
-      "ema50": 1106.71
-    },
     {
       "date": "2026-02-27",
       "close": 1129.8,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-24",
-      "close": 909.0,
-      "ema50": 920.27
+      "close": 903.9,
+      "ema50": 920.07
+    },
+    {
+      "date": "2026-08-25",
+      "close": 908.0,
+      "ema50": 919.6
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 909.00 vs EMA20 916.66",
-      "ema20_above_ema50": "EMA20 916.66 vs EMA50 920.27",
-      "ema50_above_ema200": "EMA50 920.27 vs EMA200 967.84",
-      "rsi_above_50": "RSI(14) 46.78 vs 50",
-      "macd_bullish": "MACD -4.29 vs signal -1.32",
-      "adx_trending_up": "ADX(14) 11.44 vs 20, +DI 18.65 vs -DI 15.74",
-      "price_above_vwap20": "Close 909.00 vs 20d VWAP 927.94",
-      "price_above_bb_mid": "Close 909.00 vs BB mid 920.97"
+      "price_above_ema20": "Close 908.00 vs EMA20 915.40",
+      "ema20_above_ema50": "EMA20 915.40 vs EMA50 919.60",
+      "ema50_above_ema200": "EMA50 919.60 vs EMA200 967.20",
+      "rsi_above_50": "RSI(14) 46.53 vs 50",
+      "macd_bullish": "MACD -4.71 vs signal -2.06",
+      "adx_trending_up": "ADX(14) 11.96 vs 20, +DI 20.62 vs -DI 14.14",
+      "price_above_vwap20": "Close 908.00 vs 20d VWAP 927.15",
+      "price_above_bb_mid": "Close 908.00 vs BB mid 920.69"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 25.16 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 46.8",
-        "below_ema200": "Close 909.00 vs EMA200 967.84",
-        "extended_above_ema20": "Close 909.00 vs EMA20 916.66 (-0.8%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 909.00 vs 52w low 838.30"
+        "atr_high": "ATR 26.01 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 46.5",
+        "below_ema200": "Close 908.00 vs EMA200 967.20",
+        "extended_above_ema20": "Close 908.00 vs EMA20 915.40 (-0.8%)",
+        "large_day_move": "Day change +0.5%",
+        "near_52w_low": "Close 908.00 vs 52w low 838.30"
       },
       "conditions_on": [
         "atr_high",
@@ -689,8 +690,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:52:16.700781+00:00"
+  "updated_at": "2026-08-25T10:49:08.490151+00:00"
 }

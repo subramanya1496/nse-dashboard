@@ -3,35 +3,30 @@
   "name": "Krishna Institute of Medical Sciences",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 766.35,
-    "prev_close": 782.5,
-    "change_pct": -2.0638977635782716,
-    "ema20": 797.2556599444302,
-    "ema50": 791.3523024557434,
-    "ema200": 735.9295283465592,
-    "rsi14": 35.06082358557141,
-    "macd": -4.36336605448389,
-    "macd_signal": 0.04095268083181791,
-    "atr14": 19.50745999461562,
-    "adx14": 13.877394121789376,
-    "adx_pos": 13.197739895980554,
-    "adx_neg": 22.231974563969644,
-    "bb_high": 826.4275822234493,
-    "bb_low": 776.8674177765507,
-    "bb_mid": 801.6475,
-    "vwap20": 804.2968781885885,
+    "date": "2026-08-25",
+    "close": 772.5,
+    "prev_close": 766.35,
+    "change_pct": 0.8025053826580515,
+    "ema20": 794.8979780449607,
+    "ema50": 790.6129964770868,
+    "ema200": 736.2934136366432,
+    "rsi14": 38.63048344671042,
+    "macd": -5.722174024397873,
+    "macd_signal": -1.1116726602141205,
+    "atr14": 19.392641423571643,
+    "adx14": 14.707511201865044,
+    "adx_pos": 12.327602982475009,
+    "adx_neg": 20.766203766795652,
+    "bb_high": 828.195813565715,
+    "bb_low": 772.5141864342851,
+    "bb_mid": 800.355,
+    "vwap20": 801.8619446966475,
     "high_52w": 858.0,
     "low_52w": 575.8,
-    "volume": 735056.0,
-    "avg_volume20": 621601.45
+    "volume": 1119308.0,
+    "avg_volume20": 658970.9
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 743.3,
-      "ema50": 661.97
-    },
     {
       "date": "2026-02-27",
       "close": 745.05,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 766.35,
       "ema50": 791.35
+    },
+    {
+      "date": "2026-08-25",
+      "close": 772.5,
+      "ema50": 790.61
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 766.35 vs EMA20 797.26",
-      "ema20_above_ema50": "EMA20 797.26 vs EMA50 791.35",
-      "ema50_above_ema200": "EMA50 791.35 vs EMA200 735.93",
-      "rsi_above_50": "RSI(14) 35.06 vs 50",
-      "macd_bullish": "MACD -4.36 vs signal 0.04",
-      "adx_trending_up": "ADX(14) 13.88 vs 20, +DI 13.20 vs -DI 22.23",
-      "price_above_vwap20": "Close 766.35 vs 20d VWAP 804.30",
-      "price_above_bb_mid": "Close 766.35 vs BB mid 801.65"
+      "price_above_ema20": "Close 772.50 vs EMA20 794.90",
+      "ema20_above_ema50": "EMA20 794.90 vs EMA50 790.61",
+      "ema50_above_ema200": "EMA50 790.61 vs EMA200 736.29",
+      "rsi_above_50": "RSI(14) 38.63 vs 50",
+      "macd_bullish": "MACD -5.72 vs signal -1.11",
+      "adx_trending_up": "ADX(14) 14.71 vs 20, +DI 12.33 vs -DI 20.77",
+      "price_above_vwap20": "Close 772.50 vs 20d VWAP 801.86",
+      "price_above_bb_mid": "Close 772.50 vs BB mid 800.36"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 19.51 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 35.1",
-        "below_ema200": "Close 766.35 vs EMA200 735.93",
-        "extended_above_ema20": "Close 766.35 vs EMA20 797.26 (-3.9%)",
-        "large_day_move": "Day change -2.1%",
-        "near_52w_low": "Close 766.35 vs 52w low 575.80"
+        "atr_high": "ATR 19.39 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 38.6",
+        "below_ema200": "Close 772.50 vs EMA200 736.29",
+        "extended_above_ema20": "Close 772.50 vs EMA20 794.90 (-2.8%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 772.50 vs 52w low 575.80"
       },
       "conditions_on": [
         "atr_high"
@@ -691,7 +692,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:51:47.938842+00:00"
+  "updated_at": "2026-08-25T10:48:34.459906+00:00"
 }

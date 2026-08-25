@@ -3,35 +3,30 @@
   "name": "Oil India Ltd",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 477.0,
-    "prev_close": 475.0,
-    "change_pct": 0.42105263157894735,
-    "ema20": 464.70464012253746,
-    "ema50": 456.1238621088965,
-    "ema200": 451.5391341008311,
-    "rsi14": 60.21137132885719,
-    "macd": 9.406848463322888,
-    "macd_signal": 8.240374358323177,
-    "atr14": 12.175824835908752,
-    "adx14": 31.120787301048143,
-    "adx_pos": 25.70890827024072,
-    "adx_neg": 17.12135994812893,
-    "bb_high": 490.02792796126215,
-    "bb_low": 434.70707203873775,
-    "bb_mid": 462.36749999999995,
-    "vwap20": 461.930196339464,
+    "date": "2026-08-25",
+    "close": 467.5,
+    "prev_close": 477.0,
+    "change_pct": -1.9916142557651992,
+    "ema20": 464.970864872772,
+    "ema50": 456.5699851634496,
+    "ema200": 451.6979486868925,
+    "rsi14": 53.7317692458653,
+    "macd": 8.449180537847724,
+    "macd_signal": 8.282135594228087,
+    "atr14": 12.23112306191527,
+    "adx14": 29.63816100105601,
+    "adx_pos": 23.764627272547823,
+    "adx_neg": 19.301269504490485,
+    "bb_high": 490.007534912228,
+    "bb_low": 437.017465087772,
+    "bb_mid": 463.5125,
+    "vwap20": 463.0678991057712,
     "high_52w": 531.0,
     "low_52w": 384.6,
-    "volume": 892260.0,
-    "avg_volume20": 3090215.9
+    "volume": 1223240.0,
+    "avg_volume20": 2973278.75
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 473.45,
-      "ema50": 457.29
-    },
     {
       "date": "2026-02-27",
       "close": 483.9,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 477.0,
       "ema50": 456.12
+    },
+    {
+      "date": "2026-08-25",
+      "close": 467.5,
+      "ema50": 456.57
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 477.00 vs EMA20 464.70",
-      "ema20_above_ema50": "EMA20 464.70 vs EMA50 456.12",
-      "ema50_above_ema200": "EMA50 456.12 vs EMA200 451.54",
-      "rsi_above_50": "RSI(14) 60.21 vs 50",
-      "macd_bullish": "MACD 9.41 vs signal 8.24",
-      "adx_trending_up": "ADX(14) 31.12 vs 20, +DI 25.71 vs -DI 17.12",
-      "price_above_vwap20": "Close 477.00 vs 20d VWAP 461.93",
-      "price_above_bb_mid": "Close 477.00 vs BB mid 462.37"
+      "price_above_ema20": "Close 467.50 vs EMA20 464.97",
+      "ema20_above_ema50": "EMA20 464.97 vs EMA50 456.57",
+      "ema50_above_ema200": "EMA50 456.57 vs EMA200 451.70",
+      "rsi_above_50": "RSI(14) 53.73 vs 50",
+      "macd_bullish": "MACD 8.45 vs signal 8.28",
+      "adx_trending_up": "ADX(14) 29.64 vs 20, +DI 23.76 vs -DI 19.30",
+      "price_above_vwap20": "Close 467.50 vs 20d VWAP 463.07",
+      "price_above_bb_mid": "Close 467.50 vs BB mid 463.51"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 4,
+      "label": "Watch closely",
+      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.18 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 60.2",
-        "below_ema200": "Close 477.00 vs EMA200 451.54",
-        "extended_above_ema20": "Close 477.00 vs EMA20 464.70 (+2.6%)",
-        "large_day_move": "Day change +0.4%",
-        "near_52w_low": "Close 477.00 vs 52w low 384.60"
+        "atr_high": "ATR 12.23 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 53.7",
+        "below_ema200": "Close 467.50 vs EMA200 451.70",
+        "extended_above_ema20": "Close 467.50 vs EMA20 464.97 (+0.5%)",
+        "large_day_move": "Day change -2.0%",
+        "near_52w_low": "Close 467.50 vs 52w low 384.60"
       },
       "conditions_on": [
         "atr_high"
@@ -699,7 +700,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:52:07.110890+00:00"
+  "updated_at": "2026-08-25T10:48:57.290840+00:00"
 }

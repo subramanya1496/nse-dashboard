@@ -3,35 +3,30 @@
   "name": "Tech Mahindra",
   "sector": "IT",
   "indicators": {
-    "date": "2026-08-24",
-    "close": 1584.0,
+    "date": "2026-08-25",
+    "close": 1599.9,
     "prev_close": 1584.0,
-    "change_pct": 0.0,
-    "ema20": 1600.477492507587,
-    "ema50": 1557.8264995791542,
-    "ema200": 1512.425842756722,
-    "rsi14": 47.8715019142722,
-    "macd": 11.982262484355033,
-    "macd_signal": 24.625923154565868,
-    "atr14": 35.33247319272841,
-    "adx14": 19.675040623968528,
-    "adx_pos": 15.8562768935167,
-    "adx_neg": 19.944408705468103,
-    "bb_high": 1677.708352071078,
-    "bb_low": 1576.901647928922,
-    "bb_mid": 1627.305,
-    "vwap20": 1635.5705718570284,
+    "change_pct": 1.0037878787878847,
+    "ema20": 1600.42249322115,
+    "ema50": 1559.4764407721286,
+    "ema200": 1513.2962323810332,
+    "rsi14": 52.666759607856065,
+    "macd": 10.751994358649881,
+    "macd_signal": 21.851137395382672,
+    "atr14": 35.51586796467639,
+    "adx14": 19.51899725207096,
+    "adx_pos": 14.647656375626006,
+    "adx_neg": 20.85769647570125,
+    "bb_high": 1677.1711688808323,
+    "bb_low": 1573.9088311191676,
+    "bb_mid": 1625.54,
+    "vwap20": 1635.334616645609,
     "high_52w": 1854.0,
     "low_52w": 1304.1,
-    "volume": 2197042.0,
-    "avg_volume20": 2924014.95
+    "volume": 1383429.0,
+    "avg_volume20": 2739038.45
   },
   "price_history": [
-    {
-      "date": "2026-02-26",
-      "close": 1361.8,
-      "ema50": 1564.01
-    },
     {
       "date": "2026-02-27",
       "close": 1357.8,
@@ -626,6 +621,11 @@
       "date": "2026-08-24",
       "close": 1584.0,
       "ema50": 1557.83
+    },
+    {
+      "date": "2026-08-25",
+      "close": 1599.9,
+      "ema50": 1559.48
     }
   ],
   "flags": {
@@ -633,36 +633,37 @@
       "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,584.00 vs EMA20 1,600.48",
-      "ema20_above_ema50": "EMA20 1,600.48 vs EMA50 1,557.83",
-      "ema50_above_ema200": "EMA50 1,557.83 vs EMA200 1,512.43",
-      "rsi_above_50": "RSI(14) 47.87 vs 50",
-      "macd_bullish": "MACD 11.98 vs signal 24.63",
-      "adx_trending_up": "ADX(14) 19.68 vs 20, +DI 15.86 vs -DI 19.94",
-      "price_above_vwap20": "Close 1,584.00 vs 20d VWAP 1,635.57",
-      "price_above_bb_mid": "Close 1,584.00 vs BB mid 1,627.31"
+      "price_above_ema20": "Close 1,599.90 vs EMA20 1,600.42",
+      "ema20_above_ema50": "EMA20 1,600.42 vs EMA50 1,559.48",
+      "ema50_above_ema200": "EMA50 1,559.48 vs EMA200 1,513.30",
+      "rsi_above_50": "RSI(14) 52.67 vs 50",
+      "macd_bullish": "MACD 10.75 vs signal 21.85",
+      "adx_trending_up": "ADX(14) 19.52 vs 20, +DI 14.65 vs -DI 20.86",
+      "price_above_vwap20": "Close 1,599.90 vs 20d VWAP 1,635.33",
+      "price_above_bb_mid": "Close 1,599.90 vs BB mid 1,625.54"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200"
+      "ema50_above_ema200",
+      "rsi_above_50"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -676,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 35.33 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 47.9",
-        "below_ema200": "Close 1,584.00 vs EMA200 1,512.43",
-        "extended_above_ema20": "Close 1,584.00 vs EMA20 1,600.48 (-1.0%)",
-        "large_day_move": "Day change +0.0%",
-        "near_52w_low": "Close 1,584.00 vs 52w low 1,304.10"
+        "atr_high": "ATR 35.52 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 52.7",
+        "below_ema200": "Close 1,599.90 vs EMA200 1,513.30",
+        "extended_above_ema20": "Close 1,599.90 vs EMA20 1,600.42 (-0.0%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 1,599.90 vs 52w low 1,304.10"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-24T10:52:31.495484+00:00"
+  "updated_at": "2026-08-25T10:49:23.690127+00:00"
 }
