@@ -3,35 +3,30 @@
   "name": "Steel Authority of India",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-08-25",
-    "close": 184.59,
-    "prev_close": 179.65,
-    "change_pct": 2.749791260784858,
-    "ema20": 173.423342860702,
-    "ema50": 172.93885623643686,
-    "ema200": 163.56770218350977,
-    "rsi14": 65.890191540476,
-    "macd": 2.206746607688359,
-    "macd_signal": 0.9958268061896849,
-    "atr14": 5.8584926158167905,
-    "adx14": 15.266216576250839,
-    "adx_pos": 27.64384929779601,
-    "adx_neg": 19.16054080746727,
-    "bb_high": 181.5879202654022,
-    "bb_low": 164.73207973459785,
-    "bb_mid": 173.16000000000003,
-    "vwap20": 174.55977796387933,
+    "date": "2026-08-26",
+    "close": 194.9,
+    "prev_close": 184.59,
+    "change_pct": 5.585351319139717,
+    "ema20": 175.46873877873034,
+    "ema50": 173.8000753351717,
+    "ema200": 163.85718475660929,
+    "rsi14": 73.3256675405362,
+    "macd": 3.623583701073386,
+    "macd_signal": 1.5213781851998394,
+    "atr14": 6.447171714631948,
+    "adx14": 16.712259480337888,
+    "adx_pos": 33.97244632946353,
+    "adx_neg": 16.167383084188202,
+    "bb_high": 186.9608138672377,
+    "bb_low": 161.75318613276235,
+    "bb_mid": 174.35700000000003,
+    "vwap20": 176.66088886056872,
     "high_52w": 209.7,
     "low_52w": 118.1,
-    "volume": 68905208.0,
-    "avg_volume20": 21751566.75
+    "volume": 44553300.0,
+    "avg_volume20": 21691229.4
   },
   "price_history": [
-    {
-      "date": "2026-02-27",
-      "close": 165.71,
-      "ema50": 152.24
-    },
     {
       "date": "2026-03-02",
       "close": 165.59,
@@ -626,6 +621,11 @@
       "date": "2026-08-25",
       "close": 184.59,
       "ema50": 172.94
+    },
+    {
+      "date": "2026-08-26",
+      "close": 194.9,
+      "ema50": 173.8
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 184.59 vs EMA20 173.42",
-      "ema20_above_ema50": "EMA20 173.42 vs EMA50 172.94",
-      "ema50_above_ema200": "EMA50 172.94 vs EMA200 163.57",
-      "rsi_above_50": "RSI(14) 65.89 vs 50",
-      "macd_bullish": "MACD 2.21 vs signal 1.00",
-      "adx_trending_up": "ADX(14) 15.27 vs 20, +DI 27.64 vs -DI 19.16",
-      "price_above_vwap20": "Close 184.59 vs 20d VWAP 174.56",
-      "price_above_bb_mid": "Close 184.59 vs BB mid 173.16"
+      "price_above_ema20": "Close 194.90 vs EMA20 175.47",
+      "ema20_above_ema50": "EMA20 175.47 vs EMA50 173.80",
+      "ema50_above_ema200": "EMA50 173.80 vs EMA200 163.86",
+      "rsi_above_50": "RSI(14) 73.33 vs 50",
+      "macd_bullish": "MACD 3.62 vs signal 1.52",
+      "adx_trending_up": "ADX(14) 16.71 vs 20, +DI 33.97 vs -DI 16.17",
+      "price_above_vwap20": "Close 194.90 vs 20d VWAP 176.66",
+      "price_above_bb_mid": "Close 194.90 vs BB mid 174.36"
     },
     "flags_on": [
       "price_above_ema20",
@@ -676,24 +676,26 @@
         "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": false,
-        "extended_above_ema20": false,
-        "large_day_move": false,
+        "extended_above_ema20": true,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.86 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 65.9",
-        "below_ema200": "Close 184.59 vs EMA200 163.57",
-        "extended_above_ema20": "Close 184.59 vs EMA20 173.42 (+6.4%)",
-        "large_day_move": "Day change +2.7%",
-        "near_52w_low": "Close 184.59 vs 52w low 118.10"
+        "atr_high": "ATR 6.45 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 73.3",
+        "below_ema200": "Close 194.90 vs EMA200 163.86",
+        "extended_above_ema20": "Close 194.90 vs EMA20 175.47 (+11.1%)",
+        "large_day_move": "Day change +5.6%",
+        "near_52w_low": "Close 194.90 vs 52w low 118.10"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "extended_above_ema20",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": true,
@@ -711,5 +713,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-25T10:49:11.272346+00:00"
+  "updated_at": "2026-08-26T10:51:58.309936+00:00"
 }

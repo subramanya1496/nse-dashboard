@@ -3,35 +3,30 @@
   "name": "Senco Gold Ltd",
   "sector": "Jewellery",
   "indicators": {
-    "date": "2026-08-25",
-    "close": 368.65,
-    "prev_close": 371.75,
-    "change_pct": -0.8338937457969126,
-    "ema20": 363.47035647077377,
-    "ema50": 361.5442118969616,
-    "ema200": 344.7528414647525,
-    "rsi14": 51.6027410560808,
-    "macd": -5.662909952250345,
-    "macd_signal": -3.82135111064504,
-    "atr14": 17.09128778669505,
-    "adx14": 25.277450268053265,
-    "adx_pos": 26.542741738313,
-    "adx_neg": 24.616457176828355,
-    "bb_high": 427.2875076889777,
-    "bb_low": 317.5524923110223,
-    "bb_mid": 372.42,
-    "vwap20": 371.57073593184833,
+    "date": "2026-08-26",
+    "close": 367.15,
+    "prev_close": 368.65,
+    "change_pct": -0.4068900040689001,
+    "ema20": 363.8207987116524,
+    "ema50": 361.7640434792639,
+    "ema200": 344.9432047865378,
+    "rsi14": 50.97987299879115,
+    "macd": -4.592456659659433,
+    "macd_signal": -3.9755722203992345,
+    "atr14": 16.62405294470847,
+    "adx14": 23.533161626832424,
+    "adx_pos": 25.339554292197242,
+    "adx_neg": 25.777839670588225,
+    "bb_high": 421.6704253921849,
+    "bb_low": 318.54457460781504,
+    "bb_mid": 370.10749999999996,
+    "vwap20": 369.09292366283347,
     "high_52w": 430.0,
     "low_52w": 276.0,
-    "volume": 1124170.0,
-    "avg_volume20": 1780401.5
+    "volume": 754754.0,
+    "avg_volume20": 1724754.0
   },
   "price_history": [
-    {
-      "date": "2026-02-27",
-      "close": 317.25,
-      "ema50": 327.7
-    },
     {
       "date": "2026-03-02",
       "close": 307.0,
@@ -40,7 +35,7 @@
     {
       "date": "2026-03-04",
       "close": 295.75,
-      "ema50": 325.67
+      "ema50": 325.66
     },
     {
       "date": "2026-03-05",
@@ -70,7 +65,7 @@
     {
       "date": "2026-03-12",
       "close": 298.05,
-      "ema50": 319.76
+      "ema50": 319.75
     },
     {
       "date": "2026-03-13",
@@ -626,6 +621,11 @@
       "date": "2026-08-25",
       "close": 368.65,
       "ema50": 361.54
+    },
+    {
+      "date": "2026-08-26",
+      "close": 367.15,
+      "ema50": 361.76
     }
   ],
   "flags": {
@@ -635,28 +635,27 @@
       "ema50_above_ema200": true,
       "rsi_above_50": true,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 368.65 vs EMA20 363.47",
-      "ema20_above_ema50": "EMA20 363.47 vs EMA50 361.54",
-      "ema50_above_ema200": "EMA50 361.54 vs EMA200 344.75",
-      "rsi_above_50": "RSI(14) 51.60 vs 50",
-      "macd_bullish": "MACD -5.66 vs signal -3.82",
-      "adx_trending_up": "ADX(14) 25.28 vs 20, +DI 26.54 vs -DI 24.62",
-      "price_above_vwap20": "Close 368.65 vs 20d VWAP 371.57",
-      "price_above_bb_mid": "Close 368.65 vs BB mid 372.42"
+      "price_above_ema20": "Close 367.15 vs EMA20 363.82",
+      "ema20_above_ema50": "EMA20 363.82 vs EMA50 361.76",
+      "ema50_above_ema200": "EMA50 361.76 vs EMA200 344.94",
+      "rsi_above_50": "RSI(14) 50.98 vs 50",
+      "macd_bullish": "MACD -4.59 vs signal -3.98",
+      "adx_trending_up": "ADX(14) 23.53 vs 20, +DI 25.34 vs -DI 25.78",
+      "price_above_vwap20": "Close 367.15 vs 20d VWAP 369.09",
+      "price_above_bb_mid": "Close 367.15 vs BB mid 370.11"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50",
-      "adx_trending_up"
+      "rsi_above_50"
     ],
-    "flag_count": 5,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
@@ -665,7 +664,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags",
+        "4/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -679,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 17.09 = 4.6% of price",
-        "rsi_extreme": "RSI(14) 51.6",
-        "below_ema200": "Close 368.65 vs EMA200 344.75",
-        "extended_above_ema20": "Close 368.65 vs EMA20 363.47 (+1.4%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 368.65 vs 52w low 276.00"
+        "atr_high": "ATR 16.62 = 4.5% of price",
+        "rsi_extreme": "RSI(14) 51.0",
+        "below_ema200": "Close 367.15 vs EMA200 344.94",
+        "extended_above_ema20": "Close 367.15 vs EMA20 363.82 (+0.9%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 367.15 vs 52w low 276.00"
       },
       "conditions_on": [
         "atr_high"
@@ -701,7 +700,7 @@
     },
     "trend": {
       "daily": "bullish",
-      "weekly": "bullish",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -709,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-25T10:49:13.317965+00:00"
+  "updated_at": "2026-08-26T10:52:01.927952+00:00"
 }

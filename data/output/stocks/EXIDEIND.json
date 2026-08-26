@@ -3,35 +3,30 @@
   "name": "Exide Industries",
   "sector": "Auto Ancillary",
   "indicators": {
-    "date": "2026-08-25",
-    "close": 448.75,
-    "prev_close": 453.3,
-    "change_pct": -1.0037502757555727,
-    "ema20": 459.8905787760619,
-    "ema50": 437.1785902549157,
-    "ema200": 389.5325633060957,
-    "rsi14": 46.2040450143496,
-    "macd": 6.659805048124213,
-    "macd_signal": 11.940461077776131,
-    "atr14": 13.439600778942367,
-    "adx14": 29.66317602284093,
-    "adx_pos": 15.514879272965299,
-    "adx_neg": 19.718798570899466,
-    "bb_high": 497.36820176050776,
-    "bb_low": 434.59679823949216,
-    "bb_mid": 465.98249999999996,
-    "vwap20": 461.90308869649334,
+    "date": "2026-08-26",
+    "close": 444.0,
+    "prev_close": 448.75,
+    "change_pct": -1.0584958217270195,
+    "ema20": 458.3771903211987,
+    "ema50": 437.44609118791755,
+    "ema200": 390.0211448879796,
+    "rsi14": 43.721718912095234,
+    "macd": 4.690176087769942,
+    "macd_signal": 10.49040407985495,
+    "atr14": 13.229629294727458,
+    "adx14": 28.807353636150133,
+    "adx_pos": 14.635326324638179,
+    "adx_neg": 20.92255012262097,
+    "bb_high": 496.3499415692228,
+    "bb_low": 436.4500584307772,
+    "bb_mid": 466.4,
+    "vwap20": 462.6032957289716,
     "high_52w": 496.4,
     "low_52w": 287.0,
-    "volume": 1017559.0,
-    "avg_volume20": 5082179.5
+    "volume": 1173750.0,
+    "avg_volume20": 4998538.05
   },
   "price_history": [
-    {
-      "date": "2026-02-27",
-      "close": 334.3,
-      "ema50": 344.53
-    },
     {
       "date": "2026-03-02",
       "close": 322.8,
@@ -626,6 +621,11 @@
       "date": "2026-08-25",
       "close": 448.75,
       "ema50": 437.18
+    },
+    {
+      "date": "2026-08-26",
+      "close": 444.0,
+      "ema50": 437.45
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 448.75 vs EMA20 459.89",
-      "ema20_above_ema50": "EMA20 459.89 vs EMA50 437.18",
-      "ema50_above_ema200": "EMA50 437.18 vs EMA200 389.53",
-      "rsi_above_50": "RSI(14) 46.20 vs 50",
-      "macd_bullish": "MACD 6.66 vs signal 11.94",
-      "adx_trending_up": "ADX(14) 29.66 vs 20, +DI 15.51 vs -DI 19.72",
-      "price_above_vwap20": "Close 448.75 vs 20d VWAP 461.90",
-      "price_above_bb_mid": "Close 448.75 vs BB mid 465.98"
+      "price_above_ema20": "Close 444.00 vs EMA20 458.38",
+      "ema20_above_ema50": "EMA20 458.38 vs EMA50 437.45",
+      "ema50_above_ema200": "EMA50 437.45 vs EMA200 390.02",
+      "rsi_above_50": "RSI(14) 43.72 vs 50",
+      "macd_bullish": "MACD 4.69 vs signal 10.49",
+      "adx_trending_up": "ADX(14) 28.81 vs 20, +DI 14.64 vs -DI 20.92",
+      "price_above_vwap20": "Close 444.00 vs 20d VWAP 462.60",
+      "price_above_bb_mid": "Close 444.00 vs BB mid 466.40"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.44 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 46.2",
-        "below_ema200": "Close 448.75 vs EMA200 389.53",
-        "extended_above_ema20": "Close 448.75 vs EMA20 459.89 (-2.4%)",
-        "large_day_move": "Day change -1.0%",
-        "near_52w_low": "Close 448.75 vs 52w low 287.00"
+        "atr_high": "ATR 13.23 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 43.7",
+        "below_ema200": "Close 444.00 vs EMA200 390.02",
+        "extended_above_ema20": "Close 444.00 vs EMA20 458.38 (-3.1%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 444.00 vs 52w low 287.00"
       },
       "conditions_on": [
         "atr_high"
@@ -693,7 +694,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-25T10:48:07.266347+00:00"
+  "updated_at": "2026-08-26T10:50:56.701139+00:00"
 }
