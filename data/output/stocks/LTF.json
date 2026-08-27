@@ -3,35 +3,30 @@
   "name": "L&T Finance",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-08-26",
-    "close": 322.2,
-    "prev_close": 319.5,
-    "change_pct": 0.8450704225352077,
-    "ema20": 315.4830573694877,
-    "ema50": 308.8081708538342,
-    "ema200": 284.6997472377665,
-    "rsi14": 57.402940983392874,
-    "macd": 2.685629151069179,
-    "macd_signal": 2.467375674597047,
-    "atr14": 8.790242723374435,
-    "adx14": 12.677871534865755,
-    "adx_pos": 25.551624841791604,
-    "adx_neg": 14.55195071531138,
-    "bb_high": 324.7288432918773,
-    "bb_low": 306.1211567081227,
-    "bb_mid": 315.425,
-    "vwap20": 316.4681992755336,
+    "date": "2026-08-27",
+    "close": 321.9,
+    "prev_close": 322.2,
+    "change_pct": -0.09310986964618603,
+    "ema20": 316.0941947628699,
+    "ema50": 309.3215837533933,
+    "ema200": 285.1483487511922,
+    "rsi14": 57.09064195745135,
+    "macd": 2.8793450911514356,
+    "macd_signal": 2.5497695577901793,
+    "atr14": 8.523082528877216,
+    "adx14": 13.332649409891008,
+    "adx_pos": 24.47022781569702,
+    "adx_neg": 15.696009036957944,
+    "bb_high": 324.9058489812612,
+    "bb_low": 307.50915101873875,
+    "bb_mid": 316.2075,
+    "vwap20": 316.9413517041833,
     "high_52w": 338.6,
-    "low_52w": 214.63,
-    "volume": 3557857.0,
-    "avg_volume20": 4712870.75
+    "low_52w": 215.26,
+    "volume": 3273758.0,
+    "avg_volume20": 4731472.25
   },
   "price_history": [
-    {
-      "date": "2026-03-02",
-      "close": 275.8,
-      "ema50": 292.65
-    },
     {
       "date": "2026-03-04",
       "close": 271.05,
@@ -626,6 +621,11 @@
       "date": "2026-08-26",
       "close": 322.2,
       "ema50": 308.81
+    },
+    {
+      "date": "2026-08-27",
+      "close": 321.9,
+      "ema50": 309.32
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 322.20 vs EMA20 315.48",
-      "ema20_above_ema50": "EMA20 315.48 vs EMA50 308.81",
-      "ema50_above_ema200": "EMA50 308.81 vs EMA200 284.70",
-      "rsi_above_50": "RSI(14) 57.40 vs 50",
-      "macd_bullish": "MACD 2.69 vs signal 2.47",
-      "adx_trending_up": "ADX(14) 12.68 vs 20, +DI 25.55 vs -DI 14.55",
-      "price_above_vwap20": "Close 322.20 vs 20d VWAP 316.47",
-      "price_above_bb_mid": "Close 322.20 vs BB mid 315.43"
+      "price_above_ema20": "Close 321.90 vs EMA20 316.09",
+      "ema20_above_ema50": "EMA20 316.09 vs EMA50 309.32",
+      "ema50_above_ema200": "EMA50 309.32 vs EMA200 285.15",
+      "rsi_above_50": "RSI(14) 57.09 vs 50",
+      "macd_bullish": "MACD 2.88 vs signal 2.55",
+      "adx_trending_up": "ADX(14) 13.33 vs 20, +DI 24.47 vs -DI 15.70",
+      "price_above_vwap20": "Close 321.90 vs 20d VWAP 316.94",
+      "price_above_bb_mid": "Close 321.90 vs BB mid 316.21"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,11 +663,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 4,
+      "label": "Watch closely",
+      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
       "reasons": [
-        "7/8 bullish flags"
+        "7/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -680,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 8.79 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 57.4",
-        "below_ema200": "Close 322.20 vs EMA200 284.70",
-        "extended_above_ema20": "Close 322.20 vs EMA20 315.48 (+2.1%)",
-        "large_day_move": "Day change +0.8%",
-        "near_52w_low": "Close 322.20 vs 52w low 214.63"
+        "atr_high": "ATR 8.52 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 57.1",
+        "below_ema200": "Close 321.90 vs EMA200 285.15",
+        "extended_above_ema20": "Close 321.90 vs EMA20 316.09 (+1.8%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 321.90 vs 52w low 215.26"
       },
       "conditions_on": [
         "atr_high"
@@ -698,7 +699,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -710,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-26T10:51:29.906447+00:00"
+  "updated_at": "2026-08-27T20:25:43.942399+00:00"
 }
