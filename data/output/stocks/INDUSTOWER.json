@@ -3,35 +3,30 @@
   "name": "Indus Towers",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-08-27",
-    "close": 379.95,
-    "prev_close": 377.7,
-    "change_pct": 0.5957108816521048,
-    "ema20": 381.07644853341026,
-    "ema50": 390.5711806273602,
-    "ema200": 404.2370951734509,
-    "rsi14": 47.4978404712802,
-    "macd": -4.115127526386971,
-    "macd_signal": -5.166038134500798,
-    "atr14": 9.686769955486682,
-    "adx14": 25.58592775427002,
-    "adx_pos": 17.964502418188648,
-    "adx_neg": 22.52191435562332,
-    "bb_high": 395.7993813868875,
-    "bb_low": 365.03561861311243,
-    "bb_mid": 380.41749999999996,
-    "vwap20": 379.71599711223575,
+    "date": "2026-08-28",
+    "close": 380.0,
+    "prev_close": 379.95,
+    "change_pct": 0.013159626266617023,
+    "ema20": 380.97392962546644,
+    "ema50": 390.15662939222824,
+    "ema200": 404.0446710129561,
+    "rsi14": 47.53639759332758,
+    "macd": -3.7232570902081648,
+    "macd_signal": -4.877481925715429,
+    "atr14": 9.491286387294963,
+    "adx14": 24.335282771698242,
+    "adx_pos": 18.15374899367511,
+    "adx_neg": 21.343936860096488,
+    "bb_high": 394.44268775600074,
+    "bb_low": 365.2823122439993,
+    "bb_mid": 379.8625,
+    "vwap20": 379.2536667651092,
     "high_52w": 481.5,
     "low_52w": 312.55,
-    "volume": 9414509.0,
-    "avg_volume20": 5409652.3
+    "volume": 1536497.0,
+    "avg_volume20": 5078257.75
   },
   "price_history": [
-    {
-      "date": "2026-03-04",
-      "close": 442.3,
-      "ema50": 442.02
-    },
     {
       "date": "2026-03-05",
       "close": 451.4,
@@ -140,7 +135,7 @@
     {
       "date": "2026-04-08",
       "close": 440.95,
-      "ema50": 435.43
+      "ema50": 435.44
     },
     {
       "date": "2026-04-09",
@@ -626,6 +621,11 @@
       "date": "2026-08-27",
       "close": 379.95,
       "ema50": 390.57
+    },
+    {
+      "date": "2026-08-28",
+      "close": 380.0,
+      "ema50": 390.16
     }
   ],
   "flags": {
@@ -637,38 +637,38 @@
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": true,
-      "price_above_bb_mid": false
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 379.95 vs EMA20 381.08",
-      "ema20_above_ema50": "EMA20 381.08 vs EMA50 390.57",
-      "ema50_above_ema200": "EMA50 390.57 vs EMA200 404.24",
-      "rsi_above_50": "RSI(14) 47.50 vs 50",
-      "macd_bullish": "MACD -4.12 vs signal -5.17",
-      "adx_trending_up": "ADX(14) 25.59 vs 20, +DI 17.96 vs -DI 22.52",
-      "price_above_vwap20": "Close 379.95 vs 20d VWAP 379.72",
-      "price_above_bb_mid": "Close 379.95 vs BB mid 380.42"
+      "price_above_ema20": "Close 380.00 vs EMA20 380.97",
+      "ema20_above_ema50": "EMA20 380.97 vs EMA50 390.16",
+      "ema50_above_ema200": "EMA50 390.16 vs EMA200 404.04",
+      "rsi_above_50": "RSI(14) 47.54 vs 50",
+      "macd_bullish": "MACD -3.72 vs signal -4.88",
+      "adx_trending_up": "ADX(14) 24.34 vs 20, +DI 18.15 vs -DI 21.34",
+      "price_above_vwap20": "Close 380.00 vs 20d VWAP 379.25",
+      "price_above_bb_mid": "Close 380.00 vs BB mid 379.86"
     },
     "flags_on": [
       "macd_bullish",
-      "price_above_vwap20"
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -676,25 +676,24 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.69 = 2.5% of price",
+        "atr_high": "ATR 9.49 = 2.5% of price",
         "rsi_extreme": "RSI(14) 47.5",
-        "below_ema200": "Close 379.95 vs EMA200 404.24",
-        "extended_above_ema20": "Close 379.95 vs EMA20 381.08 (-0.3%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 379.95 vs 52w low 312.55"
+        "below_ema200": "Close 380.00 vs EMA200 404.04",
+        "extended_above_ema20": "Close 380.00 vs EMA20 380.97 (-0.3%)",
+        "large_day_move": "Day change +0.0%",
+        "near_52w_low": "Close 380.00 vs 52w low 312.55"
       },
       "conditions_on": [
-        "atr_high",
         "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -707,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-27T20:25:31.093520+00:00"
+  "updated_at": "2026-08-28T21:11:51.004827+00:00"
 }
