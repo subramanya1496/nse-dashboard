@@ -3,39 +3,34 @@
   "name": "IDFC First Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-08-28",
-    "close": 83.12,
-    "prev_close": 83.8,
-    "change_pct": -0.8114558472553611,
-    "ema20": 84.56429439061715,
-    "ema50": 82.09889086901534,
-    "ema200": 76.74091448923738,
-    "rsi14": 44.95130780391661,
-    "macd": 0.5601652413568416,
-    "macd_signal": 1.0629041229304508,
-    "atr14": 1.4578354813723362,
-    "adx14": 32.40774357577955,
-    "adx_pos": 21.29341179058968,
-    "adx_neg": 19.840024199275227,
-    "bb_high": 86.9980213188024,
-    "bb_low": 83.47997868119761,
-    "bb_mid": 85.239,
-    "vwap20": 85.27751321429174,
+    "date": "2026-08-31",
+    "close": 85.97,
+    "prev_close": 83.12,
+    "change_pct": 3.4287776708373365,
+    "ema20": 84.69817111532053,
+    "ema50": 82.25072475893809,
+    "ema200": 77.0888747699664,
+    "rsi14": 57.358238909961464,
+    "macd": 0.6164335146760749,
+    "macd_signal": 0.9736100008915942,
+    "atr14": 1.6015615183098029,
+    "adx14": 31.60262634900016,
+    "adx_pos": 25.758333760873075,
+    "adx_neg": 16.76958846993307,
+    "bb_high": 86.99397231689004,
+    "bb_low": 83.48102768310996,
+    "bb_mid": 85.2375,
+    "vwap20": 85.21421432676699,
     "high_52w": 88.76,
     "low_52w": 58.08,
-    "volume": 14247602.0,
-    "avg_volume20": 11484223.15
+    "volume": 19780056.0,
+    "avg_volume20": 11832521.6
   },
   "price_history": [
     {
-      "date": "2026-03-05",
-      "close": 70.4,
-      "ema50": 79.71
-    },
-    {
       "date": "2026-03-06",
       "close": 69.98,
-      "ema50": 79.32
+      "ema50": 79.33
     },
     {
       "date": "2026-03-09",
@@ -55,17 +50,17 @@
     {
       "date": "2026-03-12",
       "close": 64.78,
-      "ema50": 77.38
+      "ema50": 77.39
     },
     {
       "date": "2026-03-13",
       "close": 62.57,
-      "ema50": 76.8
+      "ema50": 76.81
     },
     {
       "date": "2026-03-16",
       "close": 62.81,
-      "ema50": 76.25
+      "ema50": 76.26
     },
     {
       "date": "2026-03-17",
@@ -626,45 +621,54 @@
       "date": "2026-08-28",
       "close": 83.12,
       "ema50": 82.1
+    },
+    {
+      "date": "2026-08-31",
+      "close": 85.97,
+      "ema50": 82.25
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 83.12 vs EMA20 84.56",
-      "ema20_above_ema50": "EMA20 84.56 vs EMA50 82.10",
-      "ema50_above_ema200": "EMA50 82.10 vs EMA200 76.74",
-      "rsi_above_50": "RSI(14) 44.95 vs 50",
-      "macd_bullish": "MACD 0.56 vs signal 1.06",
-      "adx_trending_up": "ADX(14) 32.41 vs 20, +DI 21.29 vs -DI 19.84",
-      "price_above_vwap20": "Close 83.12 vs 20d VWAP 85.28",
-      "price_above_bb_mid": "Close 83.12 vs BB mid 85.24"
+      "price_above_ema20": "Close 85.97 vs EMA20 84.70",
+      "ema20_above_ema50": "EMA20 84.70 vs EMA50 82.25",
+      "ema50_above_ema200": "EMA50 82.25 vs EMA200 77.09",
+      "rsi_above_50": "RSI(14) 57.36 vs 50",
+      "macd_bullish": "MACD 0.62 vs signal 0.97",
+      "adx_trending_up": "ADX(14) 31.60 vs 20, +DI 25.76 vs -DI 16.77",
+      "price_above_vwap20": "Close 85.97 vs 20d VWAP 85.21",
+      "price_above_bb_mid": "Close 85.97 vs BB mid 85.24"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "adx_trending_up"
+      "rsi_above_50",
+      "adx_trending_up",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 3,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -677,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.46 = 1.8% of price",
-        "rsi_extreme": "RSI(14) 45.0",
-        "below_ema200": "Close 83.12 vs EMA200 76.74",
-        "extended_above_ema20": "Close 83.12 vs EMA20 84.56 (-1.7%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 83.12 vs 52w low 58.08"
+        "atr_high": "ATR 1.60 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 57.4",
+        "below_ema200": "Close 85.97 vs EMA200 77.09",
+        "extended_above_ema20": "Close 85.97 vs EMA20 84.70 (+1.5%)",
+        "large_day_move": "Day change +3.4%",
+        "near_52w_low": "Close 85.97 vs 52w low 58.08"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -691,7 +695,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
@@ -705,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-28T21:11:48.602080+00:00"
+  "updated_at": "2026-08-31T17:37:35.171675+00:00"
 }

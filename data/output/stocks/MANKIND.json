@@ -3,35 +3,30 @@
   "name": "Mankind Pharma",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-08-28",
-    "close": 2382.9,
-    "prev_close": 2417.5,
-    "change_pct": -1.4312306101344325,
-    "ema20": 2417.157986833843,
-    "ema50": 2434.982987962636,
-    "ema200": 2357.3086186813225,
-    "rsi14": 42.42780737725505,
-    "macd": -27.43207837810951,
-    "macd_signal": -27.87935461719844,
-    "atr14": 50.58414236776874,
-    "adx14": 16.563372938419796,
-    "adx_pos": 18.61106999492039,
-    "adx_neg": 21.839530979053663,
-    "bb_high": 2471.513993567636,
-    "bb_low": 2350.0960064323635,
-    "bb_mid": 2410.805,
-    "vwap20": 2412.0969889044904,
+    "date": "2026-08-31",
+    "close": 2419.2,
+    "prev_close": 2382.9,
+    "change_pct": 1.523353896512641,
+    "ema20": 2417.352464278239,
+    "ema50": 2434.3640364816592,
+    "ema200": 2357.8104094922287,
+    "rsi14": 48.62893075371824,
+    "macd": -23.84550479330801,
+    "macd_signal": -27.072584652270123,
+    "atr14": 52.37098934195092,
+    "adx14": 16.54379969436769,
+    "adx_pos": 16.692072870523486,
+    "adx_neg": 23.188330423206704,
+    "bb_high": 2458.7672150057683,
+    "bb_low": 2356.462784994232,
+    "bb_mid": 2407.6150000000002,
+    "vwap20": 2405.2811206500705,
     "high_52w": 2674.0,
     "low_52w": 1909.7,
-    "volume": 190737.0,
-    "avg_volume20": 356623.25
+    "volume": 391957.0,
+    "avg_volume20": 344237.4
   },
   "price_history": [
-    {
-      "date": "2026-03-05",
-      "close": 2226.4,
-      "ema50": 2154.54
-    },
     {
       "date": "2026-03-06",
       "close": 2187.0,
@@ -80,12 +75,12 @@
     {
       "date": "2026-03-19",
       "close": 2000.8,
-      "ema50": 2148.92
+      "ema50": 2148.91
     },
     {
       "date": "2026-03-20",
       "close": 2000.0,
-      "ema50": 2143.08
+      "ema50": 2143.07
     },
     {
       "date": "2026-03-23",
@@ -295,7 +290,7 @@
     {
       "date": "2026-05-26",
       "close": 2423.6,
-      "ema50": 2292.48
+      "ema50": 2292.47
     },
     {
       "date": "2026-05-27",
@@ -626,43 +621,51 @@
       "date": "2026-08-28",
       "close": 2382.9,
       "ema50": 2434.98
+    },
+    {
+      "date": "2026-08-31",
+      "close": 2419.2,
+      "ema50": 2434.36
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,382.90 vs EMA20 2,417.16",
-      "ema20_above_ema50": "EMA20 2,417.16 vs EMA50 2,434.98",
-      "ema50_above_ema200": "EMA50 2,434.98 vs EMA200 2,357.31",
-      "rsi_above_50": "RSI(14) 42.43 vs 50",
-      "macd_bullish": "MACD -27.43 vs signal -27.88",
-      "adx_trending_up": "ADX(14) 16.56 vs 20, +DI 18.61 vs -DI 21.84",
-      "price_above_vwap20": "Close 2,382.90 vs 20d VWAP 2,412.10",
-      "price_above_bb_mid": "Close 2,382.90 vs BB mid 2,410.80"
+      "price_above_ema20": "Close 2,419.20 vs EMA20 2,417.35",
+      "ema20_above_ema50": "EMA20 2,417.35 vs EMA50 2,434.36",
+      "ema50_above_ema200": "EMA50 2,434.36 vs EMA200 2,357.81",
+      "rsi_above_50": "RSI(14) 48.63 vs 50",
+      "macd_bullish": "MACD -23.85 vs signal -27.07",
+      "adx_trending_up": "ADX(14) 16.54 vs 20, +DI 16.69 vs -DI 23.19",
+      "price_above_vwap20": "Close 2,419.20 vs 20d VWAP 2,405.28",
+      "price_above_bb_mid": "Close 2,419.20 vs BB mid 2,407.62"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema50_above_ema200",
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags",
+        "5/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -676,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 50.58 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 42.4",
-        "below_ema200": "Close 2,382.90 vs EMA200 2,357.31",
-        "extended_above_ema20": "Close 2,382.90 vs EMA20 2,417.16 (-1.4%)",
-        "large_day_move": "Day change -1.4%",
-        "near_52w_low": "Close 2,382.90 vs 52w low 1,909.70"
+        "atr_high": "ATR 52.37 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 48.6",
+        "below_ema200": "Close 2,419.20 vs EMA200 2,357.81",
+        "extended_above_ema20": "Close 2,419.20 vs EMA20 2,417.35 (+0.1%)",
+        "large_day_move": "Day change +1.5%",
+        "near_52w_low": "Close 2,419.20 vs 52w low 1,909.70"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -704,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-28T21:12:06.210431+00:00"
+  "updated_at": "2026-08-31T17:37:52.779965+00:00"
 }

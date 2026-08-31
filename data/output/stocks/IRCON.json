@@ -3,35 +3,30 @@
   "name": "Ircon International",
   "sector": "Railways",
   "indicators": {
-    "date": "2026-08-28",
-    "close": 122.4,
-    "prev_close": 123.04,
-    "change_pct": -0.5201560468140447,
-    "ema20": 125.48283840988776,
-    "ema50": 129.0797544816508,
-    "ema200": 145.41978837755934,
-    "rsi14": 37.84556702446303,
-    "macd": -1.8659032105211537,
-    "macd_signal": -1.7133162088021605,
-    "atr14": 3.047368182306419,
-    "adx14": 16.14192011296266,
-    "adx_pos": 16.328290578057107,
-    "adx_neg": 23.550257170111706,
-    "bb_high": 133.5187250341706,
-    "bb_low": 119.6372749658294,
-    "bb_mid": 126.578,
-    "vwap20": 127.0720057343335,
+    "date": "2026-08-31",
+    "close": 119.37,
+    "prev_close": 122.4,
+    "change_pct": -2.4754901960784323,
+    "ema20": 124.90066332323178,
+    "ema50": 128.69897919529558,
+    "ema200": 145.15525637123815,
+    "rsi14": 31.918622047357843,
+    "macd": -2.1270677427983884,
+    "macd_signal": -1.7960665155910522,
+    "atr14": 3.0796990264160393,
+    "adx14": 17.29319639795214,
+    "adx_pos": 15.002812791633172,
+    "adx_neg": 29.292332655118464,
+    "bb_high": 133.1203082424109,
+    "bb_low": 118.78469175758912,
+    "bb_mid": 125.95250000000001,
+    "vwap20": 126.28279610179737,
     "high_52w": 189.5,
     "low_52w": 114.5,
-    "volume": 834876.0,
-    "avg_volume20": 1421042.8
+    "volume": 1491825.0,
+    "avg_volume20": 1321477.4
   },
   "price_history": [
-    {
-      "date": "2026-03-05",
-      "close": 133.66,
-      "ema50": 154.17
-    },
     {
       "date": "2026-03-06",
       "close": 146.95,
@@ -626,6 +621,11 @@
       "date": "2026-08-28",
       "close": 122.4,
       "ema50": 129.08
+    },
+    {
+      "date": "2026-08-31",
+      "close": 119.37,
+      "ema50": 128.7
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 122.40 vs EMA20 125.48",
-      "ema20_above_ema50": "EMA20 125.48 vs EMA50 129.08",
-      "ema50_above_ema200": "EMA50 129.08 vs EMA200 145.42",
-      "rsi_above_50": "RSI(14) 37.85 vs 50",
-      "macd_bullish": "MACD -1.87 vs signal -1.71",
-      "adx_trending_up": "ADX(14) 16.14 vs 20, +DI 16.33 vs -DI 23.55",
-      "price_above_vwap20": "Close 122.40 vs 20d VWAP 127.07",
-      "price_above_bb_mid": "Close 122.40 vs BB mid 126.58"
+      "price_above_ema20": "Close 119.37 vs EMA20 124.90",
+      "ema20_above_ema50": "EMA20 124.90 vs EMA50 128.70",
+      "ema50_above_ema200": "EMA50 128.70 vs EMA200 145.16",
+      "rsi_above_50": "RSI(14) 31.92 vs 50",
+      "macd_bullish": "MACD -2.13 vs signal -1.80",
+      "adx_trending_up": "ADX(14) 17.29 vs 20, +DI 15.00 vs -DI 29.29",
+      "price_above_vwap20": "Close 119.37 vs 20d VWAP 126.28",
+      "price_above_bb_mid": "Close 119.37 vs BB mid 125.95"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -664,27 +664,29 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.05 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 37.8",
-        "below_ema200": "Close 122.40 vs EMA200 145.42",
-        "extended_above_ema20": "Close 122.40 vs EMA20 125.48 (-2.5%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 122.40 vs 52w low 114.50"
+        "atr_high": "ATR 3.08 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 31.9",
+        "below_ema200": "Close 119.37 vs EMA200 145.16",
+        "extended_above_ema20": "Close 119.37 vs EMA20 124.90 (-4.4%)",
+        "large_day_move": "Day change -2.5%",
+        "near_52w_low": "Close 119.37 vs 52w low 114.50"
       },
       "conditions_on": [
-        "below_ema200"
+        "atr_high",
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 1,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -702,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-28T21:11:52.981987+00:00"
+  "updated_at": "2026-08-31T17:37:39.552155+00:00"
 }
