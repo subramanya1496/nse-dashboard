@@ -3,35 +3,30 @@
   "name": "Phoenix Mills",
   "sector": "Realty",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 1900.0,
-    "prev_close": 1917.0,
-    "change_pct": -0.8868022952529996,
-    "ema20": 1927.7509666814954,
-    "ema50": 1927.7590832346996,
-    "ema200": 1811.6178124137837,
-    "rsi14": 42.77321876687154,
-    "macd": -13.81707497243201,
-    "macd_signal": -14.315460717293616,
-    "atr14": 41.64185723608455,
-    "adx14": 13.160966519432597,
-    "adx_pos": 17.452144941601716,
-    "adx_neg": 20.422399968571874,
-    "bb_high": 1947.4707036046377,
-    "bb_low": 1888.2392963953623,
-    "bb_mid": 1917.855,
-    "vwap20": 1917.7517781787153,
+    "date": "2026-09-01",
+    "close": 1892.6,
+    "prev_close": 1900.0,
+    "change_pct": -0.3894736842105311,
+    "ema20": 1924.403255568972,
+    "ema50": 1926.3802956568684,
+    "ema200": 1812.4236053250893,
+    "rsi14": 41.44075420858083,
+    "macd": -14.891391717741499,
+    "macd_signal": -14.430646917383195,
+    "atr14": 40.97458171922136,
+    "adx14": 13.022312382935164,
+    "adx_pos": 16.46947251751451,
+    "adx_neg": 20.63221032270855,
+    "bb_high": 1946.645971146298,
+    "bb_low": 1885.0940288537022,
+    "bb_mid": 1915.8700000000001,
+    "vwap20": 1912.4715084122874,
     "high_52w": 2169.8,
     "low_52w": 1465.6,
-    "volume": 789449.0,
-    "avg_volume20": 383684.25
+    "volume": 730640.0,
+    "avg_volume20": 378768.35
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 1603.9,
-      "ema50": 1730.41
-    },
     {
       "date": "2026-03-09",
       "close": 1578.4,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 1900.0,
       "ema50": 1927.76
+    },
+    {
+      "date": "2026-09-01",
+      "close": 1892.6,
+      "ema50": 1926.38
     }
   ],
   "flags": {
@@ -634,26 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,900.00 vs EMA20 1,927.75",
-      "ema20_above_ema50": "EMA20 1,927.75 vs EMA50 1,927.76",
-      "ema50_above_ema200": "EMA50 1,927.76 vs EMA200 1,811.62",
-      "rsi_above_50": "RSI(14) 42.77 vs 50",
-      "macd_bullish": "MACD -13.82 vs signal -14.32",
-      "adx_trending_up": "ADX(14) 13.16 vs 20, +DI 17.45 vs -DI 20.42",
-      "price_above_vwap20": "Close 1,900.00 vs 20d VWAP 1,917.75",
-      "price_above_bb_mid": "Close 1,900.00 vs BB mid 1,917.86"
+      "price_above_ema20": "Close 1,892.60 vs EMA20 1,924.40",
+      "ema20_above_ema50": "EMA20 1,924.40 vs EMA50 1,926.38",
+      "ema50_above_ema200": "EMA50 1,926.38 vs EMA200 1,812.42",
+      "rsi_above_50": "RSI(14) 41.44 vs 50",
+      "macd_bullish": "MACD -14.89 vs signal -14.43",
+      "adx_trending_up": "ADX(14) 13.02 vs 20, +DI 16.47 vs -DI 20.63",
+      "price_above_vwap20": "Close 1,892.60 vs 20d VWAP 1,912.47",
+      "price_above_bb_mid": "Close 1,892.60 vs BB mid 1,915.87"
     },
     "flags_on": [
-      "ema50_above_ema200",
-      "macd_bullish"
+      "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -662,8 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "1/8 bullish flags",
+        "patterns: volume surge, silent accumulation, near buy zone"
       ]
     },
     "risk": {
@@ -676,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 41.64 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 42.8",
-        "below_ema200": "Close 1,900.00 vs EMA200 1,811.62",
-        "extended_above_ema20": "Close 1,900.00 vs EMA20 1,927.75 (-1.4%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 1,900.00 vs 52w low 1,465.60"
+        "atr_high": "ATR 40.97 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 41.4",
+        "below_ema200": "Close 1,892.60 vs EMA200 1,812.42",
+        "extended_above_ema20": "Close 1,892.60 vs EMA20 1,924.40 (-1.7%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 1,892.60 vs 52w low 1,465.60"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -691,7 +690,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": false,
+      "silent_accumulation": true,
       "near_buy_zone": true
     },
     "trend": {
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:38:07.954432+00:00"
+  "updated_at": "2026-09-01T14:52:18.608419+00:00"
 }

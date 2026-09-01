@@ -3,35 +3,30 @@
   "name": "HG Infra Engineering",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 488.8,
-    "prev_close": 496.5,
-    "change_pct": -1.550855991943603,
-    "ema20": 517.2561292531955,
-    "ema50": 537.8425002497592,
-    "ema200": 640.9652820789051,
-    "rsi14": 26.109596082471626,
-    "macd": -14.353530900139845,
-    "macd_signal": -11.992146032985296,
-    "atr14": 13.152645328679757,
-    "adx14": 13.121620701101497,
-    "adx_pos": 24.610874279613718,
-    "adx_neg": 25.583263207650518,
-    "bb_high": 565.2548527710957,
-    "bb_low": 480.8201472289044,
-    "bb_mid": 523.0375,
-    "vwap20": 530.0630839126942,
+    "date": "2026-09-01",
+    "close": 481.85,
+    "prev_close": 490.05,
+    "change_pct": -1.6732986429956105,
+    "ema20": 513.9918266939342,
+    "ema50": 535.69381319652,
+    "ema200": 639.3943594929365,
+    "rsi14": 23.797395732532266,
+    "macd": -15.319706723862964,
+    "macd_signal": -12.64170375520639,
+    "atr14": 12.90602780520263,
+    "adx14": 12.895990017259608,
+    "adx_pos": 23.289645138193187,
+    "adx_neg": 28.443733605533474,
+    "bb_high": 563.9040543561655,
+    "bb_low": 475.7309456438345,
+    "bb_mid": 519.8175,
+    "vwap20": 529.5127197993868,
     "high_52w": 1049.95,
     "low_52w": 429.5,
-    "volume": 60402.0,
-    "avg_volume20": 314017.05
+    "volume": 65514.0,
+    "avg_volume20": 315858.1
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 496.5,
-      "ema50": 650.53
-    },
     {
       "date": "2026-03-09",
       "close": 480.4,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-08-31",
-      "close": 488.8,
-      "ema50": 537.84
+      "close": 490.05,
+      "ema50": 537.89
+    },
+    {
+      "date": "2026-09-01",
+      "close": 481.85,
+      "ema50": 535.69
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 488.80 vs EMA20 517.26",
-      "ema20_above_ema50": "EMA20 517.26 vs EMA50 537.84",
-      "ema50_above_ema200": "EMA50 537.84 vs EMA200 640.97",
-      "rsi_above_50": "RSI(14) 26.11 vs 50",
-      "macd_bullish": "MACD -14.35 vs signal -11.99",
-      "adx_trending_up": "ADX(14) 13.12 vs 20, +DI 24.61 vs -DI 25.58",
-      "price_above_vwap20": "Close 488.80 vs 20d VWAP 530.06",
-      "price_above_bb_mid": "Close 488.80 vs BB mid 523.04"
+      "price_above_ema20": "Close 481.85 vs EMA20 513.99",
+      "ema20_above_ema50": "EMA20 513.99 vs EMA50 535.69",
+      "ema50_above_ema200": "EMA50 535.69 vs EMA200 639.39",
+      "rsi_above_50": "RSI(14) 23.80 vs 50",
+      "macd_bullish": "MACD -15.32 vs signal -12.64",
+      "adx_trending_up": "ADX(14) 12.90 vs 20, +DI 23.29 vs -DI 28.44",
+      "price_above_vwap20": "Close 481.85 vs 20d VWAP 529.51",
+      "price_above_bb_mid": "Close 481.85 vs BB mid 519.82"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -665,25 +665,26 @@
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.15 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 26.1",
-        "below_ema200": "Close 488.80 vs EMA200 640.97",
-        "extended_above_ema20": "Close 488.80 vs EMA20 517.26 (-5.5%)",
-        "large_day_move": "Day change -1.6%",
-        "near_52w_low": "Close 488.80 vs 52w low 429.50"
+        "atr_high": "ATR 12.91 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 23.8",
+        "below_ema200": "Close 481.85 vs EMA200 639.39",
+        "extended_above_ema20": "Close 481.85 vs EMA20 513.99 (-6.3%)",
+        "large_day_move": "Day change -1.7%",
+        "near_52w_low": "Close 481.85 vs 52w low 429.50"
       },
       "conditions_on": [
         "atr_high",
+        "rsi_extreme",
         "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:30.742018+00:00"
+  "updated_at": "2026-09-01T14:51:41.374603+00:00"
 }

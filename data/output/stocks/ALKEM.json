@@ -3,35 +3,30 @@
   "name": "Alkem Laboratories",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 5329.5,
-    "prev_close": 5355.0,
-    "change_pct": -0.4761904761904762,
-    "ema20": 5430.256325603357,
-    "ema50": 5485.375431688315,
-    "ema200": 5457.363429513923,
-    "rsi14": 39.430366925396974,
-    "macd": -68.57397576265612,
-    "macd_signal": -56.82815270691108,
-    "atr14": 109.04983551723355,
-    "adx14": 27.494072749528975,
-    "adx_pos": 12.338562500083864,
-    "adx_neg": 22.65265047858766,
-    "bb_high": 5681.084427922721,
-    "bb_low": 5219.215572077278,
-    "bb_mid": 5450.15,
-    "vwap20": 5415.045072110687,
+    "date": "2026-09-01",
+    "close": 5300.0,
+    "prev_close": 5329.5,
+    "change_pct": -0.5535228445445164,
+    "ema20": 5417.85096126018,
+    "ema50": 5478.1058069162245,
+    "ema200": 5455.797624245128,
+    "rsi14": 37.57435404754735,
+    "macd": -70.21734249805468,
+    "macd_signal": -59.505990665139805,
+    "atr14": 107.04627583743115,
+    "adx14": 27.83088372108313,
+    "adx_pos": 11.671678979264586,
+    "adx_neg": 22.76284001373466,
+    "bb_high": 5662.582723725094,
+    "bb_low": 5206.917276274906,
+    "bb_mid": 5434.75,
+    "vwap20": 5408.380570091019,
     "high_52w": 5933.5,
     "low_52w": 5075.0,
-    "volume": 120023.0,
-    "avg_volume20": 130055.85
+    "volume": 88288.0,
+    "avg_volume20": 132587.6
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 5530.0,
-      "ema50": 5609.54
-    },
     {
       "date": "2026-03-09",
       "close": 5460.0,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 5329.5,
       "ema50": 5485.38
+    },
+    {
+      "date": "2026-09-01",
+      "close": 5300.0,
+      "ema50": 5478.11
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 5,329.50 vs EMA20 5,430.26",
-      "ema20_above_ema50": "EMA20 5,430.26 vs EMA50 5,485.38",
-      "ema50_above_ema200": "EMA50 5,485.38 vs EMA200 5,457.36",
-      "rsi_above_50": "RSI(14) 39.43 vs 50",
-      "macd_bullish": "MACD -68.57 vs signal -56.83",
-      "adx_trending_up": "ADX(14) 27.49 vs 20, +DI 12.34 vs -DI 22.65",
-      "price_above_vwap20": "Close 5,329.50 vs 20d VWAP 5,415.05",
-      "price_above_bb_mid": "Close 5,329.50 vs BB mid 5,450.15"
+      "price_above_ema20": "Close 5,300.00 vs EMA20 5,417.85",
+      "ema20_above_ema50": "EMA20 5,417.85 vs EMA50 5,478.11",
+      "ema50_above_ema200": "EMA50 5,478.11 vs EMA200 5,455.80",
+      "rsi_above_50": "RSI(14) 37.57 vs 50",
+      "macd_bullish": "MACD -70.22 vs signal -59.51",
+      "adx_trending_up": "ADX(14) 27.83 vs 20, +DI 11.67 vs -DI 22.76",
+      "price_above_vwap20": "Close 5,300.00 vs 20d VWAP 5,408.38",
+      "price_above_bb_mid": "Close 5,300.00 vs BB mid 5,434.75"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: near buy zone"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,28 +671,29 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 109.05 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 39.4",
-        "below_ema200": "Close 5,329.50 vs EMA200 5,457.36",
-        "extended_above_ema20": "Close 5,329.50 vs EMA20 5,430.26 (-1.9%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 5,329.50 vs 52w low 5,075.00"
+        "atr_high": "ATR 107.05 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 37.6",
+        "below_ema200": "Close 5,300.00 vs EMA200 5,455.80",
+        "extended_above_ema20": "Close 5,300.00 vs EMA20 5,417.85 (-2.2%)",
+        "large_day_move": "Day change -0.6%",
+        "near_52w_low": "Close 5,300.00 vs 52w low 5,075.00"
       },
       "conditions_on": [
-        "below_ema200"
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
@@ -705,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:36:55.522193+00:00"
+  "updated_at": "2026-09-01T14:51:06.220094+00:00"
 }

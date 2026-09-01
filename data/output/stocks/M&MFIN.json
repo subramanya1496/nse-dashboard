@@ -3,35 +3,30 @@
   "name": "Mahindra & Mahindra Financial Services",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 373.0,
-    "prev_close": 376.6,
-    "change_pct": -0.9559214020180623,
-    "ema20": 381.6004803564337,
-    "ema50": 364.66404765339047,
-    "ema200": 335.26370185839596,
-    "rsi14": 46.40193961071307,
-    "macd": 3.6202684879507387,
-    "macd_signal": 7.863120181883128,
-    "atr14": 12.10975086944177,
-    "adx14": 31.77085167577412,
-    "adx_pos": 18.720895357970004,
-    "adx_neg": 18.226093225714916,
-    "bb_high": 409.81265805967485,
-    "bb_low": 369.67734194032516,
-    "bb_mid": 389.745,
-    "vwap20": 393.4114530362635,
+    "date": "2026-09-01",
+    "close": 364.0,
+    "prev_close": 373.0,
+    "change_pct": -2.4128686327077746,
+    "ema20": 379.9242441320115,
+    "ema50": 364.63800656894375,
+    "ema200": 335.5496351732378,
+    "rsi14": 41.239550476434076,
+    "macd": 1.887230399395321,
+    "macd_signal": 6.667942225385566,
+    "atr14": 12.180482950195927,
+    "adx14": 30.01034446361009,
+    "adx_pos": 17.28274144407563,
+    "adx_neg": 19.9339669724537,
+    "bb_high": 410.5453817100383,
+    "bb_low": 365.48461828996165,
+    "bb_mid": 388.015,
+    "vwap20": 392.19711519508024,
     "high_52w": 415.0,
     "low_52w": 253.05,
-    "volume": 1571593.0,
-    "avg_volume20": 2214451.5
+    "volume": 1423593.0,
+    "avg_volume20": 2133678.65
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 363.5,
-      "ema50": 367.27
-    },
     {
       "date": "2026-03-09",
       "close": 347.85,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 373.0,
       "ema50": 364.66
+    },
+    {
+      "date": "2026-09-01",
+      "close": 364.0,
+      "ema50": 364.64
     }
   ],
   "flags": {
@@ -635,35 +635,35 @@
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 373.00 vs EMA20 381.60",
-      "ema20_above_ema50": "EMA20 381.60 vs EMA50 364.66",
-      "ema50_above_ema200": "EMA50 364.66 vs EMA200 335.26",
-      "rsi_above_50": "RSI(14) 46.40 vs 50",
-      "macd_bullish": "MACD 3.62 vs signal 7.86",
-      "adx_trending_up": "ADX(14) 31.77 vs 20, +DI 18.72 vs -DI 18.23",
-      "price_above_vwap20": "Close 373.00 vs 20d VWAP 393.41",
-      "price_above_bb_mid": "Close 373.00 vs BB mid 389.75"
+      "price_above_ema20": "Close 364.00 vs EMA20 379.92",
+      "ema20_above_ema50": "EMA20 379.92 vs EMA50 364.64",
+      "ema50_above_ema200": "EMA50 364.64 vs EMA200 335.55",
+      "rsi_above_50": "RSI(14) 41.24 vs 50",
+      "macd_bullish": "MACD 1.89 vs signal 6.67",
+      "adx_trending_up": "ADX(14) 30.01 vs 20, +DI 17.28 vs -DI 19.93",
+      "price_above_vwap20": "Close 364.00 vs 20d VWAP 392.20",
+      "price_above_bb_mid": "Close 364.00 vs BB mid 388.01"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "adx_trending_up"
+      "ema50_above_ema200"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -676,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.11 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 46.4",
-        "below_ema200": "Close 373.00 vs EMA200 335.26",
-        "extended_above_ema20": "Close 373.00 vs EMA20 381.60 (-2.3%)",
-        "large_day_move": "Day change -1.0%",
-        "near_52w_low": "Close 373.00 vs 52w low 253.05"
+        "atr_high": "ATR 12.18 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 41.2",
+        "below_ema200": "Close 364.00 vs EMA200 335.55",
+        "extended_above_ema20": "Close 364.00 vs EMA20 379.92 (-4.2%)",
+        "large_day_move": "Day change -2.4%",
+        "near_52w_low": "Close 364.00 vs 52w low 253.05"
       },
       "conditions_on": [
         "atr_high"
@@ -694,11 +694,11 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
-      "daily": "bullish",
-      "weekly": "bullish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -706,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:52.347268+00:00"
+  "updated_at": "2026-09-01T14:52:02.991010+00:00"
 }

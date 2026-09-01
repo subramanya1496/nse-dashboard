@@ -3,35 +3,30 @@
   "name": "National Aluminium Company",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 381.5,
-    "prev_close": 394.95,
-    "change_pct": -3.4054943663754873,
-    "ema20": 385.62203577379415,
-    "ema50": 377.8499915063867,
-    "ema200": 349.20055458302755,
-    "rsi14": 49.60757306870382,
-    "macd": 7.201520604161203,
-    "macd_signal": 8.542683298116307,
-    "atr14": 12.237514325152475,
-    "adx14": 24.74834366739953,
-    "adx_pos": 25.652869068034512,
-    "adx_neg": 24.80878869830058,
-    "bb_high": 410.5454477563735,
-    "bb_low": 369.00455224362645,
-    "bb_mid": 389.775,
-    "vwap20": 391.968079622927,
+    "date": "2026-09-01",
+    "close": 372.0,
+    "prev_close": 381.5,
+    "change_pct": -2.490170380078637,
+    "ema20": 384.3246990334328,
+    "ema50": 377.62058007476367,
+    "ema200": 349.42741473643025,
+    "rsi14": 45.34296429864358,
+    "macd": 5.23992805266812,
+    "macd_signal": 7.88213224902667,
+    "atr14": 12.44554901621301,
+    "adx14": 23.56014772635559,
+    "adx_pos": 23.422347217132312,
+    "adx_neg": 27.558749752050844,
+    "bb_high": 411.01247309481136,
+    "bb_low": 368.0375269051886,
+    "bb_mid": 389.525,
+    "vwap20": 392.9403091278583,
     "high_52w": 445.15,
     "low_52w": 183.86,
-    "volume": 11959002.0,
-    "avg_volume20": 8374904.8
+    "volume": 6155527.0,
+    "avg_volume20": 7893881.45
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 396.15,
-      "ema50": 346.48
-    },
     {
       "date": "2026-03-09",
       "close": 388.1,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 381.5,
       "ema50": 377.85
+    },
+    {
+      "date": "2026-09-01",
+      "close": 372.0,
+      "ema50": 377.62
     }
   ],
   "flags": {
@@ -635,36 +635,35 @@
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 381.50 vs EMA20 385.62",
-      "ema20_above_ema50": "EMA20 385.62 vs EMA50 377.85",
-      "ema50_above_ema200": "EMA50 377.85 vs EMA200 349.20",
-      "rsi_above_50": "RSI(14) 49.61 vs 50",
-      "macd_bullish": "MACD 7.20 vs signal 8.54",
-      "adx_trending_up": "ADX(14) 24.75 vs 20, +DI 25.65 vs -DI 24.81",
-      "price_above_vwap20": "Close 381.50 vs 20d VWAP 391.97",
-      "price_above_bb_mid": "Close 381.50 vs BB mid 389.77"
+      "price_above_ema20": "Close 372.00 vs EMA20 384.32",
+      "ema20_above_ema50": "EMA20 384.32 vs EMA50 377.62",
+      "ema50_above_ema200": "EMA50 377.62 vs EMA200 349.43",
+      "rsi_above_50": "RSI(14) 45.34 vs 50",
+      "macd_bullish": "MACD 5.24 vs signal 7.88",
+      "adx_trending_up": "ADX(14) 23.56 vs 20, +DI 23.42 vs -DI 27.56",
+      "price_above_vwap20": "Close 372.00 vs 20d VWAP 392.94",
+      "price_above_bb_mid": "Close 372.00 vs BB mid 389.52"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "adx_trending_up"
+      "ema50_above_ema200"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -677,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.24 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 49.6",
-        "below_ema200": "Close 381.50 vs EMA200 349.20",
-        "extended_above_ema20": "Close 381.50 vs EMA20 385.62 (-1.1%)",
-        "large_day_move": "Day change -3.4%",
-        "near_52w_low": "Close 381.50 vs 52w low 183.86"
+        "atr_high": "ATR 12.45 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 45.3",
+        "below_ema200": "Close 372.00 vs EMA200 349.43",
+        "extended_above_ema20": "Close 372.00 vs EMA20 384.32 (-3.2%)",
+        "large_day_move": "Day change -2.5%",
+        "near_52w_low": "Close 372.00 vs 52w low 183.86"
       },
       "conditions_on": [
         "atr_high"
@@ -693,13 +692,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "bullish",
-      "weekly": "bullish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -707,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:58.746121+00:00"
+  "updated_at": "2026-09-01T14:52:09.313936+00:00"
 }

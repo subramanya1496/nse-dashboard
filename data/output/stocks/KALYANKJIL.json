@@ -3,35 +3,30 @@
   "name": "Kalyan Jewellers India",
   "sector": "Jewellery",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 601.0,
-    "prev_close": 615.8,
-    "change_pct": -2.4033777200389665,
-    "ema20": 599.4661989789588,
-    "ema50": 548.2624909416224,
-    "ema200": 478.0147252708945,
-    "rsi14": 54.648279389902044,
-    "macd": 17.881489041623354,
-    "macd_signal": 22.765364193356966,
-    "atr14": 20.24740034004028,
-    "adx14": 28.03569683773103,
-    "adx_pos": 27.959499317340907,
-    "adx_neg": 17.436008258117983,
-    "bb_high": 626.5744235693364,
-    "bb_low": 580.3855764306636,
-    "bb_mid": 603.48,
-    "vwap20": 602.1326866761657,
+    "date": "2026-09-01",
+    "close": 573.0,
+    "prev_close": 601.0,
+    "change_pct": -4.658901830282862,
+    "ema20": 596.9456086000104,
+    "ema50": 549.2325893360687,
+    "ema200": 478.9598523826269,
+    "rsi14": 45.431019080160866,
+    "macd": 13.781025837436232,
+    "macd_signal": 20.96849652217282,
+    "atr14": 22.054728887180264,
+    "adx14": 26.233627832849265,
+    "adx_pos": 23.83484067377243,
+    "adx_neg": 25.211437658976564,
+    "bb_high": 628.7628166424896,
+    "bb_low": 576.3571833575105,
+    "bb_mid": 602.5600000000001,
+    "vwap20": 601.9169639335325,
     "high_52w": 648.95,
     "low_52w": 327.05,
-    "volume": 4778980.0,
-    "avg_volume20": 12699823.15
+    "volume": 13219538.0,
+    "avg_volume20": 11935249.35
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 395.55,
-      "ema50": 425.62
-    },
     {
       "date": "2026-03-09",
       "close": 389.0,
@@ -626,47 +621,48 @@
       "date": "2026-08-31",
       "close": 601.0,
       "ema50": 548.26
+    },
+    {
+      "date": "2026-09-01",
+      "close": 573.0,
+      "ema50": 549.23
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 601.00 vs EMA20 599.47",
-      "ema20_above_ema50": "EMA20 599.47 vs EMA50 548.26",
-      "ema50_above_ema200": "EMA50 548.26 vs EMA200 478.01",
-      "rsi_above_50": "RSI(14) 54.65 vs 50",
-      "macd_bullish": "MACD 17.88 vs signal 22.77",
-      "adx_trending_up": "ADX(14) 28.04 vs 20, +DI 27.96 vs -DI 17.44",
-      "price_above_vwap20": "Close 601.00 vs 20d VWAP 602.13",
-      "price_above_bb_mid": "Close 601.00 vs BB mid 603.48"
+      "price_above_ema20": "Close 573.00 vs EMA20 596.95",
+      "ema20_above_ema50": "EMA20 596.95 vs EMA50 549.23",
+      "ema50_above_ema200": "EMA50 549.23 vs EMA200 478.96",
+      "rsi_above_50": "RSI(14) 45.43 vs 50",
+      "macd_bullish": "MACD 13.78 vs signal 20.97",
+      "adx_trending_up": "ADX(14) 26.23 vs 20, +DI 23.83 vs -DI 25.21",
+      "price_above_vwap20": "Close 573.00 vs 20d VWAP 601.92",
+      "price_above_bb_mid": "Close 573.00 vs BB mid 602.56"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "rsi_above_50",
-      "adx_trending_up"
+      "ema50_above_ema200"
     ],
-    "flag_count": 5,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "5/8 bullish flags",
-        "patterns: near buy zone"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,29 +671,30 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 20.25 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 54.6",
-        "below_ema200": "Close 601.00 vs EMA200 478.01",
-        "extended_above_ema20": "Close 601.00 vs EMA20 599.47 (+0.3%)",
-        "large_day_move": "Day change -2.4%",
-        "near_52w_low": "Close 601.00 vs 52w low 327.05"
+        "atr_high": "ATR 22.05 = 3.8% of price",
+        "rsi_extreme": "RSI(14) 45.4",
+        "below_ema200": "Close 573.00 vs EMA200 478.96",
+        "extended_above_ema20": "Close 573.00 vs EMA20 596.95 (-4.0%)",
+        "large_day_move": "Day change -4.7%",
+        "near_52w_low": "Close 573.00 vs 52w low 327.05"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -709,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:44.747994+00:00"
+  "updated_at": "2026-09-01T14:51:55.331682+00:00"
 }

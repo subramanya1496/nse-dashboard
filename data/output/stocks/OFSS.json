@@ -3,35 +3,30 @@
   "name": "Oracle Financial Services Software",
   "sector": "IT",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 12540.0,
-    "prev_close": 12190.0,
-    "change_pct": 2.871205906480722,
-    "ema20": 11774.787973229413,
-    "ema50": 11256.786495293883,
-    "ema200": 9616.607049085733,
-    "rsi14": 69.07592610990687,
-    "macd": 225.88628112479637,
-    "macd_signal": 187.97937977229478,
-    "atr14": 355.2431306442838,
-    "adx14": 12.097398456351916,
-    "adx_pos": 29.97286356209894,
-    "adx_neg": 16.771111406857827,
-    "bb_high": 12257.021833540695,
-    "bb_low": 11340.978166459305,
-    "bb_mid": 11799.0,
-    "vwap20": 11836.008029327737,
+    "date": "2026-09-01",
+    "close": 12187.0,
+    "prev_close": 12540.0,
+    "change_pct": -2.8149920255183414,
+    "ema20": 11814.046261493279,
+    "ema50": 11293.26545626275,
+    "ema200": 9642.183098348562,
+    "rsi14": 59.86591272942978,
+    "macd": 231.5217150636763,
+    "macd_signal": 196.6878468305711,
+    "atr14": 369.01147845540635,
+    "adx14": 12.891843387379636,
+    "adx_pos": 26.793494937866313,
+    "adx_neg": 16.69550999339735,
+    "bb_high": 12306.394882830036,
+    "bb_low": 11350.305117169964,
+    "bb_mid": 11828.35,
+    "vwap20": 11868.014648186136,
     "high_52w": 12540.0,
     "low_52w": 6234.5,
-    "volume": 487111.0,
-    "avg_volume20": 220392.05
+    "volume": 208347.0,
+    "avg_volume20": 217951.9
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 6718.0,
-      "ema50": 7295.36
-    },
     {
       "date": "2026-03-09",
       "close": 6712.5,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 12540.0,
       "ema50": 11256.79
+    },
+    {
+      "date": "2026-09-01",
+      "close": 12187.0,
+      "ema50": 11293.27
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 12,540.00 vs EMA20 11,774.79",
-      "ema20_above_ema50": "EMA20 11,774.79 vs EMA50 11,256.79",
-      "ema50_above_ema200": "EMA50 11,256.79 vs EMA200 9,616.61",
-      "rsi_above_50": "RSI(14) 69.08 vs 50",
-      "macd_bullish": "MACD 225.89 vs signal 187.98",
-      "adx_trending_up": "ADX(14) 12.10 vs 20, +DI 29.97 vs -DI 16.77",
-      "price_above_vwap20": "Close 12,540.00 vs 20d VWAP 11,836.01",
-      "price_above_bb_mid": "Close 12,540.00 vs BB mid 11,799.00"
+      "price_above_ema20": "Close 12,187.00 vs EMA20 11,814.05",
+      "ema20_above_ema50": "EMA20 11,814.05 vs EMA50 11,293.27",
+      "ema50_above_ema200": "EMA50 11,293.27 vs EMA200 9,642.18",
+      "rsi_above_50": "RSI(14) 59.87 vs 50",
+      "macd_bullish": "MACD 231.52 vs signal 196.69",
+      "adx_trending_up": "ADX(14) 12.89 vs 20, +DI 26.79 vs -DI 16.70",
+      "price_above_vwap20": "Close 12,187.00 vs 20d VWAP 11,868.01",
+      "price_above_bb_mid": "Close 12,187.00 vs BB mid 11,828.35"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,12 +663,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -681,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 355.24 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 69.1",
-        "below_ema200": "Close 12,540.00 vs EMA200 9,616.61",
-        "extended_above_ema20": "Close 12,540.00 vs EMA20 11,774.79 (+6.5%)",
-        "large_day_move": "Day change +2.9%",
-        "near_52w_low": "Close 12,540.00 vs 52w low 6,234.50"
+        "atr_high": "ATR 369.01 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 59.9",
+        "below_ema200": "Close 12,187.00 vs EMA200 9,642.18",
+        "extended_above_ema20": "Close 12,187.00 vs EMA20 11,814.05 (+3.2%)",
+        "large_day_move": "Day change -2.8%",
+        "near_52w_low": "Close 12,187.00 vs 52w low 6,234.50"
       },
       "conditions_on": [
         "atr_high"
@@ -696,8 +695,8 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": true,
-      "volume_surge": true,
+      "breakout": false,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:38:03.555248+00:00"
+  "updated_at": "2026-09-01T14:52:14.144149+00:00"
 }

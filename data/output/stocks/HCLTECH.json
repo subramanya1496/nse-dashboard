@@ -3,35 +3,30 @@
   "name": "HCL Technologies",
   "sector": "IT",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 1312.2,
-    "prev_close": 1316.1,
-    "change_pct": -0.296330066104389,
-    "ema20": 1312.5464093331127,
-    "ema50": 1280.193372616865,
-    "ema200": 1351.2537767419124,
-    "rsi14": 51.78630193204698,
-    "macd": 8.797619020952425,
-    "macd_signal": 18.170340459827504,
-    "atr14": 30.869556131475377,
-    "adx14": 16.131145031983177,
-    "adx_pos": 22.782196136752987,
-    "adx_neg": 21.2604458386566,
-    "bb_high": 1385.922712301129,
-    "bb_low": 1278.557287698871,
-    "bb_mid": 1332.24,
-    "vwap20": 1332.2902618214089,
+    "date": "2026-09-01",
+    "close": 1351.4,
+    "prev_close": 1312.2,
+    "change_pct": 2.987349489407106,
+    "ema20": 1316.2467513013876,
+    "ema50": 1282.985789376988,
+    "ema200": 1351.2552316997044,
+    "rsi14": 59.232451669641215,
+    "macd": 11.0800828021911,
+    "macd_signal": 16.752288928300224,
+    "atr14": 32.65030212208428,
+    "adx14": 16.635073277994746,
+    "adx_pos": 29.933198562619882,
+    "adx_neg": 18.66512337022191,
+    "bb_high": 1382.9694005870342,
+    "bb_low": 1279.660599412966,
+    "bb_mid": 1331.315,
+    "vwap20": 1331.0576167774,
     "high_52w": 1780.1,
     "low_52w": 1030.0,
-    "volume": 3125051.0,
-    "avg_volume20": 1931817.45
+    "volume": 4031856.0,
+    "avg_volume20": 1982733.1
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 1356.7,
-      "ema50": 1528.44
-    },
     {
       "date": "2026-03-09",
       "close": 1358.6,
@@ -626,74 +621,80 @@
       "date": "2026-08-31",
       "close": 1312.2,
       "ema50": 1280.19
+    },
+    {
+      "date": "2026-09-01",
+      "close": 1351.4,
+      "ema50": 1282.99
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,312.20 vs EMA20 1,312.55",
-      "ema20_above_ema50": "EMA20 1,312.55 vs EMA50 1,280.19",
-      "ema50_above_ema200": "EMA50 1,280.19 vs EMA200 1,351.25",
-      "rsi_above_50": "RSI(14) 51.79 vs 50",
-      "macd_bullish": "MACD 8.80 vs signal 18.17",
-      "adx_trending_up": "ADX(14) 16.13 vs 20, +DI 22.78 vs -DI 21.26",
-      "price_above_vwap20": "Close 1,312.20 vs 20d VWAP 1,332.29",
-      "price_above_bb_mid": "Close 1,312.20 vs BB mid 1,332.24"
+      "price_above_ema20": "Close 1,351.40 vs EMA20 1,316.25",
+      "ema20_above_ema50": "EMA20 1,316.25 vs EMA50 1,282.99",
+      "ema50_above_ema200": "EMA50 1,282.99 vs EMA200 1,351.26",
+      "rsi_above_50": "RSI(14) 59.23 vs 50",
+      "macd_bullish": "MACD 11.08 vs signal 16.75",
+      "adx_trending_up": "ADX(14) 16.64 vs 20, +DI 29.93 vs -DI 18.67",
+      "price_above_vwap20": "Close 1,351.40 vs 20d VWAP 1,331.06",
+      "price_above_bb_mid": "Close 1,351.40 vs BB mid 1,331.32"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
-      "rsi_above_50"
+      "rsi_above_50",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "5/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 30.87 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 51.8",
-        "below_ema200": "Close 1,312.20 vs EMA200 1,351.25",
-        "extended_above_ema20": "Close 1,312.20 vs EMA20 1,312.55 (-0.0%)",
-        "large_day_move": "Day change -0.3%",
-        "near_52w_low": "Close 1,312.20 vs 52w low 1,030.00"
+        "atr_high": "ATR 32.65 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 59.2",
+        "below_ema200": "Close 1,351.40 vs EMA200 1,351.26",
+        "extended_above_ema20": "Close 1,351.40 vs EMA20 1,316.25 (+2.7%)",
+        "large_day_move": "Day change +3.0%",
+        "near_52w_low": "Close 1,351.40 vs 52w low 1,030.00"
       },
-      "conditions_on": [
-        "below_ema200"
-      ],
-      "condition_count": 1,
+      "conditions_on": [],
+      "condition_count": 0,
       "condition_total": 6,
       "level": "low"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": true,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:27.942030+00:00"
+  "updated_at": "2026-09-01T14:51:38.538827+00:00"
 }

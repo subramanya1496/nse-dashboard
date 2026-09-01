@@ -3,35 +3,30 @@
   "name": "Container Corporation of India",
   "sector": "Logistics",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 511.9,
-    "prev_close": 516.0,
-    "change_pct": -0.794573643410857,
-    "ema20": 512.1310845310378,
-    "ema50": 502.8627108678665,
-    "ema200": 506.95977747161584,
-    "rsi14": 51.037321007321964,
-    "macd": 2.966967783239056,
-    "macd_signal": 5.312831852980389,
-    "atr14": 13.477272388112395,
-    "adx14": 17.276815535947055,
-    "adx_pos": 20.83262008559153,
-    "adx_neg": 22.68153516737381,
-    "bb_high": 531.5898647988038,
-    "bb_low": 498.0751352011962,
-    "bb_mid": 514.8325,
-    "vwap20": 517.4451826537519,
+    "date": "2026-09-01",
+    "close": 514.0,
+    "prev_close": 511.9,
+    "change_pct": 0.4102363742918584,
+    "ema20": 512.3090764804627,
+    "ema50": 503.2994673044208,
+    "ema200": 507.02982943707246,
+    "rsi14": 52.077452512163205,
+    "macd": 2.8106049068593393,
+    "macd_signal": 4.812386463756178,
+    "atr14": 13.103895788961509,
+    "adx14": 16.273717033309573,
+    "adx_pos": 20.304592187487653,
+    "adx_neg": 21.661540436995814,
+    "bb_high": 531.5435344251239,
+    "bb_low": 498.0214655748761,
+    "bb_mid": 514.7825,
+    "vwap20": 517.2807169234585,
     "high_52w": 569.8,
     "low_52w": 421.45,
-    "volume": 1393626.0,
-    "avg_volume20": 1589408.45
+    "volume": 1247573.0,
+    "avg_volume20": 1575588.7
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 479.75,
-      "ema50": 504.49
-    },
     {
       "date": "2026-03-09",
       "close": 473.75,
@@ -626,11 +621,16 @@
       "date": "2026-08-31",
       "close": 511.9,
       "ema50": 502.86
+    },
+    {
+      "date": "2026-09-01",
+      "close": 514.0,
+      "ema50": 503.3
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
@@ -640,29 +640,30 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 511.90 vs EMA20 512.13",
-      "ema20_above_ema50": "EMA20 512.13 vs EMA50 502.86",
-      "ema50_above_ema200": "EMA50 502.86 vs EMA200 506.96",
-      "rsi_above_50": "RSI(14) 51.04 vs 50",
-      "macd_bullish": "MACD 2.97 vs signal 5.31",
-      "adx_trending_up": "ADX(14) 17.28 vs 20, +DI 20.83 vs -DI 22.68",
-      "price_above_vwap20": "Close 511.90 vs 20d VWAP 517.45",
-      "price_above_bb_mid": "Close 511.90 vs BB mid 514.83"
+      "price_above_ema20": "Close 514.00 vs EMA20 512.31",
+      "ema20_above_ema50": "EMA20 512.31 vs EMA50 503.30",
+      "ema50_above_ema200": "EMA50 503.30 vs EMA200 507.03",
+      "rsi_above_50": "RSI(14) 52.08 vs 50",
+      "macd_bullish": "MACD 2.81 vs signal 4.81",
+      "adx_trending_up": "ADX(14) 16.27 vs 20, +DI 20.30 vs -DI 21.66",
+      "price_above_vwap20": "Close 514.00 vs 20d VWAP 517.28",
+      "price_above_bb_mid": "Close 514.00 vs BB mid 514.78"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "rsi_above_50"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.48 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 51.0",
-        "below_ema200": "Close 511.90 vs EMA200 506.96",
-        "extended_above_ema20": "Close 511.90 vs EMA20 512.13 (-0.0%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 511.90 vs 52w low 421.45"
+        "atr_high": "ATR 13.10 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 52.1",
+        "below_ema200": "Close 514.00 vs EMA200 507.03",
+        "extended_above_ema20": "Close 514.00 vs EMA20 512.31 (+0.3%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 514.00 vs 52w low 421.45"
       },
       "conditions_on": [
         "atr_high"
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:14.363045+00:00"
+  "updated_at": "2026-09-01T14:51:24.929201+00:00"
 }

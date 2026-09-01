@@ -3,35 +3,30 @@
   "name": "Petronet LNG",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 300.6,
-    "prev_close": 292.0,
-    "change_pct": 2.9452054794520626,
-    "ema20": 287.8067613065245,
-    "ema50": 282.901057551168,
-    "ema200": 281.73599957111196,
-    "rsi14": 68.37392327736558,
-    "macd": 4.350271749580486,
-    "macd_signal": 3.293155640588679,
-    "atr14": 6.1009074878829646,
-    "adx14": 25.84118517499882,
-    "adx_pos": 27.247693017854534,
-    "adx_neg": 8.874478104486927,
-    "bb_high": 299.4068795940704,
-    "bb_low": 272.9631204059296,
-    "bb_mid": 286.185,
-    "vwap20": 286.70034229680846,
+    "date": "2026-09-01",
+    "close": 292.3,
+    "prev_close": 300.6,
+    "change_pct": -2.7611443779108487,
+    "ema20": 288.23468880114126,
+    "ema50": 283.26964352955355,
+    "ema200": 281.8411140032402,
+    "rsi14": 56.493777115873506,
+    "macd": 4.158967938616399,
+    "macd_signal": 3.4663181001942234,
+    "atr14": 6.393699810177042,
+    "adx14": 27.62853577349176,
+    "adx_pos": 24.1427786151273,
+    "adx_neg": 7.8632183671853735,
+    "bb_high": 300.02156264136033,
+    "bb_low": 273.0784373586397,
+    "bb_mid": 286.55,
+    "vwap20": 287.0268473302034,
     "high_52w": 326.4,
     "low_52w": 235.35,
-    "volume": 2880149.0,
-    "avg_volume20": 2007692.3
+    "volume": 1081102.0,
+    "avg_volume20": 1989922.85
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 290.4,
-      "ema50": 293.52
-    },
     {
       "date": "2026-03-09",
       "close": 278.55,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 300.6,
       "ema50": 282.9
+    },
+    {
+      "date": "2026-09-01",
+      "close": 292.3,
+      "ema50": 283.27
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 300.60 vs EMA20 287.81",
-      "ema20_above_ema50": "EMA20 287.81 vs EMA50 282.90",
-      "ema50_above_ema200": "EMA50 282.90 vs EMA200 281.74",
-      "rsi_above_50": "RSI(14) 68.37 vs 50",
-      "macd_bullish": "MACD 4.35 vs signal 3.29",
-      "adx_trending_up": "ADX(14) 25.84 vs 20, +DI 27.25 vs -DI 8.87",
-      "price_above_vwap20": "Close 300.60 vs 20d VWAP 286.70",
-      "price_above_bb_mid": "Close 300.60 vs BB mid 286.19"
+      "price_above_ema20": "Close 292.30 vs EMA20 288.23",
+      "ema20_above_ema50": "EMA20 288.23 vs EMA50 283.27",
+      "ema50_above_ema200": "EMA50 283.27 vs EMA200 281.84",
+      "rsi_above_50": "RSI(14) 56.49 vs 50",
+      "macd_bullish": "MACD 4.16 vs signal 3.47",
+      "adx_trending_up": "ADX(14) 27.63 vs 20, +DI 24.14 vs -DI 7.86",
+      "price_above_vwap20": "Close 292.30 vs 20d VWAP 287.03",
+      "price_above_bb_mid": "Close 292.30 vs BB mid 286.55"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,12 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 4,
+      "label": "Watch closely",
+      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
       "reasons": [
         "8/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -682,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.10 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 68.4",
-        "below_ema200": "Close 300.60 vs EMA200 281.74",
-        "extended_above_ema20": "Close 300.60 vs EMA20 287.81 (+4.4%)",
-        "large_day_move": "Day change +2.9%",
-        "near_52w_low": "Close 300.60 vs 52w low 235.35"
+        "atr_high": "ATR 6.39 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 56.5",
+        "below_ema200": "Close 292.30 vs EMA200 281.84",
+        "extended_above_ema20": "Close 292.30 vs EMA20 288.23 (+1.4%)",
+        "large_day_move": "Day change -2.8%",
+        "near_52w_low": "Close 292.30 vs 52w low 235.35"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -695,10 +695,10 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": true,
-      "volume_surge": true,
+      "breakout": false,
+      "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -710,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:38:06.806970+00:00"
+  "updated_at": "2026-09-01T14:52:17.403616+00:00"
 }

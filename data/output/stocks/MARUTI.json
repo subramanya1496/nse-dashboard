@@ -3,35 +3,30 @@
   "name": "Maruti Suzuki",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 13547.0,
-    "prev_close": 13376.0,
-    "change_pct": 1.278409090909091,
-    "ema20": 13693.125054206015,
-    "ema50": 13720.09522262014,
-    "ema200": 13942.116631176412,
-    "rsi14": 43.73416618061013,
-    "macd": -96.49452941546224,
-    "macd_signal": -49.37367531477996,
-    "atr14": 225.28439985714368,
-    "adx14": 17.970073269548852,
-    "adx_pos": 13.178056591543053,
-    "adx_neg": 26.993750264167115,
-    "bb_high": 14271.793433664587,
-    "bb_low": 13315.406566335414,
-    "bb_mid": 13793.6,
-    "vwap20": 13824.029024347514,
+    "date": "2026-09-01",
+    "close": 12950.0,
+    "prev_close": 13547.0,
+    "change_pct": -4.406879751974607,
+    "ema20": 13622.351239519729,
+    "ema50": 13689.89540996837,
+    "ema200": 13932.244823901025,
+    "rsi14": 30.52714709989118,
+    "macd": -142.87908913892534,
+    "macd_signal": -68.07475807960904,
+    "atr14": 258.90694272449053,
+    "adx14": 20.36937964776202,
+    "adx_pos": 10.647658357890057,
+    "adx_neg": 33.31492650693389,
+    "bb_high": 14305.527059416649,
+    "bb_low": 13159.872940583353,
+    "bb_mid": 13732.7,
+    "vwap20": 13684.762498974615,
     "high_52w": 17370.0,
     "low_52w": 12201.0,
-    "volume": 443131.0,
-    "avg_volume20": 290356.8
+    "volume": 915975.0,
+    "avg_volume20": 305169.7
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 14159.0,
-      "ema50": 15267.76
-    },
     {
       "date": "2026-03-09",
       "close": 13508.0,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 13547.0,
       "ema50": 13720.1
+    },
+    {
+      "date": "2026-09-01",
+      "close": 12950.0,
+      "ema50": 13689.9
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 13,547.00 vs EMA20 13,693.13",
-      "ema20_above_ema50": "EMA20 13,693.13 vs EMA50 13,720.10",
-      "ema50_above_ema200": "EMA50 13,720.10 vs EMA200 13,942.12",
-      "rsi_above_50": "RSI(14) 43.73 vs 50",
-      "macd_bullish": "MACD -96.49 vs signal -49.37",
-      "adx_trending_up": "ADX(14) 17.97 vs 20, +DI 13.18 vs -DI 26.99",
-      "price_above_vwap20": "Close 13,547.00 vs 20d VWAP 13,824.03",
-      "price_above_bb_mid": "Close 13,547.00 vs BB mid 13,793.60"
+      "price_above_ema20": "Close 12,950.00 vs EMA20 13,622.35",
+      "ema20_above_ema50": "EMA20 13,622.35 vs EMA50 13,689.90",
+      "ema50_above_ema200": "EMA50 13,689.90 vs EMA200 13,932.24",
+      "rsi_above_50": "RSI(14) 30.53 vs 50",
+      "macd_bullish": "MACD -142.88 vs signal -68.07",
+      "adx_trending_up": "ADX(14) 20.37 vs 20, +DI 10.65 vs -DI 33.31",
+      "price_above_vwap20": "Close 12,950.00 vs 20d VWAP 13,684.76",
+      "price_above_bb_mid": "Close 12,950.00 vs BB mid 13,732.70"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -669,23 +669,24 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 225.28 = 1.7% of price",
-        "rsi_extreme": "RSI(14) 43.7",
-        "below_ema200": "Close 13,547.00 vs EMA200 13,942.12",
-        "extended_above_ema20": "Close 13,547.00 vs EMA20 13,693.13 (-1.1%)",
-        "large_day_move": "Day change +1.3%",
-        "near_52w_low": "Close 13,547.00 vs 52w low 12,201.00"
+        "atr_high": "ATR 258.91 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 30.5",
+        "below_ema200": "Close 12,950.00 vs EMA200 13,932.24",
+        "extended_above_ema20": "Close 12,950.00 vs EMA20 13,622.35 (-4.9%)",
+        "large_day_move": "Day change -4.4%",
+        "near_52w_low": "Close 12,950.00 vs 52w low 12,201.00"
       },
       "conditions_on": [
-        "below_ema200"
+        "below_ema200",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:53.544994+00:00"
+  "updated_at": "2026-09-01T14:52:04.195616+00:00"
 }

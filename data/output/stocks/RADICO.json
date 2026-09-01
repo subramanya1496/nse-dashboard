@@ -3,35 +3,30 @@
   "name": "Radico Khaitan",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 4485.0,
-    "prev_close": 4605.0,
-    "change_pct": -2.6058631921824107,
-    "ema20": 4545.522700956797,
-    "ema50": 4286.815005047156,
-    "ema200": 3568.4574838592625,
-    "rsi14": 49.644764865452444,
-    "macd": 91.89269472458182,
-    "macd_signal": 128.78308262231204,
-    "atr14": 95.64105890254692,
-    "adx14": 49.55992037535449,
-    "adx_pos": 22.797607680714172,
-    "adx_neg": 18.659492390769508,
-    "bb_high": 4757.71623407068,
-    "bb_low": 4434.313765929321,
-    "bb_mid": 4596.015,
-    "vwap20": 4582.180316126423,
+    "date": "2026-09-01",
+    "close": 4474.3,
+    "prev_close": 4485.0,
+    "change_pct": -0.23857302118171275,
+    "ema20": 4538.739586579959,
+    "ema50": 4294.167357790404,
+    "ema200": 3577.4708422288227,
+    "rsi14": 48.72003397101351,
+    "macd": 75.9016573002682,
+    "macd_signal": 118.20679755790327,
+    "atr14": 99.28098326665074,
+    "adx14": 46.33602786639451,
+    "adx_pos": 20.39308354556342,
+    "adx_neg": 22.281620681766135,
+    "bb_high": 4754.837792954476,
+    "bb_low": 4439.622207045525,
+    "bb_mid": 4597.2300000000005,
+    "vwap20": 4580.834889291008,
     "high_52w": 4747.0,
     "low_52w": 2500.0,
-    "volume": 480565.0,
-    "avg_volume20": 313665.65
+    "volume": 473936.0,
+    "avg_volume20": 320413.6
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 2766.9,
-      "ema50": 2839.3
-    },
     {
       "date": "2026-03-09",
       "close": 2751.6,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 4485.0,
       "ema50": 4286.82
+    },
+    {
+      "date": "2026-09-01",
+      "close": 4474.3,
+      "ema50": 4294.17
     }
   ],
   "flags": {
@@ -635,36 +635,35 @@
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 4,485.00 vs EMA20 4,545.52",
-      "ema20_above_ema50": "EMA20 4,545.52 vs EMA50 4,286.82",
-      "ema50_above_ema200": "EMA50 4,286.82 vs EMA200 3,568.46",
-      "rsi_above_50": "RSI(14) 49.64 vs 50",
-      "macd_bullish": "MACD 91.89 vs signal 128.78",
-      "adx_trending_up": "ADX(14) 49.56 vs 20, +DI 22.80 vs -DI 18.66",
-      "price_above_vwap20": "Close 4,485.00 vs 20d VWAP 4,582.18",
-      "price_above_bb_mid": "Close 4,485.00 vs BB mid 4,596.02"
+      "price_above_ema20": "Close 4,474.30 vs EMA20 4,538.74",
+      "ema20_above_ema50": "EMA20 4,538.74 vs EMA50 4,294.17",
+      "ema50_above_ema200": "EMA50 4,294.17 vs EMA200 3,577.47",
+      "rsi_above_50": "RSI(14) 48.72 vs 50",
+      "macd_bullish": "MACD 75.90 vs signal 118.21",
+      "adx_trending_up": "ADX(14) 46.34 vs 20, +DI 20.39 vs -DI 22.28",
+      "price_above_vwap20": "Close 4,474.30 vs 20d VWAP 4,580.83",
+      "price_above_bb_mid": "Close 4,474.30 vs BB mid 4,597.23"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "adx_trending_up"
+      "ema50_above_ema200"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "2/8 bullish flags",
+        "patterns: volume surge, silent accumulation, near buy zone"
       ]
     },
     "risk": {
@@ -677,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 95.64 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 49.6",
-        "below_ema200": "Close 4,485.00 vs EMA200 3,568.46",
-        "extended_above_ema20": "Close 4,485.00 vs EMA20 4,545.52 (-1.3%)",
-        "large_day_move": "Day change -2.6%",
-        "near_52w_low": "Close 4,485.00 vs 52w low 2,500.00"
+        "atr_high": "ATR 99.28 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 48.7",
+        "below_ema200": "Close 4,474.30 vs EMA200 3,577.47",
+        "extended_above_ema20": "Close 4,474.30 vs EMA20 4,538.74 (-1.4%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 4,474.30 vs 52w low 2,500.00"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -692,7 +691,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": false,
+      "silent_accumulation": true,
       "near_buy_zone": true
     },
     "trend": {
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:38:12.355172+00:00"
+  "updated_at": "2026-09-01T14:52:22.928700+00:00"
 }

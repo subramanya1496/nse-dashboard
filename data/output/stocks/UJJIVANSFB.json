@@ -3,35 +3,30 @@
   "name": "Ujjivan Small Finance Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 69.11,
-    "prev_close": 67.85,
-    "change_pct": 1.8570375829034713,
-    "ema20": 69.79005642938219,
-    "ema50": 67.01841053046883,
-    "ema200": 59.64022010553129,
-    "rsi14": 49.25830099241637,
-    "macd": 0.474318202493464,
-    "macd_signal": 1.194929745460838,
-    "atr14": 2.1336766916670076,
-    "adx14": 31.68183515744517,
-    "adx_pos": 15.876538807965595,
-    "adx_neg": 19.191456510215374,
-    "bb_high": 73.46731128119623,
-    "bb_low": 67.79768871880376,
-    "bb_mid": 70.6325,
-    "vwap20": 70.84902457230909,
+    "date": "2026-09-01",
+    "close": 65.36,
+    "prev_close": 69.11,
+    "change_pct": -5.4261322529301115,
+    "ema20": 69.36814629325055,
+    "ema50": 66.95337482339161,
+    "ema200": 59.69713333831208,
+    "rsi14": 37.26930253247554,
+    "macd": 0.0814658950175442,
+    "macd_signal": 0.9722369753721793,
+    "atr14": 2.2991283565479357,
+    "adx14": 31.065856466629054,
+    "adx_pos": 13.681589035129521,
+    "adx_neg": 21.88185556273073,
+    "bb_high": 74.03417022336642,
+    "bb_low": 66.7318297766336,
+    "bb_mid": 70.38300000000001,
+    "vwap20": 70.59847161303355,
     "high_52w": 73.94,
     "low_52w": 41.95,
-    "volume": 8505500.0,
-    "avg_volume20": 12727281.7
+    "volume": 18034062.0,
+    "avg_volume20": 12502478.05
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 55.86,
-      "ema50": 59.17
-    },
     {
       "date": "2026-03-09",
       "close": 53.37,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 69.11,
       "ema50": 67.02
+    },
+    {
+      "date": "2026-09-01",
+      "close": 65.36,
+      "ema50": 66.95
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 69.11 vs EMA20 69.79",
-      "ema20_above_ema50": "EMA20 69.79 vs EMA50 67.02",
-      "ema50_above_ema200": "EMA50 67.02 vs EMA200 59.64",
-      "rsi_above_50": "RSI(14) 49.26 vs 50",
-      "macd_bullish": "MACD 0.47 vs signal 1.19",
-      "adx_trending_up": "ADX(14) 31.68 vs 20, +DI 15.88 vs -DI 19.19",
-      "price_above_vwap20": "Close 69.11 vs 20d VWAP 70.85",
-      "price_above_bb_mid": "Close 69.11 vs BB mid 70.63"
+      "price_above_ema20": "Close 65.36 vs EMA20 69.37",
+      "ema20_above_ema50": "EMA20 69.37 vs EMA50 66.95",
+      "ema50_above_ema200": "EMA50 66.95 vs EMA200 59.70",
+      "rsi_above_50": "RSI(14) 37.27 vs 50",
+      "macd_bullish": "MACD 0.08 vs signal 0.97",
+      "adx_trending_up": "ADX(14) 31.07 vs 20, +DI 13.68 vs -DI 21.88",
+      "price_above_vwap20": "Close 65.36 vs 20d VWAP 70.60",
+      "price_above_bb_mid": "Close 65.36 vs BB mid 70.38"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -663,7 +663,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "2/8 bullish flags",
-        "patterns: near buy zone"
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,33 +672,34 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.13 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 49.3",
-        "below_ema200": "Close 69.11 vs EMA200 59.64",
-        "extended_above_ema20": "Close 69.11 vs EMA20 69.79 (-1.0%)",
-        "large_day_move": "Day change +1.9%",
-        "near_52w_low": "Close 69.11 vs 52w low 41.95"
+        "atr_high": "ATR 2.30 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 37.3",
+        "below_ema200": "Close 65.36 vs EMA200 59.70",
+        "extended_above_ema20": "Close 65.36 vs EMA20 69.37 (-5.8%)",
+        "large_day_move": "Day change -5.4%",
+        "near_52w_low": "Close 65.36 vs 52w low 41.95"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
-      "daily": "bullish",
-      "weekly": "bullish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:38:32.363419+00:00"
+  "updated_at": "2026-09-01T14:52:42.958269+00:00"
 }

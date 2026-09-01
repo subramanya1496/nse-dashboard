@@ -3,35 +3,30 @@
   "name": "APL Apollo Tubes",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 2223.4,
-    "prev_close": 2265.6,
-    "change_pct": -1.8626412429378452,
-    "ema20": 2093.955990110333,
-    "ema50": 1989.405672251444,
-    "ema200": 1920.2926194112101,
-    "rsi14": 74.47374316720607,
-    "macd": 85.82134429738744,
-    "macd_signal": 75.97201936080565,
-    "atr14": 50.547951970645954,
-    "adx14": 50.08585187559368,
-    "adx_pos": 36.018637756935476,
-    "adx_neg": 4.5220803215568735,
-    "bb_high": 2273.0615704156453,
-    "bb_low": 1894.7684295843546,
-    "bb_mid": 2083.915,
-    "vwap20": 2088.657416485672,
+    "date": "2026-09-01",
+    "close": 2234.0,
+    "prev_close": 2223.4,
+    "change_pct": 0.4767473239183192,
+    "ema20": 2107.29351486173,
+    "ema50": 1998.997606672956,
+    "ema200": 1923.4140858847306,
+    "rsi14": 75.24680160240365,
+    "macd": 86.34430264979483,
+    "macd_signal": 78.04647601860349,
+    "atr14": 50.13738397274268,
+    "adx14": 52.05766017805409,
+    "adx_pos": 33.71976151549394,
+    "adx_neg": 4.233460216508185,
+    "bb_high": 2283.794100605907,
+    "bb_low": 1915.4358993940937,
+    "bb_mid": 2099.6150000000002,
+    "vwap20": 2104.0928825285487,
     "high_52w": 2301.4,
     "low_52w": 1578.0,
-    "volume": 1081058.0,
-    "avg_volume20": 616154.25
+    "volume": 642035.0,
+    "avg_volume20": 616878.25
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 2152.8,
-      "ema50": 2082.14
-    },
     {
       "date": "2026-03-09",
       "close": 2097.9,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 2223.4,
       "ema50": 1989.41
+    },
+    {
+      "date": "2026-09-01",
+      "close": 2234.0,
+      "ema50": 1999.0
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,223.40 vs EMA20 2,093.96",
-      "ema20_above_ema50": "EMA20 2,093.96 vs EMA50 1,989.41",
-      "ema50_above_ema200": "EMA50 1,989.41 vs EMA200 1,920.29",
-      "rsi_above_50": "RSI(14) 74.47 vs 50",
-      "macd_bullish": "MACD 85.82 vs signal 75.97",
-      "adx_trending_up": "ADX(14) 50.09 vs 20, +DI 36.02 vs -DI 4.52",
-      "price_above_vwap20": "Close 2,223.40 vs 20d VWAP 2,088.66",
-      "price_above_bb_mid": "Close 2,223.40 vs BB mid 2,083.91"
+      "price_above_ema20": "Close 2,234.00 vs EMA20 2,107.29",
+      "ema20_above_ema50": "EMA20 2,107.29 vs EMA50 1,999.00",
+      "ema50_above_ema200": "EMA50 1,999.00 vs EMA200 1,923.41",
+      "rsi_above_50": "RSI(14) 75.25 vs 50",
+      "macd_bullish": "MACD 86.34 vs signal 78.05",
+      "adx_trending_up": "ADX(14) 52.06 vs 20, +DI 33.72 vs -DI 4.23",
+      "price_above_vwap20": "Close 2,234.00 vs 20d VWAP 2,104.09",
+      "price_above_bb_mid": "Close 2,234.00 vs BB mid 2,099.62"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,39 +664,40 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "8/8 bullish flags",
-        "patterns: volume surge"
+        "8/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 50.55 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 74.5",
-        "below_ema200": "Close 2,223.40 vs EMA200 1,920.29",
-        "extended_above_ema20": "Close 2,223.40 vs EMA20 2,093.96 (+6.2%)",
-        "large_day_move": "Day change -1.9%",
-        "near_52w_low": "Close 2,223.40 vs 52w low 1,578.00"
+        "atr_high": "ATR 50.14 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 75.2",
+        "below_ema200": "Close 2,234.00 vs EMA200 1,923.41",
+        "extended_above_ema20": "Close 2,234.00 vs EMA20 2,107.29 (+6.0%)",
+        "large_day_move": "Day change +0.5%",
+        "near_52w_low": "Close 2,234.00 vs 52w low 1,578.00"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "rsi_extreme"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -710,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:36:56.719575+00:00"
+  "updated_at": "2026-09-01T14:51:07.297577+00:00"
 }

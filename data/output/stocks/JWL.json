@@ -3,35 +3,30 @@
   "name": "Jupiter Wagons",
   "sector": "Railways",
   "indicators": {
-    "date": "2026-08-31",
-    "close": 240.55,
-    "prev_close": 245.1,
-    "change_pct": -1.8563851489188017,
-    "ema20": 250.36981592332324,
-    "ema50": 256.8119082998585,
-    "ema200": 283.66869375386557,
-    "rsi14": 30.148238877220862,
-    "macd": -3.8168725694156933,
-    "macd_signal": -2.8869533936049496,
-    "atr14": 6.2186140140557695,
-    "adx14": 14.260369796827238,
-    "adx_pos": 16.567124383211876,
-    "adx_neg": 24.14884154361518,
-    "bb_high": 265.63200522913417,
-    "bb_low": 239.86299477086584,
-    "bb_mid": 252.7475,
-    "vwap20": 255.59766851258345,
+    "date": "2026-09-01",
+    "close": 242.36,
+    "prev_close": 240.55,
+    "change_pct": 0.7524423196840583,
+    "ema20": 249.60697631157817,
+    "ema50": 256.24516679790327,
+    "ema200": 283.2576619752201,
+    "rsi14": 34.267878699777455,
+    "macd": -3.9819708357511274,
+    "macd_signal": -3.105956882034185,
+    "atr14": 6.650141584480357,
+    "adx14": 13.26743546066491,
+    "adx_pos": 21.120057039670392,
+    "adx_neg": 20.968836237789297,
+    "bb_high": 265.08066459293934,
+    "bb_low": 238.66533540706072,
+    "bb_mid": 251.87300000000005,
+    "vwap20": 254.17504223575895,
     "high_52w": 358.25,
     "low_52w": 235.65,
-    "volume": 481503.0,
-    "avg_volume20": 731912.95
+    "volume": 1162581.0,
+    "avg_volume20": 725132.0
   },
   "price_history": [
-    {
-      "date": "2026-03-06",
-      "close": 298.6,
-      "ema50": 295.2
-    },
     {
       "date": "2026-03-09",
       "close": 287.4,
@@ -626,6 +621,11 @@
       "date": "2026-08-31",
       "close": 240.55,
       "ema50": 256.81
+    },
+    {
+      "date": "2026-09-01",
+      "close": 242.36,
+      "ema50": 256.25
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 240.55 vs EMA20 250.37",
-      "ema20_above_ema50": "EMA20 250.37 vs EMA50 256.81",
-      "ema50_above_ema200": "EMA50 256.81 vs EMA200 283.67",
-      "rsi_above_50": "RSI(14) 30.15 vs 50",
-      "macd_bullish": "MACD -3.82 vs signal -2.89",
-      "adx_trending_up": "ADX(14) 14.26 vs 20, +DI 16.57 vs -DI 24.15",
-      "price_above_vwap20": "Close 240.55 vs 20d VWAP 255.60",
-      "price_above_bb_mid": "Close 240.55 vs BB mid 252.75"
+      "price_above_ema20": "Close 242.36 vs EMA20 249.61",
+      "ema20_above_ema50": "EMA20 249.61 vs EMA50 256.25",
+      "ema50_above_ema200": "EMA50 256.25 vs EMA200 283.26",
+      "rsi_above_50": "RSI(14) 34.27 vs 50",
+      "macd_bullish": "MACD -3.98 vs signal -3.11",
+      "adx_trending_up": "ADX(14) 13.27 vs 20, +DI 21.12 vs -DI 20.97",
+      "price_above_vwap20": "Close 242.36 vs 20d VWAP 254.18",
+      "price_above_bb_mid": "Close 242.36 vs BB mid 251.87"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.22 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 30.1",
-        "below_ema200": "Close 240.55 vs EMA200 283.67",
-        "extended_above_ema20": "Close 240.55 vs EMA20 250.37 (-3.9%)",
-        "large_day_move": "Day change -1.9%",
-        "near_52w_low": "Close 240.55 vs 52w low 235.65"
+        "atr_high": "ATR 6.65 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 34.3",
+        "below_ema200": "Close 242.36 vs EMA200 283.26",
+        "extended_above_ema20": "Close 242.36 vs EMA20 249.61 (-2.9%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 242.36 vs 52w low 235.65"
       },
       "conditions_on": [
         "atr_high",
@@ -690,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-08-31T17:37:44.345546+00:00"
+  "updated_at": "2026-09-01T14:51:55.016173+00:00"
 }
