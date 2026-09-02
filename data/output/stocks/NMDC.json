@@ -3,35 +3,30 @@
   "name": "NMDC Ltd",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-09-01",
-    "close": 85.69,
-    "prev_close": 88.2,
-    "change_pct": -2.8458049886621373,
-    "ema20": 85.68513480141299,
-    "ema50": 85.6247610173044,
-    "ema200": 83.29803961839703,
-    "rsi14": 50.41737892645817,
-    "macd": 0.4450707704765051,
-    "macd_signal": 0.22086455023902082,
-    "atr14": 2.1765916594138504,
-    "adx14": 15.499142282869613,
-    "adx_pos": 18.05163227315546,
-    "adx_neg": 13.5568776148547,
-    "bb_high": 87.95282057168642,
-    "bb_low": 83.1641794283136,
-    "bb_mid": 85.55850000000001,
-    "vwap20": 85.42849673671263,
+    "date": "2026-09-02",
+    "close": 85.75,
+    "prev_close": 85.69,
+    "change_pct": 0.07001983895437305,
+    "ema20": 85.69131243937368,
+    "ema50": 85.6296738798711,
+    "ema200": 83.33775582332589,
+    "rsi14": 50.62067383308219,
+    "macd": 0.3903708233139298,
+    "macd_signal": 0.2547658048310366,
+    "atr14": 2.128263683733322,
+    "adx14": 14.699704233183558,
+    "adx_pos": 17.142861676157818,
+    "adx_neg": 15.727147213687598,
+    "bb_high": 87.94941095510168,
+    "bb_low": 83.16258904489834,
+    "bb_mid": 85.55600000000001,
+    "vwap20": 85.42542324232582,
     "high_52w": 97.49,
     "low_52w": 68.19,
-    "volume": 11311468.0,
-    "avg_volume20": 19202073.3
+    "volume": 16726795.0,
+    "avg_volume20": 19011807.6
   },
   "price_history": [
-    {
-      "date": "2026-03-09",
-      "close": 79.13,
-      "ema50": 80.46
-    },
     {
       "date": "2026-03-10",
       "close": 79.67,
@@ -626,6 +621,11 @@
       "date": "2026-09-01",
       "close": 85.69,
       "ema50": 85.62
+    },
+    {
+      "date": "2026-09-02",
+      "close": 85.75,
+      "ema50": 85.63
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 85.69 vs EMA20 85.69",
-      "ema20_above_ema50": "EMA20 85.69 vs EMA50 85.62",
-      "ema50_above_ema200": "EMA50 85.62 vs EMA200 83.30",
-      "rsi_above_50": "RSI(14) 50.42 vs 50",
-      "macd_bullish": "MACD 0.45 vs signal 0.22",
-      "adx_trending_up": "ADX(14) 15.50 vs 20, +DI 18.05 vs -DI 13.56",
-      "price_above_vwap20": "Close 85.69 vs 20d VWAP 85.43",
-      "price_above_bb_mid": "Close 85.69 vs BB mid 85.56"
+      "price_above_ema20": "Close 85.75 vs EMA20 85.69",
+      "ema20_above_ema50": "EMA20 85.69 vs EMA50 85.63",
+      "ema50_above_ema200": "EMA50 85.63 vs EMA200 83.34",
+      "rsi_above_50": "RSI(14) 50.62 vs 50",
+      "macd_bullish": "MACD 0.39 vs signal 0.25",
+      "adx_trending_up": "ADX(14) 14.70 vs 20, +DI 17.14 vs -DI 15.73",
+      "price_above_vwap20": "Close 85.75 vs 20d VWAP 85.43",
+      "price_above_bb_mid": "Close 85.75 vs BB mid 85.56"
     },
     "flags_on": [
       "price_above_ema20",
@@ -673,7 +673,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
@@ -681,17 +681,15 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.18 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 50.4",
-        "below_ema200": "Close 85.69 vs EMA200 83.30",
-        "extended_above_ema20": "Close 85.69 vs EMA20 85.69 (+0.0%)",
-        "large_day_move": "Day change -2.8%",
-        "near_52w_low": "Close 85.69 vs 52w low 68.19"
+        "atr_high": "ATR 2.13 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 50.6",
+        "below_ema200": "Close 85.75 vs EMA200 83.34",
+        "extended_above_ema20": "Close 85.75 vs EMA20 85.69 (+0.1%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 85.75 vs 52w low 68.19"
       },
-      "conditions_on": [
-        "atr_high"
-      ],
-      "condition_count": 1,
+      "conditions_on": [],
+      "condition_count": 0,
       "condition_total": 6,
       "level": "low"
     },
@@ -703,7 +701,7 @@
     },
     "trend": {
       "daily": "bullish",
-      "weekly": "neutral",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -711,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-01T14:52:12.568481+00:00"
+  "updated_at": "2026-09-02T14:28:08.897948+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Container Corporation of India",
   "sector": "Logistics",
   "indicators": {
-    "date": "2026-09-01",
-    "close": 514.0,
-    "prev_close": 511.9,
-    "change_pct": 0.4102363742918584,
-    "ema20": 512.3090764804627,
-    "ema50": 503.2994673044208,
-    "ema200": 507.02982943707246,
-    "rsi14": 52.077452512163205,
-    "macd": 2.8106049068593393,
-    "macd_signal": 4.812386463756178,
-    "atr14": 13.103895788961509,
-    "adx14": 16.273717033309573,
-    "adx_pos": 20.304592187487653,
-    "adx_neg": 21.661540436995814,
-    "bb_high": 531.5435344251239,
-    "bb_low": 498.0214655748761,
-    "bb_mid": 514.7825,
-    "vwap20": 517.2807169234585,
+    "date": "2026-09-02",
+    "close": 510.0,
+    "prev_close": 514.0,
+    "change_pct": -0.7782101167315175,
+    "ema20": 512.0891644347043,
+    "ema50": 503.56222939816143,
+    "ema200": 507.0203906005345,
+    "rsi14": 49.90287915946178,
+    "macd": 2.3369803751907057,
+    "macd_signal": 4.317305246101589,
+    "atr14": 13.060760375499964,
+    "adx14": 15.55316966812507,
+    "adx_pos": 18.916533633092282,
+    "adx_neg": 21.41123092741243,
+    "bb_high": 531.3354504978437,
+    "bb_low": 497.59454950215616,
+    "bb_mid": 514.4649999999999,
+    "vwap20": 516.8201718987459,
     "high_52w": 569.8,
     "low_52w": 421.45,
-    "volume": 1247573.0,
-    "avg_volume20": 1575588.7
+    "volume": 2202359.0,
+    "avg_volume20": 1601304.1
   },
   "price_history": [
-    {
-      "date": "2026-03-09",
-      "close": 473.75,
-      "ema50": 503.28
-    },
     {
       "date": "2026-03-10",
       "close": 472.8,
@@ -626,44 +621,47 @@
       "date": "2026-09-01",
       "close": 514.0,
       "ema50": 503.3
+    },
+    {
+      "date": "2026-09-02",
+      "close": 510.0,
+      "ema50": 503.56
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 514.00 vs EMA20 512.31",
-      "ema20_above_ema50": "EMA20 512.31 vs EMA50 503.30",
-      "ema50_above_ema200": "EMA50 503.30 vs EMA200 507.03",
-      "rsi_above_50": "RSI(14) 52.08 vs 50",
-      "macd_bullish": "MACD 2.81 vs signal 4.81",
-      "adx_trending_up": "ADX(14) 16.27 vs 20, +DI 20.30 vs -DI 21.66",
-      "price_above_vwap20": "Close 514.00 vs 20d VWAP 517.28",
-      "price_above_bb_mid": "Close 514.00 vs BB mid 514.78"
+      "price_above_ema20": "Close 510.00 vs EMA20 512.09",
+      "ema20_above_ema50": "EMA20 512.09 vs EMA50 503.56",
+      "ema50_above_ema200": "EMA50 503.56 vs EMA200 507.02",
+      "rsi_above_50": "RSI(14) 49.90 vs 50",
+      "macd_bullish": "MACD 2.34 vs signal 4.32",
+      "adx_trending_up": "ADX(14) 15.55 vs 20, +DI 18.92 vs -DI 21.41",
+      "price_above_vwap20": "Close 510.00 vs 20d VWAP 516.82",
+      "price_above_bb_mid": "Close 510.00 vs BB mid 514.46"
     },
     "flags_on": [
-      "price_above_ema20",
-      "ema20_above_ema50",
-      "rsi_above_50"
+      "ema20_above_ema50"
     ],
-    "flag_count": 3,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.10 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 52.1",
-        "below_ema200": "Close 514.00 vs EMA200 507.03",
-        "extended_above_ema20": "Close 514.00 vs EMA20 512.31 (+0.3%)",
-        "large_day_move": "Day change +0.4%",
-        "near_52w_low": "Close 514.00 vs 52w low 421.45"
+        "atr_high": "ATR 13.06 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 49.9",
+        "below_ema200": "Close 510.00 vs EMA200 507.02",
+        "extended_above_ema20": "Close 510.00 vs EMA20 512.09 (-0.4%)",
+        "large_day_move": "Day change -0.8%",
+        "near_52w_low": "Close 510.00 vs 52w low 421.45"
       },
       "conditions_on": [
         "atr_high"
@@ -706,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-01T14:51:24.929201+00:00"
+  "updated_at": "2026-09-02T14:27:21.279395+00:00"
 }

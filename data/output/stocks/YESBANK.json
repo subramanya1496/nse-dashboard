@@ -3,35 +3,30 @@
   "name": "Yes Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-09-01",
-    "close": 22.1,
-    "prev_close": 22.83,
-    "change_pct": -3.197547087165996,
-    "ema20": 22.63075695970039,
-    "ema50": 22.825147667924412,
-    "ema200": 22.05410015323708,
-    "rsi14": 40.213111176553596,
-    "macd": -0.21215988034984434,
-    "macd_signal": -0.19548482258582545,
-    "atr14": 0.4308901269516308,
-    "adx14": 17.434639830070545,
-    "adx_pos": 16.770924591622574,
-    "adx_neg": 18.57157714952725,
-    "bb_high": 23.169919041376087,
-    "bb_low": 22.12008095862392,
-    "bb_mid": 22.645000000000003,
-    "vwap20": 22.631525933165868,
+    "date": "2026-09-02",
+    "close": 22.15,
+    "prev_close": 22.1,
+    "change_pct": 0.22624434389138987,
+    "ema20": 22.584970582586053,
+    "ema50": 22.798670407931702,
+    "ema200": 22.046234586791147,
+    "rsi14": 41.13317287195987,
+    "macd": -0.22452465327672044,
+    "macd_signal": -0.20129278871076706,
+    "atr14": 0.42368368931814093,
+    "adx14": 16.94064397824486,
+    "adx_pos": 15.837882652670409,
+    "adx_neg": 19.561429398568826,
+    "bb_high": 23.148698081508652,
+    "bb_low": 22.059301918491354,
+    "bb_mid": 22.604000000000003,
+    "vwap20": 22.579487109364525,
     "high_52w": 25.78,
     "low_52w": 17.2,
-    "volume": 63872649.0,
-    "avg_volume20": 50124082.35
+    "volume": 44781892.0,
+    "avg_volume20": 48866571.35
   },
   "price_history": [
-    {
-      "date": "2026-03-09",
-      "close": 19.65,
-      "ema50": 21.23
-    },
     {
       "date": "2026-03-10",
       "close": 19.91,
@@ -40,7 +35,7 @@
     {
       "date": "2026-03-11",
       "close": 19.53,
-      "ema50": 21.12
+      "ema50": 21.11
     },
     {
       "date": "2026-03-12",
@@ -626,6 +621,11 @@
       "date": "2026-09-01",
       "close": 22.1,
       "ema50": 22.83
+    },
+    {
+      "date": "2026-09-02",
+      "close": 22.15,
+      "ema50": 22.8
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 22.10 vs EMA20 22.63",
-      "ema20_above_ema50": "EMA20 22.63 vs EMA50 22.83",
-      "ema50_above_ema200": "EMA50 22.83 vs EMA200 22.05",
-      "rsi_above_50": "RSI(14) 40.21 vs 50",
-      "macd_bullish": "MACD -0.21 vs signal -0.20",
-      "adx_trending_up": "ADX(14) 17.43 vs 20, +DI 16.77 vs -DI 18.57",
-      "price_above_vwap20": "Close 22.10 vs 20d VWAP 22.63",
-      "price_above_bb_mid": "Close 22.10 vs BB mid 22.65"
+      "price_above_ema20": "Close 22.15 vs EMA20 22.58",
+      "ema20_above_ema50": "EMA20 22.58 vs EMA50 22.80",
+      "ema50_above_ema200": "EMA50 22.80 vs EMA200 22.05",
+      "rsi_above_50": "RSI(14) 41.13 vs 50",
+      "macd_bullish": "MACD -0.22 vs signal -0.20",
+      "adx_trending_up": "ADX(14) 16.94 vs 20, +DI 15.84 vs -DI 19.56",
+      "price_above_vwap20": "Close 22.15 vs 20d VWAP 22.58",
+      "price_above_bb_mid": "Close 22.15 vs BB mid 22.60"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.43 = 1.9% of price",
-        "rsi_extreme": "RSI(14) 40.2",
-        "below_ema200": "Close 22.10 vs EMA200 22.05",
-        "extended_above_ema20": "Close 22.10 vs EMA20 22.63 (-2.3%)",
-        "large_day_move": "Day change -3.2%",
-        "near_52w_low": "Close 22.10 vs 52w low 17.20"
+        "atr_high": "ATR 0.42 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 41.1",
+        "below_ema200": "Close 22.15 vs EMA200 22.05",
+        "extended_above_ema20": "Close 22.15 vs EMA20 22.58 (-1.9%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 22.15 vs 52w low 17.20"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -690,7 +691,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -702,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-01T14:52:47.774484+00:00"
+  "updated_at": "2026-09-02T14:28:44.102878+00:00"
 }

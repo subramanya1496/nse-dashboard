@@ -3,35 +3,30 @@
   "name": "Vishal Mega Mart",
   "sector": "Retail",
   "indicators": {
-    "date": "2026-09-01",
-    "close": 106.55,
-    "prev_close": 110.64,
-    "change_pct": -3.6966738973246596,
-    "ema20": 108.34827797563958,
-    "ema50": 110.90365989273825,
-    "ema200": 119.49987542207421,
-    "rsi14": 45.65049947449382,
-    "macd": -0.755910917650823,
-    "macd_signal": -1.2123493078699892,
-    "atr14": 3.5671969290906964,
-    "adx14": 22.943743377272,
-    "adx_pos": 27.378568863161163,
-    "adx_neg": 18.11024751806739,
-    "bb_high": 113.79939919503967,
-    "bb_low": 101.67460080496032,
-    "bb_mid": 107.737,
-    "vwap20": 110.08852854342287,
-    "high_52w": 157.6,
+    "date": "2026-09-02",
+    "close": 108.57,
+    "prev_close": 106.55,
+    "change_pct": 1.895823557015482,
+    "ema20": 108.36939435891198,
+    "ema50": 110.81214061960634,
+    "ema200": 119.35909066534978,
+    "rsi14": 49.43702815364741,
+    "macd": -0.6587723322953707,
+    "macd_signal": -1.101633912706999,
+    "atr14": 3.618111434150663,
+    "adx14": 22.337803824799003,
+    "adx_pos": 25.065201855083902,
+    "adx_neg": 18.731884785116005,
+    "bb_high": 113.50642344204351,
+    "bb_low": 101.72457655795648,
+    "bb_mid": 107.6155,
+    "vwap20": 109.98725599032085,
+    "high_52w": 155.32,
     "low_52w": 98.77,
-    "volume": 13963729.0,
-    "avg_volume20": 16771348.8
+    "volume": 13754007.0,
+    "avg_volume20": 17175139.55
   },
   "price_history": [
-    {
-      "date": "2026-03-09",
-      "close": 108.65,
-      "ema50": 123.68
-    },
     {
       "date": "2026-03-10",
       "close": 111.32,
@@ -626,43 +621,50 @@
       "date": "2026-09-01",
       "close": 106.55,
       "ema50": 110.9
+    },
+    {
+      "date": "2026-09-02",
+      "close": 108.57,
+      "ema50": 110.81
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": true,
       "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 106.55 vs EMA20 108.35",
-      "ema20_above_ema50": "EMA20 108.35 vs EMA50 110.90",
-      "ema50_above_ema200": "EMA50 110.90 vs EMA200 119.50",
-      "rsi_above_50": "RSI(14) 45.65 vs 50",
-      "macd_bullish": "MACD -0.76 vs signal -1.21",
-      "adx_trending_up": "ADX(14) 22.94 vs 20, +DI 27.38 vs -DI 18.11",
-      "price_above_vwap20": "Close 106.55 vs 20d VWAP 110.09",
-      "price_above_bb_mid": "Close 106.55 vs BB mid 107.74"
+      "price_above_ema20": "Close 108.57 vs EMA20 108.37",
+      "ema20_above_ema50": "EMA20 108.37 vs EMA50 110.81",
+      "ema50_above_ema200": "EMA50 110.81 vs EMA200 119.36",
+      "rsi_above_50": "RSI(14) 49.44 vs 50",
+      "macd_bullish": "MACD -0.66 vs signal -1.10",
+      "adx_trending_up": "ADX(14) 22.34 vs 20, +DI 25.07 vs -DI 18.73",
+      "price_above_vwap20": "Close 108.57 vs 20d VWAP 109.99",
+      "price_above_bb_mid": "Close 108.57 vs BB mid 107.62"
     },
     "flags_on": [
+      "price_above_ema20",
       "macd_bullish",
-      "adx_trending_up"
+      "adx_trending_up",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "4/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.57 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 45.7",
-        "below_ema200": "Close 106.55 vs EMA200 119.50",
-        "extended_above_ema20": "Close 106.55 vs EMA20 108.35 (-1.7%)",
-        "large_day_move": "Day change -3.7%",
-        "near_52w_low": "Close 106.55 vs 52w low 98.77"
+        "atr_high": "ATR 3.62 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 49.4",
+        "below_ema200": "Close 108.57 vs EMA200 119.36",
+        "extended_above_ema20": "Close 108.57 vs EMA20 108.37 (+0.2%)",
+        "large_day_move": "Day change +1.9%",
+        "near_52w_low": "Close 108.57 vs 52w low 98.77"
       },
       "conditions_on": [
         "atr_high",
@@ -706,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-01T14:52:46.183776+00:00"
+  "updated_at": "2026-09-02T14:28:42.506956+00:00"
 }
