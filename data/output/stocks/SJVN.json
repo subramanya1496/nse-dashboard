@@ -3,35 +3,30 @@
   "name": "SJVN Ltd",
   "sector": "Power",
   "indicators": {
-    "date": "2026-09-03",
-    "close": 65.15,
-    "prev_close": 63.92,
-    "change_pct": 1.9242803504380537,
-    "ema20": 66.04588565316558,
-    "ema50": 68.10372876463802,
-    "ema200": 74.77943574795655,
-    "rsi14": 37.270957250850884,
-    "macd": -1.1122502397246308,
-    "macd_signal": -1.0947929625061579,
-    "atr14": 1.080517574054708,
-    "adx14": 35.623355112774966,
-    "adx_pos": 15.684503048896357,
-    "adx_neg": 24.0829699136575,
-    "bb_high": 68.23191790887277,
-    "bb_low": 63.94408209112722,
-    "bb_mid": 66.088,
-    "vwap20": 66.13100271759315,
-    "high_52w": 96.8,
+    "date": "2026-09-04",
+    "close": 65.23,
+    "prev_close": 64.98,
+    "change_pct": 0.38473376423514927,
+    "ema20": 65.95353373154876,
+    "ema50": 67.98461345469762,
+    "ema200": 74.53419788057072,
+    "rsi14": 38.279585773998576,
+    "macd": -1.053725645070969,
+    "macd_signal": -1.0887492993660586,
+    "atr14": 1.0604806044699908,
+    "adx14": 34.58732503491094,
+    "adx_pos": 14.839360467703067,
+    "adx_neg": 22.78528496868989,
+    "bb_high": 67.95003861447296,
+    "bb_low": 63.93596138552704,
+    "bb_mid": 65.943,
+    "vwap20": 65.95249766673425,
+    "high_52w": 95.58,
     "low_52w": 63.02,
-    "volume": 2436292.0,
-    "avg_volume20": 1465862.05
+    "volume": 1260938.0,
+    "avg_volume20": 1440720.3
   },
   "price_history": [
-    {
-      "date": "2026-03-11",
-      "close": 70.53,
-      "ema50": 74.44
-    },
     {
       "date": "2026-03-12",
       "close": 72.35,
@@ -40,7 +35,7 @@
     {
       "date": "2026-03-13",
       "close": 69.89,
-      "ema50": 74.19
+      "ema50": 74.18
     },
     {
       "date": "2026-03-16",
@@ -145,7 +140,7 @@
     {
       "date": "2026-04-17",
       "close": 78.62,
-      "ema50": 71.99
+      "ema50": 71.98
     },
     {
       "date": "2026-04-20",
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-09-03",
-      "close": 65.15,
+      "close": 64.98,
       "ema50": 68.1
+    },
+    {
+      "date": "2026-09-04",
+      "close": 65.23,
+      "ema50": 67.98
     }
   ],
   "flags": {
@@ -634,23 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 65.15 vs EMA20 66.05",
-      "ema20_above_ema50": "EMA20 66.05 vs EMA50 68.10",
-      "ema50_above_ema200": "EMA50 68.10 vs EMA200 74.78",
-      "rsi_above_50": "RSI(14) 37.27 vs 50",
-      "macd_bullish": "MACD -1.11 vs signal -1.09",
-      "adx_trending_up": "ADX(14) 35.62 vs 20, +DI 15.68 vs -DI 24.08",
-      "price_above_vwap20": "Close 65.15 vs 20d VWAP 66.13",
-      "price_above_bb_mid": "Close 65.15 vs BB mid 66.09"
+      "price_above_ema20": "Close 65.23 vs EMA20 65.95",
+      "ema20_above_ema50": "EMA20 65.95 vs EMA50 67.98",
+      "ema50_above_ema200": "EMA50 67.98 vs EMA200 74.53",
+      "rsi_above_50": "RSI(14) 38.28 vs 50",
+      "macd_bullish": "MACD -1.05 vs signal -1.09",
+      "adx_trending_up": "ADX(14) 34.59 vs 20, +DI 14.84 vs -DI 22.79",
+      "price_above_vwap20": "Close 65.23 vs 20d VWAP 65.95",
+      "price_above_bb_mid": "Close 65.23 vs BB mid 65.94"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "macd_bullish"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +674,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.08 = 1.7% of price",
-        "rsi_extreme": "RSI(14) 37.3",
-        "below_ema200": "Close 65.15 vs EMA200 74.78",
-        "extended_above_ema20": "Close 65.15 vs EMA20 66.05 (-1.4%)",
-        "large_day_move": "Day change +1.9%",
-        "near_52w_low": "Close 65.15 vs 52w low 63.02"
+        "atr_high": "ATR 1.06 = 1.6% of price",
+        "rsi_extreme": "RSI(14) 38.3",
+        "below_ema200": "Close 65.23 vs EMA200 74.53",
+        "extended_above_ema20": "Close 65.23 vs EMA20 65.95 (-1.1%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 65.23 vs 52w low 63.02"
       },
       "conditions_on": [
         "below_ema200",
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-03T14:32:40.098150+00:00"
+  "updated_at": "2026-09-04T14:20:56.448797+00:00"
 }
