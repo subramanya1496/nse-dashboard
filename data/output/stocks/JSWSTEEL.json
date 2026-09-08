@@ -3,35 +3,30 @@
   "name": "JSW Steel",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 1302.0,
-    "prev_close": 1325.0,
-    "change_pct": -1.7358490566037734,
-    "ema20": 1305.0956453947347,
-    "ema50": 1286.9184305571505,
-    "ema200": 1227.11736328631,
-    "rsi14": 50.66639176521023,
-    "macd": 10.43396506312638,
-    "macd_signal": 12.383443081840365,
-    "atr14": 25.94220811422041,
-    "adx14": 30.67797719905235,
-    "adx_pos": 25.548038897622533,
-    "adx_neg": 12.501067374699112,
-    "bb_high": 1348.844055414841,
-    "bb_low": 1255.655944585159,
-    "bb_mid": 1302.25,
-    "vwap20": 1305.2003240615968,
+    "date": "2026-09-08",
+    "close": 1297.3,
+    "prev_close": 1302.0,
+    "change_pct": -0.36098310291859026,
+    "ema20": 1304.3532029761884,
+    "ema50": 1287.3255509274582,
+    "ema200": 1227.8156979799785,
+    "rsi14": 49.24738871887933,
+    "macd": 8.570234747340237,
+    "macd_signal": 11.62080141494034,
+    "atr14": 25.46776467749038,
+    "adx14": 30.555497413842563,
+    "adx_pos": 24.165122221326467,
+    "adx_neg": 13.310856879550165,
+    "bb_high": 1348.8024955705314,
+    "bb_low": 1257.087504429469,
+    "bb_mid": 1302.9450000000002,
+    "vwap20": 1305.9040200068703,
     "high_52w": 1351.0,
-    "low_52w": 1031.2,
-    "volume": 1276231.0,
-    "avg_volume20": 1638927.1
+    "low_52w": 1040.0,
+    "volume": 1345313.0,
+    "avg_volume20": 1630459.9
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 1119.3,
-      "ema50": 1206.11
-    },
     {
       "date": "2026-03-16",
       "close": 1145.6,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 1302.0,
       "ema50": 1286.92
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1297.3,
+      "ema50": 1287.33
     }
   ],
   "flags": {
@@ -633,38 +633,37 @@
       "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,302.00 vs EMA20 1,305.10",
-      "ema20_above_ema50": "EMA20 1,305.10 vs EMA50 1,286.92",
-      "ema50_above_ema200": "EMA50 1,286.92 vs EMA200 1,227.12",
-      "rsi_above_50": "RSI(14) 50.67 vs 50",
-      "macd_bullish": "MACD 10.43 vs signal 12.38",
-      "adx_trending_up": "ADX(14) 30.68 vs 20, +DI 25.55 vs -DI 12.50",
-      "price_above_vwap20": "Close 1,302.00 vs 20d VWAP 1,305.20",
-      "price_above_bb_mid": "Close 1,302.00 vs BB mid 1,302.25"
+      "price_above_ema20": "Close 1,297.30 vs EMA20 1,304.35",
+      "ema20_above_ema50": "EMA20 1,304.35 vs EMA50 1,287.33",
+      "ema50_above_ema200": "EMA50 1,287.33 vs EMA200 1,227.82",
+      "rsi_above_50": "RSI(14) 49.25 vs 50",
+      "macd_bullish": "MACD 8.57 vs signal 11.62",
+      "adx_trending_up": "ADX(14) 30.56 vs 20, +DI 24.17 vs -DI 13.31",
+      "price_above_vwap20": "Close 1,297.30 vs 20d VWAP 1,305.90",
+      "price_above_bb_mid": "Close 1,297.30 vs BB mid 1,302.95"
     },
     "flags_on": [
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50",
       "adx_trending_up"
     ],
-    "flag_count": 4,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "4/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -678,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 25.94 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 50.7",
-        "below_ema200": "Close 1,302.00 vs EMA200 1,227.12",
-        "extended_above_ema20": "Close 1,302.00 vs EMA20 1,305.10 (-0.2%)",
-        "large_day_move": "Day change -1.7%",
-        "near_52w_low": "Close 1,302.00 vs 52w low 1,031.20"
+        "atr_high": "ATR 25.47 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 49.2",
+        "below_ema200": "Close 1,297.30 vs EMA200 1,227.82",
+        "extended_above_ema20": "Close 1,297.30 vs EMA20 1,304.35 (-0.5%)",
+        "large_day_move": "Day change -0.4%",
+        "near_52w_low": "Close 1,297.30 vs 52w low 1,040.00"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:13.964171+00:00"
+  "updated_at": "2026-09-08T14:31:54.202610+00:00"
 }

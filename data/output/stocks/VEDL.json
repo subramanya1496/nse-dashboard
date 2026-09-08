@@ -3,35 +3,30 @@
   "name": "Vedanta Ltd",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 268.0,
-    "prev_close": 272.1,
-    "change_pct": -1.5067989709665646,
-    "ema20": 273.6854401780086,
-    "ema50": 276.08418712715894,
-    "ema200": 261.1109734654498,
-    "rsi14": 44.92485858105355,
-    "macd": -0.17555251448777653,
-    "macd_signal": 0.5984407198633093,
-    "atr14": 7.772094396634911,
-    "adx14": 17.476152826028823,
-    "adx_pos": 22.350294017752418,
-    "adx_neg": 20.103318560554122,
-    "bb_high": 286.7406497540891,
-    "bb_low": 260.62435024591093,
-    "bb_mid": 273.6825,
-    "vwap20": 276.01652086634084,
+    "date": "2026-09-08",
+    "close": 272.0,
+    "prev_close": 268.0,
+    "change_pct": 1.4925373134328357,
+    "ema20": 273.5249220658173,
+    "ema50": 275.9240229260939,
+    "ema200": 261.2193219881816,
+    "rsi14": 48.49792247499665,
+    "macd": -0.29241687986643683,
+    "macd_signal": 0.4202691999173601,
+    "atr14": 7.559801939732417,
+    "adx14": 16.652896130870015,
+    "adx_pos": 21.620102823581373,
+    "adx_neg": 19.191579546946883,
+    "bb_high": 286.5955882642741,
+    "bb_low": 260.4694117357258,
+    "bb_mid": 273.53249999999997,
+    "vwap20": 275.7284616333718,
     "high_52w": 360.0,
-    "low_52w": 158.45,
-    "volume": 4892640.0,
-    "avg_volume20": 11635587.85
+    "low_52w": 161.65,
+    "volume": 5812809.0,
+    "avg_volume20": 11252464.15
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 258.05,
-      "ema50": 251.59
-    },
     {
       "date": "2026-03-16",
       "close": 256.57,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 268.0,
       "ema50": 276.08
+    },
+    {
+      "date": "2026-09-08",
+      "close": 272.0,
+      "ema50": 275.92
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 268.00 vs EMA20 273.69",
-      "ema20_above_ema50": "EMA20 273.69 vs EMA50 276.08",
-      "ema50_above_ema200": "EMA50 276.08 vs EMA200 261.11",
-      "rsi_above_50": "RSI(14) 44.92 vs 50",
-      "macd_bullish": "MACD -0.18 vs signal 0.60",
-      "adx_trending_up": "ADX(14) 17.48 vs 20, +DI 22.35 vs -DI 20.10",
-      "price_above_vwap20": "Close 268.00 vs 20d VWAP 276.02",
-      "price_above_bb_mid": "Close 268.00 vs BB mid 273.68"
+      "price_above_ema20": "Close 272.00 vs EMA20 273.52",
+      "ema20_above_ema50": "EMA20 273.52 vs EMA50 275.92",
+      "ema50_above_ema200": "EMA50 275.92 vs EMA200 261.22",
+      "rsi_above_50": "RSI(14) 48.50 vs 50",
+      "macd_bullish": "MACD -0.29 vs signal 0.42",
+      "adx_trending_up": "ADX(14) 16.65 vs 20, +DI 21.62 vs -DI 19.19",
+      "price_above_vwap20": "Close 272.00 vs 20d VWAP 275.73",
+      "price_above_bb_mid": "Close 272.00 vs BB mid 273.53"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.77 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 44.9",
-        "below_ema200": "Close 268.00 vs EMA200 261.11",
-        "extended_above_ema20": "Close 268.00 vs EMA20 273.69 (-2.1%)",
-        "large_day_move": "Day change -1.5%",
-        "near_52w_low": "Close 268.00 vs 52w low 158.45"
+        "atr_high": "ATR 7.56 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 48.5",
+        "below_ema200": "Close 272.00 vs EMA200 261.22",
+        "extended_above_ema20": "Close 272.00 vs EMA20 273.52 (-0.6%)",
+        "large_day_move": "Day change +1.5%",
+        "near_52w_low": "Close 272.00 vs 52w low 161.65"
       },
       "conditions_on": [
         "atr_high"
@@ -692,11 +693,11 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "bearish",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:51:05.567850+00:00"
+  "updated_at": "2026-09-08T14:32:45.828765+00:00"
 }

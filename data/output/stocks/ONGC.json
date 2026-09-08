@@ -3,35 +3,30 @@
   "name": "Oil & Natural Gas Corporation",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 233.7,
-    "prev_close": 234.65,
-    "change_pct": -0.40485829959514896,
-    "ema20": 236.30026607122278,
-    "ema50": 241.96096899097034,
-    "ema200": 253.69247988752474,
-    "rsi14": 40.44590755549699,
-    "macd": -2.056974451373719,
-    "macd_signal": -2.3728719084612084,
-    "atr14": 3.5923641471578023,
-    "adx14": 17.706420074816773,
-    "adx_pos": 17.417108742349434,
-    "adx_neg": 23.61055941561283,
-    "bb_high": 241.4499378527311,
-    "bb_low": 230.83006214726893,
-    "bb_mid": 236.14000000000001,
-    "vwap20": 236.8925615902409,
+    "date": "2026-09-08",
+    "close": 236.0,
+    "prev_close": 233.7,
+    "change_pct": 0.9841677364142112,
+    "ema20": 236.2716693025349,
+    "ema50": 241.72720550112837,
+    "ema200": 253.5164353115295,
+    "rsi14": 46.71121166680122,
+    "macd": -1.8414968945034502,
+    "macd_signal": -2.266596905669657,
+    "atr14": 3.748623850932245,
+    "adx14": 16.73588115587263,
+    "adx_pos": 19.347895602867695,
+    "adx_neg": 21.010194991423358,
+    "bb_high": 241.0556347269767,
+    "bb_low": 230.87936527302335,
+    "bb_mid": 235.96750000000003,
+    "vwap20": 236.54797989923446,
     "high_52w": 307.5,
     "low_52w": 227.65,
-    "volume": 5391548.0,
-    "avg_volume20": 11309493.3
+    "volume": 7965065.0,
+    "avg_volume20": 10907538.15
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 264.1,
-      "ema50": 263.96
-    },
     {
       "date": "2026-03-16",
       "close": 260.45,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 233.7,
       "ema50": 241.96
+    },
+    {
+      "date": "2026-09-08",
+      "close": 236.0,
+      "ema50": 241.73
     }
   ],
   "flags": {
@@ -637,22 +637,23 @@
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 233.70 vs EMA20 236.30",
-      "ema20_above_ema50": "EMA20 236.30 vs EMA50 241.96",
-      "ema50_above_ema200": "EMA50 241.96 vs EMA200 253.69",
-      "rsi_above_50": "RSI(14) 40.45 vs 50",
-      "macd_bullish": "MACD -2.06 vs signal -2.37",
-      "adx_trending_up": "ADX(14) 17.71 vs 20, +DI 17.42 vs -DI 23.61",
-      "price_above_vwap20": "Close 233.70 vs 20d VWAP 236.89",
-      "price_above_bb_mid": "Close 233.70 vs BB mid 236.14"
+      "price_above_ema20": "Close 236.00 vs EMA20 236.27",
+      "ema20_above_ema50": "EMA20 236.27 vs EMA50 241.73",
+      "ema50_above_ema200": "EMA50 241.73 vs EMA200 253.52",
+      "rsi_above_50": "RSI(14) 46.71 vs 50",
+      "macd_bullish": "MACD -1.84 vs signal -2.27",
+      "adx_trending_up": "ADX(14) 16.74 vs 20, +DI 19.35 vs -DI 21.01",
+      "price_above_vwap20": "Close 236.00 vs 20d VWAP 236.55",
+      "price_above_bb_mid": "Close 236.00 vs BB mid 235.97"
     },
     "flags_on": [
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.59 = 1.5% of price",
-        "rsi_extreme": "RSI(14) 40.4",
-        "below_ema200": "Close 233.70 vs EMA200 253.69",
-        "extended_above_ema20": "Close 233.70 vs EMA20 236.30 (-1.1%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 233.70 vs 52w low 227.65"
+        "atr_high": "ATR 3.75 = 1.6% of price",
+        "rsi_extreme": "RSI(14) 46.7",
+        "below_ema200": "Close 236.00 vs EMA200 253.52",
+        "extended_above_ema20": "Close 236.00 vs EMA20 236.27 (-0.1%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 236.00 vs 52w low 227.65"
       },
       "conditions_on": [
         "below_ema200",
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:34.750322+00:00"
+  "updated_at": "2026-09-08T14:32:14.997719+00:00"
 }

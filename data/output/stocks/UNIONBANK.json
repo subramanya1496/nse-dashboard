@@ -3,35 +3,30 @@
   "name": "Union Bank of India",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 186.04,
-    "prev_close": 187.22,
-    "change_pct": -0.6302745433180252,
-    "ema20": 184.77204592938395,
-    "ema50": 179.76317037186504,
-    "ema200": 170.3207972724557,
-    "rsi14": 54.97376890675372,
-    "macd": 2.6761650989258214,
-    "macd_signal": 3.1410585399442734,
-    "atr14": 4.5652639738867995,
-    "adx14": 33.51633156752563,
-    "adx_pos": 25.72220309684956,
-    "adx_neg": 16.239268584132414,
-    "bb_high": 189.7507435082111,
-    "bb_low": 182.65525649178892,
-    "bb_mid": 186.203,
-    "vwap20": 186.28299277423187,
+    "date": "2026-09-08",
+    "close": 183.22,
+    "prev_close": 186.04,
+    "change_pct": -1.5158030531068551,
+    "ema20": 184.6242320313474,
+    "ema50": 179.89873231806644,
+    "ema200": 170.44914754835168,
+    "rsi14": 49.78123951174887,
+    "macd": 2.238162386349728,
+    "macd_signal": 2.9604793092253647,
+    "atr14": 4.570602261466313,
+    "adx14": 32.14624440478921,
+    "adx_pos": 23.857006228106133,
+    "adx_neg": 17.874717227795,
+    "bb_high": 189.64759443173486,
+    "bb_low": 182.83040556826515,
+    "bb_mid": 186.239,
+    "vwap20": 186.484105045082,
     "high_52w": 205.49,
     "low_52w": 125.45,
-    "volume": 12010754.0,
-    "avg_volume20": 10346929.95
+    "volume": 5714683.0,
+    "avg_volume20": 9895549.1
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 173.88,
-      "ema50": 179.25
-    },
     {
       "date": "2026-03-16",
       "close": 175.6,
@@ -626,46 +621,49 @@
       "date": "2026-09-07",
       "close": 186.04,
       "ema50": 179.76
+    },
+    {
+      "date": "2026-09-08",
+      "close": 183.22,
+      "ema50": 179.9
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 186.04 vs EMA20 184.77",
-      "ema20_above_ema50": "EMA20 184.77 vs EMA50 179.76",
-      "ema50_above_ema200": "EMA50 179.76 vs EMA200 170.32",
-      "rsi_above_50": "RSI(14) 54.97 vs 50",
-      "macd_bullish": "MACD 2.68 vs signal 3.14",
-      "adx_trending_up": "ADX(14) 33.52 vs 20, +DI 25.72 vs -DI 16.24",
-      "price_above_vwap20": "Close 186.04 vs 20d VWAP 186.28",
-      "price_above_bb_mid": "Close 186.04 vs BB mid 186.20"
+      "price_above_ema20": "Close 183.22 vs EMA20 184.62",
+      "ema20_above_ema50": "EMA20 184.62 vs EMA50 179.90",
+      "ema50_above_ema200": "EMA50 179.90 vs EMA200 170.45",
+      "rsi_above_50": "RSI(14) 49.78 vs 50",
+      "macd_bullish": "MACD 2.24 vs signal 2.96",
+      "adx_trending_up": "ADX(14) 32.15 vs 20, +DI 23.86 vs -DI 17.87",
+      "price_above_vwap20": "Close 183.22 vs 20d VWAP 186.48",
+      "price_above_bb_mid": "Close 183.22 vs BB mid 186.24"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50",
       "adx_trending_up"
     ],
-    "flag_count": 5,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "5/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -680,11 +678,11 @@
       },
       "conditions_detail": {
         "atr_high": "ATR 4.57 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 55.0",
-        "below_ema200": "Close 186.04 vs EMA200 170.32",
-        "extended_above_ema20": "Close 186.04 vs EMA20 184.77 (+0.7%)",
-        "large_day_move": "Day change -0.6%",
-        "near_52w_low": "Close 186.04 vs 52w low 125.45"
+        "rsi_extreme": "RSI(14) 49.8",
+        "below_ema200": "Close 183.22 vs EMA200 170.45",
+        "extended_above_ema20": "Close 183.22 vs EMA20 184.62 (-0.8%)",
+        "large_day_move": "Day change -1.5%",
+        "near_52w_low": "Close 183.22 vs 52w low 125.45"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -707,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:51:03.545052+00:00"
+  "updated_at": "2026-09-08T14:32:43.820096+00:00"
 }

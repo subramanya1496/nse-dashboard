@@ -3,35 +3,30 @@
   "name": "Max Financial Services",
   "sector": "Insurance",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 1520.0,
-    "prev_close": 1548.4,
-    "change_pct": -1.834151382071822,
-    "ema20": 1547.876072255455,
-    "ema50": 1560.1767242260742,
-    "ema200": 1604.6328003683725,
-    "rsi14": 44.45307170820634,
-    "macd": -3.6793089299394524,
-    "macd_signal": 0.41403360436374814,
-    "atr14": 37.159284415202244,
-    "adx14": 16.040987927280135,
-    "adx_pos": 17.862236534921884,
-    "adx_neg": 22.19312402459182,
-    "bb_high": 1611.7841514584077,
-    "bb_low": 1492.285848541592,
-    "bb_mid": 1552.0349999999999,
-    "vwap20": 1544.5254523722963,
+    "date": "2026-09-08",
+    "close": 1498.7,
+    "prev_close": 1520.0,
+    "change_pct": -1.4013157894736812,
+    "ema20": 1543.1926368025545,
+    "ema50": 1557.7658722956398,
+    "ema200": 1603.5787426532643,
+    "rsi14": 41.16539097440007,
+    "macd": -7.148640792006972,
+    "macd_signal": -1.098501274910396,
+    "atr14": 37.50504981411637,
+    "adx14": 16.39641752821318,
+    "adx_pos": 16.433450014942455,
+    "adx_neg": 25.17917675760737,
+    "bb_high": 1611.822528374641,
+    "bb_low": 1492.217471625359,
+    "bb_mid": 1552.02,
+    "vwap20": 1548.6619646125882,
     "high_52w": 1892.5,
     "low_52w": 1433.6,
-    "volume": 938109.0,
-    "avg_volume20": 746894.95
+    "volume": 589318.0,
+    "avg_volume20": 698154.1
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 1628.1,
-      "ema50": 1728.21
-    },
     {
       "date": "2026-03-16",
       "close": 1645.2,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 1520.0,
       "ema50": 1560.18
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1498.7,
+      "ema50": 1557.77
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,520.00 vs EMA20 1,547.88",
-      "ema20_above_ema50": "EMA20 1,547.88 vs EMA50 1,560.18",
-      "ema50_above_ema200": "EMA50 1,560.18 vs EMA200 1,604.63",
-      "rsi_above_50": "RSI(14) 44.45 vs 50",
-      "macd_bullish": "MACD -3.68 vs signal 0.41",
-      "adx_trending_up": "ADX(14) 16.04 vs 20, +DI 17.86 vs -DI 22.19",
-      "price_above_vwap20": "Close 1,520.00 vs 20d VWAP 1,544.53",
-      "price_above_bb_mid": "Close 1,520.00 vs BB mid 1,552.03"
+      "price_above_ema20": "Close 1,498.70 vs EMA20 1,543.19",
+      "ema20_above_ema50": "EMA20 1,543.19 vs EMA50 1,557.77",
+      "ema50_above_ema200": "EMA50 1,557.77 vs EMA200 1,603.58",
+      "rsi_above_50": "RSI(14) 41.17 vs 50",
+      "macd_bullish": "MACD -7.15 vs signal -1.10",
+      "adx_trending_up": "ADX(14) 16.40 vs 20, +DI 16.43 vs -DI 25.18",
+      "price_above_vwap20": "Close 1,498.70 vs 20d VWAP 1,548.66",
+      "price_above_bb_mid": "Close 1,498.70 vs BB mid 1,552.02"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -664,27 +664,29 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 37.16 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 44.5",
-        "below_ema200": "Close 1,520.00 vs EMA200 1,604.63",
-        "extended_above_ema20": "Close 1,520.00 vs EMA20 1,547.88 (-1.8%)",
-        "large_day_move": "Day change -1.8%",
-        "near_52w_low": "Close 1,520.00 vs 52w low 1,433.60"
+        "atr_high": "ATR 37.51 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 41.2",
+        "below_ema200": "Close 1,498.70 vs EMA200 1,603.58",
+        "extended_above_ema20": "Close 1,498.70 vs EMA20 1,543.19 (-2.9%)",
+        "large_day_move": "Day change -1.4%",
+        "near_52w_low": "Close 1,498.70 vs 52w low 1,433.60"
       },
       "conditions_on": [
-        "below_ema200"
+        "atr_high",
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 1,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -702,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:26.333357+00:00"
+  "updated_at": "2026-09-08T14:32:06.601421+00:00"
 }

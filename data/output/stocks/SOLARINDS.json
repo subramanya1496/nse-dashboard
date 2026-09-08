@@ -3,35 +3,30 @@
   "name": "Solar Industries India",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 21950.0,
-    "prev_close": 21445.0,
-    "change_pct": 2.354861273024015,
-    "ema20": 20272.335752334206,
-    "ema50": 19295.457878501707,
-    "ema200": 16847.73415303029,
-    "rsi14": 74.4791013128742,
-    "macd": 661.5905111740794,
-    "macd_signal": 516.920621165136,
-    "atr14": 564.7935608739107,
-    "adx14": 23.962820410230815,
-    "adx_pos": 38.278606020244965,
-    "adx_neg": 11.998284789997118,
-    "bb_high": 21729.23881493328,
-    "bb_low": 18662.66118506672,
-    "bb_mid": 20195.95,
-    "vwap20": 20261.721673031592,
-    "high_52w": 22200.0,
+    "date": "2026-09-08",
+    "close": 22455.0,
+    "prev_close": 21950.0,
+    "change_pct": 2.3006833712984056,
+    "ema20": 20480.208537826184,
+    "ema50": 19419.361491109485,
+    "ema200": 16903.52784304989,
+    "rsi14": 77.3422930951611,
+    "macd": 753.2535514351803,
+    "macd_signal": 564.1872072191449,
+    "atr14": 565.165449382917,
+    "adx14": 26.237126506604593,
+    "adx_pos": 39.24939564562943,
+    "adx_neg": 11.133933305751729,
+    "bb_high": 22062.215766870067,
+    "bb_low": 18698.184233129934,
+    "bb_mid": 20380.2,
+    "vwap20": 20406.96330945504,
+    "high_52w": 22495.0,
     "low_52w": 11646.0,
-    "volume": 227176.0,
-    "avg_volume20": 189698.35
+    "volume": 217218.0,
+    "avg_volume20": 196482.5
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 14251.0,
-      "ema50": 13626.64
-    },
     {
       "date": "2026-03-16",
       "close": 14082.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 21950.0,
       "ema50": 19295.46
+    },
+    {
+      "date": "2026-09-08",
+      "close": 22455.0,
+      "ema50": 19419.36
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 21,950.00 vs EMA20 20,272.34",
-      "ema20_above_ema50": "EMA20 20,272.34 vs EMA50 19,295.46",
-      "ema50_above_ema200": "EMA50 19,295.46 vs EMA200 16,847.73",
-      "rsi_above_50": "RSI(14) 74.48 vs 50",
-      "macd_bullish": "MACD 661.59 vs signal 516.92",
-      "adx_trending_up": "ADX(14) 23.96 vs 20, +DI 38.28 vs -DI 12.00",
-      "price_above_vwap20": "Close 21,950.00 vs 20d VWAP 20,261.72",
-      "price_above_bb_mid": "Close 21,950.00 vs BB mid 20,195.95"
+      "price_above_ema20": "Close 22,455.00 vs EMA20 20,480.21",
+      "ema20_above_ema50": "EMA20 20,480.21 vs EMA50 19,419.36",
+      "ema50_above_ema200": "EMA50 19,419.36 vs EMA200 16,903.53",
+      "rsi_above_50": "RSI(14) 77.34 vs 50",
+      "macd_bullish": "MACD 753.25 vs signal 564.19",
+      "adx_trending_up": "ADX(14) 26.24 vs 20, +DI 39.25 vs -DI 11.13",
+      "price_above_vwap20": "Close 22,455.00 vs 20d VWAP 20,406.96",
+      "price_above_bb_mid": "Close 22,455.00 vs BB mid 20,380.20"
     },
     "flags_on": [
       "price_above_ema20",
@@ -675,25 +675,26 @@
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": true,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 564.79 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 74.5",
-        "below_ema200": "Close 21,950.00 vs EMA200 16,847.73",
-        "extended_above_ema20": "Close 21,950.00 vs EMA20 20,272.34 (+8.3%)",
-        "large_day_move": "Day change +2.4%",
-        "near_52w_low": "Close 21,950.00 vs 52w low 11,646.00"
+        "atr_high": "ATR 565.17 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 77.3",
+        "below_ema200": "Close 22,455.00 vs EMA200 16,903.53",
+        "extended_above_ema20": "Close 22,455.00 vs EMA20 20,480.21 (+9.6%)",
+        "large_day_move": "Day change +2.3%",
+        "near_52w_low": "Close 22,455.00 vs 52w low 11,646.00"
       },
       "conditions_on": [
         "atr_high",
+        "rsi_extreme",
         "extended_above_ema20"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -713,5 +714,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:49.943574+00:00"
+  "updated_at": "2026-09-08T14:32:30.378074+00:00"
 }

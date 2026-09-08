@@ -3,35 +3,30 @@
   "name": "Godrej Consumer Products",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 861.9,
-    "prev_close": 878.0,
-    "change_pct": -1.8337129840546722,
-    "ema20": 928.2918272396759,
-    "ema50": 979.4417817209913,
-    "ema200": 1066.5605225415716,
-    "rsi14": 22.11300432530207,
-    "macd": -37.59616911278442,
-    "macd_signal": -34.85735877889744,
-    "atr14": 21.98674500718394,
-    "adx14": 46.39587220530067,
-    "adx_pos": 7.188731534765423,
-    "adx_neg": 39.35561779431245,
-    "bb_high": 985.3135526768865,
-    "bb_low": 857.2164473231137,
-    "bb_mid": 921.2650000000001,
-    "vwap20": 916.976975257086,
+    "date": "2026-09-08",
+    "close": 865.0,
+    "prev_close": 861.9,
+    "change_pct": 0.3596704954171044,
+    "ema20": 922.2640341692305,
+    "ema50": 974.953868712325,
+    "ema200": 1064.5549452028495,
+    "rsi14": 23.702723944165868,
+    "macd": -38.013610006949875,
+    "macd_signal": -35.48860902450793,
+    "atr14": 21.54483464952795,
+    "adx14": 48.05019676854066,
+    "adx_pos": 6.812168096252432,
+    "adx_neg": 37.9405661188713,
+    "bb_high": 961.505823997979,
+    "bb_low": 865.0241760020212,
+    "bb_mid": 913.2650000000001,
+    "vwap20": 914.0328917059496,
     "high_52w": 1309.0,
-    "low_52w": 857.1,
-    "volume": 2647422.0,
-    "avg_volume20": 2968310.45
+    "low_52w": 855.15,
+    "volume": 1437045.0,
+    "avg_volume20": 2994153.1
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 1027.9,
-      "ema50": 1169.42
-    },
     {
       "date": "2026-03-16",
       "close": 1041.1,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 861.9,
       "ema50": 979.44
+    },
+    {
+      "date": "2026-09-08",
+      "close": 865.0,
+      "ema50": 974.95
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 861.90 vs EMA20 928.29",
-      "ema20_above_ema50": "EMA20 928.29 vs EMA50 979.44",
-      "ema50_above_ema200": "EMA50 979.44 vs EMA200 1,066.56",
-      "rsi_above_50": "RSI(14) 22.11 vs 50",
-      "macd_bullish": "MACD -37.60 vs signal -34.86",
-      "adx_trending_up": "ADX(14) 46.40 vs 20, +DI 7.19 vs -DI 39.36",
-      "price_above_vwap20": "Close 861.90 vs 20d VWAP 916.98",
-      "price_above_bb_mid": "Close 861.90 vs BB mid 921.27"
+      "price_above_ema20": "Close 865.00 vs EMA20 922.26",
+      "ema20_above_ema50": "EMA20 922.26 vs EMA50 974.95",
+      "ema50_above_ema200": "EMA50 974.95 vs EMA200 1,064.55",
+      "rsi_above_50": "RSI(14) 23.70 vs 50",
+      "macd_bullish": "MACD -38.01 vs signal -35.49",
+      "adx_trending_up": "ADX(14) 48.05 vs 20, +DI 6.81 vs -DI 37.94",
+      "price_above_vwap20": "Close 865.00 vs 20d VWAP 914.03",
+      "price_above_bb_mid": "Close 865.00 vs BB mid 913.27"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -664,7 +664,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -672,22 +672,21 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 21.99 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 22.1",
-        "below_ema200": "Close 861.90 vs EMA200 1,066.56",
-        "extended_above_ema20": "Close 861.90 vs EMA20 928.29 (-7.2%)",
-        "large_day_move": "Day change -1.8%",
-        "near_52w_low": "Close 861.90 vs 52w low 857.10"
+        "atr_high": "ATR 21.54 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 23.7",
+        "below_ema200": "Close 865.00 vs EMA200 1,064.55",
+        "extended_above_ema20": "Close 865.00 vs EMA20 922.26 (-6.2%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 865.00 vs 52w low 855.15"
       },
       "conditions_on": [
-        "atr_high",
         "rsi_extreme",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 4,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "high"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:49:55.557083+00:00"
+  "updated_at": "2026-09-08T14:31:35.781172+00:00"
 }

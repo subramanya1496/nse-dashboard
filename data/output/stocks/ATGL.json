@@ -3,35 +3,30 @@
   "name": "Adani Total Gas",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 603.7,
-    "prev_close": 612.35,
-    "change_pct": -1.412590838572708,
-    "ema20": 635.1313830701662,
-    "ema50": 655.2733745844989,
-    "ema200": 637.8826771462196,
-    "rsi14": 25.98545164833064,
-    "macd": -16.21549340818683,
-    "macd_signal": -13.675763193541886,
-    "atr14": 15.625711315407234,
-    "adx14": 19.597715612040368,
-    "adx_pos": 13.108661093008694,
-    "adx_neg": 29.000097434211174,
-    "bb_high": 676.6541453235935,
-    "bb_low": 601.6558546764064,
-    "bb_mid": 639.155,
-    "vwap20": 652.9845537699922,
+    "date": "2026-09-08",
+    "close": 609.4,
+    "prev_close": 603.7,
+    "change_pct": 0.9441775716415324,
+    "ema20": 632.6807751587218,
+    "ema50": 653.4744187184401,
+    "ema200": 637.5992674233717,
+    "rsi14": 30.89283320134014,
+    "macd": -16.267285025126057,
+    "macd_signal": -14.194067559858722,
+    "atr14": 15.223874792878146,
+    "adx14": 20.89352366861624,
+    "adx_pos": 12.493618636371632,
+    "adx_neg": 27.639448086264867,
+    "bb_high": 673.8049148881993,
+    "bb_low": 598.8300851118007,
+    "bb_mid": 636.3175,
+    "vwap20": 651.1688762690387,
     "high_52w": 859.85,
     "low_52w": 462.8,
-    "volume": 415933.0,
-    "avg_volume20": 992335.4
+    "volume": 458452.0,
+    "avg_volume20": 966303.95
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 565.9,
-      "ema50": 536.92
-    },
     {
       "date": "2026-03-16",
       "close": 522.05,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 603.7,
       "ema50": 655.27
+    },
+    {
+      "date": "2026-09-08",
+      "close": 609.4,
+      "ema50": 653.47
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 603.70 vs EMA20 635.13",
-      "ema20_above_ema50": "EMA20 635.13 vs EMA50 655.27",
-      "ema50_above_ema200": "EMA50 655.27 vs EMA200 637.88",
-      "rsi_above_50": "RSI(14) 25.99 vs 50",
-      "macd_bullish": "MACD -16.22 vs signal -13.68",
-      "adx_trending_up": "ADX(14) 19.60 vs 20, +DI 13.11 vs -DI 29.00",
-      "price_above_vwap20": "Close 603.70 vs 20d VWAP 652.98",
-      "price_above_bb_mid": "Close 603.70 vs BB mid 639.15"
+      "price_above_ema20": "Close 609.40 vs EMA20 632.68",
+      "ema20_above_ema50": "EMA20 632.68 vs EMA50 653.47",
+      "ema50_above_ema200": "EMA50 653.47 vs EMA200 637.60",
+      "rsi_above_50": "RSI(14) 30.89 vs 50",
+      "macd_bullish": "MACD -16.27 vs signal -14.19",
+      "adx_trending_up": "ADX(14) 20.89 vs 20, +DI 12.49 vs -DI 27.64",
+      "price_above_vwap20": "Close 609.40 vs 20d VWAP 651.17",
+      "price_above_bb_mid": "Close 609.40 vs BB mid 636.32"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -666,7 +666,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -674,20 +674,19 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 15.63 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 26.0",
-        "below_ema200": "Close 603.70 vs EMA200 637.88",
-        "extended_above_ema20": "Close 603.70 vs EMA20 635.13 (-4.9%)",
-        "large_day_move": "Day change -1.4%",
-        "near_52w_low": "Close 603.70 vs 52w low 462.80"
+        "atr_high": "ATR 15.22 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 30.9",
+        "below_ema200": "Close 609.40 vs EMA200 637.60",
+        "extended_above_ema20": "Close 609.40 vs EMA20 632.68 (-3.7%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 609.40 vs 52w low 462.80"
       },
       "conditions_on": [
-        "atr_high",
         "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:49:29.936559+00:00"
+  "updated_at": "2026-09-08T14:31:10.149261+00:00"
 }

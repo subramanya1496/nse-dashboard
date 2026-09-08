@@ -3,35 +3,30 @@
   "name": "Paras Defence and Space Technologies",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 1489.4,
-    "prev_close": 1414.9,
-    "change_pct": 5.26538978019648,
-    "ema20": 1412.7772930609574,
-    "ema50": 1313.9149593093066,
-    "ema200": 1007.4177737199841,
-    "rsi14": 62.010804861326065,
-    "macd": 38.97581960317393,
-    "macd_signal": 47.92832863996813,
-    "atr14": 64.67549782109316,
-    "adx14": 33.768013757553035,
-    "adx_pos": 27.803692966500265,
-    "adx_neg": 14.466565659150998,
-    "bb_high": 1570.7274716296733,
-    "bb_low": 1288.5225283703267,
-    "bb_mid": 1429.625,
-    "vwap20": 1448.9176155997525,
+    "date": "2026-09-08",
+    "close": 1504.0,
+    "prev_close": 1489.4,
+    "change_pct": 0.9802605075869416,
+    "ema20": 1421.4651699122946,
+    "ema50": 1321.3692746305103,
+    "ema200": 1012.3588903993873,
+    "rsi14": 63.31803383016132,
+    "macd": 41.73913240025968,
+    "macd_signal": 46.69048939202644,
+    "atr14": 65.37724797672936,
+    "adx14": 34.40654572396508,
+    "adx_pos": 33.10110695775723,
+    "adx_neg": 13.2890490427237,
+    "bb_high": 1568.260839402586,
+    "bb_low": 1312.989160597414,
+    "bb_mid": 1440.625,
+    "vwap20": 1457.207821447301,
     "high_52w": 1585.0,
     "low_52w": 580.5,
-    "volume": 1794488.0,
-    "avg_volume20": 1598407.4
+    "volume": 2631639.0,
+    "avg_volume20": 1702975.1
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 638.95,
-      "ema50": 669.86
-    },
     {
       "date": "2026-03-16",
       "close": 634.45,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 1489.4,
       "ema50": 1313.91
+    },
+    {
+      "date": "2026-09-08",
+      "close": 1504.0,
+      "ema50": 1321.37
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,489.40 vs EMA20 1,412.78",
-      "ema20_above_ema50": "EMA20 1,412.78 vs EMA50 1,313.91",
-      "ema50_above_ema200": "EMA50 1,313.91 vs EMA200 1,007.42",
-      "rsi_above_50": "RSI(14) 62.01 vs 50",
-      "macd_bullish": "MACD 38.98 vs signal 47.93",
-      "adx_trending_up": "ADX(14) 33.77 vs 20, +DI 27.80 vs -DI 14.47",
-      "price_above_vwap20": "Close 1,489.40 vs 20d VWAP 1,448.92",
-      "price_above_bb_mid": "Close 1,489.40 vs BB mid 1,429.62"
+      "price_above_ema20": "Close 1,504.00 vs EMA20 1,421.47",
+      "ema20_above_ema50": "EMA20 1,421.47 vs EMA50 1,321.37",
+      "ema50_above_ema200": "EMA50 1,321.37 vs EMA200 1,012.36",
+      "rsi_above_50": "RSI(14) 63.32 vs 50",
+      "macd_bullish": "MACD 41.74 vs signal 46.69",
+      "adx_trending_up": "ADX(14) 34.41 vs 20, +DI 33.10 vs -DI 13.29",
+      "price_above_vwap20": "Close 1,504.00 vs 20d VWAP 1,457.21",
+      "price_above_bb_mid": "Close 1,504.00 vs BB mid 1,440.62"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,11 +663,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "7/8 bullish flags"
+        "7/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -676,28 +677,27 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 64.68 = 4.3% of price",
-        "rsi_extreme": "RSI(14) 62.0",
-        "below_ema200": "Close 1,489.40 vs EMA200 1,007.42",
-        "extended_above_ema20": "Close 1,489.40 vs EMA20 1,412.78 (+5.4%)",
-        "large_day_move": "Day change +5.3%",
-        "near_52w_low": "Close 1,489.40 vs 52w low 580.50"
+        "atr_high": "ATR 65.38 = 4.3% of price",
+        "rsi_extreme": "RSI(14) 63.3",
+        "below_ema200": "Close 1,504.00 vs EMA200 1,012.36",
+        "extended_above_ema20": "Close 1,504.00 vs EMA20 1,421.47 (+5.8%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 1,504.00 vs 52w low 580.50"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:35.584953+00:00"
+  "updated_at": "2026-09-08T14:32:15.780424+00:00"
 }

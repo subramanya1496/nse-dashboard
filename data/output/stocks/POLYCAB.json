@@ -3,35 +3,30 @@
   "name": "Polycab India",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 8261.0,
-    "prev_close": 8300.0,
-    "change_pct": -0.46987951807228917,
-    "ema20": 8933.385749284536,
-    "ema50": 9064.630319490432,
-    "ema200": 8453.38991388216,
-    "rsi14": 30.45518445129727,
-    "macd": -166.83587803816954,
-    "macd_signal": -78.98665359492693,
-    "atr14": 239.60104336883327,
-    "adx14": 16.028047579414967,
-    "adx_pos": 14.41267197809388,
-    "adx_neg": 33.97382002875815,
-    "bb_high": 9624.331661343811,
-    "bb_low": 8433.968338656188,
-    "bb_mid": 9029.15,
-    "vwap20": 8879.001796439394,
+    "date": "2026-09-08",
+    "close": 8373.5,
+    "prev_close": 8261.0,
+    "change_pct": 1.3618206028325868,
+    "ema20": 8880.063296971723,
+    "ema50": 9037.527169706495,
+    "ema200": 8452.59498936592,
+    "rsi14": 34.40115404369351,
+    "macd": -189.95359889145948,
+    "macd_signal": -101.18004265423345,
+    "atr14": 234.77239741391662,
+    "adx14": 17.31652125174238,
+    "adx_pos": 15.833811427928346,
+    "adx_neg": 32.195959212646116,
+    "bb_high": 9649.398401453598,
+    "bb_low": 8333.751598546403,
+    "bb_mid": 8991.575,
+    "vwap20": 8827.406438615266,
     "high_52w": 10126.0,
     "low_52w": 6663.0,
-    "volume": 568946.0,
-    "avg_volume20": 382358.2
+    "volume": 604579.0,
+    "avg_volume20": 394732.65
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 7193.5,
-      "ema50": 7730.32
-    },
     {
       "date": "2026-03-16",
       "close": 7127.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-07",
       "close": 8261.0,
       "ema50": 9064.63
+    },
+    {
+      "date": "2026-09-08",
+      "close": 8373.5,
+      "ema50": 9037.53
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 8,261.00 vs EMA20 8,933.39",
-      "ema20_above_ema50": "EMA20 8,933.39 vs EMA50 9,064.63",
-      "ema50_above_ema200": "EMA50 9,064.63 vs EMA200 8,453.39",
-      "rsi_above_50": "RSI(14) 30.46 vs 50",
-      "macd_bullish": "MACD -166.84 vs signal -78.99",
-      "adx_trending_up": "ADX(14) 16.03 vs 20, +DI 14.41 vs -DI 33.97",
-      "price_above_vwap20": "Close 8,261.00 vs 20d VWAP 8,879.00",
-      "price_above_bb_mid": "Close 8,261.00 vs BB mid 9,029.15"
+      "price_above_ema20": "Close 8,373.50 vs EMA20 8,880.06",
+      "ema20_above_ema50": "EMA20 8,880.06 vs EMA50 9,037.53",
+      "ema50_above_ema200": "EMA50 9,037.53 vs EMA200 8,452.59",
+      "rsi_above_50": "RSI(14) 34.40 vs 50",
+      "macd_bullish": "MACD -189.95 vs signal -101.18",
+      "adx_trending_up": "ADX(14) 17.32 vs 20, +DI 15.83 vs -DI 32.20",
+      "price_above_vwap20": "Close 8,373.50 vs 20d VWAP 8,827.41",
+      "price_above_bb_mid": "Close 8,373.50 vs BB mid 8,991.58"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -662,7 +662,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "1/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -675,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 239.60 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 30.5",
-        "below_ema200": "Close 8,261.00 vs EMA200 8,453.39",
-        "extended_above_ema20": "Close 8,261.00 vs EMA20 8,933.39 (-7.5%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 8,261.00 vs 52w low 6,663.00"
+        "atr_high": "ATR 234.77 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 34.4",
+        "below_ema200": "Close 8,373.50 vs EMA200 8,452.59",
+        "extended_above_ema20": "Close 8,373.50 vs EMA20 8,880.06 (-5.7%)",
+        "large_day_move": "Day change +1.4%",
+        "near_52w_low": "Close 8,373.50 vs 52w low 6,663.00"
       },
       "conditions_on": [
         "atr_high",
@@ -693,7 +693,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": true,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:40.752511+00:00"
+  "updated_at": "2026-09-08T14:32:20.979304+00:00"
 }

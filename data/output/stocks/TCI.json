@@ -3,35 +3,30 @@
   "name": "Transport Corporation of India",
   "sector": "Logistics",
   "indicators": {
-    "date": "2026-09-07",
-    "close": 863.0,
-    "prev_close": 868.2,
-    "change_pct": -0.5989403363280402,
-    "ema20": 891.6321899833941,
-    "ema50": 910.0754597041026,
-    "ema200": 976.2347485696268,
-    "rsi14": 33.58998639885519,
-    "macd": -14.697161234787472,
-    "macd_signal": -11.441456939621888,
-    "atr14": 22.43353864764311,
-    "adx14": 27.29967859367478,
-    "adx_pos": 6.150754937822112,
-    "adx_neg": 18.080703235129864,
-    "bb_high": 936.8841828455879,
-    "bb_low": 856.5758171544119,
-    "bb_mid": 896.7299999999999,
-    "vwap20": 895.73640030485,
+    "date": "2026-09-08",
+    "close": 868.0,
+    "prev_close": 863.95,
+    "change_pct": 0.4687771283060309,
+    "ema20": 889.4633646335018,
+    "ema50": 908.461235601904,
+    "ema200": 975.1671445765329,
+    "rsi14": 36.34333798876204,
+    "macd": -14.675499751952316,
+    "macd_signal": -12.076140145962615,
+    "atr14": 22.259714458525746,
+    "adx14": 28.86636636777066,
+    "adx_pos": 5.756015248562877,
+    "adx_neg": 16.920330037242262,
+    "bb_high": 931.1248989127225,
+    "bb_low": 855.6951010872776,
+    "bb_mid": 893.4100000000001,
+    "vwap20": 892.5992917896812,
     "high_52w": 1242.0,
     "low_52w": 858.05,
-    "volume": 30299.0,
-    "avg_volume20": 16598.35
+    "volume": 21900.0,
+    "avg_volume20": 17071.2
   },
   "price_history": [
-    {
-      "date": "2026-03-13",
-      "close": 960.3,
-      "ema50": 1034.84
-    },
     {
       "date": "2026-03-16",
       "close": 961.1,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-09-07",
-      "close": 863.0,
-      "ema50": 910.08
+      "close": 863.95,
+      "ema50": 910.11
+    },
+    {
+      "date": "2026-09-08",
+      "close": 868.0,
+      "ema50": 908.46
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 863.00 vs EMA20 891.63",
-      "ema20_above_ema50": "EMA20 891.63 vs EMA50 910.08",
-      "ema50_above_ema200": "EMA50 910.08 vs EMA200 976.23",
-      "rsi_above_50": "RSI(14) 33.59 vs 50",
-      "macd_bullish": "MACD -14.70 vs signal -11.44",
-      "adx_trending_up": "ADX(14) 27.30 vs 20, +DI 6.15 vs -DI 18.08",
-      "price_above_vwap20": "Close 863.00 vs 20d VWAP 895.74",
-      "price_above_bb_mid": "Close 863.00 vs BB mid 896.73"
+      "price_above_ema20": "Close 868.00 vs EMA20 889.46",
+      "ema20_above_ema50": "EMA20 889.46 vs EMA50 908.46",
+      "ema50_above_ema200": "EMA50 908.46 vs EMA200 975.17",
+      "rsi_above_50": "RSI(14) 36.34 vs 50",
+      "macd_bullish": "MACD -14.68 vs signal -12.08",
+      "adx_trending_up": "ADX(14) 28.87 vs 20, +DI 5.76 vs -DI 16.92",
+      "price_above_vwap20": "Close 868.00 vs 20d VWAP 892.60",
+      "price_above_bb_mid": "Close 868.00 vs BB mid 893.41"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +672,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 22.43 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 33.6",
-        "below_ema200": "Close 863.00 vs EMA200 976.23",
-        "extended_above_ema20": "Close 863.00 vs EMA20 891.63 (-3.2%)",
-        "large_day_move": "Day change -0.6%",
-        "near_52w_low": "Close 863.00 vs 52w low 858.05"
+        "atr_high": "ATR 22.26 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 36.3",
+        "below_ema200": "Close 868.00 vs EMA200 975.17",
+        "extended_above_ema20": "Close 868.00 vs EMA20 889.46 (-2.4%)",
+        "large_day_move": "Day change +0.5%",
+        "near_52w_low": "Close 868.00 vs 52w low 858.05"
       },
       "conditions_on": [
         "atr_high",
@@ -691,8 +690,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-07T15:50:57.168952+00:00"
+  "updated_at": "2026-09-08T14:32:37.434631+00:00"
 }
