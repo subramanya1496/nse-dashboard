@@ -3,39 +3,34 @@
   "name": "NMDC Ltd",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-09-08",
-    "close": 84.71,
-    "prev_close": 83.85,
-    "change_pct": 1.0256410256410249,
-    "ema20": 85.2560109646268,
-    "ema50": 85.44281021371104,
-    "ema200": 83.2035222026849,
-    "rsi14": 47.877614170288815,
-    "macd": -0.06696046854872861,
-    "macd_signal": 0.12540323569530107,
-    "atr14": 2.009441875027886,
-    "adx14": 13.53024667464952,
-    "adx_pos": 16.686357244264375,
-    "adx_neg": 14.760543070481152,
-    "bb_high": 87.89398286598687,
-    "bb_low": 82.75801713401312,
-    "bb_mid": 85.326,
-    "vwap20": 85.22044212029476,
+    "date": "2026-09-09",
+    "close": 85.8,
+    "prev_close": 84.71,
+    "change_pct": 1.2867430055483455,
+    "ema20": 85.30781944418607,
+    "ema50": 85.45680894044835,
+    "ema200": 83.14208826423395,
+    "rsi14": 51.85275666689257,
+    "macd": -0.014119007833670594,
+    "macd_signal": 0.09749878712044922,
+    "atr14": 1.963053169650179,
+    "adx14": 13.799427634925733,
+    "adx_pos": 19.899520855652785,
+    "adx_neg": 14.03010879190591,
+    "bb_high": 87.88487909231318,
+    "bb_low": 82.75712090768681,
+    "bb_mid": 85.321,
+    "vwap20": 85.20747704138854,
     "high_52w": 97.49,
     "low_52w": 72.24,
-    "volume": 12129471.0,
-    "avg_volume20": 18188860.05
+    "volume": 14151248.0,
+    "avg_volume20": 17983117.9
   },
   "price_history": [
     {
-      "date": "2026-03-16",
-      "close": 77.56,
-      "ema50": 80.24
-    },
-    {
       "date": "2026-03-17",
       "close": 79.22,
-      "ema50": 80.2
+      "ema50": 80.19
     },
     {
       "date": "2026-03-18",
@@ -110,7 +105,7 @@
     {
       "date": "2026-04-10",
       "close": 85.07,
-      "ema50": 80.05
+      "ema50": 80.04
     },
     {
       "date": "2026-04-13",
@@ -180,7 +175,7 @@
     {
       "date": "2026-05-04",
       "close": 89.09,
-      "ema50": 83.94
+      "ema50": 83.93
     },
     {
       "date": "2026-05-05",
@@ -626,42 +621,51 @@
       "date": "2026-09-08",
       "close": 84.71,
       "ema50": 85.44
+    },
+    {
+      "date": "2026-09-09",
+      "close": 85.8,
+      "ema50": 85.46
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 84.71 vs EMA20 85.26",
-      "ema20_above_ema50": "EMA20 85.26 vs EMA50 85.44",
-      "ema50_above_ema200": "EMA50 85.44 vs EMA200 83.20",
-      "rsi_above_50": "RSI(14) 47.88 vs 50",
-      "macd_bullish": "MACD -0.07 vs signal 0.13",
-      "adx_trending_up": "ADX(14) 13.53 vs 20, +DI 16.69 vs -DI 14.76",
-      "price_above_vwap20": "Close 84.71 vs 20d VWAP 85.22",
-      "price_above_bb_mid": "Close 84.71 vs BB mid 85.33"
+      "price_above_ema20": "Close 85.80 vs EMA20 85.31",
+      "ema20_above_ema50": "EMA20 85.31 vs EMA50 85.46",
+      "ema50_above_ema200": "EMA50 85.46 vs EMA200 83.14",
+      "rsi_above_50": "RSI(14) 51.85 vs 50",
+      "macd_bullish": "MACD -0.01 vs signal 0.10",
+      "adx_trending_up": "ADX(14) 13.80 vs 20, +DI 19.90 vs -DI 14.03",
+      "price_above_vwap20": "Close 85.80 vs 20d VWAP 85.21",
+      "price_above_bb_mid": "Close 85.80 vs BB mid 85.32"
     },
     "flags_on": [
-      "ema50_above_ema200"
+      "price_above_ema20",
+      "ema50_above_ema200",
+      "rsi_above_50",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "1/8 bullish flags",
+        "5/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -675,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.01 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 47.9",
-        "below_ema200": "Close 84.71 vs EMA200 83.20",
-        "extended_above_ema20": "Close 84.71 vs EMA20 85.26 (-0.6%)",
-        "large_day_move": "Day change +1.0%",
-        "near_52w_low": "Close 84.71 vs 52w low 72.24"
+        "atr_high": "ATR 1.96 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 51.9",
+        "below_ema200": "Close 85.80 vs EMA200 83.14",
+        "extended_above_ema20": "Close 85.80 vs EMA20 85.31 (+0.6%)",
+        "large_day_move": "Day change +1.3%",
+        "near_52w_low": "Close 85.80 vs 52w low 72.24"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -694,8 +698,8 @@
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "bearish",
+      "daily": "bullish",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -703,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-08T14:32:12.587993+00:00"
+  "updated_at": "2026-09-09T14:33:36.789712+00:00"
 }
