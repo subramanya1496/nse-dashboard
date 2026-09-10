@@ -3,35 +3,30 @@
   "name": "Varun Beverages",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-09-09",
-    "close": 407.0,
-    "prev_close": 405.7,
-    "change_pct": 0.3204338180921892,
-    "ema20": 419.738152764575,
-    "ema50": 442.01784780875585,
-    "ema200": 465.36769202948403,
-    "rsi14": 36.69883841731122,
-    "macd": -12.13638400926834,
-    "macd_signal": -12.23979759259659,
-    "atr14": 10.336119605431449,
-    "adx14": 33.43618050530036,
-    "adx_pos": 11.841769453838129,
-    "adx_neg": 26.140042968961595,
-    "bb_high": 448.3217095998036,
-    "bb_low": 394.0382904001964,
-    "bb_mid": 421.18,
-    "vwap20": 420.4766835321932,
+    "date": "2026-09-10",
+    "close": 410.5,
+    "prev_close": 407.0,
+    "change_pct": 0.85995085995086,
+    "ema20": 418.8583286917583,
+    "ema50": 440.7818493727478,
+    "ema200": 464.7776458762265,
+    "rsi14": 39.69337684701376,
+    "macd": -11.418454038957634,
+    "macd_signal": -12.075528881802686,
+    "atr14": 10.322825347906603,
+    "adx14": 32.33312201693852,
+    "adx_pos": 16.89164689582293,
+    "adx_neg": 24.304156908657305,
+    "bb_high": 445.67677672328,
+    "bb_low": 393.68322327672,
+    "bb_mid": 419.68,
+    "vwap20": 419.6325682497562,
     "high_52w": 555.8,
     "low_52w": 381.0,
-    "volume": 11284331.0,
-    "avg_volume20": 6514728.9
+    "volume": 7713560.0,
+    "avg_volume20": 6799673.25
   },
   "price_history": [
-    {
-      "date": "2026-03-17",
-      "close": 406.35,
-      "ema50": 451.53
-    },
     {
       "date": "2026-03-18",
       "close": 415.1,
@@ -215,7 +210,7 @@
     {
       "date": "2026-05-14",
       "close": 505.15,
-      "ema50": 468.9
+      "ema50": 468.89
     },
     {
       "date": "2026-05-15",
@@ -626,6 +621,11 @@
       "date": "2026-09-09",
       "close": 407.0,
       "ema50": 442.02
+    },
+    {
+      "date": "2026-09-10",
+      "close": 410.5,
+      "ema50": 440.78
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 407.00 vs EMA20 419.74",
-      "ema20_above_ema50": "EMA20 419.74 vs EMA50 442.02",
-      "ema50_above_ema200": "EMA50 442.02 vs EMA200 465.37",
-      "rsi_above_50": "RSI(14) 36.70 vs 50",
-      "macd_bullish": "MACD -12.14 vs signal -12.24",
-      "adx_trending_up": "ADX(14) 33.44 vs 20, +DI 11.84 vs -DI 26.14",
-      "price_above_vwap20": "Close 407.00 vs 20d VWAP 420.48",
-      "price_above_bb_mid": "Close 407.00 vs BB mid 421.18"
+      "price_above_ema20": "Close 410.50 vs EMA20 418.86",
+      "ema20_above_ema50": "EMA20 418.86 vs EMA50 440.78",
+      "ema50_above_ema200": "EMA50 440.78 vs EMA200 464.78",
+      "rsi_above_50": "RSI(14) 39.69 vs 50",
+      "macd_bullish": "MACD -11.42 vs signal -12.08",
+      "adx_trending_up": "ADX(14) 32.33 vs 20, +DI 16.89 vs -DI 24.30",
+      "price_above_vwap20": "Close 410.50 vs 20d VWAP 419.63",
+      "price_above_bb_mid": "Close 410.50 vs BB mid 419.68"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 10.34 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 36.7",
-        "below_ema200": "Close 407.00 vs EMA200 465.37",
-        "extended_above_ema20": "Close 407.00 vs EMA20 419.74 (-3.0%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 407.00 vs 52w low 381.00"
+        "atr_high": "ATR 10.32 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 39.7",
+        "below_ema200": "Close 410.50 vs EMA200 464.78",
+        "extended_above_ema20": "Close 410.50 vs EMA20 418.86 (-2.0%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 410.50 vs 52w low 381.00"
       },
       "conditions_on": [
         "atr_high",
@@ -692,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-09T14:34:09.532015+00:00"
+  "updated_at": "2026-09-10T14:25:59.431524+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "State Bank of India",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-09-09",
-    "close": 1000.5,
-    "prev_close": 1008.0,
-    "change_pct": -0.744047619047619,
-    "ema20": 1032.3928574897911,
-    "ema50": 1036.6701506969537,
-    "ema200": 1012.5288074940778,
-    "rsi14": 34.932998722869826,
-    "macd": -10.322906970342046,
-    "macd_signal": -4.357289757645728,
-    "atr14": 17.803933405518812,
-    "adx14": 15.375829667900371,
-    "adx_pos": 15.543131990953377,
-    "adx_neg": 28.00394000533668,
-    "bb_high": 1083.144962214392,
-    "bb_low": 997.795037785608,
-    "bb_mid": 1040.47,
-    "vwap20": 1039.6792120039288,
+    "date": "2026-09-10",
+    "close": 1009.7,
+    "prev_close": 1000.5,
+    "change_pct": 0.919540229885062,
+    "ema20": 1030.2316329669538,
+    "ema50": 1035.612495874007,
+    "ema200": 1012.4820921689303,
+    "rsi14": 39.7406295446461,
+    "macd": -10.751343383534504,
+    "macd_signal": -5.636100482795758,
+    "atr14": 17.346509590919908,
+    "adx14": 16.32145408760467,
+    "adx_pos": 14.813501037656613,
+    "adx_neg": 26.689369591308758,
+    "bb_high": 1076.742725273227,
+    "bb_low": 996.8672747267731,
+    "bb_mid": 1036.805,
+    "vwap20": 1035.715647195911,
     "high_52w": 1234.7,
     "low_52w": 803.65,
-    "volume": 7091386.0,
-    "avg_volume20": 7377154.8
+    "volume": 5504031.0,
+    "avg_volume20": 7177232.2
   },
   "price_history": [
-    {
-      "date": "2026-03-17",
-      "close": 1064.7,
-      "ema50": 1099.87
-    },
     {
       "date": "2026-03-18",
       "close": 1069.8,
@@ -626,6 +621,11 @@
       "date": "2026-09-09",
       "close": 1000.5,
       "ema50": 1036.67
+    },
+    {
+      "date": "2026-09-10",
+      "close": 1009.7,
+      "ema50": 1035.61
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,000.50 vs EMA20 1,032.39",
-      "ema20_above_ema50": "EMA20 1,032.39 vs EMA50 1,036.67",
-      "ema50_above_ema200": "EMA50 1,036.67 vs EMA200 1,012.53",
-      "rsi_above_50": "RSI(14) 34.93 vs 50",
-      "macd_bullish": "MACD -10.32 vs signal -4.36",
-      "adx_trending_up": "ADX(14) 15.38 vs 20, +DI 15.54 vs -DI 28.00",
-      "price_above_vwap20": "Close 1,000.50 vs 20d VWAP 1,039.68",
-      "price_above_bb_mid": "Close 1,000.50 vs BB mid 1,040.47"
+      "price_above_ema20": "Close 1,009.70 vs EMA20 1,030.23",
+      "ema20_above_ema50": "EMA20 1,030.23 vs EMA50 1,035.61",
+      "ema50_above_ema200": "EMA50 1,035.61 vs EMA200 1,012.48",
+      "rsi_above_50": "RSI(14) 39.74 vs 50",
+      "macd_bullish": "MACD -10.75 vs signal -5.64",
+      "adx_trending_up": "ADX(14) 16.32 vs 20, +DI 14.81 vs -DI 26.69",
+      "price_above_vwap20": "Close 1,009.70 vs 20d VWAP 1,035.72",
+      "price_above_bb_mid": "Close 1,009.70 vs BB mid 1,036.81"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 17.80 = 1.8% of price",
-        "rsi_extreme": "RSI(14) 34.9",
-        "below_ema200": "Close 1,000.50 vs EMA200 1,012.53",
-        "extended_above_ema20": "Close 1,000.50 vs EMA20 1,032.39 (-3.1%)",
-        "large_day_move": "Day change -0.7%",
-        "near_52w_low": "Close 1,000.50 vs 52w low 803.65"
+        "atr_high": "ATR 17.35 = 1.7% of price",
+        "rsi_extreme": "RSI(14) 39.7",
+        "below_ema200": "Close 1,009.70 vs EMA200 1,012.48",
+        "extended_above_ema20": "Close 1,009.70 vs EMA20 1,030.23 (-2.0%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 1,009.70 vs 52w low 803.65"
       },
       "conditions_on": [
         "below_ema200"
@@ -692,7 +693,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-09T14:33:51.961578+00:00"
+  "updated_at": "2026-09-10T14:25:41.811409+00:00"
 }
