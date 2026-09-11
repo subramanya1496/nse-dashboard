@@ -3,39 +3,34 @@
   "name": null,
   "sector": null,
   "indicators": {
-    "date": "2026-09-10",
-    "close": 7.25,
+    "date": "2026-09-11",
+    "close": 7.17,
     "prev_close": 7.25,
-    "change_pct": 0.0,
-    "ema20": 7.671343074198845,
-    "ema50": 8.181076105609957,
-    "ema200": 9.236481981726829,
-    "rsi14": 26.606048965231892,
-    "macd": -0.3327909397002067,
-    "macd_signal": -0.31515419242587406,
-    "atr14": 0.23372020871365545,
-    "adx14": 26.771874361738742,
-    "adx_pos": 13.161266844021164,
-    "adx_neg": 24.25364300595726,
-    "bb_high": 8.419560306778843,
-    "bb_low": 6.964439693221158,
-    "bb_mid": 7.692,
-    "vwap20": 7.679609703102802,
-    "high_52w": 12.84,
-    "low_52w": 7.2,
-    "volume": 14701929.0,
-    "avg_volume20": 22986963.85
+    "change_pct": -1.1034482758620698,
+    "ema20": 7.623596114751313,
+    "ema50": 8.141423790565216,
+    "ema200": 9.193174188007408,
+    "rsi14": 24.974207332550847,
+    "macd": -0.33205783122291876,
+    "macd_signal": -0.31853492015115525,
+    "atr14": 0.22702590809617865,
+    "adx14": 27.268721984050675,
+    "adx_pos": 12.581541523151548,
+    "adx_neg": 25.38771431613126,
+    "bb_high": 8.300713906501203,
+    "bb_low": 6.955286093498798,
+    "bb_mid": 7.628,
+    "vwap20": 7.651688077900631,
+    "high_52w": 12.71,
+    "low_52w": 7.13,
+    "volume": 15082630.0,
+    "avg_volume20": 23382234.8
   },
   "price_history": [
     {
-      "date": "2026-03-18",
-      "close": 8.37,
-      "ema50": 8.64
-    },
-    {
       "date": "2026-03-19",
       "close": 8.31,
-      "ema50": 8.63
+      "ema50": 8.62
     },
     {
       "date": "2026-03-20",
@@ -626,6 +621,11 @@
       "date": "2026-09-10",
       "close": 7.25,
       "ema50": 8.18
+    },
+    {
+      "date": "2026-09-11",
+      "close": 7.17,
+      "ema50": 8.14
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 7.25 vs EMA20 7.67",
-      "ema20_above_ema50": "EMA20 7.67 vs EMA50 8.18",
-      "ema50_above_ema200": "EMA50 8.18 vs EMA200 9.24",
-      "rsi_above_50": "RSI(14) 26.61 vs 50",
+      "price_above_ema20": "Close 7.17 vs EMA20 7.62",
+      "ema20_above_ema50": "EMA20 7.62 vs EMA50 8.14",
+      "ema50_above_ema200": "EMA50 8.14 vs EMA200 9.19",
+      "rsi_above_50": "RSI(14) 24.97 vs 50",
       "macd_bullish": "MACD -0.33 vs signal -0.32",
-      "adx_trending_up": "ADX(14) 26.77 vs 20, +DI 13.16 vs -DI 24.25",
-      "price_above_vwap20": "Close 7.25 vs 20d VWAP 7.68",
-      "price_above_bb_mid": "Close 7.25 vs BB mid 7.69"
+      "adx_trending_up": "ADX(14) 27.27 vs 20, +DI 12.58 vs -DI 25.39",
+      "price_above_vwap20": "Close 7.17 vs 20d VWAP 7.65",
+      "price_above_bb_mid": "Close 7.17 vs BB mid 7.63"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -665,7 +665,7 @@
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
@@ -673,20 +673,21 @@
       },
       "conditions_detail": {
         "atr_high": "ATR 0.23 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 26.6",
-        "below_ema200": "Close 7.25 vs EMA200 9.24",
-        "extended_above_ema20": "Close 7.25 vs EMA20 7.67 (-5.5%)",
-        "large_day_move": "Day change +0.0%",
-        "near_52w_low": "Close 7.25 vs 52w low 7.20"
+        "rsi_extreme": "RSI(14) 25.0",
+        "below_ema200": "Close 7.17 vs EMA200 9.19",
+        "extended_above_ema20": "Close 7.17 vs EMA20 7.62 (-5.9%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 7.17 vs 52w low 7.13"
       },
       "conditions_on": [
         "atr_high",
+        "rsi_extreme",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 3,
+      "condition_count": 4,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "high"
     },
     "patterns": {
       "breakout": false,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-10T14:25:39.366820+00:00"
+  "updated_at": "2026-09-11T14:25:39.618776+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Sun Pharma",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-09-10",
-    "close": 1861.0,
-    "prev_close": 1864.9,
-    "change_pct": -0.2091264947182203,
-    "ema20": 1907.4939877149768,
-    "ema50": 1907.0080878018375,
-    "ema200": 1820.460878815017,
-    "rsi14": 37.53946583327462,
-    "macd": -12.535006034592016,
-    "macd_signal": -6.012468197105898,
-    "atr14": 32.98838160327743,
-    "adx14": 18.025529813339368,
-    "adx_pos": 12.87543757471689,
-    "adx_neg": 22.959556706767096,
-    "bb_high": 1960.148157570131,
-    "bb_low": 1852.411842429869,
-    "bb_mid": 1906.28,
-    "vwap20": 1909.8918010465998,
+    "date": "2026-09-11",
+    "close": 1840.0,
+    "prev_close": 1861.0,
+    "change_pct": -1.1284255776464267,
+    "ema20": 1901.0659888849789,
+    "ema50": 1904.3803177983068,
+    "ema200": 1820.636729944387,
+    "rsi14": 33.9959187515728,
+    "macd": -16.260606709257218,
+    "macd_signal": -8.06209589950819,
+    "atr14": 32.560640060204946,
+    "adx14": 18.956311586250397,
+    "adx_pos": 12.112823541996452,
+    "adx_neg": 23.025569731924676,
+    "bb_high": 1961.6703865407496,
+    "bb_low": 1841.8896134592503,
+    "bb_mid": 1901.78,
+    "vwap20": 1906.1946010419729,
     "high_52w": 2046.9,
     "low_52w": 1548.0,
-    "volume": 1178648.0,
-    "avg_volume20": 1488999.6
+    "volume": 1445071.0,
+    "avg_volume20": 1517189.05
   },
   "price_history": [
-    {
-      "date": "2026-03-18",
-      "close": 1778.3,
-      "ema50": 1742.49
-    },
     {
       "date": "2026-03-19",
       "close": 1744.4,
@@ -50,7 +45,7 @@
     {
       "date": "2026-03-24",
       "close": 1753.3,
-      "ema50": 1744.84
+      "ema50": 1744.83
     },
     {
       "date": "2026-03-25",
@@ -626,12 +621,17 @@
       "date": "2026-09-10",
       "close": 1861.0,
       "ema50": 1907.01
+    },
+    {
+      "date": "2026-09-11",
+      "close": 1840.0,
+      "ema50": 1904.38
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
-      "ema20_above_ema50": true,
+      "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
@@ -640,20 +640,19 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,861.00 vs EMA20 1,907.49",
-      "ema20_above_ema50": "EMA20 1,907.49 vs EMA50 1,907.01",
-      "ema50_above_ema200": "EMA50 1,907.01 vs EMA200 1,820.46",
-      "rsi_above_50": "RSI(14) 37.54 vs 50",
-      "macd_bullish": "MACD -12.54 vs signal -6.01",
-      "adx_trending_up": "ADX(14) 18.03 vs 20, +DI 12.88 vs -DI 22.96",
-      "price_above_vwap20": "Close 1,861.00 vs 20d VWAP 1,909.89",
-      "price_above_bb_mid": "Close 1,861.00 vs BB mid 1,906.28"
+      "price_above_ema20": "Close 1,840.00 vs EMA20 1,901.07",
+      "ema20_above_ema50": "EMA20 1,901.07 vs EMA50 1,904.38",
+      "ema50_above_ema200": "EMA50 1,904.38 vs EMA200 1,820.64",
+      "rsi_above_50": "RSI(14) 34.00 vs 50",
+      "macd_bullish": "MACD -16.26 vs signal -8.06",
+      "adx_trending_up": "ADX(14) 18.96 vs 20, +DI 12.11 vs -DI 23.03",
+      "price_above_vwap20": "Close 1,840.00 vs 20d VWAP 1,906.19",
+      "price_above_bb_mid": "Close 1,840.00 vs BB mid 1,901.78"
     },
     "flags_on": [
-      "ema20_above_ema50",
       "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -662,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 32.99 = 1.8% of price",
-        "rsi_extreme": "RSI(14) 37.5",
-        "below_ema200": "Close 1,861.00 vs EMA200 1,820.46",
-        "extended_above_ema20": "Close 1,861.00 vs EMA20 1,907.49 (-2.4%)",
-        "large_day_move": "Day change -0.2%",
-        "near_52w_low": "Close 1,861.00 vs 52w low 1,548.00"
+        "atr_high": "ATR 32.56 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 34.0",
+        "below_ema200": "Close 1,840.00 vs EMA200 1,820.64",
+        "extended_above_ema20": "Close 1,840.00 vs EMA20 1,901.07 (-3.2%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 1,840.00 vs 52w low 1,548.00"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -703,5 +702,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-10T14:25:45.802483+00:00"
+  "updated_at": "2026-09-11T14:25:46.078693+00:00"
 }
