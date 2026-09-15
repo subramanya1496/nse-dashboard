@@ -3,35 +3,30 @@
   "name": "Jio Financial Services",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 229.9,
-    "prev_close": 230.25,
-    "change_pct": -0.15200868621063815,
-    "ema20": 238.17510140621926,
-    "ema50": 241.37456365873277,
-    "ema200": 254.61807608830455,
-    "rsi14": 33.71557591989149,
-    "macd": -4.081735635380966,
-    "macd_signal": -2.951565165285026,
-    "atr14": 4.468511916607458,
-    "adx14": 19.30371500998999,
-    "adx_pos": 15.93155631820661,
-    "adx_neg": 35.56418262051414,
-    "bb_high": 249.6436631431837,
-    "bb_low": 228.32633685681628,
-    "bb_mid": 238.98499999999999,
-    "vwap20": 238.39893602463692,
+    "date": "2026-09-15",
+    "close": 225.6,
+    "prev_close": 229.9,
+    "change_pct": -1.8703784254023537,
+    "ema20": 236.97747270086506,
+    "ema50": 240.75595331917464,
+    "ema200": 254.32933901279904,
+    "rsi14": 29.468602688099878,
+    "macd": -4.559100062222086,
+    "macd_signal": -3.273072144672438,
+    "atr14": 4.592189636849783,
+    "adx14": 20.768790928894106,
+    "adx_pos": 14.395164298201852,
+    "adx_neg": 33.441044624380304,
+    "bb_high": 248.75153640416136,
+    "bb_low": 226.80346359583865,
+    "bb_mid": 237.7775,
+    "vwap20": 237.19877450960567,
     "high_52w": 321.6,
     "low_52w": 223.3,
-    "volume": 22102551.0,
-    "avg_volume20": 10665272.8
+    "volume": 13273805.0,
+    "avg_volume20": 10754438.3
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 239.45,
-      "ema50": 258.8
-    },
     {
       "date": "2026-03-20",
       "close": 239.3,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 229.9,
       "ema50": 241.37
+    },
+    {
+      "date": "2026-09-15",
+      "close": 225.6,
+      "ema50": 240.76
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 229.90 vs EMA20 238.18",
-      "ema20_above_ema50": "EMA20 238.18 vs EMA50 241.37",
-      "ema50_above_ema200": "EMA50 241.37 vs EMA200 254.62",
-      "rsi_above_50": "RSI(14) 33.72 vs 50",
-      "macd_bullish": "MACD -4.08 vs signal -2.95",
-      "adx_trending_up": "ADX(14) 19.30 vs 20, +DI 15.93 vs -DI 35.56",
-      "price_above_vwap20": "Close 229.90 vs 20d VWAP 238.40",
-      "price_above_bb_mid": "Close 229.90 vs BB mid 238.98"
+      "price_above_ema20": "Close 225.60 vs EMA20 236.98",
+      "ema20_above_ema50": "EMA20 236.98 vs EMA50 240.76",
+      "ema50_above_ema200": "EMA50 240.76 vs EMA200 254.33",
+      "rsi_above_50": "RSI(14) 29.47 vs 50",
+      "macd_bullish": "MACD -4.56 vs signal -3.27",
+      "adx_trending_up": "ADX(14) 20.77 vs 20, +DI 14.40 vs -DI 33.44",
+      "price_above_vwap20": "Close 225.60 vs 20d VWAP 237.20",
+      "price_above_bb_mid": "Close 225.60 vs BB mid 237.78"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +672,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.47 = 1.9% of price",
-        "rsi_extreme": "RSI(14) 33.7",
-        "below_ema200": "Close 229.90 vs EMA200 254.62",
-        "extended_above_ema20": "Close 229.90 vs EMA20 238.18 (-3.5%)",
-        "large_day_move": "Day change -0.2%",
-        "near_52w_low": "Close 229.90 vs 52w low 223.30"
+        "atr_high": "ATR 4.59 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 29.5",
+        "below_ema200": "Close 225.60 vs EMA200 254.33",
+        "extended_above_ema20": "Close 225.60 vs EMA20 236.98 (-4.8%)",
+        "large_day_move": "Day change -1.9%",
+        "near_52w_low": "Close 225.60 vs 52w low 223.30"
       },
       "conditions_on": [
         "below_ema200",
@@ -690,8 +689,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:40.292771+00:00"
+  "updated_at": "2026-09-15T14:59:05.160860+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Dixon Technologies (India)",
   "sector": "Electronics",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 13425.0,
-    "prev_close": 13500.0,
-    "change_pct": -0.5555555555555556,
-    "ema20": 14167.107033457876,
-    "ema50": 13846.048631342735,
-    "ema200": 13067.268885795203,
-    "rsi14": 35.04064719325963,
-    "macd": -79.81057470997257,
-    "macd_signal": 91.92695023330796,
-    "atr14": 387.8973147216314,
-    "adx14": 23.854770722118012,
-    "adx_pos": 10.553395105084462,
-    "adx_neg": 34.019750446011,
-    "bb_high": 15245.224154510739,
-    "bb_low": 13517.675845489262,
-    "bb_mid": 14381.45,
-    "vwap20": 14388.667714761566,
+    "date": "2026-09-15",
+    "close": 13180.0,
+    "prev_close": 13425.0,
+    "change_pct": -1.824953445065177,
+    "ema20": 14073.096839795222,
+    "ema50": 13819.929077172432,
+    "ema200": 13068.390588424109,
+    "rsi14": 31.81139727086223,
+    "macd": -145.19914573470123,
+    "macd_signal": 44.50173103970613,
+    "atr14": 394.61893509865774,
+    "adx14": 25.514042020444087,
+    "adx_pos": 11.171217815268413,
+    "adx_neg": 31.051693659756445,
+    "bb_high": 15340.324687539338,
+    "bb_low": 13338.075312460664,
+    "bb_mid": 14339.2,
+    "vwap20": 14334.265341367254,
     "high_52w": 18471.0,
     "low_52w": 9600.0,
-    "volume": 549928.0,
-    "avg_volume20": 379688.9
+    "volume": 431603.0,
+    "avg_volume20": 392087.5
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 10194.0,
-      "ema50": 11128.44
-    },
     {
       "date": "2026-03-20",
       "close": 10342.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 13425.0,
       "ema50": 13846.05
+    },
+    {
+      "date": "2026-09-15",
+      "close": 13180.0,
+      "ema50": 13819.93
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 13,425.00 vs EMA20 14,167.11",
-      "ema20_above_ema50": "EMA20 14,167.11 vs EMA50 13,846.05",
-      "ema50_above_ema200": "EMA50 13,846.05 vs EMA200 13,067.27",
-      "rsi_above_50": "RSI(14) 35.04 vs 50",
-      "macd_bullish": "MACD -79.81 vs signal 91.93",
-      "adx_trending_up": "ADX(14) 23.85 vs 20, +DI 10.55 vs -DI 34.02",
-      "price_above_vwap20": "Close 13,425.00 vs 20d VWAP 14,388.67",
-      "price_above_bb_mid": "Close 13,425.00 vs BB mid 14,381.45"
+      "price_above_ema20": "Close 13,180.00 vs EMA20 14,073.10",
+      "ema20_above_ema50": "EMA20 14,073.10 vs EMA50 13,819.93",
+      "ema50_above_ema200": "EMA50 13,819.93 vs EMA200 13,068.39",
+      "rsi_above_50": "RSI(14) 31.81 vs 50",
+      "macd_bullish": "MACD -145.20 vs signal 44.50",
+      "adx_trending_up": "ADX(14) 25.51 vs 20, +DI 11.17 vs -DI 31.05",
+      "price_above_vwap20": "Close 13,180.00 vs 20d VWAP 14,334.27",
+      "price_above_bb_mid": "Close 13,180.00 vs BB mid 14,339.20"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,8 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 387.90 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 35.0",
-        "below_ema200": "Close 13,425.00 vs EMA200 13,067.27",
-        "extended_above_ema20": "Close 13,425.00 vs EMA20 14,167.11 (-5.2%)",
-        "large_day_move": "Day change -0.6%",
-        "near_52w_low": "Close 13,425.00 vs 52w low 9,600.00"
+        "atr_high": "ATR 394.62 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 31.8",
+        "below_ema200": "Close 13,180.00 vs EMA200 13,068.39",
+        "extended_above_ema20": "Close 13,180.00 vs EMA20 14,073.10 (-6.3%)",
+        "large_day_move": "Day change -1.8%",
+        "near_52w_low": "Close 13,180.00 vs 52w low 9,600.00"
       },
       "conditions_on": [
         "atr_high"
@@ -692,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:16.813449+00:00"
+  "updated_at": "2026-09-15T14:58:41.539557+00:00"
 }

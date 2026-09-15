@@ -3,35 +3,30 @@
   "name": "Bajaj Finserv",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 1913.5,
-    "prev_close": 1940.5,
-    "change_pct": -1.3913939706261274,
-    "ema20": 1969.9522294884755,
-    "ema50": 1947.73383322581,
-    "ema200": 1913.668575993915,
-    "rsi14": 37.420153749935146,
-    "macd": -11.457074080170969,
-    "macd_signal": 1.7025354317445611,
-    "atr14": 35.23963296046142,
-    "adx14": 23.67191828929003,
-    "adx_pos": 10.76564140875233,
-    "adx_neg": 27.97662688152104,
-    "bb_high": 2054.4515787768446,
-    "bb_low": 1916.368421223155,
-    "bb_mid": 1985.4099999999999,
-    "vwap20": 1983.4604859741605,
+    "date": "2026-09-15",
+    "close": 1855.5,
+    "prev_close": 1913.5,
+    "change_pct": -3.0310948523647765,
+    "ema20": 1959.0520171562398,
+    "ema50": 1944.1168201581313,
+    "ema200": 1913.0897841929807,
+    "rsi14": 29.7278373224528,
+    "macd": -18.851070078301973,
+    "macd_signal": -2.408185670264746,
+    "atr14": 38.086802034714175,
+    "adx14": 25.876878243793232,
+    "adx_pos": 9.249368754451448,
+    "adx_neg": 31.44418598795724,
+    "bb_high": 2066.48896716127,
+    "bb_low": 1889.3810328387297,
+    "bb_mid": 1977.935,
+    "vwap20": 1976.937259374414,
     "high_52w": 2195.0,
     "low_52w": 1597.0,
-    "volume": 762375.0,
-    "avg_volume20": 620459.6
+    "volume": 486164.0,
+    "avg_volume20": 593436.65
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 1714.9,
-      "ema50": 1936.99
-    },
     {
       "date": "2026-03-20",
       "close": 1710.3,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 1913.5,
       "ema50": 1947.73
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1855.5,
+      "ema50": 1944.12
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,913.50 vs EMA20 1,969.95",
-      "ema20_above_ema50": "EMA20 1,969.95 vs EMA50 1,947.73",
-      "ema50_above_ema200": "EMA50 1,947.73 vs EMA200 1,913.67",
-      "rsi_above_50": "RSI(14) 37.42 vs 50",
-      "macd_bullish": "MACD -11.46 vs signal 1.70",
-      "adx_trending_up": "ADX(14) 23.67 vs 20, +DI 10.77 vs -DI 27.98",
-      "price_above_vwap20": "Close 1,913.50 vs 20d VWAP 1,983.46",
-      "price_above_bb_mid": "Close 1,913.50 vs BB mid 1,985.41"
+      "price_above_ema20": "Close 1,855.50 vs EMA20 1,959.05",
+      "ema20_above_ema50": "EMA20 1,959.05 vs EMA50 1,944.12",
+      "ema50_above_ema200": "EMA50 1,944.12 vs EMA200 1,913.09",
+      "rsi_above_50": "RSI(14) 29.73 vs 50",
+      "macd_bullish": "MACD -18.85 vs signal -2.41",
+      "adx_trending_up": "ADX(14) 25.88 vs 20, +DI 9.25 vs -DI 31.44",
+      "price_above_vwap20": "Close 1,855.50 vs 20d VWAP 1,976.94",
+      "price_above_bb_mid": "Close 1,855.50 vs BB mid 1,977.93"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,8 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: near buy zone"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 35.24 = 1.8% of price",
-        "rsi_extreme": "RSI(14) 37.4",
-        "below_ema200": "Close 1,913.50 vs EMA200 1,913.67",
-        "extended_above_ema20": "Close 1,913.50 vs EMA20 1,969.95 (-2.9%)",
-        "large_day_move": "Day change -1.4%",
-        "near_52w_low": "Close 1,913.50 vs 52w low 1,597.00"
+        "atr_high": "ATR 38.09 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 29.7",
+        "below_ema200": "Close 1,855.50 vs EMA200 1,913.09",
+        "extended_above_ema20": "Close 1,855.50 vs EMA20 1,959.05 (-5.3%)",
+        "large_day_move": "Day change -3.0%",
+        "near_52w_low": "Close 1,855.50 vs 52w low 1,597.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -694,11 +693,11 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "neutral",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:21:59.922585+00:00"
+  "updated_at": "2026-09-15T14:58:24.897985+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Divi's Laboratories",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 9322.0,
-    "prev_close": 9438.5,
-    "change_pct": -1.2343062986703397,
-    "ema20": 9046.261671933411,
-    "ema50": 8376.954965612998,
-    "ema200": 7189.239312358295,
-    "rsi14": 63.64993956896388,
-    "macd": 349.2541382808813,
-    "macd_signal": 368.05421250161146,
-    "atr14": 199.21339569365406,
-    "adx14": 66.20571930500196,
-    "adx_pos": 34.67047058388887,
-    "adx_neg": 9.344557737694698,
-    "bb_high": 9765.240274098958,
-    "bb_low": 8304.909725901043,
-    "bb_mid": 9035.075,
-    "vwap20": 9101.850625067746,
+    "date": "2026-09-15",
+    "close": 9198.0,
+    "prev_close": 9322.0,
+    "change_pct": -1.3301866552242008,
+    "ema20": 9060.712941273086,
+    "ema50": 8409.152810098763,
+    "ema200": 7209.226980892044,
+    "rsi14": 59.21281927209486,
+    "macd": 319.69649280160775,
+    "macd_signal": 358.3826685616107,
+    "atr14": 204.91243885839305,
+    "adx14": 63.964525263021415,
+    "adx_pos": 31.29862574449902,
+    "adx_neg": 15.128515469516701,
+    "bb_high": 9757.942545989697,
+    "bb_low": 8383.857454010302,
+    "bb_mid": 9070.9,
+    "vwap20": 9124.34905244939,
     "high_52w": 9615.0,
     "low_52w": 5636.5,
-    "volume": 516756.0,
-    "avg_volume20": 446820.9
+    "volume": 380826.0,
+    "avg_volume20": 453260.75
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 5972.5,
-      "ema50": 6252.81
-    },
     {
       "date": "2026-03-20",
       "close": 6100.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 9322.0,
       "ema50": 8376.95
+    },
+    {
+      "date": "2026-09-15",
+      "close": 9198.0,
+      "ema50": 8409.15
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 9,322.00 vs EMA20 9,046.26",
-      "ema20_above_ema50": "EMA20 9,046.26 vs EMA50 8,376.95",
-      "ema50_above_ema200": "EMA50 8,376.95 vs EMA200 7,189.24",
-      "rsi_above_50": "RSI(14) 63.65 vs 50",
-      "macd_bullish": "MACD 349.25 vs signal 368.05",
-      "adx_trending_up": "ADX(14) 66.21 vs 20, +DI 34.67 vs -DI 9.34",
-      "price_above_vwap20": "Close 9,322.00 vs 20d VWAP 9,101.85",
-      "price_above_bb_mid": "Close 9,322.00 vs BB mid 9,035.08"
+      "price_above_ema20": "Close 9,198.00 vs EMA20 9,060.71",
+      "ema20_above_ema50": "EMA20 9,060.71 vs EMA50 8,409.15",
+      "ema50_above_ema200": "EMA50 8,409.15 vs EMA200 7,209.23",
+      "rsi_above_50": "RSI(14) 59.21 vs 50",
+      "macd_bullish": "MACD 319.70 vs signal 358.38",
+      "adx_trending_up": "ADX(14) 63.96 vs 20, +DI 31.30 vs -DI 15.13",
+      "price_above_vwap20": "Close 9,198.00 vs 20d VWAP 9,124.35",
+      "price_above_bb_mid": "Close 9,198.00 vs BB mid 9,070.90"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,11 +663,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 4,
+      "label": "Watch closely",
+      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
       "reasons": [
-        "7/8 bullish flags"
+        "7/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -680,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 199.21 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 63.6",
-        "below_ema200": "Close 9,322.00 vs EMA200 7,189.24",
-        "extended_above_ema20": "Close 9,322.00 vs EMA20 9,046.26 (+3.0%)",
-        "large_day_move": "Day change -1.2%",
-        "near_52w_low": "Close 9,322.00 vs 52w low 5,636.50"
+        "atr_high": "ATR 204.91 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 59.2",
+        "below_ema200": "Close 9,198.00 vs EMA200 7,209.23",
+        "extended_above_ema20": "Close 9,198.00 vs EMA20 9,060.71 (+1.5%)",
+        "large_day_move": "Day change -1.3%",
+        "near_52w_low": "Close 9,198.00 vs 52w low 5,636.50"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -696,7 +697,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -708,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:16.301452+00:00"
+  "updated_at": "2026-09-15T14:58:41.138859+00:00"
 }

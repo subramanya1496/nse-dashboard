@@ -3,35 +3,30 @@
   "name": "NBCC (India) Ltd",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 82.9,
-    "prev_close": 83.94,
-    "change_pct": -1.2389802239694925,
-    "ema20": 87.09292445521677,
-    "ema50": 91.18176065815385,
-    "ema200": 98.14251876139926,
-    "rsi14": 27.27819051894916,
-    "macd": -2.486493686194251,
-    "macd_signal": -2.402587617853245,
-    "atr14": 1.7560773453763885,
-    "adx14": 33.94188849794871,
-    "adx_pos": 14.138439150668821,
-    "adx_neg": 39.560240726494925,
-    "bb_high": 90.81516412839862,
-    "bb_low": 82.92483587160139,
-    "bb_mid": 86.87,
-    "vwap20": 87.06132239501345,
+    "date": "2026-09-15",
+    "close": 80.69,
+    "prev_close": 82.9,
+    "change_pct": -2.6658624849216017,
+    "ema20": 86.4831221261485,
+    "ema50": 90.77031906371644,
+    "ema200": 97.96886185830077,
+    "rsi14": 22.99064985863636,
+    "macd": -2.696824341991544,
+    "macd_signal": -2.461434962680905,
+    "atr14": 1.870643249278075,
+    "adx14": 35.39683080002702,
+    "adx_pos": 12.324504079063688,
+    "adx_neg": 41.62513743219453,
+    "bb_high": 90.96926141604405,
+    "bb_low": 81.86473858395595,
+    "bb_mid": 86.417,
+    "vwap20": 86.54023318092993,
     "high_52w": 125.85,
     "low_52w": 77.18,
-    "volume": 6012573.0,
-    "avg_volume20": 4849407.15
+    "volume": 5854402.0,
+    "avg_volume20": 4795048.35
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 83.14,
-      "ema50": 95.5
-    },
     {
       "date": "2026-03-20",
       "close": 83.91,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 82.9,
       "ema50": 91.18
+    },
+    {
+      "date": "2026-09-15",
+      "close": 80.69,
+      "ema50": 90.77
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 82.90 vs EMA20 87.09",
-      "ema20_above_ema50": "EMA20 87.09 vs EMA50 91.18",
-      "ema50_above_ema200": "EMA50 91.18 vs EMA200 98.14",
-      "rsi_above_50": "RSI(14) 27.28 vs 50",
-      "macd_bullish": "MACD -2.49 vs signal -2.40",
-      "adx_trending_up": "ADX(14) 33.94 vs 20, +DI 14.14 vs -DI 39.56",
-      "price_above_vwap20": "Close 82.90 vs 20d VWAP 87.06",
-      "price_above_bb_mid": "Close 82.90 vs BB mid 86.87"
+      "price_above_ema20": "Close 80.69 vs EMA20 86.48",
+      "ema20_above_ema50": "EMA20 86.48 vs EMA50 90.77",
+      "ema50_above_ema200": "EMA50 90.77 vs EMA200 97.97",
+      "rsi_above_50": "RSI(14) 22.99 vs 50",
+      "macd_bullish": "MACD -2.70 vs signal -2.46",
+      "adx_trending_up": "ADX(14) 35.40 vs 20, +DI 12.32 vs -DI 41.63",
+      "price_above_vwap20": "Close 80.69 vs 20d VWAP 86.54",
+      "price_above_bb_mid": "Close 80.69 vs BB mid 86.42"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -665,26 +665,28 @@
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.76 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 27.3",
-        "below_ema200": "Close 82.90 vs EMA200 98.14",
-        "extended_above_ema20": "Close 82.90 vs EMA20 87.09 (-4.8%)",
-        "large_day_move": "Day change -1.2%",
-        "near_52w_low": "Close 82.90 vs 52w low 77.18"
+        "atr_high": "ATR 1.87 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 23.0",
+        "below_ema200": "Close 80.69 vs EMA200 97.97",
+        "extended_above_ema20": "Close 80.69 vs EMA20 86.48 (-6.7%)",
+        "large_day_move": "Day change -2.7%",
+        "near_52w_low": "Close 80.69 vs 52w low 77.18"
       },
       "conditions_on": [
-        "below_ema200"
+        "rsi_extreme",
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 1,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -702,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:58.427117+00:00"
+  "updated_at": "2026-09-15T14:59:23.294209+00:00"
 }

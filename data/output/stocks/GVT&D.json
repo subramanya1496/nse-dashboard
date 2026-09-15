@@ -3,35 +3,30 @@
   "name": "GE Vernova T&D India",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 4548.1,
-    "prev_close": 4545.0,
-    "change_pct": 0.06820682068207622,
-    "ema20": 4414.417396580923,
-    "ema50": 4419.315120560646,
-    "ema200": 4032.613777226303,
-    "rsi14": 55.82598036362908,
-    "macd": 56.37568098156953,
-    "macd_signal": 14.611662500334809,
-    "atr14": 165.95691224203205,
-    "adx14": 17.13633826775124,
-    "adx_pos": 31.289808168228443,
-    "adx_neg": 24.272524103991184,
-    "bb_high": 4700.123503869895,
-    "bb_low": 3977.1764961301046,
-    "bb_mid": 4338.65,
-    "vwap20": 4398.154204577312,
+    "date": "2026-09-15",
+    "close": 4246.9,
+    "prev_close": 4548.1,
+    "change_pct": -6.622545678415177,
+    "ema20": 4398.463358811311,
+    "ema50": 4412.553743283759,
+    "ema200": 4034.7459784479315,
+    "rsi14": 44.91842800347892,
+    "macd": 35.16633113003445,
+    "macd_signal": 18.72259622627474,
+    "atr14": 179.56713279617261,
+    "adx14": 16.33868113737796,
+    "adx_pos": 26.852623017856907,
+    "adx_neg": 30.261865934142605,
+    "bb_high": 4699.613115631786,
+    "bb_low": 3973.3768843682137,
+    "bb_mid": 4336.495,
+    "vwap20": 4395.679145876612,
     "high_52w": 5650.0,
     "low_52w": 2523.2,
-    "volume": 588462.0,
-    "avg_volume20": 1009440.55
+    "volume": 1106490.0,
+    "avg_volume20": 1043668.1
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 3761.8,
-      "ema50": 3497.31
-    },
     {
       "date": "2026-03-20",
       "close": 3678.9,
@@ -626,47 +621,48 @@
       "date": "2026-09-11",
       "close": 4548.1,
       "ema50": 4419.32
+    },
+    {
+      "date": "2026-09-15",
+      "close": 4246.9,
+      "ema50": 4412.55
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 4,548.10 vs EMA20 4,414.42",
-      "ema20_above_ema50": "EMA20 4,414.42 vs EMA50 4,419.32",
-      "ema50_above_ema200": "EMA50 4,419.32 vs EMA200 4,032.61",
-      "rsi_above_50": "RSI(14) 55.83 vs 50",
-      "macd_bullish": "MACD 56.38 vs signal 14.61",
-      "adx_trending_up": "ADX(14) 17.14 vs 20, +DI 31.29 vs -DI 24.27",
-      "price_above_vwap20": "Close 4,548.10 vs 20d VWAP 4,398.15",
-      "price_above_bb_mid": "Close 4,548.10 vs BB mid 4,338.65"
+      "price_above_ema20": "Close 4,246.90 vs EMA20 4,398.46",
+      "ema20_above_ema50": "EMA20 4,398.46 vs EMA50 4,412.55",
+      "ema50_above_ema200": "EMA50 4,412.55 vs EMA200 4,034.75",
+      "rsi_above_50": "RSI(14) 44.92 vs 50",
+      "macd_bullish": "MACD 35.17 vs signal 18.72",
+      "adx_trending_up": "ADX(14) 16.34 vs 20, +DI 26.85 vs -DI 30.26",
+      "price_above_vwap20": "Close 4,246.90 vs 20d VWAP 4,395.68",
+      "price_above_bb_mid": "Close 4,246.90 vs BB mid 4,336.49"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema50_above_ema200",
-      "rsi_above_50",
-      "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "macd_bullish"
     ],
-    "flag_count": 6,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "6/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,23 +671,24 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 165.96 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 55.8",
-        "below_ema200": "Close 4,548.10 vs EMA200 4,032.61",
-        "extended_above_ema20": "Close 4,548.10 vs EMA20 4,414.42 (+3.0%)",
-        "large_day_move": "Day change +0.1%",
-        "near_52w_low": "Close 4,548.10 vs 52w low 2,523.20"
+        "atr_high": "ATR 179.57 = 4.2% of price",
+        "rsi_extreme": "RSI(14) 44.9",
+        "below_ema200": "Close 4,246.90 vs EMA200 4,034.75",
+        "extended_above_ema20": "Close 4,246.90 vs EMA20 4,398.46 (-3.4%)",
+        "large_day_move": "Day change -6.6%",
+        "near_52w_low": "Close 4,246.90 vs 52w low 2,523.20"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -700,8 +697,8 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bullish",
-      "weekly": "neutral",
+      "daily": "neutral",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -709,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:25.493220+00:00"
+  "updated_at": "2026-09-15T14:58:50.383475+00:00"
 }

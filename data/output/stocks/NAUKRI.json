@@ -3,35 +3,30 @@
   "name": "Info Edge (India)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 1250.8,
-    "prev_close": 1265.0,
-    "change_pct": -1.1225296442687782,
-    "ema20": 1302.3311173246648,
-    "ema50": 1252.4956624338986,
-    "ema200": 1192.7135179360628,
-    "rsi14": 40.248700800674264,
-    "macd": 1.8198707491262667,
-    "macd_signal": 18.523482055943685,
-    "atr14": 36.13815705509169,
-    "adx14": 28.047298043649963,
-    "adx_pos": 15.34638256486834,
-    "adx_neg": 22.50993738633086,
-    "bb_high": 1396.812808261021,
-    "bb_low": 1257.8271917389793,
-    "bb_mid": 1327.3200000000002,
-    "vwap20": 1330.3500681898076,
+    "date": "2026-09-15",
+    "close": 1261.5,
+    "prev_close": 1250.8,
+    "change_pct": 0.855452510393352,
+    "ema20": 1298.4424394842206,
+    "ema50": 1252.8487737110006,
+    "ema200": 1193.397960543664,
+    "rsi14": 42.93705696624762,
+    "macd": -1.252044589555453,
+    "macd_signal": 14.568376726843857,
+    "atr14": 37.78543155115657,
+    "adx14": 26.494673012634795,
+    "adx_pos": 22.683855525017442,
+    "adx_neg": 19.990848039398596,
+    "bb_high": 1396.3922475432103,
+    "bb_low": 1248.8177524567898,
+    "bb_mid": 1322.605,
+    "vwap20": 1323.2057765229113,
     "high_52w": 1433.6,
     "low_52w": 908.3,
-    "volume": 524171.0,
-    "avg_volume20": 1268151.4
+    "volume": 1716983.0,
+    "avg_volume20": 1200836.0
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 970.6,
-      "ema50": 1114.87
-    },
     {
       "date": "2026-03-20",
       "close": 978.2,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 1250.8,
       "ema50": 1252.5
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1261.5,
+      "ema50": 1252.85
     }
   ],
   "flags": {
@@ -635,35 +635,36 @@
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,250.80 vs EMA20 1,302.33",
-      "ema20_above_ema50": "EMA20 1,302.33 vs EMA50 1,252.50",
-      "ema50_above_ema200": "EMA50 1,252.50 vs EMA200 1,192.71",
-      "rsi_above_50": "RSI(14) 40.25 vs 50",
-      "macd_bullish": "MACD 1.82 vs signal 18.52",
-      "adx_trending_up": "ADX(14) 28.05 vs 20, +DI 15.35 vs -DI 22.51",
-      "price_above_vwap20": "Close 1,250.80 vs 20d VWAP 1,330.35",
-      "price_above_bb_mid": "Close 1,250.80 vs BB mid 1,327.32"
+      "price_above_ema20": "Close 1,261.50 vs EMA20 1,298.44",
+      "ema20_above_ema50": "EMA20 1,298.44 vs EMA50 1,252.85",
+      "ema50_above_ema200": "EMA50 1,252.85 vs EMA200 1,193.40",
+      "rsi_above_50": "RSI(14) 42.94 vs 50",
+      "macd_bullish": "MACD -1.25 vs signal 14.57",
+      "adx_trending_up": "ADX(14) 26.49 vs 20, +DI 22.68 vs -DI 19.99",
+      "price_above_vwap20": "Close 1,261.50 vs 20d VWAP 1,323.21",
+      "price_above_bb_mid": "Close 1,261.50 vs BB mid 1,322.61"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200"
+      "ema50_above_ema200",
+      "adx_trending_up"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: near buy zone"
+        "3/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -676,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 36.14 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 40.2",
-        "below_ema200": "Close 1,250.80 vs EMA200 1,192.71",
-        "extended_above_ema20": "Close 1,250.80 vs EMA20 1,302.33 (-4.0%)",
-        "large_day_move": "Day change -1.1%",
-        "near_52w_low": "Close 1,250.80 vs 52w low 908.30"
+        "atr_high": "ATR 37.79 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 42.9",
+        "below_ema200": "Close 1,261.50 vs EMA200 1,193.40",
+        "extended_above_ema20": "Close 1,261.50 vs EMA20 1,298.44 (-2.8%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 1,261.50 vs 52w low 908.30"
       },
       "conditions_on": [
         "atr_high"
@@ -692,12 +693,12 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "neutral",
+      "daily": "bullish",
       "weekly": "bullish",
       "intraday": null
     }
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:57.647295+00:00"
+  "updated_at": "2026-09-15T14:59:22.358814+00:00"
 }

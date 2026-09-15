@@ -3,35 +3,30 @@
   "name": "Cipla Ltd",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 1366.0,
-    "prev_close": 1373.3,
-    "change_pct": -0.5315663001529131,
-    "ema20": 1403.8309222888706,
-    "ema50": 1415.3736949689844,
-    "ema200": 1411.7161100655007,
-    "rsi14": 35.27352945394975,
-    "macd": -18.00676715759164,
-    "macd_signal": -12.789038053580148,
-    "atr14": 22.56603840805548,
-    "adx14": 25.183523817391336,
-    "adx_pos": 8.59542596421629,
-    "adx_neg": 25.540589042155855,
-    "bb_high": 1455.151431602016,
-    "bb_low": 1361.548568397984,
-    "bb_mid": 1408.35,
-    "vwap20": 1403.6578426188732,
+    "date": "2026-09-15",
+    "close": 1351.0,
+    "prev_close": 1366.0,
+    "change_pct": -1.0980966325036603,
+    "ema20": 1398.7994058804068,
+    "ema50": 1412.8492363427497,
+    "ema200": 1411.111969666839,
+    "rsi14": 32.0750445047714,
+    "macd": -19.909410804054005,
+    "macd_signal": -14.21311260367492,
+    "atr14": 22.261321378908658,
+    "adx14": 26.930424437275633,
+    "adx_pos": 8.090718743022277,
+    "adx_neg": 24.04089376506436,
+    "bb_high": 1456.0569195468156,
+    "bb_low": 1352.5930804531845,
+    "bb_mid": 1404.325,
+    "vwap20": 1398.4111951428097,
     "high_52w": 1673.0,
     "low_52w": 1165.7,
-    "volume": 1681155.0,
-    "avg_volume20": 782790.6
+    "volume": 1225305.0,
+    "avg_volume20": 806230.15
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 1239.2,
-      "ema50": 1354.64
-    },
     {
       "date": "2026-03-20",
       "close": 1256.4,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 1366.0,
       "ema50": 1415.37
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1351.0,
+      "ema50": 1412.85
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,366.00 vs EMA20 1,403.83",
-      "ema20_above_ema50": "EMA20 1,403.83 vs EMA50 1,415.37",
-      "ema50_above_ema200": "EMA50 1,415.37 vs EMA200 1,411.72",
-      "rsi_above_50": "RSI(14) 35.27 vs 50",
-      "macd_bullish": "MACD -18.01 vs signal -12.79",
-      "adx_trending_up": "ADX(14) 25.18 vs 20, +DI 8.60 vs -DI 25.54",
-      "price_above_vwap20": "Close 1,366.00 vs 20d VWAP 1,403.66",
-      "price_above_bb_mid": "Close 1,366.00 vs BB mid 1,408.35"
+      "price_above_ema20": "Close 1,351.00 vs EMA20 1,398.80",
+      "ema20_above_ema50": "EMA20 1,398.80 vs EMA50 1,412.85",
+      "ema50_above_ema200": "EMA50 1,412.85 vs EMA200 1,411.11",
+      "rsi_above_50": "RSI(14) 32.08 vs 50",
+      "macd_bullish": "MACD -19.91 vs signal -14.21",
+      "adx_trending_up": "ADX(14) 26.93 vs 20, +DI 8.09 vs -DI 24.04",
+      "price_above_vwap20": "Close 1,351.00 vs 20d VWAP 1,398.41",
+      "price_above_bb_mid": "Close 1,351.00 vs BB mid 1,404.33"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -662,7 +662,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "1/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -675,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 22.57 = 1.7% of price",
-        "rsi_extreme": "RSI(14) 35.3",
-        "below_ema200": "Close 1,366.00 vs EMA200 1,411.72",
-        "extended_above_ema20": "Close 1,366.00 vs EMA20 1,403.83 (-2.7%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 1,366.00 vs 52w low 1,165.70"
+        "atr_high": "ATR 22.26 = 1.6% of price",
+        "rsi_extreme": "RSI(14) 32.1",
+        "below_ema200": "Close 1,351.00 vs EMA200 1,411.11",
+        "extended_above_ema20": "Close 1,351.00 vs EMA20 1,398.80 (-3.4%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 1,351.00 vs 52w low 1,165.70"
       },
       "conditions_on": [
         "below_ema200"
@@ -692,7 +692,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": true,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -705,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:10.667825+00:00"
+  "updated_at": "2026-09-15T14:58:35.538328+00:00"
 }

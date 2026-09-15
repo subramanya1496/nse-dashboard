@@ -3,35 +3,30 @@
   "name": "Zensar Technologies",
   "sector": "IT",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 425.25,
-    "prev_close": 427.4,
-    "change_pct": -0.5030416471689231,
-    "ema20": 461.2786935215871,
-    "ema50": 478.3348209920672,
-    "ema200": 560.090688297064,
-    "rsi14": 28.323569575343953,
-    "macd": -15.313363821695816,
-    "macd_signal": -11.263782723303477,
-    "atr14": 14.450115120858694,
-    "adx14": 21.958078581410597,
-    "adx_pos": 10.973403641485413,
-    "adx_neg": 30.986065824672526,
-    "bb_high": 500.56216455628487,
-    "bb_low": 428.64283544371506,
-    "bb_mid": 464.60249999999996,
-    "vwap20": 464.06788237855653,
+    "date": "2026-09-15",
+    "close": 440.2,
+    "prev_close": 425.25,
+    "change_pct": 3.5155790711346238,
+    "ema20": 459.27119890048357,
+    "ema50": 476.8393378159077,
+    "ema200": 558.897746124954,
+    "rsi14": 37.919544725751045,
+    "macd": -15.052572776735872,
+    "macd_signal": -12.021540733989957,
+    "atr14": 17.321535469368786,
+    "adx14": 20.92886442346234,
+    "adx_pos": 27.923004155688663,
+    "adx_neg": 24.00306357002389,
+    "bb_high": 497.42896017422294,
+    "bb_low": 426.72103982577704,
+    "bb_mid": 462.075,
+    "vwap20": 453.3337412247946,
     "high_52w": 868.95,
     "low_52w": 421.0,
-    "volume": 980587.0,
-    "avg_volume20": 724979.2
+    "volume": 42017111.0,
+    "avg_volume20": 2802802.4
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 558.4,
-      "ema50": 610.93
-    },
     {
       "date": "2026-03-20",
       "close": 564.9,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 425.25,
       "ema50": 478.33
+    },
+    {
+      "date": "2026-09-15",
+      "close": 440.2,
+      "ema50": 476.84
     }
   ],
   "flags": {
@@ -635,22 +635,24 @@
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 425.25 vs EMA20 461.28",
-      "ema20_above_ema50": "EMA20 461.28 vs EMA50 478.33",
-      "ema50_above_ema200": "EMA50 478.33 vs EMA200 560.09",
-      "rsi_above_50": "RSI(14) 28.32 vs 50",
-      "macd_bullish": "MACD -15.31 vs signal -11.26",
-      "adx_trending_up": "ADX(14) 21.96 vs 20, +DI 10.97 vs -DI 30.99",
-      "price_above_vwap20": "Close 425.25 vs 20d VWAP 464.07",
-      "price_above_bb_mid": "Close 425.25 vs BB mid 464.60"
+      "price_above_ema20": "Close 440.20 vs EMA20 459.27",
+      "ema20_above_ema50": "EMA20 459.27 vs EMA50 476.84",
+      "ema50_above_ema200": "EMA50 476.84 vs EMA200 558.90",
+      "rsi_above_50": "RSI(14) 37.92 vs 50",
+      "macd_bullish": "MACD -15.05 vs signal -12.02",
+      "adx_trending_up": "ADX(14) 20.93 vs 20, +DI 27.92 vs -DI 24.00",
+      "price_above_vwap20": "Close 440.20 vs 20d VWAP 453.33",
+      "price_above_bb_mid": "Close 440.20 vs BB mid 462.07"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "adx_trending_up"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +675,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 14.45 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 28.3",
-        "below_ema200": "Close 425.25 vs EMA200 560.09",
-        "extended_above_ema20": "Close 425.25 vs EMA20 461.28 (-7.8%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 425.25 vs 52w low 421.00"
+        "atr_high": "ATR 17.32 = 3.9% of price",
+        "rsi_extreme": "RSI(14) 37.9",
+        "below_ema200": "Close 440.20 vs EMA200 558.90",
+        "extended_above_ema20": "Close 440.20 vs EMA20 459.27 (-4.2%)",
+        "large_day_move": "Day change +3.5%",
+        "near_52w_low": "Close 440.20 vs 52w low 421.00"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +693,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:23:35.903414+00:00"
+  "updated_at": "2026-09-15T15:00:00.915341+00:00"
 }

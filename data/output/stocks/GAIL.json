@@ -3,35 +3,30 @@
   "name": "GAIL (India) Ltd",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 173.62,
-    "prev_close": 174.49,
-    "change_pct": -0.49859590807496385,
-    "ema20": 174.18096514101651,
-    "ema50": 173.20331472522287,
-    "ema200": 170.22205271650589,
-    "rsi14": 48.95228580387007,
-    "macd": 0.16764435189759297,
-    "macd_signal": 0.15022156966058509,
-    "atr14": 3.279381348518284,
-    "adx14": 17.417776282520705,
-    "adx_pos": 22.59490544906504,
-    "adx_neg": 12.747381302810593,
-    "bb_high": 176.82078799527014,
-    "bb_low": 170.70321200472986,
-    "bb_mid": 173.762,
-    "vwap20": 173.62980540930442,
+    "date": "2026-09-15",
+    "close": 170.88,
+    "prev_close": 173.62,
+    "change_pct": -1.5781591982490548,
+    "ema20": 173.86658750853877,
+    "ema50": 173.11220434384157,
+    "ema200": 170.22859945564514,
+    "rsi14": 43.49659806185998,
+    "macd": -0.1147589763821486,
+    "macd_signal": 0.09722546045203835,
+    "atr14": 3.3372826807669784,
+    "adx14": 16.53111807385111,
+    "adx_pos": 20.61696684863015,
+    "adx_neg": 18.651740303474217,
+    "bb_high": 176.9336515432395,
+    "bb_low": 170.46834845676048,
+    "bb_mid": 173.701,
+    "vwap20": 173.56032792867472,
     "high_52w": 186.87,
     "low_52w": 134.36,
-    "volume": 6770227.0,
-    "avg_volume20": 6385087.75
+    "volume": 6202446.0,
+    "avg_volume20": 6488575.1
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 144.27,
-      "ema50": 160.73
-    },
     {
       "date": "2026-03-20",
       "close": 142.87,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 173.62,
       "ema50": 173.2
+    },
+    {
+      "date": "2026-09-15",
+      "close": 170.88,
+      "ema50": 173.11
     }
   ],
   "flags": {
@@ -634,36 +634,35 @@
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 173.62 vs EMA20 174.18",
-      "ema20_above_ema50": "EMA20 174.18 vs EMA50 173.20",
-      "ema50_above_ema200": "EMA50 173.20 vs EMA200 170.22",
-      "rsi_above_50": "RSI(14) 48.95 vs 50",
-      "macd_bullish": "MACD 0.17 vs signal 0.15",
-      "adx_trending_up": "ADX(14) 17.42 vs 20, +DI 22.59 vs -DI 12.75",
-      "price_above_vwap20": "Close 173.62 vs 20d VWAP 173.63",
-      "price_above_bb_mid": "Close 173.62 vs BB mid 173.76"
+      "price_above_ema20": "Close 170.88 vs EMA20 173.87",
+      "ema20_above_ema50": "EMA20 173.87 vs EMA50 173.11",
+      "ema50_above_ema200": "EMA50 173.11 vs EMA200 170.23",
+      "rsi_above_50": "RSI(14) 43.50 vs 50",
+      "macd_bullish": "MACD -0.11 vs signal 0.10",
+      "adx_trending_up": "ADX(14) 16.53 vs 20, +DI 20.62 vs -DI 18.65",
+      "price_above_vwap20": "Close 170.88 vs 20d VWAP 173.56",
+      "price_above_bb_mid": "Close 170.88 vs BB mid 173.70"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "macd_bullish"
+      "ema50_above_ema200"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags",
+        "2/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -677,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.28 = 1.9% of price",
-        "rsi_extreme": "RSI(14) 49.0",
-        "below_ema200": "Close 173.62 vs EMA200 170.22",
-        "extended_above_ema20": "Close 173.62 vs EMA20 174.18 (-0.3%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 173.62 vs 52w low 134.36"
+        "atr_high": "ATR 3.34 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 43.5",
+        "below_ema200": "Close 170.88 vs EMA200 170.23",
+        "extended_above_ema20": "Close 170.88 vs EMA20 173.87 (-1.7%)",
+        "large_day_move": "Day change -1.6%",
+        "near_52w_low": "Close 170.88 vs 52w low 134.36"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -696,8 +695,8 @@
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "bullish",
-      "weekly": "bullish",
+      "daily": "neutral",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:21.502358+00:00"
+  "updated_at": "2026-09-15T14:58:46.472592+00:00"
 }

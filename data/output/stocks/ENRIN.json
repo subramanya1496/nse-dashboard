@@ -3,35 +3,30 @@
   "name": "Siemens Energy India",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 3181.3,
-    "prev_close": 3179.1,
-    "change_pct": 0.06920197540185187,
-    "ema20": 3255.0146456264038,
-    "ema50": 3329.1982150975505,
-    "ema200": 3192.8303438896833,
-    "rsi14": 40.64230646752872,
-    "macd": -70.23871252312574,
-    "macd_signal": -62.63416252236419,
-    "atr14": 99.05566198398263,
-    "adx14": 17.249413361716943,
-    "adx_pos": 16.721499383288393,
-    "adx_neg": 23.44995315109349,
-    "bb_high": 3608.7211143202017,
-    "bb_low": 2982.4188856797978,
-    "bb_mid": 3295.5699999999997,
-    "vwap20": 3295.9660913118105,
+    "date": "2026-09-15",
+    "close": 3028.7,
+    "prev_close": 3181.3,
+    "change_pct": -4.796781190079538,
+    "ema20": 3233.4608698524603,
+    "ema50": 3317.4139713682353,
+    "ema200": 3191.1972061395372,
+    "rsi14": 31.780618127373927,
+    "macd": -79.4911927722519,
+    "macd_signal": -66.00556857234174,
+    "atr14": 105.55168612798387,
+    "adx14": 18.287511688797082,
+    "adx_pos": 14.571513506060645,
+    "adx_neg": 28.14941716062466,
+    "bb_high": 3566.28990236001,
+    "bb_low": 2967.1500976399907,
+    "bb_mid": 3266.7200000000003,
+    "vwap20": 3277.7303333309583,
     "high_52w": 3968.0,
     "low_52w": 2115.0,
-    "volume": 209741.0,
-    "avg_volume20": 406192.8
+    "volume": 304976.0,
+    "avg_volume20": 407026.9
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 2755.2,
-      "ema50": 2775.23
-    },
     {
       "date": "2026-03-20",
       "close": 2791.2,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 3181.3,
       "ema50": 3329.2
+    },
+    {
+      "date": "2026-09-15",
+      "close": 3028.7,
+      "ema50": 3317.41
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,181.30 vs EMA20 3,255.01",
-      "ema20_above_ema50": "EMA20 3,255.01 vs EMA50 3,329.20",
-      "ema50_above_ema200": "EMA50 3,329.20 vs EMA200 3,192.83",
-      "rsi_above_50": "RSI(14) 40.64 vs 50",
-      "macd_bullish": "MACD -70.24 vs signal -62.63",
-      "adx_trending_up": "ADX(14) 17.25 vs 20, +DI 16.72 vs -DI 23.45",
-      "price_above_vwap20": "Close 3,181.30 vs 20d VWAP 3,295.97",
-      "price_above_bb_mid": "Close 3,181.30 vs BB mid 3,295.57"
+      "price_above_ema20": "Close 3,028.70 vs EMA20 3,233.46",
+      "ema20_above_ema50": "EMA20 3,233.46 vs EMA50 3,317.41",
+      "ema50_above_ema200": "EMA50 3,317.41 vs EMA200 3,191.20",
+      "rsi_above_50": "RSI(14) 31.78 vs 50",
+      "macd_bullish": "MACD -79.49 vs signal -66.01",
+      "adx_trending_up": "ADX(14) 18.29 vs 20, +DI 14.57 vs -DI 28.15",
+      "price_above_vwap20": "Close 3,028.70 vs 20d VWAP 3,277.73",
+      "price_above_bb_mid": "Close 3,028.70 vs BB mid 3,266.72"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -670,22 +670,23 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 99.06 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 40.6",
-        "below_ema200": "Close 3,181.30 vs EMA200 3,192.83",
-        "extended_above_ema20": "Close 3,181.30 vs EMA20 3,255.01 (-2.3%)",
-        "large_day_move": "Day change +0.1%",
-        "near_52w_low": "Close 3,181.30 vs 52w low 2,115.00"
+        "atr_high": "ATR 105.55 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 31.8",
+        "below_ema200": "Close 3,028.70 vs EMA200 3,191.20",
+        "extended_above_ema20": "Close 3,028.70 vs EMA20 3,233.46 (-6.3%)",
+        "large_day_move": "Day change -4.8%",
+        "near_52w_low": "Close 3,028.70 vs 52w low 2,115.00"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "large_day_move"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:19.075677+00:00"
+  "updated_at": "2026-09-15T14:58:43.985606+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Shree Cement",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 22570.0,
-    "prev_close": 22785.0,
-    "change_pct": -0.9436032477507131,
-    "ema20": 23864.012139389346,
-    "ema50": 24712.45740916657,
-    "ema200": 25764.37477123887,
-    "rsi14": 28.538284201586066,
-    "macd": -706.6514743720945,
-    "macd_signal": -628.0071525692919,
-    "atr14": 508.03080311615577,
-    "adx14": 33.52106892905057,
-    "adx_pos": 13.806345588736246,
-    "adx_neg": 40.96587172974557,
-    "bb_high": 25156.50152788299,
-    "bb_low": 22538.49847211701,
-    "bb_mid": 23847.5,
-    "vwap20": 24123.080432640694,
+    "date": "2026-09-15",
+    "close": 21905.0,
+    "prev_close": 22570.0,
+    "change_pct": -2.9463890119627822,
+    "ema20": 23677.4395546856,
+    "ema50": 24602.361040179647,
+    "ema200": 25725.973032221566,
+    "rsi14": 24.21191436119689,
+    "macd": -775.3540795254739,
+    "macd_signal": -657.4765379605283,
+    "atr14": 525.6714600364304,
+    "adx14": 35.07875333413194,
+    "adx_pos": 12.389954266691243,
+    "adx_neg": 43.08163740519083,
+    "bb_high": 25234.040183921363,
+    "bb_low": 22197.959816078637,
+    "bb_mid": 23716.0,
+    "vwap20": 24054.45118679978,
     "high_52w": 30660.0,
-    "low_52w": 22370.0,
-    "volume": 16171.0,
-    "avg_volume20": 24933.7
+    "low_52w": 21905.0,
+    "volume": 12171.0,
+    "avg_volume20": 24480.4
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 23335.0,
-      "ema50": 25689.81
-    },
     {
       "date": "2026-03-20",
       "close": 23535.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 22570.0,
       "ema50": 24712.46
+    },
+    {
+      "date": "2026-09-15",
+      "close": 21905.0,
+      "ema50": 24602.36
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 22,570.00 vs EMA20 23,864.01",
-      "ema20_above_ema50": "EMA20 23,864.01 vs EMA50 24,712.46",
-      "ema50_above_ema200": "EMA50 24,712.46 vs EMA200 25,764.37",
-      "rsi_above_50": "RSI(14) 28.54 vs 50",
-      "macd_bullish": "MACD -706.65 vs signal -628.01",
-      "adx_trending_up": "ADX(14) 33.52 vs 20, +DI 13.81 vs -DI 40.97",
-      "price_above_vwap20": "Close 22,570.00 vs 20d VWAP 24,123.08",
-      "price_above_bb_mid": "Close 22,570.00 vs BB mid 23,847.50"
+      "price_above_ema20": "Close 21,905.00 vs EMA20 23,677.44",
+      "ema20_above_ema50": "EMA20 23,677.44 vs EMA50 24,602.36",
+      "ema50_above_ema200": "EMA50 24,602.36 vs EMA200 25,725.97",
+      "rsi_above_50": "RSI(14) 24.21 vs 50",
+      "macd_bullish": "MACD -775.35 vs signal -657.48",
+      "adx_trending_up": "ADX(14) 35.08 vs 20, +DI 12.39 vs -DI 43.08",
+      "price_above_vwap20": "Close 21,905.00 vs 20d VWAP 24,054.45",
+      "price_above_bb_mid": "Close 21,905.00 vs BB mid 23,716.00"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -665,25 +665,26 @@
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 508.03 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 28.5",
-        "below_ema200": "Close 22,570.00 vs EMA200 25,764.37",
-        "extended_above_ema20": "Close 22,570.00 vs EMA20 23,864.01 (-5.4%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 22,570.00 vs 52w low 22,370.00"
+        "atr_high": "ATR 525.67 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 24.2",
+        "below_ema200": "Close 21,905.00 vs EMA200 25,725.97",
+        "extended_above_ema20": "Close 21,905.00 vs EMA20 23,677.44 (-7.5%)",
+        "large_day_move": "Day change -2.9%",
+        "near_52w_low": "Close 21,905.00 vs 52w low 21,905.00"
       },
       "conditions_on": [
+        "rsi_extreme",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:23:16.453528+00:00"
+  "updated_at": "2026-09-15T14:59:41.292701+00:00"
 }

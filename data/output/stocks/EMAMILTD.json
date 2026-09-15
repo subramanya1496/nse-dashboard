@@ -3,35 +3,30 @@
   "name": "Emami Ltd",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 363.8,
-    "prev_close": 370.85,
-    "change_pct": -1.9010381555885156,
-    "ema20": 379.6137297531648,
-    "ema50": 393.26540280103393,
-    "ema200": 440.35685877832515,
-    "rsi14": 35.58320560186681,
-    "macd": -10.309223845916108,
-    "macd_signal": -9.144301764909716,
-    "atr14": 10.699992311363966,
-    "adx14": 25.514236828329082,
-    "adx_pos": 10.895507732080947,
-    "adx_neg": 24.770009554655307,
-    "bb_high": 417.4594121222705,
-    "bb_low": 349.5355878777295,
-    "bb_mid": 383.4975,
-    "vwap20": 379.34688082378096,
+    "date": "2026-09-15",
+    "close": 373.7,
+    "prev_close": 363.8,
+    "change_pct": 2.7212754260582677,
+    "ema20": 379.05051739572053,
+    "ema50": 392.4981321029542,
+    "ema200": 439.6936064521727,
+    "rsi14": 43.579398341945826,
+    "macd": -9.496234222520684,
+    "macd_signal": -9.214688256431911,
+    "atr14": 11.282135717695109,
+    "adx14": 24.454645675601675,
+    "adx_pos": 17.60408861062753,
+    "adx_neg": 21.813916008824734,
+    "bb_high": 414.7432022953732,
+    "bb_low": 349.1717977046269,
+    "bb_mid": 381.95750000000004,
+    "vwap20": 378.75214970114405,
     "high_52w": 614.0,
     "low_52w": 361.15,
-    "volume": 801488.0,
-    "avg_volume20": 1560931.1
+    "volume": 2883728.0,
+    "avg_volume20": 1685067.95
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 405.7,
-      "ema50": 472.52
-    },
     {
       "date": "2026-03-20",
       "close": 402.75,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 363.8,
       "ema50": 393.27
+    },
+    {
+      "date": "2026-09-15",
+      "close": 373.7,
+      "ema50": 392.5
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 363.80 vs EMA20 379.61",
-      "ema20_above_ema50": "EMA20 379.61 vs EMA50 393.27",
-      "ema50_above_ema200": "EMA50 393.27 vs EMA200 440.36",
-      "rsi_above_50": "RSI(14) 35.58 vs 50",
-      "macd_bullish": "MACD -10.31 vs signal -9.14",
-      "adx_trending_up": "ADX(14) 25.51 vs 20, +DI 10.90 vs -DI 24.77",
-      "price_above_vwap20": "Close 363.80 vs 20d VWAP 379.35",
-      "price_above_bb_mid": "Close 363.80 vs BB mid 383.50"
+      "price_above_ema20": "Close 373.70 vs EMA20 379.05",
+      "ema20_above_ema50": "EMA20 379.05 vs EMA50 392.50",
+      "ema50_above_ema200": "EMA50 392.50 vs EMA200 439.69",
+      "rsi_above_50": "RSI(14) 43.58 vs 50",
+      "macd_bullish": "MACD -9.50 vs signal -9.21",
+      "adx_trending_up": "ADX(14) 24.45 vs 20, +DI 17.60 vs -DI 21.81",
+      "price_above_vwap20": "Close 373.70 vs 20d VWAP 378.75",
+      "price_above_bb_mid": "Close 373.70 vs BB mid 381.96"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 10.70 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 35.6",
-        "below_ema200": "Close 363.80 vs EMA200 440.36",
-        "extended_above_ema20": "Close 363.80 vs EMA20 379.61 (-4.2%)",
-        "large_day_move": "Day change -1.9%",
-        "near_52w_low": "Close 363.80 vs 52w low 361.15"
+        "atr_high": "ATR 11.28 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 43.6",
+        "below_ema200": "Close 373.70 vs EMA200 439.69",
+        "extended_above_ema20": "Close 373.70 vs EMA20 379.05 (-1.4%)",
+        "large_day_move": "Day change +2.7%",
+        "near_52w_low": "Close 373.70 vs 52w low 361.15"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:18.674185+00:00"
+  "updated_at": "2026-09-15T14:58:43.555519+00:00"
 }

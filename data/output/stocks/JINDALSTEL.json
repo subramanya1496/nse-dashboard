@@ -3,35 +3,30 @@
   "name": "Jindal Steel & Power",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 1120.5,
-    "prev_close": 1137.0,
-    "change_pct": -1.4511873350923483,
-    "ema20": 1139.334702467332,
-    "ema50": 1125.716699145958,
-    "ema200": 1112.514060410563,
-    "rsi14": 46.17632892434882,
-    "macd": 8.801157001356614,
-    "macd_signal": 14.918946980475802,
-    "atr14": 31.04956839456127,
-    "adx14": 25.41123341077898,
-    "adx_pos": 13.340800994152694,
-    "adx_neg": 26.232510061777063,
-    "bb_high": 1193.3811627581072,
-    "bb_low": 1098.3688372418928,
-    "bb_mid": 1145.875,
-    "vwap20": 1145.1594617323417,
+    "date": "2026-09-15",
+    "close": 1095.0,
+    "prev_close": 1120.5,
+    "change_pct": -2.2757697456492636,
+    "ema20": 1135.1123498513955,
+    "ema50": 1124.5121227088616,
+    "ema200": 1112.3397911527463,
+    "rsi14": 40.347593108575225,
+    "macd": 4.278927028138924,
+    "macd_signal": 12.790942990008427,
+    "atr14": 30.974599223521178,
+    "adx14": 25.923057911968822,
+    "adx_pos": 12.41786957878756,
+    "adx_neg": 24.417715908824206,
+    "bb_high": 1195.7388216674324,
+    "bb_low": 1093.901178332568,
+    "bb_mid": 1144.8200000000002,
+    "vwap20": 1144.4249819781958,
     "high_52w": 1306.2,
     "low_52w": 977.1,
-    "volume": 549857.0,
-    "avg_volume20": 787090.45
+    "volume": 816410.0,
+    "avg_volume20": 795702.8
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 1138.1,
-      "ema50": 1152.16
-    },
     {
       "date": "2026-03-20",
       "close": 1186.5,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 1120.5,
       "ema50": 1125.72
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1095.0,
+      "ema50": 1124.51
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,120.50 vs EMA20 1,139.33",
-      "ema20_above_ema50": "EMA20 1,139.33 vs EMA50 1,125.72",
-      "ema50_above_ema200": "EMA50 1,125.72 vs EMA200 1,112.51",
-      "rsi_above_50": "RSI(14) 46.18 vs 50",
-      "macd_bullish": "MACD 8.80 vs signal 14.92",
-      "adx_trending_up": "ADX(14) 25.41 vs 20, +DI 13.34 vs -DI 26.23",
-      "price_above_vwap20": "Close 1,120.50 vs 20d VWAP 1,145.16",
-      "price_above_bb_mid": "Close 1,120.50 vs BB mid 1,145.88"
+      "price_above_ema20": "Close 1,095.00 vs EMA20 1,135.11",
+      "ema20_above_ema50": "EMA20 1,135.11 vs EMA50 1,124.51",
+      "ema50_above_ema200": "EMA50 1,124.51 vs EMA200 1,112.34",
+      "rsi_above_50": "RSI(14) 40.35 vs 50",
+      "macd_bullish": "MACD 4.28 vs signal 12.79",
+      "adx_trending_up": "ADX(14) 25.92 vs 20, +DI 12.42 vs -DI 24.42",
+      "price_above_vwap20": "Close 1,095.00 vs 20d VWAP 1,144.42",
+      "price_above_bb_mid": "Close 1,095.00 vs BB mid 1,144.82"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,39 +662,39 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: near buy zone"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 31.05 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 46.2",
-        "below_ema200": "Close 1,120.50 vs EMA200 1,112.51",
-        "extended_above_ema20": "Close 1,120.50 vs EMA20 1,139.33 (-1.7%)",
-        "large_day_move": "Day change -1.5%",
-        "near_52w_low": "Close 1,120.50 vs 52w low 977.10"
+        "atr_high": "ATR 30.97 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 40.3",
+        "below_ema200": "Close 1,095.00 vs EMA200 1,112.34",
+        "extended_above_ema20": "Close 1,095.00 vs EMA20 1,135.11 (-3.5%)",
+        "large_day_move": "Day change -2.3%",
+        "near_52w_low": "Close 1,095.00 vs 52w low 977.10"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
@@ -706,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:39.899601+00:00"
+  "updated_at": "2026-09-15T14:59:04.883660+00:00"
 }

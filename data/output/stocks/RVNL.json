@@ -3,35 +3,30 @@
   "name": "Rail Vikas Nigam",
   "sector": "Railways",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 204.9,
-    "prev_close": 205.6,
-    "change_pct": -0.3404669260700334,
-    "ema20": 213.73973335341074,
-    "ema50": 223.83073031913798,
-    "ema200": 268.58945391386504,
-    "rsi14": 31.47352270590237,
-    "macd": -5.751730945542278,
-    "macd_signal": -5.154283373008121,
-    "atr14": 5.062975302685872,
-    "adx14": 23.366865609455328,
-    "adx_pos": 18.361816633270376,
-    "adx_neg": 30.910590881037393,
-    "bb_high": 230.96243341121678,
-    "bb_low": 199.3505665887832,
-    "bb_mid": 215.1565,
-    "vwap20": 215.35326432626974,
+    "date": "2026-09-15",
+    "close": 199.0,
+    "prev_close": 204.9,
+    "change_pct": -2.87945339189849,
+    "ema20": 212.33594922451448,
+    "ema50": 222.85697618897572,
+    "ema200": 267.89702153661267,
+    "rsi14": 26.40505299388755,
+    "macd": -6.218538851066683,
+    "macd_signal": -5.367134468619833,
+    "atr14": 5.323477066779739,
+    "adx14": 24.068744478472706,
+    "adx_pos": 16.215912195361387,
+    "adx_neg": 32.32975938018586,
+    "bb_high": 229.7352139316675,
+    "bb_low": 197.6277860683325,
+    "bb_mid": 213.6815,
+    "vwap20": 214.42298311628423,
     "high_52w": 400.7,
-    "low_52w": 202.04,
-    "volume": 3816727.0,
-    "avg_volume20": 4411050.85
+    "low_52w": 198.29,
+    "volume": 3967219.0,
+    "avg_volume20": 4493411.55
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 262.35,
-      "ema50": 304.56
-    },
     {
       "date": "2026-03-20",
       "close": 264.55,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 204.9,
       "ema50": 223.83
+    },
+    {
+      "date": "2026-09-15",
+      "close": 199.0,
+      "ema50": 222.86
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 204.90 vs EMA20 213.74",
-      "ema20_above_ema50": "EMA20 213.74 vs EMA50 223.83",
-      "ema50_above_ema200": "EMA50 223.83 vs EMA200 268.59",
-      "rsi_above_50": "RSI(14) 31.47 vs 50",
-      "macd_bullish": "MACD -5.75 vs signal -5.15",
-      "adx_trending_up": "ADX(14) 23.37 vs 20, +DI 18.36 vs -DI 30.91",
-      "price_above_vwap20": "Close 204.90 vs 20d VWAP 215.35",
-      "price_above_bb_mid": "Close 204.90 vs BB mid 215.16"
+      "price_above_ema20": "Close 199.00 vs EMA20 212.34",
+      "ema20_above_ema50": "EMA20 212.34 vs EMA50 222.86",
+      "ema50_above_ema200": "EMA50 222.86 vs EMA200 267.90",
+      "rsi_above_50": "RSI(14) 26.41 vs 50",
+      "macd_bullish": "MACD -6.22 vs signal -5.37",
+      "adx_trending_up": "ADX(14) 24.07 vs 20, +DI 16.22 vs -DI 32.33",
+      "price_above_vwap20": "Close 199.00 vs 20d VWAP 214.42",
+      "price_above_bb_mid": "Close 199.00 vs BB mid 213.68"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -664,7 +664,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -672,18 +672,19 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.06 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 31.5",
-        "below_ema200": "Close 204.90 vs EMA200 268.59",
-        "extended_above_ema20": "Close 204.90 vs EMA20 213.74 (-4.1%)",
-        "large_day_move": "Day change -0.3%",
-        "near_52w_low": "Close 204.90 vs 52w low 202.04"
+        "atr_high": "ATR 5.32 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 26.4",
+        "below_ema200": "Close 199.00 vs EMA200 267.90",
+        "extended_above_ema20": "Close 199.00 vs EMA20 212.34 (-6.3%)",
+        "large_day_move": "Day change -2.9%",
+        "near_52w_low": "Close 199.00 vs 52w low 198.29"
       },
       "conditions_on": [
+        "atr_high",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:23:13.537414+00:00"
+  "updated_at": "2026-09-15T14:59:38.363174+00:00"
 }

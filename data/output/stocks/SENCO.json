@@ -3,35 +3,30 @@
   "name": "Senco Gold Ltd",
   "sector": "Jewellery",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 346.4,
-    "prev_close": 349.9,
-    "change_pct": -1.0002857959416978,
-    "ema20": 357.07950132202257,
-    "ema50": 358.9569278864924,
-    "ema200": 344.0997667453635,
-    "rsi14": 42.93282903538994,
-    "macd": -3.7467193051116965,
-    "macd_signal": -3.7313271647789343,
-    "atr14": 12.98254433256927,
-    "adx14": 13.875218397811425,
-    "adx_pos": 21.96398893338436,
-    "adx_neg": 29.122120305641154,
-    "bb_high": 374.8304438351138,
-    "bb_low": 330.51455616488624,
-    "bb_mid": 352.6725,
-    "vwap20": 355.7240149611604,
+    "date": "2026-09-15",
+    "close": 336.4,
+    "prev_close": 346.4,
+    "change_pct": -2.8868360277136262,
+    "ema20": 355.1100250056395,
+    "ema50": 358.072342479179,
+    "ema200": 344.0231521508823,
+    "rsi14": 38.48843082701485,
+    "macd": -4.930613630624066,
+    "macd_signal": -3.971184457947961,
+    "atr14": 13.18736259452861,
+    "adx14": 14.22799862828191,
+    "adx_pos": 20.07836752825392,
+    "adx_neg": 29.384354009683122,
+    "bb_high": 375.1949495170656,
+    "bb_low": 329.63505048293445,
+    "bb_mid": 352.415,
+    "vwap20": 356.262258483102,
     "high_52w": 430.0,
     "low_52w": 276.0,
-    "volume": 676349.0,
-    "avg_volume20": 993002.3
+    "volume": 504318.0,
+    "avg_volume20": 963202.1
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 291.25,
-      "ema50": 315.16
-    },
     {
       "date": "2026-03-20",
       "close": 295.95,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 346.4,
       "ema50": 358.96
+    },
+    {
+      "date": "2026-09-15",
+      "close": 336.4,
+      "ema50": 358.07
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 346.40 vs EMA20 357.08",
-      "ema20_above_ema50": "EMA20 357.08 vs EMA50 358.96",
-      "ema50_above_ema200": "EMA50 358.96 vs EMA200 344.10",
-      "rsi_above_50": "RSI(14) 42.93 vs 50",
-      "macd_bullish": "MACD -3.75 vs signal -3.73",
-      "adx_trending_up": "ADX(14) 13.88 vs 20, +DI 21.96 vs -DI 29.12",
-      "price_above_vwap20": "Close 346.40 vs 20d VWAP 355.72",
-      "price_above_bb_mid": "Close 346.40 vs BB mid 352.67"
+      "price_above_ema20": "Close 336.40 vs EMA20 355.11",
+      "ema20_above_ema50": "EMA20 355.11 vs EMA50 358.07",
+      "ema50_above_ema200": "EMA50 358.07 vs EMA200 344.02",
+      "rsi_above_50": "RSI(14) 38.49 vs 50",
+      "macd_bullish": "MACD -4.93 vs signal -3.97",
+      "adx_trending_up": "ADX(14) 14.23 vs 20, +DI 20.08 vs -DI 29.38",
+      "price_above_vwap20": "Close 336.40 vs 20d VWAP 356.26",
+      "price_above_bb_mid": "Close 336.40 vs BB mid 352.42"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -668,25 +668,26 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.98 = 3.7% of price",
-        "rsi_extreme": "RSI(14) 42.9",
-        "below_ema200": "Close 346.40 vs EMA200 344.10",
-        "extended_above_ema20": "Close 346.40 vs EMA20 357.08 (-3.0%)",
-        "large_day_move": "Day change -1.0%",
-        "near_52w_low": "Close 346.40 vs 52w low 276.00"
+        "atr_high": "ATR 13.19 = 3.9% of price",
+        "rsi_extreme": "RSI(14) 38.5",
+        "below_ema200": "Close 336.40 vs EMA200 344.02",
+        "extended_above_ema20": "Close 336.40 vs EMA20 355.11 (-5.3%)",
+        "large_day_move": "Day change -2.9%",
+        "near_52w_low": "Close 336.40 vs 52w low 276.00"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:23:16.039512+00:00"
+  "updated_at": "2026-09-15T14:59:40.767695+00:00"
 }

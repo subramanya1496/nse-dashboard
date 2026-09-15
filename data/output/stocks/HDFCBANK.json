@@ -3,35 +3,30 @@
   "name": "HDFC Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 708.25,
-    "prev_close": 693.8,
-    "change_pct": 2.0827327760161496,
-    "ema20": 713.6503833091142,
-    "ema50": 735.6377439322175,
-    "ema200": 815.4290696385594,
-    "rsi14": 43.95040127963346,
-    "macd": -11.76319406513312,
-    "macd_signal": -12.000515872395281,
-    "atr14": 12.702649633313484,
-    "adx14": 23.46706446962484,
-    "adx_pos": 22.62446887110063,
-    "adx_neg": 25.497865417672394,
-    "bb_high": 737.8579345555532,
-    "bb_low": 690.3520654444468,
-    "bb_mid": 714.105,
-    "vwap20": 712.5192761869021,
+    "date": "2026-09-15",
+    "close": 716.55,
+    "prev_close": 708.25,
+    "change_pct": 1.1719025767737317,
+    "ema20": 713.9265372796748,
+    "ema50": 734.8892049544835,
+    "ema200": 814.4451982988722,
+    "rsi14": 48.543339063571395,
+    "macd": -10.123877193610838,
+    "macd_signal": -11.625188136638394,
+    "atr14": 13.402460373791092,
+    "adx14": 22.990891604261602,
+    "adx_pos": 31.503166214304024,
+    "adx_neg": 22.440313958080218,
+    "bb_high": 736.2745002413213,
+    "bb_low": 690.6904997586786,
+    "bb_mid": 713.4825,
+    "vwap20": 712.8290460958403,
     "high_52w": 1020.5,
     "low_52w": 681.9,
-    "volume": 31411934.0,
-    "avg_volume20": 27117177.15
+    "volume": 50387632.0,
+    "avg_volume20": 28895372.65
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 798.2,
-      "ema50": 899.45
-    },
     {
       "date": "2026-03-20",
       "close": 780.45,
@@ -626,42 +621,52 @@
       "date": "2026-09-11",
       "close": 708.25,
       "ema50": 735.64
+    },
+    {
+      "date": "2026-09-15",
+      "close": 716.55,
+      "ema50": 734.89
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": true,
-      "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "adx_trending_up": true,
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 708.25 vs EMA20 713.65",
-      "ema20_above_ema50": "EMA20 713.65 vs EMA50 735.64",
-      "ema50_above_ema200": "EMA50 735.64 vs EMA200 815.43",
-      "rsi_above_50": "RSI(14) 43.95 vs 50",
-      "macd_bullish": "MACD -11.76 vs signal -12.00",
-      "adx_trending_up": "ADX(14) 23.47 vs 20, +DI 22.62 vs -DI 25.50",
-      "price_above_vwap20": "Close 708.25 vs 20d VWAP 712.52",
-      "price_above_bb_mid": "Close 708.25 vs BB mid 714.11"
+      "price_above_ema20": "Close 716.55 vs EMA20 713.93",
+      "ema20_above_ema50": "EMA20 713.93 vs EMA50 734.89",
+      "ema50_above_ema200": "EMA50 734.89 vs EMA200 814.45",
+      "rsi_above_50": "RSI(14) 48.54 vs 50",
+      "macd_bullish": "MACD -10.12 vs signal -11.63",
+      "adx_trending_up": "ADX(14) 22.99 vs 20, +DI 31.50 vs -DI 22.44",
+      "price_above_vwap20": "Close 716.55 vs 20d VWAP 712.83",
+      "price_above_bb_mid": "Close 716.55 vs BB mid 713.48"
     },
     "flags_on": [
-      "macd_bullish"
+      "price_above_ema20",
+      "macd_bullish",
+      "adx_trending_up",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "1/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -671,27 +676,26 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": true
+        "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.70 = 1.8% of price",
-        "rsi_extreme": "RSI(14) 44.0",
-        "below_ema200": "Close 708.25 vs EMA200 815.43",
-        "extended_above_ema20": "Close 708.25 vs EMA20 713.65 (-0.8%)",
-        "large_day_move": "Day change +2.1%",
-        "near_52w_low": "Close 708.25 vs 52w low 681.90"
+        "atr_high": "ATR 13.40 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 48.5",
+        "below_ema200": "Close 716.55 vs EMA200 814.45",
+        "extended_above_ema20": "Close 716.55 vs EMA20 713.93 (+0.4%)",
+        "large_day_move": "Day change +1.2%",
+        "near_52w_low": "Close 716.55 vs 52w low 681.90"
       },
       "conditions_on": [
-        "below_ema200",
-        "near_52w_low"
+        "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -705,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:27.658653+00:00"
+  "updated_at": "2026-09-15T14:58:52.355939+00:00"
 }

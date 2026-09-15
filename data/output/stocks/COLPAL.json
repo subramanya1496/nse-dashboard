@@ -3,35 +3,30 @@
   "name": "Colgate-Palmolive (India)",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 1797.4,
-    "prev_close": 1808.5,
-    "change_pct": -0.6137683162842084,
-    "ema20": 1865.7461643459806,
-    "ema50": 1940.0872670168733,
-    "ema200": 2063.3996976160824,
-    "rsi14": 31.575974506014077,
-    "macd": -50.25381884121953,
-    "macd_signal": -49.36641830687644,
-    "atr14": 36.128185167326144,
-    "adx14": 33.173508193520554,
-    "adx_pos": 10.455546527019104,
-    "adx_neg": 28.28705197007434,
-    "bb_high": 1941.8621210350493,
-    "bb_low": 1775.2078789649513,
-    "bb_mid": 1858.5350000000003,
-    "vwap20": 1862.8081316069502,
-    "high_52w": 2446.0,
+    "date": "2026-09-15",
+    "close": 1820.3,
+    "prev_close": 1797.4,
+    "change_pct": 1.2740625347724415,
+    "ema20": 1861.417958217792,
+    "ema50": 1935.3897271338587,
+    "ema200": 2060.980795152241,
+    "rsi14": 37.3553891300747,
+    "macd": -47.74853833384577,
+    "macd_signal": -49.04284231227031,
+    "atr14": 37.67617194108856,
+    "adx14": 31.96128698844344,
+    "adx_pos": 18.16346755374966,
+    "adx_neg": 25.18734442161646,
+    "bb_high": 1920.6661020253553,
+    "bb_low": 1782.0338979746446,
+    "bb_mid": 1851.35,
+    "vwap20": 1857.5399917475788,
+    "high_52w": 2417.6,
     "low_52w": 1782.0,
-    "volume": 280878.0,
-    "avg_volume20": 381444.9
+    "volume": 670867.0,
+    "avg_volume20": 408688.15
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 1889.7,
-      "ema50": 2116.38
-    },
     {
       "date": "2026-03-20",
       "close": 1896.1,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 1797.4,
       "ema50": 1940.09
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1820.3,
+      "ema50": 1935.39
     }
   ],
   "flags": {
@@ -634,23 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,797.40 vs EMA20 1,865.75",
-      "ema20_above_ema50": "EMA20 1,865.75 vs EMA50 1,940.09",
-      "ema50_above_ema200": "EMA50 1,940.09 vs EMA200 2,063.40",
-      "rsi_above_50": "RSI(14) 31.58 vs 50",
-      "macd_bullish": "MACD -50.25 vs signal -49.37",
-      "adx_trending_up": "ADX(14) 33.17 vs 20, +DI 10.46 vs -DI 28.29",
-      "price_above_vwap20": "Close 1,797.40 vs 20d VWAP 1,862.81",
-      "price_above_bb_mid": "Close 1,797.40 vs BB mid 1,858.54"
+      "price_above_ema20": "Close 1,820.30 vs EMA20 1,861.42",
+      "ema20_above_ema50": "EMA20 1,861.42 vs EMA50 1,935.39",
+      "ema50_above_ema200": "EMA50 1,935.39 vs EMA200 2,060.98",
+      "rsi_above_50": "RSI(14) 37.36 vs 50",
+      "macd_bullish": "MACD -47.75 vs signal -49.04",
+      "adx_trending_up": "ADX(14) 31.96 vs 20, +DI 18.16 vs -DI 25.19",
+      "price_above_vwap20": "Close 1,820.30 vs 20d VWAP 1,857.54",
+      "price_above_bb_mid": "Close 1,820.30 vs BB mid 1,851.35"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "macd_bullish"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +675,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 36.13 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 31.6",
-        "below_ema200": "Close 1,797.40 vs EMA200 2,063.40",
-        "extended_above_ema20": "Close 1,797.40 vs EMA20 1,865.75 (-3.7%)",
-        "large_day_move": "Day change -0.6%",
-        "near_52w_low": "Close 1,797.40 vs 52w low 1,782.00"
+        "atr_high": "ATR 37.68 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 37.4",
+        "below_ema200": "Close 1,820.30 vs EMA200 2,060.98",
+        "extended_above_ema20": "Close 1,820.30 vs EMA20 1,861.42 (-2.2%)",
+        "large_day_move": "Day change +1.3%",
+        "near_52w_low": "Close 1,820.30 vs 52w low 1,782.00"
       },
       "conditions_on": [
         "below_ema200",
@@ -689,7 +692,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:22:12.319063+00:00"
+  "updated_at": "2026-09-15T14:58:37.173444+00:00"
 }

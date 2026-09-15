@@ -3,35 +3,30 @@
   "name": "Astra Microwave Products",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-09-11",
-    "close": 1680.6,
-    "prev_close": 1696.8,
-    "change_pct": -0.9547383309759575,
-    "ema20": 1704.6765026566143,
-    "ema50": 1680.0993198115716,
-    "ema200": 1381.0733258201694,
-    "rsi14": 46.88108979446796,
-    "macd": -6.569091629442028,
-    "macd_signal": -8.337548269087494,
-    "atr14": 62.225464958677364,
-    "adx14": 10.897245656243031,
-    "adx_pos": 17.77490341083597,
-    "adx_neg": 17.148158143123275,
-    "bb_high": 1756.6577157601162,
-    "bb_low": 1636.182284239884,
-    "bb_mid": 1696.42,
-    "vwap20": 1709.1685419061669,
+    "date": "2026-09-15",
+    "close": 1593.8,
+    "prev_close": 1680.6,
+    "change_pct": -5.164822087349753,
+    "ema20": 1694.1168357369365,
+    "ema50": 1676.7150327601375,
+    "ema200": 1383.190009145342,
+    "rsi14": 38.841013876739325,
+    "macd": -14.567344394307383,
+    "macd_signal": -9.58350749413147,
+    "atr14": 65.45936031877184,
+    "adx14": 11.517668109682946,
+    "adx_pos": 15.689856065259953,
+    "adx_neg": 23.33146351436735,
+    "bb_high": 1765.478315638404,
+    "bb_low": 1616.0316843615958,
+    "bb_mid": 1690.7549999999999,
+    "vwap20": 1702.3709719342578,
     "high_52w": 1960.0,
     "low_52w": 851.0,
-    "volume": 200377.0,
-    "avg_volume20": 331506.1
+    "volume": 496962.0,
+    "avg_volume20": 343792.8
   },
   "price_history": [
-    {
-      "date": "2026-03-19",
-      "close": 908.65,
-      "ema50": 960.66
-    },
     {
       "date": "2026-03-20",
       "close": 890.8,
@@ -626,6 +621,11 @@
       "date": "2026-09-11",
       "close": 1680.6,
       "ema50": 1680.1
+    },
+    {
+      "date": "2026-09-15",
+      "close": 1593.8,
+      "ema50": 1676.72
     }
   ],
   "flags": {
@@ -634,37 +634,36 @@
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,680.60 vs EMA20 1,704.68",
-      "ema20_above_ema50": "EMA20 1,704.68 vs EMA50 1,680.10",
-      "ema50_above_ema200": "EMA50 1,680.10 vs EMA200 1,381.07",
-      "rsi_above_50": "RSI(14) 46.88 vs 50",
-      "macd_bullish": "MACD -6.57 vs signal -8.34",
-      "adx_trending_up": "ADX(14) 10.90 vs 20, +DI 17.77 vs -DI 17.15",
-      "price_above_vwap20": "Close 1,680.60 vs 20d VWAP 1,709.17",
-      "price_above_bb_mid": "Close 1,680.60 vs BB mid 1,696.42"
+      "price_above_ema20": "Close 1,593.80 vs EMA20 1,694.12",
+      "ema20_above_ema50": "EMA20 1,694.12 vs EMA50 1,676.72",
+      "ema50_above_ema200": "EMA50 1,676.72 vs EMA200 1,383.19",
+      "rsi_above_50": "RSI(14) 38.84 vs 50",
+      "macd_bullish": "MACD -14.57 vs signal -9.58",
+      "adx_trending_up": "ADX(14) 11.52 vs 20, +DI 15.69 vs -DI 23.33",
+      "price_above_vwap20": "Close 1,593.80 vs 20d VWAP 1,702.37",
+      "price_above_bb_mid": "Close 1,593.80 vs BB mid 1,690.75"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "macd_bullish"
+      "ema50_above_ema200"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: near buy zone"
+        "2/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -673,32 +672,33 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 62.23 = 3.7% of price",
-        "rsi_extreme": "RSI(14) 46.9",
-        "below_ema200": "Close 1,680.60 vs EMA200 1,381.07",
-        "extended_above_ema20": "Close 1,680.60 vs EMA20 1,704.68 (-1.4%)",
-        "large_day_move": "Day change -1.0%",
-        "near_52w_low": "Close 1,680.60 vs 52w low 851.00"
+        "atr_high": "ATR 65.46 = 4.1% of price",
+        "rsi_extreme": "RSI(14) 38.8",
+        "below_ema200": "Close 1,593.80 vs EMA200 1,383.19",
+        "extended_above_ema20": "Close 1,593.80 vs EMA20 1,694.12 (-5.9%)",
+        "large_day_move": "Day change -5.2%",
+        "near_52w_low": "Close 1,593.80 vs 52w low 851.00"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
-      "daily": "bullish",
+      "daily": "neutral",
       "weekly": "bearish",
       "intraday": null
     }
@@ -707,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-14T16:21:57.454456+00:00"
+  "updated_at": "2026-09-15T14:58:22.384289+00:00"
 }
