@@ -3,35 +3,30 @@
   "name": "Bharat Electronics",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-09-15",
-    "close": 382.9,
-    "prev_close": 404.35,
-    "change_pct": -5.304810189192542,
-    "ema20": 404.97159305814273,
-    "ema50": 407.41151667742054,
-    "ema200": 414.8335951898333,
-    "rsi14": 30.372757997353958,
-    "macd": -2.0896724471380708,
-    "macd_signal": 0.032342177112991255,
-    "atr14": 7.924839027664818,
-    "adx14": 11.611185449880915,
-    "adx_pos": 15.311347173705183,
-    "adx_neg": 30.878157471061474,
-    "bb_high": 420.7872449199032,
-    "bb_low": 394.69275508009673,
-    "bb_mid": 407.73999999999995,
-    "vwap20": 407.79513951008994,
+    "date": "2026-09-16",
+    "close": 385.75,
+    "prev_close": 382.9,
+    "change_pct": 0.7443196657090684,
+    "ema20": 403.1409651478434,
+    "ema50": 406.5620338543879,
+    "ema200": 414.4316785839749,
+    "rsi14": 33.65094314412785,
+    "macd": -3.341530247875255,
+    "macd_signal": -0.6424323077041719,
+    "atr14": 7.937350525587122,
+    "adx14": 13.267401278035484,
+    "adx_pos": 14.195268453919887,
+    "adx_neg": 29.347302317666646,
+    "bb_high": 422.44069690130493,
+    "bb_low": 390.4143030986951,
+    "bb_mid": 406.4275,
+    "vwap20": 406.4809688135235,
     "high_52w": 473.45,
-    "low_52w": 369.9,
-    "volume": 16741114.0,
-    "avg_volume20": 10190720.5
+    "low_52w": 373.05,
+    "volume": 10138395.0,
+    "avg_volume20": 10241593.55
   },
   "price_history": [
-    {
-      "date": "2026-03-20",
-      "close": 426.1,
-      "ema50": 435.41
-    },
     {
       "date": "2026-03-23",
       "close": 405.5,
@@ -75,7 +70,7 @@
     {
       "date": "2026-04-07",
       "close": 427.8,
-      "ema50": 429.43
+      "ema50": 429.42
     },
     {
       "date": "2026-04-08",
@@ -105,7 +100,7 @@
     {
       "date": "2026-04-16",
       "close": 455.65,
-      "ema50": 432.5
+      "ema50": 432.49
     },
     {
       "date": "2026-04-17",
@@ -220,7 +215,7 @@
     {
       "date": "2026-05-20",
       "close": 413.3,
-      "ema50": 433.03
+      "ema50": 433.02
     },
     {
       "date": "2026-05-21",
@@ -626,6 +621,11 @@
       "date": "2026-09-15",
       "close": 382.9,
       "ema50": 407.41
+    },
+    {
+      "date": "2026-09-16",
+      "close": 385.75,
+      "ema50": 406.56
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 382.90 vs EMA20 404.97",
-      "ema20_above_ema50": "EMA20 404.97 vs EMA50 407.41",
-      "ema50_above_ema200": "EMA50 407.41 vs EMA200 414.83",
-      "rsi_above_50": "RSI(14) 30.37 vs 50",
-      "macd_bullish": "MACD -2.09 vs signal 0.03",
-      "adx_trending_up": "ADX(14) 11.61 vs 20, +DI 15.31 vs -DI 30.88",
-      "price_above_vwap20": "Close 382.90 vs 20d VWAP 407.80",
-      "price_above_bb_mid": "Close 382.90 vs BB mid 407.74"
+      "price_above_ema20": "Close 385.75 vs EMA20 403.14",
+      "ema20_above_ema50": "EMA20 403.14 vs EMA50 406.56",
+      "ema50_above_ema200": "EMA50 406.56 vs EMA200 414.43",
+      "rsi_above_50": "RSI(14) 33.65 vs 50",
+      "macd_bullish": "MACD -3.34 vs signal -0.64",
+      "adx_trending_up": "ADX(14) 13.27 vs 20, +DI 14.20 vs -DI 29.35",
+      "price_above_vwap20": "Close 385.75 vs 20d VWAP 406.48",
+      "price_above_bb_mid": "Close 385.75 vs BB mid 406.43"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -669,29 +668,28 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.92 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 30.4",
-        "below_ema200": "Close 382.90 vs EMA200 414.83",
-        "extended_above_ema20": "Close 382.90 vs EMA20 404.97 (-5.5%)",
-        "large_day_move": "Day change -5.3%",
-        "near_52w_low": "Close 382.90 vs 52w low 369.90"
+        "atr_high": "ATR 7.94 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 33.7",
+        "below_ema200": "Close 385.75 vs EMA200 414.43",
+        "extended_above_ema20": "Close 385.75 vs EMA20 403.14 (-4.3%)",
+        "large_day_move": "Day change +0.7%",
+        "near_52w_low": "Close 385.75 vs 52w low 373.05"
       },
       "conditions_on": [
         "below_ema200",
-        "large_day_move",
         "near_52w_low"
       ],
-      "condition_count": 3,
+      "condition_count": 2,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -705,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-15T14:58:28.077724+00:00"
+  "updated_at": "2026-09-16T14:56:54.083735+00:00"
 }
