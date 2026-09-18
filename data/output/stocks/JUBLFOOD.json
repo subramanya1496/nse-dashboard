@@ -3,35 +3,30 @@
   "name": "Jubilant FoodWorks",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-09-17",
-    "close": 480.2,
-    "prev_close": 471.0,
-    "change_pct": 1.9532908704883203,
-    "ema20": 480.28026295796883,
-    "ema50": 472.2413449305076,
-    "ema200": 495.5509078723915,
-    "rsi14": 50.60087228121937,
-    "macd": -1.1403176935148736,
-    "macd_signal": 2.1969877020494772,
-    "atr14": 12.929005937533615,
-    "adx14": 26.056182361936912,
-    "adx_pos": 21.53712442545606,
-    "adx_neg": 16.533909262762485,
-    "bb_high": 516.4145519286432,
-    "bb_low": 459.2254480713568,
-    "bb_mid": 487.82,
-    "vwap20": 493.9622350805703,
-    "high_52w": 658.0,
+    "date": "2026-09-18",
+    "close": 500.0,
+    "prev_close": 480.2,
+    "change_pct": 4.123281965847566,
+    "ema20": 482.15833315244794,
+    "ema50": 473.32991071226326,
+    "ema200": 495.5084374215756,
+    "rsi14": 60.412341876021536,
+    "macd": 0.6719416127027671,
+    "macd_signal": 1.8919784843192624,
+    "atr14": 13.56264837026192,
+    "adx14": 26.32775631736707,
+    "adx_pos": 27.09593491064876,
+    "adx_neg": 14.635632613743438,
+    "bb_high": 515.2199401223903,
+    "bb_low": 459.69005987760954,
+    "bb_mid": 487.4549999999999,
+    "vwap20": 493.1077158947063,
+    "high_52w": 653.95,
     "low_52w": 408.55,
-    "volume": 817225.0,
-    "avg_volume20": 999117.45
+    "volume": 2900829.0,
+    "avg_volume20": 1065346.1
   },
   "price_history": [
-    {
-      "date": "2026-03-24",
-      "close": 448.6,
-      "ema50": 504.54
-    },
     {
       "date": "2026-03-25",
       "close": 462.35,
@@ -70,7 +65,7 @@
     {
       "date": "2026-04-08",
       "close": 435.75,
-      "ema50": 487.72
+      "ema50": 487.71
     },
     {
       "date": "2026-04-09",
@@ -85,7 +80,7 @@
     {
       "date": "2026-04-13",
       "close": 437.9,
-      "ema50": 481.99
+      "ema50": 481.98
     },
     {
       "date": "2026-04-15",
@@ -180,7 +175,7 @@
     {
       "date": "2026-05-12",
       "close": 442.15,
-      "ema50": 476.78
+      "ema50": 476.77
     },
     {
       "date": "2026-05-13",
@@ -626,66 +621,75 @@
       "date": "2026-09-17",
       "close": 480.2,
       "ema50": 472.24
+    },
+    {
+      "date": "2026-09-18",
+      "close": 500.0,
+      "ema50": 473.33
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 480.20 vs EMA20 480.28",
-      "ema20_above_ema50": "EMA20 480.28 vs EMA50 472.24",
-      "ema50_above_ema200": "EMA50 472.24 vs EMA200 495.55",
-      "rsi_above_50": "RSI(14) 50.60 vs 50",
-      "macd_bullish": "MACD -1.14 vs signal 2.20",
-      "adx_trending_up": "ADX(14) 26.06 vs 20, +DI 21.54 vs -DI 16.53",
-      "price_above_vwap20": "Close 480.20 vs 20d VWAP 493.96",
-      "price_above_bb_mid": "Close 480.20 vs BB mid 487.82"
+      "price_above_ema20": "Close 500.00 vs EMA20 482.16",
+      "ema20_above_ema50": "EMA20 482.16 vs EMA50 473.33",
+      "ema50_above_ema200": "EMA50 473.33 vs EMA200 495.51",
+      "rsi_above_50": "RSI(14) 60.41 vs 50",
+      "macd_bullish": "MACD 0.67 vs signal 1.89",
+      "adx_trending_up": "ADX(14) 26.33 vs 20, +DI 27.10 vs -DI 14.64",
+      "price_above_vwap20": "Close 500.00 vs 20d VWAP 493.11",
+      "price_above_bb_mid": "Close 500.00 vs BB mid 487.45"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "rsi_above_50",
-      "adx_trending_up"
+      "adx_trending_up",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 3,
+    "flag_count": 6,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "3/8 bullish flags"
+        "6/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.93 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 50.6",
-        "below_ema200": "Close 480.20 vs EMA200 495.55",
-        "extended_above_ema20": "Close 480.20 vs EMA20 480.28 (-0.0%)",
-        "large_day_move": "Day change +2.0%",
-        "near_52w_low": "Close 480.20 vs 52w low 408.55"
+        "atr_high": "ATR 13.56 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 60.4",
+        "below_ema200": "Close 500.00 vs EMA200 495.51",
+        "extended_above_ema20": "Close 500.00 vs EMA20 482.16 (+3.7%)",
+        "large_day_move": "Day change +4.1%",
+        "near_52w_low": "Close 500.00 vs 52w low 408.55"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "large_day_move"
       ],
       "condition_count": 2,
       "condition_total": 6,
@@ -693,7 +697,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -707,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-17T14:59:25.040983+00:00"
+  "updated_at": "2026-09-18T14:29:37.204899+00:00"
 }

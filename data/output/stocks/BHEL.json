@@ -3,35 +3,30 @@
   "name": "Bharat Heavy Electricals",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-09-17",
-    "close": 429.2,
-    "prev_close": 410.6,
-    "change_pct": 4.529956161714555,
-    "ema20": 423.3561095944915,
-    "ema50": 415.29061971569416,
-    "ema200": 356.4290965728499,
-    "rsi14": 53.80260730755884,
-    "macd": 1.8355314773111218,
-    "macd_signal": 3.3048767911195016,
-    "atr14": 12.973812371696175,
-    "adx14": 23.965063412044746,
-    "adx_pos": 25.749808163270632,
-    "adx_neg": 19.296167028396887,
-    "bb_high": 442.41639421032687,
-    "bb_low": 406.1086057896731,
-    "bb_mid": 424.2625,
-    "vwap20": 425.2659002206067,
+    "date": "2026-09-18",
+    "close": 439.9,
+    "prev_close": 429.2,
+    "change_pct": 2.4930102516309387,
+    "ema20": 424.93171820453995,
+    "ema50": 416.25570599817956,
+    "ema200": 357.3815577247673,
+    "rsi14": 58.49527544144158,
+    "macd": 2.963573620325974,
+    "macd_signal": 3.236616156765214,
+    "atr14": 12.950682916603384,
+    "adx14": 23.934400685128246,
+    "adx_pos": 28.99985699699687,
+    "adx_neg": 17.949870055682975,
+    "bb_high": 444.2462154661053,
+    "bb_low": 406.91878453389467,
+    "bb_mid": 425.5825,
+    "vwap20": 426.15952744767765,
     "high_52w": 446.5,
-    "low_52w": 219.42,
-    "volume": 8684564.0,
-    "avg_volume20": 6545419.3
+    "low_52w": 226.8,
+    "volume": 7669374.0,
+    "avg_volume20": 6700252.05
   },
   "price_history": [
-    {
-      "date": "2026-03-24",
-      "close": 258.2,
-      "ema50": 261.58
-    },
     {
       "date": "2026-03-25",
       "close": 262.05,
@@ -65,7 +60,7 @@
     {
       "date": "2026-04-07",
       "close": 253.59,
-      "ema50": 259.1
+      "ema50": 259.11
     },
     {
       "date": "2026-04-08",
@@ -335,7 +330,7 @@
     {
       "date": "2026-06-25",
       "close": 402.7,
-      "ema50": 374.82
+      "ema50": 374.83
     },
     {
       "date": "2026-06-29",
@@ -390,7 +385,7 @@
     {
       "date": "2026-07-13",
       "close": 409.1,
-      "ema50": 382.03
+      "ema50": 382.04
     },
     {
       "date": "2026-07-14",
@@ -626,6 +621,11 @@
       "date": "2026-09-17",
       "close": 429.2,
       "ema50": 415.29
+    },
+    {
+      "date": "2026-09-18",
+      "close": 439.9,
+      "ema50": 416.26
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 429.20 vs EMA20 423.36",
-      "ema20_above_ema50": "EMA20 423.36 vs EMA50 415.29",
-      "ema50_above_ema200": "EMA50 415.29 vs EMA200 356.43",
-      "rsi_above_50": "RSI(14) 53.80 vs 50",
-      "macd_bullish": "MACD 1.84 vs signal 3.30",
-      "adx_trending_up": "ADX(14) 23.97 vs 20, +DI 25.75 vs -DI 19.30",
-      "price_above_vwap20": "Close 429.20 vs 20d VWAP 425.27",
-      "price_above_bb_mid": "Close 429.20 vs BB mid 424.26"
+      "price_above_ema20": "Close 439.90 vs EMA20 424.93",
+      "ema20_above_ema50": "EMA20 424.93 vs EMA50 416.26",
+      "ema50_above_ema200": "EMA50 416.26 vs EMA200 357.38",
+      "rsi_above_50": "RSI(14) 58.50 vs 50",
+      "macd_bullish": "MACD 2.96 vs signal 3.24",
+      "adx_trending_up": "ADX(14) 23.93 vs 20, +DI 29.00 vs -DI 17.95",
+      "price_above_vwap20": "Close 439.90 vs 20d VWAP 426.16",
+      "price_above_bb_mid": "Close 439.90 vs BB mid 425.58"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,12 +663,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 4,
-      "label": "Watch closely",
-      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -677,30 +676,29 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 12.97 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 53.8",
-        "below_ema200": "Close 429.20 vs EMA200 356.43",
-        "extended_above_ema20": "Close 429.20 vs EMA20 423.36 (+1.4%)",
-        "large_day_move": "Day change +4.5%",
-        "near_52w_low": "Close 429.20 vs 52w low 219.42"
+        "atr_high": "ATR 12.95 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 58.5",
+        "below_ema200": "Close 439.90 vs EMA200 357.38",
+        "extended_above_ema20": "Close 439.90 vs EMA20 424.93 (+3.5%)",
+        "large_day_move": "Day change +2.5%",
+        "near_52w_low": "Close 439.90 vs 52w low 226.80"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -712,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-17T14:58:47.803603+00:00"
+  "updated_at": "2026-09-18T14:29:00.022933+00:00"
 }
