@@ -3,35 +3,30 @@
   "name": "LG Electronics India",
   "sector": "Consumer Durables",
   "indicators": {
-    "date": "2026-09-18",
-    "close": 1696.9,
-    "prev_close": 1652.9,
-    "change_pct": 2.661988021053905,
-    "ema20": 1649.4619369430493,
-    "ema50": 1620.149946807406,
-    "ema200": 1584.002081997006,
-    "rsi14": 60.76008859430154,
-    "macd": 11.554616690358898,
-    "macd_signal": 14.402064938527696,
-    "atr14": 41.707134393901164,
-    "adx14": 25.117039462558125,
-    "adx_pos": 24.43507955846184,
-    "adx_neg": 13.91834032494978,
-    "bb_high": 1709.1449780334779,
-    "bb_low": 1613.5450219665222,
-    "bb_mid": 1661.345,
-    "vwap20": 1667.172687482697,
+    "date": "2026-09-21",
+    "close": 1656.3,
+    "prev_close": 1696.9,
+    "change_pct": -2.392598267428849,
+    "ema20": 1650.1131810437114,
+    "ema50": 1621.5675959522137,
+    "ema200": 1584.7214642656927,
+    "rsi14": 52.36600533799504,
+    "macd": 10.802313323295948,
+    "macd_signal": 13.682114615481346,
+    "atr14": 42.14948193719395,
+    "adx14": 24.867970422927776,
+    "adx_pos": 22.45159420115873,
+    "adx_neg": 14.466239792396765,
+    "bb_high": 1707.5994157007015,
+    "bb_low": 1618.3905842992988,
+    "bb_mid": 1662.9950000000001,
+    "vwap20": 1668.9881759862772,
     "high_52w": 1755.0,
     "low_52w": 1304.1,
-    "volume": 1337344.0,
-    "avg_volume20": 534525.55
+    "volume": 668976.0,
+    "avg_volume20": 541252.05
   },
   "price_history": [
-    {
-      "date": "2026-03-25",
-      "close": 1510.8,
-      "ema50": 1532.82
-    },
     {
       "date": "2026-03-27",
       "close": 1536.1,
@@ -626,6 +621,11 @@
       "date": "2026-09-18",
       "close": 1696.9,
       "ema50": 1620.15
+    },
+    {
+      "date": "2026-09-21",
+      "close": 1656.3,
+      "ema50": 1621.57
     }
   ],
   "flags": {
@@ -636,44 +636,42 @@
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,696.90 vs EMA20 1,649.46",
-      "ema20_above_ema50": "EMA20 1,649.46 vs EMA50 1,620.15",
-      "ema50_above_ema200": "EMA50 1,620.15 vs EMA200 1,584.00",
-      "rsi_above_50": "RSI(14) 60.76 vs 50",
-      "macd_bullish": "MACD 11.55 vs signal 14.40",
-      "adx_trending_up": "ADX(14) 25.12 vs 20, +DI 24.44 vs -DI 13.92",
-      "price_above_vwap20": "Close 1,696.90 vs 20d VWAP 1,667.17",
-      "price_above_bb_mid": "Close 1,696.90 vs BB mid 1,661.35"
+      "price_above_ema20": "Close 1,656.30 vs EMA20 1,650.11",
+      "ema20_above_ema50": "EMA20 1,650.11 vs EMA50 1,621.57",
+      "ema50_above_ema200": "EMA50 1,621.57 vs EMA200 1,584.72",
+      "rsi_above_50": "RSI(14) 52.37 vs 50",
+      "macd_bullish": "MACD 10.80 vs signal 13.68",
+      "adx_trending_up": "ADX(14) 24.87 vs 20, +DI 22.45 vs -DI 14.47",
+      "price_above_vwap20": "Close 1,656.30 vs 20d VWAP 1,668.99",
+      "price_above_bb_mid": "Close 1,656.30 vs BB mid 1,663.00"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50",
-      "adx_trending_up",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "adx_trending_up"
     ],
-    "flag_count": 7,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: volume surge"
+        "5/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
@@ -681,23 +679,25 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 41.71 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 60.8",
-        "below_ema200": "Close 1,696.90 vs EMA200 1,584.00",
-        "extended_above_ema20": "Close 1,696.90 vs EMA20 1,649.46 (+2.9%)",
-        "large_day_move": "Day change +2.7%",
-        "near_52w_low": "Close 1,696.90 vs 52w low 1,304.10"
+        "atr_high": "ATR 42.15 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 52.4",
+        "below_ema200": "Close 1,656.30 vs EMA200 1,584.72",
+        "extended_above_ema20": "Close 1,656.30 vs EMA20 1,650.11 (+0.4%)",
+        "large_day_move": "Day change -2.4%",
+        "near_52w_low": "Close 1,656.30 vs 52w low 1,304.10"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "bullish",
@@ -709,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-18T14:29:42.038639+00:00"
+  "updated_at": "2026-09-21T16:29:00.551183+00:00"
 }

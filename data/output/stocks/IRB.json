@@ -3,35 +3,30 @@
   "name": "IRB Infrastructure Developers",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-09-18",
-    "close": 18.48,
-    "prev_close": 18.85,
-    "change_pct": -1.962864721485416,
-    "ema20": 19.231342447121808,
-    "ema50": 19.600908883451826,
-    "ema200": 20.739524760517366,
-    "rsi14": 36.87940919313302,
-    "macd": -0.16094943031921005,
-    "macd_signal": -0.11297824664479508,
-    "atr14": 0.49921688807455483,
-    "adx14": 21.132402763259723,
-    "adx_pos": 24.266917443464116,
-    "adx_neg": 23.661573285130466,
-    "bb_high": 19.890499253731054,
-    "bb_low": 18.55050074626894,
-    "bb_mid": 19.220499999999998,
-    "vwap20": 19.425207888482976,
+    "date": "2026-09-21",
+    "close": 18.1,
+    "prev_close": 18.48,
+    "change_pct": -2.0562770562770507,
+    "ema20": 19.123595547395915,
+    "ema50": 19.54204820585329,
+    "ema200": 20.69870245662683,
+    "rsi14": 32.92858401971728,
+    "macd": -0.23184866447253683,
+    "macd_signal": -0.13675233018672267,
+    "atr14": 0.5021299674963094,
+    "adx14": 20.28303307563945,
+    "adx_pos": 22.40283895126496,
+    "adx_neg": 26.96503652247942,
+    "bb_high": 20.001494990877553,
+    "bb_low": 18.354505009122448,
+    "bb_mid": 19.178,
+    "vwap20": 19.372119840407528,
     "high_52w": 23.95,
-    "low_52w": 18.38,
-    "volume": 21372707.0,
-    "avg_volume20": 16963944.4
+    "low_52w": 18.02,
+    "volume": 17302777.0,
+    "avg_volume20": 17607957.2
   },
   "price_history": [
-    {
-      "date": "2026-03-25",
-      "close": 20.57,
-      "ema50": 20.78
-    },
     {
       "date": "2026-03-27",
       "close": 20.47,
@@ -626,6 +621,11 @@
       "date": "2026-09-18",
       "close": 18.48,
       "ema50": 19.6
+    },
+    {
+      "date": "2026-09-21",
+      "close": 18.1,
+      "ema50": 19.54
     }
   ],
   "flags": {
@@ -635,24 +635,22 @@
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 18.48 vs EMA20 19.23",
-      "ema20_above_ema50": "EMA20 19.23 vs EMA50 19.60",
-      "ema50_above_ema200": "EMA50 19.60 vs EMA200 20.74",
-      "rsi_above_50": "RSI(14) 36.88 vs 50",
-      "macd_bullish": "MACD -0.16 vs signal -0.11",
-      "adx_trending_up": "ADX(14) 21.13 vs 20, +DI 24.27 vs -DI 23.66",
-      "price_above_vwap20": "Close 18.48 vs 20d VWAP 19.43",
-      "price_above_bb_mid": "Close 18.48 vs BB mid 19.22"
+      "price_above_ema20": "Close 18.10 vs EMA20 19.12",
+      "ema20_above_ema50": "EMA20 19.12 vs EMA50 19.54",
+      "ema50_above_ema200": "EMA50 19.54 vs EMA200 20.70",
+      "rsi_above_50": "RSI(14) 32.93 vs 50",
+      "macd_bullish": "MACD -0.23 vs signal -0.14",
+      "adx_trending_up": "ADX(14) 20.28 vs 20, +DI 22.40 vs -DI 26.97",
+      "price_above_vwap20": "Close 18.10 vs 20d VWAP 19.37",
+      "price_above_bb_mid": "Close 18.10 vs BB mid 19.18"
     },
-    "flags_on": [
-      "adx_trending_up"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.50 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 36.9",
-        "below_ema200": "Close 18.48 vs EMA200 20.74",
-        "extended_above_ema20": "Close 18.48 vs EMA20 19.23 (-3.9%)",
-        "large_day_move": "Day change -2.0%",
-        "near_52w_low": "Close 18.48 vs 52w low 18.38"
+        "atr_high": "ATR 0.50 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 32.9",
+        "below_ema200": "Close 18.10 vs EMA200 20.70",
+        "extended_above_ema20": "Close 18.10 vs EMA20 19.12 (-5.4%)",
+        "large_day_move": "Day change -2.1%",
+        "near_52w_low": "Close 18.10 vs 52w low 18.02"
       },
       "conditions_on": [
         "atr_high",
@@ -706,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-18T14:29:32.405592+00:00"
+  "updated_at": "2026-09-21T16:28:50.966894+00:00"
 }
