@@ -3,35 +3,30 @@
   "name": "Mankind Pharma",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-09-21",
-    "close": 2437.8,
-    "prev_close": 2300.7,
-    "change_pct": 5.959055939496691,
-    "ema20": 2339.332527547287,
-    "ema50": 2382.821988340883,
-    "ema200": 2350.6046875962356,
-    "rsi14": 59.3569375466833,
-    "macd": -27.609346094035118,
-    "macd_signal": -38.050836477996945,
-    "atr14": 58.80583357681646,
-    "adx14": 25.4246325146867,
-    "adx_pos": 25.721454338659083,
-    "adx_neg": 17.06004471844875,
-    "bb_high": 2455.9139298151886,
-    "bb_low": 2221.3760701848114,
-    "bb_mid": 2338.645,
-    "vwap20": 2338.0720767638063,
+    "date": "2026-09-22",
+    "close": 2480.0,
+    "prev_close": 2437.8,
+    "change_pct": 1.731068996636304,
+    "ema20": 2352.7294296856408,
+    "ema50": 2386.6328907588877,
+    "ema200": 2351.892203142542,
+    "rsi14": 62.861588320356574,
+    "macd": -13.159694127954936,
+    "macd_signal": -33.07260800798854,
+    "atr14": 58.33398832132956,
+    "adx14": 25.64770483640174,
+    "adx_pos": 28.730408410325403,
+    "adx_neg": 15.969606757041635,
+    "bb_high": 2475.7525847429206,
+    "bb_low": 2212.0874152570796,
+    "bb_mid": 2343.92,
+    "vwap20": 2348.3372309534598,
     "high_52w": 2674.0,
     "low_52w": 1909.7,
-    "volume": 1342757.0,
-    "avg_volume20": 376596.75
+    "volume": 667075.0,
+    "avg_volume20": 403426.95
   },
   "price_history": [
-    {
-      "date": "2026-03-27",
-      "close": 2038.8,
-      "ema50": 2121.36
-    },
     {
       "date": "2026-03-30",
       "close": 2005.8,
@@ -626,6 +621,11 @@
       "date": "2026-09-21",
       "close": 2437.8,
       "ema50": 2382.82
+    },
+    {
+      "date": "2026-09-22",
+      "close": 2480.0,
+      "ema50": 2386.63
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,437.80 vs EMA20 2,339.33",
-      "ema20_above_ema50": "EMA20 2,339.33 vs EMA50 2,382.82",
-      "ema50_above_ema200": "EMA50 2,382.82 vs EMA200 2,350.60",
-      "rsi_above_50": "RSI(14) 59.36 vs 50",
-      "macd_bullish": "MACD -27.61 vs signal -38.05",
-      "adx_trending_up": "ADX(14) 25.42 vs 20, +DI 25.72 vs -DI 17.06",
-      "price_above_vwap20": "Close 2,437.80 vs 20d VWAP 2,338.07",
-      "price_above_bb_mid": "Close 2,437.80 vs BB mid 2,338.64"
+      "price_above_ema20": "Close 2,480.00 vs EMA20 2,352.73",
+      "ema20_above_ema50": "EMA20 2,352.73 vs EMA50 2,386.63",
+      "ema50_above_ema200": "EMA50 2,386.63 vs EMA200 2,351.89",
+      "rsi_above_50": "RSI(14) 62.86 vs 50",
+      "macd_bullish": "MACD -13.16 vs signal -33.07",
+      "adx_trending_up": "ADX(14) 25.65 vs 20, +DI 28.73 vs -DI 15.97",
+      "price_above_vwap20": "Close 2,480.00 vs 20d VWAP 2,348.34",
+      "price_above_bb_mid": "Close 2,480.00 vs BB mid 2,343.92"
     },
     "flags_on": [
       "price_above_ema20",
@@ -668,7 +668,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "7/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -677,26 +677,24 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 58.81 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 59.4",
-        "below_ema200": "Close 2,437.80 vs EMA200 2,350.60",
-        "extended_above_ema20": "Close 2,437.80 vs EMA20 2,339.33 (+4.2%)",
-        "large_day_move": "Day change +6.0%",
-        "near_52w_low": "Close 2,437.80 vs 52w low 1,909.70"
+        "atr_high": "ATR 58.33 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 62.9",
+        "below_ema200": "Close 2,480.00 vs EMA200 2,351.89",
+        "extended_above_ema20": "Close 2,480.00 vs EMA20 2,352.73 (+5.4%)",
+        "large_day_move": "Day change +1.7%",
+        "near_52w_low": "Close 2,480.00 vs 52w low 1,909.70"
       },
-      "conditions_on": [
-        "large_day_move"
-      ],
-      "condition_count": 1,
+      "conditions_on": [],
+      "condition_count": 0,
       "condition_total": 6,
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
+      "breakout": true,
       "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -711,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-21T16:29:04.588342+00:00"
+  "updated_at": "2026-09-22T14:50:29.430983+00:00"
 }

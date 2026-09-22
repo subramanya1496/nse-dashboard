@@ -3,35 +3,30 @@
   "name": "Tata Technologies",
   "sector": "IT",
   "indicators": {
-    "date": "2026-09-21",
-    "close": 724.9,
-    "prev_close": 722.45,
-    "change_pct": 0.3391238147968623,
-    "ema20": 775.7729163839255,
-    "ema50": 773.9573441181248,
-    "ema200": 710.4071292489979,
-    "rsi14": 33.55363491442907,
-    "macd": -16.252293796379035,
-    "macd_signal": -6.563405786907506,
-    "atr14": 28.578458480655705,
-    "adx14": 13.711824401856331,
-    "adx_pos": 14.129562239386582,
-    "adx_neg": 24.989745339560255,
-    "bb_high": 846.4315557917241,
-    "bb_low": 724.9484442082758,
-    "bb_mid": 785.6899999999999,
-    "vwap20": 789.360102960708,
+    "date": "2026-09-22",
+    "close": 715.55,
+    "prev_close": 724.9,
+    "change_pct": -1.2898330804248894,
+    "ema20": 770.0374005378374,
+    "ema50": 771.666860035061,
+    "ema200": 710.4583020922914,
+    "rsi14": 31.774096442478793,
+    "macd": -18.854062262567936,
+    "macd_signal": -9.021537082039591,
+    "atr14": 27.458568589180295,
+    "adx14": 14.71538663198938,
+    "adx_pos": 13.655415806483596,
+    "adx_neg": 24.151163194468907,
+    "bb_high": 849.2564289060217,
+    "bb_low": 713.9285710939782,
+    "bb_mid": 781.5925,
+    "vwap20": 786.8057422034962,
     "high_52w": 891.0,
     "low_52w": 507.4,
-    "volume": 1034878.0,
-    "avg_volume20": 1116668.7
+    "volume": 476836.0,
+    "avg_volume20": 1083596.8
   },
   "price_history": [
-    {
-      "date": "2026-03-27",
-      "close": 539.35,
-      "ema50": 587.12
-    },
     {
       "date": "2026-03-30",
       "close": 509.2,
@@ -626,12 +621,17 @@
       "date": "2026-09-21",
       "close": 724.9,
       "ema50": 773.96
+    },
+    {
+      "date": "2026-09-22",
+      "close": 715.55,
+      "ema50": 771.67
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
-      "ema20_above_ema50": true,
+      "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
@@ -640,20 +640,19 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 724.90 vs EMA20 775.77",
-      "ema20_above_ema50": "EMA20 775.77 vs EMA50 773.96",
-      "ema50_above_ema200": "EMA50 773.96 vs EMA200 710.41",
-      "rsi_above_50": "RSI(14) 33.55 vs 50",
-      "macd_bullish": "MACD -16.25 vs signal -6.56",
-      "adx_trending_up": "ADX(14) 13.71 vs 20, +DI 14.13 vs -DI 24.99",
-      "price_above_vwap20": "Close 724.90 vs 20d VWAP 789.36",
-      "price_above_bb_mid": "Close 724.90 vs BB mid 785.69"
+      "price_above_ema20": "Close 715.55 vs EMA20 770.04",
+      "ema20_above_ema50": "EMA20 770.04 vs EMA50 771.67",
+      "ema50_above_ema200": "EMA50 771.67 vs EMA200 710.46",
+      "rsi_above_50": "RSI(14) 31.77 vs 50",
+      "macd_bullish": "MACD -18.85 vs signal -9.02",
+      "adx_trending_up": "ADX(14) 14.72 vs 20, +DI 13.66 vs -DI 24.15",
+      "price_above_vwap20": "Close 715.55 vs 20d VWAP 786.81",
+      "price_above_bb_mid": "Close 715.55 vs BB mid 781.59"
     },
     "flags_on": [
-      "ema20_above_ema50",
       "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -662,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 28.58 = 3.9% of price",
-        "rsi_extreme": "RSI(14) 33.6",
-        "below_ema200": "Close 724.90 vs EMA200 710.41",
-        "extended_above_ema20": "Close 724.90 vs EMA20 775.77 (-6.6%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 724.90 vs 52w low 507.40"
+        "atr_high": "ATR 27.46 = 3.8% of price",
+        "rsi_extreme": "RSI(14) 31.8",
+        "below_ema200": "Close 715.55 vs EMA200 710.46",
+        "extended_above_ema20": "Close 715.55 vs EMA20 770.04 (-7.1%)",
+        "large_day_move": "Day change -1.3%",
+        "near_52w_low": "Close 715.55 vs 52w low 507.40"
       },
       "conditions_on": [
         "atr_high"
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-21T16:29:38.171266+00:00"
+  "updated_at": "2026-09-22T14:51:03.004718+00:00"
 }

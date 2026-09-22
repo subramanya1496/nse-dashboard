@@ -3,35 +3,30 @@
   "name": "Oracle Financial Services Software",
   "sector": "IT",
   "indicators": {
-    "date": "2026-09-21",
-    "close": 10911.0,
-    "prev_close": 11896.0,
-    "change_pct": -8.28009414929388,
-    "ema20": 11710.350265250498,
-    "ema50": 11467.466498601558,
-    "ema200": 9889.461175501023,
-    "rsi14": 35.85896543099334,
-    "macd": -45.45528655976341,
-    "macd_signal": 54.20842286768888,
-    "atr14": 386.7269533206042,
-    "adx14": 10.591027362491994,
-    "adx_pos": 19.304060610854865,
-    "adx_neg": 27.8680698957953,
-    "bb_high": 12494.624553351829,
-    "bb_low": 11172.275446648173,
-    "bb_mid": 11833.45,
-    "vwap20": 11840.39802071346,
+    "date": "2026-09-22",
+    "close": 10989.0,
+    "prev_close": 10911.0,
+    "change_pct": 0.7148748968930437,
+    "ema20": 11641.650239988547,
+    "ema50": 11448.703106499535,
+    "ema200": 9900.401860321908,
+    "rsi14": 37.6106748195068,
+    "macd": -95.26303751144405,
+    "macd_signal": 24.314130791862294,
+    "atr14": 378.81788522627534,
+    "adx14": 11.287253380761191,
+    "adx_pos": 18.29944657025826,
+    "adx_neg": 27.643388376614524,
+    "bb_high": 12553.371757236291,
+    "bb_low": 11060.628242763709,
+    "bb_mid": 11807.0,
+    "vwap20": 11805.846639463765,
     "high_52w": 12540.0,
     "low_52w": 6234.5,
-    "volume": 565241.0,
-    "avg_volume20": 238397.35
+    "volume": 232724.0,
+    "avg_volume20": 242363.85
   },
   "price_history": [
-    {
-      "date": "2026-03-27",
-      "close": 6947.0,
-      "ema50": 6996.36
-    },
     {
       "date": "2026-03-30",
       "close": 6731.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-21",
       "close": 10911.0,
       "ema50": 11467.47
+    },
+    {
+      "date": "2026-09-22",
+      "close": 10989.0,
+      "ema50": 11448.7
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 10,911.00 vs EMA20 11,710.35",
-      "ema20_above_ema50": "EMA20 11,710.35 vs EMA50 11,467.47",
-      "ema50_above_ema200": "EMA50 11,467.47 vs EMA200 9,889.46",
-      "rsi_above_50": "RSI(14) 35.86 vs 50",
-      "macd_bullish": "MACD -45.46 vs signal 54.21",
-      "adx_trending_up": "ADX(14) 10.59 vs 20, +DI 19.30 vs -DI 27.87",
-      "price_above_vwap20": "Close 10,911.00 vs 20d VWAP 11,840.40",
-      "price_above_bb_mid": "Close 10,911.00 vs BB mid 11,833.45"
+      "price_above_ema20": "Close 10,989.00 vs EMA20 11,641.65",
+      "ema20_above_ema50": "EMA20 11,641.65 vs EMA50 11,448.70",
+      "ema50_above_ema200": "EMA50 11,448.70 vs EMA200 9,900.40",
+      "rsi_above_50": "RSI(14) 37.61 vs 50",
+      "macd_bullish": "MACD -95.26 vs signal 24.31",
+      "adx_trending_up": "ADX(14) 11.29 vs 20, +DI 18.30 vs -DI 27.64",
+      "price_above_vwap20": "Close 10,989.00 vs 20d VWAP 11,805.85",
+      "price_above_bb_mid": "Close 10,989.00 vs BB mid 11,807.00"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,8 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: volume surge"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,28 +671,27 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 386.73 = 3.5% of price",
-        "rsi_extreme": "RSI(14) 35.9",
-        "below_ema200": "Close 10,911.00 vs EMA200 9,889.46",
-        "extended_above_ema20": "Close 10,911.00 vs EMA20 11,710.35 (-6.8%)",
-        "large_day_move": "Day change -8.3%",
-        "near_52w_low": "Close 10,911.00 vs 52w low 6,234.50"
+        "atr_high": "ATR 378.82 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 37.6",
+        "below_ema200": "Close 10,989.00 vs EMA200 9,900.40",
+        "extended_above_ema20": "Close 10,989.00 vs EMA20 11,641.65 (-5.6%)",
+        "large_day_move": "Day change +0.7%",
+        "near_52w_low": "Close 10,989.00 vs 52w low 6,234.50"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -707,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-21T16:29:15.375469+00:00"
+  "updated_at": "2026-09-22T14:50:40.242327+00:00"
 }

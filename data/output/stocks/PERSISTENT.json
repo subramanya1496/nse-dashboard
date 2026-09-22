@@ -3,35 +3,30 @@
   "name": "Persistent Systems",
   "sector": "IT",
   "indicators": {
-    "date": "2026-09-21",
-    "close": 5449.0,
-    "prev_close": 5416.0,
-    "change_pct": 0.6093057607090103,
-    "ema20": 5520.614339081984,
-    "ema50": 5434.20586849232,
-    "ema200": 5384.862009822023,
-    "rsi14": 46.54125119761114,
-    "macd": -11.901677445393034,
-    "macd_signal": 20.994779233508805,
-    "atr14": 150.11196228246422,
-    "adx14": 13.291330948796798,
-    "adx_pos": 20.44254896812106,
-    "adx_neg": 19.13965148536579,
-    "bb_high": 5829.348013774032,
-    "bb_low": 5335.951986225968,
-    "bb_mid": 5582.65,
-    "vwap20": 5603.715551258425,
+    "date": "2026-09-22",
+    "close": 5366.0,
+    "prev_close": 5449.0,
+    "change_pct": -1.523215268856671,
+    "ema20": 5505.88916393132,
+    "ema50": 5431.531128551444,
+    "ema200": 5384.6743281322515,
+    "rsi14": 42.63224410487815,
+    "macd": -21.864875041644154,
+    "macd_signal": 12.422848378478212,
+    "atr14": 146.81825069085966,
+    "adx14": 12.377266967796754,
+    "adx_pos": 19.408216148621815,
+    "adx_neg": 19.217238299953003,
+    "bb_high": 5824.4974588452915,
+    "bb_low": 5308.0025411547085,
+    "bb_mid": 5566.25,
+    "vwap20": 5592.944886334783,
     "high_52w": 6599.0,
     "low_52w": 4244.5,
-    "volume": 352582.0,
-    "avg_volume20": 483707.8
+    "volume": 350423.0,
+    "avg_volume20": 482786.95
   },
   "price_history": [
-    {
-      "date": "2026-03-27",
-      "close": 4899.8,
-      "ema50": 5229.38
-    },
     {
       "date": "2026-03-30",
       "close": 4877.2,
@@ -626,6 +621,11 @@
       "date": "2026-09-21",
       "close": 5449.0,
       "ema50": 5434.21
+    },
+    {
+      "date": "2026-09-22",
+      "close": 5366.0,
+      "ema50": 5431.53
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 5,449.00 vs EMA20 5,520.61",
-      "ema20_above_ema50": "EMA20 5,520.61 vs EMA50 5,434.21",
-      "ema50_above_ema200": "EMA50 5,434.21 vs EMA200 5,384.86",
-      "rsi_above_50": "RSI(14) 46.54 vs 50",
-      "macd_bullish": "MACD -11.90 vs signal 20.99",
-      "adx_trending_up": "ADX(14) 13.29 vs 20, +DI 20.44 vs -DI 19.14",
-      "price_above_vwap20": "Close 5,449.00 vs 20d VWAP 5,603.72",
-      "price_above_bb_mid": "Close 5,449.00 vs BB mid 5,582.65"
+      "price_above_ema20": "Close 5,366.00 vs EMA20 5,505.89",
+      "ema20_above_ema50": "EMA20 5,505.89 vs EMA50 5,431.53",
+      "ema50_above_ema200": "EMA50 5,431.53 vs EMA200 5,384.67",
+      "rsi_above_50": "RSI(14) 42.63 vs 50",
+      "macd_bullish": "MACD -21.86 vs signal 12.42",
+      "adx_trending_up": "ADX(14) 12.38 vs 20, +DI 19.41 vs -DI 19.22",
+      "price_above_vwap20": "Close 5,366.00 vs 20d VWAP 5,592.94",
+      "price_above_bb_mid": "Close 5,366.00 vs BB mid 5,566.25"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -670,25 +670,26 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 150.11 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 46.5",
-        "below_ema200": "Close 5,449.00 vs EMA200 5,384.86",
-        "extended_above_ema20": "Close 5,449.00 vs EMA20 5,520.61 (-1.3%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 5,449.00 vs 52w low 4,244.50"
+        "atr_high": "ATR 146.82 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 42.6",
+        "below_ema200": "Close 5,366.00 vs EMA200 5,384.67",
+        "extended_above_ema20": "Close 5,366.00 vs EMA20 5,505.89 (-2.5%)",
+        "large_day_move": "Day change -1.5%",
+        "near_52w_low": "Close 5,366.00 vs 52w low 4,244.50"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -697,7 +698,7 @@
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "bullish",
+      "daily": "neutral",
       "weekly": "neutral",
       "intraday": null
     }
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-21T16:29:18.169461+00:00"
+  "updated_at": "2026-09-22T14:50:43.024180+00:00"
 }
