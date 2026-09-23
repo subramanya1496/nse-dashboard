@@ -3,35 +3,30 @@
   "name": "Tata Motors Ltd (Commercial Vehicles)",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-09-22",
-    "close": 440.1,
-    "prev_close": 444.5,
-    "change_pct": -0.9898762654668115,
-    "ema20": 446.9685073670821,
-    "ema50": 443.78681908518297,
-    "ema200": 417.387789612495,
-    "rsi14": 45.13506764998397,
-    "macd": -4.513849107708722,
-    "macd_signal": -2.334933910558712,
-    "atr14": 13.462690774294954,
-    "adx14": 20.336083958380637,
-    "adx_pos": 25.79115688338005,
-    "adx_neg": 20.15648788809554,
-    "bb_high": 485.11896270064955,
-    "bb_low": 419.7760372993503,
-    "bb_mid": 452.44749999999993,
-    "vwap20": 455.1742885648394,
+    "date": "2026-09-23",
+    "close": 450.2,
+    "prev_close": 440.1,
+    "change_pct": 2.294932969779588,
+    "ema20": 447.27626857021716,
+    "ema50": 444.0383163759601,
+    "ema200": 417.71427926809207,
+    "rsi14": 51.36718383427464,
+    "macd": -3.6249866468270397,
+    "macd_signal": -2.5929444578123775,
+    "atr14": 13.465355718988173,
+    "adx14": 19.75945209823545,
+    "adx_pos": 23.94419159725932,
+    "adx_neg": 18.713034475448683,
+    "bb_high": 482.2207388245437,
+    "bb_low": 420.2042611754563,
+    "bb_mid": 451.2125,
+    "vwap20": 453.55416747898215,
     "high_52w": 509.0,
     "low_52w": 306.3,
-    "volume": 4761149.0,
-    "avg_volume20": 7203913.7
+    "volume": 11532732.0,
+    "avg_volume20": 7427328.0
   },
   "price_history": [
-    {
-      "date": "2026-03-30",
-      "close": 394.8,
-      "ema50": 441.08
-    },
     {
       "date": "2026-04-01",
       "close": 396.05,
@@ -626,45 +621,51 @@
       "date": "2026-09-22",
       "close": 440.1,
       "ema50": 443.79
+    },
+    {
+      "date": "2026-09-23",
+      "close": 450.2,
+      "ema50": 444.04
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 440.10 vs EMA20 446.97",
-      "ema20_above_ema50": "EMA20 446.97 vs EMA50 443.79",
-      "ema50_above_ema200": "EMA50 443.79 vs EMA200 417.39",
-      "rsi_above_50": "RSI(14) 45.14 vs 50",
-      "macd_bullish": "MACD -4.51 vs signal -2.33",
-      "adx_trending_up": "ADX(14) 20.34 vs 20, +DI 25.79 vs -DI 20.16",
-      "price_above_vwap20": "Close 440.10 vs 20d VWAP 455.17",
-      "price_above_bb_mid": "Close 440.10 vs BB mid 452.45"
+      "price_above_ema20": "Close 450.20 vs EMA20 447.28",
+      "ema20_above_ema50": "EMA20 447.28 vs EMA50 444.04",
+      "ema50_above_ema200": "EMA50 444.04 vs EMA200 417.71",
+      "rsi_above_50": "RSI(14) 51.37 vs 50",
+      "macd_bullish": "MACD -3.62 vs signal -2.59",
+      "adx_trending_up": "ADX(14) 19.76 vs 20, +DI 23.94 vs -DI 18.71",
+      "price_above_vwap20": "Close 450.20 vs 20d VWAP 453.55",
+      "price_above_bb_mid": "Close 450.20 vs BB mid 451.21"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "adx_trending_up"
+      "rsi_above_50"
     ],
-    "flag_count": 3,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: near buy zone"
+        "4/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -677,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.46 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 45.1",
-        "below_ema200": "Close 440.10 vs EMA200 417.39",
-        "extended_above_ema20": "Close 440.10 vs EMA20 446.97 (-1.5%)",
-        "large_day_move": "Day change -1.0%",
-        "near_52w_low": "Close 440.10 vs 52w low 306.30"
+        "atr_high": "ATR 13.47 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 51.4",
+        "below_ema200": "Close 450.20 vs EMA200 417.71",
+        "extended_above_ema20": "Close 450.20 vs EMA20 447.28 (+0.7%)",
+        "large_day_move": "Day change +2.3%",
+        "near_52w_low": "Close 450.20 vs 52w low 306.30"
       },
       "conditions_on": [
         "atr_high"
@@ -693,13 +694,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "bearish",
+      "daily": "bullish",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -707,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-22T14:51:06.207823+00:00"
+  "updated_at": "2026-09-23T15:01:15.984697+00:00"
 }

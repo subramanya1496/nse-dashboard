@@ -3,35 +3,30 @@
   "name": "Motilal Oswal Financial Services",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-09-22",
-    "close": 1007.0,
-    "prev_close": 995.0,
-    "change_pct": 1.2060301507537687,
-    "ema20": 1000.9096721732394,
-    "ema50": 968.8988676253854,
-    "ema200": 897.1608618106915,
-    "rsi14": 53.47616888595972,
-    "macd": 11.331711615554127,
-    "macd_signal": 18.423546035268036,
-    "atr14": 28.495665506159575,
-    "adx14": 24.107049077310673,
-    "adx_pos": 22.61670039987465,
-    "adx_neg": 17.39575221776602,
-    "bb_high": 1062.0652904492867,
-    "bb_low": 977.4547095507131,
-    "bb_mid": 1019.7599999999999,
-    "vwap20": 1021.0847130863068,
+    "date": "2026-09-23",
+    "close": 1042.5,
+    "prev_close": 1007.0,
+    "change_pct": 3.5253227408142997,
+    "ema20": 1004.8706557757878,
+    "ema50": 971.7851795453154,
+    "ema200": 898.539036965297,
+    "rsi14": 60.62572370429158,
+    "macd": 13.415747792629304,
+    "macd_signal": 17.421986386849373,
+    "atr14": 30.103117970329716,
+    "adx14": 24.448104126453547,
+    "adx_pos": 27.710022536202526,
+    "adx_neg": 15.290646684107879,
+    "bb_high": 1064.5523819880275,
+    "bb_low": 978.0676180119721,
+    "bb_mid": 1021.3099999999998,
+    "vwap20": 1024.452934026993,
     "high_52w": 1097.1,
     "low_52w": 614.9,
-    "volume": 813525.0,
-    "avg_volume20": 830916.25
+    "volume": 2096581.0,
+    "avg_volume20": 843939.35
   },
   "price_history": [
-    {
-      "date": "2026-03-30",
-      "close": 632.75,
-      "ema50": 737.22
-    },
     {
       "date": "2026-04-01",
       "close": 680.0,
@@ -180,7 +175,7 @@
     {
       "date": "2026-05-15",
       "close": 843.3,
-      "ema50": 791.18
+      "ema50": 791.17
     },
     {
       "date": "2026-05-18",
@@ -315,7 +310,7 @@
     {
       "date": "2026-06-24",
       "close": 935.15,
-      "ema50": 858.19
+      "ema50": 858.18
     },
     {
       "date": "2026-06-25",
@@ -626,6 +621,11 @@
       "date": "2026-09-22",
       "close": 1007.0,
       "ema50": 968.9
+    },
+    {
+      "date": "2026-09-23",
+      "close": 1042.5,
+      "ema50": 971.79
     }
   ],
   "flags": {
@@ -636,37 +636,39 @@
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,007.00 vs EMA20 1,000.91",
-      "ema20_above_ema50": "EMA20 1,000.91 vs EMA50 968.90",
-      "ema50_above_ema200": "EMA50 968.90 vs EMA200 897.16",
-      "rsi_above_50": "RSI(14) 53.48 vs 50",
-      "macd_bullish": "MACD 11.33 vs signal 18.42",
-      "adx_trending_up": "ADX(14) 24.11 vs 20, +DI 22.62 vs -DI 17.40",
-      "price_above_vwap20": "Close 1,007.00 vs 20d VWAP 1,021.08",
-      "price_above_bb_mid": "Close 1,007.00 vs BB mid 1,019.76"
+      "price_above_ema20": "Close 1,042.50 vs EMA20 1,004.87",
+      "ema20_above_ema50": "EMA20 1,004.87 vs EMA50 971.79",
+      "ema50_above_ema200": "EMA50 971.79 vs EMA200 898.54",
+      "rsi_above_50": "RSI(14) 60.63 vs 50",
+      "macd_bullish": "MACD 13.42 vs signal 17.42",
+      "adx_trending_up": "ADX(14) 24.45 vs 20, +DI 27.71 vs -DI 15.29",
+      "price_above_vwap20": "Close 1,042.50 vs 20d VWAP 1,024.45",
+      "price_above_bb_mid": "Close 1,042.50 vs BB mid 1,021.31"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50",
-      "adx_trending_up"
+      "adx_trending_up",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "5/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -679,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 28.50 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 53.5",
-        "below_ema200": "Close 1,007.00 vs EMA200 897.16",
-        "extended_above_ema20": "Close 1,007.00 vs EMA20 1,000.91 (+0.6%)",
-        "large_day_move": "Day change +1.2%",
-        "near_52w_low": "Close 1,007.00 vs 52w low 614.90"
+        "atr_high": "ATR 30.10 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 60.6",
+        "below_ema200": "Close 1,042.50 vs EMA200 898.54",
+        "extended_above_ema20": "Close 1,042.50 vs EMA20 1,004.87 (+3.7%)",
+        "large_day_move": "Day change +3.5%",
+        "near_52w_low": "Close 1,042.50 vs 52w low 614.90"
       },
       "conditions_on": [
         "atr_high"
@@ -695,9 +697,9 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -709,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-22T14:50:33.835584+00:00"
+  "updated_at": "2026-09-23T15:00:43.605511+00:00"
 }

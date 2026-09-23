@@ -3,39 +3,34 @@
   "name": "Jio Financial Services",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-09-22",
-    "close": 230.7,
-    "prev_close": 229.97,
-    "change_pct": 0.3174327086141626,
-    "ema20": 233.90711138072848,
-    "ema50": 238.6317067469364,
-    "ema200": 254.63648874969795,
-    "rsi14": 40.76669386459767,
-    "macd": -4.159417092930823,
-    "macd_signal": -4.106618557688273,
-    "atr14": 4.310517876834015,
-    "adx14": 22.426869172468,
-    "adx_pos": 19.49816365173846,
-    "adx_neg": 26.054465202634862,
-    "bb_high": 244.41005759019416,
-    "bb_low": 223.65994240980584,
-    "bb_mid": 234.035,
-    "vwap20": 234.03116875838313,
+    "date": "2026-09-23",
+    "close": 232.15,
+    "prev_close": 230.7,
+    "change_pct": 0.6285218899003109,
+    "ema20": 233.7397674397069,
+    "ema50": 238.37753592080244,
+    "ema200": 254.54636911679052,
+    "rsi14": 43.7916764881621,
+    "macd": -3.7833753206612073,
+    "macd_signal": -4.04196991049723,
+    "atr14": 4.134766599875766,
+    "adx14": 21.85300752480658,
+    "adx_pos": 18.875022540767397,
+    "adx_neg": 25.22179148667586,
+    "bb_high": 242.9995057675272,
+    "bb_low": 223.97049423247276,
+    "bb_mid": 233.48499999999999,
+    "vwap20": 233.5975723341461,
     "high_52w": 321.6,
     "low_52w": 223.3,
-    "volume": 8586144.0,
-    "avg_volume20": 11280432.6
+    "volume": 6949246.0,
+    "avg_volume20": 11137860.45
   },
   "price_history": [
     {
-      "date": "2026-03-30",
-      "close": 224.1,
-      "ema50": 253.06
-    },
-    {
       "date": "2026-04-01",
       "close": 231.93,
-      "ema50": 252.23
+      "ema50": 252.24
     },
     {
       "date": "2026-04-02",
@@ -145,7 +140,7 @@
     {
       "date": "2026-05-06",
       "close": 252.44,
-      "ema50": 247.81
+      "ema50": 247.82
     },
     {
       "date": "2026-05-07",
@@ -160,7 +155,7 @@
     {
       "date": "2026-05-11",
       "close": 240.33,
-      "ema50": 247.69
+      "ema50": 247.7
     },
     {
       "date": "2026-05-12",
@@ -200,7 +195,7 @@
     {
       "date": "2026-05-21",
       "close": 235.78,
-      "ema50": 243.75
+      "ema50": 243.76
     },
     {
       "date": "2026-05-22",
@@ -285,7 +280,7 @@
     {
       "date": "2026-06-16",
       "close": 241.95,
-      "ema50": 240.05
+      "ema50": 240.06
     },
     {
       "date": "2026-06-17",
@@ -626,6 +621,11 @@
       "date": "2026-09-22",
       "close": 230.7,
       "ema50": 238.63
+    },
+    {
+      "date": "2026-09-23",
+      "close": 232.15,
+      "ema50": 238.38
     }
   ],
   "flags": {
@@ -634,23 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 230.70 vs EMA20 233.91",
-      "ema20_above_ema50": "EMA20 233.91 vs EMA50 238.63",
-      "ema50_above_ema200": "EMA50 238.63 vs EMA200 254.64",
-      "rsi_above_50": "RSI(14) 40.77 vs 50",
-      "macd_bullish": "MACD -4.16 vs signal -4.11",
-      "adx_trending_up": "ADX(14) 22.43 vs 20, +DI 19.50 vs -DI 26.05",
-      "price_above_vwap20": "Close 230.70 vs 20d VWAP 234.03",
-      "price_above_bb_mid": "Close 230.70 vs BB mid 234.03"
+      "price_above_ema20": "Close 232.15 vs EMA20 233.74",
+      "ema20_above_ema50": "EMA20 233.74 vs EMA50 238.38",
+      "ema50_above_ema200": "EMA50 238.38 vs EMA200 254.55",
+      "rsi_above_50": "RSI(14) 43.79 vs 50",
+      "macd_bullish": "MACD -3.78 vs signal -4.04",
+      "adx_trending_up": "ADX(14) 21.85 vs 20, +DI 18.88 vs -DI 25.22",
+      "price_above_vwap20": "Close 232.15 vs 20d VWAP 233.60",
+      "price_above_bb_mid": "Close 232.15 vs BB mid 233.48"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "macd_bullish"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,12 +674,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.31 = 1.9% of price",
-        "rsi_extreme": "RSI(14) 40.8",
-        "below_ema200": "Close 230.70 vs EMA200 254.64",
-        "extended_above_ema20": "Close 230.70 vs EMA20 233.91 (-1.4%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 230.70 vs 52w low 223.30"
+        "atr_high": "ATR 4.13 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 43.8",
+        "below_ema200": "Close 232.15 vs EMA200 254.55",
+        "extended_above_ema20": "Close 232.15 vs EMA20 233.74 (-0.7%)",
+        "large_day_move": "Day change +0.6%",
+        "near_52w_low": "Close 232.15 vs 52w low 223.30"
       },
       "conditions_on": [
         "below_ema200",
@@ -703,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-22T14:50:18.569138+00:00"
+  "updated_at": "2026-09-23T15:00:28.407721+00:00"
 }
