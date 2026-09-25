@@ -3,35 +3,30 @@
   "name": "Tata Technologies",
   "sector": "IT",
   "indicators": {
-    "date": "2026-09-24",
-    "close": 717.75,
-    "prev_close": 716.45,
-    "change_pct": 0.18145020587618876,
-    "ema20": 760.4401396692954,
-    "ema50": 767.4719971919739,
-    "ema200": 710.3416401072532,
-    "rsi14": 32.71937269443909,
-    "macd": -21.639767620295174,
-    "macd_signal": -13.398669875342852,
-    "atr14": 25.945653528533303,
-    "adx14": 15.974051674179963,
-    "adx_pos": 15.59931189834356,
-    "adx_neg": 22.805405770334016,
-    "bb_high": 850.564392215839,
-    "bb_low": 696.8406077841612,
-    "bb_mid": 773.7025000000001,
-    "vwap20": 780.6286932314732,
+    "date": "2026-09-25",
+    "close": 703.05,
+    "prev_close": 717.75,
+    "change_pct": -2.048066875653089,
+    "ema20": 754.9744120817434,
+    "ema50": 764.9456465323128,
+    "ema200": 710.2901853991569,
+    "rsi14": 29.672066399013673,
+    "macd": -23.375876127407764,
+    "macd_signal": -15.39411112578975,
+    "atr14": 25.3602497050496,
+    "adx14": 16.674632546990072,
+    "adx_pos": 14.819441856101568,
+    "adx_neg": 25.115556659330394,
+    "bb_high": 850.629838325982,
+    "bb_low": 687.1451616740181,
+    "bb_mid": 768.8875,
+    "vwap20": 777.9049444007676,
     "high_52w": 891.0,
     "low_52w": 507.4,
-    "volume": 1085643.0,
-    "avg_volume20": 1072359.9
+    "volume": 652847.0,
+    "avg_volume20": 1075323.6
   },
   "price_history": [
-    {
-      "date": "2026-04-02",
-      "close": 541.1,
-      "ema50": 580.38
-    },
     {
       "date": "2026-04-06",
       "close": 543.3,
@@ -360,7 +355,7 @@
     {
       "date": "2026-07-10",
       "close": 718.55,
-      "ema50": 696.14
+      "ema50": 696.15
     },
     {
       "date": "2026-07-13",
@@ -626,6 +621,11 @@
       "date": "2026-09-24",
       "close": 717.75,
       "ema50": 767.47
+    },
+    {
+      "date": "2026-09-25",
+      "close": 703.05,
+      "ema50": 764.95
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 717.75 vs EMA20 760.44",
-      "ema20_above_ema50": "EMA20 760.44 vs EMA50 767.47",
-      "ema50_above_ema200": "EMA50 767.47 vs EMA200 710.34",
-      "rsi_above_50": "RSI(14) 32.72 vs 50",
-      "macd_bullish": "MACD -21.64 vs signal -13.40",
-      "adx_trending_up": "ADX(14) 15.97 vs 20, +DI 15.60 vs -DI 22.81",
-      "price_above_vwap20": "Close 717.75 vs 20d VWAP 780.63",
-      "price_above_bb_mid": "Close 717.75 vs BB mid 773.70"
+      "price_above_ema20": "Close 703.05 vs EMA20 754.97",
+      "ema20_above_ema50": "EMA20 754.97 vs EMA50 764.95",
+      "ema50_above_ema200": "EMA50 764.95 vs EMA200 710.29",
+      "rsi_above_50": "RSI(14) 29.67 vs 50",
+      "macd_bullish": "MACD -23.38 vs signal -15.39",
+      "adx_trending_up": "ADX(14) 16.67 vs 20, +DI 14.82 vs -DI 25.12",
+      "price_above_vwap20": "Close 703.05 vs 20d VWAP 777.90",
+      "price_above_bb_mid": "Close 703.05 vs BB mid 768.89"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -668,25 +668,26 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 25.95 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 32.7",
-        "below_ema200": "Close 717.75 vs EMA200 710.34",
-        "extended_above_ema20": "Close 717.75 vs EMA20 760.44 (-5.6%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 717.75 vs 52w low 507.40"
+        "atr_high": "ATR 25.36 = 3.6% of price",
+        "rsi_extreme": "RSI(14) 29.7",
+        "below_ema200": "Close 703.05 vs EMA200 710.29",
+        "extended_above_ema20": "Close 703.05 vs EMA20 754.97 (-6.9%)",
+        "large_day_move": "Day change -2.0%",
+        "near_52w_low": "Close 703.05 vs 52w low 507.40"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-24T15:03:44.566867+00:00"
+  "updated_at": "2026-09-25T15:15:33.158418+00:00"
 }

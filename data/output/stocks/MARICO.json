@@ -3,35 +3,30 @@
   "name": "Marico Ltd",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-09-24",
-    "close": 824.55,
-    "prev_close": 832.3,
-    "change_pct": -0.9311546317433618,
-    "ema20": 822.9618232864146,
-    "ema50": 830.9638766670795,
-    "ema200": 802.0219549655826,
-    "rsi14": 49.380056357382834,
-    "macd": -5.323718082062442,
-    "macd_signal": -8.564963615264869,
-    "atr14": 15.623107229570227,
-    "adx14": 30.276579124267162,
-    "adx_pos": 13.355254605291364,
-    "adx_neg": 20.591540879950333,
-    "bb_high": 843.5989322896954,
-    "bb_low": 793.9610677103045,
-    "bb_mid": 818.78,
-    "vwap20": 819.7568153246293,
+    "date": "2026-09-25",
+    "close": 819.0,
+    "prev_close": 824.55,
+    "change_pct": -0.6730944151355229,
+    "ema20": 822.5845067829468,
+    "ema50": 830.4947096171353,
+    "ema200": 802.2354329116719,
+    "rsi14": 47.19111676397039,
+    "macd": -5.032994504146927,
+    "macd_signal": -7.858569793112758,
+    "atr14": 15.75717099887194,
+    "adx14": 30.528178158139333,
+    "adx_pos": 12.295796137186874,
+    "adx_neg": 24.8510438558594,
+    "bb_high": 841.9412073172048,
+    "bb_low": 794.1687926827951,
+    "bb_mid": 818.055,
+    "vwap20": 819.0081097638144,
     "high_52w": 889.1,
     "low_52w": 690.3,
-    "volume": 919851.0,
-    "avg_volume20": 1926095.95
+    "volume": 459905.0,
+    "avg_volume20": 1845011.5
   },
   "price_history": [
-    {
-      "date": "2026-04-02",
-      "close": 761.35,
-      "ema50": 757.2
-    },
     {
       "date": "2026-04-06",
       "close": 750.55,
@@ -626,46 +621,49 @@
       "date": "2026-09-24",
       "close": 824.55,
       "ema50": 830.96
+    },
+    {
+      "date": "2026-09-25",
+      "close": 819.0,
+      "ema50": 830.49
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
+      "price_above_vwap20": false,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 824.55 vs EMA20 822.96",
-      "ema20_above_ema50": "EMA20 822.96 vs EMA50 830.96",
-      "ema50_above_ema200": "EMA50 830.96 vs EMA200 802.02",
-      "rsi_above_50": "RSI(14) 49.38 vs 50",
-      "macd_bullish": "MACD -5.32 vs signal -8.56",
-      "adx_trending_up": "ADX(14) 30.28 vs 20, +DI 13.36 vs -DI 20.59",
-      "price_above_vwap20": "Close 824.55 vs 20d VWAP 819.76",
-      "price_above_bb_mid": "Close 824.55 vs BB mid 818.78"
+      "price_above_ema20": "Close 819.00 vs EMA20 822.58",
+      "ema20_above_ema50": "EMA20 822.58 vs EMA50 830.49",
+      "ema50_above_ema200": "EMA50 830.49 vs EMA200 802.24",
+      "rsi_above_50": "RSI(14) 47.19 vs 50",
+      "macd_bullish": "MACD -5.03 vs signal -7.86",
+      "adx_trending_up": "ADX(14) 30.53 vs 20, +DI 12.30 vs -DI 24.85",
+      "price_above_vwap20": "Close 819.00 vs 20d VWAP 819.01",
+      "price_above_bb_mid": "Close 819.00 vs BB mid 818.05"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema50_above_ema200",
       "macd_bullish",
-      "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "5/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -679,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 15.62 = 1.9% of price",
-        "rsi_extreme": "RSI(14) 49.4",
-        "below_ema200": "Close 824.55 vs EMA200 802.02",
-        "extended_above_ema20": "Close 824.55 vs EMA20 822.96 (+0.2%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 824.55 vs 52w low 690.30"
+        "atr_high": "ATR 15.76 = 1.9% of price",
+        "rsi_extreme": "RSI(14) 47.2",
+        "below_ema200": "Close 819.00 vs EMA200 802.24",
+        "extended_above_ema20": "Close 819.00 vs EMA20 822.58 (-0.4%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 819.00 vs 52w low 690.30"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -707,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-24T15:03:11.390517+00:00"
+  "updated_at": "2026-09-25T15:14:59.983638+00:00"
 }
