@@ -3,35 +3,30 @@
   "name": "Tata Capital",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-09-25",
-    "close": 339.15,
-    "prev_close": 336.25,
-    "change_pct": 0.8624535315985062,
-    "ema20": 353.07559462291664,
-    "ema50": 355.70745265711747,
-    "ema200": 343.2594476280117,
-    "rsi14": 37.930981283799674,
-    "macd": -6.408032110930776,
-    "macd_signal": -3.9264532949290296,
-    "atr14": 9.028481820406187,
-    "adx14": 18.847317402955408,
-    "adx_pos": 17.71068221112248,
-    "adx_neg": 27.704734239276945,
-    "bb_high": 382.97565979920387,
-    "bb_low": 332.24934020079615,
-    "bb_mid": 357.6125,
-    "vwap20": 354.08700634508386,
+    "date": "2026-09-28",
+    "close": 328.1,
+    "prev_close": 339.15,
+    "change_pct": -3.258145363408508,
+    "ema20": 350.6969665635912,
+    "ema50": 354.6248074548776,
+    "ema200": 343.10860735310615,
+    "rsi14": 32.504403251506744,
+    "macd": -7.561402163918046,
+    "macd_signal": -4.653443068726833,
+    "atr14": 9.251447404662887,
+    "adx14": 19.665943825480344,
+    "adx_pos": 16.04928357911869,
+    "adx_neg": 30.00852416801755,
+    "bb_high": 382.239874455877,
+    "bb_low": 328.22512554412293,
+    "bb_mid": 355.23249999999996,
+    "vwap20": 351.32077610872244,
     "high_52w": 390.2,
     "low_52w": 296.0,
-    "volume": 1484301.0,
-    "avg_volume20": 1230908.35
+    "volume": 1993842.0,
+    "avg_volume20": 1272685.95
   },
   "price_history": [
-    {
-      "date": "2026-04-06",
-      "close": 308.0,
-      "ema50": 327.14
-    },
     {
       "date": "2026-04-07",
       "close": 308.45,
@@ -626,6 +621,11 @@
       "date": "2026-09-25",
       "close": 339.15,
       "ema50": 355.71
+    },
+    {
+      "date": "2026-09-28",
+      "close": 328.1,
+      "ema50": 354.62
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 339.15 vs EMA20 353.08",
-      "ema20_above_ema50": "EMA20 353.08 vs EMA50 355.71",
-      "ema50_above_ema200": "EMA50 355.71 vs EMA200 343.26",
-      "rsi_above_50": "RSI(14) 37.93 vs 50",
-      "macd_bullish": "MACD -6.41 vs signal -3.93",
-      "adx_trending_up": "ADX(14) 18.85 vs 20, +DI 17.71 vs -DI 27.70",
-      "price_above_vwap20": "Close 339.15 vs 20d VWAP 354.09",
-      "price_above_bb_mid": "Close 339.15 vs BB mid 357.61"
+      "price_above_ema20": "Close 328.10 vs EMA20 350.70",
+      "ema20_above_ema50": "EMA20 350.70 vs EMA50 354.62",
+      "ema50_above_ema200": "EMA50 354.62 vs EMA200 343.11",
+      "rsi_above_50": "RSI(14) 32.50 vs 50",
+      "macd_bullish": "MACD -7.56 vs signal -4.65",
+      "adx_trending_up": "ADX(14) 19.67 vs 20, +DI 16.05 vs -DI 30.01",
+      "price_above_vwap20": "Close 328.10 vs 20d VWAP 351.32",
+      "price_above_bb_mid": "Close 328.10 vs BB mid 355.23"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.03 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 37.9",
-        "below_ema200": "Close 339.15 vs EMA200 343.26",
-        "extended_above_ema20": "Close 339.15 vs EMA20 353.08 (-3.9%)",
-        "large_day_move": "Day change +0.9%",
-        "near_52w_low": "Close 339.15 vs 52w low 296.00"
+        "atr_high": "ATR 9.25 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 32.5",
+        "below_ema200": "Close 328.10 vs EMA200 343.11",
+        "extended_above_ema20": "Close 328.10 vs EMA20 350.70 (-6.4%)",
+        "large_day_move": "Day change -3.3%",
+        "near_52w_low": "Close 328.10 vs 52w low 296.00"
       },
       "conditions_on": [
         "atr_high",
@@ -691,7 +692,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-25T15:15:29.988854+00:00"
+  "updated_at": "2026-09-28T18:10:47.704305+00:00"
 }
