@@ -3,35 +3,30 @@
   "name": "NCC Ltd",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 130.29,
-    "prev_close": 132.82,
-    "change_pct": -1.9048336093961762,
-    "ema20": 138.45373561039474,
-    "ema50": 142.06322844134638,
-    "ema200": 155.44691570766307,
-    "rsi14": 31.972885549350565,
-    "macd": -3.3640802617159977,
-    "macd_signal": -2.273092168751776,
-    "atr14": 4.05240063451692,
-    "adx14": 19.856170357412463,
-    "adx_pos": 14.709217144886786,
-    "adx_neg": 26.276325719318695,
-    "bb_high": 153.18788832432753,
-    "bb_low": 127.9251116756724,
-    "bb_mid": 140.55649999999997,
-    "vwap20": 141.34124129453835,
+    "date": "2026-09-29",
+    "close": 128.27,
+    "prev_close": 130.29,
+    "change_pct": -1.550387596899211,
+    "ema20": 137.4838560284524,
+    "ema50": 141.5223175220779,
+    "ema200": 155.17649863594502,
+    "rsi14": 29.67190411861486,
+    "macd": -3.745015797224255,
+    "macd_signal": -2.5674768944462723,
+    "atr14": 4.523657732051427,
+    "adx14": 19.20775516140648,
+    "adx_pos": 17.604264349511986,
+    "adx_neg": 21.857605839378135,
+    "bb_high": 152.72318671810703,
+    "bb_low": 126.37981328189292,
+    "bb_mid": 139.55149999999998,
+    "vwap20": 136.83207601686308,
     "high_52w": 217.25,
-    "low_52w": 130.0,
-    "volume": 1575538.0,
-    "avg_volume20": 2108441.7
+    "low_52w": 126.65,
+    "volume": 28505185.0,
+    "avg_volume20": 3457057.5
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 140.28,
-      "ema50": 146.92
-    },
     {
       "date": "2026-04-08",
       "close": 147.08,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 130.29,
       "ema50": 142.06
+    },
+    {
+      "date": "2026-09-29",
+      "close": 128.27,
+      "ema50": 141.52
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 130.29 vs EMA20 138.45",
-      "ema20_above_ema50": "EMA20 138.45 vs EMA50 142.06",
-      "ema50_above_ema200": "EMA50 142.06 vs EMA200 155.45",
-      "rsi_above_50": "RSI(14) 31.97 vs 50",
-      "macd_bullish": "MACD -3.36 vs signal -2.27",
-      "adx_trending_up": "ADX(14) 19.86 vs 20, +DI 14.71 vs -DI 26.28",
-      "price_above_vwap20": "Close 130.29 vs 20d VWAP 141.34",
-      "price_above_bb_mid": "Close 130.29 vs BB mid 140.56"
+      "price_above_ema20": "Close 128.27 vs EMA20 137.48",
+      "ema20_above_ema50": "EMA20 137.48 vs EMA50 141.52",
+      "ema50_above_ema200": "EMA50 141.52 vs EMA200 155.18",
+      "rsi_above_50": "RSI(14) 29.67 vs 50",
+      "macd_bullish": "MACD -3.75 vs signal -2.57",
+      "adx_trending_up": "ADX(14) 19.21 vs 20, +DI 17.60 vs -DI 21.86",
+      "price_above_vwap20": "Close 128.27 vs 20d VWAP 136.83",
+      "price_above_bb_mid": "Close 128.27 vs BB mid 139.55"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.05 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 32.0",
-        "below_ema200": "Close 130.29 vs EMA200 155.45",
-        "extended_above_ema20": "Close 130.29 vs EMA20 138.45 (-5.9%)",
-        "large_day_move": "Day change -1.9%",
-        "near_52w_low": "Close 130.29 vs 52w low 130.00"
+        "atr_high": "ATR 4.52 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 29.7",
+        "below_ema200": "Close 128.27 vs EMA200 155.18",
+        "extended_above_ema20": "Close 128.27 vs EMA20 137.48 (-6.7%)",
+        "large_day_move": "Day change -1.6%",
+        "near_52w_low": "Close 128.27 vs 52w low 126.65"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:10:24.903894+00:00"
+  "updated_at": "2026-09-29T16:31:02.303462+00:00"
 }

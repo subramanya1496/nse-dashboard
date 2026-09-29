@@ -3,35 +3,30 @@
   "name": "Amber Enterprises India",
   "sector": "Electronics",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 6990.0,
-    "prev_close": 6960.0,
-    "change_pct": 0.43103448275862066,
-    "ema20": 7144.105506013276,
-    "ema50": 7293.970219717017,
-    "ema200": 7381.385129421924,
-    "rsi14": 40.6189315130086,
-    "macd": -115.34886470818856,
-    "macd_signal": -95.04605495998081,
-    "atr14": 165.4382551579986,
-    "adx14": 23.56561230806322,
-    "adx_pos": 14.46539990519481,
-    "adx_neg": 28.36934095619825,
-    "bb_high": 7628.323599552341,
-    "bb_low": 6775.026400447659,
-    "bb_mid": 7201.675,
-    "vwap20": 7218.666935917904,
+    "date": "2026-09-29",
+    "close": 6606.5,
+    "prev_close": 6990.0,
+    "change_pct": -5.486409155937054,
+    "ema20": 7092.904981631059,
+    "ema50": 7267.010603257527,
+    "ema200": 7373.6748296266815,
+    "rsi14": 29.933898009174968,
+    "macd": -143.78875502256506,
+    "macd_signal": -104.79459497249766,
+    "atr14": 181.7998083609987,
+    "adx14": 25.305268732563064,
+    "adx_pos": 12.223294656868584,
+    "adx_neg": 34.71788410626863,
+    "bb_high": 7606.6365876441205,
+    "bb_low": 6695.3634123558795,
+    "bb_mid": 7151.0,
+    "vwap20": 7143.4060683987655,
     "high_52w": 8974.0,
     "low_52w": 5400.5,
-    "volume": 124117.0,
-    "avg_volume20": 110708.25
+    "volume": 286219.0,
+    "avg_volume20": 119750.7
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 6433.5,
-      "ema50": 6886.68
-    },
     {
       "date": "2026-04-08",
       "close": 6944.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 6990.0,
       "ema50": 7293.97
+    },
+    {
+      "date": "2026-09-29",
+      "close": 6606.5,
+      "ema50": 7267.01
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 6,990.00 vs EMA20 7,144.11",
-      "ema20_above_ema50": "EMA20 7,144.11 vs EMA50 7,293.97",
-      "ema50_above_ema200": "EMA50 7,293.97 vs EMA200 7,381.39",
-      "rsi_above_50": "RSI(14) 40.62 vs 50",
-      "macd_bullish": "MACD -115.35 vs signal -95.05",
-      "adx_trending_up": "ADX(14) 23.57 vs 20, +DI 14.47 vs -DI 28.37",
-      "price_above_vwap20": "Close 6,990.00 vs 20d VWAP 7,218.67",
-      "price_above_bb_mid": "Close 6,990.00 vs BB mid 7,201.68"
+      "price_above_ema20": "Close 6,606.50 vs EMA20 7,092.90",
+      "ema20_above_ema50": "EMA20 7,092.90 vs EMA50 7,267.01",
+      "ema50_above_ema200": "EMA50 7,267.01 vs EMA200 7,373.67",
+      "rsi_above_50": "RSI(14) 29.93 vs 50",
+      "macd_bullish": "MACD -143.79 vs signal -104.79",
+      "adx_trending_up": "ADX(14) 25.31 vs 20, +DI 12.22 vs -DI 34.72",
+      "price_above_vwap20": "Close 6,606.50 vs 20d VWAP 7,143.41",
+      "price_above_bb_mid": "Close 6,606.50 vs BB mid 7,151.00"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,36 +659,39 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 165.44 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 40.6",
-        "below_ema200": "Close 6,990.00 vs EMA200 7,381.39",
-        "extended_above_ema20": "Close 6,990.00 vs EMA20 7,144.11 (-2.2%)",
-        "large_day_move": "Day change +0.4%",
-        "near_52w_low": "Close 6,990.00 vs 52w low 5,400.50"
+        "atr_high": "ATR 181.80 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 29.9",
+        "below_ema200": "Close 6,606.50 vs EMA200 7,373.67",
+        "extended_above_ema20": "Close 6,606.50 vs EMA20 7,092.90 (-6.9%)",
+        "large_day_move": "Day change -5.5%",
+        "near_52w_low": "Close 6,606.50 vs 52w low 5,400.50"
       },
       "conditions_on": [
-        "below_ema200"
+        "atr_high",
+        "below_ema200",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -702,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:20.494548+00:00"
+  "updated_at": "2026-09-29T16:29:57.859546+00:00"
 }

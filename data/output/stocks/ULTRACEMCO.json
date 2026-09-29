@@ -3,35 +3,30 @@
   "name": "UltraTech Cement",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 11025.0,
-    "prev_close": 11155.0,
-    "change_pct": -1.1653966831017482,
-    "ema20": 11129.62106982313,
-    "ema50": 11343.516573342271,
-    "ema200": 11666.291999292966,
-    "rsi14": 44.196998769034145,
-    "macd": -128.76062997454937,
-    "macd_signal": -165.32089388783515,
-    "atr14": 191.3376759740693,
-    "adx14": 20.767038402232483,
-    "adx_pos": 16.08726995066009,
-    "adx_neg": 21.066845610056927,
-    "bb_high": 11521.554227418208,
-    "bb_low": 10643.945772581792,
-    "bb_mid": 11082.75,
-    "vwap20": 11089.846388653257,
+    "date": "2026-09-29",
+    "close": 10829.0,
+    "prev_close": 11025.0,
+    "change_pct": -1.7777777777777777,
+    "ema20": 11100.990491744737,
+    "ema50": 11323.339452819044,
+    "ema200": 11657.96073561841,
+    "rsi14": 39.032837722809056,
+    "macd": -137.579241959902,
+    "macd_signal": -159.77256350224852,
+    "atr14": 192.0278419759215,
+    "adx14": 21.114656177272384,
+    "adx_pos": 14.884490028297623,
+    "adx_neg": 25.145705038369186,
+    "bb_high": 11469.546909764922,
+    "bb_low": 10633.85309023508,
+    "bb_mid": 11051.7,
+    "vwap20": 11045.180634710126,
     "high_52w": 13110.0,
     "low_52w": 10325.0,
-    "volume": 331811.0,
-    "avg_volume20": 270489.35
+    "volume": 514924.0,
+    "avg_volume20": 277182.7
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 10936.0,
-      "ema50": 11665.15
-    },
     {
       "date": "2026-04-08",
       "close": 11603.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 11025.0,
       "ema50": 11343.52
+    },
+    {
+      "date": "2026-09-29",
+      "close": 10829.0,
+      "ema50": 11323.34
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 11,025.00 vs EMA20 11,129.62",
-      "ema20_above_ema50": "EMA20 11,129.62 vs EMA50 11,343.52",
-      "ema50_above_ema200": "EMA50 11,343.52 vs EMA200 11,666.29",
-      "rsi_above_50": "RSI(14) 44.20 vs 50",
-      "macd_bullish": "MACD -128.76 vs signal -165.32",
-      "adx_trending_up": "ADX(14) 20.77 vs 20, +DI 16.09 vs -DI 21.07",
-      "price_above_vwap20": "Close 11,025.00 vs 20d VWAP 11,089.85",
-      "price_above_bb_mid": "Close 11,025.00 vs BB mid 11,082.75"
+      "price_above_ema20": "Close 10,829.00 vs EMA20 11,100.99",
+      "ema20_above_ema50": "EMA20 11,100.99 vs EMA50 11,323.34",
+      "ema50_above_ema200": "EMA50 11,323.34 vs EMA200 11,657.96",
+      "rsi_above_50": "RSI(14) 39.03 vs 50",
+      "macd_bullish": "MACD -137.58 vs signal -159.77",
+      "adx_trending_up": "ADX(14) 21.11 vs 20, +DI 14.88 vs -DI 25.15",
+      "price_above_vwap20": "Close 10,829.00 vs 20d VWAP 11,045.18",
+      "price_above_bb_mid": "Close 10,829.00 vs BB mid 11,051.70"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -671,26 +672,27 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 191.34 = 1.7% of price",
-        "rsi_extreme": "RSI(14) 44.2",
-        "below_ema200": "Close 11,025.00 vs EMA200 11,666.29",
-        "extended_above_ema20": "Close 11,025.00 vs EMA20 11,129.62 (-0.9%)",
-        "large_day_move": "Day change -1.2%",
-        "near_52w_low": "Close 11,025.00 vs 52w low 10,325.00"
+        "atr_high": "ATR 192.03 = 1.8% of price",
+        "rsi_extreme": "RSI(14) 39.0",
+        "below_ema200": "Close 10,829.00 vs EMA200 11,657.96",
+        "extended_above_ema20": "Close 10,829.00 vs EMA20 11,100.99 (-2.5%)",
+        "large_day_move": "Day change -1.8%",
+        "near_52w_low": "Close 10,829.00 vs 52w low 10,325.00"
       },
       "conditions_on": [
-        "below_ema200"
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:10:57.279314+00:00"
+  "updated_at": "2026-09-29T16:31:34.694438+00:00"
 }

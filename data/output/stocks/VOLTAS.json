@@ -3,35 +3,30 @@
   "name": "Voltas Ltd",
   "sector": "Consumer Durables",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 1135.5,
-    "prev_close": 1118.2,
-    "change_pct": 1.5471293149704841,
-    "ema20": 1151.6788656821273,
-    "ema50": 1206.377109564304,
-    "ema200": 1302.6961476939452,
-    "rsi14": 43.05453022737205,
-    "macd": -30.608369096548813,
-    "macd_signal": -33.61664910142997,
-    "atr14": 29.761996778844715,
-    "adx14": 29.99979869762972,
-    "adx_pos": 15.424680790017367,
-    "adx_neg": 23.418816595134565,
-    "bb_high": 1200.1976464991455,
-    "bb_low": 1093.0723535008544,
-    "bb_mid": 1146.635,
-    "vwap20": 1150.2103801131907,
+    "date": "2026-09-29",
+    "close": 1090.0,
+    "prev_close": 1135.5,
+    "change_pct": -4.007045354469397,
+    "ema20": 1145.8046879981152,
+    "ema50": 1201.813301346096,
+    "ema200": 1300.579768114901,
+    "rsi14": 35.863624745397914,
+    "macd": -31.87516654733099,
+    "macd_signal": -33.26835259061018,
+    "atr14": 31.05756843749867,
+    "adx14": 30.27618497324996,
+    "adx_pos": 13.725434963138364,
+    "adx_neg": 27.78453111590507,
+    "bb_high": 1195.6844121950135,
+    "bb_low": 1087.1455878049865,
+    "bb_mid": 1141.415,
+    "vwap20": 1142.169742590406,
     "high_52w": 1582.5,
-    "low_52w": 1090.8,
-    "volume": 933414.0,
-    "avg_volume20": 719656.25
+    "low_52w": 1090.0,
+    "volume": 1279969.0,
+    "avg_volume20": 717141.75
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 1220.2,
-      "ema50": 1388.09
-    },
     {
       "date": "2026-04-08",
       "close": 1264.8,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 1135.5,
       "ema50": 1206.38
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1090.0,
+      "ema50": 1201.81
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,135.50 vs EMA20 1,151.68",
-      "ema20_above_ema50": "EMA20 1,151.68 vs EMA50 1,206.38",
-      "ema50_above_ema200": "EMA50 1,206.38 vs EMA200 1,302.70",
-      "rsi_above_50": "RSI(14) 43.05 vs 50",
-      "macd_bullish": "MACD -30.61 vs signal -33.62",
-      "adx_trending_up": "ADX(14) 30.00 vs 20, +DI 15.42 vs -DI 23.42",
-      "price_above_vwap20": "Close 1,135.50 vs 20d VWAP 1,150.21",
-      "price_above_bb_mid": "Close 1,135.50 vs BB mid 1,146.63"
+      "price_above_ema20": "Close 1,090.00 vs EMA20 1,145.80",
+      "ema20_above_ema50": "EMA20 1,145.80 vs EMA50 1,201.81",
+      "ema50_above_ema200": "EMA50 1,201.81 vs EMA200 1,300.58",
+      "rsi_above_50": "RSI(14) 35.86 vs 50",
+      "macd_bullish": "MACD -31.88 vs signal -33.27",
+      "adx_trending_up": "ADX(14) 30.28 vs 20, +DI 13.73 vs -DI 27.78",
+      "price_above_vwap20": "Close 1,090.00 vs 20d VWAP 1,142.17",
+      "price_above_bb_mid": "Close 1,090.00 vs BB mid 1,141.41"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -670,29 +671,30 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 29.76 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 43.1",
-        "below_ema200": "Close 1,135.50 vs EMA200 1,302.70",
-        "extended_above_ema20": "Close 1,135.50 vs EMA20 1,151.68 (-1.4%)",
-        "large_day_move": "Day change +1.5%",
-        "near_52w_low": "Close 1,135.50 vs 52w low 1,090.80"
+        "atr_high": "ATR 31.06 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 35.9",
+        "below_ema200": "Close 1,090.00 vs EMA200 1,300.58",
+        "extended_above_ema20": "Close 1,090.00 vs EMA20 1,145.80 (-4.9%)",
+        "large_day_move": "Day change -4.0%",
+        "near_52w_low": "Close 1,090.00 vs 52w low 1,090.00"
       },
       "conditions_on": [
         "atr_high",
         "below_ema200",
+        "large_day_move",
         "near_52w_low"
       ],
-      "condition_count": 3,
+      "condition_count": 4,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "high"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:11:00.499915+00:00"
+  "updated_at": "2026-09-29T16:31:37.895527+00:00"
 }

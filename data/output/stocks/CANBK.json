@@ -3,35 +3,30 @@
   "name": "Canara Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 120.65,
-    "prev_close": 124.99,
-    "change_pct": -3.4722777822225694,
-    "ema20": 124.73379654692798,
-    "ema50": 126.49785472337396,
-    "ema200": 130.74309136810658,
-    "rsi14": 35.15618390651191,
-    "macd": -1.0672821193132478,
-    "macd_signal": -1.0622783502926072,
-    "atr14": 2.3856852733476837,
-    "adx14": 10.941442397567712,
-    "adx_pos": 20.046516826454056,
-    "adx_neg": 26.324960324856068,
-    "bb_high": 127.37952485519172,
-    "bb_low": 121.50547514480827,
-    "bb_mid": 124.4425,
-    "vwap20": 124.6670084926207,
+    "date": "2026-09-29",
+    "close": 119.51,
+    "prev_close": 120.65,
+    "change_pct": -0.9448818897637801,
+    "ema20": 124.23629211388722,
+    "ema50": 126.22382120481028,
+    "ema200": 130.6313193146926,
+    "rsi14": 32.73433382318693,
+    "macd": -1.3537496668569133,
+    "macd_signal": -1.1205726136054686,
+    "atr14": 2.402422039537135,
+    "adx14": 11.956069090958142,
+    "adx_pos": 18.484941727295134,
+    "adx_neg": 30.904523348332674,
+    "bb_high": 127.49908289450417,
+    "bb_low": 120.64691710549585,
+    "bb_mid": 124.07300000000001,
+    "vwap20": 124.07370431544597,
     "high_52w": 162.89,
     "low_52w": 116.93,
-    "volume": 16272294.0,
-    "avg_volume20": 11797110.35
+    "volume": 20596639.0,
+    "avg_volume20": 12035357.9
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 129.51,
-      "ema50": 140.74
-    },
     {
       "date": "2026-04-08",
       "close": 139.19,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 120.65,
       "ema50": 126.5
+    },
+    {
+      "date": "2026-09-29",
+      "close": 119.51,
+      "ema50": 126.22
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 120.65 vs EMA20 124.73",
-      "ema20_above_ema50": "EMA20 124.73 vs EMA50 126.50",
-      "ema50_above_ema200": "EMA50 126.50 vs EMA200 130.74",
-      "rsi_above_50": "RSI(14) 35.16 vs 50",
-      "macd_bullish": "MACD -1.07 vs signal -1.06",
-      "adx_trending_up": "ADX(14) 10.94 vs 20, +DI 20.05 vs -DI 26.32",
-      "price_above_vwap20": "Close 120.65 vs 20d VWAP 124.67",
-      "price_above_bb_mid": "Close 120.65 vs BB mid 124.44"
+      "price_above_ema20": "Close 119.51 vs EMA20 124.24",
+      "ema20_above_ema50": "EMA20 124.24 vs EMA50 126.22",
+      "ema50_above_ema200": "EMA50 126.22 vs EMA200 130.63",
+      "rsi_above_50": "RSI(14) 32.73 vs 50",
+      "macd_bullish": "MACD -1.35 vs signal -1.12",
+      "adx_trending_up": "ADX(14) 11.96 vs 20, +DI 18.48 vs -DI 30.90",
+      "price_above_vwap20": "Close 119.51 vs 20d VWAP 124.07",
+      "price_above_bb_mid": "Close 119.51 vs BB mid 124.07"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.39 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 35.2",
-        "below_ema200": "Close 120.65 vs EMA200 130.74",
-        "extended_above_ema20": "Close 120.65 vs EMA20 124.73 (-3.3%)",
-        "large_day_move": "Day change -3.5%",
-        "near_52w_low": "Close 120.65 vs 52w low 116.93"
+        "atr_high": "ATR 2.40 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 32.7",
+        "below_ema200": "Close 119.51 vs EMA200 130.63",
+        "extended_above_ema20": "Close 119.51 vs EMA20 124.24 (-3.8%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 119.51 vs 52w low 116.93"
       },
       "conditions_on": [
         "below_ema200",
@@ -689,7 +690,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:34.855155+00:00"
+  "updated_at": "2026-09-29T16:30:12.287941+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Indian Hotels Company",
   "sector": "Hospitality",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 711.0,
-    "prev_close": 726.8,
-    "change_pct": -2.173913043478255,
-    "ema20": 726.1634853297355,
-    "ema50": 722.8198681336403,
-    "ema200": 705.5526118270808,
-    "rsi14": 42.8642329696009,
-    "macd": 0.5065759061998278,
-    "macd_signal": 0.7834780444098701,
-    "atr14": 14.945481139146622,
-    "adx14": 16.371721193734967,
-    "adx_pos": 21.881364654853346,
-    "adx_neg": 22.54844671702903,
-    "bb_high": 744.9828486559016,
-    "bb_low": 705.8321513440984,
-    "bb_mid": 725.4075,
-    "vwap20": 726.0608382063049,
-    "high_52w": 776.95,
+    "date": "2026-09-29",
+    "close": 714.35,
+    "prev_close": 711.0,
+    "change_pct": 0.4711673699015503,
+    "ema20": 725.0383914888083,
+    "ema50": 722.487716442125,
+    "ema200": 705.6401480278064,
+    "rsi14": 44.636955265065616,
+    "macd": -0.4987174420600695,
+    "macd_signal": 0.5270389471158823,
+    "atr14": 15.39937534349329,
+    "adx14": 15.745349449659939,
+    "adx_pos": 19.7195280462174,
+    "adx_neg": 22.964595716238946,
+    "bb_high": 743.4884890373078,
+    "bb_low": 704.9715109626923,
+    "bb_mid": 724.23,
+    "vwap20": 721.0719170384605,
+    "high_52w": 772.35,
     "low_52w": 565.0,
-    "volume": 2741065.0,
-    "avg_volume20": 1850522.15
+    "volume": 26142773.0,
+    "avg_volume20": 2896610.9
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 600.4,
-      "ema50": 641.51
-    },
     {
       "date": "2026-04-08",
       "close": 636.35,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 711.0,
       "ema50": 722.82
+    },
+    {
+      "date": "2026-09-29",
+      "close": 714.35,
+      "ema50": 722.49
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 711.00 vs EMA20 726.16",
-      "ema20_above_ema50": "EMA20 726.16 vs EMA50 722.82",
-      "ema50_above_ema200": "EMA50 722.82 vs EMA200 705.55",
-      "rsi_above_50": "RSI(14) 42.86 vs 50",
-      "macd_bullish": "MACD 0.51 vs signal 0.78",
-      "adx_trending_up": "ADX(14) 16.37 vs 20, +DI 21.88 vs -DI 22.55",
-      "price_above_vwap20": "Close 711.00 vs 20d VWAP 726.06",
-      "price_above_bb_mid": "Close 711.00 vs BB mid 725.41"
+      "price_above_ema20": "Close 714.35 vs EMA20 725.04",
+      "ema20_above_ema50": "EMA20 725.04 vs EMA50 722.49",
+      "ema50_above_ema200": "EMA50 722.49 vs EMA200 705.64",
+      "rsi_above_50": "RSI(14) 44.64 vs 50",
+      "macd_bullish": "MACD -0.50 vs signal 0.53",
+      "adx_trending_up": "ADX(14) 15.75 vs 20, +DI 19.72 vs -DI 22.96",
+      "price_above_vwap20": "Close 714.35 vs 20d VWAP 721.07",
+      "price_above_bb_mid": "Close 714.35 vs BB mid 724.23"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -663,7 +663,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "2/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "patterns: volume surge, silent accumulation, near buy zone"
       ]
     },
     "risk": {
@@ -676,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 14.95 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 42.9",
-        "below_ema200": "Close 711.00 vs EMA200 705.55",
-        "extended_above_ema20": "Close 711.00 vs EMA20 726.16 (-2.1%)",
-        "large_day_move": "Day change -2.2%",
-        "near_52w_low": "Close 711.00 vs 52w low 565.00"
+        "atr_high": "ATR 15.40 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 44.6",
+        "below_ema200": "Close 714.35 vs EMA200 705.64",
+        "extended_above_ema20": "Close 714.35 vs EMA20 725.04 (-1.5%)",
+        "large_day_move": "Day change +0.5%",
+        "near_52w_low": "Close 714.35 vs 52w low 565.00"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -691,7 +691,7 @@
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": false,
+      "silent_accumulation": true,
       "near_buy_zone": true
     },
     "trend": {
@@ -704,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:10:00.492545+00:00"
+  "updated_at": "2026-09-29T16:30:37.875565+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "ABB India",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 6972.5,
-    "prev_close": 7052.5,
-    "change_pct": -1.1343495214462957,
-    "ema20": 7225.892488457417,
-    "ema50": 7286.135413938653,
-    "ema200": 6721.041441510635,
-    "rsi14": 35.08475884664283,
-    "macd": -106.43680222537569,
-    "macd_signal": -82.66421606910632,
-    "atr14": 163.834236531324,
-    "adx14": 22.53729938157036,
-    "adx_pos": 16.12960515393858,
-    "adx_neg": 27.907652842965025,
-    "bb_high": 7624.122231844352,
-    "bb_low": 6895.977768155648,
-    "bb_mid": 7260.05,
-    "vwap20": 7273.126346966335,
+    "date": "2026-09-29",
+    "close": 6660.5,
+    "prev_close": 6972.5,
+    "change_pct": -4.474722122624597,
+    "ema20": 7172.045584794806,
+    "ema50": 7261.600691823412,
+    "ema200": 6720.439039107545,
+    "rsi14": 26.610235751744113,
+    "macd": -137.92143973321163,
+    "macd_signal": -93.71566080192738,
+    "atr14": 174.4175053505151,
+    "adx14": 23.939070168589843,
+    "adx_pos": 14.068689471907359,
+    "adx_neg": 34.579989462606534,
+    "bb_high": 7618.864250425618,
+    "bb_low": 6803.435749574382,
+    "bb_mid": 7211.15,
+    "vwap20": 7226.342005428811,
     "high_52w": 7924.5,
     "low_52w": 4637.5,
-    "volume": 209202.0,
-    "avg_volume20": 180171.85
+    "volume": 213768.0,
+    "avg_volume20": 179499.1
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 6269.0,
-      "ema50": 5913.97
-    },
     {
       "date": "2026-04-08",
       "close": 6565.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 6972.5,
       "ema50": 7286.14
+    },
+    {
+      "date": "2026-09-29",
+      "close": 6660.5,
+      "ema50": 7261.6
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 6,972.50 vs EMA20 7,225.89",
-      "ema20_above_ema50": "EMA20 7,225.89 vs EMA50 7,286.14",
-      "ema50_above_ema200": "EMA50 7,286.14 vs EMA200 6,721.04",
-      "rsi_above_50": "RSI(14) 35.08 vs 50",
-      "macd_bullish": "MACD -106.44 vs signal -82.66",
-      "adx_trending_up": "ADX(14) 22.54 vs 20, +DI 16.13 vs -DI 27.91",
-      "price_above_vwap20": "Close 6,972.50 vs 20d VWAP 7,273.13",
-      "price_above_bb_mid": "Close 6,972.50 vs BB mid 7,260.05"
+      "price_above_ema20": "Close 6,660.50 vs EMA20 7,172.05",
+      "ema20_above_ema50": "EMA20 7,172.05 vs EMA50 7,261.60",
+      "ema50_above_ema200": "EMA50 7,261.60 vs EMA200 6,720.44",
+      "rsi_above_50": "RSI(14) 26.61 vs 50",
+      "macd_bullish": "MACD -137.92 vs signal -93.72",
+      "adx_trending_up": "ADX(14) 23.94 vs 20, +DI 14.07 vs -DI 34.58",
+      "price_above_vwap20": "Close 6,660.50 vs 20d VWAP 7,226.34",
+      "price_above_bb_mid": "Close 6,660.50 vs BB mid 7,211.15"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -666,25 +666,29 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 163.83 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 35.1",
-        "below_ema200": "Close 6,972.50 vs EMA200 6,721.04",
-        "extended_above_ema20": "Close 6,972.50 vs EMA20 7,225.89 (-3.5%)",
-        "large_day_move": "Day change -1.1%",
-        "near_52w_low": "Close 6,972.50 vs 52w low 4,637.50"
+        "atr_high": "ATR 174.42 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 26.6",
+        "below_ema200": "Close 6,660.50 vs EMA200 6,720.44",
+        "extended_above_ema20": "Close 6,660.50 vs EMA20 7,172.05 (-7.1%)",
+        "large_day_move": "Day change -4.5%",
+        "near_52w_low": "Close 6,660.50 vs 52w low 4,637.50"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "atr_high",
+        "below_ema200",
+        "large_day_move"
+      ],
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -702,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:15.210119+00:00"
+  "updated_at": "2026-09-29T16:29:54.151718+00:00"
 }

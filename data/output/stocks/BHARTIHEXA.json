@@ -3,35 +3,30 @@
   "name": "Bharti Hexacom",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 1425.0,
-    "prev_close": 1481.8,
-    "change_pct": -3.8331758671885514,
-    "ema20": 1515.8214265972122,
-    "ema50": 1537.1097045659903,
-    "ema200": 1589.942578819851,
-    "rsi14": 33.738750604290985,
-    "macd": -21.114287660804848,
-    "macd_signal": -15.251747366425239,
-    "atr14": 40.02447708984573,
-    "adx14": 14.251790978050744,
-    "adx_pos": 16.640959622492527,
-    "adx_neg": 31.730161282481355,
-    "bb_high": 1575.4590647112786,
-    "bb_low": 1454.320935288721,
-    "bb_mid": 1514.8899999999999,
-    "vwap20": 1518.7252916821587,
+    "date": "2026-09-29",
+    "close": 1409.4,
+    "prev_close": 1426.5,
+    "change_pct": -1.1987381703469968,
+    "ema20": 1505.8153043362533,
+    "ema50": 1532.157997581857,
+    "ema200": 1588.1609121114634,
+    "rsi14": 32.08600782652711,
+    "macd": -26.84813466975379,
+    "macd_signal": -17.551879527945676,
+    "atr14": 39.62272872628533,
+    "adx14": 15.889847841344373,
+    "adx_pos": 15.608995989813526,
+    "adx_neg": 34.088985000161095,
+    "bb_high": 1582.134249573748,
+    "bb_low": 1434.185750426252,
+    "bb_mid": 1508.16,
+    "vwap20": 1507.8932639029945,
     "high_52w": 1955.6,
-    "low_52w": 1422.0,
-    "volume": 85873.0,
-    "avg_volume20": 79341.5
+    "low_52w": 1398.0,
+    "volume": 171619.0,
+    "avg_volume20": 86403.15
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 1522.5,
-      "ema50": 1598.93
-    },
     {
       "date": "2026-04-08",
       "close": 1535.5,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-09-28",
-      "close": 1425.0,
-      "ema50": 1537.11
+      "close": 1426.5,
+      "ema50": 1537.17
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1409.4,
+      "ema50": 1532.16
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,425.00 vs EMA20 1,515.82",
-      "ema20_above_ema50": "EMA20 1,515.82 vs EMA50 1,537.11",
-      "ema50_above_ema200": "EMA50 1,537.11 vs EMA200 1,589.94",
-      "rsi_above_50": "RSI(14) 33.74 vs 50",
-      "macd_bullish": "MACD -21.11 vs signal -15.25",
-      "adx_trending_up": "ADX(14) 14.25 vs 20, +DI 16.64 vs -DI 31.73",
-      "price_above_vwap20": "Close 1,425.00 vs 20d VWAP 1,518.73",
-      "price_above_bb_mid": "Close 1,425.00 vs BB mid 1,514.89"
+      "price_above_ema20": "Close 1,409.40 vs EMA20 1,505.82",
+      "ema20_above_ema50": "EMA20 1,505.82 vs EMA50 1,532.16",
+      "ema50_above_ema200": "EMA50 1,532.16 vs EMA200 1,588.16",
+      "rsi_above_50": "RSI(14) 32.09 vs 50",
+      "macd_bullish": "MACD -26.85 vs signal -17.55",
+      "adx_trending_up": "ADX(14) 15.89 vs 20, +DI 15.61 vs -DI 34.09",
+      "price_above_vwap20": "Close 1,409.40 vs 20d VWAP 1,507.89",
+      "price_above_bb_mid": "Close 1,409.40 vs BB mid 1,508.16"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 40.02 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 33.7",
-        "below_ema200": "Close 1,425.00 vs EMA200 1,589.94",
-        "extended_above_ema20": "Close 1,425.00 vs EMA20 1,515.82 (-6.0%)",
-        "large_day_move": "Day change -3.8%",
-        "near_52w_low": "Close 1,425.00 vs 52w low 1,422.00"
+        "atr_high": "ATR 39.62 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 32.1",
+        "below_ema200": "Close 1,409.40 vs EMA200 1,588.16",
+        "extended_above_ema20": "Close 1,409.40 vs EMA20 1,505.82 (-6.4%)",
+        "large_day_move": "Day change -1.2%",
+        "near_52w_low": "Close 1,409.40 vs 52w low 1,398.00"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:30.853290+00:00"
+  "updated_at": "2026-09-29T16:30:08.271645+00:00"
 }

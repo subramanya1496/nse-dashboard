@@ -3,35 +3,30 @@
   "name": "Indus Towers",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 360.0,
-    "prev_close": 374.65,
-    "change_pct": -3.910316295208856,
-    "ema20": 377.16076046614734,
-    "ema50": 382.9811134968019,
-    "ema200": 400.1647206113849,
-    "rsi14": 37.421570187005784,
-    "macd": -2.1845243682397495,
-    "macd_signal": -1.4094885352090518,
-    "atr14": 9.4574537652158,
-    "adx14": 14.77822470443023,
-    "adx_pos": 17.315120842831423,
-    "adx_neg": 30.052470364627563,
-    "bb_high": 389.5696032376027,
-    "bb_low": 365.29539676239733,
-    "bb_mid": 377.4325,
-    "vwap20": 378.6652114814725,
+    "date": "2026-09-29",
+    "close": 367.55,
+    "prev_close": 360.0,
+    "change_pct": 2.0972222222222254,
+    "ema20": 376.24544994556186,
+    "ema50": 382.375971791045,
+    "ema200": 399.84019602818705,
+    "rsi14": 43.31936880763922,
+    "macd": -2.6888685281372204,
+    "macd_signal": -1.6653645337946856,
+    "atr14": 9.842635639128957,
+    "adx14": 15.643382310812868,
+    "adx_pos": 15.449116988720801,
+    "adx_neg": 26.813796720073885,
+    "bb_high": 388.05256821081014,
+    "bb_low": 364.6874317891899,
+    "bb_mid": 376.37,
+    "vwap20": 377.0605471880981,
     "high_52w": 481.5,
     "low_52w": 337.8,
-    "volume": 6106607.0,
-    "avg_volume20": 4400294.45
+    "volume": 8836110.0,
+    "avg_volume20": 4571563.25
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 423.15,
-      "ema50": 435.22
-    },
     {
       "date": "2026-04-08",
       "close": 440.95,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 360.0,
       "ema50": 382.98
+    },
+    {
+      "date": "2026-09-29",
+      "close": 367.55,
+      "ema50": 382.38
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 360.00 vs EMA20 377.16",
-      "ema20_above_ema50": "EMA20 377.16 vs EMA50 382.98",
-      "ema50_above_ema200": "EMA50 382.98 vs EMA200 400.16",
-      "rsi_above_50": "RSI(14) 37.42 vs 50",
-      "macd_bullish": "MACD -2.18 vs signal -1.41",
-      "adx_trending_up": "ADX(14) 14.78 vs 20, +DI 17.32 vs -DI 30.05",
-      "price_above_vwap20": "Close 360.00 vs 20d VWAP 378.67",
-      "price_above_bb_mid": "Close 360.00 vs BB mid 377.43"
+      "price_above_ema20": "Close 367.55 vs EMA20 376.25",
+      "ema20_above_ema50": "EMA20 376.25 vs EMA50 382.38",
+      "ema50_above_ema200": "EMA50 382.38 vs EMA200 399.84",
+      "rsi_above_50": "RSI(14) 43.32 vs 50",
+      "macd_bullish": "MACD -2.69 vs signal -1.67",
+      "adx_trending_up": "ADX(14) 15.64 vs 20, +DI 15.45 vs -DI 26.81",
+      "price_above_vwap20": "Close 367.55 vs 20d VWAP 377.06",
+      "price_above_bb_mid": "Close 367.55 vs BB mid 376.37"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.46 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 37.4",
-        "below_ema200": "Close 360.00 vs EMA200 400.16",
-        "extended_above_ema20": "Close 360.00 vs EMA20 377.16 (-4.5%)",
-        "large_day_move": "Day change -3.9%",
-        "near_52w_low": "Close 360.00 vs 52w low 337.80"
+        "atr_high": "ATR 9.84 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 43.3",
+        "below_ema200": "Close 367.55 vs EMA200 399.84",
+        "extended_above_ema20": "Close 367.55 vs EMA20 376.25 (-2.3%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 367.55 vs 52w low 337.80"
       },
       "conditions_on": [
         "atr_high",
@@ -689,7 +690,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:10:02.069395+00:00"
+  "updated_at": "2026-09-29T16:30:39.519223+00:00"
 }

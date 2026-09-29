@@ -3,35 +3,30 @@
   "name": "Abbott India",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 26770.0,
-    "prev_close": 26955.0,
-    "change_pct": -0.6863290669634576,
-    "ema20": 26537.484931878284,
-    "ema50": 26637.46873676908,
-    "ema200": 27491.23949876328,
-    "rsi14": 53.28317333118766,
-    "macd": 86.88460986689824,
-    "macd_signal": -59.01839655792324,
-    "atr14": 539.0970532141276,
-    "adx14": 27.840181956495552,
-    "adx_pos": 23.375489533917786,
-    "adx_neg": 14.85698649968853,
-    "bb_high": 27475.308365561996,
-    "bb_low": 24995.191634438004,
-    "bb_mid": 26235.25,
-    "vwap20": 26291.763537253122,
-    "high_52w": 30670.0,
+    "date": "2026-09-29",
+    "close": 27310.0,
+    "prev_close": 26740.0,
+    "change_pct": 2.131637995512341,
+    "ema20": 26608.47276149532,
+    "ema50": 26662.71217731101,
+    "ema200": 27489.140583426957,
+    "rsi14": 59.538432988655224,
+    "macd": 132.93105468305657,
+    "macd_signal": -21.01141229263351,
+    "atr14": 586.3044065559758,
+    "adx14": 28.56016551256835,
+    "adx_pos": 28.181551284974244,
+    "adx_neg": 12.68498169901523,
+    "bb_high": 27615.33425407013,
+    "bb_low": 24998.16574592987,
+    "bb_mid": 26306.75,
+    "vwap20": 26416.86148543662,
+    "high_52w": 30655.0,
     "low_52w": 25135.0,
-    "volume": 5515.0,
-    "avg_volume20": 8154.35
+    "volume": 20582.0,
+    "avg_volume20": 8849.25
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 25665.0,
-      "ema50": 26868.59
-    },
     {
       "date": "2026-04-08",
       "close": 25850.0,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-09-28",
-      "close": 26770.0,
-      "ema50": 26637.47
+      "close": 26740.0,
+      "ema50": 26636.29
+    },
+    {
+      "date": "2026-09-29",
+      "close": 27310.0,
+      "ema50": 26662.71
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 26,770.00 vs EMA20 26,537.48",
-      "ema20_above_ema50": "EMA20 26,537.48 vs EMA50 26,637.47",
-      "ema50_above_ema200": "EMA50 26,637.47 vs EMA200 27,491.24",
-      "rsi_above_50": "RSI(14) 53.28 vs 50",
-      "macd_bullish": "MACD 86.88 vs signal -59.02",
-      "adx_trending_up": "ADX(14) 27.84 vs 20, +DI 23.38 vs -DI 14.86",
-      "price_above_vwap20": "Close 26,770.00 vs 20d VWAP 26,291.76",
-      "price_above_bb_mid": "Close 26,770.00 vs BB mid 26,235.25"
+      "price_above_ema20": "Close 27,310.00 vs EMA20 26,608.47",
+      "ema20_above_ema50": "EMA20 26,608.47 vs EMA50 26,662.71",
+      "ema50_above_ema200": "EMA50 26,662.71 vs EMA200 27,489.14",
+      "rsi_above_50": "RSI(14) 59.54 vs 50",
+      "macd_bullish": "MACD 132.93 vs signal -21.01",
+      "adx_trending_up": "ADX(14) 28.56 vs 20, +DI 28.18 vs -DI 12.68",
+      "price_above_vwap20": "Close 27,310.00 vs 20d VWAP 26,416.86",
+      "price_above_bb_mid": "Close 27,310.00 vs BB mid 26,306.75"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,7 +666,8 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags"
+        "6/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -679,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 539.10 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 53.3",
-        "below_ema200": "Close 26,770.00 vs EMA200 27,491.24",
-        "extended_above_ema20": "Close 26,770.00 vs EMA20 26,537.48 (+0.9%)",
-        "large_day_move": "Day change -0.7%",
-        "near_52w_low": "Close 26,770.00 vs 52w low 25,135.00"
+        "atr_high": "ATR 586.30 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 59.5",
+        "below_ema200": "Close 27,310.00 vs EMA200 27,489.14",
+        "extended_above_ema20": "Close 27,310.00 vs EMA20 26,608.47 (+2.6%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 27,310.00 vs 52w low 25,135.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -695,13 +696,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "neutral",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:17.602596+00:00"
+  "updated_at": "2026-09-29T16:29:55.380122+00:00"
 }

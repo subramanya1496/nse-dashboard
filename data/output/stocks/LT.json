@@ -3,35 +3,30 @@
   "name": "Larsen & Toubro",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 3766.4,
-    "prev_close": 3876.2,
-    "change_pct": -2.8326711727980944,
-    "ema20": 3905.831939095111,
-    "ema50": 3948.9720935059904,
-    "ema200": 3933.2273282551682,
-    "rsi14": 35.49739089237123,
-    "macd": -43.3067871729113,
-    "macd_signal": -34.502065924952014,
-    "atr14": 65.34938519854286,
-    "adx14": 15.64921450391563,
-    "adx_pos": 12.325129092208478,
-    "adx_neg": 23.944507423787144,
-    "bb_high": 4050.8477711014193,
-    "bb_low": 3777.17222889858,
-    "bb_mid": 3914.0099999999998,
-    "vwap20": 3916.691794654603,
+    "date": "2026-09-29",
+    "close": 3749.1,
+    "prev_close": 3766.4,
+    "change_pct": -0.45932455395072697,
+    "ema20": 3890.9050877527197,
+    "ema50": 3941.13397219203,
+    "ema200": 3931.3952155362117,
+    "rsi14": 34.392170917342455,
+    "macd": -50.32050555011665,
+    "macd_signal": -37.66575384998494,
+    "atr14": 64.36728625578982,
+    "adx14": 17.20014260704385,
+    "adx_pos": 11.619383875799894,
+    "adx_neg": 25.480850647473748,
+    "bb_high": 4040.1533970356377,
+    "bb_low": 3758.286602964362,
+    "bb_mid": 3899.22,
+    "vwap20": 3897.5181374971307,
     "high_52w": 4440.0,
     "low_52w": 3288.1,
-    "volume": 1361601.0,
-    "avg_volume20": 1414677.6
+    "volume": 2546475.0,
+    "avg_volume20": 1464342.8
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 3723.3,
-      "ema50": 3822.95
-    },
     {
       "date": "2026-04-08",
       "close": 4005.9,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 3766.4,
       "ema50": 3948.97
+    },
+    {
+      "date": "2026-09-29",
+      "close": 3749.1,
+      "ema50": 3941.13
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,766.40 vs EMA20 3,905.83",
-      "ema20_above_ema50": "EMA20 3,905.83 vs EMA50 3,948.97",
-      "ema50_above_ema200": "EMA50 3,948.97 vs EMA200 3,933.23",
-      "rsi_above_50": "RSI(14) 35.50 vs 50",
-      "macd_bullish": "MACD -43.31 vs signal -34.50",
-      "adx_trending_up": "ADX(14) 15.65 vs 20, +DI 12.33 vs -DI 23.94",
-      "price_above_vwap20": "Close 3,766.40 vs 20d VWAP 3,916.69",
-      "price_above_bb_mid": "Close 3,766.40 vs BB mid 3,914.01"
+      "price_above_ema20": "Close 3,749.10 vs EMA20 3,890.91",
+      "ema20_above_ema50": "EMA20 3,890.91 vs EMA50 3,941.13",
+      "ema50_above_ema200": "EMA50 3,941.13 vs EMA200 3,931.40",
+      "rsi_above_50": "RSI(14) 34.39 vs 50",
+      "macd_bullish": "MACD -50.32 vs signal -37.67",
+      "adx_trending_up": "ADX(14) 17.20 vs 20, +DI 11.62 vs -DI 25.48",
+      "price_above_vwap20": "Close 3,749.10 vs 20d VWAP 3,897.52",
+      "price_above_bb_mid": "Close 3,749.10 vs BB mid 3,899.22"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 65.35 = 1.7% of price",
-        "rsi_extreme": "RSI(14) 35.5",
-        "below_ema200": "Close 3,766.40 vs EMA200 3,933.23",
-        "extended_above_ema20": "Close 3,766.40 vs EMA20 3,905.83 (-3.6%)",
-        "large_day_move": "Day change -2.8%",
-        "near_52w_low": "Close 3,766.40 vs 52w low 3,288.10"
+        "atr_high": "ATR 64.37 = 1.7% of price",
+        "rsi_extreme": "RSI(14) 34.4",
+        "below_ema200": "Close 3,749.10 vs EMA200 3,931.40",
+        "extended_above_ema20": "Close 3,749.10 vs EMA20 3,890.91 (-3.6%)",
+        "large_day_move": "Day change -0.5%",
+        "near_52w_low": "Close 3,749.10 vs 52w low 3,288.10"
       },
       "conditions_on": [
         "below_ema200"
@@ -690,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:10:14.456482+00:00"
+  "updated_at": "2026-09-29T16:30:51.870375+00:00"
 }

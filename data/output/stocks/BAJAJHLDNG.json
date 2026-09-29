@@ -3,35 +3,30 @@
   "name": "Bajaj Holdings & Investment",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 10800.0,
-    "prev_close": 10940.0,
-    "change_pct": -1.2797074954296161,
-    "ema20": 11121.277951237465,
-    "ema50": 11075.823075201082,
-    "ema200": 11113.758098400449,
-    "rsi14": 42.143558780344,
-    "macd": -48.8534363113522,
-    "macd_signal": -16.41662451517461,
-    "atr14": 251.43078436737284,
-    "adx14": 13.811550244128483,
-    "adx_pos": 16.466936264064998,
-    "adx_neg": 25.625488747986065,
-    "bb_high": 11533.001102345952,
-    "bb_low": 10727.89889765405,
-    "bb_mid": 11130.45,
-    "vwap20": 11157.237803184771,
-    "high_52w": 13419.0,
+    "date": "2026-09-29",
+    "close": 10600.0,
+    "prev_close": 10800.0,
+    "change_pct": -1.8518518518518516,
+    "ema20": 11071.632432071992,
+    "ema50": 11057.163346761825,
+    "ema200": 11108.646077520843,
+    "rsi14": 38.49083356458753,
+    "macd": -83.69056079868824,
+    "macd_signal": -29.87141177187734,
+    "atr14": 252.97144262684623,
+    "adx14": 15.060441252376076,
+    "adx_pos": 15.197602248285943,
+    "adx_neg": 29.043221100365052,
+    "bb_high": 11471.539651529172,
+    "bb_low": 10684.960348470828,
+    "bb_mid": 11078.25,
+    "vwap20": 11102.607347115687,
+    "high_52w": 13345.0,
     "low_52w": 8588.0,
-    "volume": 31440.0,
-    "avg_volume20": 43452.6
+    "volume": 65092.0,
+    "avg_volume20": 44143.4
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 9237.0,
-      "ema50": 10185.21
-    },
     {
       "date": "2026-04-08",
       "close": 9970.0,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 10800.0,
       "ema50": 11075.82
+    },
+    {
+      "date": "2026-09-29",
+      "close": 10600.0,
+      "ema50": 11057.16
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 10,800.00 vs EMA20 11,121.28",
-      "ema20_above_ema50": "EMA20 11,121.28 vs EMA50 11,075.82",
-      "ema50_above_ema200": "EMA50 11,075.82 vs EMA200 11,113.76",
-      "rsi_above_50": "RSI(14) 42.14 vs 50",
-      "macd_bullish": "MACD -48.85 vs signal -16.42",
-      "adx_trending_up": "ADX(14) 13.81 vs 20, +DI 16.47 vs -DI 25.63",
-      "price_above_vwap20": "Close 10,800.00 vs 20d VWAP 11,157.24",
-      "price_above_bb_mid": "Close 10,800.00 vs BB mid 11,130.45"
+      "price_above_ema20": "Close 10,600.00 vs EMA20 11,071.63",
+      "ema20_above_ema50": "EMA20 11,071.63 vs EMA50 11,057.16",
+      "ema50_above_ema200": "EMA50 11,057.16 vs EMA200 11,108.65",
+      "rsi_above_50": "RSI(14) 38.49 vs 50",
+      "macd_bullish": "MACD -83.69 vs signal -29.87",
+      "adx_trending_up": "ADX(14) 15.06 vs 20, +DI 15.20 vs -DI 29.04",
+      "price_above_vwap20": "Close 10,600.00 vs 20d VWAP 11,102.61",
+      "price_above_bb_mid": "Close 10,600.00 vs BB mid 11,078.25"
     },
     "flags_on": [
       "ema20_above_ema50"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 251.43 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 42.1",
-        "below_ema200": "Close 10,800.00 vs EMA200 11,113.76",
-        "extended_above_ema20": "Close 10,800.00 vs EMA20 11,121.28 (-2.9%)",
-        "large_day_move": "Day change -1.3%",
-        "near_52w_low": "Close 10,800.00 vs 52w low 8,588.00"
+        "atr_high": "ATR 252.97 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 38.5",
+        "below_ema200": "Close 10,600.00 vs EMA200 11,108.65",
+        "extended_above_ema20": "Close 10,600.00 vs EMA20 11,071.63 (-4.3%)",
+        "large_day_move": "Day change -1.9%",
+        "near_52w_low": "Close 10,600.00 vs 52w low 8,588.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:26.856115+00:00"
+  "updated_at": "2026-09-29T16:30:04.283542+00:00"
 }

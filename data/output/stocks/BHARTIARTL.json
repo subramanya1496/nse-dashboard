@@ -3,35 +3,30 @@
   "name": "Bharti Airtel",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-09-28",
-    "close": 1771.4,
-    "prev_close": 1785.4,
-    "change_pct": -0.7841380082894589,
-    "ema20": 1837.225543691825,
-    "ema50": 1869.518021930073,
-    "ema200": 1908.3422132380617,
-    "rsi14": 36.41623020630152,
-    "macd": -27.9379885785836,
-    "macd_signal": -23.59649854407794,
-    "atr14": 31.748875024860713,
-    "adx14": 26.162147168539025,
-    "adx_pos": 14.272849119821945,
-    "adx_neg": 29.55684573941056,
-    "bb_high": 1891.7507692917984,
-    "bb_low": 1775.4092307082024,
-    "bb_mid": 1833.5800000000004,
-    "vwap20": 1839.5306448946817,
+    "date": "2026-09-29",
+    "close": 1771.2,
+    "prev_close": 1771.4,
+    "change_pct": -0.011290504685562011,
+    "ema20": 1830.937396673556,
+    "ema50": 1865.662413226933,
+    "ema200": 1906.9776141013647,
+    "rsi14": 36.39077513139552,
+    "macd": -29.73341393769215,
+    "macd_signal": -24.823881622800783,
+    "atr14": 31.302526808799232,
+    "adx14": 26.616781087769983,
+    "adx_pos": 14.172543085598402,
+    "adx_neg": 27.836994698645846,
+    "bb_high": 1895.1965663593567,
+    "bb_low": 1767.8934336406435,
+    "bb_mid": 1831.545,
+    "vwap20": 1833.7553559234443,
     "high_52w": 2174.5,
     "low_52w": 1740.5,
-    "volume": 4683537.0,
-    "avg_volume20": 5993237.0
+    "volume": 9811381.0,
+    "avg_volume20": 5637739.75
   },
   "price_history": [
-    {
-      "date": "2026-04-07",
-      "close": 1830.3,
-      "ema50": 1897.44
-    },
     {
       "date": "2026-04-08",
       "close": 1861.6,
@@ -626,6 +621,11 @@
       "date": "2026-09-28",
       "close": 1771.4,
       "ema50": 1869.52
+    },
+    {
+      "date": "2026-09-29",
+      "close": 1771.2,
+      "ema50": 1865.66
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,771.40 vs EMA20 1,837.23",
-      "ema20_above_ema50": "EMA20 1,837.23 vs EMA50 1,869.52",
-      "ema50_above_ema200": "EMA50 1,869.52 vs EMA200 1,908.34",
-      "rsi_above_50": "RSI(14) 36.42 vs 50",
-      "macd_bullish": "MACD -27.94 vs signal -23.60",
-      "adx_trending_up": "ADX(14) 26.16 vs 20, +DI 14.27 vs -DI 29.56",
-      "price_above_vwap20": "Close 1,771.40 vs 20d VWAP 1,839.53",
-      "price_above_bb_mid": "Close 1,771.40 vs BB mid 1,833.58"
+      "price_above_ema20": "Close 1,771.20 vs EMA20 1,830.94",
+      "ema20_above_ema50": "EMA20 1,830.94 vs EMA50 1,865.66",
+      "ema50_above_ema200": "EMA50 1,865.66 vs EMA200 1,906.98",
+      "rsi_above_50": "RSI(14) 36.39 vs 50",
+      "macd_bullish": "MACD -29.73 vs signal -24.82",
+      "adx_trending_up": "ADX(14) 26.62 vs 20, +DI 14.17 vs -DI 27.84",
+      "price_above_vwap20": "Close 1,771.20 vs 20d VWAP 1,833.76",
+      "price_above_bb_mid": "Close 1,771.20 vs BB mid 1,831.55"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 31.75 = 1.8% of price",
+        "atr_high": "ATR 31.30 = 1.8% of price",
         "rsi_extreme": "RSI(14) 36.4",
-        "below_ema200": "Close 1,771.40 vs EMA200 1,908.34",
-        "extended_above_ema20": "Close 1,771.40 vs EMA20 1,837.23 (-3.6%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 1,771.40 vs 52w low 1,740.50"
+        "below_ema200": "Close 1,771.20 vs EMA200 1,906.98",
+        "extended_above_ema20": "Close 1,771.20 vs EMA20 1,830.94 (-3.3%)",
+        "large_day_move": "Day change -0.0%",
+        "near_52w_low": "Close 1,771.20 vs 52w low 1,740.50"
       },
       "conditions_on": [
         "below_ema200",
@@ -689,8 +690,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-28T18:09:30.448340+00:00"
+  "updated_at": "2026-09-29T16:30:07.873544+00:00"
 }
