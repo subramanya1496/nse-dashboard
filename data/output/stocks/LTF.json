@@ -3,35 +3,30 @@
   "name": "L&T Finance",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-09-29",
-    "close": 271.05,
-    "prev_close": 280.85,
-    "change_pct": -3.489407156845295,
-    "ema20": 299.27230780898856,
-    "ema50": 304.6226177112596,
-    "ema200": 290.07100506211424,
-    "rsi14": 30.70577118135401,
-    "macd": -8.075479224845594,
-    "macd_signal": -4.455679624172244,
-    "atr14": 9.76177227074604,
-    "adx14": 17.49857235460896,
-    "adx_pos": 14.006646575761032,
-    "adx_neg": 37.820640477924464,
-    "bb_high": 328.3212793913625,
-    "bb_low": 276.9137206086375,
-    "bb_mid": 302.6175,
-    "vwap20": 295.03689356843336,
+    "date": "2026-09-30",
+    "close": 265.0,
+    "prev_close": 271.05,
+    "change_pct": -2.2320605054418046,
+    "ema20": 296.0082784938468,
+    "ema50": 303.06879188187605,
+    "ema200": 289.8440478449769,
+    "rsi14": 28.55301975435698,
+    "macd": -9.761391404219637,
+    "macd_signal": -5.516821980217803,
+    "atr14": 9.66093139424865,
+    "adx14": 19.780537132506907,
+    "adx_pos": 13.141930342442237,
+    "adx_neg": 38.84980516454357,
+    "bb_high": 330.68082396036556,
+    "bb_low": 270.1491760396345,
+    "bb_mid": 300.415,
+    "vwap20": 292.41936378676013,
     "high_52w": 338.6,
     "low_52w": 234.9,
-    "volume": 13974932.0,
-    "avg_volume20": 6191103.55
+    "volume": 6415013.0,
+    "avg_volume20": 6043873.75
   },
   "price_history": [
-    {
-      "date": "2026-04-08",
-      "close": 275.46,
-      "ema50": 272.2
-    },
     {
       "date": "2026-04-09",
       "close": 272.18,
@@ -626,6 +621,11 @@
       "date": "2026-09-29",
       "close": 271.05,
       "ema50": 304.62
+    },
+    {
+      "date": "2026-09-30",
+      "close": 265.0,
+      "ema50": 303.07
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 271.05 vs EMA20 299.27",
-      "ema20_above_ema50": "EMA20 299.27 vs EMA50 304.62",
-      "ema50_above_ema200": "EMA50 304.62 vs EMA200 290.07",
-      "rsi_above_50": "RSI(14) 30.71 vs 50",
-      "macd_bullish": "MACD -8.08 vs signal -4.46",
-      "adx_trending_up": "ADX(14) 17.50 vs 20, +DI 14.01 vs -DI 37.82",
-      "price_above_vwap20": "Close 271.05 vs 20d VWAP 295.04",
-      "price_above_bb_mid": "Close 271.05 vs BB mid 302.62"
+      "price_above_ema20": "Close 265.00 vs EMA20 296.01",
+      "ema20_above_ema50": "EMA20 296.01 vs EMA50 303.07",
+      "ema50_above_ema200": "EMA50 303.07 vs EMA200 289.84",
+      "rsi_above_50": "RSI(14) 28.55 vs 50",
+      "macd_bullish": "MACD -9.76 vs signal -5.52",
+      "adx_trending_up": "ADX(14) 19.78 vs 20, +DI 13.14 vs -DI 38.85",
+      "price_above_vwap20": "Close 265.00 vs 20d VWAP 292.42",
+      "price_above_bb_mid": "Close 265.00 vs BB mid 300.42"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.76 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 30.7",
-        "below_ema200": "Close 271.05 vs EMA200 290.07",
-        "extended_above_ema20": "Close 271.05 vs EMA20 299.27 (-9.4%)",
-        "large_day_move": "Day change -3.5%",
-        "near_52w_low": "Close 271.05 vs 52w low 234.90"
+        "atr_high": "ATR 9.66 = 3.6% of price",
+        "rsi_extreme": "RSI(14) 28.6",
+        "below_ema200": "Close 265.00 vs EMA200 289.84",
+        "extended_above_ema20": "Close 265.00 vs EMA20 296.01 (-10.5%)",
+        "large_day_move": "Day change -2.2%",
+        "near_52w_low": "Close 265.00 vs 52w low 234.90"
       },
       "conditions_on": [
         "atr_high",
@@ -692,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-29T16:30:52.266383+00:00"
+  "updated_at": "2026-09-30T16:25:07.431848+00:00"
 }

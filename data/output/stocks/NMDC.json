@@ -3,35 +3,30 @@
   "name": "NMDC Ltd",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-09-29",
-    "close": 77.0,
-    "prev_close": 77.43,
-    "change_pct": -0.5553403073744114,
-    "ema20": 81.34835135791688,
-    "ema50": 83.31317833396119,
-    "ema200": 82.78192391657055,
-    "rsi14": 32.72517925590353,
-    "macd": -1.7363803559120754,
-    "macd_signal": -1.2925173691128893,
-    "atr14": 1.9471645389376018,
-    "adx14": 22.10838768455514,
-    "adx_pos": 13.664488600063546,
-    "adx_neg": 34.34052297988362,
-    "bb_high": 87.389490571262,
-    "bb_low": 76.57150942873801,
-    "bb_mid": 81.9805,
-    "vwap20": 82.0785531440876,
+    "date": "2026-09-30",
+    "close": 76.54,
+    "prev_close": 77.0,
+    "change_pct": -0.5974025974025893,
+    "ema20": 80.89041313335338,
+    "ema50": 83.04756349733526,
+    "ema200": 82.71981522088329,
+    "rsi14": 31.721617636523447,
+    "macd": -1.9000107153499215,
+    "macd_signal": -1.4140160383602958,
+    "atr14": 1.8973670718806914,
+    "adx14": 23.6056867543798,
+    "adx_pos": 13.021469312063621,
+    "adx_neg": 32.72453724426613,
+    "bb_high": 87.14329216322429,
+    "bb_low": 75.9027078367757,
+    "bb_mid": 81.523,
+    "vwap20": 81.57801982677785,
     "high_52w": 97.49,
     "low_52w": 72.24,
-    "volume": 19014554.0,
-    "avg_volume20": 12370176.15
+    "volume": 15817494.0,
+    "avg_volume20": 12595477.45
   },
   "price_history": [
-    {
-      "date": "2026-04-08",
-      "close": 82.91,
-      "ema50": 79.65
-    },
     {
       "date": "2026-04-09",
       "close": 84.44,
@@ -626,6 +621,11 @@
       "date": "2026-09-29",
       "close": 77.0,
       "ema50": 83.31
+    },
+    {
+      "date": "2026-09-30",
+      "close": 76.54,
+      "ema50": 83.05
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 77.00 vs EMA20 81.35",
-      "ema20_above_ema50": "EMA20 81.35 vs EMA50 83.31",
-      "ema50_above_ema200": "EMA50 83.31 vs EMA200 82.78",
-      "rsi_above_50": "RSI(14) 32.73 vs 50",
-      "macd_bullish": "MACD -1.74 vs signal -1.29",
-      "adx_trending_up": "ADX(14) 22.11 vs 20, +DI 13.66 vs -DI 34.34",
-      "price_above_vwap20": "Close 77.00 vs 20d VWAP 82.08",
-      "price_above_bb_mid": "Close 77.00 vs BB mid 81.98"
+      "price_above_ema20": "Close 76.54 vs EMA20 80.89",
+      "ema20_above_ema50": "EMA20 80.89 vs EMA50 83.05",
+      "ema50_above_ema200": "EMA50 83.05 vs EMA200 82.72",
+      "rsi_above_50": "RSI(14) 31.72 vs 50",
+      "macd_bullish": "MACD -1.90 vs signal -1.41",
+      "adx_trending_up": "ADX(14) 23.61 vs 20, +DI 13.02 vs -DI 32.72",
+      "price_above_vwap20": "Close 76.54 vs 20d VWAP 81.58",
+      "price_above_bb_mid": "Close 76.54 vs BB mid 81.52"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,13 +661,12 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -675,25 +674,24 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.95 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 32.7",
-        "below_ema200": "Close 77.00 vs EMA200 82.78",
-        "extended_above_ema20": "Close 77.00 vs EMA20 81.35 (-5.3%)",
+        "atr_high": "ATR 1.90 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 31.7",
+        "below_ema200": "Close 76.54 vs EMA200 82.72",
+        "extended_above_ema20": "Close 76.54 vs EMA20 80.89 (-5.4%)",
         "large_day_move": "Day change -0.6%",
-        "near_52w_low": "Close 77.00 vs 52w low 72.24"
+        "near_52w_low": "Close 76.54 vs 52w low 72.24"
       },
       "conditions_on": [
-        "atr_high",
         "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
+      "volume_surge": false,
+      "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-29T16:31:03.878753+00:00"
+  "updated_at": "2026-09-30T16:25:19.061559+00:00"
 }
