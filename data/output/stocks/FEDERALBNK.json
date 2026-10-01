@@ -3,35 +3,30 @@
   "name": "Federal Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-09-30",
-    "close": 317.4,
-    "prev_close": 320.2,
-    "change_pct": -0.874453466583389,
-    "ema20": 333.47498121193433,
-    "ema50": 337.9187774400012,
-    "ema200": 305.82086836814256,
-    "rsi14": 29.654943920931444,
-    "macd": -7.283046150412076,
-    "macd_signal": -5.404116134516208,
-    "atr14": 7.32863979061127,
-    "adx14": 27.731280126601437,
-    "adx_pos": 9.491574149984318,
-    "adx_neg": 25.326485055750304,
-    "bb_high": 355.6488090366805,
-    "bb_low": 316.0811909633195,
-    "bb_mid": 335.865,
-    "vwap20": 334.4433753924735,
+    "date": "2026-10-01",
+    "close": 318.2,
+    "prev_close": 317.4,
+    "change_pct": 0.2520478890989324,
+    "ema20": 332.02022109651205,
+    "ema50": 337.1454939320741,
+    "ema200": 305.96232954210234,
+    "rsi14": 30.85456946836176,
+    "macd": -7.571334663693619,
+    "macd_signal": -5.837559840381023,
+    "atr14": 7.348022662736976,
+    "adx14": 29.38500593636559,
+    "adx_pos": 8.790355732514607,
+    "adx_neg": 27.003502917828765,
+    "bb_high": 353.6090198125616,
+    "bb_low": 314.6059801874383,
+    "bb_mid": 334.10749999999996,
+    "vwap20": 332.0064946122187,
     "high_52w": 371.7,
     "low_52w": 189.05,
-    "volume": 5485971.0,
-    "avg_volume20": 5699312.1
+    "volume": 11278668.0,
+    "avg_volume20": 5949582.7
   },
   "price_history": [
-    {
-      "date": "2026-04-09",
-      "close": 283.3,
-      "ema50": 273.94
-    },
     {
       "date": "2026-04-10",
       "close": 291.7,
@@ -75,7 +70,7 @@
     {
       "date": "2026-04-23",
       "close": 295.4,
-      "ema50": 279.45
+      "ema50": 279.46
     },
     {
       "date": "2026-04-24",
@@ -626,6 +621,11 @@
       "date": "2026-09-30",
       "close": 317.4,
       "ema50": 337.92
+    },
+    {
+      "date": "2026-10-01",
+      "close": 318.2,
+      "ema50": 337.15
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 317.40 vs EMA20 333.47",
-      "ema20_above_ema50": "EMA20 333.47 vs EMA50 337.92",
-      "ema50_above_ema200": "EMA50 337.92 vs EMA200 305.82",
-      "rsi_above_50": "RSI(14) 29.65 vs 50",
-      "macd_bullish": "MACD -7.28 vs signal -5.40",
-      "adx_trending_up": "ADX(14) 27.73 vs 20, +DI 9.49 vs -DI 25.33",
-      "price_above_vwap20": "Close 317.40 vs 20d VWAP 334.44",
-      "price_above_bb_mid": "Close 317.40 vs BB mid 335.87"
+      "price_above_ema20": "Close 318.20 vs EMA20 332.02",
+      "ema20_above_ema50": "EMA20 332.02 vs EMA50 337.15",
+      "ema50_above_ema200": "EMA50 337.15 vs EMA200 305.96",
+      "rsi_above_50": "RSI(14) 30.85 vs 50",
+      "macd_bullish": "MACD -7.57 vs signal -5.84",
+      "adx_trending_up": "ADX(14) 29.39 vs 20, +DI 8.79 vs -DI 27.00",
+      "price_above_vwap20": "Close 318.20 vs 20d VWAP 332.01",
+      "price_above_bb_mid": "Close 318.20 vs BB mid 334.11"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.33 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 29.7",
-        "below_ema200": "Close 317.40 vs EMA200 305.82",
-        "extended_above_ema20": "Close 317.40 vs EMA20 333.47 (-4.8%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 317.40 vs 52w low 189.05"
+        "atr_high": "ATR 7.35 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 30.9",
+        "below_ema200": "Close 318.20 vs EMA200 305.96",
+        "extended_above_ema20": "Close 318.20 vs EMA20 332.02 (-4.2%)",
+        "large_day_move": "Day change +0.3%",
+        "near_52w_low": "Close 318.20 vs 52w low 189.05"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -688,8 +689,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -702,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-30T16:24:39.442282+00:00"
+  "updated_at": "2026-10-01T17:01:34.117593+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "UNO Minda",
   "sector": "Auto Ancillary",
   "indicators": {
-    "date": "2026-09-30",
-    "close": 1170.0,
-    "prev_close": 1162.0,
-    "change_pct": 0.6884681583476765,
-    "ema20": 1213.0957144988927,
-    "ema50": 1210.857757812461,
-    "ema200": 1176.9795404326626,
-    "rsi14": 40.25429288473821,
-    "macd": -13.465840292992198,
-    "macd_signal": -6.267805153567318,
-    "atr14": 33.62984839466757,
-    "adx14": 18.306664837635015,
-    "adx_pos": 18.05780752390225,
-    "adx_neg": 23.293239953852005,
-    "bb_high": 1283.579346534053,
-    "bb_low": 1151.170653465947,
-    "bb_mid": 1217.375,
-    "vwap20": 1223.9063897036299,
+    "date": "2026-10-01",
+    "close": 1111.0,
+    "prev_close": 1170.0,
+    "change_pct": -5.042735042735043,
+    "ema20": 1203.3723131180461,
+    "ema50": 1206.9417890239754,
+    "ema200": 1176.5340168406508,
+    "rsi14": 32.28520338636173,
+    "macd": -19.796983788805164,
+    "macd_signal": -8.973640880953093,
+    "atr14": 36.292002080764384,
+    "adx14": 19.457960804084372,
+    "adx_pos": 15.537971432710929,
+    "adx_neg": 31.85181452800485,
+    "bb_high": 1291.253119284063,
+    "bb_low": 1130.996880715937,
+    "bb_mid": 1211.125,
+    "vwap20": 1214.3878038723603,
     "high_52w": 1382.0,
     "low_52w": 994.0,
-    "volume": 527106.0,
-    "avg_volume20": 571739.35
+    "volume": 788650.0,
+    "avg_volume20": 547252.8
   },
   "price_history": [
-    {
-      "date": "2026-04-09",
-      "close": 1054.6,
-      "ema50": 1118.22
-    },
     {
       "date": "2026-04-10",
       "close": 1078.0,
@@ -40,12 +35,12 @@
     {
       "date": "2026-04-13",
       "close": 1078.2,
-      "ema50": 1115.13
+      "ema50": 1115.14
     },
     {
       "date": "2026-04-15",
       "close": 1100.1,
-      "ema50": 1114.54
+      "ema50": 1114.55
     },
     {
       "date": "2026-04-16",
@@ -145,7 +140,7 @@
     {
       "date": "2026-05-14",
       "close": 1122.3,
-      "ema50": 1123.7
+      "ema50": 1123.71
     },
     {
       "date": "2026-05-15",
@@ -626,12 +621,17 @@
       "date": "2026-09-30",
       "close": 1170.0,
       "ema50": 1210.86
+    },
+    {
+      "date": "2026-10-01",
+      "close": 1111.0,
+      "ema50": 1206.94
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
-      "ema20_above_ema50": true,
+      "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": false,
@@ -640,20 +640,19 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,170.00 vs EMA20 1,213.10",
-      "ema20_above_ema50": "EMA20 1,213.10 vs EMA50 1,210.86",
-      "ema50_above_ema200": "EMA50 1,210.86 vs EMA200 1,176.98",
-      "rsi_above_50": "RSI(14) 40.25 vs 50",
-      "macd_bullish": "MACD -13.47 vs signal -6.27",
-      "adx_trending_up": "ADX(14) 18.31 vs 20, +DI 18.06 vs -DI 23.29",
-      "price_above_vwap20": "Close 1,170.00 vs 20d VWAP 1,223.91",
-      "price_above_bb_mid": "Close 1,170.00 vs BB mid 1,217.38"
+      "price_above_ema20": "Close 1,111.00 vs EMA20 1,203.37",
+      "ema20_above_ema50": "EMA20 1,203.37 vs EMA50 1,206.94",
+      "ema50_above_ema200": "EMA50 1,206.94 vs EMA200 1,176.53",
+      "rsi_above_50": "RSI(14) 32.29 vs 50",
+      "macd_bullish": "MACD -19.80 vs signal -8.97",
+      "adx_trending_up": "ADX(14) 19.46 vs 20, +DI 15.54 vs -DI 31.85",
+      "price_above_vwap20": "Close 1,111.00 vs 20d VWAP 1,214.39",
+      "price_above_bb_mid": "Close 1,111.00 vs BB mid 1,211.12"
     },
     "flags_on": [
-      "ema20_above_ema50",
       "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -662,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -671,28 +671,29 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 33.63 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 40.3",
-        "below_ema200": "Close 1,170.00 vs EMA200 1,176.98",
-        "extended_above_ema20": "Close 1,170.00 vs EMA20 1,213.10 (-3.6%)",
-        "large_day_move": "Day change +0.7%",
-        "near_52w_low": "Close 1,170.00 vs 52w low 994.00"
+        "atr_high": "ATR 36.29 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 32.3",
+        "below_ema200": "Close 1,111.00 vs EMA200 1,176.53",
+        "extended_above_ema20": "Close 1,111.00 vs EMA20 1,203.37 (-7.7%)",
+        "large_day_move": "Day change -5.0%",
+        "near_52w_low": "Close 1,111.00 vs 52w low 994.00"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "large_day_move"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-09-30T16:25:51.062229+00:00"
+  "updated_at": "2026-10-01T17:02:45.787375+00:00"
 }
