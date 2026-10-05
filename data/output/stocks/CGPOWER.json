@@ -3,39 +3,34 @@
   "name": "CG Power and Industrial Solutions",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-10-01",
-    "close": 879.0,
-    "prev_close": 854.2,
-    "change_pct": 2.9033013345820597,
-    "ema20": 881.806802270803,
-    "ema50": 884.644268328651,
-    "ema200": 824.2862620875424,
-    "rsi14": 48.74650813499861,
-    "macd": -5.133433693082793,
-    "macd_signal": -2.0434137407854647,
-    "atr14": 24.792804134973732,
-    "adx14": 12.708134050796533,
-    "adx_pos": 21.185478812543458,
-    "adx_neg": 22.52421494605623,
-    "bb_high": 929.7511887611274,
-    "bb_low": 845.6288112388729,
-    "bb_mid": 887.6900000000002,
-    "vwap20": 890.236506103966,
+    "date": "2026-10-05",
+    "close": 882.3,
+    "prev_close": 879.0,
+    "change_pct": 0.3754266211604044,
+    "ema20": 881.8537734831074,
+    "ema50": 884.5523251268237,
+    "ema200": 824.7484744061355,
+    "rsi14": 49.68616290350066,
+    "macd": -4.418794059845823,
+    "macd_signal": -2.5184898044400783,
+    "atr14": 24.196889554228818,
+    "adx14": 11.801139958470264,
+    "adx_pos": 21.42606130987544,
+    "adx_neg": 21.430439959446648,
+    "bb_high": 929.0389719416669,
+    "bb_low": 845.0710280583332,
+    "bb_mid": 887.0550000000001,
+    "vwap20": 890.0851211102192,
     "high_52w": 980.9,
     "low_52w": 525.5,
-    "volume": 4633143.0,
-    "avg_volume20": 2473557.05
+    "volume": 1290292.0,
+    "avg_volume20": 2423807.3
   },
   "price_history": [
     {
-      "date": "2026-04-10",
-      "close": 731.1,
-      "ema50": 686.83
-    },
-    {
       "date": "2026-04-13",
       "close": 716.1,
-      "ema50": 687.98
+      "ema50": 687.97
     },
     {
       "date": "2026-04-15",
@@ -60,7 +55,7 @@
     {
       "date": "2026-04-21",
       "close": 805.25,
-      "ema50": 704.15
+      "ema50": 704.14
     },
     {
       "date": "2026-04-22",
@@ -70,7 +65,7 @@
     {
       "date": "2026-04-23",
       "close": 837.8,
-      "ema50": 713.92
+      "ema50": 713.91
     },
     {
       "date": "2026-04-24",
@@ -115,7 +110,7 @@
     {
       "date": "2026-05-07",
       "close": 859.1,
-      "ema50": 747.9
+      "ema50": 747.89
     },
     {
       "date": "2026-05-08",
@@ -210,7 +205,7 @@
     {
       "date": "2026-06-04",
       "close": 937.9,
-      "ema50": 816.94
+      "ema50": 816.93
     },
     {
       "date": "2026-06-05",
@@ -626,11 +621,16 @@
       "date": "2026-10-01",
       "close": 879.0,
       "ema50": 884.64
+    },
+    {
+      "date": "2026-10-05",
+      "close": 882.3,
+      "ema50": 884.55
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
@@ -640,19 +640,20 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 879.00 vs EMA20 881.81",
-      "ema20_above_ema50": "EMA20 881.81 vs EMA50 884.64",
-      "ema50_above_ema200": "EMA50 884.64 vs EMA200 824.29",
-      "rsi_above_50": "RSI(14) 48.75 vs 50",
-      "macd_bullish": "MACD -5.13 vs signal -2.04",
-      "adx_trending_up": "ADX(14) 12.71 vs 20, +DI 21.19 vs -DI 22.52",
-      "price_above_vwap20": "Close 879.00 vs 20d VWAP 890.24",
-      "price_above_bb_mid": "Close 879.00 vs BB mid 887.69"
+      "price_above_ema20": "Close 882.30 vs EMA20 881.85",
+      "ema20_above_ema50": "EMA20 881.85 vs EMA50 884.55",
+      "ema50_above_ema200": "EMA50 884.55 vs EMA200 824.75",
+      "rsi_above_50": "RSI(14) 49.69 vs 50",
+      "macd_bullish": "MACD -4.42 vs signal -2.52",
+      "adx_trending_up": "ADX(14) 11.80 vs 20, +DI 21.43 vs -DI 21.43",
+      "price_above_vwap20": "Close 882.30 vs 20d VWAP 890.09",
+      "price_above_bb_mid": "Close 882.30 vs BB mid 887.06"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema50_above_ema200"
     ],
-    "flag_count": 1,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
@@ -661,8 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 24.79 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 48.7",
-        "below_ema200": "Close 879.00 vs EMA200 824.29",
-        "extended_above_ema20": "Close 879.00 vs EMA20 881.81 (-0.3%)",
-        "large_day_move": "Day change +2.9%",
-        "near_52w_low": "Close 879.00 vs 52w low 525.50"
+        "atr_high": "ATR 24.20 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 49.7",
+        "below_ema200": "Close 882.30 vs EMA200 824.75",
+        "extended_above_ema20": "Close 882.30 vs EMA20 881.85 (+0.1%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 882.30 vs 52w low 525.50"
       },
       "conditions_on": [
         "atr_high"
@@ -691,13 +692,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "neutral",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-02T16:15:51.538950+00:00"
+  "updated_at": "2026-10-05T19:17:48.907918+00:00"
 }
