@@ -3,35 +3,30 @@
   "name": "Paras Defence and Space Technologies",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 1266.2,
-    "prev_close": 1276.0,
-    "change_pct": -0.7680250783699024,
-    "ema20": 1351.1613592984074,
-    "ema50": 1334.770092387483,
-    "ema200": 1064.739516052258,
-    "rsi14": 36.200046075851965,
-    "macd": -27.189870075332465,
-    "macd_signal": -11.946332237138154,
-    "atr14": 60.725501046033045,
-    "adx14": 22.062477895902216,
-    "adx_pos": 15.823866817853046,
-    "adx_neg": 27.83230289482589,
-    "bb_high": 1509.6727009864196,
-    "bb_low": 1239.2872990135804,
-    "bb_mid": 1374.48,
-    "vwap20": 1401.7989044416793,
+    "date": "2026-10-06",
+    "close": 1323.3,
+    "prev_close": 1266.2,
+    "change_pct": 4.509556152266617,
+    "ema20": 1348.507896508083,
+    "ema50": 1334.320284842876,
+    "ema200": 1067.3122571860665,
+    "rsi14": 45.596675513302074,
+    "macd": -25.702777822225244,
+    "macd_signal": -14.697621354155572,
+    "atr14": 61.08796525703068,
+    "adx14": 21.62915507260513,
+    "adx_pos": 18.605323681353823,
+    "adx_neg": 25.690934737366028,
+    "bb_high": 1505.5107812823283,
+    "bb_low": 1234.289218717672,
+    "bb_mid": 1369.9,
+    "vwap20": 1397.742022648647,
     "high_52w": 1585.0,
     "low_52w": 580.5,
-    "volume": 532009.0,
-    "avg_volume20": 897731.0
+    "volume": 661178.0,
+    "avg_volume20": 903181.25
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 705.9,
-      "ema50": 657.1
-    },
     {
       "date": "2026-04-15",
       "close": 754.85,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 1266.2,
       "ema50": 1334.77
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1323.3,
+      "ema50": 1334.32
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,266.20 vs EMA20 1,351.16",
-      "ema20_above_ema50": "EMA20 1,351.16 vs EMA50 1,334.77",
-      "ema50_above_ema200": "EMA50 1,334.77 vs EMA200 1,064.74",
-      "rsi_above_50": "RSI(14) 36.20 vs 50",
-      "macd_bullish": "MACD -27.19 vs signal -11.95",
-      "adx_trending_up": "ADX(14) 22.06 vs 20, +DI 15.82 vs -DI 27.83",
-      "price_above_vwap20": "Close 1,266.20 vs 20d VWAP 1,401.80",
-      "price_above_bb_mid": "Close 1,266.20 vs BB mid 1,374.48"
+      "price_above_ema20": "Close 1,323.30 vs EMA20 1,348.51",
+      "ema20_above_ema50": "EMA20 1,348.51 vs EMA50 1,334.32",
+      "ema50_above_ema200": "EMA50 1,334.32 vs EMA200 1,067.31",
+      "rsi_above_50": "RSI(14) 45.60 vs 50",
+      "macd_bullish": "MACD -25.70 vs signal -14.70",
+      "adx_trending_up": "ADX(14) 21.63 vs 20, +DI 18.61 vs -DI 25.69",
+      "price_above_vwap20": "Close 1,323.30 vs 20d VWAP 1,397.74",
+      "price_above_bb_mid": "Close 1,323.30 vs BB mid 1,369.90"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -671,29 +672,30 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 60.73 = 4.8% of price",
-        "rsi_extreme": "RSI(14) 36.2",
-        "below_ema200": "Close 1,266.20 vs EMA200 1,064.74",
-        "extended_above_ema20": "Close 1,266.20 vs EMA20 1,351.16 (-6.3%)",
-        "large_day_move": "Day change -0.8%",
-        "near_52w_low": "Close 1,266.20 vs 52w low 580.50"
+        "atr_high": "ATR 61.09 = 4.6% of price",
+        "rsi_extreme": "RSI(14) 45.6",
+        "below_ema200": "Close 1,323.30 vs EMA200 1,067.31",
+        "extended_above_ema20": "Close 1,323.30 vs EMA20 1,348.51 (-1.9%)",
+        "large_day_move": "Day change +4.5%",
+        "near_52w_low": "Close 1,323.30 vs 52w low 580.50"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -705,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:18:42.895298+00:00"
+  "updated_at": "2026-10-06T16:47:14.976215+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Groww (Billionbrains Garage Ventures)",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 187.05,
-    "prev_close": 180.11,
-    "change_pct": 3.8532008217200584,
-    "ema20": 188.5317329053048,
-    "ema50": 192.04111437977218,
-    "ema200": 182.38774163400828,
-    "rsi14": 45.96947912161762,
-    "macd": -2.992126839102724,
-    "macd_signal": -2.4313719125756466,
-    "atr14": 5.622787527038533,
-    "adx14": 15.478072876188474,
-    "adx_pos": 15.658773740402394,
-    "adx_neg": 25.746166338983713,
-    "bb_high": 200.5128111349184,
-    "bb_low": 179.60918886508162,
-    "bb_mid": 190.061,
-    "vwap20": 190.57859872898257,
+    "date": "2026-10-06",
+    "close": 193.19,
+    "prev_close": 187.05,
+    "change_pct": 3.282544774124558,
+    "ema20": 188.97537739051387,
+    "ema50": 192.08616871782033,
+    "ema200": 182.49522679187885,
+    "rsi14": 54.31565343920884,
+    "macd": -2.245679690544506,
+    "macd_signal": -2.3942334681694186,
+    "atr14": 5.753302703678636,
+    "adx14": 14.530287789866358,
+    "adx_pos": 22.35483007526807,
+    "adx_neg": 23.364814358993286,
+    "bb_high": 200.41707534960452,
+    "bb_low": 179.62392465039554,
+    "bb_mid": 190.02050000000003,
+    "vwap20": 190.42316874480153,
     "high_52w": 227.2,
     "low_52w": 112.0,
-    "volume": 38074910.0,
-    "avg_volume20": 31464091.85
+    "volume": 41408393.0,
+    "avg_volume20": 31299396.2
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 194.71,
-      "ema50": 165.68
-    },
     {
       "date": "2026-04-15",
       "close": 208.44,
@@ -626,42 +621,52 @@
       "date": "2026-10-05",
       "close": 187.05,
       "ema50": 192.04
+    },
+    {
+      "date": "2026-10-06",
+      "close": 193.19,
+      "ema50": 192.09
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
-      "macd_bullish": false,
+      "rsi_above_50": true,
+      "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 187.05 vs EMA20 188.53",
-      "ema20_above_ema50": "EMA20 188.53 vs EMA50 192.04",
-      "ema50_above_ema200": "EMA50 192.04 vs EMA200 182.39",
-      "rsi_above_50": "RSI(14) 45.97 vs 50",
-      "macd_bullish": "MACD -2.99 vs signal -2.43",
-      "adx_trending_up": "ADX(14) 15.48 vs 20, +DI 15.66 vs -DI 25.75",
-      "price_above_vwap20": "Close 187.05 vs 20d VWAP 190.58",
-      "price_above_bb_mid": "Close 187.05 vs BB mid 190.06"
+      "price_above_ema20": "Close 193.19 vs EMA20 188.98",
+      "ema20_above_ema50": "EMA20 188.98 vs EMA50 192.09",
+      "ema50_above_ema200": "EMA50 192.09 vs EMA200 182.50",
+      "rsi_above_50": "RSI(14) 54.32 vs 50",
+      "macd_bullish": "MACD -2.25 vs signal -2.39",
+      "adx_trending_up": "ADX(14) 14.53 vs 20, +DI 22.35 vs -DI 23.36",
+      "price_above_vwap20": "Close 193.19 vs 20d VWAP 190.42",
+      "price_above_bb_mid": "Close 193.19 vs BB mid 190.02"
     },
     "flags_on": [
-      "ema50_above_ema200"
+      "price_above_ema20",
+      "ema50_above_ema200",
+      "rsi_above_50",
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 6,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 4,
+      "label": "Watch closely",
+      "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
       "reasons": [
-        "1/8 bullish flags",
+        "6/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -675,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.62 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 46.0",
-        "below_ema200": "Close 187.05 vs EMA200 182.39",
-        "extended_above_ema20": "Close 187.05 vs EMA20 188.53 (-0.8%)",
-        "large_day_move": "Day change +3.9%",
-        "near_52w_low": "Close 187.05 vs 52w low 112.00"
+        "atr_high": "ATR 5.75 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 54.3",
+        "below_ema200": "Close 193.19 vs EMA200 182.50",
+        "extended_above_ema20": "Close 193.19 vs EMA20 188.98 (+2.2%)",
+        "large_day_move": "Day change +3.3%",
+        "near_52w_low": "Close 193.19 vs 52w low 112.00"
       },
       "conditions_on": [
         "atr_high"
@@ -696,8 +701,8 @@
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "bearish",
+      "daily": "bullish",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -705,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:18:04.080660+00:00"
+  "updated_at": "2026-10-06T16:46:36.512231+00:00"
 }

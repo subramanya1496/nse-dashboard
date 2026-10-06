@@ -3,35 +3,30 @@
   "name": "Info Edge (India)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 1201.7,
-    "prev_close": 1200.0,
-    "change_pct": 0.14166666666667044,
-    "ema20": 1257.731809150058,
-    "ema50": 1250.8755565581864,
-    "ema200": 1196.5134223776515,
-    "rsi14": 36.91325170365351,
-    "macd": -19.954082066380806,
-    "macd_signal": -11.171600659247584,
-    "atr14": 39.36189935823011,
-    "adx14": 21.637278893163227,
-    "adx_pos": 17.175844205363408,
-    "adx_neg": 27.176046943897376,
-    "bb_high": 1326.9343404968333,
-    "bb_low": 1195.7756595031667,
-    "bb_mid": 1261.355,
-    "vwap20": 1256.6141602920509,
+    "date": "2026-10-06",
+    "close": 1241.0,
+    "prev_close": 1201.7,
+    "change_pct": 3.2703669801115045,
+    "ema20": 1256.1383035167191,
+    "ema50": 1250.4882798304145,
+    "ema200": 1196.9560748913068,
+    "rsi14": 45.96084649129652,
+    "macd": -18.619499378060254,
+    "macd_signal": -12.66118040301012,
+    "atr14": 39.664620832642235,
+    "adx14": 21.726558100524386,
+    "adx_pos": 15.827274998922974,
+    "adx_neg": 25.222388595493367,
+    "bb_high": 1317.7329666434437,
+    "bb_low": 1197.0970333565563,
+    "bb_mid": 1257.415,
+    "vwap20": 1253.6274718075954,
     "high_52w": 1419.9,
     "low_52w": 908.3,
-    "volume": 2021519.0,
-    "avg_volume20": 1425582.65
+    "volume": 1622862.0,
+    "avg_volume20": 1478910.45
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 994.65,
-      "ema50": 1062.97
-    },
     {
       "date": "2026-04-15",
       "close": 1028.05,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 1201.7,
       "ema50": 1250.88
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1241.0,
+      "ema50": 1250.49
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,201.70 vs EMA20 1,257.73",
-      "ema20_above_ema50": "EMA20 1,257.73 vs EMA50 1,250.88",
-      "ema50_above_ema200": "EMA50 1,250.88 vs EMA200 1,196.51",
-      "rsi_above_50": "RSI(14) 36.91 vs 50",
-      "macd_bullish": "MACD -19.95 vs signal -11.17",
-      "adx_trending_up": "ADX(14) 21.64 vs 20, +DI 17.18 vs -DI 27.18",
-      "price_above_vwap20": "Close 1,201.70 vs 20d VWAP 1,256.61",
-      "price_above_bb_mid": "Close 1,201.70 vs BB mid 1,261.36"
+      "price_above_ema20": "Close 1,241.00 vs EMA20 1,256.14",
+      "ema20_above_ema50": "EMA20 1,256.14 vs EMA50 1,250.49",
+      "ema50_above_ema200": "EMA50 1,250.49 vs EMA200 1,196.96",
+      "rsi_above_50": "RSI(14) 45.96 vs 50",
+      "macd_bullish": "MACD -18.62 vs signal -12.66",
+      "adx_trending_up": "ADX(14) 21.73 vs 20, +DI 15.83 vs -DI 25.22",
+      "price_above_vwap20": "Close 1,241.00 vs 20d VWAP 1,253.63",
+      "price_above_bb_mid": "Close 1,241.00 vs BB mid 1,257.41"
     },
     "flags_on": [
       "ema20_above_ema50",
@@ -663,7 +663,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "2/8 bullish flags",
-        "patterns: volume surge, silent accumulation"
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -676,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 39.36 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 36.9",
-        "below_ema200": "Close 1,201.70 vs EMA200 1,196.51",
-        "extended_above_ema20": "Close 1,201.70 vs EMA20 1,257.73 (-4.5%)",
-        "large_day_move": "Day change +0.1%",
-        "near_52w_low": "Close 1,201.70 vs 52w low 908.30"
+        "atr_high": "ATR 39.66 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 46.0",
+        "below_ema200": "Close 1,241.00 vs EMA200 1,196.96",
+        "extended_above_ema20": "Close 1,241.00 vs EMA20 1,256.14 (-1.2%)",
+        "large_day_move": "Day change +3.3%",
+        "near_52w_low": "Close 1,241.00 vs 52w low 908.30"
       },
       "conditions_on": [
         "atr_high"
@@ -692,13 +692,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
-      "silent_accumulation": true,
-      "near_buy_zone": false
+      "volume_surge": false,
+      "silent_accumulation": false,
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "bearish",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -706,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:18:36.897740+00:00"
+  "updated_at": "2026-10-06T16:47:08.979672+00:00"
 }

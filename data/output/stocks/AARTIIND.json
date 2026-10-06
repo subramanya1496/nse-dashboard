@@ -3,35 +3,30 @@
   "name": "Aarti Industries",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 470.85,
-    "prev_close": 465.1,
-    "change_pct": 1.2362932702644591,
-    "ema20": 486.603296852528,
-    "ema50": 493.1190562322669,
-    "ema200": 464.7232510072731,
-    "rsi14": 40.0406511095874,
-    "macd": -9.315724913635165,
-    "macd_signal": -7.445226136987984,
-    "atr14": 15.670881447077932,
-    "adx14": 16.425200328722127,
-    "adx_pos": 16.070216558369737,
-    "adx_neg": 25.833453637758126,
-    "bb_high": 509.6877150234612,
-    "bb_low": 461.5822849765389,
-    "bb_mid": 485.63500000000005,
-    "vwap20": 487.03118247120415,
+    "date": "2026-10-06",
+    "close": 481.15,
+    "prev_close": 470.85,
+    "change_pct": 2.18753318466602,
+    "ema20": 486.08393524752535,
+    "ema50": 492.6496814780604,
+    "ema200": 464.88670124600674,
+    "rsi14": 45.811377149050756,
+    "macd": -8.565908744108242,
+    "macd_signal": -7.6693626584120365,
+    "atr14": 15.919389915143793,
+    "adx14": 15.660155042590139,
+    "adx_pos": 21.060785376978824,
+    "adx_neg": 23.613740805082568,
+    "bb_high": 509.0302923958717,
+    "bb_low": 461.14970760412825,
+    "bb_mid": 485.09,
+    "vwap20": 485.830885568643,
     "high_52w": 551.75,
     "low_52w": 338.05,
-    "volume": 561260.0,
-    "avg_volume20": 528282.35
+    "volume": 755429.0,
+    "avg_volume20": 527665.1
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 424.3,
-      "ema50": 416.86
-    },
     {
       "date": "2026-04-15",
       "close": 431.7,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 470.85,
       "ema50": 493.12
+    },
+    {
+      "date": "2026-10-06",
+      "close": 481.15,
+      "ema50": 492.65
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 470.85 vs EMA20 486.60",
-      "ema20_above_ema50": "EMA20 486.60 vs EMA50 493.12",
-      "ema50_above_ema200": "EMA50 493.12 vs EMA200 464.72",
-      "rsi_above_50": "RSI(14) 40.04 vs 50",
-      "macd_bullish": "MACD -9.32 vs signal -7.45",
-      "adx_trending_up": "ADX(14) 16.43 vs 20, +DI 16.07 vs -DI 25.83",
-      "price_above_vwap20": "Close 470.85 vs 20d VWAP 487.03",
-      "price_above_bb_mid": "Close 470.85 vs BB mid 485.64"
+      "price_above_ema20": "Close 481.15 vs EMA20 486.08",
+      "ema20_above_ema50": "EMA20 486.08 vs EMA50 492.65",
+      "ema50_above_ema200": "EMA50 492.65 vs EMA200 464.89",
+      "rsi_above_50": "RSI(14) 45.81 vs 50",
+      "macd_bullish": "MACD -8.57 vs signal -7.67",
+      "adx_trending_up": "ADX(14) 15.66 vs 20, +DI 21.06 vs -DI 23.61",
+      "price_above_vwap20": "Close 481.15 vs 20d VWAP 485.83",
+      "price_above_bb_mid": "Close 481.15 vs BB mid 485.09"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 15.67 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 40.0",
-        "below_ema200": "Close 470.85 vs EMA200 464.72",
-        "extended_above_ema20": "Close 470.85 vs EMA20 486.60 (-3.2%)",
-        "large_day_move": "Day change +1.2%",
-        "near_52w_low": "Close 470.85 vs 52w low 338.05"
+        "atr_high": "ATR 15.92 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 45.8",
+        "below_ema200": "Close 481.15 vs EMA200 464.89",
+        "extended_above_ema20": "Close 481.15 vs EMA20 486.08 (-1.0%)",
+        "large_day_move": "Day change +2.2%",
+        "near_52w_low": "Close 481.15 vs 52w low 338.05"
       },
       "conditions_on": [
         "atr_high"
@@ -690,9 +691,9 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:17:26.954251+00:00"
+  "updated_at": "2026-10-06T16:45:59.133234+00:00"
 }

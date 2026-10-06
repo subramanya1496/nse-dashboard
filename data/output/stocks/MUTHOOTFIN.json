@@ -3,35 +3,30 @@
   "name": "Muthoot Finance",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 2716.4,
-    "prev_close": 2697.1,
-    "change_pct": 0.7155834043973224,
-    "ema20": 2810.1381599052766,
-    "ema50": 2899.9877383264316,
-    "ema200": 3116.9580371644956,
-    "rsi14": 37.25546147448885,
-    "macd": -55.90848909586839,
-    "macd_signal": -48.54722220230951,
-    "atr14": 68.0624340611328,
-    "adx14": 25.24438882509602,
-    "adx_pos": 14.369772201950202,
-    "adx_neg": 32.32298433977585,
-    "bb_high": 2928.444085619106,
-    "bb_low": 2681.255914380894,
-    "bb_mid": 2804.85,
-    "vwap20": 2801.2081964063536,
+    "date": "2026-10-06",
+    "close": 2686.0,
+    "prev_close": 2716.4,
+    "change_pct": -1.1191282579885176,
+    "ema20": 2798.315478009536,
+    "ema50": 2891.5960623136307,
+    "ema200": 3112.6698974912174,
+    "rsi14": 34.965624235906304,
+    "macd": -58.910110430095756,
+    "macd_signal": -50.619799847866766,
+    "atr14": 66.42226019962331,
+    "adx14": 26.400284900030936,
+    "adx_pos": 13.672849293913316,
+    "adx_neg": 33.01362351098982,
+    "bb_high": 2916.779153419181,
+    "bb_low": 2670.140846580819,
+    "bb_mid": 2793.46,
+    "vwap20": 2791.629920435569,
     "high_52w": 4149.5,
     "low_52w": 2671.0,
-    "volume": 499788.0,
-    "avg_volume20": 622165.55
+    "volume": 369508.0,
+    "avg_volume20": 611466.7
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 3562.3,
-      "ema50": 3440.27
-    },
     {
       "date": "2026-04-15",
       "close": 3598.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 2716.4,
       "ema50": 2899.99
+    },
+    {
+      "date": "2026-10-06",
+      "close": 2686.0,
+      "ema50": 2891.6
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,716.40 vs EMA20 2,810.14",
-      "ema20_above_ema50": "EMA20 2,810.14 vs EMA50 2,899.99",
-      "ema50_above_ema200": "EMA50 2,899.99 vs EMA200 3,116.96",
-      "rsi_above_50": "RSI(14) 37.26 vs 50",
-      "macd_bullish": "MACD -55.91 vs signal -48.55",
-      "adx_trending_up": "ADX(14) 25.24 vs 20, +DI 14.37 vs -DI 32.32",
-      "price_above_vwap20": "Close 2,716.40 vs 20d VWAP 2,801.21",
-      "price_above_bb_mid": "Close 2,716.40 vs BB mid 2,804.85"
+      "price_above_ema20": "Close 2,686.00 vs EMA20 2,798.32",
+      "ema20_above_ema50": "EMA20 2,798.32 vs EMA50 2,891.60",
+      "ema50_above_ema200": "EMA50 2,891.60 vs EMA200 3,112.67",
+      "rsi_above_50": "RSI(14) 34.97 vs 50",
+      "macd_bullish": "MACD -58.91 vs signal -50.62",
+      "adx_trending_up": "ADX(14) 26.40 vs 20, +DI 13.67 vs -DI 33.01",
+      "price_above_vwap20": "Close 2,686.00 vs 20d VWAP 2,791.63",
+      "price_above_bb_mid": "Close 2,686.00 vs BB mid 2,793.46"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -664,7 +664,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -672,19 +672,18 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 68.06 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 37.3",
-        "below_ema200": "Close 2,716.40 vs EMA200 3,116.96",
-        "extended_above_ema20": "Close 2,716.40 vs EMA20 2,810.14 (-3.3%)",
-        "large_day_move": "Day change +0.7%",
-        "near_52w_low": "Close 2,716.40 vs 52w low 2,671.00"
+        "atr_high": "ATR 66.42 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 35.0",
+        "below_ema200": "Close 2,686.00 vs EMA200 3,112.67",
+        "extended_above_ema20": "Close 2,686.00 vs EMA20 2,798.32 (-4.0%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 2,686.00 vs 52w low 2,671.00"
       },
       "conditions_on": [
-        "atr_high",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 3,
+      "condition_count": 2,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:18:36.103469+00:00"
+  "updated_at": "2026-10-06T16:47:08.175248+00:00"
 }

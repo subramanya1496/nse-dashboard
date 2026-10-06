@@ -3,35 +3,30 @@
   "name": "Maruti Suzuki",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 11532.0,
-    "prev_close": 11386.0,
-    "change_pct": 1.2822764798875812,
-    "ema20": 12212.057072084079,
-    "ema50": 12796.884257853879,
-    "ema200": 13591.318625606738,
-    "rsi14": 27.258011482767145,
-    "macd": -410.44566140820643,
-    "macd_signal": -381.2290813075698,
-    "atr14": 243.69385439925034,
-    "adx14": 54.775556260796684,
-    "adx_pos": 4.930013418531648,
-    "adx_neg": 36.311487955034806,
-    "bb_high": 12906.761376352752,
-    "bb_low": 11487.13862364725,
-    "bb_mid": 12196.95,
-    "vwap20": 12147.236553302235,
+    "date": "2026-10-06",
+    "close": 11625.0,
+    "prev_close": 11532.0,
+    "change_pct": 0.8064516129032258,
+    "ema20": 12156.146874742737,
+    "ema50": 12750.928012447845,
+    "ema200": 13571.753266147965,
+    "rsi14": 30.646106199264352,
+    "macd": -407.004986104972,
+    "macd_signal": -386.38426226705025,
+    "atr14": 238.71572194216103,
+    "adx14": 55.56389539316714,
+    "adx_pos": 7.097019430730378,
+    "adx_neg": 34.42095507326724,
+    "bb_high": 12856.534501268898,
+    "bb_low": 11430.465498731102,
+    "bb_mid": 12143.5,
+    "vwap20": 12105.65093390968,
     "high_52w": 17370.0,
     "low_52w": 11305.0,
-    "volume": 757171.0,
-    "avg_volume20": 418407.25
+    "volume": 263958.0,
+    "avg_volume20": 415467.55
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 13076.0,
-      "ema50": 13861.0
-    },
     {
       "date": "2026-04-15",
       "close": 13289.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 11532.0,
       "ema50": 12796.88
+    },
+    {
+      "date": "2026-10-06",
+      "close": 11625.0,
+      "ema50": 12750.93
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 11,532.00 vs EMA20 12,212.06",
-      "ema20_above_ema50": "EMA20 12,212.06 vs EMA50 12,796.88",
-      "ema50_above_ema200": "EMA50 12,796.88 vs EMA200 13,591.32",
-      "rsi_above_50": "RSI(14) 27.26 vs 50",
-      "macd_bullish": "MACD -410.45 vs signal -381.23",
-      "adx_trending_up": "ADX(14) 54.78 vs 20, +DI 4.93 vs -DI 36.31",
-      "price_above_vwap20": "Close 11,532.00 vs 20d VWAP 12,147.24",
-      "price_above_bb_mid": "Close 11,532.00 vs BB mid 12,196.95"
+      "price_above_ema20": "Close 11,625.00 vs EMA20 12,156.15",
+      "ema20_above_ema50": "EMA20 12,156.15 vs EMA50 12,750.93",
+      "ema50_above_ema200": "EMA50 12,750.93 vs EMA200 13,571.75",
+      "rsi_above_50": "RSI(14) 30.65 vs 50",
+      "macd_bullish": "MACD -407.00 vs signal -386.38",
+      "adx_trending_up": "ADX(14) 55.56 vs 20, +DI 7.10 vs -DI 34.42",
+      "price_above_vwap20": "Close 11,625.00 vs 20d VWAP 12,105.65",
+      "price_above_bb_mid": "Close 11,625.00 vs BB mid 12,143.50"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +672,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 243.69 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 27.3",
-        "below_ema200": "Close 11,532.00 vs EMA200 13,591.32",
-        "extended_above_ema20": "Close 11,532.00 vs EMA20 12,212.06 (-5.6%)",
-        "large_day_move": "Day change +1.3%",
-        "near_52w_low": "Close 11,532.00 vs 52w low 11,305.00"
+        "atr_high": "ATR 238.72 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 30.6",
+        "below_ema200": "Close 11,625.00 vs EMA200 13,571.75",
+        "extended_above_ema20": "Close 11,625.00 vs EMA20 12,156.15 (-4.4%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 11,625.00 vs 52w low 11,305.00"
       },
       "conditions_on": [
         "below_ema200",
@@ -690,7 +689,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:18:31.301794+00:00"
+  "updated_at": "2026-10-06T16:47:03.753168+00:00"
 }

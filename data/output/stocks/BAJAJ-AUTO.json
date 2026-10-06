@@ -3,35 +3,30 @@
   "name": "Bajaj Auto",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 10024.0,
-    "prev_close": 10045.0,
-    "change_pct": -0.20905923344947736,
-    "ema20": 11135.515973029667,
-    "ema50": 11242.915741360413,
-    "ema200": 10361.290219021148,
-    "rsi14": 21.607013034670288,
-    "macd": -321.72127415168325,
-    "macd_signal": -155.37908050047128,
-    "atr14": 252.26779393804014,
-    "adx14": 40.16201657428412,
-    "adx_pos": 6.417967966306646,
-    "adx_neg": 44.65120847888641,
-    "bb_high": 12358.82879501469,
-    "bb_low": 10266.771204985309,
-    "bb_mid": 11312.8,
-    "vwap20": 10967.358984081566,
+    "date": "2026-10-06",
+    "close": 10017.0,
+    "prev_close": 10024.0,
+    "change_pct": -0.06983240223463687,
+    "ema20": 11028.990642264936,
+    "ema50": 11194.84061424824,
+    "ema200": 10357.864445697554,
+    "rsi14": 21.536130468542382,
+    "macd": -368.3758155495125,
+    "macd_signal": -197.97842751027952,
+    "atr14": 241.89152294246585,
+    "adx14": 42.64084328373924,
+    "adx_pos": 6.215184455264709,
+    "adx_neg": 43.24039918922511,
+    "bb_high": 12366.75354096312,
+    "bb_low": 10068.646459036881,
+    "bb_mid": 11217.7,
+    "vwap20": 10911.91912854237,
     "high_52w": 12470.0,
     "low_52w": 8491.5,
-    "volume": 354238.0,
-    "avg_volume20": 272033.65
+    "volume": 159069.0,
+    "avg_volume20": 272277.15
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 9816.0,
-      "ema50": 9338.85
-    },
     {
       "date": "2026-04-15",
       "close": 9865.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 10024.0,
       "ema50": 11242.92
+    },
+    {
+      "date": "2026-10-06",
+      "close": 10017.0,
+      "ema50": 11194.84
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 10,024.00 vs EMA20 11,135.52",
-      "ema20_above_ema50": "EMA20 11,135.52 vs EMA50 11,242.92",
-      "ema50_above_ema200": "EMA50 11,242.92 vs EMA200 10,361.29",
-      "rsi_above_50": "RSI(14) 21.61 vs 50",
-      "macd_bullish": "MACD -321.72 vs signal -155.38",
-      "adx_trending_up": "ADX(14) 40.16 vs 20, +DI 6.42 vs -DI 44.65",
-      "price_above_vwap20": "Close 10,024.00 vs 20d VWAP 10,967.36",
-      "price_above_bb_mid": "Close 10,024.00 vs BB mid 11,312.80"
+      "price_above_ema20": "Close 10,017.00 vs EMA20 11,028.99",
+      "ema20_above_ema50": "EMA20 11,028.99 vs EMA50 11,194.84",
+      "ema50_above_ema200": "EMA50 11,194.84 vs EMA200 10,357.86",
+      "rsi_above_50": "RSI(14) 21.54 vs 50",
+      "macd_bullish": "MACD -368.38 vs signal -197.98",
+      "adx_trending_up": "ADX(14) 42.64 vs 20, +DI 6.22 vs -DI 43.24",
+      "price_above_vwap20": "Close 10,017.00 vs 20d VWAP 10,911.92",
+      "price_above_bb_mid": "Close 10,017.00 vs BB mid 11,217.70"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -666,7 +666,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -674,19 +674,18 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 252.27 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 21.6",
-        "below_ema200": "Close 10,024.00 vs EMA200 10,361.29",
-        "extended_above_ema20": "Close 10,024.00 vs EMA20 11,135.52 (-10.0%)",
-        "large_day_move": "Day change -0.2%",
-        "near_52w_low": "Close 10,024.00 vs 52w low 8,491.50"
+        "atr_high": "ATR 241.89 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 21.5",
+        "below_ema200": "Close 10,017.00 vs EMA200 10,357.86",
+        "extended_above_ema20": "Close 10,017.00 vs EMA20 11,028.99 (-9.2%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 10,017.00 vs 52w low 8,491.50"
       },
       "conditions_on": [
-        "atr_high",
         "rsi_extreme",
         "below_ema200"
       ],
-      "condition_count": 3,
+      "condition_count": 2,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:17:38.891640+00:00"
+  "updated_at": "2026-10-06T16:46:11.287750+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Voltas Ltd",
   "sector": "Consumer Durables",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 1061.3,
-    "prev_close": 1053.2,
-    "change_pct": 0.7690846942650882,
-    "ema20": 1123.8672448957,
-    "ema50": 1185.9319314376435,
-    "ema200": 1294.0375191766016,
-    "rsi14": 33.322037205800996,
-    "macd": -37.84009082830903,
-    "macd_signal": -34.853305734967705,
-    "atr14": 30.71679222255842,
-    "adx14": 33.63930499159818,
-    "adx_pos": 11.111268875426706,
-    "adx_neg": 32.78938856273571,
-    "bb_high": 1190.7947085630456,
-    "bb_low": 1056.9752914369544,
-    "bb_mid": 1123.885,
-    "vwap20": 1123.6850714806935,
+    "date": "2026-10-06",
+    "close": 1067.9,
+    "prev_close": 1061.3,
+    "change_pct": 0.6218788278526465,
+    "ema20": 1118.5370310961096,
+    "ema50": 1181.3032282440106,
+    "ema200": 1291.7873946076802,
+    "rsi14": 35.102569932296504,
+    "macd": -37.70162033625866,
+    "macd_signal": -35.4229686552259,
+    "atr14": 30.294164206661403,
+    "adx14": 34.85020253701958,
+    "adx_pos": 10.461545746698079,
+    "adx_neg": 31.88592168249939,
+    "bb_high": 1186.4129091492564,
+    "bb_low": 1051.147090850744,
+    "bb_mid": 1118.7800000000002,
+    "vwap20": 1111.6713359736293,
     "high_52w": 1582.5,
     "low_52w": 1040.6,
-    "volume": 436486.0,
-    "avg_volume20": 667161.5
+    "volume": 2705541.0,
+    "avg_volume20": 779407.6
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 1361.6,
-      "ema50": 1376.27
-    },
     {
       "date": "2026-04-15",
       "close": 1402.2,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 1061.3,
       "ema50": 1185.93
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1067.9,
+      "ema50": 1181.3
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,061.30 vs EMA20 1,123.87",
-      "ema20_above_ema50": "EMA20 1,123.87 vs EMA50 1,185.93",
-      "ema50_above_ema200": "EMA50 1,185.93 vs EMA200 1,294.04",
-      "rsi_above_50": "RSI(14) 33.32 vs 50",
-      "macd_bullish": "MACD -37.84 vs signal -34.85",
-      "adx_trending_up": "ADX(14) 33.64 vs 20, +DI 11.11 vs -DI 32.79",
-      "price_above_vwap20": "Close 1,061.30 vs 20d VWAP 1,123.69",
-      "price_above_bb_mid": "Close 1,061.30 vs BB mid 1,123.88"
+      "price_above_ema20": "Close 1,067.90 vs EMA20 1,118.54",
+      "ema20_above_ema50": "EMA20 1,118.54 vs EMA50 1,181.30",
+      "ema50_above_ema200": "EMA50 1,181.30 vs EMA200 1,291.79",
+      "rsi_above_50": "RSI(14) 35.10 vs 50",
+      "macd_bullish": "MACD -37.70 vs signal -35.42",
+      "adx_trending_up": "ADX(14) 34.85 vs 20, +DI 10.46 vs -DI 31.89",
+      "price_above_vwap20": "Close 1,067.90 vs 20d VWAP 1,111.67",
+      "price_above_bb_mid": "Close 1,067.90 vs BB mid 1,118.78"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 30.72 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 33.3",
-        "below_ema200": "Close 1,061.30 vs EMA200 1,294.04",
-        "extended_above_ema20": "Close 1,061.30 vs EMA20 1,123.87 (-5.6%)",
-        "large_day_move": "Day change +0.8%",
-        "near_52w_low": "Close 1,061.30 vs 52w low 1,040.60"
+        "atr_high": "ATR 30.29 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 35.1",
+        "below_ema200": "Close 1,067.90 vs EMA200 1,291.79",
+        "extended_above_ema20": "Close 1,067.90 vs EMA20 1,118.54 (-4.5%)",
+        "large_day_move": "Day change +0.6%",
+        "near_52w_low": "Close 1,067.90 vs 52w low 1,040.60"
       },
       "conditions_on": [
         "atr_high",
@@ -690,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:19:13.728779+00:00"
+  "updated_at": "2026-10-06T16:47:45.743439+00:00"
 }

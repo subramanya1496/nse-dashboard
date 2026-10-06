@@ -3,35 +3,30 @@
   "name": "Bank of India",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 133.5,
-    "prev_close": 129.48,
-    "change_pct": 3.1047265987025106,
-    "ema20": 136.34714559780116,
-    "ema50": 139.43016386200543,
-    "ema200": 141.30627163941236,
-    "rsi14": 40.98803283115873,
-    "macd": -2.841990987721914,
-    "macd_signal": -2.1113577127883465,
-    "atr14": 3.4238459618757298,
-    "adx14": 22.728516781252324,
-    "adx_pos": 20.249504971748603,
-    "adx_neg": 30.986188113207923,
-    "bb_high": 146.06561885258918,
-    "bb_low": 128.7183811474108,
-    "bb_mid": 137.392,
-    "vwap20": 136.5891900156029,
+    "date": "2026-10-06",
+    "close": 132.16,
+    "prev_close": 133.5,
+    "change_pct": -1.0037453183520624,
+    "ema20": 135.948369826582,
+    "ema50": 139.14505939682874,
+    "ema200": 141.21526396140828,
+    "rsi14": 38.619844983952966,
+    "macd": -2.815223039598237,
+    "macd_signal": -2.252130778150325,
+    "atr14": 3.329285536027463,
+    "adx14": 22.6944089871976,
+    "adx_pos": 19.33716936313973,
+    "adx_neg": 30.405390076584332,
+    "bb_high": 144.96470875929208,
+    "bb_low": 128.53529124070792,
+    "bb_mid": 136.75,
+    "vwap20": 136.24650333979903,
     "high_52w": 178.36,
-    "low_52w": 116.0,
-    "volume": 15657633.0,
-    "avg_volume20": 5487767.85
+    "low_52w": 116.26,
+    "volume": 3280724.0,
+    "avg_volume20": 5506676.15
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 144.97,
-      "ema50": 152.02
-    },
     {
       "date": "2026-04-15",
       "close": 147.7,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 133.5,
       "ema50": 139.43
+    },
+    {
+      "date": "2026-10-06",
+      "close": 132.16,
+      "ema50": 139.15
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 133.50 vs EMA20 136.35",
-      "ema20_above_ema50": "EMA20 136.35 vs EMA50 139.43",
-      "ema50_above_ema200": "EMA50 139.43 vs EMA200 141.31",
-      "rsi_above_50": "RSI(14) 40.99 vs 50",
-      "macd_bullish": "MACD -2.84 vs signal -2.11",
-      "adx_trending_up": "ADX(14) 22.73 vs 20, +DI 20.25 vs -DI 30.99",
-      "price_above_vwap20": "Close 133.50 vs 20d VWAP 136.59",
-      "price_above_bb_mid": "Close 133.50 vs BB mid 137.39"
+      "price_above_ema20": "Close 132.16 vs EMA20 135.95",
+      "ema20_above_ema50": "EMA20 135.95 vs EMA50 139.15",
+      "ema50_above_ema200": "EMA50 139.15 vs EMA200 141.22",
+      "rsi_above_50": "RSI(14) 38.62 vs 50",
+      "macd_bullish": "MACD -2.82 vs signal -2.25",
+      "adx_trending_up": "ADX(14) 22.69 vs 20, +DI 19.34 vs -DI 30.41",
+      "price_above_vwap20": "Close 132.16 vs 20d VWAP 136.25",
+      "price_above_bb_mid": "Close 132.16 vs BB mid 136.75"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.42 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 41.0",
-        "below_ema200": "Close 133.50 vs EMA200 141.31",
-        "extended_above_ema20": "Close 133.50 vs EMA20 136.35 (-2.1%)",
-        "large_day_move": "Day change +3.1%",
-        "near_52w_low": "Close 133.50 vs 52w low 116.00"
+        "atr_high": "ATR 3.33 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 38.6",
+        "below_ema200": "Close 132.16 vs EMA200 141.22",
+        "extended_above_ema20": "Close 132.16 vs EMA20 135.95 (-2.8%)",
+        "large_day_move": "Day change -1.0%",
+        "near_52w_low": "Close 132.16 vs 52w low 116.26"
       },
       "conditions_on": [
         "atr_high",
@@ -690,7 +689,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:17:41.700406+00:00"
+  "updated_at": "2026-10-06T16:46:14.048443+00:00"
 }

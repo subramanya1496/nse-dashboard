@@ -3,35 +3,30 @@
   "name": "Deepak Nitrite",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-10-05",
-    "close": 1497.0,
-    "prev_close": 1492.8,
-    "change_pct": 0.28135048231511556,
-    "ema20": 1590.6370229285008,
-    "ema50": 1641.4611732403,
-    "ema200": 1670.7495861835628,
-    "rsi14": 29.757909527017645,
-    "macd": -48.31015977930156,
-    "macd_signal": -39.146624610471015,
-    "atr14": 43.75887365383797,
-    "adx14": 30.292134292351232,
-    "adx_pos": 11.089407094273346,
-    "adx_neg": 34.00934954565945,
-    "bb_high": 1699.4704212479976,
-    "bb_low": 1484.8695787520026,
-    "bb_mid": 1592.17,
-    "vwap20": 1607.2114808961433,
+    "date": "2026-10-06",
+    "close": 1557.0,
+    "prev_close": 1497.0,
+    "change_pct": 4.008016032064128,
+    "ema20": 1587.4334969353101,
+    "ema50": 1638.1489703681314,
+    "ema200": 1669.6177495051195,
+    "rsi14": 42.182205282385695,
+    "macd": -44.91932333285422,
+    "macd_signal": -40.30116435494766,
+    "atr14": 45.5618112499924,
+    "adx14": 30.181391062853173,
+    "adx_pos": 16.78783681419246,
+    "adx_neg": 30.33044601052924,
+    "bb_high": 1677.2882339158068,
+    "bb_low": 1491.5117660841934,
+    "bb_mid": 1584.4,
+    "vwap20": 1598.1159935748592,
     "high_52w": 1897.9,
     "low_52w": 1280.0,
-    "volume": 108056.0,
-    "avg_volume20": 220733.35
+    "volume": 279774.0,
+    "avg_volume20": 224918.55
   },
   "price_history": [
-    {
-      "date": "2026-04-13",
-      "close": 1473.4,
-      "ema50": 1485.29
-    },
     {
       "date": "2026-04-15",
       "close": 1522.6,
@@ -626,6 +621,11 @@
       "date": "2026-10-05",
       "close": 1497.0,
       "ema50": 1641.46
+    },
+    {
+      "date": "2026-10-06",
+      "close": 1557.0,
+      "ema50": 1638.15
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,497.00 vs EMA20 1,590.64",
-      "ema20_above_ema50": "EMA20 1,590.64 vs EMA50 1,641.46",
-      "ema50_above_ema200": "EMA50 1,641.46 vs EMA200 1,670.75",
-      "rsi_above_50": "RSI(14) 29.76 vs 50",
-      "macd_bullish": "MACD -48.31 vs signal -39.15",
-      "adx_trending_up": "ADX(14) 30.29 vs 20, +DI 11.09 vs -DI 34.01",
-      "price_above_vwap20": "Close 1,497.00 vs 20d VWAP 1,607.21",
-      "price_above_bb_mid": "Close 1,497.00 vs BB mid 1,592.17"
+      "price_above_ema20": "Close 1,557.00 vs EMA20 1,587.43",
+      "ema20_above_ema50": "EMA20 1,587.43 vs EMA50 1,638.15",
+      "ema50_above_ema200": "EMA50 1,638.15 vs EMA200 1,669.62",
+      "rsi_above_50": "RSI(14) 42.18 vs 50",
+      "macd_bullish": "MACD -44.92 vs signal -40.30",
+      "adx_trending_up": "ADX(14) 30.18 vs 20, +DI 16.79 vs -DI 30.33",
+      "price_above_vwap20": "Close 1,557.00 vs 20d VWAP 1,598.12",
+      "price_above_bb_mid": "Close 1,557.00 vs BB mid 1,584.40"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -668,22 +668,23 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 43.76 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 29.8",
-        "below_ema200": "Close 1,497.00 vs EMA200 1,670.75",
-        "extended_above_ema20": "Close 1,497.00 vs EMA20 1,590.64 (-5.9%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 1,497.00 vs 52w low 1,280.00"
+        "atr_high": "ATR 45.56 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 42.2",
+        "below_ema200": "Close 1,557.00 vs EMA200 1,669.62",
+        "extended_above_ema20": "Close 1,557.00 vs EMA20 1,587.43 (-1.9%)",
+        "large_day_move": "Day change +4.0%",
+        "near_52w_low": "Close 1,557.00 vs 52w low 1,280.00"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "large_day_move"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-05T19:17:54.462015+00:00"
+  "updated_at": "2026-10-06T16:46:26.894304+00:00"
 }
