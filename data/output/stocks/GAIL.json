@@ -3,35 +3,30 @@
   "name": "GAIL (India) Ltd",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-10-06",
-    "close": 172.08,
-    "prev_close": 167.5,
-    "change_pct": 2.7343283582089626,
-    "ema20": 172.02241055402695,
-    "ema50": 172.47075207004195,
-    "ema200": 170.34410058193006,
-    "rsi14": 49.42732757285255,
-    "macd": -0.8500096802714268,
-    "macd_signal": -0.6138049128663543,
-    "atr14": 3.5051651279766745,
-    "adx14": 14.690511022659408,
-    "adx_pos": 10.419966505295049,
-    "adx_neg": 19.71943174516041,
-    "bb_high": 176.39920429166955,
-    "bb_low": 168.53279570833047,
-    "bb_mid": 172.466,
-    "vwap20": 172.31676523063643,
+    "date": "2026-10-07",
+    "close": 170.71,
+    "prev_close": 172.08,
+    "change_pct": -0.7961413296141355,
+    "ema20": 171.89741907269115,
+    "ema50": 172.40170834309285,
+    "ema200": 170.39841413328972,
+    "rsi14": 46.57329998865707,
+    "macd": -0.8461132346406828,
+    "macd_signal": -0.6602665773081586,
+    "atr14": 3.5062247616633284,
+    "adx14": 15.845106441245262,
+    "adx_pos": 9.672759046661664,
+    "adx_neg": 18.305367078233168,
+    "bb_high": 175.84966817046686,
+    "bb_low": 168.55333182953316,
+    "bb_mid": 172.2015,
+    "vwap20": 171.97825169434086,
     "high_52w": 186.87,
     "low_52w": 134.36,
-    "volume": 6945149.0,
-    "avg_volume20": 6861785.65
+    "volume": 7094410.0,
+    "avg_volume20": 6720988.75
   },
   "price_history": [
-    {
-      "date": "2026-04-15",
-      "close": 156.12,
-      "ema50": 153.98
-    },
     {
       "date": "2026-04-16",
       "close": 158.92,
@@ -280,7 +275,7 @@
     {
       "date": "2026-06-29",
       "close": 172.22,
-      "ema50": 166.53
+      "ema50": 166.54
     },
     {
       "date": "2026-06-30",
@@ -300,7 +295,7 @@
     {
       "date": "2026-07-03",
       "close": 174.15,
-      "ema50": 167.65
+      "ema50": 167.66
     },
     {
       "date": "2026-07-06",
@@ -335,7 +330,7 @@
     {
       "date": "2026-07-14",
       "close": 171.51,
-      "ema50": 168.8
+      "ema50": 168.81
     },
     {
       "date": "2026-07-15",
@@ -626,11 +621,16 @@
       "date": "2026-10-06",
       "close": 172.08,
       "ema50": 172.47
+    },
+    {
+      "date": "2026-10-07",
+      "close": 170.71,
+      "ema50": 172.4
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
@@ -640,20 +640,19 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 172.08 vs EMA20 172.02",
-      "ema20_above_ema50": "EMA20 172.02 vs EMA50 172.47",
-      "ema50_above_ema200": "EMA50 172.47 vs EMA200 170.34",
-      "rsi_above_50": "RSI(14) 49.43 vs 50",
-      "macd_bullish": "MACD -0.85 vs signal -0.61",
-      "adx_trending_up": "ADX(14) 14.69 vs 20, +DI 10.42 vs -DI 19.72",
-      "price_above_vwap20": "Close 172.08 vs 20d VWAP 172.32",
-      "price_above_bb_mid": "Close 172.08 vs BB mid 172.47"
+      "price_above_ema20": "Close 170.71 vs EMA20 171.90",
+      "ema20_above_ema50": "EMA20 171.90 vs EMA50 172.40",
+      "ema50_above_ema200": "EMA50 172.40 vs EMA200 170.40",
+      "rsi_above_50": "RSI(14) 46.57 vs 50",
+      "macd_bullish": "MACD -0.85 vs signal -0.66",
+      "adx_trending_up": "ADX(14) 15.85 vs 20, +DI 9.67 vs -DI 18.31",
+      "price_above_vwap20": "Close 170.71 vs 20d VWAP 171.98",
+      "price_above_bb_mid": "Close 170.71 vs BB mid 172.20"
     },
     "flags_on": [
-      "price_above_ema20",
       "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -662,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags",
+        "1/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -676,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.51 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 49.4",
-        "below_ema200": "Close 172.08 vs EMA200 170.34",
-        "extended_above_ema20": "Close 172.08 vs EMA20 172.02 (+0.0%)",
-        "large_day_move": "Day change +2.7%",
-        "near_52w_low": "Close 172.08 vs 52w low 134.36"
+        "atr_high": "ATR 3.51 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 46.6",
+        "below_ema200": "Close 170.71 vs EMA200 170.40",
+        "extended_above_ema20": "Close 170.71 vs EMA20 171.90 (-0.7%)",
+        "large_day_move": "Day change -0.8%",
+        "near_52w_low": "Close 170.71 vs 52w low 134.36"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -704,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-06T16:46:33.306691+00:00"
+  "updated_at": "2026-10-07T17:25:40.694615+00:00"
 }

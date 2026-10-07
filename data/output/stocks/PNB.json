@@ -3,35 +3,30 @@
   "name": "Punjab National Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-06",
-    "close": 111.92,
-    "prev_close": 112.35,
-    "change_pct": -0.382732532265236,
-    "ema20": 114.417294026877,
-    "ema50": 114.10897456710396,
-    "ema200": 113.14835153583834,
-    "rsi14": 42.44370759246658,
-    "macd": -0.9189786035046978,
-    "macd_signal": -0.2293466446968485,
-    "atr14": 2.591255233549176,
-    "adx14": 21.48898895509358,
-    "adx_pos": 12.80195570837882,
-    "adx_neg": 23.640241187577267,
-    "bb_high": 120.0108322181277,
-    "bb_low": 110.42116778187226,
-    "bb_mid": 115.21599999999998,
-    "vwap20": 115.32273828623846,
+    "date": "2026-10-07",
+    "close": 114.59,
+    "prev_close": 111.92,
+    "change_pct": 2.385632594710509,
+    "ema20": 114.43374221479355,
+    "ema50": 114.12784594343213,
+    "ema200": 113.234680032113,
+    "rsi14": 49.96579911076435,
+    "macd": -0.7780047267036991,
+    "macd_signal": -0.3390782612217031,
+    "atr14": 2.7311655740280814,
+    "adx14": 20.724698533674207,
+    "adx_pos": 16.770724389682044,
+    "adx_neg": 20.82712782063399,
+    "bb_high": 119.96436434482105,
+    "bb_low": 110.36663565517894,
+    "bb_mid": 115.1655,
+    "vwap20": 115.16189753736842,
     "high_52w": 135.15,
     "low_52w": 98.5,
-    "volume": 8421589.0,
-    "avg_volume20": 13183377.25
+    "volume": 18275898.0,
+    "avg_volume20": 13544026.2
   },
   "price_history": [
-    {
-      "date": "2026-04-15",
-      "close": 113.08,
-      "ema50": 115.05
-    },
     {
       "date": "2026-04-16",
       "close": 113.56,
@@ -200,7 +195,7 @@
     {
       "date": "2026-06-04",
       "close": 105.67,
-      "ema50": 108.5
+      "ema50": 108.51
     },
     {
       "date": "2026-06-05",
@@ -265,7 +260,7 @@
     {
       "date": "2026-06-23",
       "close": 107.43,
-      "ema50": 108.3
+      "ema50": 108.31
     },
     {
       "date": "2026-06-24",
@@ -626,11 +621,16 @@
       "date": "2026-10-06",
       "close": 111.92,
       "ema50": 114.11
+    },
+    {
+      "date": "2026-10-07",
+      "close": 114.59,
+      "ema50": 114.13
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
@@ -640,29 +640,30 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 111.92 vs EMA20 114.42",
-      "ema20_above_ema50": "EMA20 114.42 vs EMA50 114.11",
-      "ema50_above_ema200": "EMA50 114.11 vs EMA200 113.15",
-      "rsi_above_50": "RSI(14) 42.44 vs 50",
-      "macd_bullish": "MACD -0.92 vs signal -0.23",
-      "adx_trending_up": "ADX(14) 21.49 vs 20, +DI 12.80 vs -DI 23.64",
-      "price_above_vwap20": "Close 111.92 vs 20d VWAP 115.32",
-      "price_above_bb_mid": "Close 111.92 vs BB mid 115.22"
+      "price_above_ema20": "Close 114.59 vs EMA20 114.43",
+      "ema20_above_ema50": "EMA20 114.43 vs EMA50 114.13",
+      "ema50_above_ema200": "EMA50 114.13 vs EMA200 113.23",
+      "rsi_above_50": "RSI(14) 49.97 vs 50",
+      "macd_bullish": "MACD -0.78 vs signal -0.34",
+      "adx_trending_up": "ADX(14) 20.72 vs 20, +DI 16.77 vs -DI 20.83",
+      "price_above_vwap20": "Close 114.59 vs 20d VWAP 115.16",
+      "price_above_bb_mid": "Close 114.59 vs BB mid 115.17"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -670,23 +671,21 @@
       "conditions": {
         "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.59 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 42.4",
-        "below_ema200": "Close 111.92 vs EMA200 113.15",
-        "extended_above_ema20": "Close 111.92 vs EMA20 114.42 (-2.2%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 111.92 vs 52w low 98.50"
+        "atr_high": "ATR 2.73 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 50.0",
+        "below_ema200": "Close 114.59 vs EMA200 113.23",
+        "extended_above_ema20": "Close 114.59 vs EMA20 114.43 (+0.1%)",
+        "large_day_move": "Day change +2.4%",
+        "near_52w_low": "Close 114.59 vs 52w low 98.50"
       },
-      "conditions_on": [
-        "below_ema200"
-      ],
-      "condition_count": 1,
+      "conditions_on": [],
+      "condition_count": 0,
       "condition_total": 6,
       "level": "low"
     },
@@ -697,8 +696,8 @@
       "near_buy_zone": true
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "bearish",
+      "daily": "bullish",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-06T16:47:18.965135+00:00"
+  "updated_at": "2026-10-07T17:26:26.364057+00:00"
 }
