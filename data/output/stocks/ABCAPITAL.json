@@ -3,35 +3,30 @@
   "name": "Aditya Birla Capital",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 368.65,
-    "prev_close": 372.1,
-    "change_pct": -0.9271701155603453,
-    "ema20": 385.63889841566237,
-    "ema50": 391.4663805942805,
-    "ema200": 366.59787606138195,
-    "rsi14": 35.73050289842847,
-    "macd": -7.392419477715919,
-    "macd_signal": -5.466212116291598,
-    "atr14": 9.113035015909784,
-    "adx14": 22.44429877269675,
-    "adx_pos": 14.23859624738,
-    "adx_neg": 32.0866623141216,
-    "bb_high": 410.6464000442144,
-    "bb_low": 364.5035999557856,
-    "bb_mid": 387.575,
-    "vwap20": 385.6455026271676,
+    "date": "2026-10-09",
+    "close": 380.7,
+    "prev_close": 368.65,
+    "change_pct": 3.268683032686834,
+    "ema20": 385.1685271379802,
+    "ema50": 391.04416356385025,
+    "ema200": 366.6813664377434,
+    "rsi14": 45.23424241005646,
+    "macd": -6.848064581151448,
+    "macd_signal": -5.7425826091661785,
+    "atr14": 9.665675372087662,
+    "adx14": 21.972401166113315,
+    "adx_pos": 20.409768397237645,
+    "adx_neg": 28.091226039357686,
+    "bb_high": 409.1298046172735,
+    "bb_low": 364.0901953827265,
+    "bb_mid": 386.61,
+    "vwap20": 384.5295477917751,
     "high_52w": 430.7,
-    "low_52w": 286.5,
-    "volume": 4608495.0,
-    "avg_volume20": 2989623.35
+    "low_52w": 287.7,
+    "volume": 6519404.0,
+    "avg_volume20": 3208392.55
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 340.4,
-      "ema50": 329.2
-    },
     {
       "date": "2026-04-20",
       "close": 341.6,
@@ -626,6 +621,11 @@
       "date": "2026-10-08",
       "close": 368.65,
       "ema50": 391.47
+    },
+    {
+      "date": "2026-10-09",
+      "close": 380.7,
+      "ema50": 391.04
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 368.65 vs EMA20 385.64",
-      "ema20_above_ema50": "EMA20 385.64 vs EMA50 391.47",
-      "ema50_above_ema200": "EMA50 391.47 vs EMA200 366.60",
-      "rsi_above_50": "RSI(14) 35.73 vs 50",
-      "macd_bullish": "MACD -7.39 vs signal -5.47",
-      "adx_trending_up": "ADX(14) 22.44 vs 20, +DI 14.24 vs -DI 32.09",
-      "price_above_vwap20": "Close 368.65 vs 20d VWAP 385.65",
-      "price_above_bb_mid": "Close 368.65 vs BB mid 387.57"
+      "price_above_ema20": "Close 380.70 vs EMA20 385.17",
+      "ema20_above_ema50": "EMA20 385.17 vs EMA50 391.04",
+      "ema50_above_ema200": "EMA50 391.04 vs EMA200 366.68",
+      "rsi_above_50": "RSI(14) 45.23 vs 50",
+      "macd_bullish": "MACD -6.85 vs signal -5.74",
+      "adx_trending_up": "ADX(14) 21.97 vs 20, +DI 20.41 vs -DI 28.09",
+      "price_above_vwap20": "Close 380.70 vs 20d VWAP 384.53",
+      "price_above_bb_mid": "Close 380.70 vs BB mid 386.61"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -662,12 +662,12 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "1/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
@@ -675,15 +675,17 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.11 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 35.7",
-        "below_ema200": "Close 368.65 vs EMA200 366.60",
-        "extended_above_ema20": "Close 368.65 vs EMA20 385.64 (-4.4%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 368.65 vs 52w low 286.50"
+        "atr_high": "ATR 9.67 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 45.2",
+        "below_ema200": "Close 380.70 vs EMA200 366.68",
+        "extended_above_ema20": "Close 380.70 vs EMA20 385.17 (-1.2%)",
+        "large_day_move": "Day change +3.3%",
+        "near_52w_low": "Close 380.70 vs 52w low 287.70"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "atr_high"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -691,7 +693,7 @@
       "breakout": false,
       "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -703,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:23:44.029811+00:00"
+  "updated_at": "2026-10-09T16:59:05.184246+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "FSN E-Commerce Ventures (Nykaa)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 332.3,
-    "prev_close": 341.25,
-    "change_pct": -2.6227106227106196,
-    "ema20": 333.42947063745623,
-    "ema50": 329.4147230088986,
-    "ema200": 294.5124639568251,
-    "rsi14": 49.386731469552856,
-    "macd": 0.2939793269579809,
-    "macd_signal": -0.045584497308648934,
-    "atr14": 9.642963614882712,
-    "adx14": 18.3453075666543,
-    "adx_pos": 23.488362465573623,
-    "adx_neg": 18.007888495836504,
-    "bb_high": 347.843555259119,
-    "bb_low": 319.72144474088094,
-    "bb_mid": 333.78249999999997,
-    "vwap20": 334.1281786295775,
+    "date": "2026-10-09",
+    "close": 343.0,
+    "prev_close": 332.3,
+    "change_pct": 3.219981944026479,
+    "ema20": 334.34094962436524,
+    "ema50": 329.94748785876504,
+    "ema200": 295.0787501676385,
+    "rsi14": 56.16278919194186,
+    "macd": 1.029384889144353,
+    "macd_signal": 0.16940937983821508,
+    "atr14": 9.83632335673322,
+    "adx14": 18.04315828092582,
+    "adx_pos": 21.781269363313736,
+    "adx_neg": 16.392901917049308,
+    "bb_high": 347.84355525911957,
+    "bb_low": 319.7214447408805,
+    "bb_mid": 333.7825,
+    "vwap20": 334.1500646273071,
     "high_52w": 349.55,
-    "low_52w": 231.24,
-    "volume": 4233718.0,
-    "avg_volume20": 4829338.15
+    "low_52w": 232.0,
+    "volume": 5152542.0,
+    "avg_volume20": 4886427.75
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 269.66,
-      "ema50": 253.14
-    },
     {
       "date": "2026-04-20",
       "close": 264.55,
@@ -235,7 +230,7 @@
     {
       "date": "2026-06-17",
       "close": 280.95,
-      "ema50": 265.57
+      "ema50": 265.58
     },
     {
       "date": "2026-06-18",
@@ -300,7 +295,7 @@
     {
       "date": "2026-07-07",
       "close": 315.2,
-      "ema50": 282.63
+      "ema50": 282.64
     },
     {
       "date": "2026-07-08",
@@ -370,7 +365,7 @@
     {
       "date": "2026-07-27",
       "close": 326.75,
-      "ema50": 300.95
+      "ema50": 300.96
     },
     {
       "date": "2026-07-28",
@@ -626,45 +621,53 @@
       "date": "2026-10-08",
       "close": 332.3,
       "ema50": 329.41
+    },
+    {
+      "date": "2026-10-09",
+      "close": 343.0,
+      "ema50": 329.95
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 332.30 vs EMA20 333.43",
-      "ema20_above_ema50": "EMA20 333.43 vs EMA50 329.41",
-      "ema50_above_ema200": "EMA50 329.41 vs EMA200 294.51",
-      "rsi_above_50": "RSI(14) 49.39 vs 50",
-      "macd_bullish": "MACD 0.29 vs signal -0.05",
-      "adx_trending_up": "ADX(14) 18.35 vs 20, +DI 23.49 vs -DI 18.01",
-      "price_above_vwap20": "Close 332.30 vs 20d VWAP 334.13",
-      "price_above_bb_mid": "Close 332.30 vs BB mid 333.78"
+      "price_above_ema20": "Close 343.00 vs EMA20 334.34",
+      "ema20_above_ema50": "EMA20 334.34 vs EMA50 329.95",
+      "ema50_above_ema200": "EMA50 329.95 vs EMA200 295.08",
+      "rsi_above_50": "RSI(14) 56.16 vs 50",
+      "macd_bullish": "MACD 1.03 vs signal 0.17",
+      "adx_trending_up": "ADX(14) 18.04 vs 20, +DI 21.78 vs -DI 16.39",
+      "price_above_vwap20": "Close 343.00 vs 20d VWAP 334.15",
+      "price_above_bb_mid": "Close 343.00 vs BB mid 333.78"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "macd_bullish"
+      "rsi_above_50",
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 3,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -677,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.64 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 49.4",
-        "below_ema200": "Close 332.30 vs EMA200 294.51",
-        "extended_above_ema20": "Close 332.30 vs EMA20 333.43 (-0.3%)",
-        "large_day_move": "Day change -2.6%",
-        "near_52w_low": "Close 332.30 vs 52w low 231.24"
+        "atr_high": "ATR 9.84 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 56.2",
+        "below_ema200": "Close 343.00 vs EMA200 295.08",
+        "extended_above_ema20": "Close 343.00 vs EMA20 334.34 (+2.6%)",
+        "large_day_move": "Day change +3.2%",
+        "near_52w_low": "Close 343.00 vs 52w low 232.00"
       },
       "conditions_on": [
         "atr_high"
@@ -695,7 +698,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -707,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:24:50.500661+00:00"
+  "updated_at": "2026-10-09T17:00:24.527575+00:00"
 }

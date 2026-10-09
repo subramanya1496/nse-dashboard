@@ -3,35 +3,30 @@
   "name": "SRF Ltd",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 2485.2,
-    "prev_close": 2460.0,
-    "change_pct": 1.0243902439024315,
-    "ema20": 2502.0935525714244,
-    "ema50": 2555.7419973461983,
-    "ema200": 2688.825906745121,
-    "rsi14": 45.15588579012972,
-    "macd": -27.780343051727414,
-    "macd_signal": -28.332392919197655,
-    "atr14": 54.21721837233979,
-    "adx14": 24.247272843755308,
-    "adx_pos": 15.340829466003287,
-    "adx_neg": 20.69575161284304,
-    "bb_high": 2568.0867893912264,
-    "bb_low": 2427.143210608773,
-    "bb_mid": 2497.615,
-    "vwap20": 2497.5437429618833,
+    "date": "2026-10-09",
+    "close": 2519.5,
+    "prev_close": 2485.2,
+    "change_pct": 1.380170610011274,
+    "ema20": 2503.7513094693836,
+    "ema50": 2554.320749077269,
+    "ema200": 2687.2026368890215,
+    "rsi14": 50.4828608714166,
+    "macd": -23.076022984353585,
+    "macd_signal": -27.2811189323346,
+    "atr14": 53.823131346816645,
+    "adx14": 23.576730791143184,
+    "adx_pos": 14.349356660293736,
+    "adx_neg": 19.35819193553677,
+    "bb_high": 2568.0303549111027,
+    "bb_low": 2427.1496450888976,
+    "bb_mid": 2497.59,
+    "vwap20": 2497.489743690227,
     "high_52w": 3210.0,
     "low_52w": 2355.0,
-    "volume": 303720.0,
-    "avg_volume20": 225764.7
+    "volume": 171915.0,
+    "avg_volume20": 230935.4
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 2494.5,
-      "ema50": 2590.35
-    },
     {
       "date": "2026-04-20",
       "close": 2465.1,
@@ -130,7 +125,7 @@
     {
       "date": "2026-05-18",
       "close": 2639.9,
-      "ema50": 2612.09
+      "ema50": 2612.1
     },
     {
       "date": "2026-05-19",
@@ -250,7 +245,7 @@
     {
       "date": "2026-06-22",
       "close": 2720.7,
-      "ema50": 2669.59
+      "ema50": 2669.6
     },
     {
       "date": "2026-06-23",
@@ -626,42 +621,51 @@
       "date": "2026-10-08",
       "close": 2485.2,
       "ema50": 2555.74
+    },
+    {
+      "date": "2026-10-09",
+      "close": 2519.5,
+      "ema50": 2554.32
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,485.20 vs EMA20 2,502.09",
-      "ema20_above_ema50": "EMA20 2,502.09 vs EMA50 2,555.74",
-      "ema50_above_ema200": "EMA50 2,555.74 vs EMA200 2,688.83",
-      "rsi_above_50": "RSI(14) 45.16 vs 50",
-      "macd_bullish": "MACD -27.78 vs signal -28.33",
-      "adx_trending_up": "ADX(14) 24.25 vs 20, +DI 15.34 vs -DI 20.70",
-      "price_above_vwap20": "Close 2,485.20 vs 20d VWAP 2,497.54",
-      "price_above_bb_mid": "Close 2,485.20 vs BB mid 2,497.61"
+      "price_above_ema20": "Close 2,519.50 vs EMA20 2,503.75",
+      "ema20_above_ema50": "EMA20 2,503.75 vs EMA50 2,554.32",
+      "ema50_above_ema200": "EMA50 2,554.32 vs EMA200 2,687.20",
+      "rsi_above_50": "RSI(14) 50.48 vs 50",
+      "macd_bullish": "MACD -23.08 vs signal -27.28",
+      "adx_trending_up": "ADX(14) 23.58 vs 20, +DI 14.35 vs -DI 19.36",
+      "price_above_vwap20": "Close 2,519.50 vs 20d VWAP 2,497.49",
+      "price_above_bb_mid": "Close 2,519.50 vs BB mid 2,497.59"
     },
     "flags_on": [
-      "macd_bullish"
+      "price_above_ema20",
+      "rsi_above_50",
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "1/8 bullish flags"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 54.22 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 45.2",
-        "below_ema200": "Close 2,485.20 vs EMA200 2,688.83",
-        "extended_above_ema20": "Close 2,485.20 vs EMA20 2,502.09 (-0.7%)",
-        "large_day_move": "Day change +1.0%",
-        "near_52w_low": "Close 2,485.20 vs 52w low 2,355.00"
+        "atr_high": "ATR 53.82 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 50.5",
+        "below_ema200": "Close 2,519.50 vs EMA200 2,687.20",
+        "extended_above_ema20": "Close 2,519.50 vs EMA20 2,503.75 (+0.6%)",
+        "large_day_move": "Day change +1.4%",
+        "near_52w_low": "Close 2,519.50 vs 52w low 2,355.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -704,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:25:08.519529+00:00"
+  "updated_at": "2026-10-09T17:00:42.537693+00:00"
 }

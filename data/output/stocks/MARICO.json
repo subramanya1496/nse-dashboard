@@ -3,35 +3,30 @@
   "name": "Marico Ltd",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 777.25,
-    "prev_close": 787.25,
-    "change_pct": -1.2702445220704985,
-    "ema20": 803.6707392501384,
-    "ema50": 819.1343033325091,
-    "ema200": 802.056898554716,
-    "rsi14": 35.81318822227716,
-    "macd": -12.262643892556412,
-    "macd_signal": -10.199915823139769,
-    "atr14": 17.45328595788001,
-    "adx14": 33.72895945091774,
-    "adx_pos": 13.672407568810458,
-    "adx_neg": 28.04520970825564,
-    "bb_high": 837.5784052769874,
-    "bb_low": 771.2165947230125,
-    "bb_mid": 804.3974999999999,
-    "vwap20": 804.236688665348,
+    "date": "2026-10-09",
+    "close": 786.15,
+    "prev_close": 777.25,
+    "change_pct": 1.145062721132194,
+    "ema20": 802.0020974167921,
+    "ema50": 817.8408095277961,
+    "ema200": 801.9767611962825,
+    "rsi14": 40.54171213742778,
+    "macd": -12.143877071754218,
+    "macd_signal": -10.588708072996711,
+    "atr14": 17.20305124657001,
+    "adx14": 33.78064775955772,
+    "adx_pos": 12.880479593839928,
+    "adx_neg": 26.420785770767036,
+    "bb_high": 836.8006288784392,
+    "bb_low": 769.2193711215608,
+    "bb_mid": 803.01,
+    "vwap20": 802.9077554496716,
     "high_52w": 889.1,
-    "low_52w": 691.3,
-    "volume": 565931.0,
-    "avg_volume20": 1686570.8
+    "low_52w": 697.6,
+    "volume": 933937.0,
+    "avg_volume20": 1613780.7
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 757.3,
-      "ema50": 755.81
-    },
     {
       "date": "2026-04-20",
       "close": 760.7,
@@ -55,7 +50,7 @@
     {
       "date": "2026-04-24",
       "close": 783.3,
-      "ema50": 758.75
+      "ema50": 758.76
     },
     {
       "date": "2026-04-27",
@@ -626,6 +621,11 @@
       "date": "2026-10-08",
       "close": 777.25,
       "ema50": 819.13
+    },
+    {
+      "date": "2026-10-09",
+      "close": 786.15,
+      "ema50": 817.84
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 777.25 vs EMA20 803.67",
-      "ema20_above_ema50": "EMA20 803.67 vs EMA50 819.13",
-      "ema50_above_ema200": "EMA50 819.13 vs EMA200 802.06",
-      "rsi_above_50": "RSI(14) 35.81 vs 50",
-      "macd_bullish": "MACD -12.26 vs signal -10.20",
-      "adx_trending_up": "ADX(14) 33.73 vs 20, +DI 13.67 vs -DI 28.05",
-      "price_above_vwap20": "Close 777.25 vs 20d VWAP 804.24",
-      "price_above_bb_mid": "Close 777.25 vs BB mid 804.40"
+      "price_above_ema20": "Close 786.15 vs EMA20 802.00",
+      "ema20_above_ema50": "EMA20 802.00 vs EMA50 817.84",
+      "ema50_above_ema200": "EMA50 817.84 vs EMA200 801.98",
+      "rsi_above_50": "RSI(14) 40.54 vs 50",
+      "macd_bullish": "MACD -12.14 vs signal -10.59",
+      "adx_trending_up": "ADX(14) 33.78 vs 20, +DI 12.88 vs -DI 26.42",
+      "price_above_vwap20": "Close 786.15 vs 20d VWAP 802.91",
+      "price_above_bb_mid": "Close 786.15 vs BB mid 803.01"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 17.45 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 35.8",
-        "below_ema200": "Close 777.25 vs EMA200 802.06",
-        "extended_above_ema20": "Close 777.25 vs EMA20 803.67 (-3.3%)",
-        "large_day_move": "Day change -1.3%",
-        "near_52w_low": "Close 777.25 vs 52w low 691.30"
+        "atr_high": "ATR 17.20 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 40.5",
+        "below_ema200": "Close 786.15 vs EMA200 801.98",
+        "extended_above_ema20": "Close 786.15 vs EMA20 802.00 (-2.0%)",
+        "large_day_move": "Day change +1.1%",
+        "near_52w_low": "Close 786.15 vs 52w low 697.60"
       },
       "conditions_on": [
         "below_ema200"
@@ -692,7 +693,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:24:40.888055+00:00"
+  "updated_at": "2026-10-09T17:00:15.321808+00:00"
 }

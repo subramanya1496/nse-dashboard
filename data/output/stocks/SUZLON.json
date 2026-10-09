@@ -3,35 +3,30 @@
   "name": "Suzlon Energy",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 36.43,
-    "prev_close": 38.34,
-    "change_pct": -4.981742305685977,
-    "ema20": 40.95378172159993,
-    "ema50": 44.42586927134553,
-    "ema200": 49.85934706475476,
-    "rsi14": 15.175690457133797,
-    "macd": -2.184191652892096,
-    "macd_signal": -1.9372531320672897,
-    "atr14": 1.1675316068965176,
-    "adx14": 48.839793370201285,
-    "adx_pos": 7.253211083125062,
-    "adx_neg": 43.82722693809502,
-    "bb_high": 45.91443014772003,
-    "bb_low": 36.60556985227996,
-    "bb_mid": 41.26,
-    "vwap20": 41.170707264504685,
+    "date": "2026-10-09",
+    "close": 37.6,
+    "prev_close": 36.43,
+    "change_pct": 3.211638759264347,
+    "ema20": 40.63437393859037,
+    "ema50": 44.158184256295996,
+    "ema200": 49.70089806694619,
+    "rsi14": 26.104749041055797,
+    "macd": -2.183731469651164,
+    "macd_signal": -1.9865487995215108,
+    "atr14": 1.1862793492778663,
+    "adx14": 50.46558142402772,
+    "adx_pos": 6.628683898244671,
+    "adx_neg": 40.05354733681118,
+    "bb_high": 45.363653355926125,
+    "bb_low": 36.371346644073874,
+    "bb_mid": 40.8675,
+    "vwap20": 40.77940101213333,
     "high_52w": 61.5,
     "low_52w": 36.31,
-    "volume": 85701657.0,
-    "avg_volume20": 59320658.05
+    "volume": 57534896.0,
+    "avg_volume20": 59571765.95
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 52.93,
-      "ema50": 44.8
-    },
     {
       "date": "2026-04-20",
       "close": 52.5,
@@ -626,6 +621,11 @@
       "date": "2026-10-08",
       "close": 36.43,
       "ema50": 44.43
+    },
+    {
+      "date": "2026-10-09",
+      "close": 37.6,
+      "ema50": 44.16
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 36.43 vs EMA20 40.95",
-      "ema20_above_ema50": "EMA20 40.95 vs EMA50 44.43",
-      "ema50_above_ema200": "EMA50 44.43 vs EMA200 49.86",
-      "rsi_above_50": "RSI(14) 15.18 vs 50",
-      "macd_bullish": "MACD -2.18 vs signal -1.94",
-      "adx_trending_up": "ADX(14) 48.84 vs 20, +DI 7.25 vs -DI 43.83",
-      "price_above_vwap20": "Close 36.43 vs 20d VWAP 41.17",
-      "price_above_bb_mid": "Close 36.43 vs BB mid 41.26"
+      "price_above_ema20": "Close 37.60 vs EMA20 40.63",
+      "ema20_above_ema50": "EMA20 40.63 vs EMA50 44.16",
+      "ema50_above_ema200": "EMA50 44.16 vs EMA200 49.70",
+      "rsi_above_50": "RSI(14) 26.10 vs 50",
+      "macd_bullish": "MACD -2.18 vs signal -1.99",
+      "adx_trending_up": "ADX(14) 50.47 vs 20, +DI 6.63 vs -DI 40.05",
+      "price_above_vwap20": "Close 37.60 vs 20d VWAP 40.78",
+      "price_above_bb_mid": "Close 37.60 vs BB mid 40.87"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,41 +659,38 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": true,
+        "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.17 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 15.2",
-        "below_ema200": "Close 36.43 vs EMA200 49.86",
-        "extended_above_ema20": "Close 36.43 vs EMA20 40.95 (-11.0%)",
-        "large_day_move": "Day change -5.0%",
-        "near_52w_low": "Close 36.43 vs 52w low 36.31"
+        "atr_high": "ATR 1.19 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 26.1",
+        "below_ema200": "Close 37.60 vs EMA200 49.70",
+        "extended_above_ema20": "Close 37.60 vs EMA20 40.63 (-7.5%)",
+        "large_day_move": "Day change +3.2%",
+        "near_52w_low": "Close 37.60 vs 52w low 36.31"
       },
       "conditions_on": [
         "atr_high",
-        "rsi_extreme",
         "below_ema200",
-        "large_day_move",
         "near_52w_low"
       ],
-      "condition_count": 5,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "high"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -707,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:25:09.687807+00:00"
+  "updated_at": "2026-10-09T17:00:43.730810+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Yes Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 20.45,
-    "prev_close": 20.79,
-    "change_pct": -1.6354016354016347,
-    "ema20": 21.706529954432952,
-    "ema50": 22.273434435266275,
-    "ema200": 22.039396060402172,
-    "rsi14": 32.19801023360567,
-    "macd": -0.561488805504041,
-    "macd_signal": -0.3701482359288778,
-    "atr14": 0.5309847585514901,
-    "adx14": 29.801118766310793,
-    "adx_pos": 11.727180677207814,
-    "adx_neg": 35.82572515852494,
-    "bb_high": 24.23728889015437,
-    "bb_low": 19.94471110984563,
-    "bb_mid": 22.091,
-    "vwap20": 22.273726423646632,
+    "date": "2026-10-09",
+    "close": 20.5,
+    "prev_close": 20.45,
+    "change_pct": 0.24449877750611593,
+    "ema20": 21.591622339725046,
+    "ema50": 22.203887484596724,
+    "ema200": 22.019342914598603,
+    "rsi14": 33.01188386120127,
+    "macd": -0.5859659076082089,
+    "macd_signal": -0.41331177025662513,
+    "atr14": 0.512342990083241,
+    "adx14": 31.292276924006863,
+    "adx_pos": 11.28574386572838,
+    "adx_neg": 34.47716625814625,
+    "bb_high": 24.243177039292068,
+    "bb_low": 19.746822960707934,
+    "bb_mid": 21.995,
+    "vwap20": 22.219760945234366,
     "high_52w": 25.78,
     "low_52w": 17.2,
-    "volume": 62706430.0,
-    "avg_volume20": 85750175.45
+    "volume": 49563814.0,
+    "avg_volume20": 86301352.1
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 20.19,
-      "ema50": 19.66
-    },
     {
       "date": "2026-04-20",
       "close": 19.84,
@@ -626,6 +621,11 @@
       "date": "2026-10-08",
       "close": 20.45,
       "ema50": 22.27
+    },
+    {
+      "date": "2026-10-09",
+      "close": 20.5,
+      "ema50": 22.2
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 20.45 vs EMA20 21.71",
-      "ema20_above_ema50": "EMA20 21.71 vs EMA50 22.27",
-      "ema50_above_ema200": "EMA50 22.27 vs EMA200 22.04",
-      "rsi_above_50": "RSI(14) 32.20 vs 50",
-      "macd_bullish": "MACD -0.56 vs signal -0.37",
-      "adx_trending_up": "ADX(14) 29.80 vs 20, +DI 11.73 vs -DI 35.83",
-      "price_above_vwap20": "Close 20.45 vs 20d VWAP 22.27",
-      "price_above_bb_mid": "Close 20.45 vs BB mid 22.09"
+      "price_above_ema20": "Close 20.50 vs EMA20 21.59",
+      "ema20_above_ema50": "EMA20 21.59 vs EMA50 22.20",
+      "ema50_above_ema200": "EMA50 22.20 vs EMA200 22.02",
+      "rsi_above_50": "RSI(14) 33.01 vs 50",
+      "macd_bullish": "MACD -0.59 vs signal -0.41",
+      "adx_trending_up": "ADX(14) 31.29 vs 20, +DI 11.29 vs -DI 34.48",
+      "price_above_vwap20": "Close 20.50 vs 20d VWAP 22.22",
+      "price_above_bb_mid": "Close 20.50 vs BB mid 22.00"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -666,7 +666,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": true,
+        "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -674,20 +674,19 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.53 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 32.2",
-        "below_ema200": "Close 20.45 vs EMA200 22.04",
-        "extended_above_ema20": "Close 20.45 vs EMA20 21.71 (-5.8%)",
-        "large_day_move": "Day change -1.6%",
-        "near_52w_low": "Close 20.45 vs 52w low 17.20"
+        "atr_high": "ATR 0.51 = 2.5% of price",
+        "rsi_extreme": "RSI(14) 33.0",
+        "below_ema200": "Close 20.50 vs EMA200 22.02",
+        "extended_above_ema20": "Close 20.50 vs EMA20 21.59 (-5.1%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 20.50 vs 52w low 17.20"
       },
       "conditions_on": [
-        "atr_high",
         "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:25:24.903577+00:00"
+  "updated_at": "2026-10-09T17:01:09.467904+00:00"
 }

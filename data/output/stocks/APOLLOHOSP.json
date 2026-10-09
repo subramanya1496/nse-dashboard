@@ -3,35 +3,30 @@
   "name": "Apollo Hospitals Enterprise",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-10-08",
-    "close": 7666.0,
-    "prev_close": 7917.0,
-    "change_pct": -3.1703928255652394,
-    "ema20": 8427.66777224918,
-    "ema50": 8602.907242735087,
-    "ema200": 8229.962086002124,
-    "rsi14": 22.2520835993802,
-    "macd": -244.29410360974907,
-    "macd_signal": -123.04786358933742,
-    "atr14": 201.53941342425722,
-    "adx14": 29.601041766085984,
-    "adx_pos": 8.540040820848835,
-    "adx_neg": 39.5495315787228,
-    "bb_high": 9440.434685021906,
-    "bb_low": 7731.665314978092,
-    "bb_mid": 8586.05,
-    "vwap20": 8388.641371624335,
+    "date": "2026-10-09",
+    "close": 8027.5,
+    "prev_close": 7666.0,
+    "change_pct": 4.7156274458648575,
+    "ema20": 8389.556555844496,
+    "ema50": 8580.342242779354,
+    "ema200": 8227.85282244134,
+    "rsi14": 37.19538647599191,
+    "macd": -244.39522588550608,
+    "macd_signal": -147.3173360484071,
+    "atr14": 212.96516960903338,
+    "adx14": 30.95177564624731,
+    "adx_pos": 12.049258268077368,
+    "adx_neg": 34.754261974025155,
+    "bb_high": 9407.704741316737,
+    "bb_low": 7670.445258683266,
+    "bb_mid": 8539.075,
+    "vwap20": 8320.288291897463,
     "high_52w": 9070.5,
     "low_52w": 6696.5,
-    "volume": 928942.0,
-    "avg_volume20": 562905.1
+    "volume": 1449612.0,
+    "avg_volume20": 616609.45
   },
   "price_history": [
-    {
-      "date": "2026-04-17",
-      "close": 7699.0,
-      "ema50": 7458.59
-    },
     {
       "date": "2026-04-20",
       "close": 7657.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-08",
       "close": 7666.0,
       "ema50": 8602.91
+    },
+    {
+      "date": "2026-10-09",
+      "close": 8027.5,
+      "ema50": 8580.34
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 7,666.00 vs EMA20 8,427.67",
-      "ema20_above_ema50": "EMA20 8,427.67 vs EMA50 8,602.91",
-      "ema50_above_ema200": "EMA50 8,602.91 vs EMA200 8,229.96",
-      "rsi_above_50": "RSI(14) 22.25 vs 50",
-      "macd_bullish": "MACD -244.29 vs signal -123.05",
-      "adx_trending_up": "ADX(14) 29.60 vs 20, +DI 8.54 vs -DI 39.55",
-      "price_above_vwap20": "Close 7,666.00 vs 20d VWAP 8,388.64",
-      "price_above_bb_mid": "Close 7,666.00 vs BB mid 8,586.05"
+      "price_above_ema20": "Close 8,027.50 vs EMA20 8,389.56",
+      "ema20_above_ema50": "EMA20 8,389.56 vs EMA50 8,580.34",
+      "ema50_above_ema200": "EMA50 8,580.34 vs EMA200 8,227.85",
+      "rsi_above_50": "RSI(14) 37.20 vs 50",
+      "macd_bullish": "MACD -244.40 vs signal -147.32",
+      "adx_trending_up": "ADX(14) 30.95 vs 20, +DI 12.05 vs -DI 34.75",
+      "price_above_vwap20": "Close 8,027.50 vs 20d VWAP 8,320.29",
+      "price_above_bb_mid": "Close 8,027.50 vs BB mid 8,539.08"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -668,24 +668,24 @@
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": true,
+        "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 201.54 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 22.3",
-        "below_ema200": "Close 7,666.00 vs EMA200 8,229.96",
-        "extended_above_ema20": "Close 7,666.00 vs EMA20 8,427.67 (-9.0%)",
-        "large_day_move": "Day change -3.2%",
-        "near_52w_low": "Close 7,666.00 vs 52w low 6,696.50"
+        "atr_high": "ATR 212.97 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 37.2",
+        "below_ema200": "Close 8,027.50 vs EMA200 8,227.85",
+        "extended_above_ema20": "Close 8,027.50 vs EMA20 8,389.56 (-4.3%)",
+        "large_day_move": "Day change +4.7%",
+        "near_52w_low": "Close 8,027.50 vs 52w low 6,696.50"
       },
       "conditions_on": [
         "atr_high",
-        "rsi_extreme",
-        "below_ema200"
+        "below_ema200",
+        "large_day_move"
       ],
       "condition_count": 3,
       "condition_total": 6,
@@ -707,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-08T17:23:44.873283+00:00"
+  "updated_at": "2026-10-09T16:59:08.465684+00:00"
 }
