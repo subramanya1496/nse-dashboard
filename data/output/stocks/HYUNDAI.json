@@ -3,35 +3,30 @@
   "name": "Hyundai Motor India",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-10-09",
-    "close": 1940.0,
-    "prev_close": 1915.0,
-    "change_pct": 1.3054830287206265,
-    "ema20": 2053.293318949558,
-    "ema50": 2089.7124357368243,
-    "ema200": 2085.6191544779304,
-    "rsi14": 33.69176389887785,
-    "macd": -58.271099280165345,
-    "macd_signal": -39.88183336863929,
-    "atr14": 57.446259299909094,
-    "adx14": 31.285438386306346,
-    "adx_pos": 7.899716562951864,
-    "adx_neg": 28.23228126652747,
-    "bb_high": 2250.5453175426633,
-    "bb_low": 1904.7646824573364,
-    "bb_mid": 2077.6549999999997,
-    "vwap20": 2090.228049335518,
-    "high_52w": 2591.9,
+    "date": "2026-10-12",
+    "close": 1941.1,
+    "prev_close": 1940.0,
+    "change_pct": 0.05670103092783037,
+    "ema20": 2042.608240954362,
+    "ema50": 2083.8844886963507,
+    "ema200": 2084.083153396228,
+    "rsi14": 33.86926468775498,
+    "macd": -59.70303609519715,
+    "macd_signal": -43.846073913857005,
+    "atr14": 55.842955064418,
+    "adx14": 31.933350481538827,
+    "adx_pos": 11.460096507096534,
+    "adx_neg": 26.968367078748024,
+    "bb_high": 2236.740972832177,
+    "bb_low": 1892.179027167823,
+    "bb_mid": 2064.46,
+    "vwap20": 2078.0313448771317,
+    "high_52w": 2549.5,
     "low_52w": 1658.0,
-    "volume": 392721.0,
-    "avg_volume20": 644878.2
+    "volume": 364329.0,
+    "avg_volume20": 617711.2
   },
   "price_history": [
-    {
-      "date": "2026-04-20",
-      "close": 1886.0,
-      "ema50": 1976.39
-    },
     {
       "date": "2026-04-21",
       "close": 1885.7,
@@ -40,7 +35,7 @@
     {
       "date": "2026-04-22",
       "close": 1849.5,
-      "ema50": 1968.0
+      "ema50": 1967.99
     },
     {
       "date": "2026-04-23",
@@ -335,7 +330,7 @@
     {
       "date": "2026-07-17",
       "close": 1993.3,
-      "ema50": 1942.69
+      "ema50": 1942.68
     },
     {
       "date": "2026-07-20",
@@ -626,13 +621,18 @@
       "date": "2026-10-09",
       "close": 1940.0,
       "ema50": 2089.71
+    },
+    {
+      "date": "2026-10-12",
+      "close": 1941.1,
+      "ema50": 2083.88
     }
   ],
   "flags": {
     "flags": {
       "price_above_ema20": false,
       "ema20_above_ema50": false,
-      "ema50_above_ema200": true,
+      "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": false,
@@ -640,19 +640,17 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,940.00 vs EMA20 2,053.29",
-      "ema20_above_ema50": "EMA20 2,053.29 vs EMA50 2,089.71",
-      "ema50_above_ema200": "EMA50 2,089.71 vs EMA200 2,085.62",
-      "rsi_above_50": "RSI(14) 33.69 vs 50",
-      "macd_bullish": "MACD -58.27 vs signal -39.88",
-      "adx_trending_up": "ADX(14) 31.29 vs 20, +DI 7.90 vs -DI 28.23",
-      "price_above_vwap20": "Close 1,940.00 vs 20d VWAP 2,090.23",
-      "price_above_bb_mid": "Close 1,940.00 vs BB mid 2,077.65"
+      "price_above_ema20": "Close 1,941.10 vs EMA20 2,042.61",
+      "ema20_above_ema50": "EMA20 2,042.61 vs EMA50 2,083.88",
+      "ema50_above_ema200": "EMA50 2,083.88 vs EMA200 2,084.08",
+      "rsi_above_50": "RSI(14) 33.87 vs 50",
+      "macd_bullish": "MACD -59.70 vs signal -43.85",
+      "adx_trending_up": "ADX(14) 31.93 vs 20, +DI 11.46 vs -DI 26.97",
+      "price_above_vwap20": "Close 1,941.10 vs 20d VWAP 2,078.03",
+      "price_above_bb_mid": "Close 1,941.10 vs BB mid 2,064.46"
     },
-    "flags_on": [
-      "ema50_above_ema200"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 57.45 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 33.7",
-        "below_ema200": "Close 1,940.00 vs EMA200 2,085.62",
-        "extended_above_ema20": "Close 1,940.00 vs EMA20 2,053.29 (-5.5%)",
-        "large_day_move": "Day change +1.3%",
-        "near_52w_low": "Close 1,940.00 vs 52w low 1,658.00"
+        "atr_high": "ATR 55.84 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 33.9",
+        "below_ema200": "Close 1,941.10 vs EMA200 2,084.08",
+        "extended_above_ema20": "Close 1,941.10 vs EMA20 2,042.61 (-5.0%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 1,941.10 vs 52w low 1,658.00"
       },
       "conditions_on": [
         "atr_high",
@@ -696,7 +694,7 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
+      "daily": "bearish",
       "weekly": "bearish",
       "intraday": null
     }
@@ -705,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-09T16:59:44.464783+00:00"
+  "updated_at": "2026-10-12T19:48:27.274927+00:00"
 }
