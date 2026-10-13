@@ -3,35 +3,30 @@
   "name": "L&T Technology Services",
   "sector": "IT",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 3309.0,
-    "prev_close": 3270.1,
-    "change_pct": 1.1895660683159563,
-    "ema20": 3279.723186539639,
-    "ema50": 3354.946246638917,
-    "ema200": 3564.83484637205,
-    "rsi14": 50.40329950218751,
-    "macd": -47.068733458620045,
-    "macd_signal": -61.35732090291142,
-    "atr14": 100.23144638012705,
-    "adx14": 13.636673379929283,
-    "adx_pos": 17.704077474119895,
-    "adx_neg": 13.83225495238112,
-    "bb_high": 3389.601728075055,
-    "bb_low": 3128.6882719249443,
-    "bb_mid": 3259.1449999999995,
-    "vwap20": 3253.8246003115014,
+    "date": "2026-10-13",
+    "close": 3429.2,
+    "prev_close": 3309.0,
+    "change_pct": 3.632517376851007,
+    "ema20": 3293.959073535864,
+    "ema50": 3357.85815853543,
+    "ema200": 3563.4852459106364,
+    "rsi14": 58.647755648339285,
+    "macd": -29.591570886247155,
+    "macd_signal": -55.00417089957857,
+    "atr14": 103.60062878154656,
+    "adx14": 15.013575997103297,
+    "adx_pos": 24.619658074641954,
+    "adx_neg": 12.426531010363352,
+    "bb_high": 3410.3421522813564,
+    "bb_low": 3117.127847718644,
+    "bb_mid": 3263.735,
+    "vwap20": 3261.770546475667,
     "high_52w": 4726.0,
     "low_52w": 3010.0,
-    "volume": 47757.0,
-    "avg_volume20": 58308.95
+    "volume": 86397.0,
+    "avg_volume20": 61026.2
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 3642.4,
-      "ema50": 3481.1
-    },
     {
       "date": "2026-04-22",
       "close": 3550.2,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 3309.0,
       "ema50": 3354.95
+    },
+    {
+      "date": "2026-10-13",
+      "close": 3429.2,
+      "ema50": 3357.86
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,309.00 vs EMA20 3,279.72",
-      "ema20_above_ema50": "EMA20 3,279.72 vs EMA50 3,354.95",
-      "ema50_above_ema200": "EMA50 3,354.95 vs EMA200 3,564.83",
-      "rsi_above_50": "RSI(14) 50.40 vs 50",
-      "macd_bullish": "MACD -47.07 vs signal -61.36",
-      "adx_trending_up": "ADX(14) 13.64 vs 20, +DI 17.70 vs -DI 13.83",
-      "price_above_vwap20": "Close 3,309.00 vs 20d VWAP 3,253.82",
-      "price_above_bb_mid": "Close 3,309.00 vs BB mid 3,259.14"
+      "price_above_ema20": "Close 3,429.20 vs EMA20 3,293.96",
+      "ema20_above_ema50": "EMA20 3,293.96 vs EMA50 3,357.86",
+      "ema50_above_ema200": "EMA50 3,357.86 vs EMA200 3,563.49",
+      "rsi_above_50": "RSI(14) 58.65 vs 50",
+      "macd_bullish": "MACD -29.59 vs signal -55.00",
+      "adx_trending_up": "ADX(14) 15.01 vs 20, +DI 24.62 vs -DI 12.43",
+      "price_above_vwap20": "Close 3,429.20 vs 20d VWAP 3,261.77",
+      "price_above_bb_mid": "Close 3,429.20 vs BB mid 3,263.74"
     },
     "flags_on": [
       "price_above_ema20",
@@ -665,7 +665,8 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 100.23 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 50.4",
-        "below_ema200": "Close 3,309.00 vs EMA200 3,564.83",
-        "extended_above_ema20": "Close 3,309.00 vs EMA20 3,279.72 (+0.9%)",
-        "large_day_move": "Day change +1.2%",
-        "near_52w_low": "Close 3,309.00 vs 52w low 3,010.00"
+        "atr_high": "ATR 103.60 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 58.6",
+        "below_ema200": "Close 3,429.20 vs EMA200 3,563.49",
+        "extended_above_ema20": "Close 3,429.20 vs EMA20 3,293.96 (+4.1%)",
+        "large_day_move": "Day change +3.6%",
+        "near_52w_low": "Close 3,429.20 vs 52w low 3,010.00"
       },
       "conditions_on": [
         "atr_high",
@@ -694,14 +695,14 @@
       "level": "elevated"
     },
     "patterns": {
-      "breakout": false,
-      "volume_surge": false,
+      "breakout": true,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:55.137339+00:00"
+  "updated_at": "2026-10-13T17:35:44.895074+00:00"
 }

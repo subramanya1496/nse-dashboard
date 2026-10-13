@@ -3,35 +3,30 @@
   "name": "Patanjali Foods",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 361.35,
-    "prev_close": 360.45,
-    "change_pct": 0.2496878901373378,
-    "ema20": 365.44886260470855,
-    "ema50": 367.2574718074613,
-    "ema200": 433.743780243123,
-    "rsi14": 47.79517862362043,
-    "macd": 0.1140628869172815,
-    "macd_signal": 3.042639476855593,
-    "atr14": 11.100643394695329,
-    "adx14": 26.7999092376276,
-    "adx_pos": 20.62087275961788,
-    "adx_neg": 25.17872827624072,
-    "bb_high": 414.14320188611805,
-    "bb_low": 327.98179811388195,
-    "bb_mid": 371.0625,
-    "vwap20": 373.42572638106503,
+    "date": "2026-10-13",
+    "close": 367.5,
+    "prev_close": 361.35,
+    "change_pct": 1.7019510170195036,
+    "ema20": 365.6442090233077,
+    "ema50": 367.2669827169726,
+    "ema200": 433.08463815115164,
+    "rsi14": 51.518264837178,
+    "macd": 0.30024360546877915,
+    "macd_signal": 2.4941603025782304,
+    "atr14": 11.007740295074234,
+    "adx14": 24.94283483686619,
+    "adx_pos": 23.202922404969335,
+    "adx_neg": 23.577572242335034,
+    "bb_high": 413.2618425023641,
+    "bb_low": 331.51315749763586,
+    "bb_mid": 372.3875,
+    "vwap20": 373.8303680685193,
     "high_52w": 614.05,
     "low_52w": 328.2,
-    "volume": 1397374.0,
-    "avg_volume20": 6112716.7
+    "volume": 1985504.0,
+    "avg_volume20": 6112673.0
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 468.1,
-      "ema50": 489.56
-    },
     {
       "date": "2026-04-22",
       "close": 472.1,
@@ -626,31 +621,39 @@
       "date": "2026-10-12",
       "close": 361.35,
       "ema50": 367.26
+    },
+    {
+      "date": "2026-10-13",
+      "close": 367.5,
+      "ema50": 367.27
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 361.35 vs EMA20 365.45",
-      "ema20_above_ema50": "EMA20 365.45 vs EMA50 367.26",
-      "ema50_above_ema200": "EMA50 367.26 vs EMA200 433.74",
-      "rsi_above_50": "RSI(14) 47.80 vs 50",
-      "macd_bullish": "MACD 0.11 vs signal 3.04",
-      "adx_trending_up": "ADX(14) 26.80 vs 20, +DI 20.62 vs -DI 25.18",
-      "price_above_vwap20": "Close 361.35 vs 20d VWAP 373.43",
-      "price_above_bb_mid": "Close 361.35 vs BB mid 371.06"
+      "price_above_ema20": "Close 367.50 vs EMA20 365.64",
+      "ema20_above_ema50": "EMA20 365.64 vs EMA50 367.27",
+      "ema50_above_ema200": "EMA50 367.27 vs EMA200 433.08",
+      "rsi_above_50": "RSI(14) 51.52 vs 50",
+      "macd_bullish": "MACD 0.30 vs signal 2.49",
+      "adx_trending_up": "ADX(14) 24.94 vs 20, +DI 23.20 vs -DI 23.58",
+      "price_above_vwap20": "Close 367.50 vs 20d VWAP 373.83",
+      "price_above_bb_mid": "Close 367.50 vs BB mid 372.39"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "price_above_ema20",
+      "rsi_above_50"
+    ],
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 11.10 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 47.8",
-        "below_ema200": "Close 361.35 vs EMA200 433.74",
-        "extended_above_ema20": "Close 361.35 vs EMA20 365.45 (-1.1%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 361.35 vs 52w low 328.20"
+        "atr_high": "ATR 11.01 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 51.5",
+        "below_ema200": "Close 367.50 vs EMA200 433.08",
+        "extended_above_ema20": "Close 367.50 vs EMA20 365.64 (+0.5%)",
+        "large_day_move": "Day change +1.7%",
+        "near_52w_low": "Close 367.50 vs 52w low 328.20"
       },
       "conditions_on": [
         "atr_high",
@@ -694,8 +697,8 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "neutral",
+      "daily": "neutral",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -703,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:49:09.112023+00:00"
+  "updated_at": "2026-10-13T17:35:59.280586+00:00"
 }

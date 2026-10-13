@@ -3,35 +3,30 @@
   "name": "Intellect Design Arena",
   "sector": "IT",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 585.15,
-    "prev_close": 584.1,
-    "change_pct": 0.1797637390857652,
-    "ema20": 621.6133825029817,
-    "ema50": 659.676607625835,
-    "ema200": 759.0347455750106,
-    "rsi14": 30.287552780837828,
-    "macd": -26.659273636682542,
-    "macd_signal": -23.08250018908679,
-    "atr14": 21.28311275900423,
-    "adx14": 25.810573689827883,
-    "adx_pos": 9.567679734453051,
-    "adx_neg": 24.655314014477213,
-    "bb_high": 691.0134785526502,
-    "bb_low": 563.9115214473497,
-    "bb_mid": 627.4625,
-    "vwap20": 624.5630344936444,
+    "date": "2026-10-13",
+    "close": 606.95,
+    "prev_close": 585.15,
+    "change_pct": 3.725540459711197,
+    "ema20": 620.2168698836501,
+    "ema50": 657.6088975228611,
+    "ema200": 757.521464524513,
+    "rsi14": 40.86359640374649,
+    "macd": -24.530842286537904,
+    "macd_signal": -23.372168608577013,
+    "atr14": 21.537890419075357,
+    "adx14": 26.027388956319506,
+    "adx_pos": 12.493563711176089,
+    "adx_neg": 22.623398096857102,
+    "bb_high": 682.4815424967696,
+    "bb_low": 564.8784575032305,
+    "bb_mid": 623.6800000000001,
+    "vwap20": 619.7614423044395,
     "high_52w": 1244.6,
     "low_52w": 564.05,
-    "volume": 229879.0,
-    "avg_volume20": 356894.25
+    "volume": 887463.0,
+    "avg_volume20": 387236.9
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 677.5,
-      "ema50": 712.04
-    },
     {
       "date": "2026-04-22",
       "close": 695.7,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 585.15,
       "ema50": 659.68
+    },
+    {
+      "date": "2026-10-13",
+      "close": 606.95,
+      "ema50": 657.61
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 585.15 vs EMA20 621.61",
-      "ema20_above_ema50": "EMA20 621.61 vs EMA50 659.68",
-      "ema50_above_ema200": "EMA50 659.68 vs EMA200 759.03",
-      "rsi_above_50": "RSI(14) 30.29 vs 50",
-      "macd_bullish": "MACD -26.66 vs signal -23.08",
-      "adx_trending_up": "ADX(14) 25.81 vs 20, +DI 9.57 vs -DI 24.66",
-      "price_above_vwap20": "Close 585.15 vs 20d VWAP 624.56",
-      "price_above_bb_mid": "Close 585.15 vs BB mid 627.46"
+      "price_above_ema20": "Close 606.95 vs EMA20 620.22",
+      "ema20_above_ema50": "EMA20 620.22 vs EMA50 657.61",
+      "ema50_above_ema200": "EMA50 657.61 vs EMA200 757.52",
+      "rsi_above_50": "RSI(14) 40.86 vs 50",
+      "macd_bullish": "MACD -24.53 vs signal -23.37",
+      "adx_trending_up": "ADX(14) 26.03 vs 20, +DI 12.49 vs -DI 22.62",
+      "price_above_vwap20": "Close 606.95 vs 20d VWAP 619.76",
+      "price_above_bb_mid": "Close 606.95 vs BB mid 623.68"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -669,28 +670,27 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": true
+        "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 21.28 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 30.3",
-        "below_ema200": "Close 585.15 vs EMA200 759.03",
-        "extended_above_ema20": "Close 585.15 vs EMA20 621.61 (-5.9%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 585.15 vs 52w low 564.05"
+        "atr_high": "ATR 21.54 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 40.9",
+        "below_ema200": "Close 606.95 vs EMA200 757.52",
+        "extended_above_ema20": "Close 606.95 vs EMA20 620.22 (-2.1%)",
+        "large_day_move": "Day change +3.7%",
+        "near_52w_low": "Close 606.95 vs 52w low 564.05"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200",
-        "near_52w_low"
+        "below_ema200"
       ],
-      "condition_count": 3,
+      "condition_count": 2,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:32.511162+00:00"
+  "updated_at": "2026-10-13T17:35:22.014508+00:00"
 }

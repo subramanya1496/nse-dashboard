@@ -3,35 +3,30 @@
   "name": "GAIL (India) Ltd",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 166.91,
-    "prev_close": 166.64,
-    "change_pct": 0.16202592414786982,
-    "ema20": 170.64217011333417,
-    "ema50": 171.79905237046572,
-    "ema200": 170.2717948829226,
-    "rsi14": 39.90740360897279,
-    "macd": -1.4836684808507528,
-    "macd_signal": -0.984047686797847,
-    "atr14": 3.4492951172386155,
-    "adx14": 19.959255612973184,
-    "adx_pos": 10.667976233024824,
-    "adx_neg": 18.93354480704334,
-    "bb_high": 175.46482090033143,
-    "bb_low": 166.61517909966855,
-    "bb_mid": 171.04,
-    "vwap20": 171.0895703987547,
+    "date": "2026-10-13",
+    "close": 168.3,
+    "prev_close": 166.91,
+    "change_pct": 0.8327841351626715,
+    "ema20": 170.41910629301665,
+    "ema50": 171.66183463044746,
+    "ema200": 170.2521750333413,
+    "rsi14": 43.6026525668989,
+    "macd": -1.480947365725541,
+    "macd_signal": -1.0834276225833859,
+    "atr14": 3.4186311802929987,
+    "adx14": 20.902151151831927,
+    "adx_pos": 9.994831119756109,
+    "adx_neg": 19.911812177240762,
+    "bb_high": 175.1860580231917,
+    "bb_low": 166.3619419768083,
+    "bb_mid": 170.774,
+    "vwap20": 170.77221013489196,
     "high_52w": 186.87,
     "low_52w": 134.36,
-    "volume": 8839150.0,
-    "avg_volume20": 7138075.6
+    "volume": 7740206.0,
+    "avg_volume20": 7186574.55
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 160.77,
-      "ema50": 154.7
-    },
     {
       "date": "2026-04-22",
       "close": 166.12,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 166.91,
       "ema50": 171.8
+    },
+    {
+      "date": "2026-10-13",
+      "close": 168.3,
+      "ema50": 171.66
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 166.91 vs EMA20 170.64",
-      "ema20_above_ema50": "EMA20 170.64 vs EMA50 171.80",
-      "ema50_above_ema200": "EMA50 171.80 vs EMA200 170.27",
-      "rsi_above_50": "RSI(14) 39.91 vs 50",
-      "macd_bullish": "MACD -1.48 vs signal -0.98",
-      "adx_trending_up": "ADX(14) 19.96 vs 20, +DI 10.67 vs -DI 18.93",
-      "price_above_vwap20": "Close 166.91 vs 20d VWAP 171.09",
-      "price_above_bb_mid": "Close 166.91 vs BB mid 171.04"
+      "price_above_ema20": "Close 168.30 vs EMA20 170.42",
+      "ema20_above_ema50": "EMA20 170.42 vs EMA50 171.66",
+      "ema50_above_ema200": "EMA50 171.66 vs EMA200 170.25",
+      "rsi_above_50": "RSI(14) 43.60 vs 50",
+      "macd_bullish": "MACD -1.48 vs signal -1.08",
+      "adx_trending_up": "ADX(14) 20.90 vs 20, +DI 9.99 vs -DI 19.91",
+      "price_above_vwap20": "Close 168.30 vs 20d VWAP 170.77",
+      "price_above_bb_mid": "Close 168.30 vs BB mid 170.77"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.45 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 39.9",
-        "below_ema200": "Close 166.91 vs EMA200 170.27",
-        "extended_above_ema20": "Close 166.91 vs EMA20 170.64 (-2.2%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 166.91 vs 52w low 134.36"
+        "atr_high": "ATR 3.42 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 43.6",
+        "below_ema200": "Close 168.30 vs EMA200 170.25",
+        "extended_above_ema20": "Close 168.30 vs EMA20 170.42 (-1.2%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 168.30 vs 52w low 134.36"
       },
       "conditions_on": [
         "below_ema200"
@@ -692,7 +693,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:17.272567+00:00"
+  "updated_at": "2026-10-13T17:35:06.823957+00:00"
 }

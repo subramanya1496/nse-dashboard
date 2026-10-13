@@ -3,35 +3,30 @@
   "name": "Adani Green Energy",
   "sector": "Power",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 1274.0,
-    "prev_close": 1255.8,
-    "change_pct": 1.4492753623188444,
-    "ema20": 1284.6586166874995,
-    "ema50": 1312.5320433504278,
-    "ema200": 1248.7163396719002,
-    "rsi14": 47.56547353062564,
-    "macd": -10.177848702594247,
-    "macd_signal": -10.999742984925827,
-    "atr14": 45.31609702030186,
-    "adx14": 13.685903404119188,
-    "adx_pos": 21.020324810299535,
-    "adx_neg": 25.69519487538845,
-    "bb_high": 1338.0463162371643,
-    "bb_low": 1227.2936837628358,
-    "bb_mid": 1282.67,
-    "vwap20": 1286.6770740332165,
+    "date": "2026-10-13",
+    "close": 1287.0,
+    "prev_close": 1274.0,
+    "change_pct": 1.0204081632653061,
+    "ema20": 1284.8816055744044,
+    "ema50": 1311.5307867484503,
+    "ema200": 1249.0972716154633,
+    "rsi14": 49.46506253819109,
+    "macd": -8.840282494592884,
+    "macd_signal": -10.56785088685924,
+    "atr14": 44.35066151885172,
+    "adx14": 13.179660120099358,
+    "adx_pos": 21.361040731656196,
+    "adx_neg": 24.3792099996497,
+    "bb_high": 1338.35884372946,
+    "bb_low": 1227.5511562705399,
+    "bb_mid": 1282.955,
+    "vwap20": 1286.372888108228,
     "high_52w": 1631.5,
     "low_52w": 765.0,
-    "volume": 1529818.0,
-    "avg_volume20": 2199591.5
+    "volume": 1495736.0,
+    "avg_volume20": 2224524.9
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 1150.0,
-      "ema50": 963.67
-    },
     {
       "date": "2026-04-22",
       "close": 1198.95,
@@ -626,43 +621,51 @@
       "date": "2026-10-12",
       "close": 1274.0,
       "ema50": 1312.53
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1287.0,
+      "ema50": 1311.53
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,274.00 vs EMA20 1,284.66",
-      "ema20_above_ema50": "EMA20 1,284.66 vs EMA50 1,312.53",
-      "ema50_above_ema200": "EMA50 1,312.53 vs EMA200 1,248.72",
-      "rsi_above_50": "RSI(14) 47.57 vs 50",
-      "macd_bullish": "MACD -10.18 vs signal -11.00",
-      "adx_trending_up": "ADX(14) 13.69 vs 20, +DI 21.02 vs -DI 25.70",
-      "price_above_vwap20": "Close 1,274.00 vs 20d VWAP 1,286.68",
-      "price_above_bb_mid": "Close 1,274.00 vs BB mid 1,282.67"
+      "price_above_ema20": "Close 1,287.00 vs EMA20 1,284.88",
+      "ema20_above_ema50": "EMA20 1,284.88 vs EMA50 1,311.53",
+      "ema50_above_ema200": "EMA50 1,311.53 vs EMA200 1,249.10",
+      "rsi_above_50": "RSI(14) 49.47 vs 50",
+      "macd_bullish": "MACD -8.84 vs signal -10.57",
+      "adx_trending_up": "ADX(14) 13.18 vs 20, +DI 21.36 vs -DI 24.38",
+      "price_above_vwap20": "Close 1,287.00 vs 20d VWAP 1,286.37",
+      "price_above_bb_mid": "Close 1,287.00 vs BB mid 1,282.95"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema50_above_ema200",
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags",
+        "5/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -676,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 45.32 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 47.6",
-        "below_ema200": "Close 1,274.00 vs EMA200 1,248.72",
-        "extended_above_ema20": "Close 1,274.00 vs EMA20 1,284.66 (-0.8%)",
-        "large_day_move": "Day change +1.4%",
-        "near_52w_low": "Close 1,274.00 vs 52w low 765.00"
+        "atr_high": "ATR 44.35 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 49.5",
+        "below_ema200": "Close 1,287.00 vs EMA200 1,249.10",
+        "extended_above_ema20": "Close 1,287.00 vs EMA20 1,284.88 (+0.2%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 1,287.00 vs 52w low 765.00"
       },
       "conditions_on": [
         "atr_high"
@@ -706,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:47:48.055429+00:00"
+  "updated_at": "2026-10-13T17:34:37.651885+00:00"
 }

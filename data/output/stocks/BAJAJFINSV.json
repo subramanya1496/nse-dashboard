@@ -3,35 +3,30 @@
   "name": "Bajaj Finserv",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 1719.9,
-    "prev_close": 1734.7,
-    "change_pct": -0.8531734593877879,
-    "ema20": 1788.6696286966119,
-    "ema50": 1853.1739494382855,
-    "ema200": 1892.6103493691614,
-    "rsi14": 31.03525623263397,
-    "macd": -55.233001821253765,
-    "macd_signal": -54.414948984448884,
-    "atr14": 36.381621801774955,
-    "adx14": 52.1063415162845,
-    "adx_pos": 9.356070274774545,
-    "adx_neg": 30.394730020143733,
-    "bb_high": 1904.8479712366754,
-    "bb_low": 1668.9920287633247,
-    "bb_mid": 1786.92,
-    "vwap20": 1773.8144049790403,
+    "date": "2026-10-13",
+    "close": 1755.7,
+    "prev_close": 1719.9,
+    "change_pct": 2.0815163672306505,
+    "ema20": 1785.5296640588392,
+    "ema50": 1849.3514416171763,
+    "ema200": 1891.2480573356374,
+    "rsi14": 39.811551587586216,
+    "macd": -51.06389907949824,
+    "macd_signal": -53.74473900345876,
+    "atr14": 37.39722024450532,
+    "adx14": 51.8489616122914,
+    "adx_pos": 9.521443230934645,
+    "adx_neg": 27.457205846350146,
+    "bb_high": 1882.2212612579092,
+    "bb_low": 1675.8387387420908,
+    "bb_mid": 1779.03,
+    "vwap20": 1765.108274868881,
     "high_52w": 2195.0,
     "low_52w": 1597.0,
-    "volume": 565062.0,
-    "avg_volume20": 866367.8
+    "volume": 1582086.0,
+    "avg_volume20": 907353.35
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 1851.4,
-      "ema50": 1841.22
-    },
     {
       "date": "2026-04-22",
       "close": 1842.9,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 1719.9,
       "ema50": 1853.17
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1755.7,
+      "ema50": 1849.35
     }
   ],
   "flags": {
@@ -634,23 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,719.90 vs EMA20 1,788.67",
-      "ema20_above_ema50": "EMA20 1,788.67 vs EMA50 1,853.17",
-      "ema50_above_ema200": "EMA50 1,853.17 vs EMA200 1,892.61",
-      "rsi_above_50": "RSI(14) 31.04 vs 50",
-      "macd_bullish": "MACD -55.23 vs signal -54.41",
-      "adx_trending_up": "ADX(14) 52.11 vs 20, +DI 9.36 vs -DI 30.39",
-      "price_above_vwap20": "Close 1,719.90 vs 20d VWAP 1,773.81",
-      "price_above_bb_mid": "Close 1,719.90 vs BB mid 1,786.92"
+      "price_above_ema20": "Close 1,755.70 vs EMA20 1,785.53",
+      "ema20_above_ema50": "EMA20 1,785.53 vs EMA50 1,849.35",
+      "ema50_above_ema200": "EMA50 1,849.35 vs EMA200 1,891.25",
+      "rsi_above_50": "RSI(14) 39.81 vs 50",
+      "macd_bullish": "MACD -51.06 vs signal -53.74",
+      "adx_trending_up": "ADX(14) 51.85 vs 20, +DI 9.52 vs -DI 27.46",
+      "price_above_vwap20": "Close 1,755.70 vs 20d VWAP 1,765.11",
+      "price_above_bb_mid": "Close 1,755.70 vs BB mid 1,779.03"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "macd_bullish"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -672,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 36.38 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 31.0",
-        "below_ema200": "Close 1,719.90 vs EMA200 1,892.61",
-        "extended_above_ema20": "Close 1,719.90 vs EMA20 1,788.67 (-3.8%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 1,719.90 vs 52w low 1,597.00"
+        "atr_high": "ATR 37.40 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 39.8",
+        "below_ema200": "Close 1,755.70 vs EMA200 1,891.25",
+        "extended_above_ema20": "Close 1,755.70 vs EMA20 1,785.53 (-1.7%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 1,755.70 vs 52w low 1,597.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -688,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -702,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:47:55.659902+00:00"
+  "updated_at": "2026-10-13T17:34:45.199937+00:00"
 }

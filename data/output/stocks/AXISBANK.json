@@ -3,35 +3,30 @@
   "name": "Axis Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 1253.0,
-    "prev_close": 1259.1,
-    "change_pct": -0.48447303629575966,
-    "ema20": 1238.8460681122954,
-    "ema50": 1247.6588929195557,
-    "ema200": 1257.305784382521,
-    "rsi14": 53.999412984587416,
-    "macd": -0.21174561825205274,
-    "macd_signal": -4.606329233139632,
-    "atr14": 25.497313524855855,
-    "adx14": 17.63775008259172,
-    "adx_pos": 16.43061115826837,
-    "adx_neg": 15.273296612704081,
-    "bb_high": 1270.704996907215,
-    "bb_low": 1197.9550030927853,
-    "bb_mid": 1234.3300000000002,
-    "vwap20": 1231.4626106750154,
+    "date": "2026-10-13",
+    "close": 1268.4,
+    "prev_close": 1253.0,
+    "change_pct": 1.229050279329616,
+    "ema20": 1241.6607282920768,
+    "ema50": 1248.4722696678084,
+    "ema200": 1257.4161745876702,
+    "rsi14": 58.00921241351884,
+    "macd": 2.0972686383852306,
+    "macd_signal": -3.2656096588346597,
+    "atr14": 26.040362558794715,
+    "adx14": 17.231177924996526,
+    "adx_pos": 17.65438929900414,
+    "adx_neg": 13.88658638889376,
+    "bb_high": 1274.4761194586379,
+    "bb_low": 1196.4238805413622,
+    "bb_mid": 1235.45,
+    "vwap20": 1232.4202403155632,
     "high_52w": 1418.3,
     "low_52w": 1150.3,
-    "volume": 5684910.0,
-    "avg_volume20": 6037104.8
+    "volume": 5526414.0,
+    "avg_volume20": 6085311.25
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 1377.7,
-      "ema50": 1294.31
-    },
     {
       "date": "2026-04-22",
       "close": 1379.6,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 1253.0,
       "ema50": 1247.66
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1268.4,
+      "ema50": 1248.47
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,253.00 vs EMA20 1,238.85",
-      "ema20_above_ema50": "EMA20 1,238.85 vs EMA50 1,247.66",
-      "ema50_above_ema200": "EMA50 1,247.66 vs EMA200 1,257.31",
-      "rsi_above_50": "RSI(14) 54.00 vs 50",
-      "macd_bullish": "MACD -0.21 vs signal -4.61",
-      "adx_trending_up": "ADX(14) 17.64 vs 20, +DI 16.43 vs -DI 15.27",
-      "price_above_vwap20": "Close 1,253.00 vs 20d VWAP 1,231.46",
-      "price_above_bb_mid": "Close 1,253.00 vs BB mid 1,234.33"
+      "price_above_ema20": "Close 1,268.40 vs EMA20 1,241.66",
+      "ema20_above_ema50": "EMA20 1,241.66 vs EMA50 1,248.47",
+      "ema50_above_ema200": "EMA50 1,248.47 vs EMA200 1,257.42",
+      "rsi_above_50": "RSI(14) 58.01 vs 50",
+      "macd_bullish": "MACD 2.10 vs signal -3.27",
+      "adx_trending_up": "ADX(14) 17.23 vs 20, +DI 17.65 vs -DI 13.89",
+      "price_above_vwap20": "Close 1,268.40 vs 20d VWAP 1,232.42",
+      "price_above_bb_mid": "Close 1,268.40 vs BB mid 1,235.45"
     },
     "flags_on": [
       "price_above_ema20",
@@ -672,23 +672,21 @@
       "conditions": {
         "atr_high": false,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 25.50 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 54.0",
-        "below_ema200": "Close 1,253.00 vs EMA200 1,257.31",
-        "extended_above_ema20": "Close 1,253.00 vs EMA20 1,238.85 (+1.1%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 1,253.00 vs 52w low 1,150.30"
+        "atr_high": "ATR 26.04 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 58.0",
+        "below_ema200": "Close 1,268.40 vs EMA200 1,257.42",
+        "extended_above_ema20": "Close 1,268.40 vs EMA20 1,241.66 (+2.2%)",
+        "large_day_move": "Day change +1.2%",
+        "near_52w_low": "Close 1,268.40 vs 52w low 1,150.30"
       },
-      "conditions_on": [
-        "below_ema200"
-      ],
-      "condition_count": 1,
+      "conditions_on": [],
+      "condition_count": 0,
       "condition_total": 6,
       "level": "low"
     },
@@ -708,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:47:54.855300+00:00"
+  "updated_at": "2026-10-13T17:34:44.428751+00:00"
 }

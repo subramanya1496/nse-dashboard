@@ -3,35 +3,30 @@
   "name": "One 97 Communications (Paytm)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 1690.0,
-    "prev_close": 1636.0,
-    "change_pct": 3.3007334963325183,
-    "ema20": 1690.9729962874374,
-    "ema50": 1619.1466234267314,
-    "ema200": 1361.3717530940373,
-    "rsi14": 50.81831882478706,
-    "macd": 3.6167774100047154,
-    "macd_signal": 17.47712532016773,
-    "atr14": 66.6376827612604,
-    "adx14": 25.73271842677405,
-    "adx_pos": 21.778465947105893,
-    "adx_neg": 24.728483051862725,
-    "bb_high": 1853.600948924212,
-    "bb_low": 1594.359051075788,
-    "bb_mid": 1723.98,
-    "vwap20": 1723.5099128824434,
+    "date": "2026-10-13",
+    "close": 1715.0,
+    "prev_close": 1690.0,
+    "change_pct": 1.4792899408284024,
+    "ema20": 1693.2612823553004,
+    "ema50": 1622.9055793707812,
+    "ema200": 1364.8904421179773,
+    "rsi14": 53.20973733390102,
+    "macd": 5.549456599313089,
+    "macd_signal": 15.091591575996802,
+    "atr14": 72.1635625640275,
+    "adx14": 25.291850705407228,
+    "adx_pos": 18.674308248230574,
+    "adx_neg": 27.756424352169688,
+    "bb_high": 1843.1977951073984,
+    "bb_low": 1595.5122048926016,
+    "bb_mid": 1719.355,
+    "vwap20": 1712.0086111676824,
     "high_52w": 1855.5,
     "low_52w": 930.6,
-    "volume": 2236195.0,
-    "avg_volume20": 5007088.7
+    "volume": 9232423.0,
+    "avg_volume20": 5005238.15
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 1166.8,
-      "ema50": 1108.76
-    },
     {
       "date": "2026-04-22",
       "close": 1162.15,
@@ -626,45 +621,52 @@
       "date": "2026-10-12",
       "close": 1690.0,
       "ema50": 1619.15
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1715.0,
+      "ema50": 1622.91
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
+      "price_above_vwap20": true,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,690.00 vs EMA20 1,690.97",
-      "ema20_above_ema50": "EMA20 1,690.97 vs EMA50 1,619.15",
-      "ema50_above_ema200": "EMA50 1,619.15 vs EMA200 1,361.37",
-      "rsi_above_50": "RSI(14) 50.82 vs 50",
-      "macd_bullish": "MACD 3.62 vs signal 17.48",
-      "adx_trending_up": "ADX(14) 25.73 vs 20, +DI 21.78 vs -DI 24.73",
-      "price_above_vwap20": "Close 1,690.00 vs 20d VWAP 1,723.51",
-      "price_above_bb_mid": "Close 1,690.00 vs BB mid 1,723.98"
+      "price_above_ema20": "Close 1,715.00 vs EMA20 1,693.26",
+      "ema20_above_ema50": "EMA20 1,693.26 vs EMA50 1,622.91",
+      "ema50_above_ema200": "EMA50 1,622.91 vs EMA200 1,364.89",
+      "rsi_above_50": "RSI(14) 53.21 vs 50",
+      "macd_bullish": "MACD 5.55 vs signal 15.09",
+      "adx_trending_up": "ADX(14) 25.29 vs 20, +DI 18.67 vs -DI 27.76",
+      "price_above_vwap20": "Close 1,715.00 vs 20d VWAP 1,712.01",
+      "price_above_bb_mid": "Close 1,715.00 vs BB mid 1,719.36"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50"
+      "rsi_above_50",
+      "price_above_vwap20"
     ],
-    "flag_count": 3,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: near buy zone"
+        "5/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -677,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 66.64 = 3.9% of price",
-        "rsi_extreme": "RSI(14) 50.8",
-        "below_ema200": "Close 1,690.00 vs EMA200 1,361.37",
-        "extended_above_ema20": "Close 1,690.00 vs EMA20 1,690.97 (-0.1%)",
-        "large_day_move": "Day change +3.3%",
-        "near_52w_low": "Close 1,690.00 vs 52w low 930.60"
+        "atr_high": "ATR 72.16 = 4.2% of price",
+        "rsi_extreme": "RSI(14) 53.2",
+        "below_ema200": "Close 1,715.00 vs EMA200 1,364.89",
+        "extended_above_ema20": "Close 1,715.00 vs EMA20 1,693.26 (+1.3%)",
+        "large_day_move": "Day change +1.5%",
+        "near_52w_low": "Close 1,715.00 vs 52w low 930.60"
       },
       "conditions_on": [
         "atr_high"
@@ -693,7 +695,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
@@ -707,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:49:09.508596+00:00"
+  "updated_at": "2026-10-13T17:35:59.692064+00:00"
 }

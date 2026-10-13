@@ -3,35 +3,30 @@
   "name": "Shree Cement",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 21860.0,
-    "prev_close": 22080.0,
-    "change_pct": -0.9963768115942028,
-    "ema20": 22320.037855511066,
-    "ema50": 23317.25918961509,
-    "ema200": 25255.00006539676,
-    "rsi14": 40.61627550796478,
-    "macd": -481.3273054989586,
-    "macd_signal": -547.8678847756339,
-    "atr14": 541.3731261629962,
-    "adx14": 34.41236333903563,
-    "adx_pos": 16.71213491296281,
-    "adx_neg": 26.21114079404945,
-    "bb_high": 22736.1861356123,
-    "bb_low": 21542.3138643877,
-    "bb_mid": 22139.25,
-    "vwap20": 22030.939862324605,
+    "date": "2026-10-13",
+    "close": 22225.0,
+    "prev_close": 21860.0,
+    "change_pct": 1.6697163769441903,
+    "ema20": 22310.98663117668,
+    "ema50": 23274.425495904696,
+    "ema200": 25224.850811014705,
+    "rsi14": 45.765986159590774,
+    "macd": -432.7119033748677,
+    "macd_signal": -524.8366884954806,
+    "atr14": 541.9893314370679,
+    "adx14": 33.580718758590166,
+    "adx_pos": 15.500767605136524,
+    "adx_neg": 24.64071881266559,
+    "bb_high": 22687.246848730487,
+    "bb_low": 21556.753151269513,
+    "bb_mid": 22122.0,
+    "vwap20": 22022.531358084685,
     "high_52w": 30285.0,
     "low_52w": 21355.0,
-    "volume": 36998.0,
-    "avg_volume20": 47607.15
+    "volume": 18912.0,
+    "avg_volume20": 47744.2
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 25540.0,
-      "ema50": 24916.99
-    },
     {
       "date": "2026-04-22",
       "close": 25735.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 21860.0,
       "ema50": 23317.26
+    },
+    {
+      "date": "2026-10-13",
+      "close": 22225.0,
+      "ema50": 23274.43
     }
   ],
   "flags": {
@@ -636,32 +636,34 @@
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 21,860.00 vs EMA20 22,320.04",
-      "ema20_above_ema50": "EMA20 22,320.04 vs EMA50 23,317.26",
-      "ema50_above_ema200": "EMA50 23,317.26 vs EMA200 25,255.00",
-      "rsi_above_50": "RSI(14) 40.62 vs 50",
-      "macd_bullish": "MACD -481.33 vs signal -547.87",
-      "adx_trending_up": "ADX(14) 34.41 vs 20, +DI 16.71 vs -DI 26.21",
-      "price_above_vwap20": "Close 21,860.00 vs 20d VWAP 22,030.94",
-      "price_above_bb_mid": "Close 21,860.00 vs BB mid 22,139.25"
+      "price_above_ema20": "Close 22,225.00 vs EMA20 22,310.99",
+      "ema20_above_ema50": "EMA20 22,310.99 vs EMA50 23,274.43",
+      "ema50_above_ema200": "EMA50 23,274.43 vs EMA200 25,224.85",
+      "rsi_above_50": "RSI(14) 45.77 vs 50",
+      "macd_bullish": "MACD -432.71 vs signal -524.84",
+      "adx_trending_up": "ADX(14) 33.58 vs 20, +DI 15.50 vs -DI 24.64",
+      "price_above_vwap20": "Close 22,225.00 vs 20d VWAP 22,022.53",
+      "price_above_bb_mid": "Close 22,225.00 vs BB mid 22,122.00"
     },
     "flags_on": [
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +676,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 541.37 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 40.6",
-        "below_ema200": "Close 21,860.00 vs EMA200 25,255.00",
-        "extended_above_ema20": "Close 21,860.00 vs EMA20 22,320.04 (-2.1%)",
-        "large_day_move": "Day change -1.0%",
-        "near_52w_low": "Close 21,860.00 vs 52w low 21,355.00"
+        "atr_high": "ATR 541.99 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 45.8",
+        "below_ema200": "Close 22,225.00 vs EMA200 25,224.85",
+        "extended_above_ema20": "Close 22,225.00 vs EMA20 22,310.99 (-0.4%)",
+        "large_day_move": "Day change +1.7%",
+        "near_52w_low": "Close 22,225.00 vs 52w low 21,355.00"
       },
       "conditions_on": [
         "below_ema200",
@@ -705,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:49:21.515348+00:00"
+  "updated_at": "2026-10-13T17:36:11.702839+00:00"
 }

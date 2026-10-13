@@ -3,35 +3,30 @@
   "name": "Mahanagar Gas",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 1020.6,
-    "prev_close": 1042.8,
-    "change_pct": -2.1288837744533886,
-    "ema20": 1057.5368105426783,
-    "ema50": 1079.038327027483,
-    "ema200": 1128.1290284161287,
-    "rsi14": 33.411065663371474,
-    "macd": -15.729527530649648,
-    "macd_signal": -13.381223944355883,
-    "atr14": 24.88563542115606,
-    "adx14": 20.054402114958005,
-    "adx_pos": 11.954224203637311,
-    "adx_neg": 23.406614990086897,
-    "bb_high": 1098.6707005194971,
-    "bb_low": 1022.6192994805028,
-    "bb_mid": 1060.645,
-    "vwap20": 1061.899440586112,
+    "date": "2026-10-13",
+    "close": 1023.0,
+    "prev_close": 1020.6,
+    "change_pct": 0.23515579071134401,
+    "ema20": 1054.2475904909945,
+    "ema50": 1076.8407455754248,
+    "ema200": 1127.0829684318885,
+    "rsi14": 34.601390876186045,
+    "macd": -16.537048285434366,
+    "macd_signal": -14.012388812571581,
+    "atr14": 24.3795186053592,
+    "adx14": 21.133683321028425,
+    "adx_pos": 11.33079342769813,
+    "adx_neg": 23.621556106266887,
+    "bb_high": 1097.3278854783305,
+    "bb_low": 1017.8321145216694,
+    "bb_mid": 1057.58,
+    "vwap20": 1057.469658603648,
     "high_52w": 1335.4,
     "low_52w": 900.0,
-    "volume": 126669.0,
-    "avg_volume20": 125414.0
+    "volume": 244848.0,
+    "avg_volume20": 133814.65
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 1136.95,
-      "ema50": 1060.63
-    },
     {
       "date": "2026-04-22",
       "close": 1147.25,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 1020.6,
       "ema50": 1079.04
+    },
+    {
+      "date": "2026-10-13",
+      "close": 1023.0,
+      "ema50": 1076.84
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,020.60 vs EMA20 1,057.54",
-      "ema20_above_ema50": "EMA20 1,057.54 vs EMA50 1,079.04",
-      "ema50_above_ema200": "EMA50 1,079.04 vs EMA200 1,128.13",
-      "rsi_above_50": "RSI(14) 33.41 vs 50",
-      "macd_bullish": "MACD -15.73 vs signal -13.38",
-      "adx_trending_up": "ADX(14) 20.05 vs 20, +DI 11.95 vs -DI 23.41",
-      "price_above_vwap20": "Close 1,020.60 vs 20d VWAP 1,061.90",
-      "price_above_bb_mid": "Close 1,020.60 vs BB mid 1,060.64"
+      "price_above_ema20": "Close 1,023.00 vs EMA20 1,054.25",
+      "ema20_above_ema50": "EMA20 1,054.25 vs EMA50 1,076.84",
+      "ema50_above_ema200": "EMA50 1,076.84 vs EMA200 1,127.08",
+      "rsi_above_50": "RSI(14) 34.60 vs 50",
+      "macd_bullish": "MACD -16.54 vs signal -14.01",
+      "adx_trending_up": "ADX(14) 21.13 vs 20, +DI 11.33 vs -DI 23.62",
+      "price_above_vwap20": "Close 1,023.00 vs 20d VWAP 1,057.47",
+      "price_above_bb_mid": "Close 1,023.00 vs BB mid 1,057.58"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 24.89 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 33.4",
-        "below_ema200": "Close 1,020.60 vs EMA200 1,128.13",
-        "extended_above_ema20": "Close 1,020.60 vs EMA20 1,057.54 (-3.5%)",
-        "large_day_move": "Day change -2.1%",
-        "near_52w_low": "Close 1,020.60 vs 52w low 900.00"
+        "atr_high": "ATR 24.38 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 34.6",
+        "below_ema200": "Close 1,023.00 vs EMA200 1,127.08",
+        "extended_above_ema20": "Close 1,023.00 vs EMA20 1,054.25 (-3.0%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 1,023.00 vs 52w low 900.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -688,8 +689,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -702,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:59.908936+00:00"
+  "updated_at": "2026-10-13T17:35:49.722429+00:00"
 }

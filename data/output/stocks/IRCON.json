@@ -3,35 +3,30 @@
   "name": "Ircon International",
   "sector": "Railways",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 104.73,
-    "prev_close": 104.56,
-    "change_pct": 0.16258607498087385,
-    "ema20": 108.82966699356056,
-    "ema50": 115.62177399501432,
-    "ema200": 135.5644624934145,
-    "rsi14": 40.225781060768966,
-    "macd": -3.3889611823422143,
-    "macd_signal": -3.573893349598289,
-    "atr14": 4.061215962620358,
-    "adx14": 26.762674750192566,
-    "adx_pos": 26.904977050838824,
-    "adx_neg": 22.519396304514952,
-    "bb_high": 114.66932618723041,
-    "bb_low": 100.9866738127696,
-    "bb_mid": 107.828,
-    "vwap20": 111.83596864513788,
+    "date": "2026-10-13",
+    "close": 106.02,
+    "prev_close": 104.73,
+    "change_pct": 1.2317387568032006,
+    "ema20": 108.56207966084051,
+    "ema50": 115.24523383834709,
+    "ema200": 135.27048774223627,
+    "rsi14": 42.70349606838292,
+    "macd": -3.2103439229254462,
+    "macd_signal": -3.501183464263721,
+    "atr14": 4.297557679576047,
+    "adx14": 26.420403099459808,
+    "adx_pos": 30.88913897003403,
+    "adx_neg": 19.76088681845226,
+    "bb_high": 113.87162377915574,
+    "bb_low": 101.06037622084428,
+    "bb_mid": 107.46600000000001,
+    "vwap20": 111.14392117374399,
     "high_52w": 186.44,
     "low_52w": 101.6,
-    "volume": 2400485.0,
-    "avg_volume20": 6844909.7
+    "volume": 23892410.0,
+    "avg_volume20": 7961718.15
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 153.13,
-      "ema50": 140.24
-    },
     {
       "date": "2026-04-22",
       "close": 155.6,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 104.73,
       "ema50": 115.62
+    },
+    {
+      "date": "2026-10-13",
+      "close": 106.02,
+      "ema50": 115.25
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 104.73 vs EMA20 108.83",
-      "ema20_above_ema50": "EMA20 108.83 vs EMA50 115.62",
-      "ema50_above_ema200": "EMA50 115.62 vs EMA200 135.56",
-      "rsi_above_50": "RSI(14) 40.23 vs 50",
-      "macd_bullish": "MACD -3.39 vs signal -3.57",
-      "adx_trending_up": "ADX(14) 26.76 vs 20, +DI 26.90 vs -DI 22.52",
-      "price_above_vwap20": "Close 104.73 vs 20d VWAP 111.84",
-      "price_above_bb_mid": "Close 104.73 vs BB mid 107.83"
+      "price_above_ema20": "Close 106.02 vs EMA20 108.56",
+      "ema20_above_ema50": "EMA20 108.56 vs EMA50 115.25",
+      "ema50_above_ema200": "EMA50 115.25 vs EMA200 135.27",
+      "rsi_above_50": "RSI(14) 42.70 vs 50",
+      "macd_bullish": "MACD -3.21 vs signal -3.50",
+      "adx_trending_up": "ADX(14) 26.42 vs 20, +DI 30.89 vs -DI 19.76",
+      "price_above_vwap20": "Close 106.02 vs 20d VWAP 111.14",
+      "price_above_bb_mid": "Close 106.02 vs BB mid 107.47"
     },
     "flags_on": [
       "macd_bullish",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.06 = 3.9% of price",
-        "rsi_extreme": "RSI(14) 40.2",
-        "below_ema200": "Close 104.73 vs EMA200 135.56",
-        "extended_above_ema20": "Close 104.73 vs EMA20 108.83 (-3.8%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 104.73 vs 52w low 101.60"
+        "atr_high": "ATR 4.30 = 4.1% of price",
+        "rsi_extreme": "RSI(14) 42.7",
+        "below_ema200": "Close 106.02 vs EMA200 135.27",
+        "extended_above_ema20": "Close 106.02 vs EMA20 108.56 (-2.3%)",
+        "large_day_move": "Day change +1.2%",
+        "near_52w_low": "Close 106.02 vs 52w low 101.60"
       },
       "conditions_on": [
         "atr_high",
@@ -693,7 +694,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -707,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:33.706655+00:00"
+  "updated_at": "2026-10-13T17:35:23.230792+00:00"
 }

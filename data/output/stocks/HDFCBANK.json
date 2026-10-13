@@ -3,35 +3,30 @@
   "name": "HDFC Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 704.9,
-    "prev_close": 707.25,
-    "change_pct": -0.33227288794627396,
-    "ema20": 713.651738913335,
-    "ema50": 725.5945079886986,
-    "ema200": 799.6849110669874,
-    "rsi14": 45.093915970542575,
-    "macd": -5.314893234936221,
-    "macd_signal": -3.5866894538326495,
-    "atr14": 14.818245660654073,
-    "adx14": 13.985170563026932,
-    "adx_pos": 20.68684185526339,
-    "adx_neg": 18.85157750917047,
-    "bb_high": 744.7464795697807,
-    "bb_low": 691.7735204302193,
-    "bb_mid": 718.26,
-    "vwap20": 718.4975709961928,
+    "date": "2026-10-13",
+    "close": 714.0,
+    "prev_close": 704.9,
+    "change_pct": 1.2909632571996061,
+    "ema20": 713.6849066358745,
+    "ema50": 725.1398214009065,
+    "ema200": 798.8323248872164,
+    "rsi14": 49.15097528652263,
+    "macd": -4.635219698824017,
+    "macd_signal": -3.796395502830923,
+    "atr14": 14.588370970607356,
+    "adx14": 13.709692627904541,
+    "adx_pos": 21.78866190344177,
+    "adx_neg": 17.780869988837438,
+    "bb_high": 744.7160397949602,
+    "bb_low": 692.3789602050398,
+    "bb_mid": 718.5475,
+    "vwap20": 719.2375896430135,
     "high_52w": 1020.5,
     "low_52w": 681.9,
-    "volume": 18197879.0,
-    "avg_volume20": 32048637.5
+    "volume": 18838639.0,
+    "avg_volume20": 31419972.75
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 811.75,
-      "ema50": 838.17
-    },
     {
       "date": "2026-04-22",
       "close": 799.9,
@@ -626,11 +621,16 @@
       "date": "2026-10-12",
       "close": 704.9,
       "ema50": 725.59
+    },
+    {
+      "date": "2026-10-13",
+      "close": 714.0,
+      "ema50": 725.14
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
@@ -640,17 +640,19 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 704.90 vs EMA20 713.65",
-      "ema20_above_ema50": "EMA20 713.65 vs EMA50 725.59",
-      "ema50_above_ema200": "EMA50 725.59 vs EMA200 799.68",
-      "rsi_above_50": "RSI(14) 45.09 vs 50",
-      "macd_bullish": "MACD -5.31 vs signal -3.59",
-      "adx_trending_up": "ADX(14) 13.99 vs 20, +DI 20.69 vs -DI 18.85",
-      "price_above_vwap20": "Close 704.90 vs 20d VWAP 718.50",
-      "price_above_bb_mid": "Close 704.90 vs BB mid 718.26"
+      "price_above_ema20": "Close 714.00 vs EMA20 713.68",
+      "ema20_above_ema50": "EMA20 713.68 vs EMA50 725.14",
+      "ema50_above_ema200": "EMA50 725.14 vs EMA200 798.83",
+      "rsi_above_50": "RSI(14) 49.15 vs 50",
+      "macd_bullish": "MACD -4.64 vs signal -3.80",
+      "adx_trending_up": "ADX(14) 13.71 vs 20, +DI 21.79 vs -DI 17.78",
+      "price_above_vwap20": "Close 714.00 vs 20d VWAP 719.24",
+      "price_above_bb_mid": "Close 714.00 vs BB mid 718.55"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "price_above_ema20"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,12 +674,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 14.82 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 45.1",
-        "below_ema200": "Close 704.90 vs EMA200 799.68",
-        "extended_above_ema20": "Close 704.90 vs EMA20 713.65 (-1.2%)",
-        "large_day_move": "Day change -0.3%",
-        "near_52w_low": "Close 704.90 vs 52w low 681.90"
+        "atr_high": "ATR 14.59 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 49.2",
+        "below_ema200": "Close 714.00 vs EMA200 798.83",
+        "extended_above_ema20": "Close 714.00 vs EMA20 713.68 (+0.0%)",
+        "large_day_move": "Day change +1.3%",
+        "near_52w_low": "Close 714.00 vs 52w low 681.90"
       },
       "conditions_on": [
         "below_ema200",
@@ -703,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:23.279722+00:00"
+  "updated_at": "2026-10-13T17:35:12.784729+00:00"
 }

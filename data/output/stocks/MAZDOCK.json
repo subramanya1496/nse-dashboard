@@ -3,35 +3,30 @@
   "name": "Mazagon Dock Shipbuilders",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-10-12",
-    "close": 2027.0,
-    "prev_close": 2010.0,
-    "change_pct": 0.845771144278607,
-    "ema20": 2153.632190136703,
-    "ema50": 2286.558845775785,
-    "ema200": 2450.4235475385317,
-    "rsi14": 29.64283044488633,
-    "macd": -101.2234448705126,
-    "macd_signal": -94.7110520338236,
-    "atr14": 57.869659888112054,
-    "adx14": 47.79157695254798,
-    "adx_pos": 13.264955606360537,
-    "adx_neg": 35.18545372246699,
-    "bb_high": 2339.1921204745868,
-    "bb_low": 1962.2578795254133,
-    "bb_mid": 2150.725,
-    "vwap20": 2160.565368601538,
+    "date": "2026-10-13",
+    "close": 2120.0,
+    "prev_close": 2027.0,
+    "change_pct": 4.588061174148988,
+    "ema20": 2150.4291244093974,
+    "ema50": 2280.027126333597,
+    "ema200": 2447.135751045611,
+    "rsi14": 42.40065239205816,
+    "macd": -91.41520966068492,
+    "macd_signal": -94.05188355919587,
+    "atr14": 62.04325561038978,
+    "adx14": 46.507973838125615,
+    "adx_pos": 16.47387543347633,
+    "adx_neg": 30.474376141416737,
+    "bb_high": 2307.523488815792,
+    "bb_low": 1972.0265111842082,
+    "bb_mid": 2139.775,
+    "vwap20": 2148.399107918872,
     "high_52w": 2929.7,
     "low_52w": 1987.7,
-    "volume": 588340.0,
-    "avg_volume20": 632641.6
+    "volume": 844286.0,
+    "avg_volume20": 649380.4
   },
   "price_history": [
-    {
-      "date": "2026-04-21",
-      "close": 2656.6,
-      "ema50": 2410.28
-    },
     {
       "date": "2026-04-22",
       "close": 2703.9,
@@ -626,6 +621,11 @@
       "date": "2026-10-12",
       "close": 2027.0,
       "ema50": 2286.56
+    },
+    {
+      "date": "2026-10-13",
+      "close": 2120.0,
+      "ema50": 2280.03
     }
   ],
   "flags": {
@@ -634,23 +634,25 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,027.00 vs EMA20 2,153.63",
-      "ema20_above_ema50": "EMA20 2,153.63 vs EMA50 2,286.56",
-      "ema50_above_ema200": "EMA50 2,286.56 vs EMA200 2,450.42",
-      "rsi_above_50": "RSI(14) 29.64 vs 50",
-      "macd_bullish": "MACD -101.22 vs signal -94.71",
-      "adx_trending_up": "ADX(14) 47.79 vs 20, +DI 13.26 vs -DI 35.19",
-      "price_above_vwap20": "Close 2,027.00 vs 20d VWAP 2,160.57",
-      "price_above_bb_mid": "Close 2,027.00 vs BB mid 2,150.72"
+      "price_above_ema20": "Close 2,120.00 vs EMA20 2,150.43",
+      "ema20_above_ema50": "EMA20 2,150.43 vs EMA50 2,280.03",
+      "ema50_above_ema200": "EMA50 2,280.03 vs EMA200 2,447.14",
+      "rsi_above_50": "RSI(14) 42.40 vs 50",
+      "macd_bullish": "MACD -91.42 vs signal -94.05",
+      "adx_trending_up": "ADX(14) 46.51 vs 20, +DI 16.47 vs -DI 30.47",
+      "price_above_vwap20": "Close 2,120.00 vs 20d VWAP 2,148.40",
+      "price_above_bb_mid": "Close 2,120.00 vs BB mid 2,139.78"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "macd_bullish"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -668,21 +670,21 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
-        "near_52w_low": true
+        "large_day_move": true,
+        "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 57.87 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 29.6",
-        "below_ema200": "Close 2,027.00 vs EMA200 2,450.42",
-        "extended_above_ema20": "Close 2,027.00 vs EMA20 2,153.63 (-5.9%)",
-        "large_day_move": "Day change +0.8%",
-        "near_52w_low": "Close 2,027.00 vs 52w low 1,987.70"
+        "atr_high": "ATR 62.04 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 42.4",
+        "below_ema200": "Close 2,120.00 vs EMA200 2,447.14",
+        "extended_above_ema20": "Close 2,120.00 vs EMA20 2,150.43 (-1.4%)",
+        "large_day_move": "Day change +4.6%",
+        "near_52w_low": "Close 2,120.00 vs 52w low 1,987.70"
       },
       "conditions_on": [
         "atr_high",
         "below_ema200",
-        "near_52w_low"
+        "large_day_move"
       ],
       "condition_count": 3,
       "condition_total": 6,
@@ -704,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-12T19:48:58.308542+00:00"
+  "updated_at": "2026-10-13T17:35:48.097070+00:00"
 }
