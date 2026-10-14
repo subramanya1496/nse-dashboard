@@ -3,35 +3,30 @@
   "name": "SBI Life Insurance",
   "sector": "Insurance",
   "indicators": {
-    "date": "2026-10-13",
-    "close": 1687.2,
-    "prev_close": 1680.8,
-    "change_pct": 0.3807710613993391,
-    "ema20": 1717.0409973412802,
-    "ema50": 1747.880167965503,
-    "ema200": 1826.208197343938,
-    "rsi14": 42.53285244217446,
-    "macd": -16.562586020544586,
-    "macd_signal": -13.645368925820362,
-    "atr14": 41.95909695705222,
-    "adx14": 29.20027277222393,
-    "adx_pos": 9.153679809592365,
-    "adx_neg": 23.01872220501186,
-    "bb_high": 1784.6455187100712,
-    "bb_low": 1657.4544812899287,
-    "bb_mid": 1721.05,
-    "vwap20": 1718.7573334267759,
+    "date": "2026-10-14",
+    "close": 1650.0,
+    "prev_close": 1687.2,
+    "change_pct": -2.204836415362734,
+    "ema20": 1710.6561404516349,
+    "ema50": 1744.0417516018642,
+    "ema200": 1824.6585201464163,
+    "rsi14": 37.073488587495476,
+    "macd": -19.902879257224868,
+    "macd_signal": -14.896870992450502,
+    "atr14": 42.726304317568065,
+    "adx14": 30.819684172711227,
+    "adx_pos": 8.347219557611812,
+    "adx_neg": 26.340385140427898,
+    "bb_high": 1785.3227628334223,
+    "bb_low": 1656.3672371665778,
+    "bb_mid": 1720.845,
+    "vwap20": 1717.3723527747673,
     "high_52w": 2132.0,
-    "low_52w": 1652.9,
-    "volume": 1599307.0,
-    "avg_volume20": 1354845.35
+    "low_52w": 1634.5,
+    "volume": 1587231.0,
+    "avg_volume20": 1377246.65
   },
   "price_history": [
-    {
-      "date": "2026-04-22",
-      "close": 1884.8,
-      "ema50": 1937.49
-    },
     {
       "date": "2026-04-23",
       "close": 1828.1,
@@ -60,7 +55,7 @@
     {
       "date": "2026-04-30",
       "close": 1819.0,
-      "ema50": 1910.2
+      "ema50": 1910.21
     },
     {
       "date": "2026-05-04",
@@ -115,7 +110,7 @@
     {
       "date": "2026-05-18",
       "close": 1860.4,
-      "ema50": 1890.48
+      "ema50": 1890.49
     },
     {
       "date": "2026-05-19",
@@ -460,7 +455,7 @@
     {
       "date": "2026-08-25",
       "close": 1755.0,
-      "ema50": 1824.15
+      "ema50": 1824.16
     },
     {
       "date": "2026-08-26",
@@ -515,7 +510,7 @@
     {
       "date": "2026-09-09",
       "close": 1684.0,
-      "ema50": 1792.05
+      "ema50": 1792.06
     },
     {
       "date": "2026-09-10",
@@ -626,6 +621,11 @@
       "date": "2026-10-13",
       "close": 1687.2,
       "ema50": 1747.88
+    },
+    {
+      "date": "2026-10-14",
+      "close": 1650.0,
+      "ema50": 1744.04
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,687.20 vs EMA20 1,717.04",
-      "ema20_above_ema50": "EMA20 1,717.04 vs EMA50 1,747.88",
-      "ema50_above_ema200": "EMA50 1,747.88 vs EMA200 1,826.21",
-      "rsi_above_50": "RSI(14) 42.53 vs 50",
-      "macd_bullish": "MACD -16.56 vs signal -13.65",
-      "adx_trending_up": "ADX(14) 29.20 vs 20, +DI 9.15 vs -DI 23.02",
-      "price_above_vwap20": "Close 1,687.20 vs 20d VWAP 1,718.76",
-      "price_above_bb_mid": "Close 1,687.20 vs BB mid 1,721.05"
+      "price_above_ema20": "Close 1,650.00 vs EMA20 1,710.66",
+      "ema20_above_ema50": "EMA20 1,710.66 vs EMA50 1,744.04",
+      "ema50_above_ema200": "EMA50 1,744.04 vs EMA200 1,824.66",
+      "rsi_above_50": "RSI(14) 37.07 vs 50",
+      "macd_bullish": "MACD -19.90 vs signal -14.90",
+      "adx_trending_up": "ADX(14) 30.82 vs 20, +DI 8.35 vs -DI 26.34",
+      "price_above_vwap20": "Close 1,650.00 vs 20d VWAP 1,717.37",
+      "price_above_bb_mid": "Close 1,650.00 vs BB mid 1,720.85"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -664,7 +664,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -672,18 +672,19 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 41.96 = 2.5% of price",
-        "rsi_extreme": "RSI(14) 42.5",
-        "below_ema200": "Close 1,687.20 vs EMA200 1,826.21",
-        "extended_above_ema20": "Close 1,687.20 vs EMA20 1,717.04 (-1.7%)",
-        "large_day_move": "Day change +0.4%",
-        "near_52w_low": "Close 1,687.20 vs 52w low 1,652.90"
+        "atr_high": "ATR 42.73 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 37.1",
+        "below_ema200": "Close 1,650.00 vs EMA200 1,824.66",
+        "extended_above_ema20": "Close 1,650.00 vs EMA20 1,710.66 (-3.5%)",
+        "large_day_move": "Day change -2.2%",
+        "near_52w_low": "Close 1,650.00 vs 52w low 1,634.50"
       },
       "conditions_on": [
+        "atr_high",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-13T17:36:10.493146+00:00"
+  "updated_at": "2026-10-14T15:06:36.612393+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Sagility India",
   "sector": "IT",
   "indicators": {
-    "date": "2026-10-13",
-    "close": 44.36,
-    "prev_close": 43.19,
-    "change_pct": 2.7089604075017406,
-    "ema20": 43.991728633869656,
-    "ema50": 43.90534185530625,
-    "ema200": 43.73787859313917,
-    "rsi14": 51.6589851275009,
-    "macd": -0.2908640821401036,
-    "macd_signal": -0.25782035568963035,
-    "atr14": 1.2708678453897864,
-    "adx14": 18.577194047577912,
-    "adx_pos": 14.479904833252204,
-    "adx_neg": 19.32745993545309,
-    "bb_high": 46.52845371524246,
-    "bb_low": 41.899546284757534,
-    "bb_mid": 44.214,
-    "vwap20": 44.39121136636457,
+    "date": "2026-10-14",
+    "close": 45.55,
+    "prev_close": 44.36,
+    "change_pct": 2.6825969341749274,
+    "ema20": 44.14013543064396,
+    "ema50": 43.96983664600861,
+    "ema200": 43.740755181295526,
+    "rsi14": 57.48403913187386,
+    "macd": -0.12777456142184462,
+    "macd_signal": -0.23181119681007903,
+    "atr14": 1.3215201421762968,
+    "adx14": 18.165969965544612,
+    "adx_pos": 22.335024738633212,
+    "adx_neg": 17.259042693505684,
+    "bb_high": 46.5200603739132,
+    "bb_low": 41.9029396260868,
+    "bb_mid": 44.2115,
+    "vwap20": 44.34658120951279,
     "high_52w": 57.89,
     "low_52w": 35.83,
-    "volume": 12957974.0,
-    "avg_volume20": 12696081.7
+    "volume": 25999806.0,
+    "avg_volume20": 12800426.3
   },
   "price_history": [
-    {
-      "date": "2026-04-22",
-      "close": 41.59,
-      "ema50": 42.77
-    },
     {
       "date": "2026-04-23",
       "close": 42.17,
@@ -110,7 +105,7 @@
     {
       "date": "2026-05-15",
       "close": 42.0,
-      "ema50": 42.64
+      "ema50": 42.63
     },
     {
       "date": "2026-05-18",
@@ -330,7 +325,7 @@
     {
       "date": "2026-07-20",
       "close": 41.31,
-      "ema50": 41.12
+      "ema50": 41.11
     },
     {
       "date": "2026-07-21",
@@ -626,6 +621,11 @@
       "date": "2026-10-13",
       "close": 44.36,
       "ema50": 43.91
+    },
+    {
+      "date": "2026-10-14",
+      "close": 45.55,
+      "ema50": 43.97
     }
   ],
   "flags": {
@@ -634,39 +634,41 @@
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
-      "macd_bullish": false,
+      "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
+      "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 44.36 vs EMA20 43.99",
-      "ema20_above_ema50": "EMA20 43.99 vs EMA50 43.91",
-      "ema50_above_ema200": "EMA50 43.91 vs EMA200 43.74",
-      "rsi_above_50": "RSI(14) 51.66 vs 50",
-      "macd_bullish": "MACD -0.29 vs signal -0.26",
-      "adx_trending_up": "ADX(14) 18.58 vs 20, +DI 14.48 vs -DI 19.33",
-      "price_above_vwap20": "Close 44.36 vs 20d VWAP 44.39",
-      "price_above_bb_mid": "Close 44.36 vs BB mid 44.21"
+      "price_above_ema20": "Close 45.55 vs EMA20 44.14",
+      "ema20_above_ema50": "EMA20 44.14 vs EMA50 43.97",
+      "ema50_above_ema200": "EMA50 43.97 vs EMA200 43.74",
+      "rsi_above_50": "RSI(14) 57.48 vs 50",
+      "macd_bullish": "MACD -0.13 vs signal -0.23",
+      "adx_trending_up": "ADX(14) 18.17 vs 20, +DI 22.34 vs -DI 17.26",
+      "price_above_vwap20": "Close 45.55 vs 20d VWAP 44.35",
+      "price_above_bb_mid": "Close 45.55 vs BB mid 44.21"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50",
+      "macd_bullish",
+      "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "5/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -679,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.27 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 51.7",
-        "below_ema200": "Close 44.36 vs EMA200 43.74",
-        "extended_above_ema20": "Close 44.36 vs EMA20 43.99 (+0.8%)",
+        "atr_high": "ATR 1.32 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 57.5",
+        "below_ema200": "Close 45.55 vs EMA200 43.74",
+        "extended_above_ema20": "Close 45.55 vs EMA20 44.14 (+3.2%)",
         "large_day_move": "Day change +2.7%",
-        "near_52w_low": "Close 44.36 vs 52w low 35.83"
+        "near_52w_low": "Close 45.55 vs 52w low 35.83"
       },
       "conditions_on": [
         "atr_high"
@@ -695,13 +697,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
-      "weekly": "neutral",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -709,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-13T17:36:09.293653+00:00"
+  "updated_at": "2026-10-14T15:06:35.410607+00:00"
 }

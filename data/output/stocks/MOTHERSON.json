@@ -3,35 +3,30 @@
   "name": "Samvardhana Motherson International",
   "sector": "Auto Ancillary",
   "indicators": {
-    "date": "2026-10-13",
-    "close": 160.0,
-    "prev_close": 156.99,
-    "change_pct": 1.9173195744951848,
-    "ema20": 159.50375410776869,
-    "ema50": 158.86892586855933,
-    "ema200": 140.9324380644247,
-    "rsi14": 50.096200818450484,
-    "macd": -1.465047762808922,
-    "macd_signal": -1.0536657473036954,
-    "atr14": 4.617564604892286,
-    "adx14": 22.054350961703086,
-    "adx_pos": 16.471391530239647,
-    "adx_neg": 21.764530798168515,
-    "bb_high": 166.7207334846601,
-    "bb_low": 153.09326651533988,
-    "bb_mid": 159.90699999999998,
-    "vwap20": 160.12083194215364,
+    "date": "2026-10-14",
+    "close": 159.8,
+    "prev_close": 160.0,
+    "change_pct": -0.1249999999999929,
+    "ema20": 159.53196800226672,
+    "ema50": 158.9054206500658,
+    "ema200": 140.951107936271,
+    "rsi14": 49.80423572740164,
+    "macd": -1.2477467426726605,
+    "macd_signal": -1.0924819460874564,
+    "atr14": 4.57488141887185,
+    "adx14": 20.637583325327594,
+    "adx_pos": 19.51261018619309,
+    "adx_neg": 20.398478000113045,
+    "bb_high": 166.7559332554145,
+    "bb_low": 153.22306674458548,
+    "bb_mid": 159.9895,
+    "vwap20": 160.10479077467681,
     "high_52w": 173.27,
     "low_52w": 101.01,
-    "volume": 6558561.0,
-    "avg_volume20": 12023188.9
+    "volume": 9017243.0,
+    "avg_volume20": 11786289.2
   },
   "price_history": [
-    {
-      "date": "2026-04-22",
-      "close": 131.76,
-      "ema50": 119.02
-    },
     {
       "date": "2026-04-23",
       "close": 127.22,
@@ -155,7 +150,7 @@
     {
       "date": "2026-05-29",
       "close": 145.74,
-      "ema50": 126.76
+      "ema50": 126.75
     },
     {
       "date": "2026-06-01",
@@ -300,7 +295,7 @@
     {
       "date": "2026-07-10",
       "close": 143.19,
-      "ema50": 139.31
+      "ema50": 139.3
     },
     {
       "date": "2026-07-13",
@@ -626,6 +621,11 @@
       "date": "2026-10-13",
       "close": 160.0,
       "ema50": 158.87
+    },
+    {
+      "date": "2026-10-14",
+      "close": 159.8,
+      "ema50": 158.91
     }
   ],
   "flags": {
@@ -633,39 +633,37 @@
       "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
-      "price_above_bb_mid": true
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 160.00 vs EMA20 159.50",
-      "ema20_above_ema50": "EMA20 159.50 vs EMA50 158.87",
-      "ema50_above_ema200": "EMA50 158.87 vs EMA200 140.93",
-      "rsi_above_50": "RSI(14) 50.10 vs 50",
-      "macd_bullish": "MACD -1.47 vs signal -1.05",
-      "adx_trending_up": "ADX(14) 22.05 vs 20, +DI 16.47 vs -DI 21.76",
-      "price_above_vwap20": "Close 160.00 vs 20d VWAP 160.12",
-      "price_above_bb_mid": "Close 160.00 vs BB mid 159.91"
+      "price_above_ema20": "Close 159.80 vs EMA20 159.53",
+      "ema20_above_ema50": "EMA20 159.53 vs EMA50 158.91",
+      "ema50_above_ema200": "EMA50 158.91 vs EMA200 140.95",
+      "rsi_above_50": "RSI(14) 49.80 vs 50",
+      "macd_bullish": "MACD -1.25 vs signal -1.09",
+      "adx_trending_up": "ADX(14) 20.64 vs 20, +DI 19.51 vs -DI 20.40",
+      "price_above_vwap20": "Close 159.80 vs 20d VWAP 160.10",
+      "price_above_bb_mid": "Close 159.80 vs BB mid 159.99"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "rsi_above_50",
-      "price_above_bb_mid"
+      "ema50_above_ema200"
     ],
-    "flag_count": 5,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "5/8 bullish flags",
+        "3/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -679,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.62 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 50.1",
-        "below_ema200": "Close 160.00 vs EMA200 140.93",
-        "extended_above_ema20": "Close 160.00 vs EMA20 159.50 (+0.3%)",
-        "large_day_move": "Day change +1.9%",
-        "near_52w_low": "Close 160.00 vs 52w low 101.01"
+        "atr_high": "ATR 4.57 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 49.8",
+        "below_ema200": "Close 159.80 vs EMA200 140.95",
+        "extended_above_ema20": "Close 159.80 vs EMA20 159.53 (+0.2%)",
+        "large_day_move": "Day change -0.1%",
+        "near_52w_low": "Close 159.80 vs 52w low 101.01"
       },
       "conditions_on": [
         "atr_high"
@@ -709,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-13T17:35:50.115182+00:00"
+  "updated_at": "2026-10-14T15:06:16.566765+00:00"
 }
