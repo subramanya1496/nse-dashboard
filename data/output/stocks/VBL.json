@@ -3,35 +3,30 @@
   "name": "Varun Beverages",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-10-14",
-    "close": 442.65,
-    "prev_close": 442.0,
-    "change_pct": 0.14705882352940663,
-    "ema20": 432.75524633308146,
-    "ema50": 435.62118837358395,
-    "ema200": 458.80757040259033,
-    "rsi14": 57.885414827358396,
-    "macd": 4.06461634401461,
-    "macd_signal": 2.616190055783636,
-    "atr14": 9.797957520077466,
-    "adx14": 15.555092343414334,
-    "adx_pos": 18.26202647252721,
-    "adx_neg": 15.344936676616056,
-    "bb_high": 448.69894089353204,
-    "bb_low": 414.5910591064679,
-    "bb_mid": 431.645,
-    "vwap20": 430.3292707452673,
+    "date": "2026-10-15",
+    "close": 429.25,
+    "prev_close": 442.65,
+    "change_pct": -3.0272224104823175,
+    "ema20": 432.4214133489786,
+    "ema50": 435.3713504048231,
+    "ema200": 458.6318595261613,
+    "rsi14": 48.483609689692194,
+    "macd": 3.2357754912218866,
+    "macd_signal": 2.740107142668199,
+    "atr14": 10.183817697398316,
+    "adx14": 15.27614869430145,
+    "adx_pos": 16.31508048344803,
+    "adx_neg": 20.617706426786654,
+    "bb_high": 446.66446256299923,
+    "bb_low": 418.5105374370007,
+    "bb_mid": 432.5875,
+    "vwap20": 431.1741610650811,
     "high_52w": 555.8,
     "low_52w": 381.0,
-    "volume": 3673528.0,
-    "avg_volume20": 4979631.95
+    "volume": 4069643.0,
+    "avg_volume20": 5008619.05
   },
   "price_history": [
-    {
-      "date": "2026-04-23",
-      "close": 484.25,
-      "ema50": 441.08
-    },
     {
       "date": "2026-04-24",
       "close": 490.45,
@@ -85,12 +80,12 @@
     {
       "date": "2026-05-11",
       "close": 501.3,
-      "ema50": 465.64
+      "ema50": 465.65
     },
     {
       "date": "2026-05-12",
       "close": 488.35,
-      "ema50": 466.53
+      "ema50": 466.54
     },
     {
       "date": "2026-05-13",
@@ -120,7 +115,7 @@
     {
       "date": "2026-05-20",
       "close": 514.0,
-      "ema50": 475.15
+      "ema50": 475.16
     },
     {
       "date": "2026-05-21",
@@ -626,46 +621,47 @@
       "date": "2026-10-14",
       "close": 442.65,
       "ema50": 435.62
+    },
+    {
+      "date": "2026-10-15",
+      "close": 429.25,
+      "ema50": 435.37
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 442.65 vs EMA20 432.76",
-      "ema20_above_ema50": "EMA20 432.76 vs EMA50 435.62",
-      "ema50_above_ema200": "EMA50 435.62 vs EMA200 458.81",
-      "rsi_above_50": "RSI(14) 57.89 vs 50",
-      "macd_bullish": "MACD 4.06 vs signal 2.62",
-      "adx_trending_up": "ADX(14) 15.56 vs 20, +DI 18.26 vs -DI 15.34",
-      "price_above_vwap20": "Close 442.65 vs 20d VWAP 430.33",
-      "price_above_bb_mid": "Close 442.65 vs BB mid 431.64"
+      "price_above_ema20": "Close 429.25 vs EMA20 432.42",
+      "ema20_above_ema50": "EMA20 432.42 vs EMA50 435.37",
+      "ema50_above_ema200": "EMA50 435.37 vs EMA200 458.63",
+      "rsi_above_50": "RSI(14) 48.48 vs 50",
+      "macd_bullish": "MACD 3.24 vs signal 2.74",
+      "adx_trending_up": "ADX(14) 15.28 vs 20, +DI 16.32 vs -DI 20.62",
+      "price_above_vwap20": "Close 429.25 vs 20d VWAP 431.17",
+      "price_above_bb_mid": "Close 429.25 vs BB mid 432.59"
     },
     "flags_on": [
-      "price_above_ema20",
-      "rsi_above_50",
-      "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "macd_bullish"
     ],
-    "flag_count": 5,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "5/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.80 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 57.9",
-        "below_ema200": "Close 442.65 vs EMA200 458.81",
-        "extended_above_ema20": "Close 442.65 vs EMA20 432.76 (+2.3%)",
-        "large_day_move": "Day change +0.1%",
-        "near_52w_low": "Close 442.65 vs 52w low 381.00"
+        "atr_high": "ATR 10.18 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 48.5",
+        "below_ema200": "Close 429.25 vs EMA200 458.63",
+        "extended_above_ema20": "Close 429.25 vs EMA20 432.42 (-0.7%)",
+        "large_day_move": "Day change -3.0%",
+        "near_52w_low": "Close 429.25 vs 52w low 381.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -699,8 +695,8 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
-      "weekly": "bullish",
+      "daily": "bearish",
+      "weekly": "bearish",
       "intraday": null
     }
   },
@@ -708,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-14T15:07:04.603203+00:00"
+  "updated_at": "2026-10-15T15:00:16.024728+00:00"
 }
