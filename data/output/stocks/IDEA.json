@@ -3,35 +3,30 @@
   "name": "Vodafone Idea",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-10-16",
-    "close": 12.59,
-    "prev_close": 12.52,
-    "change_pct": 0.5591054313099064,
-    "ema20": 13.209873085052045,
-    "ema50": 13.591193268229603,
-    "ema200": 12.41142611289014,
-    "rsi14": 37.792846697196815,
-    "macd": -0.42763232884042246,
-    "macd_signal": -0.3676094214643285,
-    "atr14": 0.422122613738678,
-    "adx14": 28.599051229951275,
-    "adx_pos": 12.314623408068895,
-    "adx_neg": 29.097856341461316,
-    "bb_high": 14.565769713547756,
-    "bb_low": 12.007230286452245,
-    "bb_mid": 13.2865,
-    "vwap20": 13.35687888122497,
+    "date": "2026-10-19",
+    "close": 12.28,
+    "prev_close": 12.59,
+    "change_pct": -2.4622716441620374,
+    "ema20": 13.1213137436185,
+    "ema50": 13.539772704681521,
+    "ema200": 12.398719220420618,
+    "rsi14": 34.4779814268408,
+    "macd": -0.44778660026161,
+    "macd_signal": -0.3836448572038311,
+    "atr14": 0.4255424270435348,
+    "adx14": 29.84147167365354,
+    "adx_pos": 11.343111582864454,
+    "adx_neg": 30.662918940986167,
+    "bb_high": 14.52054673169327,
+    "bb_low": 11.888453268306728,
+    "bb_mid": 13.2045,
+    "vwap20": 13.287377408057738,
     "high_52w": 15.79,
     "low_52w": 8.13,
-    "volume": 278231235.0,
-    "avg_volume20": 404585269.05
+    "volume": 323539893.0,
+    "avg_volume20": 403243922.85
   },
   "price_history": [
-    {
-      "date": "2026-04-27",
-      "close": 9.69,
-      "ema50": 9.71
-    },
     {
       "date": "2026-04-28",
       "close": 9.95,
@@ -125,7 +120,7 @@
     {
       "date": "2026-05-25",
       "close": 14.04,
-      "ema50": 11.13
+      "ema50": 11.12
     },
     {
       "date": "2026-05-26",
@@ -626,6 +621,11 @@
       "date": "2026-10-16",
       "close": 12.59,
       "ema50": 13.59
+    },
+    {
+      "date": "2026-10-19",
+      "close": 12.28,
+      "ema50": 13.54
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 12.59 vs EMA20 13.21",
-      "ema20_above_ema50": "EMA20 13.21 vs EMA50 13.59",
-      "ema50_above_ema200": "EMA50 13.59 vs EMA200 12.41",
-      "rsi_above_50": "RSI(14) 37.79 vs 50",
-      "macd_bullish": "MACD -0.43 vs signal -0.37",
-      "adx_trending_up": "ADX(14) 28.60 vs 20, +DI 12.31 vs -DI 29.10",
-      "price_above_vwap20": "Close 12.59 vs 20d VWAP 13.36",
-      "price_above_bb_mid": "Close 12.59 vs BB mid 13.29"
+      "price_above_ema20": "Close 12.28 vs EMA20 13.12",
+      "ema20_above_ema50": "EMA20 13.12 vs EMA50 13.54",
+      "ema50_above_ema200": "EMA50 13.54 vs EMA200 12.40",
+      "rsi_above_50": "RSI(14) 34.48 vs 50",
+      "macd_bullish": "MACD -0.45 vs signal -0.38",
+      "adx_trending_up": "ADX(14) 29.84 vs 20, +DI 11.34 vs -DI 30.66",
+      "price_above_vwap20": "Close 12.28 vs 20d VWAP 13.29",
+      "price_above_bb_mid": "Close 12.28 vs BB mid 13.20"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -668,25 +668,26 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.42 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 37.8",
-        "below_ema200": "Close 12.59 vs EMA200 12.41",
-        "extended_above_ema20": "Close 12.59 vs EMA20 13.21 (-4.7%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 12.59 vs 52w low 8.13"
+        "atr_high": "ATR 0.43 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 34.5",
+        "below_ema200": "Close 12.28 vs EMA200 12.40",
+        "extended_above_ema20": "Close 12.28 vs EMA20 13.12 (-6.4%)",
+        "large_day_move": "Day change -2.5%",
+        "near_52w_low": "Close 12.28 vs 52w low 8.13"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-16T14:49:31.534936+00:00"
+  "updated_at": "2026-10-19T16:59:27.601341+00:00"
 }
