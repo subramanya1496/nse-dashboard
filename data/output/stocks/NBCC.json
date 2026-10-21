@@ -3,35 +3,30 @@
   "name": "NBCC (India) Ltd",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-10-19",
-    "close": 73.7,
-    "prev_close": 75.51,
-    "change_pct": -2.3970335054959637,
-    "ema20": 77.81563206365433,
-    "ema50": 82.97361433660016,
-    "ema200": 93.42887895434795,
-    "rsi14": 31.08567889577475,
-    "macd": -2.6612519079642,
-    "macd_signal": -2.7414523156997737,
-    "atr14": 1.9144056688488693,
-    "adx14": 44.522216050763824,
-    "adx_pos": 10.458173740499994,
-    "adx_neg": 33.53475724366705,
-    "bb_high": 84.35054166322911,
-    "bb_low": 71.73145833677088,
-    "bb_mid": 78.041,
-    "vwap20": 78.44687026379165,
+    "date": "2026-10-21",
+    "close": 71.45,
+    "prev_close": 73.7,
+    "change_pct": -3.0529172320217097,
+    "ema20": 77.20938139092537,
+    "ema50": 82.52171343293203,
+    "ema200": 93.26088733970394,
+    "rsi14": 26.88352067806217,
+    "macd": -2.8507380388298316,
+    "macd_signal": -2.763309460418799,
+    "atr14": 2.014805263925175,
+    "adx14": 45.7725961290982,
+    "adx_pos": 9.227245250864271,
+    "adx_neg": 39.37242194361614,
+    "bb_high": 83.92973895056208,
+    "bb_low": 70.98226104943792,
+    "bb_mid": 77.456,
+    "vwap20": 77.83423349900362,
     "high_52w": 125.85,
-    "low_52w": 73.5,
-    "volume": 3369427.0,
-    "avg_volume20": 4786315.95
+    "low_52w": 70.74,
+    "volume": 5969927.0,
+    "avg_volume20": 4865477.15
   },
   "price_history": [
-    {
-      "date": "2026-04-28",
-      "close": 94.63,
-      "ema50": 91.71
-    },
     {
       "date": "2026-04-29",
       "close": 93.2,
@@ -155,7 +150,7 @@
     {
       "date": "2026-06-04",
       "close": 104.08,
-      "ema50": 95.14
+      "ema50": 95.15
     },
     {
       "date": "2026-06-05",
@@ -626,6 +621,11 @@
       "date": "2026-10-19",
       "close": 73.7,
       "ema50": 82.97
+    },
+    {
+      "date": "2026-10-21",
+      "close": 71.45,
+      "ema50": 82.52
     }
   ],
   "flags": {
@@ -634,25 +634,23 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 73.70 vs EMA20 77.82",
-      "ema20_above_ema50": "EMA20 77.82 vs EMA50 82.97",
-      "ema50_above_ema200": "EMA50 82.97 vs EMA200 93.43",
-      "rsi_above_50": "RSI(14) 31.09 vs 50",
-      "macd_bullish": "MACD -2.66 vs signal -2.74",
-      "adx_trending_up": "ADX(14) 44.52 vs 20, +DI 10.46 vs -DI 33.53",
-      "price_above_vwap20": "Close 73.70 vs 20d VWAP 78.45",
-      "price_above_bb_mid": "Close 73.70 vs BB mid 78.04"
+      "price_above_ema20": "Close 71.45 vs EMA20 77.21",
+      "ema20_above_ema50": "EMA20 77.21 vs EMA50 82.52",
+      "ema50_above_ema200": "EMA50 82.52 vs EMA200 93.26",
+      "rsi_above_50": "RSI(14) 26.88 vs 50",
+      "macd_bullish": "MACD -2.85 vs signal -2.76",
+      "adx_trending_up": "ADX(14) 45.77 vs 20, +DI 9.23 vs -DI 39.37",
+      "price_above_vwap20": "Close 71.45 vs 20d VWAP 77.83",
+      "price_above_bb_mid": "Close 71.45 vs BB mid 77.46"
     },
-    "flags_on": [
-      "macd_bullish"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +672,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 1.91 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 31.1",
-        "below_ema200": "Close 73.70 vs EMA200 93.43",
-        "extended_above_ema20": "Close 73.70 vs EMA20 77.82 (-5.3%)",
-        "large_day_move": "Day change -2.4%",
-        "near_52w_low": "Close 73.70 vs 52w low 73.50"
+        "atr_high": "ATR 2.01 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 26.9",
+        "below_ema200": "Close 71.45 vs EMA200 93.26",
+        "extended_above_ema20": "Close 71.45 vs EMA20 77.21 (-7.5%)",
+        "large_day_move": "Day change -3.1%",
+        "near_52w_low": "Close 71.45 vs 52w low 70.74"
       },
       "conditions_on": [
         "atr_high",
@@ -706,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-20T15:02:47.922879+00:00"
+  "updated_at": "2026-10-21T15:13:31.557159+00:00"
 }

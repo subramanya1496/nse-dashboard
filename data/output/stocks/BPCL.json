@@ -3,35 +3,30 @@
   "name": "Bharat Petroleum Corporation",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-10-19",
-    "close": 294.3,
-    "prev_close": 293.5,
-    "change_pct": 0.2725724020442969,
-    "ema20": 296.988527813185,
-    "ema50": 303.71834952689204,
-    "ema200": 316.11484585941287,
-    "rsi14": 44.08313709944257,
-    "macd": -5.014394244107166,
-    "macd_signal": -5.1434733082584865,
-    "atr14": 7.085771894491562,
-    "adx14": 28.168456634588438,
-    "adx_pos": 17.946748078493115,
-    "adx_neg": 23.00731057412502,
-    "bb_high": 317.04050162891104,
-    "bb_low": 280.35949837108893,
-    "bb_mid": 298.7,
-    "vwap20": 299.365104663445,
+    "date": "2026-10-21",
+    "close": 288.0,
+    "prev_close": 294.3,
+    "change_pct": -2.1406727828746215,
+    "ema20": 296.1324775452628,
+    "ema50": 303.1019517653583,
+    "ema200": 315.90923834976405,
+    "rsi14": 38.315732105260764,
+    "macd": -5.11726589041325,
+    "macd_signal": -5.1382318248253736,
+    "atr14": 7.3796453306613214,
+    "adx14": 28.077229575354444,
+    "adx_pos": 16.001207633734875,
+    "adx_neg": 27.77252333700881,
+    "bb_high": 315.1731147550027,
+    "bb_low": 279.75188524499725,
+    "bb_mid": 297.4625,
+    "vwap20": 298.4292565113424,
     "high_52w": 391.65,
     "low_52w": 266.6,
-    "volume": 2432283.0,
-    "avg_volume20": 4550623.35
+    "volume": 4280186.0,
+    "avg_volume20": 4606957.75
   },
   "price_history": [
-    {
-      "date": "2026-04-28",
-      "close": 307.75,
-      "ema50": 319.65
-    },
     {
       "date": "2026-04-29",
       "close": 303.9,
@@ -626,6 +621,11 @@
       "date": "2026-10-19",
       "close": 294.3,
       "ema50": 303.72
+    },
+    {
+      "date": "2026-10-21",
+      "close": 288.0,
+      "ema50": 303.1
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 294.30 vs EMA20 296.99",
-      "ema20_above_ema50": "EMA20 296.99 vs EMA50 303.72",
-      "ema50_above_ema200": "EMA50 303.72 vs EMA200 316.11",
-      "rsi_above_50": "RSI(14) 44.08 vs 50",
-      "macd_bullish": "MACD -5.01 vs signal -5.14",
-      "adx_trending_up": "ADX(14) 28.17 vs 20, +DI 17.95 vs -DI 23.01",
-      "price_above_vwap20": "Close 294.30 vs 20d VWAP 299.37",
-      "price_above_bb_mid": "Close 294.30 vs BB mid 298.70"
+      "price_above_ema20": "Close 288.00 vs EMA20 296.13",
+      "ema20_above_ema50": "EMA20 296.13 vs EMA50 303.10",
+      "ema50_above_ema200": "EMA50 303.10 vs EMA200 315.91",
+      "rsi_above_50": "RSI(14) 38.32 vs 50",
+      "macd_bullish": "MACD -5.12 vs signal -5.14",
+      "adx_trending_up": "ADX(14) 28.08 vs 20, +DI 16.00 vs -DI 27.77",
+      "price_above_vwap20": "Close 288.00 vs 20d VWAP 298.43",
+      "price_above_bb_mid": "Close 288.00 vs BB mid 297.46"
     },
     "flags_on": [
       "macd_bullish"
@@ -666,7 +666,7 @@
     },
     "risk": {
       "conditions": {
-        "atr_high": false,
+        "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
@@ -674,19 +674,20 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.09 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 44.1",
-        "below_ema200": "Close 294.30 vs EMA200 316.11",
-        "extended_above_ema20": "Close 294.30 vs EMA20 296.99 (-0.9%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 294.30 vs 52w low 266.60"
+        "atr_high": "ATR 7.38 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 38.3",
+        "below_ema200": "Close 288.00 vs EMA200 315.91",
+        "extended_above_ema20": "Close 288.00 vs EMA20 296.13 (-2.7%)",
+        "large_day_move": "Day change -2.1%",
+        "near_52w_low": "Close 288.00 vs 52w low 266.60"
       },
       "conditions_on": [
+        "atr_high",
         "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-20T15:01:47.382489+00:00"
+  "updated_at": "2026-10-21T15:12:30.972258+00:00"
 }

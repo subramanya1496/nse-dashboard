@@ -3,35 +3,30 @@
   "name": "CG Power and Industrial Solutions",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-10-19",
-    "close": 855.0,
-    "prev_close": 846.0,
-    "change_pct": 1.0638297872340425,
-    "ema20": 866.6894614130083,
-    "ema50": 876.6861366078258,
-    "ema200": 827.5452539458973,
-    "rsi14": 46.39525880177337,
-    "macd": -10.514034572771038,
-    "macd_signal": -7.290032928658035,
-    "atr14": 27.954218286028205,
-    "adx14": 14.365898754204164,
-    "adx_pos": 21.19581115094859,
-    "adx_neg": 29.038611183964424,
-    "bb_high": 917.743619780794,
-    "bb_low": 826.2513802192061,
-    "bb_mid": 871.9975000000001,
-    "vwap20": 866.0873753666178,
+    "date": "2026-10-21",
+    "close": 821.0,
+    "prev_close": 855.0,
+    "change_pct": -3.976608187134503,
+    "ema20": 862.3380841355789,
+    "ema50": 874.5023670675008,
+    "ema200": 827.4849104087308,
+    "rsi14": 40.10571483172361,
+    "macd": -12.817408137654866,
+    "macd_signal": -8.395507970466078,
+    "atr14": 29.478916979867954,
+    "adx14": 15.319045746248056,
+    "adx_pos": 18.663847883050057,
+    "adx_neg": 32.972164464643434,
+    "bb_high": 914.9269098211365,
+    "bb_low": 820.1680901788633,
+    "bb_mid": 867.5474999999999,
+    "vwap20": 861.7651220688452,
     "high_52w": 980.9,
     "low_52w": 525.5,
-    "volume": 3963727.0,
-    "avg_volume20": 2601938.0
+    "volume": 2591591.0,
+    "avg_volume20": 2581532.3
   },
   "price_history": [
-    {
-      "date": "2026-04-28",
-      "close": 831.2,
-      "ema50": 726.47
-    },
     {
       "date": "2026-04-29",
       "close": 825.6,
@@ -626,6 +621,11 @@
       "date": "2026-10-19",
       "close": 855.0,
       "ema50": 876.69
+    },
+    {
+      "date": "2026-10-21",
+      "close": 821.0,
+      "ema50": 874.5
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 855.00 vs EMA20 866.69",
-      "ema20_above_ema50": "EMA20 866.69 vs EMA50 876.69",
-      "ema50_above_ema200": "EMA50 876.69 vs EMA200 827.55",
-      "rsi_above_50": "RSI(14) 46.40 vs 50",
-      "macd_bullish": "MACD -10.51 vs signal -7.29",
-      "adx_trending_up": "ADX(14) 14.37 vs 20, +DI 21.20 vs -DI 29.04",
-      "price_above_vwap20": "Close 855.00 vs 20d VWAP 866.09",
-      "price_above_bb_mid": "Close 855.00 vs BB mid 872.00"
+      "price_above_ema20": "Close 821.00 vs EMA20 862.34",
+      "ema20_above_ema50": "EMA20 862.34 vs EMA50 874.50",
+      "ema50_above_ema200": "EMA50 874.50 vs EMA200 827.48",
+      "rsi_above_50": "RSI(14) 40.11 vs 50",
+      "macd_bullish": "MACD -12.82 vs signal -8.40",
+      "adx_trending_up": "ADX(14) 15.32 vs 20, +DI 18.66 vs -DI 32.97",
+      "price_above_vwap20": "Close 821.00 vs 20d VWAP 861.77",
+      "price_above_bb_mid": "Close 821.00 vs BB mid 867.55"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,39 +661,39 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": false,
+        "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 27.95 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 46.4",
-        "below_ema200": "Close 855.00 vs EMA200 827.55",
-        "extended_above_ema20": "Close 855.00 vs EMA20 866.69 (-1.3%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 855.00 vs 52w low 525.50"
+        "atr_high": "ATR 29.48 = 3.6% of price",
+        "rsi_extreme": "RSI(14) 40.1",
+        "below_ema200": "Close 821.00 vs EMA200 827.48",
+        "extended_above_ema20": "Close 821.00 vs EMA20 862.34 (-4.8%)",
+        "large_day_move": "Day change -4.0%",
+        "near_52w_low": "Close 821.00 vs 52w low 525.50"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "below_ema200"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
@@ -705,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-20T15:01:49.792076+00:00"
+  "updated_at": "2026-10-21T15:12:33.412746+00:00"
 }
