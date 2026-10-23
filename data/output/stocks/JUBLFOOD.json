@@ -3,35 +3,30 @@
   "name": "Jubilant FoodWorks",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-10-22",
-    "close": 404.9,
-    "prev_close": 405.0,
-    "change_pct": -0.024691358024696974,
-    "ema20": 435.73724941539336,
-    "ema50": 453.1573854720502,
-    "ema200": 482.96898874354383,
-    "rsi14": 29.11372588659269,
-    "macd": -17.81863980661518,
-    "macd_signal": -14.729800257038125,
-    "atr14": 13.018802260327545,
-    "adx14": 29.307031265861177,
-    "adx_pos": 12.660158485462997,
-    "adx_neg": 34.7018263447898,
-    "bb_high": 493.45409770367354,
-    "bb_low": 389.1309022963265,
-    "bb_mid": 441.2925,
-    "vwap20": 441.67144754701775,
+    "date": "2026-10-23",
+    "close": 404.0,
+    "prev_close": 404.9,
+    "change_pct": -0.22227710545813223,
+    "ema20": 432.7146542329749,
+    "ema50": 451.229642251669,
+    "ema200": 482.15931082268156,
+    "rsi14": 28.82777503421765,
+    "macd": -18.10478672675282,
+    "macd_signal": -15.404797550937213,
+    "atr14": 12.74603067039965,
+    "adx14": 30.57560208749528,
+    "adx_pos": 12.007442912663194,
+    "adx_neg": 33.36103468680388,
+    "bb_high": 488.1523706343644,
+    "bb_low": 386.5026293656356,
+    "bb_mid": 437.3275,
+    "vwap20": 437.8341202937894,
     "high_52w": 622.95,
-    "low_52w": 398.6,
-    "volume": 1175548.0,
-    "avg_volume20": 1403915.25
+    "low_52w": 397.8,
+    "volume": 2210557.0,
+    "avg_volume20": 1483180.2
   },
   "price_history": [
-    {
-      "date": "2026-04-30",
-      "close": 478.6,
-      "ema50": 480.17
-    },
     {
       "date": "2026-05-04",
       "close": 476.4,
@@ -626,6 +621,11 @@
       "date": "2026-10-22",
       "close": 404.9,
       "ema50": 453.16
+    },
+    {
+      "date": "2026-10-23",
+      "close": 404.0,
+      "ema50": 451.23
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 404.90 vs EMA20 435.74",
-      "ema20_above_ema50": "EMA20 435.74 vs EMA50 453.16",
-      "ema50_above_ema200": "EMA50 453.16 vs EMA200 482.97",
-      "rsi_above_50": "RSI(14) 29.11 vs 50",
-      "macd_bullish": "MACD -17.82 vs signal -14.73",
-      "adx_trending_up": "ADX(14) 29.31 vs 20, +DI 12.66 vs -DI 34.70",
-      "price_above_vwap20": "Close 404.90 vs 20d VWAP 441.67",
-      "price_above_bb_mid": "Close 404.90 vs BB mid 441.29"
+      "price_above_ema20": "Close 404.00 vs EMA20 432.71",
+      "ema20_above_ema50": "EMA20 432.71 vs EMA50 451.23",
+      "ema50_above_ema200": "EMA50 451.23 vs EMA200 482.16",
+      "rsi_above_50": "RSI(14) 28.83 vs 50",
+      "macd_bullish": "MACD -18.10 vs signal -15.40",
+      "adx_trending_up": "ADX(14) 30.58 vs 20, +DI 12.01 vs -DI 33.36",
+      "price_above_vwap20": "Close 404.00 vs 20d VWAP 437.83",
+      "price_above_bb_mid": "Close 404.00 vs BB mid 437.33"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.02 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 29.1",
-        "below_ema200": "Close 404.90 vs EMA200 482.97",
-        "extended_above_ema20": "Close 404.90 vs EMA20 435.74 (-7.1%)",
-        "large_day_move": "Day change -0.0%",
-        "near_52w_low": "Close 404.90 vs 52w low 398.60"
+        "atr_high": "ATR 12.75 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 28.8",
+        "below_ema200": "Close 404.00 vs EMA200 482.16",
+        "extended_above_ema20": "Close 404.00 vs EMA20 432.71 (-6.6%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 404.00 vs 52w low 397.80"
       },
       "conditions_on": [
         "atr_high",
@@ -690,8 +691,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-22T15:14:30.798138+00:00"
+  "updated_at": "2026-10-23T15:02:29.575007+00:00"
 }
