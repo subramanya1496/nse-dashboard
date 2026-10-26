@@ -3,35 +3,30 @@
   "name": "Ashok Leyland",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-10-23",
-    "close": 144.95,
-    "prev_close": 146.03,
-    "change_pct": -0.7395740601246404,
-    "ema20": 150.28642496107565,
-    "ema50": 156.58581250256972,
-    "ema200": 160.48201912623406,
-    "rsi14": 35.382487324303725,
-    "macd": -4.255492191639888,
-    "macd_signal": -4.553410319084757,
-    "atr14": 3.9339567171298353,
-    "adx14": 40.47048679339831,
-    "adx_pos": 10.337930318592653,
-    "adx_neg": 31.092358945406257,
-    "bb_high": 158.53020662791485,
-    "bb_low": 140.91379337208517,
-    "bb_mid": 149.722,
-    "vwap20": 149.70141430254023,
+    "date": "2026-10-26",
+    "close": 141.9,
+    "prev_close": 144.95,
+    "change_pct": -2.1041738530527656,
+    "ema20": 149.48771782192568,
+    "ema50": 156.0099068691039,
+    "ema200": 160.37234728000828,
+    "rsi14": 31.569494540159283,
+    "macd": -4.411416767349465,
+    "macd_signal": -4.525011608889426,
+    "atr14": 4.00581695167219,
+    "adx14": 41.46679955970101,
+    "adx_pos": 9.427301450824546,
+    "adx_neg": 31.937625205271203,
+    "bb_high": 157.6677572247078,
+    "bb_low": 140.2362427752922,
+    "bb_mid": 148.952,
+    "vwap20": 148.9048850636343,
     "high_52w": 215.42,
     "low_52w": 134.21,
-    "volume": 17234074.0,
-    "avg_volume20": 12899491.55
+    "volume": 19448376.0,
+    "avg_volume20": 13465003.65
   },
   "price_history": [
-    {
-      "date": "2026-05-04",
-      "close": 160.77,
-      "ema50": 175.0
-    },
     {
       "date": "2026-05-05",
       "close": 160.25,
@@ -100,7 +95,7 @@
     {
       "date": "2026-05-22",
       "close": 158.21,
-      "ema50": 167.48
+      "ema50": 167.49
     },
     {
       "date": "2026-05-25",
@@ -175,7 +170,7 @@
     {
       "date": "2026-06-15",
       "close": 157.7,
-      "ema50": 159.35
+      "ema50": 159.36
     },
     {
       "date": "2026-06-16",
@@ -385,7 +380,7 @@
     {
       "date": "2026-08-13",
       "close": 176.23,
-      "ema50": 163.25
+      "ema50": 163.26
     },
     {
       "date": "2026-08-14",
@@ -626,6 +621,11 @@
       "date": "2026-10-23",
       "close": 144.95,
       "ema50": 156.59
+    },
+    {
+      "date": "2026-10-26",
+      "close": 141.9,
+      "ema50": 156.01
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 144.95 vs EMA20 150.29",
-      "ema20_above_ema50": "EMA20 150.29 vs EMA50 156.59",
-      "ema50_above_ema200": "EMA50 156.59 vs EMA200 160.48",
-      "rsi_above_50": "RSI(14) 35.38 vs 50",
-      "macd_bullish": "MACD -4.26 vs signal -4.55",
-      "adx_trending_up": "ADX(14) 40.47 vs 20, +DI 10.34 vs -DI 31.09",
-      "price_above_vwap20": "Close 144.95 vs 20d VWAP 149.70",
-      "price_above_bb_mid": "Close 144.95 vs BB mid 149.72"
+      "price_above_ema20": "Close 141.90 vs EMA20 149.49",
+      "ema20_above_ema50": "EMA20 149.49 vs EMA50 156.01",
+      "ema50_above_ema200": "EMA50 156.01 vs EMA200 160.37",
+      "rsi_above_50": "RSI(14) 31.57 vs 50",
+      "macd_bullish": "MACD -4.41 vs signal -4.53",
+      "adx_trending_up": "ADX(14) 41.47 vs 20, +DI 9.43 vs -DI 31.94",
+      "price_above_vwap20": "Close 141.90 vs 20d VWAP 148.90",
+      "price_above_bb_mid": "Close 141.90 vs BB mid 148.95"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.93 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 35.4",
-        "below_ema200": "Close 144.95 vs EMA200 160.48",
-        "extended_above_ema20": "Close 144.95 vs EMA20 150.29 (-3.6%)",
-        "large_day_move": "Day change -0.7%",
-        "near_52w_low": "Close 144.95 vs 52w low 134.21"
+        "atr_high": "ATR 4.01 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 31.6",
+        "below_ema200": "Close 141.90 vs EMA200 160.37",
+        "extended_above_ema20": "Close 141.90 vs EMA20 149.49 (-5.1%)",
+        "large_day_move": "Day change -2.1%",
+        "near_52w_low": "Close 141.90 vs 52w low 134.21"
       },
       "conditions_on": [
         "atr_high",
@@ -691,7 +692,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-23T15:01:33.420358+00:00"
+  "updated_at": "2026-10-26T16:47:17.318589+00:00"
 }
