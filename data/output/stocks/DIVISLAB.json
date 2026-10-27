@@ -3,35 +3,30 @@
   "name": "Divi's Laboratories",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 9050.0,
-    "prev_close": 8950.0,
-    "change_pct": 1.1173184357541899,
-    "ema20": 9200.14683153027,
-    "ema50": 8977.979981050396,
-    "ema200": 7695.901655693677,
-    "rsi14": 45.20072725561524,
-    "macd": -35.681111911979315,
-    "macd_signal": 17.17748892063914,
-    "atr14": 232.2658199960003,
-    "adx14": 21.209784107417875,
-    "adx_pos": 15.944622791546243,
-    "adx_neg": 23.90127069406047,
-    "bb_high": 9672.676232658869,
-    "bb_low": 8879.67376734113,
-    "bb_mid": 9276.175,
-    "vwap20": 9240.515079361983,
+    "date": "2026-10-27",
+    "close": 9505.5,
+    "prev_close": 9050.0,
+    "change_pct": 5.033149171270718,
+    "ema20": 9229.228085670244,
+    "ema50": 8998.667040617047,
+    "ema200": 7713.907609368366,
+    "rsi14": 58.29752408726224,
+    "macd": -5.271902676073296,
+    "macd_signal": 12.687610601296653,
+    "atr14": 248.21111856771455,
+    "adx14": 20.507281923768733,
+    "adx_pos": 26.099349289267536,
+    "adx_neg": 20.768272789472338,
+    "bb_high": 9649.983692258824,
+    "bb_low": 8890.966307741177,
+    "bb_mid": 9270.475,
+    "vwap20": 9236.518544702247,
     "high_52w": 9740.0,
     "low_52w": 5647.5,
-    "volume": 576071.0,
-    "avg_volume20": 564025.3
+    "volume": 802780.0,
+    "avg_volume20": 584721.35
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 6651.0,
-      "ema50": 6252.18
-    },
     {
       "date": "2026-05-06",
       "close": 6702.0,
@@ -626,44 +621,53 @@
       "date": "2026-10-26",
       "close": 9050.0,
       "ema50": 8977.98
+    },
+    {
+      "date": "2026-10-27",
+      "close": 9505.5,
+      "ema50": 8998.67
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
-      "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "adx_trending_up": true,
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 9,050.00 vs EMA20 9,200.15",
-      "ema20_above_ema50": "EMA20 9,200.15 vs EMA50 8,977.98",
-      "ema50_above_ema200": "EMA50 8,977.98 vs EMA200 7,695.90",
-      "rsi_above_50": "RSI(14) 45.20 vs 50",
-      "macd_bullish": "MACD -35.68 vs signal 17.18",
-      "adx_trending_up": "ADX(14) 21.21 vs 20, +DI 15.94 vs -DI 23.90",
-      "price_above_vwap20": "Close 9,050.00 vs 20d VWAP 9,240.52",
-      "price_above_bb_mid": "Close 9,050.00 vs BB mid 9,276.17"
+      "price_above_ema20": "Close 9,505.50 vs EMA20 9,229.23",
+      "ema20_above_ema50": "EMA20 9,229.23 vs EMA50 8,998.67",
+      "ema50_above_ema200": "EMA50 8,998.67 vs EMA200 7,713.91",
+      "rsi_above_50": "RSI(14) 58.30 vs 50",
+      "macd_bullish": "MACD -5.27 vs signal 12.69",
+      "adx_trending_up": "ADX(14) 20.51 vs 20, +DI 26.10 vs -DI 20.77",
+      "price_above_vwap20": "Close 9,505.50 vs 20d VWAP 9,236.52",
+      "price_above_bb_mid": "Close 9,505.50 vs BB mid 9,270.48"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
-      "ema50_above_ema200"
+      "ema50_above_ema200",
+      "rsi_above_50",
+      "adx_trending_up",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,29 +676,30 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": false,
+        "large_day_move": true,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 232.27 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 45.2",
-        "below_ema200": "Close 9,050.00 vs EMA200 7,695.90",
-        "extended_above_ema20": "Close 9,050.00 vs EMA20 9,200.15 (-1.6%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 9,050.00 vs 52w low 5,647.50"
+        "atr_high": "ATR 248.21 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 58.3",
+        "below_ema200": "Close 9,505.50 vs EMA200 7,713.91",
+        "extended_above_ema20": "Close 9,505.50 vs EMA20 9,229.23 (+3.0%)",
+        "large_day_move": "Day change +5.0%",
+        "near_52w_low": "Close 9,505.50 vs 52w low 5,647.50"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "large_day_move"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -706,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:47:37.203593+00:00"
+  "updated_at": "2026-10-27T15:52:23.161332+00:00"
 }

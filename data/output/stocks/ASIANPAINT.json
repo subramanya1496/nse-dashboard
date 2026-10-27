@@ -3,35 +3,30 @@
   "name": "Asian Paints",
   "sector": "Consumer Durables",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 2322.0,
-    "prev_close": 2307.0,
-    "change_pct": 0.6501950585175552,
-    "ema20": 2360.939913156298,
-    "ema50": 2450.1111667723476,
-    "ema200": 2536.1668813065035,
-    "rsi14": 39.99086775368648,
-    "macd": -46.3024676031705,
-    "macd_signal": -49.02680924818058,
-    "atr14": 51.10610529519999,
-    "adx14": 43.99714174762816,
-    "adx_pos": 8.046738921676443,
-    "adx_neg": 25.46028652780346,
-    "bb_high": 2448.751091693275,
-    "bb_low": 2271.1589083067247,
-    "bb_mid": 2359.955,
-    "vwap20": 2360.971741524833,
+    "date": "2026-10-27",
+    "close": 2277.0,
+    "prev_close": 2322.0,
+    "change_pct": -1.937984496124031,
+    "ema20": 2352.945635712841,
+    "ema50": 2443.322493565589,
+    "ema200": 2533.5881063681304,
+    "rsi14": 34.971564629249485,
+    "macd": -47.50611092346571,
+    "macd_signal": -48.722669583237604,
+    "atr14": 51.26281205982857,
+    "adx14": 44.56662021368327,
+    "adx_pos": 7.449130570170656,
+    "adx_neg": 23.569423656664636,
+    "bb_high": 2438.607585593766,
+    "bb_low": 2264.602414406234,
+    "bb_mid": 2351.605,
+    "vwap20": 2353.545856279892,
     "high_52w": 2985.7,
     "low_52w": 2115.0,
-    "volume": 845552.0,
-    "avg_volume20": 673371.2
+    "volume": 1043006.0,
+    "avg_volume20": 704172.4
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 2430.0,
-      "ema50": 2398.77
-    },
     {
       "date": "2026-05-06",
       "close": 2519.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 2322.0,
       "ema50": 2450.11
+    },
+    {
+      "date": "2026-10-27",
+      "close": 2277.0,
+      "ema50": 2443.32
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,322.00 vs EMA20 2,360.94",
-      "ema20_above_ema50": "EMA20 2,360.94 vs EMA50 2,450.11",
-      "ema50_above_ema200": "EMA50 2,450.11 vs EMA200 2,536.17",
-      "rsi_above_50": "RSI(14) 39.99 vs 50",
-      "macd_bullish": "MACD -46.30 vs signal -49.03",
-      "adx_trending_up": "ADX(14) 44.00 vs 20, +DI 8.05 vs -DI 25.46",
-      "price_above_vwap20": "Close 2,322.00 vs 20d VWAP 2,360.97",
-      "price_above_bb_mid": "Close 2,322.00 vs BB mid 2,359.95"
+      "price_above_ema20": "Close 2,277.00 vs EMA20 2,352.95",
+      "ema20_above_ema50": "EMA20 2,352.95 vs EMA50 2,443.32",
+      "ema50_above_ema200": "EMA50 2,443.32 vs EMA200 2,533.59",
+      "rsi_above_50": "RSI(14) 34.97 vs 50",
+      "macd_bullish": "MACD -47.51 vs signal -48.72",
+      "adx_trending_up": "ADX(14) 44.57 vs 20, +DI 7.45 vs -DI 23.57",
+      "price_above_vwap20": "Close 2,277.00 vs 20d VWAP 2,353.55",
+      "price_above_bb_mid": "Close 2,277.00 vs BB mid 2,351.61"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 51.11 = 2.2% of price",
-        "rsi_extreme": "RSI(14) 40.0",
-        "below_ema200": "Close 2,322.00 vs EMA200 2,536.17",
-        "extended_above_ema20": "Close 2,322.00 vs EMA20 2,360.94 (-1.6%)",
-        "large_day_move": "Day change +0.7%",
-        "near_52w_low": "Close 2,322.00 vs 52w low 2,115.00"
+        "atr_high": "ATR 51.26 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 35.0",
+        "below_ema200": "Close 2,277.00 vs EMA200 2,533.59",
+        "extended_above_ema20": "Close 2,277.00 vs EMA20 2,352.95 (-3.2%)",
+        "large_day_move": "Day change -1.9%",
+        "near_52w_low": "Close 2,277.00 vs 52w low 2,115.00"
       },
       "conditions_on": [
         "below_ema200"
@@ -690,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:47:17.608983+00:00"
+  "updated_at": "2026-10-27T15:51:58.409683+00:00"
 }

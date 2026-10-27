@@ -3,35 +3,30 @@
   "name": "Tata Power",
   "sector": "Power",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 338.5,
-    "prev_close": 348.1,
-    "change_pct": -2.757828210284407,
-    "ema20": 351.4670833133753,
-    "ema50": 360.1129853528096,
-    "ema200": 378.83269591214554,
-    "rsi14": 35.73142179730216,
-    "macd": -4.257999044668168,
-    "macd_signal": -4.390944036943447,
-    "atr14": 8.222998626086737,
-    "adx14": 19.15438722714406,
-    "adx_pos": 13.701259317873635,
-    "adx_neg": 27.988717320167016,
-    "bb_high": 365.78528009497967,
-    "bb_low": 335.54971990502025,
-    "bb_mid": 350.66749999999996,
-    "vwap20": 349.5991430426319,
+    "date": "2026-10-27",
+    "close": 339.1,
+    "prev_close": 338.5,
+    "change_pct": 0.177252584933537,
+    "ema20": 350.28926585495867,
+    "ema50": 359.28894671152295,
+    "ema200": 378.4373457040645,
+    "rsi14": 36.451950102836875,
+    "macd": -4.735709300667509,
+    "macd_signal": -4.459897089688259,
+    "atr14": 8.22492729565197,
+    "adx14": 20.23412576903665,
+    "adx_pos": 12.719614606154185,
+    "adx_neg": 25.983428922383702,
+    "bb_high": 363.05244386081205,
+    "bb_low": 335.44255613918796,
+    "bb_mid": 349.2475,
+    "vwap20": 348.5737497991612,
     "high_52w": 464.9,
     "low_52w": 333.2,
-    "volume": 9489132.0,
-    "avg_volume20": 4556808.75
+    "volume": 6059999.0,
+    "avg_volume20": 4773418.05
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 442.65,
-      "ema50": 408.24
-    },
     {
       "date": "2026-05-06",
       "close": 443.25,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 338.5,
       "ema50": 360.11
+    },
+    {
+      "date": "2026-10-27",
+      "close": 339.1,
+      "ema50": 359.29
     }
   ],
   "flags": {
@@ -634,25 +634,23 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 338.50 vs EMA20 351.47",
-      "ema20_above_ema50": "EMA20 351.47 vs EMA50 360.11",
-      "ema50_above_ema200": "EMA50 360.11 vs EMA200 378.83",
-      "rsi_above_50": "RSI(14) 35.73 vs 50",
-      "macd_bullish": "MACD -4.26 vs signal -4.39",
-      "adx_trending_up": "ADX(14) 19.15 vs 20, +DI 13.70 vs -DI 27.99",
-      "price_above_vwap20": "Close 338.50 vs 20d VWAP 349.60",
-      "price_above_bb_mid": "Close 338.50 vs BB mid 350.67"
+      "price_above_ema20": "Close 339.10 vs EMA20 350.29",
+      "ema20_above_ema50": "EMA20 350.29 vs EMA50 359.29",
+      "ema50_above_ema200": "EMA50 359.29 vs EMA200 378.44",
+      "rsi_above_50": "RSI(14) 36.45 vs 50",
+      "macd_bullish": "MACD -4.74 vs signal -4.46",
+      "adx_trending_up": "ADX(14) 20.23 vs 20, +DI 12.72 vs -DI 25.98",
+      "price_above_vwap20": "Close 339.10 vs 20d VWAP 348.57",
+      "price_above_bb_mid": "Close 339.10 vs BB mid 349.25"
     },
-    "flags_on": [
-      "macd_bullish"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,8 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,11 +673,11 @@
       },
       "conditions_detail": {
         "atr_high": "ATR 8.22 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 35.7",
-        "below_ema200": "Close 338.50 vs EMA200 378.83",
-        "extended_above_ema20": "Close 338.50 vs EMA20 351.47 (-3.7%)",
-        "large_day_move": "Day change -2.8%",
-        "near_52w_low": "Close 338.50 vs 52w low 333.20"
+        "rsi_extreme": "RSI(14) 36.5",
+        "below_ema200": "Close 339.10 vs EMA200 378.44",
+        "extended_above_ema20": "Close 339.10 vs EMA20 350.29 (-3.2%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 339.10 vs 52w low 333.20"
       },
       "conditions_on": [
         "below_ema200",
@@ -692,7 +689,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:48:54.352277+00:00"
+  "updated_at": "2026-10-27T15:54:17.291112+00:00"
 }

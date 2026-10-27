@@ -3,35 +3,30 @@
   "name": "Cochin Shipyard",
   "sector": "Defence",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 1133.9,
-    "prev_close": 1139.9,
-    "change_pct": -0.5263619615755767,
-    "ema20": 1245.3482864938399,
-    "ema50": 1331.910636976112,
-    "ema200": 1465.353330360073,
-    "rsi14": 25.139859239229253,
-    "macd": -61.828192237266194,
-    "macd_signal": -54.78883494424146,
-    "atr14": 40.23789023137329,
-    "adx14": 44.88027516519371,
-    "adx_pos": 7.469818264921035,
-    "adx_neg": 40.36913632770649,
-    "bb_high": 1381.2768889007011,
-    "bb_low": 1118.953111099299,
-    "bb_mid": 1250.115,
-    "vwap20": 1248.0672848085849,
+    "date": "2026-10-27",
+    "close": 1123.5,
+    "prev_close": 1133.9,
+    "change_pct": -0.9171884645912417,
+    "ema20": 1233.7436877801408,
+    "ema50": 1323.7376708201862,
+    "ema200": 1461.9518046848484,
+    "rsi14": 24.236702291627296,
+    "macd": -63.93056784741975,
+    "macd_signal": -56.61718152487712,
+    "atr14": 41.31375521484663,
+    "adx14": 46.74262608691718,
+    "adx_pos": 6.755630411676564,
+    "adx_neg": 39.75983867181069,
+    "bb_high": 1366.0756466925086,
+    "bb_low": 1108.8043533074915,
+    "bb_mid": 1237.44,
+    "vwap20": 1237.6626397293994,
     "high_52w": 1864.0,
-    "low_52w": 1120.0,
-    "volume": 687287.0,
-    "avg_volume20": 862647.1
+    "low_52w": 1101.2,
+    "volume": 1096787.0,
+    "avg_volume20": 896396.3
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 1712.2,
-      "ema50": 1521.43
-    },
     {
       "date": "2026-05-06",
       "close": 1753.1,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 1133.9,
       "ema50": 1331.91
+    },
+    {
+      "date": "2026-10-27",
+      "close": 1123.5,
+      "ema50": 1323.74
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,133.90 vs EMA20 1,245.35",
-      "ema20_above_ema50": "EMA20 1,245.35 vs EMA50 1,331.91",
-      "ema50_above_ema200": "EMA50 1,331.91 vs EMA200 1,465.35",
-      "rsi_above_50": "RSI(14) 25.14 vs 50",
-      "macd_bullish": "MACD -61.83 vs signal -54.79",
-      "adx_trending_up": "ADX(14) 44.88 vs 20, +DI 7.47 vs -DI 40.37",
-      "price_above_vwap20": "Close 1,133.90 vs 20d VWAP 1,248.07",
-      "price_above_bb_mid": "Close 1,133.90 vs BB mid 1,250.12"
+      "price_above_ema20": "Close 1,123.50 vs EMA20 1,233.74",
+      "ema20_above_ema50": "EMA20 1,233.74 vs EMA50 1,323.74",
+      "ema50_above_ema200": "EMA50 1,323.74 vs EMA200 1,461.95",
+      "rsi_above_50": "RSI(14) 24.24 vs 50",
+      "macd_bullish": "MACD -63.93 vs signal -56.62",
+      "adx_trending_up": "ADX(14) 46.74 vs 20, +DI 6.76 vs -DI 39.76",
+      "price_above_vwap20": "Close 1,123.50 vs 20d VWAP 1,237.66",
+      "price_above_bb_mid": "Close 1,123.50 vs BB mid 1,237.44"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -665,28 +665,29 @@
     "risk": {
       "conditions": {
         "atr_high": true,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 40.24 = 3.5% of price",
-        "rsi_extreme": "RSI(14) 25.1",
-        "below_ema200": "Close 1,133.90 vs EMA200 1,465.35",
-        "extended_above_ema20": "Close 1,133.90 vs EMA20 1,245.35 (-8.9%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 1,133.90 vs 52w low 1,120.00"
+        "atr_high": "ATR 41.31 = 3.7% of price",
+        "rsi_extreme": "RSI(14) 24.2",
+        "below_ema200": "Close 1,123.50 vs EMA200 1,461.95",
+        "extended_above_ema20": "Close 1,123.50 vs EMA20 1,233.74 (-8.9%)",
+        "large_day_move": "Day change -0.9%",
+        "near_52w_low": "Close 1,123.50 vs 52w low 1,101.20"
       },
       "conditions_on": [
         "atr_high",
+        "rsi_extreme",
         "below_ema200",
         "near_52w_low"
       ],
-      "condition_count": 3,
+      "condition_count": 4,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "high"
     },
     "patterns": {
       "breakout": false,
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:47:32.413489+00:00"
+  "updated_at": "2026-10-27T15:52:17.158035+00:00"
 }

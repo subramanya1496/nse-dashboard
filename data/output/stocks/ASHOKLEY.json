@@ -3,35 +3,30 @@
   "name": "Ashok Leyland",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 141.9,
-    "prev_close": 144.95,
-    "change_pct": -2.1041738530527656,
-    "ema20": 149.48771782192568,
-    "ema50": 156.0099068691039,
-    "ema200": 160.37234728000828,
-    "rsi14": 31.569494540159283,
-    "macd": -4.411416767349465,
-    "macd_signal": -4.525011608889426,
-    "atr14": 4.00581695167219,
-    "adx14": 41.46679955970101,
-    "adx_pos": 9.427301450824546,
-    "adx_neg": 31.937625205271203,
-    "bb_high": 157.6677572247078,
-    "bb_low": 140.2362427752922,
-    "bb_mid": 148.952,
-    "vwap20": 148.9048850636343,
+    "date": "2026-10-27",
+    "close": 142.0,
+    "prev_close": 141.9,
+    "change_pct": 0.0704721634954153,
+    "ema20": 148.77460183888513,
+    "ema50": 155.46049875659003,
+    "ema200": 160.18953785433658,
+    "rsi14": 31.828890275272002,
+    "macd": -4.475330132635122,
+    "macd_signal": -4.515075313638565,
+    "atr14": 3.9739728836956054,
+    "adx14": 42.20569080193216,
+    "adx_pos": 9.48911089614156,
+    "adx_neg": 29.894007376074498,
+    "bb_high": 155.9845673141137,
+    "bb_low": 140.21143268588634,
+    "bb_mid": 148.098,
+    "vwap20": 148.1319022222431,
     "high_52w": 215.42,
-    "low_52w": 134.21,
-    "volume": 19448376.0,
-    "avg_volume20": 13465003.65
+    "low_52w": 135.56,
+    "volume": 20313145.0,
+    "avg_volume20": 13966952.3
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 160.25,
-      "ema50": 174.42
-    },
     {
       "date": "2026-05-06",
       "close": 167.8,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 141.9,
       "ema50": 156.01
+    },
+    {
+      "date": "2026-10-27",
+      "close": 142.0,
+      "ema50": 155.46
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 141.90 vs EMA20 149.49",
-      "ema20_above_ema50": "EMA20 149.49 vs EMA50 156.01",
-      "ema50_above_ema200": "EMA50 156.01 vs EMA200 160.37",
-      "rsi_above_50": "RSI(14) 31.57 vs 50",
-      "macd_bullish": "MACD -4.41 vs signal -4.53",
-      "adx_trending_up": "ADX(14) 41.47 vs 20, +DI 9.43 vs -DI 31.94",
-      "price_above_vwap20": "Close 141.90 vs 20d VWAP 148.90",
-      "price_above_bb_mid": "Close 141.90 vs BB mid 148.95"
+      "price_above_ema20": "Close 142.00 vs EMA20 148.77",
+      "ema20_above_ema50": "EMA20 148.77 vs EMA50 155.46",
+      "ema50_above_ema200": "EMA50 155.46 vs EMA200 160.19",
+      "rsi_above_50": "RSI(14) 31.83 vs 50",
+      "macd_bullish": "MACD -4.48 vs signal -4.52",
+      "adx_trending_up": "ADX(14) 42.21 vs 20, +DI 9.49 vs -DI 29.89",
+      "price_above_vwap20": "Close 142.00 vs 20d VWAP 148.13",
+      "price_above_bb_mid": "Close 142.00 vs BB mid 148.10"
     },
     "flags_on": [
       "macd_bullish"
@@ -662,7 +662,7 @@
       "rule": "\u22642/8 flags",
       "reasons": [
         "1/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -672,28 +672,29 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.01 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 31.6",
-        "below_ema200": "Close 141.90 vs EMA200 160.37",
-        "extended_above_ema20": "Close 141.90 vs EMA20 149.49 (-5.1%)",
-        "large_day_move": "Day change -2.1%",
-        "near_52w_low": "Close 141.90 vs 52w low 134.21"
+        "atr_high": "ATR 3.97 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 31.8",
+        "below_ema200": "Close 142.00 vs EMA200 160.19",
+        "extended_above_ema20": "Close 142.00 vs EMA20 148.77 (-4.6%)",
+        "large_day_move": "Day change +0.1%",
+        "near_52w_low": "Close 142.00 vs 52w low 135.56"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": false,
       "volume_surge": true,
-      "silent_accumulation": false,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:47:17.318589+00:00"
+  "updated_at": "2026-10-27T15:52:02.749978+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Transport Corporation of India",
   "sector": "Logistics",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 845.0,
-    "prev_close": 854.5,
-    "change_pct": -1.1117612638970158,
-    "ema20": 860.450631771483,
-    "ema50": 872.2335709613394,
-    "ema200": 944.8911719248756,
-    "rsi14": 43.597068893007176,
-    "macd": -2.8475084741406818,
-    "macd_signal": -2.5680202251753057,
-    "atr14": 27.265745512607822,
-    "adx14": 20.289205214829046,
-    "adx_pos": 20.499307463421918,
-    "adx_neg": 18.380153032609524,
-    "bb_high": 893.8642693581961,
-    "bb_low": 837.7157306418043,
-    "bb_mid": 865.7900000000002,
-    "vwap20": 894.7105621995236,
+    "date": "2026-10-27",
+    "close": 846.6,
+    "prev_close": 845.25,
+    "change_pct": 0.15971606033718105,
+    "ema20": 859.153065933836,
+    "ema50": 871.2377523384803,
+    "ema200": 943.9156131240094,
+    "rsi14": 44.22887043427879,
+    "macd": -3.6239466584189586,
+    "macd_signal": -2.776014628633145,
+    "atr14": 26.889620833135837,
+    "adx14": 18.840538728414693,
+    "adx_pos": 19.30132859854744,
+    "adx_neg": 19.298289108309895,
+    "bb_high": 891.9120574790038,
+    "bb_low": 835.9829425209962,
+    "bb_mid": 863.9475,
+    "vwap20": 866.9641723291076,
     "high_52w": 1242.0,
     "low_52w": 797.0,
-    "volume": 21923.0,
-    "avg_volume20": 354381.6
+    "volume": 114831.0,
+    "avg_volume20": 71590.15
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 945.5,
-      "ema50": 981.28
-    },
     {
       "date": "2026-05-06",
       "close": 963.3,
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-10-26",
-      "close": 845.0,
-      "ema50": 872.23
+      "close": 845.25,
+      "ema50": 872.24
+    },
+    {
+      "date": "2026-10-27",
+      "close": 846.6,
+      "ema50": 871.24
     }
   ],
   "flags": {
@@ -635,24 +635,22 @@
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": true,
+      "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 845.00 vs EMA20 860.45",
-      "ema20_above_ema50": "EMA20 860.45 vs EMA50 872.23",
-      "ema50_above_ema200": "EMA50 872.23 vs EMA200 944.89",
-      "rsi_above_50": "RSI(14) 43.60 vs 50",
-      "macd_bullish": "MACD -2.85 vs signal -2.57",
-      "adx_trending_up": "ADX(14) 20.29 vs 20, +DI 20.50 vs -DI 18.38",
-      "price_above_vwap20": "Close 845.00 vs 20d VWAP 894.71",
-      "price_above_bb_mid": "Close 845.00 vs BB mid 865.79"
+      "price_above_ema20": "Close 846.60 vs EMA20 859.15",
+      "ema20_above_ema50": "EMA20 859.15 vs EMA50 871.24",
+      "ema50_above_ema200": "EMA50 871.24 vs EMA200 943.92",
+      "rsi_above_50": "RSI(14) 44.23 vs 50",
+      "macd_bullish": "MACD -3.62 vs signal -2.78",
+      "adx_trending_up": "ADX(14) 18.84 vs 20, +DI 19.30 vs -DI 19.30",
+      "price_above_vwap20": "Close 846.60 vs 20d VWAP 866.96",
+      "price_above_bb_mid": "Close 846.60 vs BB mid 863.95"
     },
-    "flags_on": [
-      "adx_trending_up"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -674,12 +673,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 27.27 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 43.6",
-        "below_ema200": "Close 845.00 vs EMA200 944.89",
-        "extended_above_ema20": "Close 845.00 vs EMA20 860.45 (-1.8%)",
-        "large_day_move": "Day change -1.1%",
-        "near_52w_low": "Close 845.00 vs 52w low 797.00"
+        "atr_high": "ATR 26.89 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 44.2",
+        "below_ema200": "Close 846.60 vs EMA200 943.92",
+        "extended_above_ema20": "Close 846.60 vs EMA20 859.15 (-1.5%)",
+        "large_day_move": "Day change +0.2%",
+        "near_52w_low": "Close 846.60 vs 52w low 797.00"
       },
       "conditions_on": [
         "atr_high",
@@ -691,8 +690,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -705,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:48:55.425699+00:00"
+  "updated_at": "2026-10-27T15:54:18.628444+00:00"
 }

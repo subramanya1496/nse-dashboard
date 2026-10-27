@@ -3,35 +3,30 @@
   "name": "UPL Ltd",
   "sector": "Agri & Fertilizers",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 497.7,
-    "prev_close": 508.65,
-    "change_pct": -2.1527572987319354,
-    "ema20": 523.7124519520667,
-    "ema50": 545.3120782449342,
-    "ema200": 609.4553605301686,
-    "rsi14": 36.39995893237867,
-    "macd": -11.168480387553359,
-    "macd_signal": -11.44886101034563,
-    "atr14": 15.174766001644207,
-    "adx14": 24.62611752808616,
-    "adx_pos": 18.173063548161473,
-    "adx_neg": 34.39835179743935,
-    "bb_high": 559.6957430022882,
-    "bb_low": 479.5892569977119,
-    "bb_mid": 519.6425,
-    "vwap20": 520.9596555100815,
+    "date": "2026-10-27",
+    "close": 519.0,
+    "prev_close": 497.7,
+    "change_pct": 4.279686558167573,
+    "ema20": 523.2636470042507,
+    "ema50": 544.2802320392506,
+    "ema200": 608.55530719156,
+    "rsi14": 46.24552864570934,
+    "macd": -10.211750371462244,
+    "macd_signal": -11.201438882568953,
+    "atr14": 15.87299700152676,
+    "adx14": 24.223425244404304,
+    "adx_pos": 20.790185949964048,
+    "adx_neg": 30.536272257496393,
+    "bb_high": 555.6370451567143,
+    "bb_low": 480.54295484328554,
+    "bb_mid": 518.0899999999999,
+    "vwap20": 519.022128064907,
     "high_52w": 812.2,
     "low_52w": 476.45,
-    "volume": 819623.0,
-    "avg_volume20": 2078303.2
+    "volume": 2336397.0,
+    "avg_volume20": 2091741.65
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 642.05,
-      "ema50": 651.41
-    },
     {
       "date": "2026-05-06",
       "close": 660.0,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 497.7,
       "ema50": 545.31
+    },
+    {
+      "date": "2026-10-27",
+      "close": 519.0,
+      "ema50": 544.28
     }
   ],
   "flags": {
@@ -637,22 +637,23 @@
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 497.70 vs EMA20 523.71",
-      "ema20_above_ema50": "EMA20 523.71 vs EMA50 545.31",
-      "ema50_above_ema200": "EMA50 545.31 vs EMA200 609.46",
-      "rsi_above_50": "RSI(14) 36.40 vs 50",
-      "macd_bullish": "MACD -11.17 vs signal -11.45",
-      "adx_trending_up": "ADX(14) 24.63 vs 20, +DI 18.17 vs -DI 34.40",
-      "price_above_vwap20": "Close 497.70 vs 20d VWAP 520.96",
-      "price_above_bb_mid": "Close 497.70 vs BB mid 519.64"
+      "price_above_ema20": "Close 519.00 vs EMA20 523.26",
+      "ema20_above_ema50": "EMA20 523.26 vs EMA50 544.28",
+      "ema50_above_ema200": "EMA50 544.28 vs EMA200 608.56",
+      "rsi_above_50": "RSI(14) 46.25 vs 50",
+      "macd_bullish": "MACD -10.21 vs signal -11.20",
+      "adx_trending_up": "ADX(14) 24.22 vs 20, +DI 20.79 vs -DI 30.54",
+      "price_above_vwap20": "Close 519.00 vs 20d VWAP 519.02",
+      "price_above_bb_mid": "Close 519.00 vs BB mid 518.09"
     },
     "flags_on": [
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -670,21 +671,21 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": false,
-        "near_52w_low": true
+        "large_day_move": true,
+        "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 15.17 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 36.4",
-        "below_ema200": "Close 497.70 vs EMA200 609.46",
-        "extended_above_ema20": "Close 497.70 vs EMA20 523.71 (-5.0%)",
-        "large_day_move": "Day change -2.2%",
-        "near_52w_low": "Close 497.70 vs 52w low 476.45"
+        "atr_high": "ATR 15.87 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 46.2",
+        "below_ema200": "Close 519.00 vs EMA200 608.56",
+        "extended_above_ema20": "Close 519.00 vs EMA20 523.26 (-0.8%)",
+        "large_day_move": "Day change +4.3%",
+        "near_52w_low": "Close 519.00 vs 52w low 476.45"
       },
       "conditions_on": [
         "atr_high",
         "below_ema200",
-        "near_52w_low"
+        "large_day_move"
       ],
       "condition_count": 3,
       "condition_total": 6,
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:49:13.078348+00:00"
+  "updated_at": "2026-10-27T15:54:28.245606+00:00"
 }

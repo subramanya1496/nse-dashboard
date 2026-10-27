@@ -3,35 +3,30 @@
   "name": "SBI Cards and Payment Services",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 538.3,
-    "prev_close": 545.55,
-    "change_pct": -1.328934103198607,
-    "ema20": 572.2789028172837,
-    "ema50": 599.3138171301792,
-    "ema200": 665.2612986888265,
-    "rsi14": 32.496611676279514,
-    "macd": -18.26086374550505,
-    "macd_signal": -18.286353767932148,
-    "atr14": 18.56376494173267,
-    "adx14": 35.97599389388645,
-    "adx_pos": 9.677434038762774,
-    "adx_neg": 29.022417419292378,
-    "bb_high": 598.1523629352585,
-    "bb_low": 535.7276370647417,
-    "bb_mid": 566.94,
-    "vwap20": 567.408476932643,
+    "date": "2026-10-27",
+    "close": 528.05,
+    "prev_close": 538.3,
+    "change_pct": -1.9041426713728407,
+    "ema20": 568.0666263584948,
+    "ema50": 596.5191576348782,
+    "ema200": 663.8960121347088,
+    "rsi14": 29.96799645393986,
+    "macd": -19.571480052259744,
+    "macd_signal": -18.543379024797666,
+    "atr14": 18.212781731608906,
+    "adx14": 37.20254479147739,
+    "adx_pos": 9.159363909399906,
+    "adx_neg": 29.939528449461232,
+    "bb_high": 591.3441749334197,
+    "bb_low": 534.2208250665803,
+    "bb_mid": 562.7825,
+    "vwap20": 561.9418977154767,
     "high_52w": 965.0,
     "low_52w": 525.0,
-    "volume": 1700251.0,
-    "avg_volume20": 1063674.45
+    "volume": 1626653.0,
+    "avg_volume20": 1079479.7
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 645.65,
-      "ema50": 697.52
-    },
     {
       "date": "2026-05-06",
       "close": 649.65,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 538.3,
       "ema50": 599.31
+    },
+    {
+      "date": "2026-10-27",
+      "close": 528.05,
+      "ema50": 596.52
     }
   ],
   "flags": {
@@ -634,25 +634,23 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 538.30 vs EMA20 572.28",
-      "ema20_above_ema50": "EMA20 572.28 vs EMA50 599.31",
-      "ema50_above_ema200": "EMA50 599.31 vs EMA200 665.26",
-      "rsi_above_50": "RSI(14) 32.50 vs 50",
-      "macd_bullish": "MACD -18.26 vs signal -18.29",
-      "adx_trending_up": "ADX(14) 35.98 vs 20, +DI 9.68 vs -DI 29.02",
-      "price_above_vwap20": "Close 538.30 vs 20d VWAP 567.41",
-      "price_above_bb_mid": "Close 538.30 vs BB mid 566.94"
+      "price_above_ema20": "Close 528.05 vs EMA20 568.07",
+      "ema20_above_ema50": "EMA20 568.07 vs EMA50 596.52",
+      "ema50_above_ema200": "EMA50 596.52 vs EMA200 663.90",
+      "rsi_above_50": "RSI(14) 29.97 vs 50",
+      "macd_bullish": "MACD -19.57 vs signal -18.54",
+      "adx_trending_up": "ADX(14) 37.20 vs 20, +DI 9.16 vs -DI 29.94",
+      "price_above_vwap20": "Close 528.05 vs 20d VWAP 561.94",
+      "price_above_bb_mid": "Close 528.05 vs BB mid 562.78"
     },
-    "flags_on": [
-      "macd_bullish"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
+        "0/8 bullish flags",
         "patterns: volume surge"
       ]
     },
@@ -675,12 +673,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 18.56 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 32.5",
-        "below_ema200": "Close 538.30 vs EMA200 665.26",
-        "extended_above_ema20": "Close 538.30 vs EMA20 572.28 (-5.9%)",
-        "large_day_move": "Day change -1.3%",
-        "near_52w_low": "Close 538.30 vs 52w low 525.00"
+        "atr_high": "ATR 18.21 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 30.0",
+        "below_ema200": "Close 528.05 vs EMA200 663.90",
+        "extended_above_ema20": "Close 528.05 vs EMA20 568.07 (-7.0%)",
+        "large_day_move": "Day change -1.9%",
+        "near_52w_low": "Close 528.05 vs 52w low 525.00"
       },
       "conditions_on": [
         "atr_high",
@@ -707,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:48:45.016371+00:00"
+  "updated_at": "2026-10-27T15:54:07.691174+00:00"
 }

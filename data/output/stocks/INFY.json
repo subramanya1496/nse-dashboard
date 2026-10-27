@@ -3,35 +3,30 @@
   "name": "Infosys",
   "sector": "IT",
   "indicators": {
-    "date": "2026-10-26",
-    "close": 1166.0,
-    "prev_close": 1153.8,
-    "change_pct": 1.0573756283584717,
-    "ema20": 1095.3022965239272,
-    "ema50": 1087.7140788189533,
-    "ema200": 1200.1508215374597,
-    "rsi14": 65.45776924635102,
-    "macd": 27.26004632227432,
-    "macd_signal": 10.749039628132097,
-    "atr14": 42.84586380160287,
-    "adx14": 25.58096399176848,
-    "adx_pos": 22.320504842159174,
-    "adx_neg": 23.919711420099084,
-    "bb_high": 1197.5579560256297,
-    "bb_low": 933.2220439743704,
-    "bb_mid": 1065.39,
-    "vwap20": 1080.0618368783332,
+    "date": "2026-10-27",
+    "close": 1163.0,
+    "prev_close": 1166.0,
+    "change_pct": -0.2572898799313894,
+    "ema20": 1101.7496968549817,
+    "ema50": 1090.6664678848767,
+    "ema200": 1199.781161621664,
+    "rsi14": 64.68693189664691,
+    "macd": 28.984073699687542,
+    "macd_signal": 14.396046442443186,
+    "atr14": 42.406873530059805,
+    "adx14": 24.00078624658324,
+    "adx_pos": 20.940737737171077,
+    "adx_neg": 22.441087562276515,
+    "bb_high": 1208.6555912105212,
+    "bb_low": 938.4044087894788,
+    "bb_mid": 1073.53,
+    "vwap20": 1087.0382959029741,
     "high_52w": 1728.0,
     "low_52w": 980.4,
-    "volume": 25964569.0,
-    "avg_volume20": 15953362.0
+    "volume": 20117848.0,
+    "avg_volume20": 16447219.4
   },
   "price_history": [
-    {
-      "date": "2026-05-05",
-      "close": 1178.1,
-      "ema50": 1299.21
-    },
     {
       "date": "2026-05-06",
       "close": 1167.2,
@@ -626,6 +621,11 @@
       "date": "2026-10-26",
       "close": 1166.0,
       "ema50": 1087.71
+    },
+    {
+      "date": "2026-10-27",
+      "close": 1163.0,
+      "ema50": 1090.67
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,166.00 vs EMA20 1,095.30",
-      "ema20_above_ema50": "EMA20 1,095.30 vs EMA50 1,087.71",
-      "ema50_above_ema200": "EMA50 1,087.71 vs EMA200 1,200.15",
-      "rsi_above_50": "RSI(14) 65.46 vs 50",
-      "macd_bullish": "MACD 27.26 vs signal 10.75",
-      "adx_trending_up": "ADX(14) 25.58 vs 20, +DI 22.32 vs -DI 23.92",
-      "price_above_vwap20": "Close 1,166.00 vs 20d VWAP 1,080.06",
-      "price_above_bb_mid": "Close 1,166.00 vs BB mid 1,065.39"
+      "price_above_ema20": "Close 1,163.00 vs EMA20 1,101.75",
+      "ema20_above_ema50": "EMA20 1,101.75 vs EMA50 1,090.67",
+      "ema50_above_ema200": "EMA50 1,090.67 vs EMA200 1,199.78",
+      "rsi_above_50": "RSI(14) 64.69 vs 50",
+      "macd_bullish": "MACD 28.98 vs signal 14.40",
+      "adx_trending_up": "ADX(14) 24.00 vs 20, +DI 20.94 vs -DI 22.44",
+      "price_above_vwap20": "Close 1,163.00 vs 20d VWAP 1,087.04",
+      "price_above_bb_mid": "Close 1,163.00 vs BB mid 1,073.53"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,8 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags",
-        "patterns: volume surge"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -680,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 42.85 = 3.7% of price",
-        "rsi_extreme": "RSI(14) 65.5",
-        "below_ema200": "Close 1,166.00 vs EMA200 1,200.15",
-        "extended_above_ema20": "Close 1,166.00 vs EMA20 1,095.30 (+6.5%)",
-        "large_day_move": "Day change +1.1%",
-        "near_52w_low": "Close 1,166.00 vs 52w low 980.40"
+        "atr_high": "ATR 42.41 = 3.6% of price",
+        "rsi_extreme": "RSI(14) 64.7",
+        "below_ema200": "Close 1,163.00 vs EMA200 1,199.78",
+        "extended_above_ema20": "Close 1,163.00 vs EMA20 1,101.75 (+5.6%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 1,163.00 vs 52w low 980.40"
       },
       "conditions_on": [
         "atr_high",
@@ -697,7 +696,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-26T16:47:57.221175+00:00"
+  "updated_at": "2026-10-27T15:53:03.268691+00:00"
 }
