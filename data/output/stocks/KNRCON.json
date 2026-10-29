@@ -3,35 +3,30 @@
   "name": "KNR Constructions",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-10-28",
-    "close": 101.2,
-    "prev_close": 99.83,
-    "change_pct": 1.3723329660422765,
-    "ema20": 108.61182141884434,
-    "ema50": 115.66728645767333,
-    "ema200": 132.5660266786616,
-    "rsi14": 31.90122616323991,
-    "macd": -5.327685457920822,
-    "macd_signal": -4.317297440258797,
-    "atr14": 4.190937853823124,
-    "adx14": 42.555137594477664,
-    "adx_pos": 7.444662297756975,
-    "adx_neg": 31.969565358925855,
-    "bb_high": 122.81161542858457,
-    "bb_low": 96.87338457141546,
-    "bb_mid": 109.84250000000002,
-    "vwap20": 110.00531159681597,
+    "date": "2026-10-29",
+    "close": 100.73,
+    "prev_close": 101.21,
+    "change_pct": -0.47426143661692505,
+    "ema20": 107.86203343791117,
+    "ema50": 115.08187475087493,
+    "ema200": 132.1345479797942,
+    "rsi14": 31.36022169549021,
+    "macd": -5.291332603707787,
+    "macd_signal": -4.511976837410382,
+    "atr14": 4.048728007164835,
+    "adx14": 43.47901555076613,
+    "adx_pos": 8.796440345139914,
+    "adx_neg": 30.728733957991434,
+    "bb_high": 121.69237885814282,
+    "bb_low": 96.13362114185715,
+    "bb_mid": 108.91299999999998,
+    "vwap20": 109.2947756027638,
     "high_52w": 191.99,
     "low_52w": 96.14,
-    "volume": 492794.0,
-    "avg_volume20": 830689.65
+    "volume": 444232.0,
+    "avg_volume20": 808950.1
   },
   "price_history": [
-    {
-      "date": "2026-05-07",
-      "close": 134.95,
-      "ema50": 127.27
-    },
     {
       "date": "2026-05-08",
       "close": 131.94,
@@ -40,7 +35,7 @@
     {
       "date": "2026-05-11",
       "close": 130.61,
-      "ema50": 127.58
+      "ema50": 127.57
     },
     {
       "date": "2026-05-12",
@@ -624,8 +619,13 @@
     },
     {
       "date": "2026-10-28",
-      "close": 101.2,
+      "close": 101.21,
       "ema50": 115.67
+    },
+    {
+      "date": "2026-10-29",
+      "close": 100.73,
+      "ema50": 115.08
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 101.20 vs EMA20 108.61",
-      "ema20_above_ema50": "EMA20 108.61 vs EMA50 115.67",
-      "ema50_above_ema200": "EMA50 115.67 vs EMA200 132.57",
-      "rsi_above_50": "RSI(14) 31.90 vs 50",
-      "macd_bullish": "MACD -5.33 vs signal -4.32",
-      "adx_trending_up": "ADX(14) 42.56 vs 20, +DI 7.44 vs -DI 31.97",
-      "price_above_vwap20": "Close 101.20 vs 20d VWAP 110.01",
-      "price_above_bb_mid": "Close 101.20 vs BB mid 109.84"
+      "price_above_ema20": "Close 100.73 vs EMA20 107.86",
+      "ema20_above_ema50": "EMA20 107.86 vs EMA50 115.08",
+      "ema50_above_ema200": "EMA50 115.08 vs EMA200 132.13",
+      "rsi_above_50": "RSI(14) 31.36 vs 50",
+      "macd_bullish": "MACD -5.29 vs signal -4.51",
+      "adx_trending_up": "ADX(14) 43.48 vs 20, +DI 8.80 vs -DI 30.73",
+      "price_above_vwap20": "Close 100.73 vs 20d VWAP 109.29",
+      "price_above_bb_mid": "Close 100.73 vs BB mid 108.91"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -669,21 +669,22 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.19 = 4.1% of price",
-        "rsi_extreme": "RSI(14) 31.9",
-        "below_ema200": "Close 101.20 vs EMA200 132.57",
-        "extended_above_ema20": "Close 101.20 vs EMA20 108.61 (-6.8%)",
-        "large_day_move": "Day change +1.4%",
-        "near_52w_low": "Close 101.20 vs 52w low 96.14"
+        "atr_high": "ATR 4.05 = 4.0% of price",
+        "rsi_extreme": "RSI(14) 31.4",
+        "below_ema200": "Close 100.73 vs EMA200 132.13",
+        "extended_above_ema20": "Close 100.73 vs EMA20 107.86 (-6.6%)",
+        "large_day_move": "Day change -0.5%",
+        "near_52w_low": "Close 100.73 vs 52w low 96.14"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -703,5 +704,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-28T16:37:23.465597+00:00"
+  "updated_at": "2026-10-29T16:55:31.928366+00:00"
 }

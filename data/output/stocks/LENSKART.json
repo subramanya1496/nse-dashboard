@@ -3,35 +3,30 @@
   "name": "Lenskart Solutions",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-10-28",
-    "close": 689.7,
-    "prev_close": 669.2,
-    "change_pct": 3.063359234907352,
-    "ema20": 659.1054641627926,
-    "ema50": 648.8147463156986,
-    "ema200": 563.2521367213075,
-    "rsi14": 59.64384927599153,
-    "macd": -2.1598257011738724,
-    "macd_signal": -3.837670250312803,
-    "atr14": 22.592693314366297,
-    "adx14": 26.10860809292291,
-    "adx_pos": 25.94263818657934,
-    "adx_neg": 16.62083054261933,
-    "bb_high": 704.022831833551,
-    "bb_low": 619.4921681664489,
-    "bb_mid": 661.7574999999999,
-    "vwap20": 662.3197347409105,
+    "date": "2026-10-29",
+    "close": 681.75,
+    "prev_close": 689.7,
+    "change_pct": -1.1526750761200588,
+    "ema20": 661.262086623479,
+    "ema50": 650.1063248915535,
+    "ema200": 564.4312199380109,
+    "rsi14": 56.781667543538795,
+    "macd": -0.04343237639716335,
+    "macd_signal": -3.0788226755296755,
+    "atr14": 22.789643791911566,
+    "adx14": 25.85672003200116,
+    "adx_pos": 24.226175949971445,
+    "adx_neg": 15.300249327661458,
+    "bb_high": 704.9262263314213,
+    "bb_low": 619.3037736685787,
+    "bb_mid": 662.115,
+    "vwap20": 663.1259912751048,
     "high_52w": 725.0,
     "low_52w": 356.1,
-    "volume": 8738982.0,
-    "avg_volume20": 4560678.15
+    "volume": 4932559.0,
+    "avg_volume20": 4496860.05
   },
   "price_history": [
-    {
-      "date": "2026-05-07",
-      "close": 487.75,
-      "ema50": 508.1
-    },
     {
       "date": "2026-05-08",
       "close": 489.25,
@@ -626,6 +621,11 @@
       "date": "2026-10-28",
       "close": 689.7,
       "ema50": 648.81
+    },
+    {
+      "date": "2026-10-29",
+      "close": 681.75,
+      "ema50": 650.11
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 689.70 vs EMA20 659.11",
-      "ema20_above_ema50": "EMA20 659.11 vs EMA50 648.81",
-      "ema50_above_ema200": "EMA50 648.81 vs EMA200 563.25",
-      "rsi_above_50": "RSI(14) 59.64 vs 50",
-      "macd_bullish": "MACD -2.16 vs signal -3.84",
-      "adx_trending_up": "ADX(14) 26.11 vs 20, +DI 25.94 vs -DI 16.62",
-      "price_above_vwap20": "Close 689.70 vs 20d VWAP 662.32",
-      "price_above_bb_mid": "Close 689.70 vs BB mid 661.76"
+      "price_above_ema20": "Close 681.75 vs EMA20 661.26",
+      "ema20_above_ema50": "EMA20 661.26 vs EMA50 650.11",
+      "ema50_above_ema200": "EMA50 650.11 vs EMA200 564.43",
+      "rsi_above_50": "RSI(14) 56.78 vs 50",
+      "macd_bullish": "MACD -0.04 vs signal -3.08",
+      "adx_trending_up": "ADX(14) 25.86 vs 20, +DI 24.23 vs -DI 15.30",
+      "price_above_vwap20": "Close 681.75 vs 20d VWAP 663.13",
+      "price_above_bb_mid": "Close 681.75 vs BB mid 662.12"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,12 +664,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "8/8 bullish flags",
-        "patterns: volume surge"
+        "8/8 bullish flags"
       ]
     },
     "risk": {
@@ -682,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 22.59 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 59.6",
-        "below_ema200": "Close 689.70 vs EMA200 563.25",
-        "extended_above_ema20": "Close 689.70 vs EMA20 659.11 (+4.6%)",
-        "large_day_move": "Day change +3.1%",
-        "near_52w_low": "Close 689.70 vs 52w low 356.10"
+        "atr_high": "ATR 22.79 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 56.8",
+        "below_ema200": "Close 681.75 vs EMA200 564.43",
+        "extended_above_ema20": "Close 681.75 vs EMA20 661.26 (+3.1%)",
+        "large_day_move": "Day change -1.2%",
+        "near_52w_low": "Close 681.75 vs 52w low 356.10"
       },
       "conditions_on": [
         "atr_high"
@@ -698,7 +697,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -712,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-28T16:37:25.860536+00:00"
+  "updated_at": "2026-10-29T16:55:33.968750+00:00"
 }
