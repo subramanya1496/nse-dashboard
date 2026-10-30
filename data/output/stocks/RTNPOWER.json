@@ -3,35 +3,30 @@
   "name": null,
   "sector": null,
   "indicators": {
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "close": 6.36,
-    "prev_close": 6.25,
-    "change_pct": 1.760000000000005,
-    "ema20": 6.479154487982746,
-    "ema50": 7.017437640863469,
-    "ema200": 8.47154002444484,
-    "rsi14": 41.007368464090426,
-    "macd": -0.24919823719073175,
-    "macd_signal": -0.26667364135988386,
-    "atr14": 0.23030558373755472,
-    "adx14": 41.458905800218346,
-    "adx_pos": 12.932692056657528,
-    "adx_neg": 24.419705018824327,
-    "bb_high": 6.9597411771475395,
-    "bb_low": 5.989258822852462,
-    "bb_mid": 6.474500000000001,
-    "vwap20": 6.435171841442886,
+    "prev_close": 6.36,
+    "change_pct": 0.0,
+    "ema20": 6.467806441508183,
+    "ema50": 6.991654361231863,
+    "ema200": 8.437614582970879,
+    "rsi14": 41.00736846551189,
+    "macd": -0.22916214050729344,
+    "macd_signal": -0.2591713411656771,
+    "atr14": 0.25171232775480973,
+    "adx14": 39.04401808118387,
+    "adx_pos": 17.798130928377947,
+    "adx_neg": 20.747019334955727,
+    "bb_high": 6.896044640632524,
+    "bb_low": 5.999955359367477,
+    "bb_mid": 6.448,
+    "vwap20": 6.407997879272149,
     "high_52w": 11.68,
     "low_52w": 5.88,
-    "volume": 11962814.0,
-    "avg_volume20": 10935079.95
+    "volume": 28017122.0,
+    "avg_volume20": 11810504.9
   },
   "price_history": [
-    {
-      "date": "2026-05-08",
-      "close": 10.02,
-      "ema50": 9.24
-    },
     {
       "date": "2026-05-11",
       "close": 9.79,
@@ -626,6 +621,11 @@
       "date": "2026-10-29",
       "close": 6.36,
       "ema50": 7.02
+    },
+    {
+      "date": "2026-10-30",
+      "close": 6.36,
+      "ema50": 6.99
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 6.36 vs EMA20 6.48",
-      "ema20_above_ema50": "EMA20 6.48 vs EMA50 7.02",
-      "ema50_above_ema200": "EMA50 7.02 vs EMA200 8.47",
+      "price_above_ema20": "Close 6.36 vs EMA20 6.47",
+      "ema20_above_ema50": "EMA20 6.47 vs EMA50 6.99",
+      "ema50_above_ema200": "EMA50 6.99 vs EMA200 8.44",
       "rsi_above_50": "RSI(14) 41.01 vs 50",
-      "macd_bullish": "MACD -0.25 vs signal -0.27",
-      "adx_trending_up": "ADX(14) 41.46 vs 20, +DI 12.93 vs -DI 24.42",
-      "price_above_vwap20": "Close 6.36 vs 20d VWAP 6.44",
-      "price_above_bb_mid": "Close 6.36 vs BB mid 6.47"
+      "macd_bullish": "MACD -0.23 vs signal -0.26",
+      "adx_trending_up": "ADX(14) 39.04 vs 20, +DI 17.80 vs -DI 20.75",
+      "price_above_vwap20": "Close 6.36 vs 20d VWAP 6.41",
+      "price_above_bb_mid": "Close 6.36 vs BB mid 6.45"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -674,11 +675,11 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.23 = 3.6% of price",
+        "atr_high": "ATR 0.25 = 4.0% of price",
         "rsi_extreme": "RSI(14) 41.0",
-        "below_ema200": "Close 6.36 vs EMA200 8.47",
-        "extended_above_ema20": "Close 6.36 vs EMA20 6.48 (-1.8%)",
-        "large_day_move": "Day change +1.8%",
+        "below_ema200": "Close 6.36 vs EMA200 8.44",
+        "extended_above_ema20": "Close 6.36 vs EMA20 6.47 (-1.7%)",
+        "large_day_move": "Day change +0.0%",
         "near_52w_low": "Close 6.36 vs 52w low 5.88"
       },
       "conditions_on": [
@@ -691,8 +692,8 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
-      "silent_accumulation": false,
+      "volume_surge": true,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-29T16:56:21.874124+00:00"
+  "updated_at": "2026-10-30T16:43:43.962078+00:00"
 }

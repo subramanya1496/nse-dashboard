@@ -3,35 +3,30 @@
   "name": "Canara Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-29",
-    "close": 119.79,
-    "prev_close": 117.82,
-    "change_pct": 1.672042098115781,
-    "ema20": 119.66948493504394,
-    "ema50": 122.26481712485149,
-    "ema200": 128.29711941859867,
-    "rsi14": 48.85906954347459,
-    "macd": -1.2197574669262679,
-    "macd_signal": -1.3593802665849202,
-    "atr14": 3.141959975837797,
-    "adx14": 12.77041936240542,
-    "adx_pos": 23.65546953092606,
-    "adx_neg": 20.286866168252168,
-    "bb_high": 122.97473536220544,
-    "bb_low": 115.14826463779455,
-    "bb_mid": 119.0615,
-    "vwap20": 119.50064369469418,
+    "date": "2026-10-30",
+    "close": 117.54,
+    "prev_close": 119.79,
+    "change_pct": -1.8782870022539442,
+    "ema20": 119.46667684599214,
+    "ema50": 122.07953033559693,
+    "ema200": 128.19151841481352,
+    "rsi14": 44.52234246669616,
+    "macd": -1.246248574921836,
+    "macd_signal": -1.3367539282549425,
+    "atr14": 3.086105691791275,
+    "adx14": 12.445989420014286,
+    "adx_pos": 22.617941226639807,
+    "adx_neg": 19.178742743297832,
+    "bb_high": 122.9302925021361,
+    "bb_low": 115.0027074978639,
+    "bb_mid": 118.9665,
+    "vwap20": 119.43622981429608,
     "high_52w": 162.89,
     "low_52w": 114.63,
-    "volume": 16966003.0,
-    "avg_volume20": 22310958.85
+    "volume": 18152207.0,
+    "avg_volume20": 22589579.45
   },
   "price_history": [
-    {
-      "date": "2026-05-08",
-      "close": 134.34,
-      "ema50": 139.55
-    },
     {
       "date": "2026-05-11",
       "close": 129.43,
@@ -626,45 +621,47 @@
       "date": "2026-10-29",
       "close": 119.79,
       "ema50": 122.26
+    },
+    {
+      "date": "2026-10-30",
+      "close": 117.54,
+      "ema50": 122.08
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_vwap20": false,
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 119.79 vs EMA20 119.67",
-      "ema20_above_ema50": "EMA20 119.67 vs EMA50 122.26",
-      "ema50_above_ema200": "EMA50 122.26 vs EMA200 128.30",
-      "rsi_above_50": "RSI(14) 48.86 vs 50",
-      "macd_bullish": "MACD -1.22 vs signal -1.36",
-      "adx_trending_up": "ADX(14) 12.77 vs 20, +DI 23.66 vs -DI 20.29",
-      "price_above_vwap20": "Close 119.79 vs 20d VWAP 119.50",
-      "price_above_bb_mid": "Close 119.79 vs BB mid 119.06"
+      "price_above_ema20": "Close 117.54 vs EMA20 119.47",
+      "ema20_above_ema50": "EMA20 119.47 vs EMA50 122.08",
+      "ema50_above_ema200": "EMA50 122.08 vs EMA200 128.19",
+      "rsi_above_50": "RSI(14) 44.52 vs 50",
+      "macd_bullish": "MACD -1.25 vs signal -1.34",
+      "adx_trending_up": "ADX(14) 12.45 vs 20, +DI 22.62 vs -DI 19.18",
+      "price_above_vwap20": "Close 117.54 vs 20d VWAP 119.44",
+      "price_above_bb_mid": "Close 117.54 vs BB mid 118.97"
     },
     "flags_on": [
-      "price_above_ema20",
-      "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "macd_bullish"
     ],
-    "flag_count": 4,
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "4/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -677,12 +674,12 @@
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.14 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 48.9",
-        "below_ema200": "Close 119.79 vs EMA200 128.30",
-        "extended_above_ema20": "Close 119.79 vs EMA20 119.67 (+0.1%)",
-        "large_day_move": "Day change +1.7%",
-        "near_52w_low": "Close 119.79 vs 52w low 114.63"
+        "atr_high": "ATR 3.09 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 44.5",
+        "below_ema200": "Close 117.54 vs EMA200 128.19",
+        "extended_above_ema20": "Close 117.54 vs EMA20 119.47 (-1.6%)",
+        "large_day_move": "Day change -1.9%",
+        "near_52w_low": "Close 117.54 vs 52w low 114.63"
       },
       "conditions_on": [
         "atr_high",
@@ -709,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-29T16:54:30.698085+00:00"
+  "updated_at": "2026-10-30T16:41:53.877580+00:00"
 }

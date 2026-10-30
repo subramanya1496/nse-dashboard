@@ -3,35 +3,30 @@
   "name": "Bank of India",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-10-29",
-    "close": 135.7,
-    "prev_close": 132.9,
-    "change_pct": 2.1068472535741027,
-    "ema20": 133.8065342124868,
-    "ema50": 136.4020714947352,
-    "ema200": 139.91223729937067,
-    "rsi14": 51.999049924979836,
-    "macd": -1.0926141965953775,
-    "macd_signal": -1.4136381785513619,
-    "atr14": 4.177148625476296,
-    "adx14": 15.992355355080663,
-    "adx_pos": 25.459283249165253,
-    "adx_neg": 27.19758822897153,
-    "bb_high": 138.31210435333057,
-    "bb_low": 127.65589564666939,
-    "bb_mid": 132.98399999999998,
-    "vwap20": 132.72275412149133,
+    "date": "2026-10-30",
+    "close": 132.86,
+    "prev_close": 135.7,
+    "change_pct": -2.092851879145155,
+    "ema20": 133.7163880970119,
+    "ema50": 136.26316777568948,
+    "ema200": 139.85163251948887,
+    "rsi14": 47.67526066481883,
+    "macd": -1.0437002296295645,
+    "macd_signal": -1.3396505887845036,
+    "atr14": 4.208780866492944,
+    "adx14": 15.250891323178811,
+    "adx_pos": 23.46308441240507,
+    "adx_neg": 26.253085713514164,
+    "bb_high": 138.29353454173906,
+    "bb_low": 127.93646545826095,
+    "bb_mid": 133.115,
+    "vwap20": 132.81825519144883,
     "high_52w": 178.36,
     "low_52w": 123.64,
-    "volume": 10135677.0,
-    "avg_volume20": 8957751.65
+    "volume": 9526569.0,
+    "avg_volume20": 9183172.65
   },
   "price_history": [
-    {
-      "date": "2026-05-08",
-      "close": 139.77,
-      "ema50": 148.3
-    },
     {
       "date": "2026-05-11",
       "close": 143.86,
@@ -626,46 +621,48 @@
       "date": "2026-10-29",
       "close": 135.7,
       "ema50": 136.4
+    },
+    {
+      "date": "2026-10-30",
+      "close": 132.86,
+      "ema50": 136.26
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": true,
-      "price_above_bb_mid": true
+      "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 135.70 vs EMA20 133.81",
-      "ema20_above_ema50": "EMA20 133.81 vs EMA50 136.40",
-      "ema50_above_ema200": "EMA50 136.40 vs EMA200 139.91",
-      "rsi_above_50": "RSI(14) 52.00 vs 50",
-      "macd_bullish": "MACD -1.09 vs signal -1.41",
-      "adx_trending_up": "ADX(14) 15.99 vs 20, +DI 25.46 vs -DI 27.20",
-      "price_above_vwap20": "Close 135.70 vs 20d VWAP 132.72",
-      "price_above_bb_mid": "Close 135.70 vs BB mid 132.98"
+      "price_above_ema20": "Close 132.86 vs EMA20 133.72",
+      "ema20_above_ema50": "EMA20 133.72 vs EMA50 136.26",
+      "ema50_above_ema200": "EMA50 136.26 vs EMA200 139.85",
+      "rsi_above_50": "RSI(14) 47.68 vs 50",
+      "macd_bullish": "MACD -1.04 vs signal -1.34",
+      "adx_trending_up": "ADX(14) 15.25 vs 20, +DI 23.46 vs -DI 26.25",
+      "price_above_vwap20": "Close 132.86 vs 20d VWAP 132.82",
+      "price_above_bb_mid": "Close 132.86 vs BB mid 133.12"
     },
     "flags_on": [
-      "price_above_ema20",
-      "rsi_above_50",
       "macd_bullish",
-      "price_above_vwap20",
-      "price_above_bb_mid"
+      "price_above_vwap20"
     ],
-    "flag_count": 5,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "5/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.18 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 52.0",
-        "below_ema200": "Close 135.70 vs EMA200 139.91",
-        "extended_above_ema20": "Close 135.70 vs EMA20 133.81 (+1.4%)",
-        "large_day_move": "Day change +2.1%",
-        "near_52w_low": "Close 135.70 vs 52w low 123.64"
+        "atr_high": "ATR 4.21 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 47.7",
+        "below_ema200": "Close 132.86 vs EMA200 139.85",
+        "extended_above_ema20": "Close 132.86 vs EMA20 133.72 (-0.6%)",
+        "large_day_move": "Day change -2.1%",
+        "near_52w_low": "Close 132.86 vs 52w low 123.64"
       },
       "conditions_on": [
         "atr_high",
@@ -709,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-29T16:54:22.627773+00:00"
+  "updated_at": "2026-10-30T16:41:45.859197+00:00"
 }
