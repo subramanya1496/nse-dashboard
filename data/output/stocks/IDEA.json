@@ -3,35 +3,30 @@
   "name": "Vodafone Idea",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-10-30",
-    "close": 11.83,
-    "prev_close": 12.12,
-    "change_pct": -2.392739273927386,
-    "ema20": 12.412782146848011,
-    "ema50": 13.067280948146482,
-    "ema200": 12.334137900651559,
-    "rsi14": 38.62541618249464,
-    "macd": -0.4989985878628911,
-    "macd_signal": -0.5120628546764371,
-    "atr14": 0.45248217658535694,
-    "adx14": 36.954792651282204,
-    "adx_pos": 13.227207614515816,
-    "adx_neg": 30.304540287868708,
-    "bb_high": 13.443971468281724,
-    "bb_low": 11.306028531718276,
-    "bb_mid": 12.375,
-    "vwap20": 12.338815093160365,
+    "date": "2026-11-02",
+    "close": 12.25,
+    "prev_close": 11.83,
+    "change_pct": 3.550295857988165,
+    "ema20": 12.397279085243428,
+    "ema50": 13.035230106815849,
+    "ema200": 12.327603932932487,
+    "rsi14": 45.098653079780355,
+    "macd": -0.45102382966811305,
+    "macd_signal": -0.4998550496648754,
+    "atr14": 0.4651620211228326,
+    "adx14": 35.802811743465796,
+    "adx_pos": 17.93629787580201,
+    "adx_neg": 27.372864331436407,
+    "bb_high": 13.418636397646313,
+    "bb_low": 11.292363602353689,
+    "bb_mid": 12.355500000000001,
+    "vwap20": 12.295310178892109,
     "high_52w": 15.79,
     "low_52w": 8.13,
-    "volume": 219478054.0,
-    "avg_volume20": 357862466.75
+    "volume": 326403427.0,
+    "avg_volume20": 343558124.45
   },
   "price_history": [
-    {
-      "date": "2026-05-11",
-      "close": 12.18,
-      "ema50": 10.07
-    },
     {
       "date": "2026-05-12",
       "close": 11.89,
@@ -626,6 +621,11 @@
       "date": "2026-10-30",
       "close": 11.83,
       "ema50": 13.07
+    },
+    {
+      "date": "2026-11-02",
+      "close": 12.25,
+      "ema50": 13.04
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 11.83 vs EMA20 12.41",
-      "ema20_above_ema50": "EMA20 12.41 vs EMA50 13.07",
-      "ema50_above_ema200": "EMA50 13.07 vs EMA200 12.33",
-      "rsi_above_50": "RSI(14) 38.63 vs 50",
-      "macd_bullish": "MACD -0.50 vs signal -0.51",
-      "adx_trending_up": "ADX(14) 36.95 vs 20, +DI 13.23 vs -DI 30.30",
-      "price_above_vwap20": "Close 11.83 vs 20d VWAP 12.34",
-      "price_above_bb_mid": "Close 11.83 vs BB mid 12.38"
+      "price_above_ema20": "Close 12.25 vs EMA20 12.40",
+      "ema20_above_ema50": "EMA20 12.40 vs EMA50 13.04",
+      "ema50_above_ema200": "EMA50 13.04 vs EMA200 12.33",
+      "rsi_above_50": "RSI(14) 45.10 vs 50",
+      "macd_bullish": "MACD -0.45 vs signal -0.50",
+      "adx_trending_up": "ADX(14) 35.80 vs 20, +DI 17.94 vs -DI 27.37",
+      "price_above_vwap20": "Close 12.25 vs 20d VWAP 12.30",
+      "price_above_bb_mid": "Close 12.25 vs BB mid 12.36"
     },
     "flags_on": [
       "ema50_above_ema200",
@@ -662,7 +662,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "2/8 bullish flags",
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.45 = 3.8% of price",
-        "rsi_extreme": "RSI(14) 38.6",
-        "below_ema200": "Close 11.83 vs EMA200 12.33",
-        "extended_above_ema20": "Close 11.83 vs EMA20 12.41 (-4.7%)",
-        "large_day_move": "Day change -2.4%",
-        "near_52w_low": "Close 11.83 vs 52w low 8.13"
+        "atr_high": "ATR 0.47 = 3.8% of price",
+        "rsi_extreme": "RSI(14) 45.1",
+        "below_ema200": "Close 12.25 vs EMA200 12.33",
+        "extended_above_ema20": "Close 12.25 vs EMA20 12.40 (-1.2%)",
+        "large_day_move": "Day change +3.6%",
+        "near_52w_low": "Close 12.25 vs 52w low 8.13"
       },
       "conditions_on": [
         "atr_high",
@@ -694,7 +695,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-10-30T16:42:38.834012+00:00"
+  "updated_at": "2026-11-02T20:21:05.517754+00:00"
 }
