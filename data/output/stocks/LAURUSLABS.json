@@ -3,35 +3,30 @@
   "name": "Laurus Labs",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 2348.0,
-    "prev_close": 2405.5,
-    "change_pct": -2.3903554354604033,
-    "ema20": 2117.571526345814,
-    "ema50": 1993.9333739444496,
-    "ema200": 1570.27502333793,
-    "rsi14": 71.76758689001204,
-    "macd": 83.31661968248773,
-    "macd_signal": 51.37152379800615,
-    "atr14": 73.37256324282394,
-    "adx14": 24.865504205759486,
-    "adx_pos": 43.51645632389962,
-    "adx_neg": 12.194671995223517,
-    "bb_high": 2321.307964844153,
-    "bb_low": 1857.402035155847,
-    "bb_mid": 2089.355,
-    "vwap20": 2140.118162966726,
+    "date": "2026-11-03",
+    "close": 2323.0,
+    "prev_close": 2348.0,
+    "change_pct": -1.0647359454855196,
+    "ema20": 2137.136142884308,
+    "ema50": 2006.8379475152556,
+    "ema200": 1577.7648241007366,
+    "rsi14": 68.92234283472519,
+    "macd": 89.18672399281604,
+    "macd_signal": 58.93456383696813,
+    "atr14": 75.45309443976508,
+    "adx14": 25.41894681577796,
+    "adx_pos": 39.29393067373116,
+    "adx_neg": 19.966810038100594,
+    "bb_high": 2353.3112835582856,
+    "bb_low": 1860.5587164417143,
+    "bb_mid": 2106.935,
+    "vwap20": 2160.9440628166103,
     "high_52w": 2441.9,
     "low_52w": 917.95,
-    "volume": 3047249.0,
-    "avg_volume20": 2051372.75
+    "volume": 4026149.0,
+    "avg_volume20": 2183973.3
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 1268.0,
-      "ema50": 1098.07
-    },
     {
       "date": "2026-05-13",
       "close": 1280.5,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 2348.0,
       "ema50": 1993.93
+    },
+    {
+      "date": "2026-11-03",
+      "close": 2323.0,
+      "ema50": 2006.84
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,348.00 vs EMA20 2,117.57",
-      "ema20_above_ema50": "EMA20 2,117.57 vs EMA50 1,993.93",
-      "ema50_above_ema200": "EMA50 1,993.93 vs EMA200 1,570.28",
-      "rsi_above_50": "RSI(14) 71.77 vs 50",
-      "macd_bullish": "MACD 83.32 vs signal 51.37",
-      "adx_trending_up": "ADX(14) 24.87 vs 20, +DI 43.52 vs -DI 12.19",
-      "price_above_vwap20": "Close 2,348.00 vs 20d VWAP 2,140.12",
-      "price_above_bb_mid": "Close 2,348.00 vs BB mid 2,089.36"
+      "price_above_ema20": "Close 2,323.00 vs EMA20 2,137.14",
+      "ema20_above_ema50": "EMA20 2,137.14 vs EMA50 2,006.84",
+      "ema50_above_ema200": "EMA50 2,006.84 vs EMA200 1,577.76",
+      "rsi_above_50": "RSI(14) 68.92 vs 50",
+      "macd_bullish": "MACD 89.19 vs signal 58.93",
+      "adx_trending_up": "ADX(14) 25.42 vs 20, +DI 39.29 vs -DI 19.97",
+      "price_above_vwap20": "Close 2,323.00 vs 20d VWAP 2,160.94",
+      "price_above_bb_mid": "Close 2,323.00 vs BB mid 2,106.93"
     },
     "flags_on": [
       "price_above_ema20",
@@ -669,7 +669,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "8/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -682,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 73.37 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 71.8",
-        "below_ema200": "Close 2,348.00 vs EMA200 1,570.28",
-        "extended_above_ema20": "Close 2,348.00 vs EMA20 2,117.57 (+10.9%)",
-        "large_day_move": "Day change -2.4%",
-        "near_52w_low": "Close 2,348.00 vs 52w low 917.95"
+        "atr_high": "ATR 75.45 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 68.9",
+        "below_ema200": "Close 2,323.00 vs EMA200 1,577.76",
+        "extended_above_ema20": "Close 2,323.00 vs EMA20 2,137.14 (+8.7%)",
+        "large_day_move": "Day change -1.1%",
+        "near_52w_low": "Close 2,323.00 vs 52w low 917.95"
       },
       "conditions_on": [
         "atr_high",
@@ -698,7 +698,7 @@
       "level": "elevated"
     },
     "patterns": {
-      "breakout": true,
+      "breakout": false,
       "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -713,5 +713,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:21:22.326581+00:00"
+  "updated_at": "2026-11-03T17:49:54.314468+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Tata Investment Corporation",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 571.35,
-    "prev_close": 562.8,
-    "change_pct": 1.5191897654584345,
-    "ema20": 589.5215023451486,
-    "ema50": 618.3123322481163,
-    "ema200": 657.8195936193031,
-    "rsi14": 39.46806690424673,
-    "macd": -20.88178694420901,
-    "macd_signal": -20.009037066441465,
-    "atr14": 18.655015786909377,
-    "adx14": 19.97264458025889,
-    "adx_pos": 18.266756037571305,
-    "adx_neg": 27.40209930829826,
-    "bb_high": 644.6395277152302,
-    "bb_low": 538.93047228477,
-    "bb_mid": 591.7850000000001,
-    "vwap20": 593.1740824958445,
-    "high_52w": 849.0,
+    "date": "2026-11-03",
+    "close": 552.9,
+    "prev_close": 571.35,
+    "change_pct": -3.2291940141769575,
+    "ema20": 586.0337402170393,
+    "ema50": 615.7471427481901,
+    "ema200": 656.7756175633897,
+    "rsi14": 34.56099906148589,
+    "macd": -21.229393741428225,
+    "macd_signal": -20.253108401438816,
+    "atr14": 19.193943230701567,
+    "adx14": 20.733262631939965,
+    "adx_pos": 16.485729140428727,
+    "adx_neg": 31.03816075591621,
+    "bb_high": 641.9057922345146,
+    "bb_low": 534.7792077654854,
+    "bb_mid": 588.3425,
+    "vwap20": 588.597761023381,
+    "high_52w": 841.0,
     "low_52w": 538.85,
-    "volume": 240056.0,
-    "avg_volume20": 291715.3
+    "volume": 548395.0,
+    "avg_volume20": 306264.55
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 667.85,
-      "ema50": 676.36
-    },
     {
       "date": "2026-05-13",
       "close": 667.55,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 571.35,
       "ema50": 618.31
+    },
+    {
+      "date": "2026-11-03",
+      "close": 552.9,
+      "ema50": 615.75
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 571.35 vs EMA20 589.52",
-      "ema20_above_ema50": "EMA20 589.52 vs EMA50 618.31",
-      "ema50_above_ema200": "EMA50 618.31 vs EMA200 657.82",
-      "rsi_above_50": "RSI(14) 39.47 vs 50",
-      "macd_bullish": "MACD -20.88 vs signal -20.01",
-      "adx_trending_up": "ADX(14) 19.97 vs 20, +DI 18.27 vs -DI 27.40",
-      "price_above_vwap20": "Close 571.35 vs 20d VWAP 593.17",
-      "price_above_bb_mid": "Close 571.35 vs BB mid 591.79"
+      "price_above_ema20": "Close 552.90 vs EMA20 586.03",
+      "ema20_above_ema50": "EMA20 586.03 vs EMA50 615.75",
+      "ema50_above_ema200": "EMA50 615.75 vs EMA200 656.78",
+      "rsi_above_50": "RSI(14) 34.56 vs 50",
+      "macd_bullish": "MACD -21.23 vs signal -20.25",
+      "adx_trending_up": "ADX(14) 20.73 vs 20, +DI 16.49 vs -DI 31.04",
+      "price_above_vwap20": "Close 552.90 vs 20d VWAP 588.60",
+      "price_above_bb_mid": "Close 552.90 vs BB mid 588.34"
     },
     "flags_on": [],
     "flag_count": 0,
@@ -659,7 +659,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "0/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -669,27 +670,28 @@
         "below_ema200": true,
         "extended_above_ema20": false,
         "large_day_move": false,
-        "near_52w_low": false
+        "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 18.66 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 39.5",
-        "below_ema200": "Close 571.35 vs EMA200 657.82",
-        "extended_above_ema20": "Close 571.35 vs EMA20 589.52 (-3.1%)",
-        "large_day_move": "Day change +1.5%",
-        "near_52w_low": "Close 571.35 vs 52w low 538.85"
+        "atr_high": "ATR 19.19 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 34.6",
+        "below_ema200": "Close 552.90 vs EMA200 656.78",
+        "extended_above_ema20": "Close 552.90 vs EMA20 586.03 (-5.7%)",
+        "large_day_move": "Day change -3.2%",
+        "near_52w_low": "Close 552.90 vs 52w low 538.85"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200"
+        "below_ema200",
+        "near_52w_low"
       ],
-      "condition_count": 2,
+      "condition_count": 3,
       "condition_total": 6,
       "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -703,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:22:27.834966+00:00"
+  "updated_at": "2026-11-03T17:50:55.428348+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "PB Fintech (Policybazaar)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 931.0,
-    "prev_close": 1000.1,
-    "change_pct": -6.909309069093093,
-    "ema20": 1075.5876989545459,
-    "ema50": 1283.1846869474032,
-    "ema200": 1539.5964570508447,
-    "rsi14": 28.473856363036788,
-    "macd": -109.10355317340122,
-    "macd_signal": -126.65111125493931,
-    "atr14": 56.961407992105016,
-    "adx14": 47.76672746030158,
-    "adx_pos": 10.982408645213532,
-    "adx_neg": 37.80209298389389,
-    "bb_high": 1091.4029681090396,
-    "bb_low": 953.3070318909602,
-    "bb_mid": 1022.3549999999999,
-    "vwap20": 1010.8411883623394,
+    "date": "2026-11-03",
+    "close": 928.0,
+    "prev_close": 931.0,
+    "change_pct": -0.322234156820623,
+    "ema20": 1061.5317276255414,
+    "ema50": 1269.2558756945639,
+    "ema200": 1533.5109201647667,
+    "rsi14": 28.293894164047202,
+    "macd": -108.10205811397987,
+    "macd_signal": -122.94130062674742,
+    "atr14": 55.75702170695466,
+    "adx14": 48.34536427026283,
+    "adx_pos": 10.4182329552499,
+    "adx_neg": 36.795347357169994,
+    "bb_high": 1098.040492187366,
+    "bb_low": 941.8495078126342,
+    "bb_mid": 1019.945,
+    "vwap20": 1013.3712738952418,
     "high_52w": 1964.2,
-    "low_52w": 923.3,
-    "volume": 9418178.0,
-    "avg_volume20": 3463572.4
+    "low_52w": 916.0,
+    "volume": 4020564.0,
+    "avg_volume20": 3002113.55
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 1603.3,
-      "ema50": 1586.34
-    },
     {
       "date": "2026-05-13",
       "close": 1636.3,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 931.0,
       "ema50": 1283.18
+    },
+    {
+      "date": "2026-11-03",
+      "close": 928.0,
+      "ema50": 1269.26
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 931.00 vs EMA20 1,075.59",
-      "ema20_above_ema50": "EMA20 1,075.59 vs EMA50 1,283.18",
-      "ema50_above_ema200": "EMA50 1,283.18 vs EMA200 1,539.60",
-      "rsi_above_50": "RSI(14) 28.47 vs 50",
-      "macd_bullish": "MACD -109.10 vs signal -126.65",
-      "adx_trending_up": "ADX(14) 47.77 vs 20, +DI 10.98 vs -DI 37.80",
-      "price_above_vwap20": "Close 931.00 vs 20d VWAP 1,010.84",
-      "price_above_bb_mid": "Close 931.00 vs BB mid 1,022.35"
+      "price_above_ema20": "Close 928.00 vs EMA20 1,061.53",
+      "ema20_above_ema50": "EMA20 1,061.53 vs EMA50 1,269.26",
+      "ema50_above_ema200": "EMA50 1,269.26 vs EMA200 1,533.51",
+      "rsi_above_50": "RSI(14) 28.29 vs 50",
+      "macd_bullish": "MACD -108.10 vs signal -122.94",
+      "adx_trending_up": "ADX(14) 48.35 vs 20, +DI 10.42 vs -DI 36.80",
+      "price_above_vwap20": "Close 928.00 vs 20d VWAP 1,013.37",
+      "price_above_bb_mid": "Close 928.00 vs BB mid 1,019.95"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -671,30 +670,29 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": true
       },
       "conditions_detail": {
-        "atr_high": "ATR 56.96 = 6.1% of price",
-        "rsi_extreme": "RSI(14) 28.5",
-        "below_ema200": "Close 931.00 vs EMA200 1,539.60",
-        "extended_above_ema20": "Close 931.00 vs EMA20 1,075.59 (-13.4%)",
-        "large_day_move": "Day change -6.9%",
-        "near_52w_low": "Close 931.00 vs 52w low 923.30"
+        "atr_high": "ATR 55.76 = 6.0% of price",
+        "rsi_extreme": "RSI(14) 28.3",
+        "below_ema200": "Close 928.00 vs EMA200 1,533.51",
+        "extended_above_ema20": "Close 928.00 vs EMA20 1,061.53 (-12.6%)",
+        "large_day_move": "Day change -0.3%",
+        "near_52w_low": "Close 928.00 vs 52w low 916.00"
       },
       "conditions_on": [
         "atr_high",
         "below_ema200",
-        "large_day_move",
         "near_52w_low"
       ],
-      "condition_count": 4,
+      "condition_count": 3,
       "condition_total": 6,
-      "level": "high"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -708,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:22:04.228844+00:00"
+  "updated_at": "2026-11-03T17:50:36.627308+00:00"
 }

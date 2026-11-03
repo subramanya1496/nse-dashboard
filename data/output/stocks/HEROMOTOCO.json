@@ -3,35 +3,30 @@
   "name": "Hero MotoCorp",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 5193.0,
-    "prev_close": 5167.0,
-    "change_pct": 0.5031933423650087,
-    "ema20": 5167.910840101066,
-    "ema50": 5219.06048909297,
-    "ema200": 5244.749850995881,
-    "rsi14": 50.59150268492203,
-    "macd": -13.163502338911712,
-    "macd_signal": -32.68513536404238,
-    "atr14": 155.35178986267377,
-    "adx14": 20.109064827819743,
-    "adx_pos": 16.637800803854326,
-    "adx_neg": 20.091247073390633,
-    "bb_high": 5345.288386851089,
-    "bb_low": 4862.01161314891,
-    "bb_mid": 5103.65,
-    "vwap20": 5116.134020318662,
+    "date": "2026-11-03",
+    "close": 5300.0,
+    "prev_close": 5193.0,
+    "change_pct": 2.060466011939149,
+    "ema20": 5180.490760091441,
+    "ema50": 5222.234587559912,
+    "ema200": 5245.299603722291,
+    "rsi14": 55.47223358154892,
+    "macd": -1.5095112810367937,
+    "macd_signal": -26.450010547441266,
+    "atr14": 153.57666201533993,
+    "adx14": 18.978169335798302,
+    "adx_pos": 20.55802395140863,
+    "adx_neg": 18.871796656604506,
+    "bb_high": 5370.332427181013,
+    "bb_low": 4858.017572818987,
+    "bb_mid": 5114.175,
+    "vwap20": 5128.185580437647,
     "high_52w": 6388.5,
     "low_52w": 4671.5,
-    "volume": 596939.0,
-    "avg_volume20": 541712.2
+    "volume": 656286.0,
+    "avg_volume20": 520876.65
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 5082.5,
-      "ema50": 5276.97
-    },
     {
       "date": "2026-05-13",
       "close": 4995.0,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 5193.0,
       "ema50": 5219.06
+    },
+    {
+      "date": "2026-11-03",
+      "close": 5300.0,
+      "ema50": 5222.23
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 5,193.00 vs EMA20 5,167.91",
-      "ema20_above_ema50": "EMA20 5,167.91 vs EMA50 5,219.06",
-      "ema50_above_ema200": "EMA50 5,219.06 vs EMA200 5,244.75",
-      "rsi_above_50": "RSI(14) 50.59 vs 50",
-      "macd_bullish": "MACD -13.16 vs signal -32.69",
-      "adx_trending_up": "ADX(14) 20.11 vs 20, +DI 16.64 vs -DI 20.09",
-      "price_above_vwap20": "Close 5,193.00 vs 20d VWAP 5,116.13",
-      "price_above_bb_mid": "Close 5,193.00 vs BB mid 5,103.65"
+      "price_above_ema20": "Close 5,300.00 vs EMA20 5,180.49",
+      "ema20_above_ema50": "EMA20 5,180.49 vs EMA50 5,222.23",
+      "ema50_above_ema200": "EMA50 5,222.23 vs EMA200 5,245.30",
+      "rsi_above_50": "RSI(14) 55.47 vs 50",
+      "macd_bullish": "MACD -1.51 vs signal -26.45",
+      "adx_trending_up": "ADX(14) 18.98 vs 20, +DI 20.56 vs -DI 18.87",
+      "price_above_vwap20": "Close 5,300.00 vs 20d VWAP 5,128.19",
+      "price_above_bb_mid": "Close 5,300.00 vs BB mid 5,114.18"
     },
     "flags_on": [
       "price_above_ema20",
@@ -672,26 +672,25 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 155.35 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 50.6",
-        "below_ema200": "Close 5,193.00 vs EMA200 5,244.75",
-        "extended_above_ema20": "Close 5,193.00 vs EMA20 5,167.91 (+0.5%)",
-        "large_day_move": "Day change +0.5%",
-        "near_52w_low": "Close 5,193.00 vs 52w low 4,671.50"
+        "atr_high": "ATR 153.58 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 55.5",
+        "below_ema200": "Close 5,300.00 vs EMA200 5,245.30",
+        "extended_above_ema20": "Close 5,300.00 vs EMA20 5,180.49 (+2.3%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 5,300.00 vs 52w low 4,671.50"
       },
       "conditions_on": [
-        "atr_high",
-        "below_ema200"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
@@ -700,8 +699,8 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -709,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:20:59.950416+00:00"
+  "updated_at": "2026-11-03T17:49:33.506044+00:00"
 }

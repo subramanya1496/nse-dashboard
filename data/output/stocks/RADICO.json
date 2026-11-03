@@ -3,35 +3,30 @@
   "name": "Radico Khaitan",
   "sector": "FMCG",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 4100.0,
-    "prev_close": 4086.7,
-    "change_pct": 0.32544595884210203,
-    "ema20": 4298.207297730593,
-    "ema50": 4346.390084024006,
-    "ema200": 3860.2764562040625,
-    "rsi14": 38.567026448680366,
-    "macd": -86.44821589197545,
-    "macd_signal": -56.360224006216384,
-    "atr14": 139.76299548492304,
-    "adx14": 22.742560248818275,
-    "adx_pos": 14.331939819657158,
-    "adx_neg": 27.253569183109295,
-    "bb_high": 4668.194462903913,
-    "bb_low": 4029.575537096088,
-    "bb_mid": 4348.885,
-    "vwap20": 4300.526944557609,
+    "date": "2026-11-03",
+    "close": 4250.0,
+    "prev_close": 4100.0,
+    "change_pct": 3.6585365853658534,
+    "ema20": 4293.616126518156,
+    "ema50": 4342.610080728947,
+    "ema200": 3864.1543024109874,
+    "rsi14": 46.5675908975269,
+    "macd": -79.17743909327237,
+    "macd_signal": -60.92366702362759,
+    "atr14": 142.37992437885708,
+    "adx14": 21.905874249157954,
+    "adx_pos": 19.90648465819107,
+    "adx_neg": 24.841747620449965,
+    "bb_high": 4668.15273331753,
+    "bb_low": 4025.70726668247,
+    "bb_mid": 4346.93,
+    "vwap20": 4295.280788075174,
     "high_52w": 4747.0,
     "low_52w": 2500.0,
-    "volume": 438049.0,
-    "avg_volume20": 436310.25
+    "volume": 683813.0,
+    "avg_volume20": 450749.3
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 3428.6,
-      "ema50": 3067.18
-    },
     {
       "date": "2026-05-13",
       "close": 3450.5,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 4100.0,
       "ema50": 4346.39
+    },
+    {
+      "date": "2026-11-03",
+      "close": 4250.0,
+      "ema50": 4342.61
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 4,100.00 vs EMA20 4,298.21",
-      "ema20_above_ema50": "EMA20 4,298.21 vs EMA50 4,346.39",
-      "ema50_above_ema200": "EMA50 4,346.39 vs EMA200 3,860.28",
-      "rsi_above_50": "RSI(14) 38.57 vs 50",
-      "macd_bullish": "MACD -86.45 vs signal -56.36",
-      "adx_trending_up": "ADX(14) 22.74 vs 20, +DI 14.33 vs -DI 27.25",
-      "price_above_vwap20": "Close 4,100.00 vs 20d VWAP 4,300.53",
-      "price_above_bb_mid": "Close 4,100.00 vs BB mid 4,348.89"
+      "price_above_ema20": "Close 4,250.00 vs EMA20 4,293.62",
+      "ema20_above_ema50": "EMA20 4,293.62 vs EMA50 4,342.61",
+      "ema50_above_ema200": "EMA50 4,342.61 vs EMA200 3,864.15",
+      "rsi_above_50": "RSI(14) 46.57 vs 50",
+      "macd_bullish": "MACD -79.18 vs signal -60.92",
+      "adx_trending_up": "ADX(14) 21.91 vs 20, +DI 19.91 vs -DI 24.84",
+      "price_above_vwap20": "Close 4,250.00 vs 20d VWAP 4,295.28",
+      "price_above_bb_mid": "Close 4,250.00 vs BB mid 4,346.93"
     },
     "flags_on": [
       "ema50_above_ema200"
@@ -661,7 +661,8 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "1/8 bullish flags",
+        "patterns: volume surge, near buy zone"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 139.76 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 38.6",
-        "below_ema200": "Close 4,100.00 vs EMA200 3,860.28",
-        "extended_above_ema20": "Close 4,100.00 vs EMA20 4,298.21 (-4.6%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 4,100.00 vs 52w low 2,500.00"
+        "atr_high": "ATR 142.38 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 46.6",
+        "below_ema200": "Close 4,250.00 vs EMA200 3,864.15",
+        "extended_above_ema20": "Close 4,250.00 vs EMA20 4,293.62 (-1.0%)",
+        "large_day_move": "Day change +3.7%",
+        "near_52w_low": "Close 4,250.00 vs 52w low 2,500.00"
       },
       "conditions_on": [
         "atr_high"
@@ -690,9 +691,9 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
-      "near_buy_zone": false
+      "near_buy_zone": true
     },
     "trend": {
       "daily": "neutral",
@@ -704,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:22:11.833498+00:00"
+  "updated_at": "2026-11-03T17:50:39.426206+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "Adani Ports and Special Economic Zone",
   "sector": "Logistics",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 1854.0,
-    "prev_close": 1850.0,
-    "change_pct": 0.21621621621621623,
-    "ema20": 1779.1870088208198,
-    "ema50": 1759.5897463189963,
-    "ema200": 1670.930541120825,
-    "rsi14": 61.68965537355609,
-    "macd": 19.781477255580967,
-    "macd_signal": 8.100317364578236,
-    "atr14": 50.467008462054814,
-    "adx14": 20.24797651836236,
-    "adx_pos": 22.36250191695499,
-    "adx_neg": 14.834463783770172,
-    "bb_high": 1852.3751257721983,
-    "bb_low": 1682.4248742278019,
-    "bb_mid": 1767.4,
-    "vwap20": 1770.660122307816,
+    "date": "2026-11-03",
+    "close": 1866.9,
+    "prev_close": 1854.0,
+    "change_pct": 0.6957928802589046,
+    "ema20": 1787.5406270283606,
+    "ema50": 1763.7979915613887,
+    "ema200": 1672.8804859852944,
+    "rsi14": 63.05199384005729,
+    "macd": 24.224326295143328,
+    "macd_signal": 11.325119150691254,
+    "atr14": 49.112222143336616,
+    "adx14": 20.497285104346616,
+    "adx_pos": 22.96692113057493,
+    "adx_neg": 14.154845919682499,
+    "bb_high": 1867.4693464740574,
+    "bb_low": 1676.6206535259428,
+    "bb_mid": 1772.045,
+    "vwap20": 1775.8934822495962,
     "high_52w": 1891.1,
     "low_52w": 1292.0,
-    "volume": 1483183.0,
-    "avg_volume20": 3392451.5
+    "volume": 3727864.0,
+    "avg_volume20": 3439203.5
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 1688.2,
-      "ema50": 1555.48
-    },
     {
       "date": "2026-05-13",
       "close": 1737.8,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 1854.0,
       "ema50": 1759.59
+    },
+    {
+      "date": "2026-11-03",
+      "close": 1866.9,
+      "ema50": 1763.8
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,854.00 vs EMA20 1,779.19",
-      "ema20_above_ema50": "EMA20 1,779.19 vs EMA50 1,759.59",
-      "ema50_above_ema200": "EMA50 1,759.59 vs EMA200 1,670.93",
-      "rsi_above_50": "RSI(14) 61.69 vs 50",
-      "macd_bullish": "MACD 19.78 vs signal 8.10",
-      "adx_trending_up": "ADX(14) 20.25 vs 20, +DI 22.36 vs -DI 14.83",
-      "price_above_vwap20": "Close 1,854.00 vs 20d VWAP 1,770.66",
-      "price_above_bb_mid": "Close 1,854.00 vs BB mid 1,767.40"
+      "price_above_ema20": "Close 1,866.90 vs EMA20 1,787.54",
+      "ema20_above_ema50": "EMA20 1,787.54 vs EMA50 1,763.80",
+      "ema50_above_ema200": "EMA50 1,763.80 vs EMA200 1,672.88",
+      "rsi_above_50": "RSI(14) 63.05 vs 50",
+      "macd_bullish": "MACD 24.22 vs signal 11.33",
+      "adx_trending_up": "ADX(14) 20.50 vs 20, +DI 22.97 vs -DI 14.15",
+      "price_above_vwap20": "Close 1,866.90 vs 20d VWAP 1,775.89",
+      "price_above_bb_mid": "Close 1,866.90 vs BB mid 1,772.05"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,12 +664,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "8/8 bullish flags",
-        "patterns: breakout"
+        "8/8 bullish flags"
       ]
     },
     "risk": {
@@ -682,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 50.47 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 61.7",
-        "below_ema200": "Close 1,854.00 vs EMA200 1,670.93",
-        "extended_above_ema20": "Close 1,854.00 vs EMA20 1,779.19 (+4.2%)",
-        "large_day_move": "Day change +0.2%",
-        "near_52w_low": "Close 1,854.00 vs 52w low 1,292.00"
+        "atr_high": "ATR 49.11 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 63.1",
+        "below_ema200": "Close 1,866.90 vs EMA200 1,672.88",
+        "extended_above_ema20": "Close 1,866.90 vs EMA20 1,787.54 (+4.4%)",
+        "large_day_move": "Day change +0.7%",
+        "near_52w_low": "Close 1,866.90 vs 52w low 1,292.00"
       },
       "conditions_on": [
         "atr_high"
@@ -697,7 +696,7 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": true,
+      "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -712,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:20:04.893487+00:00"
+  "updated_at": "2026-11-03T17:48:32.896823+00:00"
 }

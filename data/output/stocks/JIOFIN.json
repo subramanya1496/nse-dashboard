@@ -3,35 +3,30 @@
   "name": "Jio Financial Services",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 213.25,
-    "prev_close": 204.5,
-    "change_pct": 4.278728606356968,
-    "ema20": 212.55958703832616,
-    "ema50": 221.70147039789725,
-    "ema200": 245.1650521528431,
-    "rsi14": 47.56934232731178,
-    "macd": -4.809771946306995,
-    "macd_signal": -5.259003405460845,
-    "atr14": 5.0561195308805384,
-    "adx14": 35.311598220618905,
-    "adx_pos": 19.958604309664043,
-    "adx_neg": 23.484616213434094,
-    "bb_high": 221.71628536267087,
-    "bb_low": 202.38971463732918,
-    "bb_mid": 212.05300000000003,
-    "vwap20": 212.10134826937016,
+    "date": "2026-11-03",
+    "close": 214.27,
+    "prev_close": 213.25,
+    "change_pct": 0.47831184056272463,
+    "ema20": 212.7224835108665,
+    "ema50": 221.410040186215,
+    "ema200": 244.85763869858596,
+    "rsi14": 48.99525068593063,
+    "macd": -4.102309670594906,
+    "macd_signal": -5.027664658487658,
+    "atr14": 4.9549681358176425,
+    "adx14": 32.83128703813849,
+    "adx_pos": 22.51521121198032,
+    "adx_neg": 22.252317629830472,
+    "bb_high": 221.87783415141337,
+    "bb_low": 202.4551658485866,
+    "bb_mid": 212.16649999999998,
+    "vwap20": 212.1966133633677,
     "high_52w": 316.85,
     "low_52w": 202.51,
-    "volume": 17617211.0,
-    "avg_volume20": 13375665.55
+    "volume": 10862243.0,
+    "avg_volume20": 13113678.65
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 230.47,
-      "ema50": 247.02
-    },
     {
       "date": "2026-05-13",
       "close": 231.45,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 213.25,
       "ema50": 221.7
+    },
+    {
+      "date": "2026-11-03",
+      "close": 214.27,
+      "ema50": 221.41
     }
   ],
   "flags": {
@@ -635,36 +635,37 @@
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": true,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 213.25 vs EMA20 212.56",
-      "ema20_above_ema50": "EMA20 212.56 vs EMA50 221.70",
-      "ema50_above_ema200": "EMA50 221.70 vs EMA200 245.17",
-      "rsi_above_50": "RSI(14) 47.57 vs 50",
-      "macd_bullish": "MACD -4.81 vs signal -5.26",
-      "adx_trending_up": "ADX(14) 35.31 vs 20, +DI 19.96 vs -DI 23.48",
-      "price_above_vwap20": "Close 213.25 vs 20d VWAP 212.10",
-      "price_above_bb_mid": "Close 213.25 vs BB mid 212.05"
+      "price_above_ema20": "Close 214.27 vs EMA20 212.72",
+      "ema20_above_ema50": "EMA20 212.72 vs EMA50 221.41",
+      "ema50_above_ema200": "EMA50 221.41 vs EMA200 244.86",
+      "rsi_above_50": "RSI(14) 49.00 vs 50",
+      "macd_bullish": "MACD -4.10 vs signal -5.03",
+      "adx_trending_up": "ADX(14) 32.83 vs 20, +DI 22.52 vs -DI 22.25",
+      "price_above_vwap20": "Close 214.27 vs 20d VWAP 212.20",
+      "price_above_bb_mid": "Close 214.27 vs BB mid 212.17"
     },
     "flags_on": [
       "price_above_ema20",
       "macd_bullish",
+      "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 4,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "4/8 bullish flags"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -673,24 +674,23 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.06 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 47.6",
-        "below_ema200": "Close 213.25 vs EMA200 245.17",
-        "extended_above_ema20": "Close 213.25 vs EMA20 212.56 (+0.3%)",
-        "large_day_move": "Day change +4.3%",
-        "near_52w_low": "Close 213.25 vs 52w low 202.51"
+        "atr_high": "ATR 4.95 = 2.3% of price",
+        "rsi_extreme": "RSI(14) 49.0",
+        "below_ema200": "Close 214.27 vs EMA200 244.86",
+        "extended_above_ema20": "Close 214.27 vs EMA20 212.72 (+0.7%)",
+        "large_day_move": "Day change +0.5%",
+        "near_52w_low": "Close 214.27 vs 52w low 202.51"
       },
       "conditions_on": [
-        "below_ema200",
-        "large_day_move"
+        "below_ema200"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
@@ -708,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:21:14.718056+00:00"
+  "updated_at": "2026-11-03T17:49:46.712787+00:00"
 }

@@ -3,35 +3,30 @@
   "name": "PNC Infratech",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 129.84,
-    "prev_close": 123.93,
-    "change_pct": 4.7688211086903864,
-    "ema20": 138.0472968490363,
-    "ema50": 156.1074632864831,
-    "ema200": 202.0070216913521,
-    "rsi14": 37.93615180167569,
-    "macd": -6.570885946930019,
-    "macd_signal": -6.8228091373036,
-    "atr14": 7.20728929500253,
-    "adx14": 30.65396153703162,
-    "adx_pos": 17.164022838954516,
-    "adx_neg": 30.461465530867866,
-    "bb_high": 151.21228892364843,
-    "bb_low": 124.84171107635154,
-    "bb_mid": 138.027,
-    "vwap20": 150.13753033556236,
+    "date": "2026-11-03",
+    "close": 125.22,
+    "prev_close": 129.84,
+    "change_pct": -3.5582255083179333,
+    "ema20": 136.82564953008045,
+    "ema50": 154.89619021642494,
+    "ema200": 201.24297172427399,
+    "rsi14": 34.71380534388139,
+    "macd": -6.839545670811731,
+    "macd_signal": -6.8261564440052265,
+    "atr14": 7.121054345359492,
+    "adx14": 30.42202965334229,
+    "adx_pos": 16.31157947761194,
+    "adx_neg": 28.628181698739365,
+    "bb_high": 151.75649060754182,
+    "bb_low": 123.11650939245817,
+    "bb_mid": 137.4365,
+    "vwap20": 149.95695458750333,
     "high_52w": 291.45,
     "low_52w": 116.4,
-    "volume": 1203644.0,
-    "avg_volume20": 4692085.15
+    "volume": 951634.0,
+    "avg_volume20": 4719626.0
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 218.75,
-      "ema50": 208.09
-    },
     {
       "date": "2026-05-13",
       "close": 220.51,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 129.84,
       "ema50": 156.11
+    },
+    {
+      "date": "2026-11-03",
+      "close": 125.22,
+      "ema50": 154.9
     }
   ],
   "flags": {
@@ -634,25 +634,23 @@
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 129.84 vs EMA20 138.05",
-      "ema20_above_ema50": "EMA20 138.05 vs EMA50 156.11",
-      "ema50_above_ema200": "EMA50 156.11 vs EMA200 202.01",
-      "rsi_above_50": "RSI(14) 37.94 vs 50",
-      "macd_bullish": "MACD -6.57 vs signal -6.82",
-      "adx_trending_up": "ADX(14) 30.65 vs 20, +DI 17.16 vs -DI 30.46",
-      "price_above_vwap20": "Close 129.84 vs 20d VWAP 150.14",
-      "price_above_bb_mid": "Close 129.84 vs BB mid 138.03"
+      "price_above_ema20": "Close 125.22 vs EMA20 136.83",
+      "ema20_above_ema50": "EMA20 136.83 vs EMA50 154.90",
+      "ema50_above_ema200": "EMA50 154.90 vs EMA200 201.24",
+      "rsi_above_50": "RSI(14) 34.71 vs 50",
+      "macd_bullish": "MACD -6.84 vs signal -6.83",
+      "adx_trending_up": "ADX(14) 30.42 vs 20, +DI 16.31 vs -DI 28.63",
+      "price_above_vwap20": "Close 125.22 vs 20d VWAP 149.96",
+      "price_above_bb_mid": "Close 125.22 vs BB mid 137.44"
     },
-    "flags_on": [
-      "macd_bullish"
-    ],
-    "flag_count": 1,
+    "flags_on": [],
+    "flag_count": 0,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +659,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "0/8 bullish flags"
       ]
     },
     "risk": {
@@ -670,23 +668,22 @@
         "rsi_extreme": false,
         "below_ema200": true,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.21 = 5.6% of price",
-        "rsi_extreme": "RSI(14) 37.9",
-        "below_ema200": "Close 129.84 vs EMA200 202.01",
-        "extended_above_ema20": "Close 129.84 vs EMA20 138.05 (-5.9%)",
-        "large_day_move": "Day change +4.8%",
-        "near_52w_low": "Close 129.84 vs 52w low 116.40"
+        "atr_high": "ATR 7.12 = 5.7% of price",
+        "rsi_extreme": "RSI(14) 34.7",
+        "below_ema200": "Close 125.22 vs EMA200 201.24",
+        "extended_above_ema20": "Close 125.22 vs EMA20 136.83 (-8.5%)",
+        "large_day_move": "Day change -3.6%",
+        "near_52w_low": "Close 125.22 vs 52w low 116.40"
       },
       "conditions_on": [
         "atr_high",
-        "below_ema200",
-        "large_day_move"
+        "below_ema200"
       ],
-      "condition_count": 3,
+      "condition_count": 2,
       "condition_total": 6,
       "level": "elevated"
     },
@@ -706,5 +703,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:22:03.829844+00:00"
+  "updated_at": "2026-11-03T17:50:36.251670+00:00"
 }

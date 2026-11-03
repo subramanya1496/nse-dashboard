@@ -3,35 +3,30 @@
   "name": "Navin Fluorine International",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 8406.0,
-    "prev_close": 8680.0,
-    "change_pct": -3.1566820276497696,
-    "ema20": 8276.86089948448,
-    "ema50": 8243.27457600803,
-    "ema200": 7368.201756903398,
-    "rsi14": 52.54801144195582,
-    "macd": -6.25091373921714,
-    "macd_signal": -50.56531611284567,
-    "atr14": 298.1867517148789,
-    "adx14": 18.441956595551012,
-    "adx_pos": 26.74361299899321,
-    "adx_neg": 17.98617792982782,
-    "bb_high": 8818.387792381616,
-    "bb_low": 7733.012207618385,
-    "bb_mid": 8275.7,
-    "vwap20": 8292.611154606306,
+    "date": "2026-11-03",
+    "close": 8530.0,
+    "prev_close": 8406.0,
+    "change_pct": 1.4751368070425885,
+    "ema20": 8300.969385247863,
+    "ema50": 8254.518710282226,
+    "ema200": 7379.761938426747,
+    "rsi14": 54.88741626728248,
+    "macd": 14.372947569354437,
+    "macd_signal": -37.57766337640565,
+    "atr14": 294.67341230667324,
+    "adx14": 18.523140335616283,
+    "adx_pos": 25.12943866259309,
+    "adx_neg": 16.900579404851133,
+    "bb_high": 8842.473054047616,
+    "bb_low": 7734.726945952385,
+    "bb_mid": 8288.6,
+    "vwap20": 8306.708884403022,
     "high_52w": 8949.5,
     "low_52w": 4890.7,
-    "volume": 358300.0,
-    "avg_volume20": 150846.8
+    "volume": 173729.0,
+    "avg_volume20": 152850.45
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 6950.5,
-      "ema50": 6449.2
-    },
     {
       "date": "2026-05-13",
       "close": 6910.5,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 8406.0,
       "ema50": 8243.27
+    },
+    {
+      "date": "2026-11-03",
+      "close": 8530.0,
+      "ema50": 8254.52
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 8,406.00 vs EMA20 8,276.86",
-      "ema20_above_ema50": "EMA20 8,276.86 vs EMA50 8,243.27",
-      "ema50_above_ema200": "EMA50 8,243.27 vs EMA200 7,368.20",
-      "rsi_above_50": "RSI(14) 52.55 vs 50",
-      "macd_bullish": "MACD -6.25 vs signal -50.57",
-      "adx_trending_up": "ADX(14) 18.44 vs 20, +DI 26.74 vs -DI 17.99",
-      "price_above_vwap20": "Close 8,406.00 vs 20d VWAP 8,292.61",
-      "price_above_bb_mid": "Close 8,406.00 vs BB mid 8,275.70"
+      "price_above_ema20": "Close 8,530.00 vs EMA20 8,300.97",
+      "ema20_above_ema50": "EMA20 8,300.97 vs EMA50 8,254.52",
+      "ema50_above_ema200": "EMA50 8,254.52 vs EMA200 7,379.76",
+      "rsi_above_50": "RSI(14) 54.89 vs 50",
+      "macd_bullish": "MACD 14.37 vs signal -37.58",
+      "adx_trending_up": "ADX(14) 18.52 vs 20, +DI 25.13 vs -DI 16.90",
+      "price_above_vwap20": "Close 8,530.00 vs 20d VWAP 8,306.71",
+      "price_above_bb_mid": "Close 8,530.00 vs BB mid 8,288.60"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,12 +663,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -681,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 298.19 = 3.5% of price",
-        "rsi_extreme": "RSI(14) 52.5",
-        "below_ema200": "Close 8,406.00 vs EMA200 7,368.20",
-        "extended_above_ema20": "Close 8,406.00 vs EMA20 8,276.86 (+1.6%)",
-        "large_day_move": "Day change -3.2%",
-        "near_52w_low": "Close 8,406.00 vs 52w low 4,890.70"
+        "atr_high": "ATR 294.67 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 54.9",
+        "below_ema200": "Close 8,530.00 vs EMA200 7,379.76",
+        "extended_above_ema20": "Close 8,530.00 vs EMA20 8,300.97 (+2.8%)",
+        "large_day_move": "Day change +1.5%",
+        "near_52w_low": "Close 8,530.00 vs 52w low 4,890.70"
       },
       "conditions_on": [
         "atr_high"
@@ -697,9 +696,9 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:21:36.322403+00:00"
+  "updated_at": "2026-11-03T17:50:09.921132+00:00"
 }

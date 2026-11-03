@@ -3,35 +3,30 @@
   "name": "Cyient Ltd",
   "sector": "IT",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 1141.4,
-    "prev_close": 1134.9,
-    "change_pct": 0.572737686139748,
-    "ema20": 1152.505512151281,
-    "ema50": 1095.1639334272409,
-    "ema200": 1016.0329348150542,
-    "rsi14": 50.235640288768074,
-    "macd": 19.535340835843954,
-    "macd_signal": 29.425899431023574,
-    "atr14": 52.61445422080572,
-    "adx14": 20.70104310876498,
-    "adx_pos": 19.377332928454223,
-    "adx_neg": 19.892080239093673,
-    "bb_high": 1236.8018209861114,
-    "bb_low": 1088.0481790138886,
-    "bb_mid": 1162.425,
-    "vwap20": 1202.1456898601793,
+    "date": "2026-11-03",
+    "close": 1139.2,
+    "prev_close": 1141.4,
+    "change_pct": -0.19274575083231515,
+    "ema20": 1151.2383205178257,
+    "ema50": 1096.8908379987217,
+    "ema200": 1017.2584777522178,
+    "rsi14": 49.86331034262351,
+    "macd": 16.312597262609188,
+    "macd_signal": 26.8032389973407,
+    "atr14": 51.20627891931961,
+    "adx14": 19.52117163896462,
+    "adx_pos": 20.636226739490453,
+    "adx_neg": 18.979176791545203,
+    "bb_high": 1236.8128364811878,
+    "bb_low": 1087.9371635188122,
+    "bb_mid": 1162.375,
+    "vwap20": 1204.365586826143,
     "high_52w": 1277.0,
     "low_52w": 750.3,
-    "volume": 379798.0,
-    "avg_volume20": 1820514.8
+    "volume": 380536.0,
+    "avg_volume20": 1758349.15
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 903.45,
-      "ema50": 913.64
-    },
     {
       "date": "2026-05-13",
       "close": 886.55,
@@ -626,6 +621,11 @@
       "date": "2026-11-02",
       "close": 1141.4,
       "ema50": 1095.16
+    },
+    {
+      "date": "2026-11-03",
+      "close": 1139.2,
+      "ema50": 1096.89
     }
   ],
   "flags": {
@@ -633,37 +633,36 @@
       "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
-      "rsi_above_50": true,
+      "rsi_above_50": false,
       "macd_bullish": false,
       "adx_trending_up": false,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,141.40 vs EMA20 1,152.51",
-      "ema20_above_ema50": "EMA20 1,152.51 vs EMA50 1,095.16",
-      "ema50_above_ema200": "EMA50 1,095.16 vs EMA200 1,016.03",
-      "rsi_above_50": "RSI(14) 50.24 vs 50",
-      "macd_bullish": "MACD 19.54 vs signal 29.43",
-      "adx_trending_up": "ADX(14) 20.70 vs 20, +DI 19.38 vs -DI 19.89",
-      "price_above_vwap20": "Close 1,141.40 vs 20d VWAP 1,202.15",
-      "price_above_bb_mid": "Close 1,141.40 vs BB mid 1,162.42"
+      "price_above_ema20": "Close 1,139.20 vs EMA20 1,151.24",
+      "ema20_above_ema50": "EMA20 1,151.24 vs EMA50 1,096.89",
+      "ema50_above_ema200": "EMA50 1,096.89 vs EMA200 1,017.26",
+      "rsi_above_50": "RSI(14) 49.86 vs 50",
+      "macd_bullish": "MACD 16.31 vs signal 26.80",
+      "adx_trending_up": "ADX(14) 19.52 vs 20, +DI 20.64 vs -DI 18.98",
+      "price_above_vwap20": "Close 1,139.20 vs 20d VWAP 1,204.37",
+      "price_above_bb_mid": "Close 1,139.20 vs BB mid 1,162.38"
     },
     "flags_on": [
       "ema20_above_ema50",
-      "ema50_above_ema200",
-      "rsi_above_50"
+      "ema50_above_ema200"
     ],
-    "flag_count": 3,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 1,
+      "label": "Quiet today",
+      "rule": "\u22642/8 flags",
       "reasons": [
-        "3/8 bullish flags",
+        "2/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -677,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 52.61 = 4.6% of price",
-        "rsi_extreme": "RSI(14) 50.2",
-        "below_ema200": "Close 1,141.40 vs EMA200 1,016.03",
-        "extended_above_ema20": "Close 1,141.40 vs EMA20 1,152.51 (-1.0%)",
-        "large_day_move": "Day change +0.6%",
-        "near_52w_low": "Close 1,141.40 vs 52w low 750.30"
+        "atr_high": "ATR 51.21 = 4.5% of price",
+        "rsi_extreme": "RSI(14) 49.9",
+        "below_ema200": "Close 1,139.20 vs EMA200 1,017.26",
+        "extended_above_ema20": "Close 1,139.20 vs EMA20 1,151.24 (-1.0%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 1,139.20 vs 52w low 750.30"
       },
       "conditions_on": [
         "atr_high"
@@ -707,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:20:26.516081+00:00"
+  "updated_at": "2026-11-03T17:48:58.896919+00:00"
 }

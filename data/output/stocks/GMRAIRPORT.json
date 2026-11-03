@@ -3,35 +3,30 @@
   "name": "GMR Airports",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 88.65,
-    "prev_close": 86.92,
-    "change_pct": 1.9903359410952646,
-    "ema20": 89.92799880132753,
-    "ema50": 93.7579407432992,
-    "ema200": 97.6110937192872,
-    "rsi14": 43.75310735440969,
-    "macd": -1.9205455055060554,
-    "macd_signal": -2.090795409196236,
-    "atr14": 2.6177917949954272,
-    "adx14": 26.435750049575375,
-    "adx_pos": 15.276324514432593,
-    "adx_neg": 26.739075061114626,
-    "bb_high": 93.27321005013184,
-    "bb_low": 85.77478994986816,
-    "bb_mid": 89.524,
-    "vwap20": 89.79947689604045,
+    "date": "2026-11-03",
+    "close": 91.1,
+    "prev_close": 88.65,
+    "change_pct": 2.7636773829667103,
+    "ema20": 90.03961796310585,
+    "ema50": 93.65370777297375,
+    "ema200": 97.54630671710524,
+    "rsi14": 50.44870609973984,
+    "macd": -1.599150470794271,
+    "macd_signal": -1.992466421515843,
+    "atr14": 2.640092381067182,
+    "adx14": 25.269582976844728,
+    "adx_pos": 20.098676577627252,
+    "adx_neg": 24.619411952499025,
+    "bb_high": 92.95964474134368,
+    "bb_low": 85.91935525865631,
+    "bb_mid": 89.4395,
+    "vwap20": 89.68940007567628,
     "high_52w": 115.64,
     "low_52w": 84.11,
-    "volume": 4647027.0,
-    "avg_volume20": 16232225.95
+    "volume": 21253287.0,
+    "avg_volume20": 16380607.15
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 94.69,
-      "ema50": 95.94
-    },
     {
       "date": "2026-05-13",
       "close": 96.87,
@@ -626,42 +621,51 @@
       "date": "2026-11-02",
       "close": 88.65,
       "ema50": 93.76
+    },
+    {
+      "date": "2026-11-03",
+      "close": 91.1,
+      "ema50": 93.65
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 88.65 vs EMA20 89.93",
-      "ema20_above_ema50": "EMA20 89.93 vs EMA50 93.76",
-      "ema50_above_ema200": "EMA50 93.76 vs EMA200 97.61",
-      "rsi_above_50": "RSI(14) 43.75 vs 50",
-      "macd_bullish": "MACD -1.92 vs signal -2.09",
-      "adx_trending_up": "ADX(14) 26.44 vs 20, +DI 15.28 vs -DI 26.74",
-      "price_above_vwap20": "Close 88.65 vs 20d VWAP 89.80",
-      "price_above_bb_mid": "Close 88.65 vs BB mid 89.52"
+      "price_above_ema20": "Close 91.10 vs EMA20 90.04",
+      "ema20_above_ema50": "EMA20 90.04 vs EMA50 93.65",
+      "ema50_above_ema200": "EMA50 93.65 vs EMA200 97.55",
+      "rsi_above_50": "RSI(14) 50.45 vs 50",
+      "macd_bullish": "MACD -1.60 vs signal -1.99",
+      "adx_trending_up": "ADX(14) 25.27 vs 20, +DI 20.10 vs -DI 24.62",
+      "price_above_vwap20": "Close 91.10 vs 20d VWAP 89.69",
+      "price_above_bb_mid": "Close 91.10 vs BB mid 89.44"
     },
     "flags_on": [
-      "macd_bullish"
+      "price_above_ema20",
+      "rsi_above_50",
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 1,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "1/8 bullish flags"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.62 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 43.8",
-        "below_ema200": "Close 88.65 vs EMA200 97.61",
-        "extended_above_ema20": "Close 88.65 vs EMA20 89.93 (-1.4%)",
-        "large_day_move": "Day change +2.0%",
-        "near_52w_low": "Close 88.65 vs 52w low 84.11"
+        "atr_high": "ATR 2.64 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 50.4",
+        "below_ema200": "Close 91.10 vs EMA200 97.55",
+        "extended_above_ema20": "Close 91.10 vs EMA20 90.04 (+1.2%)",
+        "large_day_move": "Day change +2.8%",
+        "near_52w_low": "Close 91.10 vs 52w low 84.11"
       },
       "conditions_on": [
         "atr_high",
@@ -705,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:20:36.506715+00:00"
+  "updated_at": "2026-11-03T17:49:09.295188+00:00"
 }

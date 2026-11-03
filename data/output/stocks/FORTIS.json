@@ -3,35 +3,30 @@
   "name": "Fortis Healthcare",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-11-02",
-    "close": 761.5,
-    "prev_close": 768.15,
-    "change_pct": -0.8657163314456783,
-    "ema20": 764.3581882403854,
-    "ema50": 815.3633034842895,
-    "ema200": 888.3599305670441,
-    "rsi14": 44.56968506797892,
-    "macd": -22.521254761988757,
-    "macd_signal": -30.830306149185628,
-    "atr14": 22.757244249159804,
-    "adx14": 35.025724262528165,
-    "adx_pos": 17.946327636107892,
-    "adx_neg": 22.861396714738184,
-    "bb_high": 787.2095315398761,
-    "bb_low": 715.2054684601238,
-    "bb_mid": 751.2075,
-    "vwap20": 755.0389069481369,
+    "date": "2026-11-03",
+    "close": 785.55,
+    "prev_close": 761.5,
+    "change_pct": 3.1582403151674265,
+    "ema20": 766.3764560270154,
+    "ema50": 814.1941543280428,
+    "ema200": 887.3369461832924,
+    "rsi14": 52.36678130411378,
+    "macd": -18.259742872172524,
+    "macd_signal": -28.31619349378301,
+    "atr14": 22.849583945648387,
+    "adx14": 32.611601241731435,
+    "adx_pos": 20.629686342846867,
+    "adx_neg": 21.14265147473577,
+    "bb_high": 790.9677669038335,
+    "bb_low": 713.6222330961664,
+    "bb_mid": 752.295,
+    "vwap20": 755.061142918588,
     "high_52w": 1067.7,
     "low_52w": 704.95,
-    "volume": 1312288.0,
-    "avg_volume20": 1600595.75
+    "volume": 1538588.0,
+    "avg_volume20": 1571747.85
   },
   "price_history": [
-    {
-      "date": "2026-05-12",
-      "close": 951.15,
-      "ema50": 900.05
-    },
     {
       "date": "2026-05-13",
       "close": 957.5,
@@ -626,44 +621,51 @@
       "date": "2026-11-02",
       "close": 761.5,
       "ema50": 815.36
+    },
+    {
+      "date": "2026-11-03",
+      "close": 785.55,
+      "ema50": 814.19
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": true,
       "adx_trending_up": false,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 761.50 vs EMA20 764.36",
-      "ema20_above_ema50": "EMA20 764.36 vs EMA50 815.36",
-      "ema50_above_ema200": "EMA50 815.36 vs EMA200 888.36",
-      "rsi_above_50": "RSI(14) 44.57 vs 50",
-      "macd_bullish": "MACD -22.52 vs signal -30.83",
-      "adx_trending_up": "ADX(14) 35.03 vs 20, +DI 17.95 vs -DI 22.86",
-      "price_above_vwap20": "Close 761.50 vs 20d VWAP 755.04",
-      "price_above_bb_mid": "Close 761.50 vs BB mid 751.21"
+      "price_above_ema20": "Close 785.55 vs EMA20 766.38",
+      "ema20_above_ema50": "EMA20 766.38 vs EMA50 814.19",
+      "ema50_above_ema200": "EMA50 814.19 vs EMA200 887.34",
+      "rsi_above_50": "RSI(14) 52.37 vs 50",
+      "macd_bullish": "MACD -18.26 vs signal -28.32",
+      "adx_trending_up": "ADX(14) 32.61 vs 20, +DI 20.63 vs -DI 21.14",
+      "price_above_vwap20": "Close 785.55 vs 20d VWAP 755.06",
+      "price_above_bb_mid": "Close 785.55 vs BB mid 752.29"
     },
     "flags_on": [
+      "price_above_ema20",
+      "rsi_above_50",
       "macd_bullish",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 3,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "3/8 bullish flags"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 22.76 = 3.0% of price",
-        "rsi_extreme": "RSI(14) 44.6",
-        "below_ema200": "Close 761.50 vs EMA200 888.36",
-        "extended_above_ema20": "Close 761.50 vs EMA20 764.36 (-0.4%)",
-        "large_day_move": "Day change -0.9%",
-        "near_52w_low": "Close 761.50 vs 52w low 704.95"
+        "atr_high": "ATR 22.85 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 52.4",
+        "below_ema200": "Close 785.55 vs EMA200 887.34",
+        "extended_above_ema20": "Close 785.55 vs EMA20 766.38 (+2.5%)",
+        "large_day_move": "Day change +3.2%",
+        "near_52w_low": "Close 785.55 vs 52w low 704.95"
       },
       "conditions_on": [
         "atr_high",
@@ -707,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-02T20:20:35.307047+00:00"
+  "updated_at": "2026-11-03T17:49:07.690832+00:00"
 }
