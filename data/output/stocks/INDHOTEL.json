@@ -3,35 +3,30 @@
   "name": "Indian Hotels Company",
   "sector": "Hospitality",
   "indicators": {
-    "date": "2026-11-03",
-    "close": 836.05,
-    "prev_close": 822.5,
-    "change_pct": 1.6474164133738547,
-    "ema20": 779.5155873062387,
-    "ema50": 751.8881312254908,
-    "ema200": 717.9547400726391,
-    "rsi14": 74.66400775488349,
-    "macd": 25.661658746349417,
-    "macd_signal": 18.637917589717848,
-    "atr14": 19.77039030980116,
-    "adx14": 33.155611480512405,
-    "adx_pos": 30.750480278938504,
-    "adx_neg": 7.857992340859719,
-    "bb_high": 847.0285199163418,
-    "bb_low": 686.9714800836582,
-    "bb_mid": 767.0,
-    "vwap20": 777.628040995836,
-    "high_52w": 836.05,
+    "date": "2026-11-04",
+    "close": 849.0,
+    "prev_close": 836.05,
+    "change_pct": 1.5489504216255063,
+    "ema20": 786.1331504199304,
+    "ema50": 755.6964434639711,
+    "ema200": 719.2921565816115,
+    "rsi14": 76.89070445999015,
+    "macd": 27.940586380927016,
+    "macd_signal": 20.498451347898282,
+    "atr14": 20.13679100208403,
+    "adx14": 35.35828572706741,
+    "adx_pos": 32.62804231622115,
+    "adx_neg": 7.163939318607897,
+    "bb_high": 858.8443965696166,
+    "bb_low": 686.4556034303833,
+    "bb_mid": 772.65,
+    "vwap20": 781.5233793194983,
+    "high_52w": 849.0,
     "low_52w": 565.0,
-    "volume": 4681529.0,
-    "avg_volume20": 5513360.75
+    "volume": 5146954.0,
+    "avg_volume20": 5647622.5
   },
   "price_history": [
-    {
-      "date": "2026-05-13",
-      "close": 637.4,
-      "ema50": 646.61
-    },
     {
       "date": "2026-05-14",
       "close": 650.2,
@@ -626,6 +621,11 @@
       "date": "2026-11-03",
       "close": 836.05,
       "ema50": 751.89
+    },
+    {
+      "date": "2026-11-04",
+      "close": 849.0,
+      "ema50": 755.7
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 836.05 vs EMA20 779.52",
-      "ema20_above_ema50": "EMA20 779.52 vs EMA50 751.89",
-      "ema50_above_ema200": "EMA50 751.89 vs EMA200 717.95",
-      "rsi_above_50": "RSI(14) 74.66 vs 50",
-      "macd_bullish": "MACD 25.66 vs signal 18.64",
-      "adx_trending_up": "ADX(14) 33.16 vs 20, +DI 30.75 vs -DI 7.86",
-      "price_above_vwap20": "Close 836.05 vs 20d VWAP 777.63",
-      "price_above_bb_mid": "Close 836.05 vs BB mid 767.00"
+      "price_above_ema20": "Close 849.00 vs EMA20 786.13",
+      "ema20_above_ema50": "EMA20 786.13 vs EMA50 755.70",
+      "ema50_above_ema200": "EMA50 755.70 vs EMA200 719.29",
+      "rsi_above_50": "RSI(14) 76.89 vs 50",
+      "macd_bullish": "MACD 27.94 vs signal 20.50",
+      "adx_trending_up": "ADX(14) 35.36 vs 20, +DI 32.63 vs -DI 7.16",
+      "price_above_vwap20": "Close 849.00 vs 20d VWAP 781.52",
+      "price_above_bb_mid": "Close 849.00 vs BB mid 772.65"
     },
     "flags_on": [
       "price_above_ema20",
@@ -675,22 +675,24 @@
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 19.77 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 74.7",
-        "below_ema200": "Close 836.05 vs EMA200 717.95",
-        "extended_above_ema20": "Close 836.05 vs EMA20 779.52 (+7.3%)",
-        "large_day_move": "Day change +1.6%",
-        "near_52w_low": "Close 836.05 vs 52w low 565.00"
+        "atr_high": "ATR 20.14 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 76.9",
+        "below_ema200": "Close 849.00 vs EMA200 719.29",
+        "extended_above_ema20": "Close 849.00 vs EMA20 786.13 (+8.0%)",
+        "large_day_move": "Day change +1.5%",
+        "near_52w_low": "Close 849.00 vs 52w low 565.00"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "rsi_extreme"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -710,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-03T17:49:43.948030+00:00"
+  "updated_at": "2026-11-04T18:00:09.774684+00:00"
 }

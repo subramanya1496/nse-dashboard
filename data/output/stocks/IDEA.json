@@ -3,35 +3,30 @@
   "name": "Vodafone Idea",
   "sector": "Telecom",
   "indicators": {
-    "date": "2026-11-03",
-    "close": 12.26,
-    "prev_close": 12.25,
-    "change_pct": 0.08163265306122275,
-    "ema20": 12.384204886648817,
-    "ema50": 13.004828926156405,
-    "ema200": 12.32693125698291,
-    "rsi14": 45.24672694714551,
-    "macd": -0.4074991749105017,
-    "macd_signal": -0.4813838747140007,
-    "atr14": 0.44693616247120166,
-    "adx14": 34.73311519938411,
-    "adx_pos": 17.334322715312947,
-    "adx_neg": 26.454180636893625,
-    "bb_high": 13.380409433650197,
-    "bb_low": 11.282590566349803,
-    "bb_mid": 12.3315,
-    "vwap20": 12.265306495066179,
+    "date": "2026-11-04",
+    "close": 12.55,
+    "prev_close": 12.26,
+    "change_pct": 2.3654159869494364,
+    "ema20": 12.399994897444161,
+    "ema50": 12.986991818134799,
+    "ema200": 12.322932468368014,
+    "rsi14": 49.50041746643656,
+    "macd": -0.34562089353974557,
+    "macd_signal": -0.45423127846774475,
+    "atr14": 0.4457264365882124,
+    "adx14": 33.35109131202933,
+    "adx_pos": 18.062867154643918,
+    "adx_neg": 24.6312659612613,
+    "bb_high": 13.273718437069547,
+    "bb_low": 11.323281562930454,
+    "bb_mid": 12.2985,
+    "vwap20": 12.230670399361822,
     "high_52w": 15.79,
     "low_52w": 8.13,
-    "volume": 247426262.0,
-    "avg_volume20": 332899879.45
+    "volume": 285168830.0,
+    "avg_volume20": 330297014.9
   },
   "price_history": [
-    {
-      "date": "2026-05-13",
-      "close": 12.83,
-      "ema50": 10.25
-    },
     {
       "date": "2026-05-14",
       "close": 12.97,
@@ -626,43 +621,51 @@
       "date": "2026-11-03",
       "close": 12.26,
       "ema50": 13.0
+    },
+    {
+      "date": "2026-11-04",
+      "close": 12.55,
+      "ema50": 12.99
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": false,
       "ema50_above_ema200": true,
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 12.26 vs EMA20 12.38",
-      "ema20_above_ema50": "EMA20 12.38 vs EMA50 13.00",
-      "ema50_above_ema200": "EMA50 13.00 vs EMA200 12.33",
-      "rsi_above_50": "RSI(14) 45.25 vs 50",
-      "macd_bullish": "MACD -0.41 vs signal -0.48",
-      "adx_trending_up": "ADX(14) 34.73 vs 20, +DI 17.33 vs -DI 26.45",
-      "price_above_vwap20": "Close 12.26 vs 20d VWAP 12.27",
-      "price_above_bb_mid": "Close 12.26 vs BB mid 12.33"
+      "price_above_ema20": "Close 12.55 vs EMA20 12.40",
+      "ema20_above_ema50": "EMA20 12.40 vs EMA50 12.99",
+      "ema50_above_ema200": "EMA50 12.99 vs EMA200 12.32",
+      "rsi_above_50": "RSI(14) 49.50 vs 50",
+      "macd_bullish": "MACD -0.35 vs signal -0.45",
+      "adx_trending_up": "ADX(14) 33.35 vs 20, +DI 18.06 vs -DI 24.63",
+      "price_above_vwap20": "Close 12.55 vs 20d VWAP 12.23",
+      "price_above_bb_mid": "Close 12.55 vs BB mid 12.30"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema50_above_ema200",
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 2,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "2/8 bullish flags",
+        "5/8 bullish flags",
         "patterns: near buy zone"
       ]
     },
@@ -670,26 +673,25 @@
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
         "atr_high": "ATR 0.45 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 45.2",
-        "below_ema200": "Close 12.26 vs EMA200 12.33",
-        "extended_above_ema20": "Close 12.26 vs EMA20 12.38 (-1.0%)",
-        "large_day_move": "Day change +0.1%",
-        "near_52w_low": "Close 12.26 vs 52w low 8.13"
+        "rsi_extreme": "RSI(14) 49.5",
+        "below_ema200": "Close 12.55 vs EMA200 12.32",
+        "extended_above_ema20": "Close 12.55 vs EMA20 12.40 (+1.2%)",
+        "large_day_move": "Day change +2.4%",
+        "near_52w_low": "Close 12.55 vs 52w low 8.13"
       },
       "conditions_on": [
-        "atr_high",
-        "below_ema200"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
@@ -707,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-03T17:49:37.905809+00:00"
+  "updated_at": "2026-11-04T18:00:03.787714+00:00"
 }
