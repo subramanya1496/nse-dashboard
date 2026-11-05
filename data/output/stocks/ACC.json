@@ -3,35 +3,30 @@
   "name": "ACC Ltd",
   "sector": "Cement",
   "indicators": {
-    "date": "2026-11-04",
-    "close": 1185.3,
-    "prev_close": 1170.1,
-    "change_pct": 1.2990342705751685,
-    "ema20": 1166.9238874134492,
-    "ema50": 1208.4009820041051,
-    "ema200": 1378.109937742593,
-    "rsi14": 52.39136120094305,
-    "macd": -13.412952249237605,
-    "macd_signal": -19.909836058767304,
-    "atr14": 34.58666470337203,
-    "adx14": 18.445162226747183,
-    "adx_pos": 20.240162294797813,
-    "adx_neg": 13.739880564402856,
-    "bb_high": 1192.6484282465442,
-    "bb_low": 1114.7115717534555,
-    "bb_mid": 1153.6799999999998,
-    "vwap20": 1159.734798930699,
+    "date": "2026-11-05",
+    "close": 1226.7,
+    "prev_close": 1185.3,
+    "change_pct": 3.4927866362946167,
+    "ema20": 1172.6168505169303,
+    "ema50": 1209.118583234788,
+    "ema200": 1376.5364040491481,
+    "rsi14": 60.58937803651751,
+    "macd": -7.178389359647326,
+    "macd_signal": -17.363546718820555,
+    "atr14": 35.737617224967565,
+    "adx14": 19.680691197843704,
+    "adx_pos": 26.083992168121206,
+    "adx_neg": 12.347566249432658,
+    "bb_high": 1206.9348762326065,
+    "bb_low": 1106.5451237673935,
+    "bb_mid": 1156.74,
+    "vwap20": 1169.5630820491333,
     "high_52w": 1987.0,
     "low_52w": 1115.0,
-    "volume": 721973.0,
-    "avg_volume20": 212618.65
+    "volume": 763774.0,
+    "avg_volume20": 246048.1
   },
   "price_history": [
-    {
-      "date": "2026-05-14",
-      "close": 1378.2,
-      "ema50": 1442.19
-    },
     {
       "date": "2026-05-15",
       "close": 1362.8,
@@ -50,7 +45,7 @@
     {
       "date": "2026-05-20",
       "close": 1351.6,
-      "ema50": 1429.77
+      "ema50": 1429.76
     },
     {
       "date": "2026-05-21",
@@ -75,7 +70,7 @@
     {
       "date": "2026-05-27",
       "close": 1426.6,
-      "ema50": 1422.55
+      "ema50": 1422.54
     },
     {
       "date": "2026-05-29",
@@ -626,6 +621,11 @@
       "date": "2026-11-04",
       "close": 1185.3,
       "ema50": 1208.4
+    },
+    {
+      "date": "2026-11-05",
+      "close": 1226.7,
+      "ema50": 1209.12
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,185.30 vs EMA20 1,166.92",
-      "ema20_above_ema50": "EMA20 1,166.92 vs EMA50 1,208.40",
-      "ema50_above_ema200": "EMA50 1,208.40 vs EMA200 1,378.11",
-      "rsi_above_50": "RSI(14) 52.39 vs 50",
-      "macd_bullish": "MACD -13.41 vs signal -19.91",
-      "adx_trending_up": "ADX(14) 18.45 vs 20, +DI 20.24 vs -DI 13.74",
-      "price_above_vwap20": "Close 1,185.30 vs 20d VWAP 1,159.73",
-      "price_above_bb_mid": "Close 1,185.30 vs BB mid 1,153.68"
+      "price_above_ema20": "Close 1,226.70 vs EMA20 1,172.62",
+      "ema20_above_ema50": "EMA20 1,172.62 vs EMA50 1,209.12",
+      "ema50_above_ema200": "EMA50 1,209.12 vs EMA200 1,376.54",
+      "rsi_above_50": "RSI(14) 60.59 vs 50",
+      "macd_bullish": "MACD -7.18 vs signal -17.36",
+      "adx_trending_up": "ADX(14) 19.68 vs 20, +DI 26.08 vs -DI 12.35",
+      "price_above_vwap20": "Close 1,226.70 vs 20d VWAP 1,169.56",
+      "price_above_bb_mid": "Close 1,226.70 vs BB mid 1,156.74"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,7 +666,7 @@
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
         "5/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: breakout, volume surge"
       ]
     },
     "risk": {
@@ -679,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 34.59 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 52.4",
-        "below_ema200": "Close 1,185.30 vs EMA200 1,378.11",
-        "extended_above_ema20": "Close 1,185.30 vs EMA20 1,166.92 (+1.6%)",
-        "large_day_move": "Day change +1.3%",
-        "near_52w_low": "Close 1,185.30 vs 52w low 1,115.00"
+        "atr_high": "ATR 35.74 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 60.6",
+        "below_ema200": "Close 1,226.70 vs EMA200 1,376.54",
+        "extended_above_ema20": "Close 1,226.70 vs EMA20 1,172.62 (+4.6%)",
+        "large_day_move": "Day change +3.5%",
+        "near_52w_low": "Close 1,226.70 vs 52w low 1,115.00"
       },
       "conditions_on": [
         "atr_high",
@@ -695,14 +695,14 @@
       "level": "elevated"
     },
     "patterns": {
-      "breakout": false,
+      "breakout": true,
       "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -710,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-04T17:58:59.102393+00:00"
+  "updated_at": "2026-11-05T17:59:29.602584+00:00"
 }

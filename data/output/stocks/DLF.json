@@ -3,35 +3,30 @@
   "name": "DLF Ltd",
   "sector": "Realty",
   "indicators": {
-    "date": "2026-11-04",
-    "close": 720.0,
-    "prev_close": 709.0,
-    "change_pct": 1.5514809590973202,
-    "ema20": 679.8164487192943,
-    "ema50": 668.5775786746008,
-    "ema200": 655.8016767031336,
-    "rsi14": 68.91555545566412,
-    "macd": 11.333694018059418,
-    "macd_signal": 5.624976742525708,
-    "atr14": 16.84152125265097,
-    "adx14": 17.064788526721664,
-    "adx_pos": 31.0149096870666,
-    "adx_neg": 12.649148769771726,
-    "bb_high": 713.2856061549356,
-    "bb_low": 630.8493938450644,
-    "bb_mid": 672.0675,
-    "vwap20": 673.2067081247548,
-    "high_52w": 786.5,
+    "date": "2026-11-05",
+    "close": 745.2,
+    "prev_close": 720.0,
+    "change_pct": 3.5000000000000067,
+    "ema20": 686.043453603171,
+    "ema50": 671.582380817708,
+    "ema200": 656.7031706777448,
+    "rsi14": 74.44852897579455,
+    "macd": 15.076228313459183,
+    "macd_signal": 7.515227056690475,
+    "atr14": 17.638555448977055,
+    "adx14": 19.68074331212,
+    "adx_pos": 37.217160907154266,
+    "adx_neg": 11.214887466324265,
+    "bb_high": 727.8831761711847,
+    "bb_low": 625.1718238288154,
+    "bb_mid": 676.5275,
+    "vwap20": 682.7324778672429,
+    "high_52w": 784.65,
     "low_52w": 489.4,
-    "volume": 3626277.0,
-    "avg_volume20": 2527584.8
+    "volume": 7182436.0,
+    "avg_volume20": 2735261.35
   },
   "price_history": [
-    {
-      "date": "2026-05-14",
-      "close": 583.25,
-      "ema50": 589.5
-    },
     {
       "date": "2026-05-15",
       "close": 566.75,
@@ -626,6 +621,11 @@
       "date": "2026-11-04",
       "close": 720.0,
       "ema50": 668.58
+    },
+    {
+      "date": "2026-11-05",
+      "close": 745.2,
+      "ema50": 671.58
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 720.00 vs EMA20 679.82",
-      "ema20_above_ema50": "EMA20 679.82 vs EMA50 668.58",
-      "ema50_above_ema200": "EMA50 668.58 vs EMA200 655.80",
-      "rsi_above_50": "RSI(14) 68.92 vs 50",
-      "macd_bullish": "MACD 11.33 vs signal 5.62",
-      "adx_trending_up": "ADX(14) 17.06 vs 20, +DI 31.01 vs -DI 12.65",
-      "price_above_vwap20": "Close 720.00 vs 20d VWAP 673.21",
-      "price_above_bb_mid": "Close 720.00 vs BB mid 672.07"
+      "price_above_ema20": "Close 745.20 vs EMA20 686.04",
+      "ema20_above_ema50": "EMA20 686.04 vs EMA50 671.58",
+      "ema50_above_ema200": "EMA50 671.58 vs EMA200 656.70",
+      "rsi_above_50": "RSI(14) 74.45 vs 50",
+      "macd_bullish": "MACD 15.08 vs signal 7.52",
+      "adx_trending_up": "ADX(14) 19.68 vs 20, +DI 37.22 vs -DI 11.21",
+      "price_above_vwap20": "Close 745.20 vs 20d VWAP 682.73",
+      "price_above_bb_mid": "Close 745.20 vs BB mid 676.53"
     },
     "flags_on": [
       "price_above_ema20",
@@ -676,20 +676,22 @@
         "atr_high": false,
         "rsi_extreme": false,
         "below_ema200": false,
-        "extended_above_ema20": false,
+        "extended_above_ema20": true,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 16.84 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 68.9",
-        "below_ema200": "Close 720.00 vs EMA200 655.80",
-        "extended_above_ema20": "Close 720.00 vs EMA20 679.82 (+5.9%)",
-        "large_day_move": "Day change +1.6%",
-        "near_52w_low": "Close 720.00 vs 52w low 489.40"
+        "atr_high": "ATR 17.64 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 74.4",
+        "below_ema200": "Close 745.20 vs EMA200 656.70",
+        "extended_above_ema20": "Close 745.20 vs EMA20 686.04 (+8.6%)",
+        "large_day_move": "Day change +3.5%",
+        "near_52w_low": "Close 745.20 vs 52w low 489.40"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "extended_above_ema20"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -709,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-04T17:59:28.481053+00:00"
+  "updated_at": "2026-11-05T18:00:02.829895+00:00"
 }
