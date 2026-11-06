@@ -3,35 +3,30 @@
   "name": "ICICI Prudential Asset Management",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-11-05",
-    "close": 2979.1,
-    "prev_close": 2880.2,
-    "change_pct": 3.4337893201861016,
-    "ema20": 2865.174779883875,
-    "ema50": 2963.250181311105,
-    "ema200": 3014.828183529577,
-    "rsi14": 57.07885400797442,
-    "macd": -46.63539559778519,
-    "macd_signal": -74.52094233310518,
-    "atr14": 81.75123087244167,
-    "adx14": 29.378838510856884,
-    "adx_pos": 26.576105243776997,
-    "adx_neg": 22.227242990646676,
-    "bb_high": 3062.1496899166427,
-    "bb_low": 2613.4803100833565,
-    "bb_mid": 2837.8149999999996,
-    "vwap20": 2848.6611020201535,
+    "date": "2026-11-06",
+    "close": 2935.8,
+    "prev_close": 2979.1,
+    "change_pct": -1.4534590983854094,
+    "ema20": 2871.900991323506,
+    "ema50": 2962.17370361263,
+    "ema200": 3014.041833444706,
+    "rsi14": 53.31150806586938,
+    "macd": -35.691024951898726,
+    "macd_signal": -66.7549588568639,
+    "atr14": 82.37614295298155,
+    "adx14": 27.69394332041936,
+    "adx_pos": 24.49060411861033,
+    "adx_neg": 21.809676276750643,
+    "bb_high": 3035.308236666798,
+    "bb_low": 2627.2617633332015,
+    "bb_mid": 2831.285,
+    "vwap20": 2836.51952597809,
     "high_52w": 3611.0,
     "low_52w": 2530.0,
-    "volume": 542464.0,
-    "avg_volume20": 379009.1
+    "volume": 309419.0,
+    "avg_volume20": 366338.2
   },
   "price_history": [
-    {
-      "date": "2026-05-15",
-      "close": 3199.6,
-      "ema50": 3147.8
-    },
     {
       "date": "2026-05-18",
       "close": 3133.4,
@@ -626,6 +621,11 @@
       "date": "2026-11-05",
       "close": 2979.1,
       "ema50": 2963.25
+    },
+    {
+      "date": "2026-11-06",
+      "close": 2935.8,
+      "ema50": 2962.17
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,979.10 vs EMA20 2,865.17",
-      "ema20_above_ema50": "EMA20 2,865.17 vs EMA50 2,963.25",
-      "ema50_above_ema200": "EMA50 2,963.25 vs EMA200 3,014.83",
-      "rsi_above_50": "RSI(14) 57.08 vs 50",
-      "macd_bullish": "MACD -46.64 vs signal -74.52",
-      "adx_trending_up": "ADX(14) 29.38 vs 20, +DI 26.58 vs -DI 22.23",
-      "price_above_vwap20": "Close 2,979.10 vs 20d VWAP 2,848.66",
-      "price_above_bb_mid": "Close 2,979.10 vs BB mid 2,837.81"
+      "price_above_ema20": "Close 2,935.80 vs EMA20 2,871.90",
+      "ema20_above_ema50": "EMA20 2,871.90 vs EMA50 2,962.17",
+      "ema50_above_ema200": "EMA50 2,962.17 vs EMA200 3,014.04",
+      "rsi_above_50": "RSI(14) 53.31 vs 50",
+      "macd_bullish": "MACD -35.69 vs signal -66.75",
+      "adx_trending_up": "ADX(14) 27.69 vs 20, +DI 24.49 vs -DI 21.81",
+      "price_above_vwap20": "Close 2,935.80 vs 20d VWAP 2,836.52",
+      "price_above_bb_mid": "Close 2,935.80 vs BB mid 2,831.28"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,8 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags",
-        "patterns: volume surge"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -680,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 81.75 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 57.1",
-        "below_ema200": "Close 2,979.10 vs EMA200 3,014.83",
-        "extended_above_ema20": "Close 2,979.10 vs EMA20 2,865.17 (+4.0%)",
-        "large_day_move": "Day change +3.4%",
-        "near_52w_low": "Close 2,979.10 vs 52w low 2,530.00"
+        "atr_high": "ATR 82.38 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 53.3",
+        "below_ema200": "Close 2,935.80 vs EMA200 3,014.04",
+        "extended_above_ema20": "Close 2,935.80 vs EMA20 2,871.90 (+2.2%)",
+        "large_day_move": "Day change -1.5%",
+        "near_52w_low": "Close 2,935.80 vs 52w low 2,530.00"
       },
       "conditions_on": [
         "atr_high",
@@ -697,12 +696,12 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "neutral",
+      "daily": "bearish",
       "weekly": "neutral",
       "intraday": null
     }
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-05T18:00:32.423463+00:00"
+  "updated_at": "2026-11-06T17:29:01.449639+00:00"
 }
