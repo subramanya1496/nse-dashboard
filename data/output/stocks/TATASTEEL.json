@@ -3,35 +3,30 @@
   "name": "Tata Steel",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-11-09",
-    "close": 184.85,
-    "prev_close": 190.2,
-    "change_pct": -2.8128286014721318,
-    "ema20": 178.47406254146787,
-    "ema50": 180.0997463080041,
-    "ema200": 185.8056400711725,
-    "rsi14": 58.753400981657464,
-    "macd": 1.5026026897342035,
-    "macd_signal": -0.7601195357134274,
-    "atr14": 5.268153513422204,
-    "adx14": 24.45453122918128,
-    "adx_pos": 30.83851568673867,
-    "adx_neg": 17.738281077284483,
-    "bb_high": 187.93470627342802,
-    "bb_low": 163.33729372657197,
-    "bb_mid": 175.636,
-    "vwap20": 176.28673922498862,
+    "date": "2026-11-11",
+    "close": 189.28,
+    "prev_close": 184.85,
+    "change_pct": 2.3965377332972717,
+    "ema20": 179.5031994422805,
+    "ema50": 180.4597626350022,
+    "ema200": 185.90035512199967,
+    "rsi14": 63.192524762357195,
+    "macd": 2.139849720473393,
+    "macd_signal": -0.18012568457920508,
+    "atr14": 5.2432854053322675,
+    "adx14": 24.634071177824726,
+    "adx_pos": 28.771579658666308,
+    "adx_neg": 16.549381695519568,
+    "bb_high": 190.0017339558042,
+    "bb_low": 162.69826604419578,
+    "bb_mid": 176.35,
+    "vwap20": 177.21743241454408,
     "high_52w": 224.4,
     "low_52w": 160.06,
-    "volume": 49905496.0,
-    "avg_volume20": 23617550.5
+    "volume": 33811414.0,
+    "avg_volume20": 24278090.15
   },
   "price_history": [
-    {
-      "date": "2026-05-20",
-      "close": 207.01,
-      "ema50": 206.78
-    },
     {
       "date": "2026-05-21",
       "close": 208.58,
@@ -626,6 +621,11 @@
       "date": "2026-11-09",
       "close": 184.85,
       "ema50": 180.1
+    },
+    {
+      "date": "2026-11-11",
+      "close": 189.28,
+      "ema50": 180.46
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 184.85 vs EMA20 178.47",
-      "ema20_above_ema50": "EMA20 178.47 vs EMA50 180.10",
-      "ema50_above_ema200": "EMA50 180.10 vs EMA200 185.81",
-      "rsi_above_50": "RSI(14) 58.75 vs 50",
-      "macd_bullish": "MACD 1.50 vs signal -0.76",
-      "adx_trending_up": "ADX(14) 24.45 vs 20, +DI 30.84 vs -DI 17.74",
-      "price_above_vwap20": "Close 184.85 vs 20d VWAP 176.29",
-      "price_above_bb_mid": "Close 184.85 vs BB mid 175.64"
+      "price_above_ema20": "Close 189.28 vs EMA20 179.50",
+      "ema20_above_ema50": "EMA20 179.50 vs EMA50 180.46",
+      "ema50_above_ema200": "EMA50 180.46 vs EMA200 185.90",
+      "rsi_above_50": "RSI(14) 63.19 vs 50",
+      "macd_bullish": "MACD 2.14 vs signal -0.18",
+      "adx_trending_up": "ADX(14) 24.63 vs 20, +DI 28.77 vs -DI 16.55",
+      "price_above_vwap20": "Close 189.28 vs 20d VWAP 177.22",
+      "price_above_bb_mid": "Close 189.28 vs BB mid 176.35"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,38 +666,36 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags",
-        "patterns: volume surge"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": true,
         "rsi_extreme": false,
-        "below_ema200": true,
+        "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.27 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 58.8",
-        "below_ema200": "Close 184.85 vs EMA200 185.81",
-        "extended_above_ema20": "Close 184.85 vs EMA20 178.47 (+3.6%)",
-        "large_day_move": "Day change -2.8%",
-        "near_52w_low": "Close 184.85 vs 52w low 160.06"
+        "atr_high": "ATR 5.24 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 63.2",
+        "below_ema200": "Close 189.28 vs EMA200 185.90",
+        "extended_above_ema20": "Close 189.28 vs EMA20 179.50 (+5.4%)",
+        "large_day_move": "Day change +2.4%",
+        "near_52w_low": "Close 189.28 vs 52w low 160.06"
       },
       "conditions_on": [
-        "atr_high",
-        "below_ema200"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-10T17:48:09.908255+00:00"
+  "updated_at": "2026-11-11T17:54:46.267172+00:00"
 }

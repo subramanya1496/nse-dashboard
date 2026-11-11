@@ -3,35 +3,30 @@
   "name": "SRF Ltd",
   "sector": "Chemicals",
   "indicators": {
-    "date": "2026-11-09",
-    "close": 2459.7,
-    "prev_close": 2470.0,
-    "change_pct": -0.41700404858300333,
-    "ema20": 2431.1249963128266,
-    "ema50": 2475.4511274287865,
-    "ema200": 2624.321040275008,
-    "rsi14": 53.16048511247447,
-    "macd": -5.308757476852861,
-    "macd_signal": -22.1724148606895,
-    "atr14": 58.317228206766565,
-    "adx14": 23.44300469662303,
-    "adx_pos": 22.109344201806653,
-    "adx_neg": 25.76575349262636,
-    "bb_high": 2547.276394803202,
-    "bb_low": 2275.1936051967973,
-    "bb_mid": 2411.2349999999997,
-    "vwap20": 2365.926428276869,
+    "date": "2026-11-11",
+    "close": 2510.6,
+    "prev_close": 2459.7,
+    "change_pct": 2.069358051794938,
+    "ema20": 2438.6940442830337,
+    "ema50": 2476.829514086214,
+    "ema200": 2623.1847518633876,
+    "rsi14": 59.41731452448769,
+    "macd": 1.3400278807689574,
+    "macd_signal": -17.469926312390033,
+    "atr14": 59.53028333385839,
+    "adx14": 22.03566481656993,
+    "adx_pos": 25.259201280080067,
+    "adx_neg": 23.437813194581235,
+    "bb_high": 2550.6347985121724,
+    "bb_low": 2273.6952014878275,
+    "bb_mid": 2412.165,
+    "vwap20": 2372.4957607703586,
     "high_52w": 3143.0,
     "low_52w": 2178.3,
-    "volume": 315750.0,
-    "avg_volume20": 351169.95
+    "volume": 463906.0,
+    "avg_volume20": 367827.05
   },
   "price_history": [
-    {
-      "date": "2026-05-20",
-      "close": 2613.3,
-      "ema50": 2613.0
-    },
     {
       "date": "2026-05-21",
       "close": 2620.4,
@@ -626,6 +621,11 @@
       "date": "2026-11-09",
       "close": 2459.7,
       "ema50": 2475.45
+    },
+    {
+      "date": "2026-11-11",
+      "close": 2510.6,
+      "ema50": 2476.83
     }
   ],
   "flags": {
@@ -635,28 +635,29 @@
       "ema50_above_ema200": false,
       "rsi_above_50": true,
       "macd_bullish": true,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,459.70 vs EMA20 2,431.12",
-      "ema20_above_ema50": "EMA20 2,431.12 vs EMA50 2,475.45",
-      "ema50_above_ema200": "EMA50 2,475.45 vs EMA200 2,624.32",
-      "rsi_above_50": "RSI(14) 53.16 vs 50",
-      "macd_bullish": "MACD -5.31 vs signal -22.17",
-      "adx_trending_up": "ADX(14) 23.44 vs 20, +DI 22.11 vs -DI 25.77",
-      "price_above_vwap20": "Close 2,459.70 vs 20d VWAP 2,365.93",
-      "price_above_bb_mid": "Close 2,459.70 vs BB mid 2,411.23"
+      "price_above_ema20": "Close 2,510.60 vs EMA20 2,438.69",
+      "ema20_above_ema50": "EMA20 2,438.69 vs EMA50 2,476.83",
+      "ema50_above_ema200": "EMA50 2,476.83 vs EMA200 2,623.18",
+      "rsi_above_50": "RSI(14) 59.42 vs 50",
+      "macd_bullish": "MACD 1.34 vs signal -17.47",
+      "adx_trending_up": "ADX(14) 22.04 vs 20, +DI 25.26 vs -DI 23.44",
+      "price_above_vwap20": "Close 2,510.60 vs 20d VWAP 2,372.50",
+      "price_above_bb_mid": "Close 2,510.60 vs BB mid 2,412.16"
     },
     "flags_on": [
       "price_above_ema20",
       "rsi_above_50",
       "macd_bullish",
+      "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 6,
     "flag_total": 8
   },
   "decision": {
@@ -665,7 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 58.32 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 53.2",
-        "below_ema200": "Close 2,459.70 vs EMA200 2,624.32",
-        "extended_above_ema20": "Close 2,459.70 vs EMA20 2,431.12 (+1.2%)",
-        "large_day_move": "Day change -0.4%",
-        "near_52w_low": "Close 2,459.70 vs 52w low 2,178.30"
+        "atr_high": "ATR 59.53 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 59.4",
+        "below_ema200": "Close 2,510.60 vs EMA200 2,623.18",
+        "extended_above_ema20": "Close 2,510.60 vs EMA20 2,438.69 (+2.9%)",
+        "large_day_move": "Day change +2.1%",
+        "near_52w_low": "Close 2,510.60 vs 52w low 2,178.30"
       },
       "conditions_on": [
         "below_ema200"
@@ -699,8 +700,8 @@
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -708,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-10T17:48:01.912092+00:00"
+  "updated_at": "2026-11-11T17:54:39.856863+00:00"
 }

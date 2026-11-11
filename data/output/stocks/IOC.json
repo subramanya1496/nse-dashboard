@@ -3,35 +3,30 @@
   "name": "Indian Oil Corporation",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-11-09",
-    "close": 146.85,
-    "prev_close": 145.1,
-    "change_pct": 1.206064782908339,
-    "ema20": 136.9802894516077,
-    "ema50": 135.49054528465888,
-    "ema200": 141.5906328123521,
-    "rsi14": 73.59774877246035,
-    "macd": 3.458182055210756,
-    "macd_signal": 1.4709769395211931,
-    "atr14": 3.3120095535947636,
-    "adx14": 28.906212644615465,
-    "adx_pos": 39.46094997424456,
-    "adx_neg": 13.477242938355092,
-    "bb_high": 147.62390790718038,
-    "bb_low": 120.8140920928196,
-    "bb_mid": 134.219,
-    "vwap20": 136.31101288761172,
+    "date": "2026-11-11",
+    "close": 148.38,
+    "prev_close": 146.85,
+    "change_pct": 1.0418794688457618,
+    "ema20": 138.06597617050227,
+    "ema50": 135.9960226348968,
+    "ema200": 141.73869682992665,
+    "rsi14": 75.2429688563426,
+    "macd": 3.907103272154984,
+    "macd_signal": 1.9582022059098434,
+    "atr14": 3.304008871160634,
+    "adx14": 30.49587642380929,
+    "adx_pos": 38.82805994311499,
+    "adx_neg": 12.544886885059569,
+    "bb_high": 149.53656637378407,
+    "bb_low": 121.12543362621597,
+    "bb_mid": 135.33100000000002,
+    "vwap20": 137.45860904469941,
     "high_52w": 188.96,
     "low_52w": 124.92,
-    "volume": 22650357.0,
-    "avg_volume20": 12322893.5
+    "volume": 19133588.0,
+    "avg_volume20": 12967050.05
   },
   "price_history": [
-    {
-      "date": "2026-05-20",
-      "close": 138.04,
-      "ema50": 146.22
-    },
     {
       "date": "2026-05-21",
       "close": 140.53,
@@ -95,7 +90,7 @@
     {
       "date": "2026-06-09",
       "close": 138.13,
-      "ema50": 143.48
+      "ema50": 143.49
     },
     {
       "date": "2026-06-10",
@@ -626,6 +621,11 @@
       "date": "2026-11-09",
       "close": 146.85,
       "ema50": 135.49
+    },
+    {
+      "date": "2026-11-11",
+      "close": 148.38,
+      "ema50": 136.0
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 146.85 vs EMA20 136.98",
-      "ema20_above_ema50": "EMA20 136.98 vs EMA50 135.49",
-      "ema50_above_ema200": "EMA50 135.49 vs EMA200 141.59",
-      "rsi_above_50": "RSI(14) 73.60 vs 50",
-      "macd_bullish": "MACD 3.46 vs signal 1.47",
-      "adx_trending_up": "ADX(14) 28.91 vs 20, +DI 39.46 vs -DI 13.48",
-      "price_above_vwap20": "Close 146.85 vs 20d VWAP 136.31",
-      "price_above_bb_mid": "Close 146.85 vs BB mid 134.22"
+      "price_above_ema20": "Close 148.38 vs EMA20 138.07",
+      "ema20_above_ema50": "EMA20 138.07 vs EMA50 136.00",
+      "ema50_above_ema200": "EMA50 136.00 vs EMA200 141.74",
+      "rsi_above_50": "RSI(14) 75.24 vs 50",
+      "macd_bullish": "MACD 3.91 vs signal 1.96",
+      "adx_trending_up": "ADX(14) 30.50 vs 20, +DI 38.83 vs -DI 12.54",
+      "price_above_vwap20": "Close 148.38 vs 20d VWAP 137.46",
+      "price_above_bb_mid": "Close 148.38 vs BB mid 135.33"
     },
     "flags_on": [
       "price_above_ema20",
@@ -674,22 +674,24 @@
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.31 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 73.6",
-        "below_ema200": "Close 146.85 vs EMA200 141.59",
-        "extended_above_ema20": "Close 146.85 vs EMA20 136.98 (+7.2%)",
-        "large_day_move": "Day change +1.2%",
-        "near_52w_low": "Close 146.85 vs 52w low 124.92"
+        "atr_high": "ATR 3.30 = 2.2% of price",
+        "rsi_extreme": "RSI(14) 75.2",
+        "below_ema200": "Close 148.38 vs EMA200 141.74",
+        "extended_above_ema20": "Close 148.38 vs EMA20 138.07 (+7.5%)",
+        "large_day_move": "Day change +1.0%",
+        "near_52w_low": "Close 148.38 vs 52w low 124.92"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "rsi_extreme"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -709,5 +711,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-10T17:46:53.597844+00:00"
+  "updated_at": "2026-11-11T17:53:31.669145+00:00"
 }
