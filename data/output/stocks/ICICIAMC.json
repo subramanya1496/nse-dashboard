@@ -3,35 +3,30 @@
   "name": "ICICI Prudential Asset Management",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-11-11",
-    "close": 3113.0,
-    "prev_close": 2970.8,
-    "change_pct": 4.786589470849596,
-    "ema20": 2910.946884730367,
-    "ema50": 2968.656973986795,
-    "ema200": 3014.160227894772,
-    "rsi14": 64.85406793030863,
-    "macd": 4.438904713592365,
-    "macd_signal": -38.697676661272894,
-    "atr14": 82.61500949989082,
-    "adx14": 25.8991181101533,
-    "adx_pos": 33.91538906933766,
-    "adx_neg": 17.411559240327858,
-    "bb_high": 3062.868264404906,
-    "bb_low": 2611.1517355950937,
-    "bb_mid": 2837.0099999999998,
-    "vwap20": 2824.842930789435,
+    "date": "2026-11-12",
+    "close": 3124.2,
+    "prev_close": 3113.0,
+    "change_pct": 0.35978156119498295,
+    "ema20": 2931.2567052322365,
+    "ema50": 2974.756700497117,
+    "ema200": 3015.255151000297,
+    "rsi14": 65.4512769195221,
+    "macd": 20.149628554791434,
+    "macd_signal": -26.92821561806003,
+    "atr14": 81.39250882132718,
+    "adx14": 26.55294207130567,
+    "adx_pos": 34.124729164302636,
+    "adx_neg": 16.410714994968984,
+    "bb_high": 3104.068709127334,
+    "bb_low": 2590.851290872666,
+    "bb_mid": 2847.46,
+    "vwap20": 2829.04095786379,
     "high_52w": 3611.0,
     "low_52w": 2530.0,
-    "volume": 334971.0,
-    "avg_volume20": 333807.9
+    "volume": 185993.0,
+    "avg_volume20": 328262.4
   },
   "price_history": [
-    {
-      "date": "2026-05-21",
-      "close": 3199.7,
-      "ema50": 3147.2
-    },
     {
       "date": "2026-05-22",
       "close": 3229.8,
@@ -626,6 +621,11 @@
       "date": "2026-11-11",
       "close": 3113.0,
       "ema50": 2968.66
+    },
+    {
+      "date": "2026-11-12",
+      "close": 3124.2,
+      "ema50": 2974.76
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 3,113.00 vs EMA20 2,910.95",
-      "ema20_above_ema50": "EMA20 2,910.95 vs EMA50 2,968.66",
-      "ema50_above_ema200": "EMA50 2,968.66 vs EMA200 3,014.16",
-      "rsi_above_50": "RSI(14) 64.85 vs 50",
-      "macd_bullish": "MACD 4.44 vs signal -38.70",
-      "adx_trending_up": "ADX(14) 25.90 vs 20, +DI 33.92 vs -DI 17.41",
-      "price_above_vwap20": "Close 3,113.00 vs 20d VWAP 2,824.84",
-      "price_above_bb_mid": "Close 3,113.00 vs BB mid 2,837.01"
+      "price_above_ema20": "Close 3,124.20 vs EMA20 2,931.26",
+      "ema20_above_ema50": "EMA20 2,931.26 vs EMA50 2,974.76",
+      "ema50_above_ema200": "EMA50 2,974.76 vs EMA200 3,015.26",
+      "rsi_above_50": "RSI(14) 65.45 vs 50",
+      "macd_bullish": "MACD 20.15 vs signal -26.93",
+      "adx_trending_up": "ADX(14) 26.55 vs 20, +DI 34.12 vs -DI 16.41",
+      "price_above_vwap20": "Close 3,124.20 vs 20d VWAP 2,829.04",
+      "price_above_bb_mid": "Close 3,124.20 vs BB mid 2,847.46"
     },
     "flags_on": [
       "price_above_ema20",
@@ -676,24 +676,23 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 82.62 = 2.7% of price",
-        "rsi_extreme": "RSI(14) 64.9",
-        "below_ema200": "Close 3,113.00 vs EMA200 3,014.16",
-        "extended_above_ema20": "Close 3,113.00 vs EMA20 2,910.95 (+6.9%)",
-        "large_day_move": "Day change +4.8%",
-        "near_52w_low": "Close 3,113.00 vs 52w low 2,530.00"
+        "atr_high": "ATR 81.39 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 65.5",
+        "below_ema200": "Close 3,124.20 vs EMA200 3,015.26",
+        "extended_above_ema20": "Close 3,124.20 vs EMA20 2,931.26 (+6.6%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 3,124.20 vs 52w low 2,530.00"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": true,
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-11T17:53:25.276235+00:00"
+  "updated_at": "2026-11-12T18:15:08.728800+00:00"
 }
