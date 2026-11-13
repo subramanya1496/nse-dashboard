@@ -3,35 +3,30 @@
   "name": "Punjab National Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-11-12",
-    "close": 141.79,
-    "prev_close": 138.48,
-    "change_pct": 2.3902368573079165,
-    "ema20": 125.78458482765011,
-    "ema50": 120.59189758367395,
-    "ema200": 115.22628889393194,
-    "rsi14": 79.96364073326848,
-    "macd": 4.740910283813008,
-    "macd_signal": 2.9336581201191554,
-    "atr14": 3.737512567426315,
-    "adx14": 34.2933687485013,
-    "adx_pos": 48.010454505131456,
-    "adx_neg": 8.72777654109172,
-    "bb_high": 136.98319545054764,
-    "bb_low": 111.50980454945235,
-    "bb_mid": 124.2465,
-    "vwap20": 126.76130614422439,
-    "high_52w": 143.8,
+    "date": "2026-11-13",
+    "close": 142.81,
+    "prev_close": 141.79,
+    "change_pct": 0.7193737217011146,
+    "ema20": 127.40605293930247,
+    "ema50": 121.46319596876138,
+    "ema200": 115.50312156709106,
+    "rsi14": 80.62956154955039,
+    "macd": 5.493870892764534,
+    "macd_signal": 3.4457006746441823,
+    "atr14": 3.739833098344698,
+    "adx14": 36.89105876140168,
+    "adx_pos": 47.112793867633265,
+    "adx_neg": 8.099335250594475,
+    "bb_high": 140.00540181582215,
+    "bb_low": 111.26359818417787,
+    "bb_mid": 125.6345,
+    "vwap20": 128.63043065381103,
+    "high_52w": 145.14,
     "low_52w": 98.5,
-    "volume": 62142239.0,
-    "avg_volume20": 29457840.45
+    "volume": 61238582.0,
+    "avg_volume20": 31659150.15
   },
   "price_history": [
-    {
-      "date": "2026-05-22",
-      "close": 102.66,
-      "ema50": 109.64
-    },
     {
       "date": "2026-05-25",
       "close": 106.26,
@@ -626,6 +621,11 @@
       "date": "2026-11-12",
       "close": 141.79,
       "ema50": 120.59
+    },
+    {
+      "date": "2026-11-13",
+      "close": 142.81,
+      "ema50": 121.46
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 141.79 vs EMA20 125.78",
-      "ema20_above_ema50": "EMA20 125.78 vs EMA50 120.59",
-      "ema50_above_ema200": "EMA50 120.59 vs EMA200 115.23",
-      "rsi_above_50": "RSI(14) 79.96 vs 50",
-      "macd_bullish": "MACD 4.74 vs signal 2.93",
-      "adx_trending_up": "ADX(14) 34.29 vs 20, +DI 48.01 vs -DI 8.73",
-      "price_above_vwap20": "Close 141.79 vs 20d VWAP 126.76",
-      "price_above_bb_mid": "Close 141.79 vs BB mid 124.25"
+      "price_above_ema20": "Close 142.81 vs EMA20 127.41",
+      "ema20_above_ema50": "EMA20 127.41 vs EMA50 121.46",
+      "ema50_above_ema200": "EMA50 121.46 vs EMA200 115.50",
+      "rsi_above_50": "RSI(14) 80.63 vs 50",
+      "macd_bullish": "MACD 5.49 vs signal 3.45",
+      "adx_trending_up": "ADX(14) 36.89 vs 20, +DI 47.11 vs -DI 8.10",
+      "price_above_vwap20": "Close 142.81 vs 20d VWAP 128.63",
+      "price_above_bb_mid": "Close 142.81 vs BB mid 125.63"
     },
     "flags_on": [
       "price_above_ema20",
@@ -669,7 +669,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "8/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: breakout, volume surge, silent accumulation"
       ]
     },
     "risk": {
@@ -683,11 +683,11 @@
       },
       "conditions_detail": {
         "atr_high": "ATR 3.74 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 80.0",
-        "below_ema200": "Close 141.79 vs EMA200 115.23",
-        "extended_above_ema20": "Close 141.79 vs EMA20 125.78 (+12.7%)",
-        "large_day_move": "Day change +2.4%",
-        "near_52w_low": "Close 141.79 vs 52w low 98.50"
+        "rsi_extreme": "RSI(14) 80.6",
+        "below_ema200": "Close 142.81 vs EMA200 115.50",
+        "extended_above_ema20": "Close 142.81 vs EMA20 127.41 (+12.1%)",
+        "large_day_move": "Day change +0.7%",
+        "near_52w_low": "Close 142.81 vs 52w low 98.50"
       },
       "conditions_on": [
         "atr_high",
@@ -701,7 +701,7 @@
     "patterns": {
       "breakout": true,
       "volume_surge": true,
-      "silent_accumulation": false,
+      "silent_accumulation": true,
       "near_buy_zone": false
     },
     "trend": {
@@ -714,5 +714,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-12T18:16:09.422553+00:00"
+  "updated_at": "2026-11-13T17:44:06.146498+00:00"
 }
