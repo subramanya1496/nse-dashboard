@@ -3,39 +3,34 @@
   "name": "Indraprastha Gas",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-11-13",
-    "close": 142.33,
-    "prev_close": 143.34,
-    "change_pct": -0.7046183898423266,
-    "ema20": 141.7010255082655,
-    "ema50": 144.22403582515474,
-    "ema200": 158.48307165437845,
-    "rsi14": 50.38508110541294,
-    "macd": -0.40773115223458944,
-    "macd_signal": -1.2152414756459382,
-    "atr14": 3.722619895895734,
-    "adx14": 18.03471314488807,
-    "adx_pos": 20.866739752108135,
-    "adx_neg": 26.058002304747735,
-    "bb_high": 146.89843180306292,
-    "bb_low": 134.5665681969371,
-    "bb_mid": 140.73250000000002,
-    "vwap20": 137.68553210987352,
+    "date": "2026-11-16",
+    "close": 147.4,
+    "prev_close": 142.33,
+    "change_pct": 3.5621443125131687,
+    "ema20": 142.24378498366912,
+    "ema50": 144.3486049803,
+    "ema200": 158.57059054107944,
+    "rsi14": 59.25421264354545,
+    "macd": 0.07980180282578431,
+    "macd_signal": -0.9562328203115953,
+    "atr14": 4.038861331998558,
+    "adx14": 17.399526837901707,
+    "adx_pos": 26.790192701151078,
+    "adx_neg": 22.3021219560134,
+    "bb_high": 147.70509168393284,
+    "bb_low": 134.19390831606717,
+    "bb_mid": 140.9495,
+    "vwap20": 138.15442859999038,
     "high_52w": 218.38,
     "low_52w": 125.63,
-    "volume": 617768.0,
-    "avg_volume20": 1500136.45
+    "volume": 2541439.0,
+    "avg_volume20": 1587618.25
   },
   "price_history": [
     {
-      "date": "2026-05-25",
-      "close": 160.48,
-      "ema50": 161.74
-    },
-    {
       "date": "2026-05-26",
       "close": 166.01,
-      "ema50": 161.9
+      "ema50": 161.91
     },
     {
       "date": "2026-05-27",
@@ -55,12 +50,12 @@
     {
       "date": "2026-06-02",
       "close": 160.85,
-      "ema50": 162.0
+      "ema50": 162.01
     },
     {
       "date": "2026-06-03",
       "close": 161.48,
-      "ema50": 161.98
+      "ema50": 161.99
     },
     {
       "date": "2026-06-04",
@@ -170,7 +165,7 @@
     {
       "date": "2026-07-06",
       "close": 152.22,
-      "ema50": 162.94
+      "ema50": 162.95
     },
     {
       "date": "2026-07-07",
@@ -235,7 +230,7 @@
     {
       "date": "2026-07-23",
       "close": 149.9,
-      "ema50": 158.67
+      "ema50": 158.68
     },
     {
       "date": "2026-07-24",
@@ -335,7 +330,7 @@
     {
       "date": "2026-08-20",
       "close": 150.55,
-      "ema50": 155.09
+      "ema50": 155.1
     },
     {
       "date": "2026-08-21",
@@ -626,6 +621,11 @@
       "date": "2026-11-13",
       "close": 142.33,
       "ema50": 144.22
+    },
+    {
+      "date": "2026-11-16",
+      "close": 147.4,
+      "ema50": 144.35
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 142.33 vs EMA20 141.70",
-      "ema20_above_ema50": "EMA20 141.70 vs EMA50 144.22",
-      "ema50_above_ema200": "EMA50 144.22 vs EMA200 158.48",
-      "rsi_above_50": "RSI(14) 50.39 vs 50",
-      "macd_bullish": "MACD -0.41 vs signal -1.22",
-      "adx_trending_up": "ADX(14) 18.03 vs 20, +DI 20.87 vs -DI 26.06",
-      "price_above_vwap20": "Close 142.33 vs 20d VWAP 137.69",
-      "price_above_bb_mid": "Close 142.33 vs BB mid 140.73"
+      "price_above_ema20": "Close 147.40 vs EMA20 142.24",
+      "ema20_above_ema50": "EMA20 142.24 vs EMA50 144.35",
+      "ema50_above_ema200": "EMA50 144.35 vs EMA200 158.57",
+      "rsi_above_50": "RSI(14) 59.25 vs 50",
+      "macd_bullish": "MACD 0.08 vs signal -0.96",
+      "adx_trending_up": "ADX(14) 17.40 vs 20, +DI 26.79 vs -DI 22.30",
+      "price_above_vwap20": "Close 147.40 vs 20d VWAP 138.15",
+      "price_above_bb_mid": "Close 147.40 vs BB mid 140.95"
     },
     "flags_on": [
       "price_above_ema20",
@@ -665,7 +665,8 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.72 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 50.4",
-        "below_ema200": "Close 142.33 vs EMA200 158.48",
-        "extended_above_ema20": "Close 142.33 vs EMA20 141.70 (+0.4%)",
-        "large_day_move": "Day change -0.7%",
-        "near_52w_low": "Close 142.33 vs 52w low 125.63"
+        "atr_high": "ATR 4.04 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 59.3",
+        "below_ema200": "Close 147.40 vs EMA200 158.57",
+        "extended_above_ema20": "Close 147.40 vs EMA20 142.24 (+3.6%)",
+        "large_day_move": "Day change +3.6%",
+        "near_52w_low": "Close 147.40 vs 52w low 125.63"
       },
       "conditions_on": [
         "atr_high",
@@ -695,13 +696,13 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
-      "daily": "bearish",
-      "weekly": "bearish",
+      "daily": "neutral",
+      "weekly": "neutral",
       "intraday": null
     }
   },
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-13T17:43:08.411254+00:00"
+  "updated_at": "2026-11-16T20:25:05.758614+00:00"
 }
