@@ -3,35 +3,30 @@
   "name": "Krishna Institute of Medical Sciences",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-11-16",
-    "close": 763.35,
-    "prev_close": 729.65,
-    "change_pct": 4.618652778729534,
-    "ema20": 723.1485039300786,
-    "ema50": 731.8211752677789,
-    "ema200": 738.0365595039433,
-    "rsi14": 65.46099806287738,
-    "macd": 5.181443239834721,
-    "macd_signal": -1.050325604607745,
-    "atr14": 21.620834160053672,
-    "adx14": 23.234816481813436,
-    "adx_pos": 27.49612173304048,
-    "adx_neg": 12.724318898753118,
-    "bb_high": 764.533648542531,
-    "bb_low": 656.591351457469,
-    "bb_mid": 710.5625,
-    "vwap20": 710.8498800937427,
+    "date": "2026-11-17",
+    "close": 768.3,
+    "prev_close": 763.35,
+    "change_pct": 0.6484574572607495,
+    "ema20": 727.4486464129283,
+    "ema50": 733.2517174141406,
+    "ema200": 738.3376882650981,
+    "rsi14": 66.73020098766978,
+    "macd": 7.993621168229652,
+    "macd_signal": 0.7584637499597344,
+    "atr14": 21.737203148621266,
+    "adx14": 24.535252689506276,
+    "adx_pos": 28.38569329863291,
+    "adx_neg": 11.7521856382314,
+    "bb_high": 772.4403687093361,
+    "bb_low": 657.6646312906639,
+    "bb_mid": 715.0525,
+    "vwap20": 714.2911297787228,
     "high_52w": 858.0,
     "low_52w": 575.8,
-    "volume": 1096690.0,
-    "avg_volume20": 431670.55
+    "volume": 288052.0,
+    "avg_volume20": 426094.5
   },
   "price_history": [
-    {
-      "date": "2026-05-26",
-      "close": 767.75,
-      "ema50": 703.13
-    },
     {
       "date": "2026-05-27",
       "close": 784.45,
@@ -626,6 +621,11 @@
       "date": "2026-11-16",
       "close": 763.35,
       "ema50": 731.82
+    },
+    {
+      "date": "2026-11-17",
+      "close": 768.3,
+      "ema50": 733.25
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 763.35 vs EMA20 723.15",
-      "ema20_above_ema50": "EMA20 723.15 vs EMA50 731.82",
-      "ema50_above_ema200": "EMA50 731.82 vs EMA200 738.04",
-      "rsi_above_50": "RSI(14) 65.46 vs 50",
-      "macd_bullish": "MACD 5.18 vs signal -1.05",
-      "adx_trending_up": "ADX(14) 23.23 vs 20, +DI 27.50 vs -DI 12.72",
-      "price_above_vwap20": "Close 763.35 vs 20d VWAP 710.85",
-      "price_above_bb_mid": "Close 763.35 vs BB mid 710.56"
+      "price_above_ema20": "Close 768.30 vs EMA20 727.45",
+      "ema20_above_ema50": "EMA20 727.45 vs EMA50 733.25",
+      "ema50_above_ema200": "EMA50 733.25 vs EMA200 738.34",
+      "rsi_above_50": "RSI(14) 66.73 vs 50",
+      "macd_bullish": "MACD 7.99 vs signal 0.76",
+      "adx_trending_up": "ADX(14) 24.54 vs 20, +DI 28.39 vs -DI 11.75",
+      "price_above_vwap20": "Close 768.30 vs 20d VWAP 714.29",
+      "price_above_bb_mid": "Close 768.30 vs BB mid 715.05"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,8 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags",
-        "patterns: volume surge"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,34 +675,33 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 21.62 = 2.8% of price",
-        "rsi_extreme": "RSI(14) 65.5",
-        "below_ema200": "Close 763.35 vs EMA200 738.04",
-        "extended_above_ema20": "Close 763.35 vs EMA20 723.15 (+5.6%)",
-        "large_day_move": "Day change +4.6%",
-        "near_52w_low": "Close 763.35 vs 52w low 575.80"
+        "atr_high": "ATR 21.74 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 66.7",
+        "below_ema200": "Close 768.30 vs EMA200 738.34",
+        "extended_above_ema20": "Close 768.30 vs EMA20 727.45 (+5.6%)",
+        "large_day_move": "Day change +0.6%",
+        "near_52w_low": "Close 768.30 vs 52w low 575.80"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
     "trend": {
       "daily": "neutral",
-      "weekly": "neutral",
+      "weekly": "bullish",
       "intraday": null
     }
   },
@@ -711,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-16T20:25:19.363518+00:00"
+  "updated_at": "2026-11-17T19:11:36.896055+00:00"
 }

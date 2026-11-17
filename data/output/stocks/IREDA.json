@@ -3,35 +3,30 @@
   "name": "Indian Renewable Energy Development Agency",
   "sector": "NBFC",
   "indicators": {
-    "date": "2026-11-16",
-    "close": 115.95,
-    "prev_close": 118.3,
-    "change_pct": -1.9864750633981354,
-    "ema20": 110.98350759817593,
-    "ema50": 110.69418339767559,
-    "ema200": 120.44734052215058,
-    "rsi14": 61.4009886875873,
-    "macd": 2.8269089021439413,
-    "macd_signal": 1.0381371024477133,
-    "atr14": 3.6409681781872942,
-    "adx14": 28.57681688593953,
-    "adx_pos": 34.33920875111703,
-    "adx_neg": 17.570737904392846,
-    "bb_high": 122.35938917203136,
-    "bb_low": 92.97161082796863,
-    "bb_mid": 107.6655,
-    "vwap20": 111.16788513480279,
+    "date": "2026-11-17",
+    "close": 117.4,
+    "prev_close": 115.95,
+    "change_pct": 1.2505390254420035,
+    "ema20": 111.59460211263537,
+    "ema50": 110.95715659776675,
+    "ema200": 120.41701872591028,
+    "rsi14": 63.52536556534912,
+    "macd": 2.9558101493246625,
+    "macd_signal": 1.421671711823103,
+    "atr14": 3.9458990226024873,
+    "adx14": 29.534473734390467,
+    "adx_pos": 36.84410339862328,
+    "adx_neg": 15.054843083187267,
+    "bb_high": 123.48690734500627,
+    "bb_low": 92.93009265499373,
+    "bb_mid": 108.2085,
+    "vwap20": 112.05562404515571,
     "high_52w": 153.48,
     "low_52w": 98.78,
-    "volume": 5869244.0,
-    "avg_volume20": 8037420.0
+    "volume": 20191579.0,
+    "avg_volume20": 8821311.7
   },
   "price_history": [
-    {
-      "date": "2026-05-26",
-      "close": 129.54,
-      "ema50": 128.25
-    },
     {
       "date": "2026-05-27",
       "close": 130.2,
@@ -626,6 +621,11 @@
       "date": "2026-11-16",
       "close": 115.95,
       "ema50": 110.69
+    },
+    {
+      "date": "2026-11-17",
+      "close": 117.4,
+      "ema50": 110.96
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 115.95 vs EMA20 110.98",
-      "ema20_above_ema50": "EMA20 110.98 vs EMA50 110.69",
-      "ema50_above_ema200": "EMA50 110.69 vs EMA200 120.45",
-      "rsi_above_50": "RSI(14) 61.40 vs 50",
-      "macd_bullish": "MACD 2.83 vs signal 1.04",
-      "adx_trending_up": "ADX(14) 28.58 vs 20, +DI 34.34 vs -DI 17.57",
-      "price_above_vwap20": "Close 115.95 vs 20d VWAP 111.17",
-      "price_above_bb_mid": "Close 115.95 vs BB mid 107.67"
+      "price_above_ema20": "Close 117.40 vs EMA20 111.59",
+      "ema20_above_ema50": "EMA20 111.59 vs EMA50 110.96",
+      "ema50_above_ema200": "EMA50 110.96 vs EMA200 120.42",
+      "rsi_above_50": "RSI(14) 63.53 vs 50",
+      "macd_bullish": "MACD 2.96 vs signal 1.42",
+      "adx_trending_up": "ADX(14) 29.53 vs 20, +DI 36.84 vs -DI 15.05",
+      "price_above_vwap20": "Close 117.40 vs 20d VWAP 112.06",
+      "price_above_bb_mid": "Close 117.40 vs BB mid 108.21"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,11 +663,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "7/8 bullish flags"
+        "7/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -680,12 +681,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.64 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 61.4",
-        "below_ema200": "Close 115.95 vs EMA200 120.45",
-        "extended_above_ema20": "Close 115.95 vs EMA20 110.98 (+4.5%)",
-        "large_day_move": "Day change -2.0%",
-        "near_52w_low": "Close 115.95 vs 52w low 98.78"
+        "atr_high": "ATR 3.95 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 63.5",
+        "below_ema200": "Close 117.40 vs EMA200 120.42",
+        "extended_above_ema20": "Close 117.40 vs EMA20 111.59 (+5.2%)",
+        "large_day_move": "Day change +1.3%",
+        "near_52w_low": "Close 117.40 vs 52w low 98.78"
       },
       "conditions_on": [
         "atr_high",
@@ -697,7 +698,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-16T20:25:11.739749+00:00"
+  "updated_at": "2026-11-17T19:11:28.047276+00:00"
 }

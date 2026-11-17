@@ -3,35 +3,30 @@
   "name": "Phoenix Mills",
   "sector": "Realty",
   "indicators": {
-    "date": "2026-11-16",
-    "close": 2202.0,
-    "prev_close": 2255.0,
-    "change_pct": -2.350332594235033,
-    "ema20": 2081.445312099717,
-    "ema50": 1995.9776164950968,
-    "ema200": 1874.8418867204173,
-    "rsi14": 65.99046144614852,
-    "macd": 85.71631387056368,
-    "macd_signal": 63.25327231898589,
-    "atr14": 67.68463737991068,
-    "adx14": 36.5855413960816,
-    "adx_pos": 31.205672989748066,
-    "adx_neg": 8.389570083518427,
-    "bb_high": 2309.076367455681,
-    "bb_low": 1769.8436325443197,
-    "bb_mid": 2039.4600000000003,
-    "vwap20": 2033.0045242852798,
+    "date": "2026-11-17",
+    "close": 2229.0,
+    "prev_close": 2202.0,
+    "change_pct": 1.226158038147139,
+    "ema20": 2095.4981395187915,
+    "ema50": 2005.1157491815636,
+    "ema200": 1878.3658480465822,
+    "rsi14": 67.80919326123937,
+    "macd": 86.56629114822954,
+    "macd_signal": 67.91587608483462,
+    "atr14": 68.00716328134563,
+    "adx14": 37.966766125246004,
+    "adx_pos": 28.839273543047046,
+    "adx_neg": 8.152486907131765,
+    "bb_high": 2328.471394609309,
+    "bb_low": 1784.9486053906912,
+    "bb_mid": 2056.71,
+    "vwap20": 2055.765409395265,
     "high_52w": 2300.0,
     "low_52w": 1465.6,
-    "volume": 469555.0,
-    "avg_volume20": 438249.7
+    "volume": 789141.0,
+    "avg_volume20": 456540.25
   },
   "price_history": [
-    {
-      "date": "2026-05-26",
-      "close": 1785.4,
-      "ema50": 1738.25
-    },
     {
       "date": "2026-05-27",
       "close": 1771.8,
@@ -626,6 +621,11 @@
       "date": "2026-11-16",
       "close": 2202.0,
       "ema50": 1995.98
+    },
+    {
+      "date": "2026-11-17",
+      "close": 2229.0,
+      "ema50": 2005.12
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,202.00 vs EMA20 2,081.45",
-      "ema20_above_ema50": "EMA20 2,081.45 vs EMA50 1,995.98",
-      "ema50_above_ema200": "EMA50 1,995.98 vs EMA200 1,874.84",
-      "rsi_above_50": "RSI(14) 65.99 vs 50",
-      "macd_bullish": "MACD 85.72 vs signal 63.25",
-      "adx_trending_up": "ADX(14) 36.59 vs 20, +DI 31.21 vs -DI 8.39",
-      "price_above_vwap20": "Close 2,202.00 vs 20d VWAP 2,033.00",
-      "price_above_bb_mid": "Close 2,202.00 vs BB mid 2,039.46"
+      "price_above_ema20": "Close 2,229.00 vs EMA20 2,095.50",
+      "ema20_above_ema50": "EMA20 2,095.50 vs EMA50 2,005.12",
+      "ema50_above_ema200": "EMA50 2,005.12 vs EMA200 1,878.37",
+      "rsi_above_50": "RSI(14) 67.81 vs 50",
+      "macd_bullish": "MACD 86.57 vs signal 67.92",
+      "adx_trending_up": "ADX(14) 37.97 vs 20, +DI 28.84 vs -DI 8.15",
+      "price_above_vwap20": "Close 2,229.00 vs 20d VWAP 2,055.77",
+      "price_above_bb_mid": "Close 2,229.00 vs BB mid 2,056.71"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 67.68 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 66.0",
-        "below_ema200": "Close 2,202.00 vs EMA200 1,874.84",
-        "extended_above_ema20": "Close 2,202.00 vs EMA20 2,081.45 (+5.8%)",
-        "large_day_move": "Day change -2.4%",
-        "near_52w_low": "Close 2,202.00 vs 52w low 1,465.60"
+        "atr_high": "ATR 68.01 = 3.1% of price",
+        "rsi_extreme": "RSI(14) 67.8",
+        "below_ema200": "Close 2,229.00 vs EMA200 1,878.37",
+        "extended_above_ema20": "Close 2,229.00 vs EMA20 2,095.50 (+6.4%)",
+        "large_day_move": "Day change +1.2%",
+        "near_52w_low": "Close 2,229.00 vs 52w low 1,465.60"
       },
       "conditions_on": [
         "atr_high"
@@ -697,7 +698,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-16T20:26:00.880022+00:00"
+  "updated_at": "2026-11-17T19:12:32.544526+00:00"
 }

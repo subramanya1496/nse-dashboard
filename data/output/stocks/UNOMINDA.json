@@ -3,35 +3,30 @@
   "name": "UNO Minda",
   "sector": "Auto Ancillary",
   "indicators": {
-    "date": "2026-11-16",
-    "close": 1348.0,
-    "prev_close": 1388.0,
-    "change_pct": -2.881844380403458,
-    "ema20": 1249.0528429735853,
-    "ema50": 1202.7240286468718,
-    "ema200": 1184.6339331963432,
-    "rsi14": 68.95685172774701,
-    "macd": 64.44540777201541,
-    "macd_signal": 39.230019305859805,
-    "atr14": 43.44118121571846,
-    "adx14": 39.96286607518125,
-    "adx_pos": 38.38772128203994,
-    "adx_neg": 12.839358288593292,
-    "bb_high": 1459.558552340382,
-    "bb_low": 937.2514476596183,
-    "bb_mid": 1198.4050000000002,
-    "vwap20": 1258.174659519471,
+    "date": "2026-11-17",
+    "close": 1388.1,
+    "prev_close": 1348.0,
+    "change_pct": 2.97477744807121,
+    "ema20": 1262.2954293570533,
+    "ema50": 1209.9936745822888,
+    "ema200": 1186.658471174489,
+    "rsi14": 72.44822387307202,
+    "macd": 67.11696140196523,
+    "macd_signal": 44.80740772508089,
+    "atr14": 44.60966827173856,
+    "adx14": 40.58263708041164,
+    "adx_pos": 34.71205150396834,
+    "adx_neg": 11.9942602156773,
+    "bb_high": 1481.8229159987657,
+    "bb_low": 945.0570840012344,
+    "bb_mid": 1213.44,
+    "vwap20": 1264.4464007229144,
     "high_52w": 1406.5,
     "low_52w": 994.0,
-    "volume": 804860.0,
-    "avg_volume20": 1218557.2
+    "volume": 1149444.0,
+    "avg_volume20": 1267591.35
   },
   "price_history": [
-    {
-      "date": "2026-05-26",
-      "close": 1114.9,
-      "ema50": 1114.13
-    },
     {
       "date": "2026-05-27",
       "close": 1130.8,
@@ -626,6 +621,11 @@
       "date": "2026-11-16",
       "close": 1348.0,
       "ema50": 1202.72
+    },
+    {
+      "date": "2026-11-17",
+      "close": 1388.1,
+      "ema50": 1209.99
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,348.00 vs EMA20 1,249.05",
-      "ema20_above_ema50": "EMA20 1,249.05 vs EMA50 1,202.72",
-      "ema50_above_ema200": "EMA50 1,202.72 vs EMA200 1,184.63",
-      "rsi_above_50": "RSI(14) 68.96 vs 50",
-      "macd_bullish": "MACD 64.45 vs signal 39.23",
-      "adx_trending_up": "ADX(14) 39.96 vs 20, +DI 38.39 vs -DI 12.84",
-      "price_above_vwap20": "Close 1,348.00 vs 20d VWAP 1,258.17",
-      "price_above_bb_mid": "Close 1,348.00 vs BB mid 1,198.41"
+      "price_above_ema20": "Close 1,388.10 vs EMA20 1,262.30",
+      "ema20_above_ema50": "EMA20 1,262.30 vs EMA50 1,209.99",
+      "ema50_above_ema200": "EMA50 1,209.99 vs EMA200 1,186.66",
+      "rsi_above_50": "RSI(14) 72.45 vs 50",
+      "macd_bullish": "MACD 67.12 vs signal 44.81",
+      "adx_trending_up": "ADX(14) 40.58 vs 20, +DI 34.71 vs -DI 11.99",
+      "price_above_vwap20": "Close 1,388.10 vs 20d VWAP 1,264.45",
+      "price_above_bb_mid": "Close 1,388.10 vs BB mid 1,213.44"
     },
     "flags_on": [
       "price_above_ema20",
@@ -676,24 +676,25 @@
         "atr_high": true,
         "rsi_extreme": false,
         "below_ema200": false,
-        "extended_above_ema20": false,
+        "extended_above_ema20": true,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 43.44 = 3.2% of price",
-        "rsi_extreme": "RSI(14) 69.0",
-        "below_ema200": "Close 1,348.00 vs EMA200 1,184.63",
-        "extended_above_ema20": "Close 1,348.00 vs EMA20 1,249.05 (+7.9%)",
-        "large_day_move": "Day change -2.9%",
-        "near_52w_low": "Close 1,348.00 vs 52w low 994.00"
+        "atr_high": "ATR 44.61 = 3.2% of price",
+        "rsi_extreme": "RSI(14) 72.4",
+        "below_ema200": "Close 1,388.10 vs EMA200 1,186.66",
+        "extended_above_ema20": "Close 1,388.10 vs EMA20 1,262.30 (+10.0%)",
+        "large_day_move": "Day change +3.0%",
+        "near_52w_low": "Close 1,388.10 vs 52w low 994.00"
       },
       "conditions_on": [
-        "atr_high"
+        "atr_high",
+        "extended_above_ema20"
       ],
-      "condition_count": 1,
+      "condition_count": 2,
       "condition_total": 6,
-      "level": "low"
+      "level": "elevated"
     },
     "patterns": {
       "breakout": false,
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-16T20:26:33.241046+00:00"
+  "updated_at": "2026-11-17T19:13:35.332417+00:00"
 }

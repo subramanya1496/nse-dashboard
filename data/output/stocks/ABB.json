@@ -3,35 +3,30 @@
   "name": "ABB India",
   "sector": "Capital Goods",
   "indicators": {
-    "date": "2026-11-16",
-    "close": 6895.0,
-    "prev_close": 7054.5,
-    "change_pct": -2.2609681763413425,
-    "ema20": 6796.831565959723,
-    "ema50": 6894.566936528766,
-    "ema200": 6699.730690453059,
-    "rsi14": 52.90344829864547,
-    "macd": 23.254329323467573,
-    "macd_signal": -39.06553088445976,
-    "atr14": 227.2683572642211,
-    "adx14": 22.29436445957216,
-    "adx_pos": 18.275264331150005,
-    "adx_neg": 23.84386715898398,
-    "bb_high": 7147.6951799460285,
-    "bb_low": 6196.854820053971,
-    "bb_mid": 6672.275,
-    "vwap20": 6703.862713465232,
+    "date": "2026-11-17",
+    "close": 6923.0,
+    "prev_close": 6895.0,
+    "change_pct": 0.40609137055837563,
+    "ema20": 6808.8476072968915,
+    "ema50": 6895.681958625677,
+    "ema200": 6701.952275622681,
+    "rsi14": 53.76986485866791,
+    "macd": 29.056982486852576,
+    "macd_signal": -25.441028210197295,
+    "atr14": 228.42776031677673,
+    "adx14": 21.710357209029947,
+    "adx_pos": 16.883756305514204,
+    "adx_neg": 22.434862264284934,
+    "bb_high": 7139.1537459241445,
+    "bb_low": 6200.296254075856,
+    "bb_mid": 6669.725,
+    "vwap20": 6700.606572433952,
     "high_52w": 7924.5,
     "low_52w": 4637.5,
-    "volume": 819644.0,
-    "avg_volume20": 359719.0
+    "volume": 463941.0,
+    "avg_volume20": 355046.55
   },
   "price_history": [
-    {
-      "date": "2026-05-26",
-      "close": 6804.0,
-      "ema50": 6585.75
-    },
     {
       "date": "2026-05-27",
       "close": 7219.0,
@@ -626,6 +621,11 @@
       "date": "2026-11-16",
       "close": 6895.0,
       "ema50": 6894.57
+    },
+    {
+      "date": "2026-11-17",
+      "close": 6923.0,
+      "ema50": 6895.68
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 6,895.00 vs EMA20 6,796.83",
-      "ema20_above_ema50": "EMA20 6,796.83 vs EMA50 6,894.57",
-      "ema50_above_ema200": "EMA50 6,894.57 vs EMA200 6,699.73",
-      "rsi_above_50": "RSI(14) 52.90 vs 50",
-      "macd_bullish": "MACD 23.25 vs signal -39.07",
-      "adx_trending_up": "ADX(14) 22.29 vs 20, +DI 18.28 vs -DI 23.84",
-      "price_above_vwap20": "Close 6,895.00 vs 20d VWAP 6,703.86",
-      "price_above_bb_mid": "Close 6,895.00 vs BB mid 6,672.27"
+      "price_above_ema20": "Close 6,923.00 vs EMA20 6,808.85",
+      "ema20_above_ema50": "EMA20 6,808.85 vs EMA50 6,895.68",
+      "ema50_above_ema200": "EMA50 6,895.68 vs EMA200 6,701.95",
+      "rsi_above_50": "RSI(14) 53.77 vs 50",
+      "macd_bullish": "MACD 29.06 vs signal -25.44",
+      "adx_trending_up": "ADX(14) 21.71 vs 20, +DI 16.88 vs -DI 22.43",
+      "price_above_vwap20": "Close 6,923.00 vs 20d VWAP 6,700.61",
+      "price_above_bb_mid": "Close 6,923.00 vs BB mid 6,669.73"
     },
     "flags_on": [
       "price_above_ema20",
@@ -667,7 +667,7 @@
       "rule": "\u22656/8 flags and a named pattern (breakout / near buy zone / silent accumulation)",
       "reasons": [
         "6/8 bullish flags",
-        "patterns: volume surge, near buy zone"
+        "patterns: near buy zone"
       ]
     },
     "risk": {
@@ -680,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 227.27 = 3.3% of price",
-        "rsi_extreme": "RSI(14) 52.9",
-        "below_ema200": "Close 6,895.00 vs EMA200 6,699.73",
-        "extended_above_ema20": "Close 6,895.00 vs EMA20 6,796.83 (+1.4%)",
-        "large_day_move": "Day change -2.3%",
-        "near_52w_low": "Close 6,895.00 vs 52w low 4,637.50"
+        "atr_high": "ATR 228.43 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 53.8",
+        "below_ema200": "Close 6,923.00 vs EMA200 6,701.95",
+        "extended_above_ema20": "Close 6,923.00 vs EMA20 6,808.85 (+1.7%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 6,923.00 vs 52w low 4,637.50"
       },
       "conditions_on": [
         "atr_high"
@@ -696,7 +696,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": true
     },
@@ -710,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-16T20:23:57.815264+00:00"
+  "updated_at": "2026-11-17T19:09:27.315156+00:00"
 }
