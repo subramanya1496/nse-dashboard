@@ -3,35 +3,30 @@
   "name": "GAIL (India) Ltd",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-11-18",
-    "close": 190.0,
-    "prev_close": 187.0,
-    "change_pct": 1.6042780748663104,
-    "ema20": 181.734166908105,
-    "ema50": 176.56903570203778,
-    "ema200": 171.3468139278891,
-    "rsi14": 70.14980617997057,
-    "macd": 5.028401396365325,
-    "macd_signal": 4.205719069604303,
-    "atr14": 3.8960237326331217,
-    "adx14": 36.40599255396256,
-    "adx_pos": 30.808776067986987,
-    "adx_neg": 10.562029590772253,
-    "bb_high": 198.90265842775392,
-    "bb_low": 159.4523415722461,
-    "bb_mid": 179.1775,
-    "vwap20": 179.9691046432173,
-    "high_52w": 191.35,
+    "date": "2026-11-19",
+    "close": 192.1,
+    "prev_close": 190.0,
+    "change_pct": 1.1052631578947338,
+    "ema20": 182.72138910733304,
+    "ema50": 177.17809101613082,
+    "ema200": 171.53342304910413,
+    "rsi14": 72.43247542111274,
+    "macd": 5.218900827184797,
+    "macd_signal": 4.408355421154517,
+    "atr14": 3.785593465981285,
+    "adx14": 37.459441332926694,
+    "adx_pos": 31.235193003324866,
+    "adx_neg": 10.093698236875975,
+    "bb_high": 200.20897539165247,
+    "bb_low": 160.50702460834754,
+    "bb_mid": 180.358,
+    "vwap20": 181.09273761748113,
+    "high_52w": 192.3,
     "low_52w": 134.36,
-    "volume": 14420012.0,
-    "avg_volume20": 9518162.85
+    "volume": 13178342.0,
+    "avg_volume20": 9892831.7
   },
   "price_history": [
-    {
-      "date": "2026-05-29",
-      "close": 164.51,
-      "ema50": 160.32
-    },
     {
       "date": "2026-06-01",
       "close": 163.74,
@@ -626,6 +621,11 @@
       "date": "2026-11-18",
       "close": 190.0,
       "ema50": 176.57
+    },
+    {
+      "date": "2026-11-19",
+      "close": 192.1,
+      "ema50": 177.18
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 190.00 vs EMA20 181.73",
-      "ema20_above_ema50": "EMA20 181.73 vs EMA50 176.57",
-      "ema50_above_ema200": "EMA50 176.57 vs EMA200 171.35",
-      "rsi_above_50": "RSI(14) 70.15 vs 50",
-      "macd_bullish": "MACD 5.03 vs signal 4.21",
-      "adx_trending_up": "ADX(14) 36.41 vs 20, +DI 30.81 vs -DI 10.56",
-      "price_above_vwap20": "Close 190.00 vs 20d VWAP 179.97",
-      "price_above_bb_mid": "Close 190.00 vs BB mid 179.18"
+      "price_above_ema20": "Close 192.10 vs EMA20 182.72",
+      "ema20_above_ema50": "EMA20 182.72 vs EMA50 177.18",
+      "ema50_above_ema200": "EMA50 177.18 vs EMA200 171.53",
+      "rsi_above_50": "RSI(14) 72.43 vs 50",
+      "macd_bullish": "MACD 5.22 vs signal 4.41",
+      "adx_trending_up": "ADX(14) 37.46 vs 20, +DI 31.24 vs -DI 10.09",
+      "price_above_vwap20": "Close 192.10 vs 20d VWAP 181.09",
+      "price_above_bb_mid": "Close 192.10 vs BB mid 180.36"
     },
     "flags_on": [
       "price_above_ema20",
@@ -669,7 +669,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "8/8 bullish flags",
-        "patterns: volume surge"
+        "patterns: breakout"
       ]
     },
     "risk": {
@@ -682,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 3.90 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 70.1",
-        "below_ema200": "Close 190.00 vs EMA200 171.35",
-        "extended_above_ema20": "Close 190.00 vs EMA20 181.73 (+4.5%)",
-        "large_day_move": "Day change +1.6%",
-        "near_52w_low": "Close 190.00 vs 52w low 134.36"
+        "atr_high": "ATR 3.79 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 72.4",
+        "below_ema200": "Close 192.10 vs EMA200 171.53",
+        "extended_above_ema20": "Close 192.10 vs EMA20 182.72 (+5.1%)",
+        "large_day_move": "Day change +1.1%",
+        "near_52w_low": "Close 192.10 vs 52w low 134.36"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -695,8 +695,8 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
-      "volume_surge": true,
+      "breakout": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -710,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-18T18:51:15.261844+00:00"
+  "updated_at": "2026-11-19T18:59:45.423451+00:00"
 }

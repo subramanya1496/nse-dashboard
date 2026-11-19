@@ -3,35 +3,30 @@
   "name": "Reliance Industries",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-11-18",
-    "close": 1363.0,
-    "prev_close": 1367.0,
-    "change_pct": -0.2926115581565472,
-    "ema20": 1297.6330288038823,
-    "ema50": 1268.7365540139056,
-    "ema200": 1313.6011118190254,
-    "rsi14": 73.40223297619376,
-    "macd": 38.20487832515437,
-    "macd_signal": 29.29510477064975,
-    "atr14": 27.558936302090025,
-    "adx14": 33.734960257482406,
-    "adx_pos": 34.44893229624846,
-    "adx_neg": 12.328580374268949,
-    "bb_high": 1425.0832398321265,
-    "bb_low": 1130.2267601678734,
-    "bb_mid": 1277.655,
-    "vwap20": 1274.9926249485147,
+    "date": "2026-11-19",
+    "close": 1375.6,
+    "prev_close": 1363.0,
+    "change_pct": 0.9244314013206096,
+    "ema20": 1305.0584546320838,
+    "ema50": 1272.9272824081866,
+    "ema200": 1314.2653738997174,
+    "rsi14": 75.24492051614948,
+    "macd": 39.527237945792194,
+    "macd_signal": 31.341531405596925,
+    "atr14": 27.933297994571056,
+    "adx14": 34.83320490664313,
+    "adx_pos": 33.09385477469098,
+    "adx_neg": 11.294541979190626,
+    "bb_high": 1434.0192898967875,
+    "bb_low": 1140.4007101032125,
+    "bb_mid": 1287.21,
+    "vwap20": 1281.3318827364326,
     "high_52w": 1611.8,
     "low_52w": 1152.2,
-    "volume": 18228940.0,
-    "avg_volume20": 20546813.85
+    "volume": 14486599.0,
+    "avg_volume20": 20523291.7
   },
   "price_history": [
-    {
-      "date": "2026-05-29",
-      "close": 1321.2,
-      "ema50": 1376.83
-    },
     {
       "date": "2026-06-01",
       "close": 1320.0,
@@ -626,6 +621,11 @@
       "date": "2026-11-18",
       "close": 1363.0,
       "ema50": 1268.74
+    },
+    {
+      "date": "2026-11-19",
+      "close": 1375.6,
+      "ema50": 1272.93
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,363.00 vs EMA20 1,297.63",
-      "ema20_above_ema50": "EMA20 1,297.63 vs EMA50 1,268.74",
-      "ema50_above_ema200": "EMA50 1,268.74 vs EMA200 1,313.60",
-      "rsi_above_50": "RSI(14) 73.40 vs 50",
-      "macd_bullish": "MACD 38.20 vs signal 29.30",
-      "adx_trending_up": "ADX(14) 33.73 vs 20, +DI 34.45 vs -DI 12.33",
-      "price_above_vwap20": "Close 1,363.00 vs 20d VWAP 1,274.99",
-      "price_above_bb_mid": "Close 1,363.00 vs BB mid 1,277.65"
+      "price_above_ema20": "Close 1,375.60 vs EMA20 1,305.06",
+      "ema20_above_ema50": "EMA20 1,305.06 vs EMA50 1,272.93",
+      "ema50_above_ema200": "EMA50 1,272.93 vs EMA200 1,314.27",
+      "rsi_above_50": "RSI(14) 75.24 vs 50",
+      "macd_bullish": "MACD 39.53 vs signal 31.34",
+      "adx_trending_up": "ADX(14) 34.83 vs 20, +DI 33.09 vs -DI 11.29",
+      "price_above_vwap20": "Close 1,375.60 vs 20d VWAP 1,281.33",
+      "price_above_bb_mid": "Close 1,375.60 vs BB mid 1,287.21"
     },
     "flags_on": [
       "price_above_ema20",
@@ -673,22 +673,24 @@
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 27.56 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 73.4",
-        "below_ema200": "Close 1,363.00 vs EMA200 1,313.60",
-        "extended_above_ema20": "Close 1,363.00 vs EMA20 1,297.63 (+5.0%)",
-        "large_day_move": "Day change -0.3%",
-        "near_52w_low": "Close 1,363.00 vs 52w low 1,152.20"
+        "atr_high": "ATR 27.93 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 75.2",
+        "below_ema200": "Close 1,375.60 vs EMA200 1,314.27",
+        "extended_above_ema20": "Close 1,375.60 vs EMA20 1,305.06 (+5.4%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 1,375.60 vs 52w low 1,152.20"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "rsi_extreme"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
@@ -708,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-18T18:53:18.670167+00:00"
+  "updated_at": "2026-11-19T19:01:53.917328+00:00"
 }

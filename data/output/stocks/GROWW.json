@@ -3,35 +3,30 @@
   "name": "Groww (Billionbrains Garage Ventures)",
   "sector": "Capital Markets",
   "indicators": {
-    "date": "2026-11-18",
-    "close": 223.52,
-    "prev_close": 227.53,
-    "change_pct": -1.7624049575880065,
-    "ema20": 212.21824069586228,
-    "ema50": 202.76929364164903,
-    "ema200": 188.10978387881704,
-    "rsi14": 66.02742783265856,
-    "macd": 8.948595195764426,
-    "macd_signal": 7.333679369297668,
-    "atr14": 7.615074195556893,
-    "adx14": 35.49600818237669,
-    "adx_pos": 35.32700825449576,
-    "adx_neg": 11.419561032432233,
-    "bb_high": 239.81349179956635,
-    "bb_low": 174.6645082004336,
-    "bb_mid": 207.23899999999998,
-    "vwap20": 212.6427841469217,
+    "date": "2026-11-19",
+    "close": 220.89,
+    "prev_close": 223.52,
+    "change_pct": -1.1766284896206263,
+    "ema20": 213.04412253435157,
+    "ema50": 203.47990957727063,
+    "ema200": 188.43595518350543,
+    "rsi14": 62.475408410060126,
+    "macd": 8.510674920438873,
+    "macd_signal": 7.56907847952591,
+    "atr14": 7.596140324445686,
+    "adx14": 35.69187096207118,
+    "adx_pos": 32.88541573919858,
+    "adx_neg": 14.692522337826052,
+    "bb_high": 240.64075275044758,
+    "bb_low": 177.21924724955244,
+    "bb_mid": 208.93,
+    "vwap20": 213.81071585627535,
     "high_52w": 233.4,
-    "low_52w": 129.55,
-    "volume": 33918637.0,
-    "avg_volume20": 36034408.5
+    "low_52w": 140.03,
+    "volume": 73205963.0,
+    "avg_volume20": 39155646.6
   },
   "price_history": [
-    {
-      "date": "2026-05-29",
-      "close": 184.89,
-      "ema50": 188.23
-    },
     {
       "date": "2026-06-01",
       "close": 185.71,
@@ -626,6 +621,11 @@
       "date": "2026-11-18",
       "close": 223.52,
       "ema50": 202.77
+    },
+    {
+      "date": "2026-11-19",
+      "close": 220.89,
+      "ema50": 203.48
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 223.52 vs EMA20 212.22",
-      "ema20_above_ema50": "EMA20 212.22 vs EMA50 202.77",
-      "ema50_above_ema200": "EMA50 202.77 vs EMA200 188.11",
-      "rsi_above_50": "RSI(14) 66.03 vs 50",
-      "macd_bullish": "MACD 8.95 vs signal 7.33",
-      "adx_trending_up": "ADX(14) 35.50 vs 20, +DI 35.33 vs -DI 11.42",
-      "price_above_vwap20": "Close 223.52 vs 20d VWAP 212.64",
-      "price_above_bb_mid": "Close 223.52 vs BB mid 207.24"
+      "price_above_ema20": "Close 220.89 vs EMA20 213.04",
+      "ema20_above_ema50": "EMA20 213.04 vs EMA50 203.48",
+      "ema50_above_ema200": "EMA50 203.48 vs EMA200 188.44",
+      "rsi_above_50": "RSI(14) 62.48 vs 50",
+      "macd_bullish": "MACD 8.51 vs signal 7.57",
+      "adx_trending_up": "ADX(14) 35.69 vs 20, +DI 32.89 vs -DI 14.69",
+      "price_above_vwap20": "Close 220.89 vs 20d VWAP 213.81",
+      "price_above_bb_mid": "Close 220.89 vs BB mid 208.93"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 7.62 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 66.0",
-        "below_ema200": "Close 223.52 vs EMA200 188.11",
-        "extended_above_ema20": "Close 223.52 vs EMA20 212.22 (+5.3%)",
-        "large_day_move": "Day change -1.8%",
-        "near_52w_low": "Close 223.52 vs 52w low 129.55"
+        "atr_high": "ATR 7.60 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 62.5",
+        "below_ema200": "Close 220.89 vs EMA200 188.44",
+        "extended_above_ema20": "Close 220.89 vs EMA20 213.04 (+3.7%)",
+        "large_day_move": "Day change -1.2%",
+        "near_52w_low": "Close 220.89 vs 52w low 140.03"
       },
       "conditions_on": [
         "atr_high"
@@ -697,7 +698,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-18T18:51:19.541033+00:00"
+  "updated_at": "2026-11-19T18:59:49.428898+00:00"
 }

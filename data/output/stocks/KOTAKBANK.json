@@ -3,35 +3,30 @@
   "name": "Kotak Mahindra Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-11-18",
-    "close": 494.85,
-    "prev_close": 497.25,
-    "change_pct": -0.4826546003016545,
-    "ema20": 472.20520755431187,
-    "ema50": 448.2751836642684,
-    "ema200": 415.81611112137585,
-    "rsi14": 74.1554967901427,
-    "macd": 16.298675054654097,
-    "macd_signal": 14.507628003827747,
-    "atr14": 9.821917344047462,
-    "adx14": 49.978371696461295,
-    "adx_pos": 33.87898528586851,
-    "adx_neg": 6.253164094372328,
-    "bb_high": 509.75855582785744,
-    "bb_low": 425.6114441721427,
-    "bb_mid": 467.68500000000006,
-    "vwap20": 465.17434554147826,
+    "date": "2026-11-19",
+    "close": 503.0,
+    "prev_close": 494.85,
+    "change_pct": 1.6469637263817272,
+    "ema20": 475.1380449300915,
+    "ema50": 450.4212337995557,
+    "ema200": 416.4847100763867,
+    "rsi14": 77.17070846171967,
+    "macd": 16.74406372944219,
+    "macd_signal": 14.954915149291738,
+    "atr14": 9.906066105206483,
+    "adx14": 51.27853982953055,
+    "adx_pos": 31.191823456192285,
+    "adx_neg": 5.901396914071279,
+    "bb_high": 513.2666756999982,
+    "bb_low": 428.70332430000167,
+    "bb_mid": 470.98499999999996,
+    "vwap20": 467.3629388973258,
     "high_52w": 503.05,
     "low_52w": 345.5,
-    "volume": 27152458.0,
-    "avg_volume20": 21289670.45
+    "volume": 13534128.0,
+    "avg_volume20": 21123506.75
   },
   "price_history": [
-    {
-      "date": "2026-05-29",
-      "close": 384.2,
-      "ema50": 384.15
-    },
     {
       "date": "2026-06-01",
       "close": 377.4,
@@ -100,7 +95,7 @@
     {
       "date": "2026-06-18",
       "close": 402.95,
-      "ema50": 387.44
+      "ema50": 387.43
     },
     {
       "date": "2026-06-19",
@@ -115,7 +110,7 @@
     {
       "date": "2026-06-23",
       "close": 401.65,
-      "ema50": 388.98
+      "ema50": 388.97
     },
     {
       "date": "2026-06-24",
@@ -135,7 +130,7 @@
     {
       "date": "2026-06-30",
       "close": 392.25,
-      "ema50": 390.67
+      "ema50": 390.66
     },
     {
       "date": "2026-07-01",
@@ -275,7 +270,7 @@
     {
       "date": "2026-08-07",
       "close": 390.75,
-      "ema50": 388.75
+      "ema50": 388.74
     },
     {
       "date": "2026-08-10",
@@ -350,7 +345,7 @@
     {
       "date": "2026-08-28",
       "close": 423.7,
-      "ema50": 394.58
+      "ema50": 394.57
     },
     {
       "date": "2026-08-31",
@@ -626,6 +621,11 @@
       "date": "2026-11-18",
       "close": 494.85,
       "ema50": 448.28
+    },
+    {
+      "date": "2026-11-19",
+      "close": 503.0,
+      "ema50": 450.42
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 494.85 vs EMA20 472.21",
-      "ema20_above_ema50": "EMA20 472.21 vs EMA50 448.28",
-      "ema50_above_ema200": "EMA50 448.28 vs EMA200 415.82",
-      "rsi_above_50": "RSI(14) 74.16 vs 50",
-      "macd_bullish": "MACD 16.30 vs signal 14.51",
-      "adx_trending_up": "ADX(14) 49.98 vs 20, +DI 33.88 vs -DI 6.25",
-      "price_above_vwap20": "Close 494.85 vs 20d VWAP 465.17",
-      "price_above_bb_mid": "Close 494.85 vs BB mid 467.69"
+      "price_above_ema20": "Close 503.00 vs EMA20 475.14",
+      "ema20_above_ema50": "EMA20 475.14 vs EMA50 450.42",
+      "ema50_above_ema200": "EMA50 450.42 vs EMA200 416.48",
+      "rsi_above_50": "RSI(14) 77.17 vs 50",
+      "macd_bullish": "MACD 16.74 vs signal 14.95",
+      "adx_trending_up": "ADX(14) 51.28 vs 20, +DI 31.19 vs -DI 5.90",
+      "price_above_vwap20": "Close 503.00 vs 20d VWAP 467.36",
+      "price_above_bb_mid": "Close 503.00 vs BB mid 470.98"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,37 +664,40 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: breakout"
       ]
     },
     "risk": {
       "conditions": {
         "atr_high": false,
-        "rsi_extreme": false,
+        "rsi_extreme": true,
         "below_ema200": false,
         "extended_above_ema20": false,
         "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 9.82 = 2.0% of price",
-        "rsi_extreme": "RSI(14) 74.2",
-        "below_ema200": "Close 494.85 vs EMA200 415.82",
-        "extended_above_ema20": "Close 494.85 vs EMA20 472.21 (+4.8%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 494.85 vs 52w low 345.50"
+        "atr_high": "ATR 9.91 = 2.0% of price",
+        "rsi_extreme": "RSI(14) 77.2",
+        "below_ema200": "Close 503.00 vs EMA200 416.48",
+        "extended_above_ema20": "Close 503.00 vs EMA20 475.14 (+5.9%)",
+        "large_day_move": "Day change +1.6%",
+        "near_52w_low": "Close 503.00 vs 52w low 345.50"
       },
-      "conditions_on": [],
-      "condition_count": 0,
+      "conditions_on": [
+        "rsi_extreme"
+      ],
+      "condition_count": 1,
       "condition_total": 6,
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
+      "breakout": true,
       "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -709,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-18T18:52:15.773060+00:00"
+  "updated_at": "2026-11-19T19:00:45.906114+00:00"
 }
