@@ -3,35 +3,30 @@
   "name": "Eicher Motors",
   "sector": "Auto",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 8058.5,
-    "prev_close": 7700.0,
-    "change_pct": 4.6558441558441555,
-    "ema20": 7562.202051057538,
-    "ema50": 7476.161489429855,
-    "ema200": 7361.986294590515,
-    "rsi14": 69.08569493870488,
-    "macd": 143.9952566985794,
-    "macd_signal": 94.34438189282668,
-    "atr14": 211.84087694287228,
-    "adx14": 30.611952962494595,
-    "adx_pos": 34.022456991031866,
-    "adx_neg": 10.336456531076324,
-    "bb_high": 8010.528167617644,
-    "bb_low": 6969.521832382356,
-    "bb_mid": 7490.025,
-    "vwap20": 7546.8953925640135,
+    "date": "2026-11-20",
+    "close": 8113.0,
+    "prev_close": 8058.5,
+    "change_pct": 0.676304523174288,
+    "ema20": 7614.658998575867,
+    "ema50": 7501.1355486678995,
+    "ema200": 7369.459067778669,
+    "rsi14": 70.2241309914076,
+    "macd": 169.19265115975122,
+    "macd_signal": 109.31403574621159,
+    "atr14": 208.20938573266713,
+    "adx14": 32.4355773565673,
+    "adx_pos": 34.767717899830316,
+    "adx_neg": 9.7655444672953,
+    "bb_high": 8091.575862617678,
+    "bb_low": 6993.174137382322,
+    "bb_mid": 7542.375,
+    "vwap20": 7588.6984096424185,
     "high_52w": 8230.0,
     "low_52w": 6442.0,
-    "volume": 883416.0,
-    "avg_volume20": 550635.25
+    "volume": 510609.0,
+    "avg_volume20": 557712.1
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 7100.5,
-      "ema50": 7152.49
-    },
     {
       "date": "2026-06-02",
       "close": 7141.5,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 8058.5,
       "ema50": 7476.16
+    },
+    {
+      "date": "2026-11-20",
+      "close": 8113.0,
+      "ema50": 7501.14
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 8,058.50 vs EMA20 7,562.20",
-      "ema20_above_ema50": "EMA20 7,562.20 vs EMA50 7,476.16",
-      "ema50_above_ema200": "EMA50 7,476.16 vs EMA200 7,361.99",
-      "rsi_above_50": "RSI(14) 69.09 vs 50",
-      "macd_bullish": "MACD 144.00 vs signal 94.34",
-      "adx_trending_up": "ADX(14) 30.61 vs 20, +DI 34.02 vs -DI 10.34",
-      "price_above_vwap20": "Close 8,058.50 vs 20d VWAP 7,546.90",
-      "price_above_bb_mid": "Close 8,058.50 vs BB mid 7,490.02"
+      "price_above_ema20": "Close 8,113.00 vs EMA20 7,614.66",
+      "ema20_above_ema50": "EMA20 7,614.66 vs EMA50 7,501.14",
+      "ema50_above_ema200": "EMA50 7,501.14 vs EMA200 7,369.46",
+      "rsi_above_50": "RSI(14) 70.22 vs 50",
+      "macd_bullish": "MACD 169.19 vs signal 109.31",
+      "adx_trending_up": "ADX(14) 32.44 vs 20, +DI 34.77 vs -DI 9.77",
+      "price_above_vwap20": "Close 8,113.00 vs 20d VWAP 7,588.70",
+      "price_above_bb_mid": "Close 8,113.00 vs BB mid 7,542.38"
     },
     "flags_on": [
       "price_above_ema20",
@@ -669,7 +669,7 @@
       "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
         "8/8 bullish flags",
-        "patterns: breakout, volume surge"
+        "patterns: breakout"
       ]
     },
     "risk": {
@@ -678,28 +678,27 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 211.84 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 69.1",
-        "below_ema200": "Close 8,058.50 vs EMA200 7,361.99",
-        "extended_above_ema20": "Close 8,058.50 vs EMA20 7,562.20 (+6.6%)",
-        "large_day_move": "Day change +4.7%",
-        "near_52w_low": "Close 8,058.50 vs 52w low 6,442.00"
+        "atr_high": "ATR 208.21 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 70.2",
+        "below_ema200": "Close 8,113.00 vs EMA200 7,369.46",
+        "extended_above_ema20": "Close 8,113.00 vs EMA20 7,614.66 (+6.5%)",
+        "large_day_move": "Day change +0.7%",
+        "near_52w_low": "Close 8,113.00 vs 52w low 6,442.00"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": true,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -713,5 +712,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T18:59:41.457503+00:00"
+  "updated_at": "2026-11-20T18:36:00.675791+00:00"
 }

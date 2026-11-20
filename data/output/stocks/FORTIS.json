@@ -3,35 +3,30 @@
   "name": "Fortis Healthcare",
   "sector": "Healthcare",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 809.85,
-    "prev_close": 793.55,
-    "change_pct": 2.0540608657299564,
-    "ema20": 781.737740707624,
-    "ema50": 803.8063731407573,
-    "ema200": 875.4104692469524,
-    "rsi14": 57.25744801270518,
-    "macd": 2.697913747956477,
-    "macd_signal": -4.316682780431668,
-    "atr14": 23.409413721542723,
-    "adx14": 18.3794110480618,
-    "adx_pos": 24.24365965110525,
-    "adx_neg": 21.48925863430169,
-    "bb_high": 825.0734467524891,
-    "bb_low": 719.7915532475109,
-    "bb_mid": 772.4325,
-    "vwap20": 770.364492958455,
+    "date": "2026-11-20",
+    "close": 825.0,
+    "prev_close": 809.85,
+    "change_pct": 1.8707167994072949,
+    "ema20": 785.8579558783265,
+    "ema50": 804.6374957626884,
+    "ema200": 874.9088725380276,
+    "rsi14": 60.57615166650034,
+    "macd": 5.616182990179141,
+    "macd_signal": -2.3301096263095067,
+    "atr14": 23.63731274143253,
+    "adx14": 18.30871417180644,
+    "adx_pos": 28.08177618917066,
+    "adx_neg": 19.76192220432455,
+    "bb_high": 827.9298829356591,
+    "bb_low": 728.145117064341,
+    "bb_mid": 778.0375,
+    "vwap20": 775.9733546420078,
     "high_52w": 1010.1,
     "low_52w": 704.95,
-    "volume": 780641.0,
-    "avg_volume20": 1405714.2
+    "volume": 2288213.0,
+    "avg_volume20": 1470770.35
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 929.2,
-      "ema50": 923.62
-    },
     {
       "date": "2026-06-02",
       "close": 929.4,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 809.85,
       "ema50": 803.81
+    },
+    {
+      "date": "2026-11-20",
+      "close": 825.0,
+      "ema50": 804.64
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 809.85 vs EMA20 781.74",
-      "ema20_above_ema50": "EMA20 781.74 vs EMA50 803.81",
-      "ema50_above_ema200": "EMA50 803.81 vs EMA200 875.41",
-      "rsi_above_50": "RSI(14) 57.26 vs 50",
-      "macd_bullish": "MACD 2.70 vs signal -4.32",
-      "adx_trending_up": "ADX(14) 18.38 vs 20, +DI 24.24 vs -DI 21.49",
-      "price_above_vwap20": "Close 809.85 vs 20d VWAP 770.36",
-      "price_above_bb_mid": "Close 809.85 vs BB mid 772.43"
+      "price_above_ema20": "Close 825.00 vs EMA20 785.86",
+      "ema20_above_ema50": "EMA20 785.86 vs EMA50 804.64",
+      "ema50_above_ema200": "EMA50 804.64 vs EMA200 874.91",
+      "rsi_above_50": "RSI(14) 60.58 vs 50",
+      "macd_bullish": "MACD 5.62 vs signal -2.33",
+      "adx_trending_up": "ADX(14) 18.31 vs 20, +DI 28.08 vs -DI 19.76",
+      "price_above_vwap20": "Close 825.00 vs 20d VWAP 775.97",
+      "price_above_bb_mid": "Close 825.00 vs BB mid 778.04"
     },
     "flags_on": [
       "price_above_ema20",
@@ -665,7 +665,8 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "5/8 bullish flags"
+        "5/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -678,12 +679,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 23.41 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 57.3",
-        "below_ema200": "Close 809.85 vs EMA200 875.41",
-        "extended_above_ema20": "Close 809.85 vs EMA20 781.74 (+3.6%)",
-        "large_day_move": "Day change +2.1%",
-        "near_52w_low": "Close 809.85 vs 52w low 704.95"
+        "atr_high": "ATR 23.64 = 2.9% of price",
+        "rsi_extreme": "RSI(14) 60.6",
+        "below_ema200": "Close 825.00 vs EMA200 874.91",
+        "extended_above_ema20": "Close 825.00 vs EMA20 785.86 (+5.0%)",
+        "large_day_move": "Day change +1.9%",
+        "near_52w_low": "Close 825.00 vs 52w low 704.95"
       },
       "conditions_on": [
         "atr_high",
@@ -695,7 +696,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T18:59:49.856584+00:00"
+  "updated_at": "2026-11-20T18:36:03.874648+00:00"
 }

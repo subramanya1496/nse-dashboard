@@ -3,35 +3,30 @@
   "name": "PB Fintech (Policybazaar)",
   "sector": "New Age Tech",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 1015.0,
-    "prev_close": 1035.2,
-    "change_pct": -1.9513137557959859,
-    "ema20": 1034.1449375418981,
-    "ema50": 1172.7700659256056,
-    "ema200": 1471.9355521878606,
-    "rsi14": 44.017382767733025,
-    "macd": -31.73300749732266,
-    "macd_signal": -54.67945207179715,
-    "atr14": 51.88124887843537,
-    "adx14": 33.33724178645715,
-    "adx_pos": 21.341718854830617,
-    "adx_neg": 31.45186300839583,
-    "bb_high": 1094.5534668349787,
-    "bb_low": 910.5565331650212,
-    "bb_mid": 1002.555,
-    "vwap20": 1004.5318189042838,
+    "date": "2026-11-20",
+    "close": 1022.8,
+    "prev_close": 1015.0,
+    "change_pct": 0.7684729064039364,
+    "ema20": 1033.0644672998126,
+    "ema50": 1166.8888868696995,
+    "ema200": 1467.4665417183298,
+    "rsi14": 45.13746571768778,
+    "macd": -29.521660264410684,
+    "macd_signal": -49.64789371031986,
+    "atr14": 50.9183025299757,
+    "adx14": 32.08688090386712,
+    "adx_pos": 21.622950870506145,
+    "adx_neg": 29.75762021509551,
+    "bb_high": 1095.21691284452,
+    "bb_low": 910.67308715548,
+    "bb_mid": 1002.9449999999999,
+    "vwap20": 1004.9851479098983,
     "high_52w": 1964.2,
     "low_52w": 916.0,
-    "volume": 5139698.0,
-    "avg_volume20": 3240061.55
+    "volume": 3166974.0,
+    "avg_volume20": 3335692.35
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 1671.4,
-      "ema50": 1653.08
-    },
     {
       "date": "2026-06-02",
       "close": 1644.2,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 1015.0,
       "ema50": 1172.77
+    },
+    {
+      "date": "2026-11-20",
+      "close": 1022.8,
+      "ema50": 1166.89
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,015.00 vs EMA20 1,034.14",
-      "ema20_above_ema50": "EMA20 1,034.14 vs EMA50 1,172.77",
-      "ema50_above_ema200": "EMA50 1,172.77 vs EMA200 1,471.94",
-      "rsi_above_50": "RSI(14) 44.02 vs 50",
-      "macd_bullish": "MACD -31.73 vs signal -54.68",
-      "adx_trending_up": "ADX(14) 33.34 vs 20, +DI 21.34 vs -DI 31.45",
-      "price_above_vwap20": "Close 1,015.00 vs 20d VWAP 1,004.53",
-      "price_above_bb_mid": "Close 1,015.00 vs BB mid 1,002.55"
+      "price_above_ema20": "Close 1,022.80 vs EMA20 1,033.06",
+      "ema20_above_ema50": "EMA20 1,033.06 vs EMA50 1,166.89",
+      "ema50_above_ema200": "EMA50 1,166.89 vs EMA200 1,467.47",
+      "rsi_above_50": "RSI(14) 45.14 vs 50",
+      "macd_bullish": "MACD -29.52 vs signal -49.65",
+      "adx_trending_up": "ADX(14) 32.09 vs 20, +DI 21.62 vs -DI 29.76",
+      "price_above_vwap20": "Close 1,022.80 vs 20d VWAP 1,004.99",
+      "price_above_bb_mid": "Close 1,022.80 vs BB mid 1,002.94"
     },
     "flags_on": [
       "macd_bullish",
@@ -663,8 +663,7 @@
       "label": "Monitor",
       "rule": "3\u20134/8 flags",
       "reasons": [
-        "3/8 bullish flags",
-        "patterns: volume surge"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
@@ -677,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 51.88 = 5.1% of price",
-        "rsi_extreme": "RSI(14) 44.0",
-        "below_ema200": "Close 1,015.00 vs EMA200 1,471.94",
-        "extended_above_ema20": "Close 1,015.00 vs EMA20 1,034.14 (-1.9%)",
-        "large_day_move": "Day change -2.0%",
-        "near_52w_low": "Close 1,015.00 vs 52w low 916.00"
+        "atr_high": "ATR 50.92 = 5.0% of price",
+        "rsi_extreme": "RSI(14) 45.1",
+        "below_ema200": "Close 1,022.80 vs EMA200 1,467.47",
+        "extended_above_ema20": "Close 1,022.80 vs EMA20 1,033.06 (-1.0%)",
+        "large_day_move": "Day change +0.8%",
+        "near_52w_low": "Close 1,022.80 vs 52w low 916.00"
       },
       "conditions_on": [
         "atr_high",
@@ -694,7 +693,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -708,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T19:01:43.512629+00:00"
+  "updated_at": "2026-11-20T18:38:02.780884+00:00"
 }

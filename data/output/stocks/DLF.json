@@ -3,35 +3,30 @@
   "name": "DLF Ltd",
   "sector": "Realty",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 768.0,
-    "prev_close": 764.3,
-    "change_pct": 0.48410310087662506,
-    "ema20": 732.4826589884183,
-    "ema50": 700.2240722248688,
-    "ema200": 665.9171191672308,
-    "rsi14": 68.72378810049011,
-    "macd": 25.365095706050624,
-    "macd_signal": 22.750712593805442,
-    "atr14": 17.531636133478834,
-    "adx14": 34.828657339628066,
-    "adx_pos": 26.26310698967127,
-    "adx_neg": 9.019340285032165,
-    "bb_high": 801.8716540578671,
-    "bb_low": 647.6583459421329,
-    "bb_mid": 724.765,
-    "vwap20": 726.2129152848439,
-    "high_52w": 773.65,
+    "date": "2026-11-20",
+    "close": 785.0,
+    "prev_close": 768.0,
+    "change_pct": 2.213541666666667,
+    "ema20": 737.4843105133309,
+    "ema50": 703.5486184121288,
+    "ema200": 667.1020234541242,
+    "rsi14": 72.51189815787392,
+    "macd": 26.396102834412204,
+    "macd_signal": 23.479790641926794,
+    "atr14": 18.49366212394463,
+    "adx14": 36.60369468299207,
+    "adx_pos": 31.44188381420912,
+    "adx_neg": 7.939435385098107,
+    "bb_high": 805.9234650725227,
+    "bb_low": 656.4065349274772,
+    "bb_mid": 731.165,
+    "vwap20": 732.9059343351994,
+    "high_52w": 792.0,
     "low_52w": 489.4,
-    "volume": 1690643.0,
-    "avg_volume20": 2775500.6
+    "volume": 4590590.0,
+    "avg_volume20": 2901688.55
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 580.05,
-      "ema50": 587.71
-    },
     {
       "date": "2026-06-02",
       "close": 591.85,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 768.0,
       "ema50": 700.22
+    },
+    {
+      "date": "2026-11-20",
+      "close": 785.0,
+      "ema50": 703.55
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 768.00 vs EMA20 732.48",
-      "ema20_above_ema50": "EMA20 732.48 vs EMA50 700.22",
-      "ema50_above_ema200": "EMA50 700.22 vs EMA200 665.92",
-      "rsi_above_50": "RSI(14) 68.72 vs 50",
-      "macd_bullish": "MACD 25.37 vs signal 22.75",
-      "adx_trending_up": "ADX(14) 34.83 vs 20, +DI 26.26 vs -DI 9.02",
-      "price_above_vwap20": "Close 768.00 vs 20d VWAP 726.21",
-      "price_above_bb_mid": "Close 768.00 vs BB mid 724.76"
+      "price_above_ema20": "Close 785.00 vs EMA20 737.48",
+      "ema20_above_ema50": "EMA20 737.48 vs EMA50 703.55",
+      "ema50_above_ema200": "EMA50 703.55 vs EMA200 667.10",
+      "rsi_above_50": "RSI(14) 72.51 vs 50",
+      "macd_bullish": "MACD 26.40 vs signal 23.48",
+      "adx_trending_up": "ADX(14) 36.60 vs 20, +DI 31.44 vs -DI 7.94",
+      "price_above_vwap20": "Close 785.00 vs 20d VWAP 732.91",
+      "price_above_bb_mid": "Close 785.00 vs BB mid 731.16"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: volume surge"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 17.53 = 2.3% of price",
-        "rsi_extreme": "RSI(14) 68.7",
-        "below_ema200": "Close 768.00 vs EMA200 665.92",
-        "extended_above_ema20": "Close 768.00 vs EMA20 732.48 (+4.8%)",
-        "large_day_move": "Day change +0.5%",
-        "near_52w_low": "Close 768.00 vs 52w low 489.40"
+        "atr_high": "ATR 18.49 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 72.5",
+        "below_ema200": "Close 785.00 vs EMA200 667.10",
+        "extended_above_ema20": "Close 785.00 vs EMA20 737.48 (+6.4%)",
+        "large_day_move": "Day change +2.2%",
+        "near_52w_low": "Close 785.00 vs 52w low 489.40"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -695,7 +696,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": false,
+      "volume_surge": true,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T18:59:39.850147+00:00"
+  "updated_at": "2026-11-20T18:35:58.378831+00:00"
 }

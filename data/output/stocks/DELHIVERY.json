@@ -3,35 +3,30 @@
   "name": "Delhivery Ltd",
   "sector": "Logistics",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 456.7,
-    "prev_close": 449.5,
-    "change_pct": 1.6017797552836461,
-    "ema20": 429.1785053375803,
-    "ema50": 426.15376614827574,
-    "ema200": 441.4494180569568,
-    "rsi14": 66.64824013024355,
-    "macd": 11.46882525899241,
-    "macd_signal": 6.607090195025609,
-    "atr14": 13.973622906496118,
-    "adx14": 30.541154593201565,
-    "adx_pos": 30.150933976429023,
-    "adx_neg": 14.077536072403216,
-    "bb_high": 472.5299053099806,
-    "bb_low": 364.8100946900193,
-    "bb_mid": 418.66999999999996,
-    "vwap20": 421.84890564677625,
+    "date": "2026-11-20",
+    "close": 458.9,
+    "prev_close": 456.7,
+    "change_pct": 0.4817166630172955,
+    "ema20": 432.0091238768583,
+    "ema50": 427.43793218167673,
+    "ema200": 441.6230556882309,
+    "rsi14": 67.42084312701198,
+    "macd": 12.319023311463354,
+    "macd_signal": 7.749476818313159,
+    "atr14": 13.736221270317824,
+    "adx14": 31.171123671793744,
+    "adx_pos": 30.561176521088175,
+    "adx_neg": 13.297919714512515,
+    "bb_high": 474.8044002673671,
+    "bb_low": 371.42559973263303,
+    "bb_mid": 423.11500000000007,
+    "vwap20": 424.49195330831026,
     "high_52w": 524.0,
     "low_52w": 364.65,
-    "volume": 7368654.0,
-    "avg_volume20": 3733499.0
+    "volume": 2344334.0,
+    "avg_volume20": 3730518.95
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 437.25,
-      "ema50": 452.28
-    },
     {
       "date": "2026-06-02",
       "close": 437.95,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 456.7,
       "ema50": 426.15
+    },
+    {
+      "date": "2026-11-20",
+      "close": 458.9,
+      "ema50": 427.44
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 456.70 vs EMA20 429.18",
-      "ema20_above_ema50": "EMA20 429.18 vs EMA50 426.15",
-      "ema50_above_ema200": "EMA50 426.15 vs EMA200 441.45",
-      "rsi_above_50": "RSI(14) 66.65 vs 50",
-      "macd_bullish": "MACD 11.47 vs signal 6.61",
-      "adx_trending_up": "ADX(14) 30.54 vs 20, +DI 30.15 vs -DI 14.08",
-      "price_above_vwap20": "Close 456.70 vs 20d VWAP 421.85",
-      "price_above_bb_mid": "Close 456.70 vs BB mid 418.67"
+      "price_above_ema20": "Close 458.90 vs EMA20 432.01",
+      "ema20_above_ema50": "EMA20 432.01 vs EMA50 427.44",
+      "ema50_above_ema200": "EMA50 427.44 vs EMA200 441.62",
+      "rsi_above_50": "RSI(14) 67.42 vs 50",
+      "macd_bullish": "MACD 12.32 vs signal 7.75",
+      "adx_trending_up": "ADX(14) 31.17 vs 20, +DI 30.56 vs -DI 13.30",
+      "price_above_vwap20": "Close 458.90 vs 20d VWAP 424.49",
+      "price_above_bb_mid": "Close 458.90 vs BB mid 423.12"
     },
     "flags_on": [
       "price_above_ema20",
@@ -663,12 +663,11 @@
   },
   "decision": {
     "attention": {
-      "tier": 5,
-      "label": "Immediate attention",
-      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "7/8 bullish flags",
-        "patterns: volume surge"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -681,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 13.97 = 3.1% of price",
-        "rsi_extreme": "RSI(14) 66.6",
-        "below_ema200": "Close 456.70 vs EMA200 441.45",
-        "extended_above_ema20": "Close 456.70 vs EMA20 429.18 (+6.4%)",
-        "large_day_move": "Day change +1.6%",
-        "near_52w_low": "Close 456.70 vs 52w low 364.65"
+        "atr_high": "ATR 13.74 = 3.0% of price",
+        "rsi_extreme": "RSI(14) 67.4",
+        "below_ema200": "Close 458.90 vs EMA200 441.62",
+        "extended_above_ema20": "Close 458.90 vs EMA20 432.01 (+6.2%)",
+        "large_day_move": "Day change +0.5%",
+        "near_52w_low": "Close 458.90 vs 52w low 364.65"
       },
       "conditions_on": [
         "atr_high"
@@ -697,7 +696,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T18:59:41.815570+00:00"
+  "updated_at": "2026-11-20T18:36:00.275414+00:00"
 }

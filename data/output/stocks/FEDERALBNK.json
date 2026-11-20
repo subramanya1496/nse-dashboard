@@ -3,35 +3,30 @@
   "name": "Federal Bank",
   "sector": "Banking",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 364.5,
-    "prev_close": 360.35,
-    "change_pct": 1.1516581101706609,
-    "ema20": 350.6924216110131,
-    "ema50": 343.70374909070387,
-    "ema200": 315.4927399584983,
-    "rsi14": 64.88804860127269,
-    "macd": 7.159031577150927,
-    "macd_signal": 5.12337884807895,
-    "atr14": 8.572175946399138,
-    "adx14": 27.47237723269406,
-    "adx_pos": 27.024350400324803,
-    "adx_neg": 13.321159868401814,
-    "bb_high": 370.32985712625634,
-    "bb_low": 326.06014287374364,
-    "bb_mid": 348.195,
-    "vwap20": 348.53695942802705,
-    "high_52w": 371.7,
-    "low_52w": 235.08,
-    "volume": 3296719.0,
-    "avg_volume20": 6332334.4
+    "date": "2026-11-20",
+    "close": 373.5,
+    "prev_close": 364.5,
+    "change_pct": 2.4691358024691357,
+    "ema20": 352.86457193377373,
+    "ema50": 344.8722295185194,
+    "ema200": 316.069926625578,
+    "rsi14": 69.80155739600086,
+    "macd": 8.064410590253033,
+    "macd_signal": 5.7115851965137665,
+    "atr14": 8.942020521656342,
+    "adx14": 28.671167500494757,
+    "adx_pos": 30.686156084144095,
+    "adx_neg": 11.858036183783645,
+    "bb_high": 374.25345676664364,
+    "bb_low": 325.39654323335634,
+    "bb_mid": 349.825,
+    "vwap20": 350.47548526041163,
+    "high_52w": 374.3,
+    "low_52w": 235.27,
+    "volume": 8701089.0,
+    "avg_volume20": 6231958.85
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 288.2,
-      "ema50": 284.99
-    },
     {
       "date": "2026-06-02",
       "close": 293.05,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 364.5,
       "ema50": 343.7
+    },
+    {
+      "date": "2026-11-20",
+      "close": 373.5,
+      "ema50": 344.87
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 364.50 vs EMA20 350.69",
-      "ema20_above_ema50": "EMA20 350.69 vs EMA50 343.70",
-      "ema50_above_ema200": "EMA50 343.70 vs EMA200 315.49",
-      "rsi_above_50": "RSI(14) 64.89 vs 50",
-      "macd_bullish": "MACD 7.16 vs signal 5.12",
-      "adx_trending_up": "ADX(14) 27.47 vs 20, +DI 27.02 vs -DI 13.32",
-      "price_above_vwap20": "Close 364.50 vs 20d VWAP 348.54",
-      "price_above_bb_mid": "Close 364.50 vs BB mid 348.19"
+      "price_above_ema20": "Close 373.50 vs EMA20 352.86",
+      "ema20_above_ema50": "EMA20 352.86 vs EMA50 344.87",
+      "ema50_above_ema200": "EMA50 344.87 vs EMA200 316.07",
+      "rsi_above_50": "RSI(14) 69.80 vs 50",
+      "macd_bullish": "MACD 8.06 vs signal 5.71",
+      "adx_trending_up": "ADX(14) 28.67 vs 20, +DI 30.69 vs -DI 11.86",
+      "price_above_vwap20": "Close 373.50 vs 20d VWAP 350.48",
+      "price_above_bb_mid": "Close 373.50 vs BB mid 349.82"
     },
     "flags_on": [
       "price_above_ema20",
@@ -664,11 +664,12 @@
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 5,
+      "label": "Immediate attention",
+      "rule": "\u22657/8 flags and (breakout or volume \u22651.4\u00d7 20d avg)",
       "reasons": [
-        "8/8 bullish flags"
+        "8/8 bullish flags",
+        "patterns: breakout"
       ]
     },
     "risk": {
@@ -681,12 +682,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 8.57 = 2.4% of price",
-        "rsi_extreme": "RSI(14) 64.9",
-        "below_ema200": "Close 364.50 vs EMA200 315.49",
-        "extended_above_ema20": "Close 364.50 vs EMA20 350.69 (+3.9%)",
-        "large_day_move": "Day change +1.2%",
-        "near_52w_low": "Close 364.50 vs 52w low 235.08"
+        "atr_high": "ATR 8.94 = 2.4% of price",
+        "rsi_extreme": "RSI(14) 69.8",
+        "below_ema200": "Close 373.50 vs EMA200 316.07",
+        "extended_above_ema20": "Close 373.50 vs EMA20 352.86 (+5.8%)",
+        "large_day_move": "Day change +2.5%",
+        "near_52w_low": "Close 373.50 vs 52w low 235.27"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -694,7 +695,7 @@
       "level": "low"
     },
     "patterns": {
-      "breakout": false,
+      "breakout": true,
       "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
@@ -709,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T18:59:44.623253+00:00"
+  "updated_at": "2026-11-20T18:36:03.499412+00:00"
 }

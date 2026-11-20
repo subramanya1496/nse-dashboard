@@ -3,35 +3,30 @@
   "name": "Jindal Steel & Power",
   "sector": "Metals",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 1114.5,
-    "prev_close": 1103.0,
-    "change_pct": 1.042611060743427,
-    "ema20": 1117.9216513712279,
-    "ema50": 1106.9356594194467,
-    "ema200": 1108.750441964361,
-    "rsi14": 50.5560084699055,
-    "macd": 14.140103034118738,
-    "macd_signal": 15.618297187166922,
-    "atr14": 28.650517460570317,
-    "adx14": 22.40476236393325,
-    "adx_pos": 18.345549668405457,
-    "adx_neg": 25.18794293884607,
-    "bb_high": 1205.4000853606108,
-    "bb_low": 1017.9599146393894,
-    "bb_mid": 1111.68,
-    "vwap20": 1101.2260858769646,
+    "date": "2026-11-20",
+    "close": 1131.9,
+    "prev_close": 1114.5,
+    "change_pct": 1.5612382234185815,
+    "ema20": 1119.252922669206,
+    "ema50": 1107.9146531677038,
+    "ema200": 1108.980785825412,
+    "rsi14": 54.83432136643277,
+    "macd": 13.46700849258491,
+    "macd_signal": 15.188039448250521,
+    "atr14": 30.15405192767244,
+    "adx14": 22.312826367575582,
+    "adx_pos": 16.18575033268074,
+    "adx_neg": 24.851952168136897,
+    "bb_high": 1200.5215703127064,
+    "bb_low": 1034.4384296872936,
+    "bb_mid": 1117.48,
+    "vwap20": 1104.4269657408404,
     "high_52w": 1306.2,
     "low_52w": 977.1,
-    "volume": 1311363.0,
-    "avg_volume20": 1172716.5
+    "volume": 1271087.0,
+    "avg_volume20": 1200748.95
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 1209.8,
-      "ema50": 1212.93
-    },
     {
       "date": "2026-06-02",
       "close": 1203.4,
@@ -626,11 +621,16 @@
       "date": "2026-11-19",
       "close": 1114.5,
       "ema50": 1106.94
+    },
+    {
+      "date": "2026-11-20",
+      "close": 1131.9,
+      "ema50": 1107.91
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": false,
+      "price_above_ema20": true,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
       "rsi_above_50": true,
@@ -640,31 +640,32 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 1,114.50 vs EMA20 1,117.92",
-      "ema20_above_ema50": "EMA20 1,117.92 vs EMA50 1,106.94",
-      "ema50_above_ema200": "EMA50 1,106.94 vs EMA200 1,108.75",
-      "rsi_above_50": "RSI(14) 50.56 vs 50",
-      "macd_bullish": "MACD 14.14 vs signal 15.62",
-      "adx_trending_up": "ADX(14) 22.40 vs 20, +DI 18.35 vs -DI 25.19",
-      "price_above_vwap20": "Close 1,114.50 vs 20d VWAP 1,101.23",
-      "price_above_bb_mid": "Close 1,114.50 vs BB mid 1,111.68"
+      "price_above_ema20": "Close 1,131.90 vs EMA20 1,119.25",
+      "ema20_above_ema50": "EMA20 1,119.25 vs EMA50 1,107.91",
+      "ema50_above_ema200": "EMA50 1,107.91 vs EMA200 1,108.98",
+      "rsi_above_50": "RSI(14) 54.83 vs 50",
+      "macd_bullish": "MACD 13.47 vs signal 15.19",
+      "adx_trending_up": "ADX(14) 22.31 vs 20, +DI 16.19 vs -DI 24.85",
+      "price_above_vwap20": "Close 1,131.90 vs 20d VWAP 1,104.43",
+      "price_above_bb_mid": "Close 1,131.90 vs BB mid 1,117.48"
     },
     "flags_on": [
+      "price_above_ema20",
       "ema20_above_ema50",
       "rsi_above_50",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 4,
+    "flag_count": 5,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 2,
-      "label": "Monitor",
-      "rule": "3\u20134/8 flags",
+      "tier": 3,
+      "label": "Potential setup",
+      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "4/8 bullish flags"
+        "5/8 bullish flags"
       ]
     },
     "risk": {
@@ -677,12 +678,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 28.65 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 50.6",
-        "below_ema200": "Close 1,114.50 vs EMA200 1,108.75",
-        "extended_above_ema20": "Close 1,114.50 vs EMA20 1,117.92 (-0.3%)",
-        "large_day_move": "Day change +1.0%",
-        "near_52w_low": "Close 1,114.50 vs 52w low 977.10"
+        "atr_high": "ATR 30.15 = 2.7% of price",
+        "rsi_extreme": "RSI(14) 54.8",
+        "below_ema200": "Close 1,131.90 vs EMA200 1,108.98",
+        "extended_above_ema20": "Close 1,131.90 vs EMA20 1,119.25 (+1.1%)",
+        "large_day_move": "Day change +1.6%",
+        "near_52w_low": "Close 1,131.90 vs 52w low 977.10"
       },
       "conditions_on": [
         "atr_high"
@@ -707,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T19:00:40.309577+00:00"
+  "updated_at": "2026-11-20T18:37:00.539504+00:00"
 }

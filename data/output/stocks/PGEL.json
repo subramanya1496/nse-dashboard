@@ -3,35 +3,30 @@
   "name": "PG Electroplast",
   "sector": "Electronics",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 578.25,
-    "prev_close": 539.2,
-    "change_pct": 7.242210682492573,
-    "ema20": 542.556133583281,
-    "ema50": 538.5916195585689,
-    "ema200": 546.3519144084571,
-    "rsi14": 62.681808911012205,
-    "macd": 9.296881326186053,
-    "macd_signal": 7.619434215271433,
-    "atr14": 20.63363061966225,
-    "adx14": 17.29040381802393,
-    "adx_pos": 30.29989837890115,
-    "adx_neg": 21.69928823016877,
-    "bb_high": 593.0999232213871,
-    "bb_low": 481.98507677861295,
-    "bb_mid": 537.5425,
-    "vwap20": 536.8771538530141,
+    "date": "2026-11-20",
+    "close": 588.7,
+    "prev_close": 578.25,
+    "change_pct": 1.8071768266320873,
+    "ema20": 546.9507875277305,
+    "ema50": 540.5566540856839,
+    "ema200": 546.7732883944427,
+    "rsi14": 65.06419401708004,
+    "macd": 11.77540444146905,
+    "macd_signal": 8.450628260510957,
+    "atr14": 20.666942718257804,
+    "adx14": 17.64489216579157,
+    "adx_pos": 31.632848814580495,
+    "adx_neg": 20.11686127388753,
+    "bb_high": 594.0538443917051,
+    "bb_low": 492.89615560829503,
+    "bb_mid": 543.475,
+    "vwap20": 541.8995522805346,
     "high_52w": 644.4,
     "low_52w": 436.55,
-    "volume": 7361913.0,
-    "avg_volume20": 2095905.75
+    "volume": 2450658.0,
+    "avg_volume20": 2137597.85
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 470.4,
-      "ema50": 511.18
-    },
     {
       "date": "2026-06-02",
       "close": 480.4,
@@ -626,6 +621,11 @@
       "date": "2026-11-19",
       "close": 578.25,
       "ema50": 538.59
+    },
+    {
+      "date": "2026-11-20",
+      "close": 588.7,
+      "ema50": 540.56
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 578.25 vs EMA20 542.56",
-      "ema20_above_ema50": "EMA20 542.56 vs EMA50 538.59",
-      "ema50_above_ema200": "EMA50 538.59 vs EMA200 546.35",
-      "rsi_above_50": "RSI(14) 62.68 vs 50",
-      "macd_bullish": "MACD 9.30 vs signal 7.62",
-      "adx_trending_up": "ADX(14) 17.29 vs 20, +DI 30.30 vs -DI 21.70",
-      "price_above_vwap20": "Close 578.25 vs 20d VWAP 536.88",
-      "price_above_bb_mid": "Close 578.25 vs BB mid 537.54"
+      "price_above_ema20": "Close 588.70 vs EMA20 546.95",
+      "ema20_above_ema50": "EMA20 546.95 vs EMA50 540.56",
+      "ema50_above_ema200": "EMA50 540.56 vs EMA200 546.77",
+      "rsi_above_50": "RSI(14) 65.06 vs 50",
+      "macd_bullish": "MACD 11.78 vs signal 8.45",
+      "adx_trending_up": "ADX(14) 17.64 vs 20, +DI 31.63 vs -DI 20.12",
+      "price_above_vwap20": "Close 588.70 vs 20d VWAP 541.90",
+      "price_above_bb_mid": "Close 588.70 vs BB mid 543.48"
     },
     "flags_on": [
       "price_above_ema20",
@@ -666,8 +666,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "6/8 bullish flags",
-        "patterns: volume surge"
+        "6/8 bullish flags"
       ]
     },
     "risk": {
@@ -676,28 +675,27 @@
         "rsi_extreme": false,
         "below_ema200": false,
         "extended_above_ema20": false,
-        "large_day_move": true,
+        "large_day_move": false,
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 20.63 = 3.6% of price",
-        "rsi_extreme": "RSI(14) 62.7",
-        "below_ema200": "Close 578.25 vs EMA200 546.35",
-        "extended_above_ema20": "Close 578.25 vs EMA20 542.56 (+6.6%)",
-        "large_day_move": "Day change +7.2%",
-        "near_52w_low": "Close 578.25 vs 52w low 436.55"
+        "atr_high": "ATR 20.67 = 3.5% of price",
+        "rsi_extreme": "RSI(14) 65.1",
+        "below_ema200": "Close 588.70 vs EMA200 546.77",
+        "extended_above_ema20": "Close 588.70 vs EMA20 546.95 (+7.6%)",
+        "large_day_move": "Day change +1.8%",
+        "near_52w_low": "Close 588.70 vs 52w low 436.55"
       },
       "conditions_on": [
-        "atr_high",
-        "large_day_move"
+        "atr_high"
       ],
-      "condition_count": 2,
+      "condition_count": 1,
       "condition_total": 6,
-      "level": "elevated"
+      "level": "low"
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -711,5 +709,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T19:01:40.317558+00:00"
+  "updated_at": "2026-11-20T18:37:59.582382+00:00"
 }

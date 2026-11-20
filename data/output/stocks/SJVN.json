@@ -3,35 +3,30 @@
   "name": "SJVN Ltd",
   "sector": "Power",
   "indicators": {
-    "date": "2026-11-19",
-    "close": 56.2,
-    "prev_close": 54.64,
-    "change_pct": 2.855051244509521,
-    "ema20": 56.03596058092067,
-    "ema50": 57.8651739160646,
-    "ema200": 67.53768057085894,
-    "rsi14": 49.96553013280728,
-    "macd": 0.06588519235589274,
-    "macd_signal": -0.1269644353382287,
-    "atr14": 2.0622247369869755,
-    "adx14": 24.627247506439822,
-    "adx_pos": 25.814136734335037,
-    "adx_neg": 24.17859263346413,
-    "bb_high": 61.530943793123626,
-    "bb_low": 48.56105620687639,
-    "bb_mid": 55.04600000000001,
-    "vwap20": 54.285150182221095,
+    "date": "2026-11-20",
+    "close": 55.78,
+    "prev_close": 56.2,
+    "change_pct": -0.7473309608540956,
+    "ema20": 56.011583382737754,
+    "ema50": 57.78340238994442,
+    "ema200": 67.42068872438274,
+    "rsi14": 48.506045669205406,
+    "macd": 0.02479831483547912,
+    "macd_signal": -0.09661188530348715,
+    "atr14": 1.9863515414879058,
+    "adx14": 23.10184153658717,
+    "adx_pos": 24.885868564696086,
+    "adx_neg": 23.309138110955978,
+    "bb_high": 60.920982038091125,
+    "bb_low": 50.00901796190887,
+    "bb_mid": 55.464999999999996,
+    "vwap20": 54.57602049263096,
     "high_52w": 88.8,
     "low_52w": 46.08,
-    "volume": 2640490.0,
-    "avg_volume20": 7819328.8
+    "volume": 2232819.0,
+    "avg_volume20": 7636699.6
   },
   "price_history": [
-    {
-      "date": "2026-06-01",
-      "close": 72.91,
-      "ema50": 74.93
-    },
     {
       "date": "2026-06-02",
       "close": 72.04,
@@ -626,11 +621,16 @@
       "date": "2026-11-19",
       "close": 56.2,
       "ema50": 57.87
+    },
+    {
+      "date": "2026-11-20",
+      "close": 55.78,
+      "ema50": 57.78
     }
   ],
   "flags": {
     "flags": {
-      "price_above_ema20": true,
+      "price_above_ema20": false,
       "ema20_above_ema50": false,
       "ema50_above_ema200": false,
       "rsi_above_50": false,
@@ -640,32 +640,31 @@
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 56.20 vs EMA20 56.04",
-      "ema20_above_ema50": "EMA20 56.04 vs EMA50 57.87",
-      "ema50_above_ema200": "EMA50 57.87 vs EMA200 67.54",
-      "rsi_above_50": "RSI(14) 49.97 vs 50",
-      "macd_bullish": "MACD 0.07 vs signal -0.13",
-      "adx_trending_up": "ADX(14) 24.63 vs 20, +DI 25.81 vs -DI 24.18",
-      "price_above_vwap20": "Close 56.20 vs 20d VWAP 54.29",
-      "price_above_bb_mid": "Close 56.20 vs BB mid 55.05"
+      "price_above_ema20": "Close 55.78 vs EMA20 56.01",
+      "ema20_above_ema50": "EMA20 56.01 vs EMA50 57.78",
+      "ema50_above_ema200": "EMA50 57.78 vs EMA200 67.42",
+      "rsi_above_50": "RSI(14) 48.51 vs 50",
+      "macd_bullish": "MACD 0.02 vs signal -0.10",
+      "adx_trending_up": "ADX(14) 23.10 vs 20, +DI 24.89 vs -DI 23.31",
+      "price_above_vwap20": "Close 55.78 vs 20d VWAP 54.58",
+      "price_above_bb_mid": "Close 55.78 vs BB mid 55.46"
     },
     "flags_on": [
-      "price_above_ema20",
       "macd_bullish",
       "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 5,
+    "flag_count": 4,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 3,
-      "label": "Potential setup",
-      "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "5/8 bullish flags"
+        "4/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +677,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 2.06 = 3.7% of price",
-        "rsi_extreme": "RSI(14) 50.0",
-        "below_ema200": "Close 56.20 vs EMA200 67.54",
-        "extended_above_ema20": "Close 56.20 vs EMA20 56.04 (+0.3%)",
-        "large_day_move": "Day change +2.9%",
-        "near_52w_low": "Close 56.20 vs 52w low 46.08"
+        "atr_high": "ATR 1.99 = 3.6% of price",
+        "rsi_extreme": "RSI(14) 48.5",
+        "below_ema200": "Close 55.78 vs EMA200 67.42",
+        "extended_above_ema20": "Close 55.78 vs EMA20 56.01 (-0.4%)",
+        "large_day_move": "Day change -0.7%",
+        "near_52w_low": "Close 55.78 vs 52w low 46.08"
       },
       "conditions_on": [
         "atr_high",
@@ -709,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-19T19:01:55.525404+00:00"
+  "updated_at": "2026-11-20T18:38:14.416692+00:00"
 }
