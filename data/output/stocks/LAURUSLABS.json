@@ -3,35 +3,30 @@
   "name": "Laurus Labs",
   "sector": "Pharma",
   "indicators": {
-    "date": "2026-11-20",
-    "close": 2294.6,
-    "prev_close": 2306.0,
-    "change_pct": -0.4943625325238548,
-    "ema20": 2286.3090879658826,
-    "ema50": 2145.1784932011174,
-    "ema200": 1673.2364136624915,
-    "rsi14": 53.52962855365109,
-    "macd": 62.40412916092646,
-    "macd_signal": 81.35252162815478,
-    "atr14": 78.08105405369828,
-    "adx14": 23.18045171421767,
-    "adx_pos": 23.78305791135474,
-    "adx_neg": 27.172775486022267,
-    "bb_high": 2510.4322672191083,
-    "bb_low": 2116.6877327808925,
-    "bb_mid": 2313.5600000000004,
-    "vwap20": 2311.2353082766126,
+    "date": "2026-11-23",
+    "close": 2370.7,
+    "prev_close": 2294.6,
+    "change_pct": 3.316482175542575,
+    "ema20": 2294.3463176834175,
+    "ema50": 2154.0224648197977,
+    "ema200": 1680.084037631206,
+    "rsi14": 58.72037294345692,
+    "macd": 61.88931559456114,
+    "macd_signal": 77.45988042156775,
+    "atr14": 79.3038359069695,
+    "adx14": 21.868488573142766,
+    "adx_pos": 27.355081924938872,
+    "adx_neg": 24.84281412667971,
+    "bb_high": 2488.7405698968196,
+    "bb_low": 2169.5594301031806,
+    "bb_mid": 2329.15,
+    "vwap20": 2321.2986883652684,
     "high_52w": 2488.0,
     "low_52w": 917.95,
-    "volume": 879357.0,
-    "avg_volume20": 2996549.35
+    "volume": 1929793.0,
+    "avg_volume20": 3000122.6
   },
   "price_history": [
-    {
-      "date": "2026-06-02",
-      "close": 1382.6,
-      "ema50": 1207.66
-    },
     {
       "date": "2026-06-03",
       "close": 1394.3,
@@ -55,7 +50,7 @@
     {
       "date": "2026-06-09",
       "close": 1424.4,
-      "ema50": 1246.12
+      "ema50": 1246.11
     },
     {
       "date": "2026-06-10",
@@ -626,6 +621,11 @@
       "date": "2026-11-20",
       "close": 2294.6,
       "ema50": 2145.18
+    },
+    {
+      "date": "2026-11-23",
+      "close": 2370.7,
+      "ema50": 2154.02
     }
   ],
   "flags": {
@@ -635,27 +635,30 @@
       "ema50_above_ema200": true,
       "rsi_above_50": true,
       "macd_bullish": false,
-      "adx_trending_up": false,
-      "price_above_vwap20": false,
-      "price_above_bb_mid": false
+      "adx_trending_up": true,
+      "price_above_vwap20": true,
+      "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 2,294.60 vs EMA20 2,286.31",
-      "ema20_above_ema50": "EMA20 2,286.31 vs EMA50 2,145.18",
-      "ema50_above_ema200": "EMA50 2,145.18 vs EMA200 1,673.24",
-      "rsi_above_50": "RSI(14) 53.53 vs 50",
-      "macd_bullish": "MACD 62.40 vs signal 81.35",
-      "adx_trending_up": "ADX(14) 23.18 vs 20, +DI 23.78 vs -DI 27.17",
-      "price_above_vwap20": "Close 2,294.60 vs 20d VWAP 2,311.24",
-      "price_above_bb_mid": "Close 2,294.60 vs BB mid 2,313.56"
+      "price_above_ema20": "Close 2,370.70 vs EMA20 2,294.35",
+      "ema20_above_ema50": "EMA20 2,294.35 vs EMA50 2,154.02",
+      "ema50_above_ema200": "EMA50 2,154.02 vs EMA200 1,680.08",
+      "rsi_above_50": "RSI(14) 58.72 vs 50",
+      "macd_bullish": "MACD 61.89 vs signal 77.46",
+      "adx_trending_up": "ADX(14) 21.87 vs 20, +DI 27.36 vs -DI 24.84",
+      "price_above_vwap20": "Close 2,370.70 vs 20d VWAP 2,321.30",
+      "price_above_bb_mid": "Close 2,370.70 vs BB mid 2,329.15"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
-      "rsi_above_50"
+      "rsi_above_50",
+      "adx_trending_up",
+      "price_above_vwap20",
+      "price_above_bb_mid"
     ],
-    "flag_count": 4,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
@@ -664,8 +667,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "4/8 bullish flags",
-        "patterns: near buy zone"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -678,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 78.08 = 3.4% of price",
-        "rsi_extreme": "RSI(14) 53.5",
-        "below_ema200": "Close 2,294.60 vs EMA200 1,673.24",
-        "extended_above_ema20": "Close 2,294.60 vs EMA20 2,286.31 (+0.4%)",
-        "large_day_move": "Day change -0.5%",
-        "near_52w_low": "Close 2,294.60 vs 52w low 917.95"
+        "atr_high": "ATR 79.30 = 3.3% of price",
+        "rsi_extreme": "RSI(14) 58.7",
+        "below_ema200": "Close 2,370.70 vs EMA200 1,680.08",
+        "extended_above_ema20": "Close 2,370.70 vs EMA20 2,294.35 (+3.3%)",
+        "large_day_move": "Day change +3.3%",
+        "near_52w_low": "Close 2,370.70 vs 52w low 917.95"
       },
       "conditions_on": [
         "atr_high"
@@ -696,7 +698,7 @@
       "breakout": false,
       "volume_surge": false,
       "silent_accumulation": false,
-      "near_buy_zone": true
+      "near_buy_zone": false
     },
     "trend": {
       "daily": "bullish",
@@ -708,5 +710,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-20T18:37:05.738779+00:00"
+  "updated_at": "2026-11-23T22:03:15.558688+00:00"
 }
