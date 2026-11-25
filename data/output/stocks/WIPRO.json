@@ -3,35 +3,30 @@
   "name": "Wipro",
   "sector": "IT",
   "indicators": {
-    "date": "2026-11-23",
-    "close": 187.29,
-    "prev_close": 185.7,
-    "change_pct": 0.8562197092084025,
-    "ema20": 189.28807103478002,
-    "ema50": 184.17389650935039,
-    "ema200": 193.27434784324674,
-    "rsi14": 49.077490265599096,
-    "macd": 1.7821720241764751,
-    "macd_signal": 3.9632311292342433,
-    "atr14": 4.826350325439522,
-    "adx14": 29.300454118403305,
-    "adx_pos": 29.052310937598435,
-    "adx_neg": 26.73319772481339,
-    "bb_high": 203.4957964134369,
-    "bb_low": 182.11320358656315,
-    "bb_mid": 192.80450000000002,
-    "vwap20": 192.24241171016828,
+    "date": "2026-11-25",
+    "close": 189.05,
+    "prev_close": 187.29,
+    "change_pct": 0.939719152117048,
+    "ema20": 189.26539760289626,
+    "ema50": 184.36511911677988,
+    "ema200": 193.25930843216256,
+    "rsi14": 51.82662258290746,
+    "macd": 1.5860079900465394,
+    "macd_signal": 3.487786501350471,
+    "atr14": 4.873753873657249,
+    "adx14": 27.88328311382553,
+    "adx_pos": 29.719189284790986,
+    "adx_neg": 24.582241232926137,
+    "bb_high": 203.41140878869422,
+    "bb_low": 182.40259121130575,
+    "bb_mid": 192.90699999999998,
+    "vwap20": 192.645532436691,
     "high_52w": 273.1,
     "low_52w": 156.79,
-    "volume": 10550857.0,
-    "avg_volume20": 12395555.4
+    "volume": 7437692.0,
+    "avg_volume20": 11694812.15
   },
   "price_history": [
-    {
-      "date": "2026-06-03",
-      "close": 204.1,
-      "ema50": 202.56
-    },
     {
       "date": "2026-06-04",
       "close": 204.32,
@@ -55,7 +50,7 @@
     {
       "date": "2026-06-10",
       "close": 178.93,
-      "ema50": 200.0
+      "ema50": 200.01
     },
     {
       "date": "2026-06-11",
@@ -626,6 +621,11 @@
       "date": "2026-11-23",
       "close": 187.29,
       "ema50": 184.17
+    },
+    {
+      "date": "2026-11-25",
+      "close": 189.05,
+      "ema50": 184.37
     }
   ],
   "flags": {
@@ -633,36 +633,37 @@
       "price_above_ema20": false,
       "ema20_above_ema50": true,
       "ema50_above_ema200": false,
-      "rsi_above_50": false,
+      "rsi_above_50": true,
       "macd_bullish": false,
       "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 187.29 vs EMA20 189.29",
-      "ema20_above_ema50": "EMA20 189.29 vs EMA50 184.17",
-      "ema50_above_ema200": "EMA50 184.17 vs EMA200 193.27",
-      "rsi_above_50": "RSI(14) 49.08 vs 50",
-      "macd_bullish": "MACD 1.78 vs signal 3.96",
-      "adx_trending_up": "ADX(14) 29.30 vs 20, +DI 29.05 vs -DI 26.73",
-      "price_above_vwap20": "Close 187.29 vs 20d VWAP 192.24",
-      "price_above_bb_mid": "Close 187.29 vs BB mid 192.80"
+      "price_above_ema20": "Close 189.05 vs EMA20 189.27",
+      "ema20_above_ema50": "EMA20 189.27 vs EMA50 184.37",
+      "ema50_above_ema200": "EMA50 184.37 vs EMA200 193.26",
+      "rsi_above_50": "RSI(14) 51.83 vs 50",
+      "macd_bullish": "MACD 1.59 vs signal 3.49",
+      "adx_trending_up": "ADX(14) 27.88 vs 20, +DI 29.72 vs -DI 24.58",
+      "price_above_vwap20": "Close 189.05 vs 20d VWAP 192.65",
+      "price_above_bb_mid": "Close 189.05 vs BB mid 192.91"
     },
     "flags_on": [
       "ema20_above_ema50",
+      "rsi_above_50",
       "adx_trending_up"
     ],
-    "flag_count": 2,
+    "flag_count": 3,
     "flag_total": 8
   },
   "decision": {
     "attention": {
-      "tier": 1,
-      "label": "Quiet today",
-      "rule": "\u22642/8 flags",
+      "tier": 2,
+      "label": "Monitor",
+      "rule": "3\u20134/8 flags",
       "reasons": [
-        "2/8 bullish flags"
+        "3/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +676,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 4.83 = 2.6% of price",
-        "rsi_extreme": "RSI(14) 49.1",
-        "below_ema200": "Close 187.29 vs EMA200 193.27",
-        "extended_above_ema20": "Close 187.29 vs EMA20 189.29 (-1.1%)",
+        "atr_high": "ATR 4.87 = 2.6% of price",
+        "rsi_extreme": "RSI(14) 51.8",
+        "below_ema200": "Close 189.05 vs EMA200 193.26",
+        "extended_above_ema20": "Close 189.05 vs EMA20 189.27 (-0.1%)",
         "large_day_move": "Day change +0.9%",
-        "near_52w_low": "Close 187.29 vs 52w low 156.79"
+        "near_52w_low": "Close 189.05 vs 52w low 156.79"
       },
       "conditions_on": [
         "atr_high",
@@ -706,5 +707,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-24T20:42:32.426833+00:00"
+  "updated_at": "2026-11-25T19:58:20.558139+00:00"
 }
