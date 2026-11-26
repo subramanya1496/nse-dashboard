@@ -3,35 +3,30 @@
   "name": "HG Infra Engineering",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-11-25",
-    "close": 396.5,
-    "prev_close": 392.7,
-    "change_pct": 0.9676597911892059,
-    "ema20": 400.87514832571316,
-    "ema50": 420.69813129005337,
-    "ema200": 539.5885314530909,
-    "rsi14": 44.39513272274756,
-    "macd": -3.7082641670853604,
-    "macd_signal": -4.6400727777046304,
-    "atr14": 11.448919994246808,
-    "adx14": 13.891008821704474,
-    "adx_pos": 18.44026065144171,
-    "adx_neg": 18.74103935423844,
-    "bb_high": 418.22303623326076,
-    "bb_low": 377.48696376673917,
-    "bb_mid": 397.85499999999996,
-    "vwap20": 396.9555489957672,
+    "date": "2026-11-26",
+    "close": 397.9,
+    "prev_close": 396.5,
+    "change_pct": 0.3530895334173966,
+    "ema20": 400.5918008661212,
+    "ema50": 419.8040753744995,
+    "ema200": 538.0697725616606,
+    "rsi14": 45.56303050003706,
+    "macd": -3.5680888660136816,
+    "macd_signal": -4.425675995179551,
+    "atr14": 11.034711423241932,
+    "adx14": 12.968820472697333,
+    "adx_pos": 18.41315480469372,
+    "adx_neg": 18.055625144148177,
+    "bb_high": 417.4539389136992,
+    "bb_low": 380.01106108630074,
+    "bb_mid": 398.73249999999996,
+    "vwap20": 397.6431364161352,
     "high_52w": 916.3,
     "low_52w": 373.75,
-    "volume": 45753.0,
-    "avg_volume20": 95404.5
+    "volume": 33579.0,
+    "avg_volume20": 93566.4
   },
   "price_history": [
-    {
-      "date": "2026-06-04",
-      "close": 553.3,
-      "ema50": 589.61
-    },
     {
       "date": "2026-06-05",
       "close": 548.65,
@@ -50,7 +45,7 @@
     {
       "date": "2026-06-10",
       "close": 557.25,
-      "ema50": 585.2
+      "ema50": 585.19
     },
     {
       "date": "2026-06-11",
@@ -95,12 +90,12 @@
     {
       "date": "2026-06-23",
       "close": 582.85,
-      "ema50": 582.15
+      "ema50": 582.14
     },
     {
       "date": "2026-06-24",
       "close": 576.8,
-      "ema50": 581.94
+      "ema50": 581.93
     },
     {
       "date": "2026-06-25",
@@ -190,7 +185,7 @@
     {
       "date": "2026-07-21",
       "close": 552.8,
-      "ema50": 571.19
+      "ema50": 571.18
     },
     {
       "date": "2026-07-22",
@@ -245,7 +240,7 @@
     {
       "date": "2026-08-05",
       "close": 542.9,
-      "ema50": 560.27
+      "ema50": 560.26
     },
     {
       "date": "2026-08-06",
@@ -626,6 +621,11 @@
       "date": "2026-11-25",
       "close": 396.5,
       "ema50": 420.7
+    },
+    {
+      "date": "2026-11-26",
+      "close": 397.9,
+      "ema50": 419.8
     }
   ],
   "flags": {
@@ -636,23 +636,24 @@
       "rsi_above_50": false,
       "macd_bullish": true,
       "adx_trending_up": false,
-      "price_above_vwap20": false,
+      "price_above_vwap20": true,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 396.50 vs EMA20 400.88",
-      "ema20_above_ema50": "EMA20 400.88 vs EMA50 420.70",
-      "ema50_above_ema200": "EMA50 420.70 vs EMA200 539.59",
-      "rsi_above_50": "RSI(14) 44.40 vs 50",
-      "macd_bullish": "MACD -3.71 vs signal -4.64",
-      "adx_trending_up": "ADX(14) 13.89 vs 20, +DI 18.44 vs -DI 18.74",
-      "price_above_vwap20": "Close 396.50 vs 20d VWAP 396.96",
-      "price_above_bb_mid": "Close 396.50 vs BB mid 397.85"
+      "price_above_ema20": "Close 397.90 vs EMA20 400.59",
+      "ema20_above_ema50": "EMA20 400.59 vs EMA50 419.80",
+      "ema50_above_ema200": "EMA50 419.80 vs EMA200 538.07",
+      "rsi_above_50": "RSI(14) 45.56 vs 50",
+      "macd_bullish": "MACD -3.57 vs signal -4.43",
+      "adx_trending_up": "ADX(14) 12.97 vs 20, +DI 18.41 vs -DI 18.06",
+      "price_above_vwap20": "Close 397.90 vs 20d VWAP 397.64",
+      "price_above_bb_mid": "Close 397.90 vs BB mid 398.73"
     },
     "flags_on": [
-      "macd_bullish"
+      "macd_bullish",
+      "price_above_vwap20"
     ],
-    "flag_count": 1,
+    "flag_count": 2,
     "flag_total": 8
   },
   "decision": {
@@ -661,7 +662,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags"
+        "2/8 bullish flags"
       ]
     },
     "risk": {
@@ -674,12 +675,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 11.45 = 2.9% of price",
-        "rsi_extreme": "RSI(14) 44.4",
-        "below_ema200": "Close 396.50 vs EMA200 539.59",
-        "extended_above_ema20": "Close 396.50 vs EMA20 400.88 (-1.1%)",
-        "large_day_move": "Day change +1.0%",
-        "near_52w_low": "Close 396.50 vs 52w low 373.75"
+        "atr_high": "ATR 11.03 = 2.8% of price",
+        "rsi_extreme": "RSI(14) 45.6",
+        "below_ema200": "Close 397.90 vs EMA200 538.07",
+        "extended_above_ema20": "Close 397.90 vs EMA20 400.59 (-0.7%)",
+        "large_day_move": "Day change +0.4%",
+        "near_52w_low": "Close 397.90 vs 52w low 373.75"
       },
       "conditions_on": [
         "atr_high",
@@ -705,5 +706,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-25T19:55:28.344564+00:00"
+  "updated_at": "2026-11-26T19:36:33.449791+00:00"
 }

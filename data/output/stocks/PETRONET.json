@@ -3,35 +3,30 @@
   "name": "Petronet LNG",
   "sector": "Energy",
   "indicators": {
-    "date": "2026-11-25",
-    "close": 327.0,
-    "prev_close": 326.05,
-    "change_pct": 0.29136635485354656,
-    "ema20": 318.3369418477087,
-    "ema50": 305.43970996554077,
-    "ema200": 288.9876865063734,
-    "rsi14": 62.25910226937324,
-    "macd": 8.993105209108478,
-    "macd_signal": 8.98877298299861,
-    "atr14": 6.965354227777531,
-    "adx14": 32.926915256093544,
-    "adx_pos": 27.284690250914746,
-    "adx_neg": 14.101192151010316,
-    "bb_high": 346.1025268692457,
-    "bb_low": 286.7874731307544,
-    "bb_mid": 316.44500000000005,
-    "vwap20": 317.2000944546531,
+    "date": "2026-11-26",
+    "close": 326.45,
+    "prev_close": 327.0,
+    "change_pct": -0.16819571865443775,
+    "ema20": 319.10961405268876,
+    "ema50": 306.2636414013854,
+    "ema200": 289.34623852841355,
+    "rsi14": 61.60536437316645,
+    "macd": 8.537297509636403,
+    "macd_signal": 8.898477888350554,
+    "atr14": 6.807114640055289,
+    "adx14": 32.889010974974546,
+    "adx_pos": 26.23954133658969,
+    "adx_neg": 13.398349125303325,
+    "bb_high": 344.6626506307832,
+    "bb_low": 292.38234936921674,
+    "bb_mid": 318.5225,
+    "vwap20": 318.4497600391331,
     "high_52w": 336.3,
     "low_52w": 235.35,
-    "volume": 1895047.0,
-    "avg_volume20": 3327805.0
+    "volume": 2228534.0,
+    "avg_volume20": 3339509.8
   },
   "price_history": [
-    {
-      "date": "2026-06-04",
-      "close": 269.05,
-      "ema50": 274.26
-    },
     {
       "date": "2026-06-05",
       "close": 269.45,
@@ -626,6 +621,11 @@
       "date": "2026-11-25",
       "close": 327.0,
       "ema50": 305.44
+    },
+    {
+      "date": "2026-11-26",
+      "close": 326.45,
+      "ema50": 306.26
     }
   ],
   "flags": {
@@ -634,32 +634,31 @@
       "ema20_above_ema50": true,
       "ema50_above_ema200": true,
       "rsi_above_50": true,
-      "macd_bullish": true,
+      "macd_bullish": false,
       "adx_trending_up": true,
       "price_above_vwap20": true,
       "price_above_bb_mid": true
     },
     "flags_detail": {
-      "price_above_ema20": "Close 327.00 vs EMA20 318.34",
-      "ema20_above_ema50": "EMA20 318.34 vs EMA50 305.44",
-      "ema50_above_ema200": "EMA50 305.44 vs EMA200 288.99",
-      "rsi_above_50": "RSI(14) 62.26 vs 50",
-      "macd_bullish": "MACD 8.99 vs signal 8.99",
-      "adx_trending_up": "ADX(14) 32.93 vs 20, +DI 27.28 vs -DI 14.10",
-      "price_above_vwap20": "Close 327.00 vs 20d VWAP 317.20",
-      "price_above_bb_mid": "Close 327.00 vs BB mid 316.45"
+      "price_above_ema20": "Close 326.45 vs EMA20 319.11",
+      "ema20_above_ema50": "EMA20 319.11 vs EMA50 306.26",
+      "ema50_above_ema200": "EMA50 306.26 vs EMA200 289.35",
+      "rsi_above_50": "RSI(14) 61.61 vs 50",
+      "macd_bullish": "MACD 8.54 vs signal 8.90",
+      "adx_trending_up": "ADX(14) 32.89 vs 20, +DI 26.24 vs -DI 13.40",
+      "price_above_vwap20": "Close 326.45 vs 20d VWAP 318.45",
+      "price_above_bb_mid": "Close 326.45 vs BB mid 318.52"
     },
     "flags_on": [
       "price_above_ema20",
       "ema20_above_ema50",
       "ema50_above_ema200",
       "rsi_above_50",
-      "macd_bullish",
       "adx_trending_up",
       "price_above_vwap20",
       "price_above_bb_mid"
     ],
-    "flag_count": 8,
+    "flag_count": 7,
     "flag_total": 8
   },
   "decision": {
@@ -668,7 +667,7 @@
       "label": "Potential setup",
       "rule": "\u22655/8 flags, or \u22654/8 flags with a named pattern",
       "reasons": [
-        "8/8 bullish flags"
+        "7/8 bullish flags"
       ]
     },
     "risk": {
@@ -681,12 +680,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 6.97 = 2.1% of price",
-        "rsi_extreme": "RSI(14) 62.3",
-        "below_ema200": "Close 327.00 vs EMA200 288.99",
-        "extended_above_ema20": "Close 327.00 vs EMA20 318.34 (+2.7%)",
-        "large_day_move": "Day change +0.3%",
-        "near_52w_low": "Close 327.00 vs 52w low 235.35"
+        "atr_high": "ATR 6.81 = 2.1% of price",
+        "rsi_extreme": "RSI(14) 61.6",
+        "below_ema200": "Close 326.45 vs EMA200 289.35",
+        "extended_above_ema20": "Close 326.45 vs EMA20 319.11 (+2.3%)",
+        "large_day_move": "Day change -0.2%",
+        "near_52w_low": "Close 326.45 vs 52w low 235.35"
       },
       "conditions_on": [],
       "condition_count": 0,
@@ -709,5 +708,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-25T19:57:14.761663+00:00"
+  "updated_at": "2026-11-26T19:38:18.235916+00:00"
 }
