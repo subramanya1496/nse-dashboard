@@ -3,35 +3,30 @@
   "name": "PNC Infratech",
   "sector": "Infrastructure",
   "indicators": {
-    "date": "2026-11-26",
-    "close": 124.18,
-    "prev_close": 127.5,
-    "change_pct": -2.6039215686274453,
-    "ema20": 130.50195524250606,
-    "ema50": 142.7780625518959,
-    "ema200": 190.65468881039033,
-    "rsi14": 36.63501974418118,
-    "macd": -3.4464089281418353,
-    "macd_signal": -3.8406971395377476,
-    "atr14": 5.147299374491221,
-    "adx14": 16.326947009920712,
-    "adx_pos": 19.13695814277211,
-    "adx_neg": 26.548664541266024,
-    "bb_high": 134.7312905267387,
-    "bb_low": 123.72770947326126,
-    "bb_mid": 129.22949999999997,
-    "vwap20": 128.70788569978566,
-    "high_52w": 265.2,
+    "date": "2026-11-27",
+    "close": 125.32,
+    "prev_close": 124.18,
+    "change_pct": 0.9180222258012452,
+    "ema20": 130.00843569560067,
+    "ema50": 142.0934293834196,
+    "ema200": 189.9738098858731,
+    "rsi14": 38.846417232429296,
+    "macd": -3.4701776787081258,
+    "macd_signal": -3.766593247318998,
+    "atr14": 5.162492276193383,
+    "adx14": 16.0642318126437,
+    "adx_pos": 19.059834602574657,
+    "adx_neg": 24.579781043694958,
+    "bb_high": 134.09396458224242,
+    "bb_low": 123.49903541775761,
+    "bb_mid": 128.7965,
+    "vwap20": 128.30036194580217,
+    "high_52w": 264.5,
     "low_52w": 116.4,
-    "volume": 1758360.0,
-    "avg_volume20": 945875.45
+    "volume": 848831.0,
+    "avg_volume20": 927149.4
   },
   "price_history": [
-    {
-      "date": "2026-06-05",
-      "close": 209.91,
-      "ema50": 209.99
-    },
     {
       "date": "2026-06-08",
       "close": 204.59,
@@ -626,6 +621,11 @@
       "date": "2026-11-26",
       "close": 124.18,
       "ema50": 142.78
+    },
+    {
+      "date": "2026-11-27",
+      "close": 125.32,
+      "ema50": 142.09
     }
   ],
   "flags": {
@@ -640,14 +640,14 @@
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 124.18 vs EMA20 130.50",
-      "ema20_above_ema50": "EMA20 130.50 vs EMA50 142.78",
-      "ema50_above_ema200": "EMA50 142.78 vs EMA200 190.65",
-      "rsi_above_50": "RSI(14) 36.64 vs 50",
-      "macd_bullish": "MACD -3.45 vs signal -3.84",
-      "adx_trending_up": "ADX(14) 16.33 vs 20, +DI 19.14 vs -DI 26.55",
-      "price_above_vwap20": "Close 124.18 vs 20d VWAP 128.71",
-      "price_above_bb_mid": "Close 124.18 vs BB mid 129.23"
+      "price_above_ema20": "Close 125.32 vs EMA20 130.01",
+      "ema20_above_ema50": "EMA20 130.01 vs EMA50 142.09",
+      "ema50_above_ema200": "EMA50 142.09 vs EMA200 189.97",
+      "rsi_above_50": "RSI(14) 38.85 vs 50",
+      "macd_bullish": "MACD -3.47 vs signal -3.77",
+      "adx_trending_up": "ADX(14) 16.06 vs 20, +DI 19.06 vs -DI 24.58",
+      "price_above_vwap20": "Close 125.32 vs 20d VWAP 128.30",
+      "price_above_bb_mid": "Close 125.32 vs BB mid 128.80"
     },
     "flags_on": [
       "macd_bullish"
@@ -661,8 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "1/8 bullish flags",
-        "patterns: volume surge"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -675,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 5.15 = 4.1% of price",
-        "rsi_extreme": "RSI(14) 36.6",
-        "below_ema200": "Close 124.18 vs EMA200 190.65",
-        "extended_above_ema20": "Close 124.18 vs EMA20 130.50 (-4.8%)",
-        "large_day_move": "Day change -2.6%",
-        "near_52w_low": "Close 124.18 vs 52w low 116.40"
+        "atr_high": "ATR 5.16 = 4.1% of price",
+        "rsi_extreme": "RSI(14) 38.8",
+        "below_ema200": "Close 125.32 vs EMA200 189.97",
+        "extended_above_ema20": "Close 125.32 vs EMA20 130.01 (-3.6%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 125.32 vs 52w low 116.40"
       },
       "conditions_on": [
         "atr_high",
@@ -692,7 +691,7 @@
     },
     "patterns": {
       "breakout": false,
-      "volume_surge": true,
+      "volume_surge": false,
       "silent_accumulation": false,
       "near_buy_zone": false
     },
@@ -706,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-26T19:38:22.242250+00:00"
+  "updated_at": "2026-11-27T19:30:33.528915+00:00"
 }

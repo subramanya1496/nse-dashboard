@@ -3,35 +3,30 @@
   "name": null,
   "sector": null,
   "indicators": {
-    "date": "2026-11-26",
-    "close": 6.43,
-    "prev_close": 6.25,
-    "change_pct": 2.8799999999999955,
-    "ema20": 6.557121271813757,
-    "ema50": 6.794845475163295,
-    "ema200": 8.143100334774378,
-    "rsi14": 44.371848747758925,
-    "macd": -0.0638697283194789,
-    "macd_signal": -0.02755867687631976,
-    "atr14": 0.22413326718957954,
-    "adx14": 23.312622824920336,
-    "adx_pos": 24.507407226567953,
-    "adx_neg": 25.494633884916375,
-    "bb_high": 7.111447570146582,
-    "bb_low": 6.08155242985342,
-    "bb_mid": 6.596500000000001,
-    "vwap20": 6.641122915172464,
-    "high_52w": 10.78,
+    "date": "2026-11-27",
+    "close": 6.49,
+    "prev_close": 6.43,
+    "change_pct": 0.9331259720062286,
+    "ema20": 6.55072876973625,
+    "ema50": 6.78289029864212,
+    "ema200": 8.122389380362954,
+    "rsi14": 46.61838520183393,
+    "macd": -0.061604440305403685,
+    "macd_signal": -0.0343678295548256,
+    "atr14": 0.2224094623951372,
+    "adx14": 21.794513265630176,
+    "adx_pos": 24.860205216597574,
+    "adx_neg": 23.857072911424815,
+    "bb_high": 7.109047428607116,
+    "bb_low": 6.096952571392883,
+    "bb_mid": 6.603,
+    "vwap20": 6.64677181482342,
+    "high_52w": 10.59,
     "low_52w": 5.88,
-    "volume": 13403843.0,
-    "avg_volume20": 12976334.15
+    "volume": 15679896.0,
+    "avg_volume20": 13162188.25
   },
   "price_history": [
-    {
-      "date": "2026-06-05",
-      "close": 9.74,
-      "ema50": 9.35
-    },
     {
       "date": "2026-06-08",
       "close": 9.46,
@@ -626,6 +621,11 @@
       "date": "2026-11-26",
       "close": 6.43,
       "ema50": 6.79
+    },
+    {
+      "date": "2026-11-27",
+      "close": 6.49,
+      "ema50": 6.78
     }
   ],
   "flags": {
@@ -635,22 +635,24 @@
       "ema50_above_ema200": false,
       "rsi_above_50": false,
       "macd_bullish": false,
-      "adx_trending_up": false,
+      "adx_trending_up": true,
       "price_above_vwap20": false,
       "price_above_bb_mid": false
     },
     "flags_detail": {
-      "price_above_ema20": "Close 6.43 vs EMA20 6.56",
-      "ema20_above_ema50": "EMA20 6.56 vs EMA50 6.79",
-      "ema50_above_ema200": "EMA50 6.79 vs EMA200 8.14",
-      "rsi_above_50": "RSI(14) 44.37 vs 50",
+      "price_above_ema20": "Close 6.49 vs EMA20 6.55",
+      "ema20_above_ema50": "EMA20 6.55 vs EMA50 6.78",
+      "ema50_above_ema200": "EMA50 6.78 vs EMA200 8.12",
+      "rsi_above_50": "RSI(14) 46.62 vs 50",
       "macd_bullish": "MACD -0.06 vs signal -0.03",
-      "adx_trending_up": "ADX(14) 23.31 vs 20, +DI 24.51 vs -DI 25.49",
-      "price_above_vwap20": "Close 6.43 vs 20d VWAP 6.64",
-      "price_above_bb_mid": "Close 6.43 vs BB mid 6.60"
+      "adx_trending_up": "ADX(14) 21.79 vs 20, +DI 24.86 vs -DI 23.86",
+      "price_above_vwap20": "Close 6.49 vs 20d VWAP 6.65",
+      "price_above_bb_mid": "Close 6.49 vs BB mid 6.60"
     },
-    "flags_on": [],
-    "flag_count": 0,
+    "flags_on": [
+      "adx_trending_up"
+    ],
+    "flag_count": 1,
     "flag_total": 8
   },
   "decision": {
@@ -659,7 +661,7 @@
       "label": "Quiet today",
       "rule": "\u22642/8 flags",
       "reasons": [
-        "0/8 bullish flags"
+        "1/8 bullish flags"
       ]
     },
     "risk": {
@@ -672,12 +674,12 @@
         "near_52w_low": false
       },
       "conditions_detail": {
-        "atr_high": "ATR 0.22 = 3.5% of price",
-        "rsi_extreme": "RSI(14) 44.4",
-        "below_ema200": "Close 6.43 vs EMA200 8.14",
-        "extended_above_ema20": "Close 6.43 vs EMA20 6.56 (-1.9%)",
-        "large_day_move": "Day change +2.9%",
-        "near_52w_low": "Close 6.43 vs 52w low 5.88"
+        "atr_high": "ATR 0.22 = 3.4% of price",
+        "rsi_extreme": "RSI(14) 46.6",
+        "below_ema200": "Close 6.49 vs EMA200 8.12",
+        "extended_above_ema20": "Close 6.49 vs EMA20 6.55 (-0.9%)",
+        "large_day_move": "Day change +0.9%",
+        "near_52w_low": "Close 6.49 vs 52w low 5.88"
       },
       "conditions_on": [
         "atr_high",
@@ -703,5 +705,5 @@
   "analyst": null,
   "events": null,
   "shareholding": null,
-  "updated_at": "2026-11-26T19:38:28.657880+00:00"
+  "updated_at": "2026-11-27T19:30:41.948860+00:00"
 }
